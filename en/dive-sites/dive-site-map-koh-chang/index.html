@@ -671,6 +671,13 @@
         font-size: 14px;
       }
       
+      /* Focus styling for map markers */
+      .custom-div-icon:focus {
+        outline: 3px solid #0077b6 !important;
+        outline-offset: 2px;
+        border-radius: 50%;
+      }
+      
       /* Attribution link contrast fix */
       .leaflet-control-attribution a {
         color: #000080 !important;
@@ -782,9 +789,8 @@
           >. Our experienced guides ensure a safe and unforgettable adventure.
         </p>
 
-        <div id="map" 
-             role="img" 
-             aria-roledescription="Interaktive Karte mit Tauchplätzen rund um Koh Chang"
+                <div id="map"
+             role="application"
              aria-label="Interactive dive site map of Koh Chang with clickable markers for wrecks, reefs and pinnacles. Use Tab to navigate markers, Enter to open details."
              tabindex="0"
              style="height: 80vh; width: 100%"></div>
@@ -885,31 +891,31 @@
         // Custom icons for different types of dive sites
         const icons = {
           diveCenter: L.divIcon({
-            html: '<div style="background-color: #ff6b35; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🏢</div>',
+            html: '<div style="background-color: #ff6b35; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"><span aria-hidden="true">🏢</span></div>',
             className: 'custom-div-icon',
             iconSize: [30, 30],
             iconAnchor: [15, 15]
           }),
           boat: L.divIcon({
-            html: '<div style="background-color: #4a90e2; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🚤</div>',
+            html: '<div style="background-color: #4a90e2; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"><span aria-hidden="true">🚤</span></div>',
             className: 'custom-div-icon',
             iconSize: [30, 30],
             iconAnchor: [15, 15]
           }),
           wreck: L.divIcon({
-            html: '<div style="background-color: #d32f2f; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🚢</div>',
+            html: '<div style="background-color: #d32f2f; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"><span aria-hidden="true">🚢</span></div>',
             className: 'custom-div-icon',
             iconSize: [30, 30],
             iconAnchor: [15, 15]
           }),
           reef: L.divIcon({
-            html: '<div style="background-color: #388e3c; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🐠</div>',
+            html: '<div style="background-color: #388e3c; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"><span aria-hidden="true">🐠</span></div>',
             className: 'custom-div-icon',
             iconSize: [30, 30],
             iconAnchor: [15, 15]
           }),
           pinnacle: L.divIcon({
-            html: '<div style="background-color: #7b1fa2; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">⛰️</div>',
+            html: '<div style="background-color: #7b1fa2; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"><span aria-hidden="true">⛰️</span></div>',
             className: 'custom-div-icon',
             iconSize: [30, 30],
             iconAnchor: [15, 15]
@@ -1134,6 +1140,9 @@
         const legend = L.control({ position: 'topright' });
         legend.onAdd = function() {
           const div = L.DomUtil.create('div', 'info legend');
+          div.setAttribute('role', 'region');
+          div.setAttribute('aria-label', 'Dive Site Map Legend');
+          div.setAttribute('tabindex', '0');
           div.style.backgroundColor = 'white';
           div.style.padding = '12px';
           div.style.borderRadius = '8px';
@@ -1181,6 +1190,13 @@
             tile.setAttribute('aria-hidden', 'true');
           });
         }, 1000);
+        
+        // Add ARIA labels to zoom controls
+        setTimeout(() => {
+          document.querySelector('.leaflet-control-zoom-in')?.setAttribute('aria-label', 'Zoom in');
+          document.querySelector('.leaflet-control-zoom-out')?.setAttribute('aria-label', 'Zoom out');
+          document.querySelector('.leaflet-control-layers-toggle')?.setAttribute('aria-label', 'Toggle map layers');
+        }, 100);
       });
     </script>
     

@@ -274,6 +274,13 @@
 
     <!-- Leaflet Accessibility Fixes -->
     <style>
+      /* Focus styling for map markers */
+      .custom-div-icon:focus {
+        outline: 3px solid #0077b6 !important;
+        outline-offset: 2px;
+        border-radius: 50%;
+      }
+      
       /* Remove problematic data:image/gif backgrounds from Leaflet controls */
       .leaflet-control-zoom-in,
       .leaflet-control-zoom-out,
@@ -443,8 +450,7 @@
             <div style="margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
               <h3 style="margin: 0 0 15px 0; color: #003366; font-size: 18px; text-align: center;">📍 Unser Standort - Interaktive Karte</h3>
               <div id="locationMap" 
-                   role="img" 
-                   aria-roledescription="Interaktive Karte mit Tauchzentrum-Standort"
+                   role="application" 
                    aria-label="Interaktive Karte mit Chang Diving Center Standort, Bootsabfahrt und nahegelegenen Unterkünften auf Koh Chang. Nutze Tab zum Navigieren der Marker, Enter zum Öffnen von Details."
                    tabindex="0"
                    style="height: 400px; width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
@@ -564,14 +570,14 @@
 
         // Custom icons for location map
         const diveCenter = L.divIcon({
-          html: '<div style="background-color: #ff6b35; border: 2px solid white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.3);">🏢</div>',
+          html: '<div style="background-color: #ff6b35; border: 2px solid white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.3);"><span aria-hidden="true">🏢</span></div>',
           className: 'custom-div-icon',
           iconSize: [32, 32],
           iconAnchor: [16, 16]
         });
 
         const boatDeparture = L.divIcon({
-          html: '<div style="background-color: #4a90e2; border: 2px solid white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.3);">🚤</div>',
+          html: '<div style="background-color: #4a90e2; border: 2px solid white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.3);"><span aria-hidden="true">🚤</span></div>',
           className: 'custom-div-icon',
           iconSize: [32, 32],
           iconAnchor: [16, 16]
@@ -668,6 +674,9 @@
         const legend = L.control({ position: 'topright' });
         legend.onAdd = function() {
           const div = L.DomUtil.create('div', 'info legend');
+          div.setAttribute('role', 'region');
+          div.setAttribute('aria-label', 'Kartenlegende');
+          div.setAttribute('tabindex', '0');
           div.style.backgroundColor = 'white';
           div.style.padding = '8px';
           div.style.borderRadius = '6px';
@@ -692,6 +701,13 @@
         if (window.innerWidth < 768) {
           locationMap.zoomControl.setPosition('bottomright');
         }
+        
+        // Add ARIA labels to zoom controls
+        setTimeout(() => {
+          document.querySelector('.leaflet-control-zoom-in')?.setAttribute('aria-label', 'Vergrößern');
+          document.querySelector('.leaflet-control-zoom-out')?.setAttribute('aria-label', 'Verkleinern');
+          document.querySelector('.leaflet-control-layers-toggle')?.setAttribute('aria-label', 'Kartenebenen umschalten');
+        }, 100);
       });
     </script>
     
