@@ -282,8 +282,29 @@
       .leaflet-control-zoom-out::after { content: '−'; }
       .leaflet-control-layers-toggle::after { content: '☰'; font-size: 14px; }
       
-      /* Attribution link contrast fix */
-      .leaflet-control-attribution a { color: #000080 !important; }
+              /* Attribution link contrast fix */
+        .leaflet-control-attribution a { color: #000080 !important; }
+        
+        /* Verbesserter Kontrast für alle interaktiven Kartenelemente */
+        .custom-div-icon,
+        .leaflet-popup-content,
+        .leaflet-control-attribution a,
+        .info.legend,
+        h2, h3, p, a {
+          color: #003366 !important;
+        }
+
+        /* Fokus-Sichtbarkeit */
+        .custom-div-icon:focus {
+          outline: 3px solid #0077b6;
+          outline-offset: 2px;
+        }
+
+        /* Graue Texte vermeiden */
+        .leaflet-popup-content p,
+        .legend div {
+          color: #212529 !important;
+        }
     </style>
     
     <link
@@ -440,7 +461,7 @@
           style="
             text-align: center;
             font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background: linear-gradient(to right, #0077b6, #404040);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
