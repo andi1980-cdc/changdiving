@@ -231,66 +231,6 @@
       type="font/woff2"
       crossorigin
     />
-    <!-- Leaflet CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
-    />
-    
-    <!-- Map Accessibility Styles -->
-    <style>
-      /* Focus styling for map markers */
-      .custom-div-icon:focus {
-        outline: 3px solid #0077b6 !important;
-        outline-offset: 2px;
-        border-radius: 50%;
-      }
-      
-      /* Ensure Leaflet controls have proper labels */
-      .leaflet-control-zoom-in,
-      .leaflet-control-zoom-out,
-      .leaflet-control-layers-toggle {
-        background-image: none !important;
-        background-color: #fff !important;
-        border: 2px solid #000 !important;
-        color: #000 !important;
-        font-weight: bold !important;
-        font-size: 18px !important;
-        line-height: 26px !important;
-        text-align: center !important;
-      }
-      
-      .leaflet-control-zoom-in::after { content: '+'; }
-      .leaflet-control-zoom-out::after { content: '−'; }
-      .leaflet-control-layers-toggle::after { content: '☰'; font-size: 14px; }
-      
-              /* Attribution link contrast fix */
-        .leaflet-control-attribution a { color: #000080 !important; }
-        
-        /* Verbesserter Kontrast für alle interaktiven Kartenelemente */
-        .custom-div-icon,
-        .leaflet-popup-content,
-        .leaflet-control-attribution a,
-        .info.legend,
-        h2, h3, p, a {
-          color: #003366 !important;
-        }
-
-        /* Fokus-Sichtbarkeit */
-        .custom-div-icon:focus {
-          outline: 3px solid #0077b6;
-          outline-offset: 2px;
-        }
-
-        /* Graue Texte vermeiden */
-        .leaflet-popup-content p,
-        .legend div {
-          color: #212529 !important;
-        }
-    </style>
-    
     <link
       rel="stylesheet"
       href="/style.css"
@@ -308,40 +248,6 @@
 
 </noscript>
 
-    <!-- Leaflet Accessibility Fixes -->
-    <style>
-      /* Remove problematic data:image/gif backgrounds from Leaflet controls */
-      .leaflet-control-zoom-in,
-      .leaflet-control-zoom-out,
-      .leaflet-control-layers-toggle {
-        background-image: none !important;
-        background-color: #fff !important;
-        border: 2px solid #000 !important;
-        color: #000 !important;
-        font-weight: bold !important;
-        font-size: 18px !important;
-        line-height: 26px !important;
-        text-align: center !important;
-      }
-      
-      .leaflet-control-zoom-in::after {
-        content: '+';
-      }
-      
-      .leaflet-control-zoom-out::after {
-        content: '−';
-      }
-      
-      .leaflet-control-layers-toggle::after {
-        content: '☰';
-        font-size: 14px;
-      }
-      
-      /* Attribution link contrast fix */
-      .leaflet-control-attribution a {
-        color: #000080 !important;
-      }
-    </style>
 
     </head>
   <body>
@@ -444,8 +350,7 @@
           style="
             text-align: center;
             font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #404040);
-            background-clip: text;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
@@ -457,6 +362,7 @@
 
         <dl
           class="faq-list"
+          role="list"
           aria-label="Frequently Asked Questions"
         >
           <dt>
@@ -476,16 +382,6 @@
                 >➜ View dive center location on map</a
               >
             </p>
-
-            <!-- Interactive Location Map -->
-            <div style="margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 8px; border: 1px solid #e9ecef;">
-              <h3 style="margin: 0 0 15px 0; color: #003366; font-size: 18px; text-align: center;">📍 Our Location - Interactive Map</h3>
-              <div id="locationMap" 
-                   role="application" 
-                   aria-label="Interactive map showing Chang Diving Center location, boat departure point, and nearby accommodations on Koh Chang. Use Tab to navigate markers, Enter to open details."
-                   tabindex="0"
-                   style="height: 400px; width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></div>
-            </div>
 
             <p>
               Related FAQs:
@@ -538,7 +434,7 @@
               close to our boat departure point on Klong Prao Beach. Some great
               nearby options are:
             </p>
-            <ul aria-label="Recommended accommodations">
+            <ul role="list" aria-label="Recommended accommodations">
               <li>Flora I Talay</li>
               <li>Paradise Beach Resort</li>
               <li>Paradise Hill Resort</li>
@@ -649,174 +545,6 @@
       />
     </a>
     <footer id="footer"></footer>
-    
-    <!-- Leaflet JavaScript -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    
-    <!-- Location Map Script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Initialize the location map with higher zoom for local area
-        const locationMap = L.map('locationMap', {
-          center: [12.063, 102.289],
-          zoom: 16,
-          zoomControl: true,
-          scrollWheelZoom: true
-        });
-
-        // Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 18,
-          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(locationMap);
-
-        // Custom icons for location map
-        const diveCenter = L.divIcon({
-          html: '<div style="background-color: #ff6b35; border: 2px solid white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.3);"><span aria-hidden="true">🏢</span></div>',
-          className: 'custom-div-icon',
-          iconSize: [32, 32],
-          iconAnchor: [16, 16]
-        });
-
-        const boatDeparture = L.divIcon({
-          html: '<div style="background-color: #4a90e2; border: 2px solid white; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 18px; color: white; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.3);"><span aria-hidden="true">🚤</span></div>',
-          className: 'custom-div-icon',
-          iconSize: [32, 32],
-          iconAnchor: [16, 16]
-        });
-
-        // Add dive center marker
-        const diveCenterMarker = L.marker([12.062940593816096, 102.28985548228239], { 
-          icon: diveCenter,
-          keyboard: true,
-          tabIndex: 0
-        });
-
-        const diveCenterPopup = `
-          <div style="min-width: 220px; font-family: 'Roboto', Arial, sans-serif;">
-            <h3 style="margin: 0 0 8px 0; color: #000080; font-size: 16px; font-weight: bold;">🏢 Chang Diving Center</h3>
-            <p style="margin: 5px 0; font-size: 13px; line-height: 1.4;">Our main dive shop and briefing area. Equipment fitting, courses, and dive planning happen here.</p>
-            <div style="margin: 8px 0;">
-              <strong style="color: #000080;">📍 Location:</strong> Klong Prao Beach<br>
-              <strong style="color: #000080;">🚶 Access:</strong> Walking distance from many hotels
-            </div>
-            <a href="/en/about/" style="display: inline-block; margin-top: 8px; padding: 6px 12px; background-color: #000080; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold;">Learn More</a>
-          </div>
-        `;
-
-        diveCenterMarker.bindPopup(diveCenterPopup);
-        diveCenterMarker.addTo(locationMap);
-        
-        // Add keyboard navigation for dive center marker
-        diveCenterMarker.on('add', function() {
-          const markerElement = this.getElement();
-          if (markerElement) {
-            markerElement.setAttribute('aria-label', 'Chang Diving Center - Main dive shop location on Klong Prao Beach. Press Enter to view details.');
-            markerElement.setAttribute('role', 'button');
-            markerElement.setAttribute('tabindex', '0');
-            markerElement.addEventListener('keydown', function(e) {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                diveCenterMarker.openPopup();
-              }
-              if (e.key === 'Escape') {
-                diveCenterMarker.closePopup();
-              }
-            });
-          }
-        });
-
-        // Add boat departure marker
-        const boatMarker = L.marker([12.06391827176898, 102.2854556208762], { 
-          icon: boatDeparture,
-          keyboard: true,
-          tabIndex: 0
-        });
-
-        const boatPopup = `
-          <div style="min-width: 220px; font-family: 'Roboto', Arial, sans-serif;">
-            <h3 style="margin: 0 0 8px 0; color: #000080; font-size: 16px; font-weight: bold;">🚤 Boat Departure Point</h3>
-            <p style="margin: 5px 0; font-size: 13px; line-height: 1.4;">Our dive boat departs directly from Klong Prao Beach during high season (Oct-June).</p>
-            <div style="margin: 8px 0;">
-              <strong style="color: #000080;">⏰ Departure:</strong> Usually 8:30 AM<br>
-              <strong style="color: #000080;">🚶 Distance:</strong> 5-minute walk from dive center
-            </div>
-            <a href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic" target="_blank" rel="noopener" style="display: inline-block; margin-top: 8px; padding: 6px 12px; background-color: #000080; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold;">View in Google Maps</a>
-          </div>
-        `;
-
-        boatMarker.bindPopup(boatPopup);
-        boatMarker.addTo(locationMap);
-        
-        // Add keyboard navigation for boat marker
-        boatMarker.on('add', function() {
-          const markerElement = this.getElement();
-          if (markerElement) {
-            markerElement.setAttribute('aria-label', 'Boat Departure Point - Dive boat departure location at Klong Prao Beach. Press Enter to view details.');
-            markerElement.setAttribute('role', 'button');
-            markerElement.setAttribute('tabindex', '0');
-            markerElement.addEventListener('keydown', function(e) {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                boatMarker.openPopup();
-              }
-              if (e.key === 'Escape') {
-                boatMarker.closePopup();
-              }
-            });
-          }
-        });
-
-        // Add scale control
-        L.control.scale({
-          position: 'bottomleft'
-        }).addTo(locationMap);
-
-        // Compact legend for location map
-        const legend = L.control({ position: 'topright' });
-        legend.onAdd = function() {
-          const div = L.DomUtil.create('div', 'info legend');
-          div.setAttribute('role', 'region');
-          div.setAttribute('aria-label', 'Map Legend');
-          div.setAttribute('tabindex', '0');
-          div.style.backgroundColor = 'white';
-          div.style.padding = '8px';
-          div.style.borderRadius = '6px';
-          div.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-          div.style.fontSize = '12px';
-          div.style.lineHeight = '1.3';
-          div.style.minWidth = '140px';
-          
-          div.innerHTML = `
-            <div style="text-align: center; margin-bottom: 6px;">
-              <img src="/img/logos/logo_cdc_black.webp" alt="Chang Diving Center" style="height: 24px; width: auto;" />
-            </div>
-            <div style="margin: 4px 0; display: flex; align-items: center; font-size: 11px;" aria-label="Orange marker indicates Dive Center"><span style="color: #ff6b35; font-size: 14px; margin-right: 6px;" aria-hidden="true">🏢</span> <span>Dive Center (Orange)</span></div>
-            <div style="margin: 4px 0; display: flex; align-items: center; font-size: 11px;" aria-label="Blue marker indicates Boat Departure Point"><span style="color: #4a90e2; font-size: 14px; margin-right: 6px;" aria-hidden="true">🚤</span> <span>Boat Departure (Blue)</span></div>
-          `;
-          
-          return div;
-        };
-        legend.addTo(locationMap);
-
-        // Mobile optimization
-        if (window.innerWidth < 768) {
-          locationMap.zoomControl.setPosition('bottomright');
-        }
-        
-        // Add ARIA labels to zoom controls
-        setTimeout(() => {
-          document.querySelector('.leaflet-control-zoom-in')?.setAttribute('aria-label', 'Zoom in');
-          document.querySelector('.leaflet-control-zoom-out')?.setAttribute('aria-label', 'Zoom out');
-          document.querySelector('.leaflet-control-layers-toggle')?.setAttribute('aria-label', 'Toggle map layers');
-        }, 100);
-      });
-    </script>
-    
     <script src="../../../js/global.js" defer></script>
   </body>
 </html>
