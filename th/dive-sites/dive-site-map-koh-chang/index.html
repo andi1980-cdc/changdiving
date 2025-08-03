@@ -786,8 +786,9 @@
         </p>
 
         <div id="map" 
-             role="application" 
-             aria-label="แผนที่จุดดำน้ำแบบโต้ตอบของเกาะช้าง แสดงจุดดำน้ำทั้งหมด เรือล่ม และข้อมูลรายละเอียดของแต่ละจุดดำน้ำ"
+             role="img" 
+             aria-roledescription="แผนที่แบบโต้ตอบพร้อมจุดดำน้ำรอบเกาะช้าง"
+             aria-label="แผนที่จุดดำน้ำแบบโต้ตอบของเกาะช้าง พร้อมมาร์กเกอร์ที่คลิกได้สำหรับเรือล่ม แนวปะการัง และยอดหิน กด Tab เพื่อนำทาง กด Enter เพื่อดูรายละเอียด"
              tabindex="0"
              style="height: 80vh; width: 100%"></div>
 
@@ -1080,7 +1081,9 @@
         // Add markers to the cluster group
         diveSites.forEach(site => {
           const marker = L.marker([site.lat, site.lng], { 
-            icon: icons[site.type]
+            icon: icons[site.type],
+            keyboard: true,
+            tabIndex: 0
           });
 
           // Create popup content (Thai)
@@ -1101,6 +1104,29 @@
           `;
 
           marker.bindPopup(popupContent);
+          
+          // Add accessibility attributes to marker
+          marker.on('add', function() {
+            const markerElement = this.getElement();
+            if (markerElement) {
+              markerElement.setAttribute('aria-label', `${site.name} - จุดดำน้ำ${site.type} ความลึก: ${site.depth}, ระดับ: ${site.level}. กด Enter เพื่อดูรายละเอียด`);
+              markerElement.setAttribute('role', 'button');
+              markerElement.setAttribute('tabindex', '0');
+              
+              // Add keyboard event listeners
+              markerElement.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  marker.openPopup();
+                }
+                // Escape to close popup
+                if (e.key === 'Escape') {
+                  marker.closePopup();
+                }
+              });
+            }
+          });
+          
           markers.addLayer(marker);
         });
 
@@ -1130,11 +1156,11 @@
               <img src="/img/logos/logo_cdc_black.webp" alt="ช้างไดฟ์วิ่ง เซ็นเตอร์" style="height: 40px; width: auto;" />
             </div>
             <h3 style="margin: 0 0 10px 0; color: #003366; font-weight: bold; text-align: center;">ประเภทจุดดำน้ำ</h3>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #ff6b35; font-size: 16px; margin-right: 8px;">🏢</span> <span>ศูนย์ดำน้ำ</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #4a90e2; font-size: 16px; margin-right: 8px;">🚤</span> <span>จุดออกเรือ</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #d32f2f; font-size: 16px; margin-right: 8px;">🚢</span> <span>เรือจม</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #388e3c; font-size: 16px; margin-right: 8px;">🐠</span> <span>แนวปะการัง</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #7b1fa2; font-size: 16px; margin-right: 8px;">⛰️</span> <span>ยอดหิน</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="มาร์กเกอร์สีส้มแสดงศูนย์ดำน้ำ"><span style="color: #ff6b35; font-size: 16px; margin-right: 8px;" aria-hidden="true">🏢</span> <span>ศูนย์ดำน้ำ (ส้ม)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="มาร์กเกอร์สีน้ำเงินแสดงจุดออกเรือ"><span style="color: #4a90e2; font-size: 16px; margin-right: 8px;" aria-hidden="true">🚤</span> <span>จุดออกเรือ (น้ำเงิน)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="มาร์กเกอร์สีแดงแสดงจุดดำน้ำเรือจม"><span style="color: #d32f2f; font-size: 16px; margin-right: 8px;" aria-hidden="true">🚢</span> <span>เรือจม (แดง)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="มาร์กเกอร์สีเขียวแสดงจุดดำน้ำแนวปะการัง"><span style="color: #388e3c; font-size: 16px; margin-right: 8px;" aria-hidden="true">🐠</span> <span>แนวปะการัง (เขียว)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="มาร์กเกอร์สีม่วงแสดงจุดดำน้ำยอดหิน"><span style="color: #7b1fa2; font-size: 16px; margin-right: 8px;" aria-hidden="true">⛰️</span> <span>ยอดหิน (ม่วง)</span></div>
             <div style="text-align: center; margin-top: 10px; padding-top: 8px; border-top: 1px solid #e0e0e0;">
               <small style="color: #666; font-size: 11px;">แผนที่ดำน้ำแบบอินเทอร์แอคทีฟ</small>
             </div>

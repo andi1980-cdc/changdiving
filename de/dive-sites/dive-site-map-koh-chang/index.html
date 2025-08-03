@@ -788,8 +788,9 @@
         </p>
 
         <div id="map" 
-             role="application" 
-             aria-label="Interaktive Tauchplatz-Karte von Koh Chang mit allen Tauchplätzen, Wracks und detaillierten Informationen zu jedem Tauchspot"
+             role="img" 
+             aria-roledescription="Interaktive Karte mit Tauchplätzen rund um Koh Chang"
+             aria-label="Interaktive Tauchplatz-Karte von Koh Chang mit klickbaren Markern für Wracks, Riffe und Felstürme. Tab zum Navigieren, Enter für Details."
              tabindex="0"
              style="height: 80vh; width: 100%"></div>
 
@@ -1081,7 +1082,9 @@
         // Add markers to the cluster group
         diveSites.forEach(site => {
           const marker = L.marker([site.lat, site.lng], { 
-            icon: icons[site.type]
+            icon: icons[site.type],
+            keyboard: true,
+            tabIndex: 0
           });
 
           // Create popup content (German)
@@ -1102,6 +1105,29 @@
           `;
 
           marker.bindPopup(popupContent);
+          
+          // Add accessibility attributes to marker
+          marker.on('add', function() {
+            const markerElement = this.getElement();
+            if (markerElement) {
+              markerElement.setAttribute('aria-label', `${site.name} - ${site.type} Tauchplatz. Tiefe: ${site.depth}, Level: ${site.level}. Enter drücken für Details.`);
+              markerElement.setAttribute('role', 'button');
+              markerElement.setAttribute('tabindex', '0');
+              
+              // Add keyboard event listeners
+              markerElement.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  marker.openPopup();
+                }
+                // Escape to close popup
+                if (e.key === 'Escape') {
+                  marker.closePopup();
+                }
+              });
+            }
+          });
+          
           markers.addLayer(marker);
         });
 
@@ -1131,11 +1157,11 @@
               <img src="/img/logos/logo_cdc_black.webp" alt="Chang Diving Center" style="height: 40px; width: auto;" />
             </div>
             <h3 style="margin: 0 0 10px 0; color: #003366; font-weight: bold; text-align: center;">Tauchplatz-Typen</h3>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #ff6b35; font-size: 16px; margin-right: 8px;">🏢</span> <span>Tauchzentrum</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #4a90e2; font-size: 16px; margin-right: 8px;">🚤</span> <span>Bootsanlegestelle</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #d32f2f; font-size: 16px; margin-right: 8px;">🚢</span> <span>Wracks</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #388e3c; font-size: 16px; margin-right: 8px;">🐠</span> <span>Riffe</span></div>
-            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #7b1fa2; font-size: 16px; margin-right: 8px;">⛰️</span> <span>Felstürme</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="Orange Marker zeigt Tauchzentrum an"><span style="color: #ff6b35; font-size: 16px; margin-right: 8px;" aria-hidden="true">🏢</span> <span>Tauchzentrum (Orange)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="Blauer Marker zeigt Bootsanlegestelle an"><span style="color: #4a90e2; font-size: 16px; margin-right: 8px;" aria-hidden="true">🚤</span> <span>Bootsanlegestelle (Blau)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="Roter Marker zeigt Wrack-Tauchplätze an"><span style="color: #d32f2f; font-size: 16px; margin-right: 8px;" aria-hidden="true">🚢</span> <span>Wracks (Rot)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="Grüner Marker zeigt Riff-Tauchplätze an"><span style="color: #388e3c; font-size: 16px; margin-right: 8px;" aria-hidden="true">🐠</span> <span>Riffe (Grün)</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;" aria-label="Violetter Marker zeigt Felstürme an"><span style="color: #7b1fa2; font-size: 16px; margin-right: 8px;" aria-hidden="true">⛰️</span> <span>Felstürme (Violett)</span></div>
             <div style="text-align: center; margin-top: 10px; padding-top: 8px; border-top: 1px solid #e0e0e0;">
               <small style="color: #666; font-size: 11px;">Interaktive Tauchkarte</small>
             </div>
