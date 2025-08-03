@@ -675,6 +675,11 @@
       .leaflet-control-attribution a {
         color: #000080 !important;
       }
+      
+      /* Fix Leaflet tile accessibility */
+      .leaflet-tile-container {
+        aria-label: "Interactive map tiles";
+      }
     </style>
     </head>
   <body>
@@ -752,7 +757,7 @@
           style="
             text-align: center;
             font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background: linear-gradient(to right, #0077b6, #404040);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1134,6 +1139,22 @@
         if (window.innerWidth < 768) {
           map.zoomControl.setPosition('bottomright');
         }
+        
+        // Fix empty alt attributes on map tiles for accessibility
+        map.on('tileload', function() {
+          document.querySelectorAll('.leaflet-tile[alt=""]').forEach(tile => {
+            tile.setAttribute('alt', 'Map tile');
+            tile.setAttribute('aria-hidden', 'true');
+          });
+        });
+        
+        // Initial fix for already loaded tiles
+        setTimeout(() => {
+          document.querySelectorAll('.leaflet-tile[alt=""]').forEach(tile => {
+            tile.setAttribute('alt', 'Map tile');
+            tile.setAttribute('aria-hidden', 'true');
+          });
+        }, 1000);
       });
     </script>
     
