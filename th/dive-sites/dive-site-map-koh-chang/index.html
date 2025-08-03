@@ -511,6 +511,24 @@
       }
     </script>
 
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    
+    <!-- Leaflet MarkerCluster CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+    />
+
     <!-- Google Fonts: Roboto -->
     <link
       rel="stylesheet"
@@ -551,6 +569,79 @@
         color: #222;
         margin: 0 0 1rem 0;
         line-height: 1.1;
+      }
+      
+      /* Leaflet Map Responsive Styles */
+      #map {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        margin: 20px 0;
+      }
+      
+      /* Custom marker cluster styles */
+      .marker-cluster-small {
+        background-color: rgba(181, 226, 140, 0.8);
+      }
+      .marker-cluster-small div {
+        background-color: rgba(110, 204, 57, 0.8);
+      }
+      
+      .marker-cluster-medium {
+        background-color: rgba(241, 211, 87, 0.8);
+      }
+      .marker-cluster-medium div {
+        background-color: rgba(240, 194, 12, 0.8);
+      }
+      
+      .marker-cluster-large {
+        background-color: rgba(253, 156, 115, 0.8);
+      }
+      .marker-cluster-large div {
+        background-color: rgba(241, 128, 23, 0.8);
+      }
+      
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        #map {
+          height: 70vh !important;
+          border-radius: 4px;
+        }
+        
+        .leaflet-popup-content {
+          width: 200px !important;
+          font-size: 13px;
+        }
+        
+        .leaflet-popup-content h3 {
+          font-size: 16px !important;
+        }
+        
+        .info.legend {
+          font-size: 12px !important;
+          padding: 8px !important;
+          min-width: 160px !important;
+        }
+        
+        .info.legend h4 {
+          font-size: 14px !important;
+          margin-bottom: 6px !important;
+        }
+        
+        .info.legend img {
+          height: 30px !important;
+          max-width: 120px !important;
+        }
+      }
+      
+      /* Ensure the map doesn't break out of container */
+      .dive-site-box {
+        overflow: hidden;
+      }
+      
+      /* Custom div icon hover effects */
+      .custom-div-icon:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s ease;
       }
     </style>
     </head>
@@ -712,6 +803,317 @@
       />
     </a>
     <footer id="footer"></footer>
+    
+    <!-- Leaflet JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    
+    <!-- Leaflet MarkerCluster JavaScript -->
+    <script
+      src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"
+    ></script>
+    
+    <!-- Dive Site Map Script - Thai Version -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the map centered on Koh Chang area
+        const map = L.map('map', {
+          center: [11.95, 102.32],
+          zoom: 11,
+          zoomControl: true,
+          scrollWheelZoom: true
+        });
+
+        // Define different map layers
+        const osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+          maxZoom: 18,
+          attribution: '© <a href="https://www.esri.com/">Esri</a>, DigitalGlobe, GeoEye, Earthstar Geographics, CNES/Airbus DS, USDA, USGS, AeroGRID, IGN, and the GIS User Community'
+        });
+
+        const terrainLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
+          maxZoom: 18,
+          attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+        });
+
+        // Add default layer
+        osmLayer.addTo(map);
+
+        // Create layer control
+        const baseMaps = {
+          "🗺️ OpenStreetMap": osmLayer,
+          "🛰️ ภาพดาวเทียม": satelliteLayer,
+          "🏔️ ภูมิประเทศ": terrainLayer
+        };
+
+        // Custom icons for different types of dive sites
+        const icons = {
+          diveCenter: L.divIcon({
+            html: '<div style="background-color: #ff6b35; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🏢</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+          }),
+          boat: L.divIcon({
+            html: '<div style="background-color: #4a90e2; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🚤</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+          }),
+          wreck: L.divIcon({
+            html: '<div style="background-color: #d32f2f; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🚢</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+          }),
+          reef: L.divIcon({
+            html: '<div style="background-color: #388e3c; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">🐠</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+          }),
+          pinnacle: L.divIcon({
+            html: '<div style="background-color: #7b1fa2; border: 2px solid white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; font-size: 16px; color: white; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">⛰️</div>',
+            className: 'custom-div-icon',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15]
+          })
+        };
+
+        // Create marker cluster group
+        const markers = L.markerClusterGroup({
+          chunkedLoading: true,
+          maxClusterRadius: 50
+        });
+
+        // Dive site data with coordinates and information (Thai)
+        const diveSites = [
+          {
+            name: "ช้างไดฟ์วิ่ง เซ็นเตอร์",
+            lat: 12.062940593816096,
+            lng: 102.28985548228239,
+            type: "diveCenter",
+            description: "ร้านดำน้ำหลักและพื้นที่บรีฟฟิ่งก่อนทริปแต่ละครั้ง",
+            depth: "ไม่มี",
+            level: "ทุกระดับ",
+            access: "ทางบก",
+            url: "/th/about/"
+          },
+          {
+            name: "จุดออกเรือ", 
+            lat: 12.06391827176898,
+            lng: 102.2854556208762,
+            type: "boat",
+            description: "จุดนัดพบและออกเดินทางด้วยเรือไปยังจุดดำน้ำต่างๆ",
+            depth: "ไม่มี",
+            level: "ทุกระดับ", 
+            access: "ทางบก",
+            url: "https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic"
+          },
+          {
+            name: "เรือหลวงช้าง",
+            lat: 11.894307,
+            lng: 102.257597,
+            type: "wreck",
+            description: "การดำน้ำเรือจมที่มีชื่อเสียงของเรือรบไทยที่ปลดประจำการแล้ว เหมาะสำหรับผู้ชื่นชอบการดำน้ำเรือจม",
+            depth: "5–30 ม.",
+            level: "ขั้นสูง",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/htms-chang-wreck/"
+          },
+          {
+            name: "หินลูกบาต",
+            lat: 11.945638,
+            lng: 102.283831, 
+            type: "reef",
+            description: "แนวปะการังที่สวยงาม เหมาะสำหรับมือใหม่และการถ่ายภาพใต้น้ำ",
+            depth: "5–22 ม.",
+            level: "เริ่มต้นถึงปานกลาง",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/hin-luk-bat/"
+          },
+          {
+            name: "Secret Reef",
+            lat: 11.905192553479965,
+            lng: 102.31728325042923,
+            type: "reef", 
+            description: "อัญมณีที่ซ่อนเร้นด้วยรูปแบบปะการังที่บริสุทธิ์และสิ่งมีชีวิตทะเลที่อุดมสมบูรณ์",
+            depth: "8–14 ม.",
+            level: "เริ่มต้น",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/secret-reef/"
+          },
+          {
+            name: "หินราบใต้",
+            lat: 11.906629460855415,
+            lng: 102.31752797388722,
+            type: "reef",
+            description: "การดำน้ำแนวปะการังตื้น เหมาะสำหรับมือใหม่และการถ่ายภาพใต้น้ำ",
+            depth: "6–12 ม.", 
+            level: "เริ่มต้น",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/hin-raab-south/"
+          },
+          {
+            name: "Blueberry Hill",
+            lat: 11.905294,
+            lng: 102.317584,
+            type: "reef",
+            description: "การดำน้ำแนวปะการังที่มีสีสันพร้อมรูปแบบปะการังที่ยอดเยี่ยมและสิ่งมีชีวิตทะเลที่หลากหลาย",
+            depth: "8–18 ม.",
+            level: "ปานกลาง", 
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/blueberry-hill/"
+          },
+          {
+            name: "เรือจม T11",
+            lat: 11.906928322337778,
+            lng: 102.31746857203512,
+            type: "wreck",
+            description: "เรือจมขนาดเล็กเหมาะสำหรับนักดำน้ำระดับกลางที่ต้องการสำรวจแนวปะการังเทียม",
+            depth: "10–16 ม.",
+            level: "ปานกลาง",
+            access: "เรือเท่านั้น", 
+            url: "/th/dive-sites/t11-wreck/"
+          },
+          {
+            name: "หินเรือเทก",
+            lat: 11.914958962232593,
+            lng: 102.33759604841904,
+            type: "reef",
+            description: "การดำน้ำแนวปะการังขั้นสูงที่มีกระแสน้ำแรงและความหลากหลายทางชีวภาพที่น่าประทับใจ",
+            depth: "10–25 ม.",
+            level: "ขั้นสูง",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/hin-rua-tek/"
+          },
+          {
+            name: "หินราบเหนือ", 
+            lat: 12.052088,
+            lng: 102.239444,
+            type: "reef",
+            description: "จุดแนวปะการังทางเหนือที่มีทัศนวิสัยที่ยอดเยี่ยมและเงื่อนไขที่เป็นมิตรกับมือใหม่",
+            depth: "6–16 ม.",
+            level: "เริ่มต้น",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/hin-raab-north/"
+          },
+          {
+            name: "หินสามเสา",
+            lat: 12.044852024176542,
+            lng: 102.24547490125873,
+            type: "reef",
+            description: "การก่อตัวของหินสามก้อนที่สร้างภูมิทัศน์ใต้น้ำที่หลากหลายสำหรับการสำรวจ",
+            depth: "5–14 ม.",
+            level: "เริ่มต้น", 
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/hin-sam-sao/"
+          },
+          {
+            name: "หินไผ่น้ำ",
+            lat: 11.850661906393347,
+            lng: 102.41060395775406,
+            type: "reef",
+            description: "การดำน้ำแนวปะการังที่ห่างไกลพร้อมสภาพที่บริสุทธิ์และโอกาสในการถ่ายภาพที่ยอดเยี่ยม",
+            depth: "8–18 ม.",
+            level: "ปานกลาง",
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/hin-pray-nam/"
+          },
+          {
+            name: "ยอดหินเกาะรัง",
+            lat: 11.809782456488609,
+            lng: 102.37047235318667,
+            type: "pinnacle",
+            description: "การดำน้ำยอดหินที่งดงามพร้อมภูมิประเทศใต้น้ำที่น่าทึ่งและสภาวะการดำน้ำขั้นสูง",
+            depth: "12–30 ม.",
+            level: "ขั้นสูง", 
+            access: "เรือเท่านั้น",
+            url: "/th/dive-sites/koh-rang-pinnacle/"
+          }
+        ];
+
+        // Add markers to the cluster group
+        diveSites.forEach(site => {
+          const marker = L.marker([site.lat, site.lng], { 
+            icon: icons[site.type]
+          });
+
+          // Create popup content (Thai)
+          const popupContent = `
+            <div style="min-width: 250px; font-family: 'Roboto', Arial, sans-serif;">
+              <h3 style="margin: 0 0 10px 0; color: #0077b6; font-size: 18px; font-weight: bold;">${site.name}</h3>
+              <p style="margin: 5px 0; font-size: 14px; line-height: 1.4;">${site.description}</p>
+              <div style="margin: 10px 0;">
+                <strong style="color: #0077b6;">📏 ความลึก:</strong> ${site.depth}<br>
+                <strong style="color: #0077b6;">👤 ระดับ:</strong> ${site.level}<br>
+                <strong style="color: #0077b6;">🚤 การเข้าถึง:</strong> ${site.access}
+              </div>
+              ${site.url.startsWith('/') ? 
+                `<a href="${site.url}" style="display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #0077b6; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: bold;">เรียนรู้เพิ่มเติม</a>` :
+                `<a href="${site.url}" target="_blank" rel="noopener" style="display: inline-block; margin-top: 10px; padding: 8px 16px; background-color: #0077b6; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: bold;">แสดงบนแผนที่</a>`
+              }
+            </div>
+          `;
+
+          marker.bindPopup(popupContent);
+          markers.addLayer(marker);
+        });
+
+        // Add the cluster group to the map
+        map.addLayer(markers);
+
+        // Add layer control and scale control
+        L.control.layers(baseMaps).addTo(map);
+        L.control.scale({
+          position: 'bottomleft'
+        }).addTo(map);
+
+        // Custom legend (Thai)
+        const legend = L.control({ position: 'topright' });
+        legend.onAdd = function() {
+          const div = L.DomUtil.create('div', 'info legend');
+          div.style.backgroundColor = 'white';
+          div.style.padding = '12px';
+          div.style.borderRadius = '8px';
+          div.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+          div.style.fontSize = '14px';
+          div.style.lineHeight = '1.4';
+          div.style.minWidth = '180px';
+          
+          div.innerHTML = `
+            <div style="text-align: center; margin-bottom: 12px; border-bottom: 1px solid #e0e0e0; padding-bottom: 8px;">
+              <img src="/img/logos/logo_cdc_black.webp" alt="ช้างไดฟ์วิ่ง เซ็นเตอร์" style="height: 40px; width: auto;" />
+            </div>
+            <h4 style="margin: 0 0 10px 0; color: #0077b6; font-weight: bold; text-align: center;">ประเภทจุดดำน้ำ</h4>
+            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #ff6b35; font-size: 16px; margin-right: 8px;">🏢</span> <span>ศูนย์ดำน้ำ</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #4a90e2; font-size: 16px; margin-right: 8px;">🚤</span> <span>จุดออกเรือ</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #d32f2f; font-size: 16px; margin-right: 8px;">🚢</span> <span>เรือจม</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #388e3c; font-size: 16px; margin-right: 8px;">🐠</span> <span>แนวปะการัง</span></div>
+            <div style="margin: 6px 0; display: flex; align-items: center;"><span style="color: #7b1fa2; font-size: 16px; margin-right: 8px;">⛰️</span> <span>ยอดหิน</span></div>
+            <div style="text-align: center; margin-top: 10px; padding-top: 8px; border-top: 1px solid #e0e0e0;">
+              <small style="color: #666; font-size: 11px;">แผนที่ดำน้ำแบบอินเทอร์แอคทีฟ</small>
+            </div>
+          `;
+          
+          return div;
+        };
+        legend.addTo(map);
+
+        // Mobile-friendly map controls
+        if (window.innerWidth < 768) {
+          map.zoomControl.setPosition('bottomright');
+        }
+      });
+    </script>
+    
     <script src="../../../js/global.js" defer></script>
   </body>
 </html>
