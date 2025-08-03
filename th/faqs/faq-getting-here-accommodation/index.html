@@ -272,6 +272,40 @@
 
 </noscript>
 
+    <!-- Leaflet Accessibility Fixes -->
+    <style>
+      /* Remove problematic data:image/gif backgrounds from Leaflet controls */
+      .leaflet-control-zoom-in,
+      .leaflet-control-zoom-out,
+      .leaflet-control-layers-toggle {
+        background-image: none !important;
+        background-color: #fff !important;
+        border: 2px solid #000 !important;
+        color: #000 !important;
+        font-weight: bold !important;
+        font-size: 18px !important;
+        line-height: 26px !important;
+        text-align: center !important;
+      }
+      
+      .leaflet-control-zoom-in::after {
+        content: '+';
+      }
+      
+      .leaflet-control-zoom-out::after {
+        content: '−';
+      }
+      
+      .leaflet-control-layers-toggle::after {
+        content: '☰';
+        font-size: 14px;
+      }
+      
+      /* Attribution link contrast fix */
+      .leaflet-control-attribution a {
+        color: #000080 !important;
+      }
+    </style>
 
     </head>
   <body>
