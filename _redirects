@@ -100,6 +100,7 @@
 /de/dive-sites/koh-rang-pinnacle /de/dive-sites/koh-rang-pinnacle/ 301
 /de/dive-sites/koho-maru-5 /de/dive-sites/koho-maru-5/ 301
 /de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang /de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/ 301
+/de/dive-sites/phutthayotfa-chulalok-wrack-koh-chang/ /de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/ 301
 /de/dive-sites/secret-reef /de/dive-sites/secret-reef/ 301
 /de/dive-sites/t11-wreck /de/dive-sites/t11-wreck/ 301
 /de/diving-activities/ /de/posts/tips-and-tricks/diving-activities/ 301
@@ -330,8 +331,10 @@
 /de/store/category/equipment/atemregler/sp-atemregler/sp-alternative-luftversorgung/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/atemregler/sp-atemregler/sp-instrumente/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/bcds/scubapro/ /de/store/category/equipment/ 301
+/de/store/category/equipment/bcds/apeks-bc/ /de/store/category/equipment/ 301
 /de/store/category/equipment/fins/ /de/store/category/equipment/ 301
 /de/store/category/equipment/fins/ap-flossen/ /de/store/category/equipment/ 301 
+/de/store/category/equipment/fins/ap-fins/ /de/store/category/equipment/ 301
 /de/store/category/equipment/fins/db-fins/ /de/store/category/equipment/ 301
 /de/store/category/equipment/fins/sp-fins/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/fins/sp-flossen/ /de/store/category/equipment/ 301 
@@ -352,14 +355,17 @@
 /de/store/category/equipment/regulator/ap-atemregler/ap-erste-zweite/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/ap-atemregler/ap-nitrox-atemregler/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ /de/store/category/equipment/ 301 
+/de/store/category/equipment/regulator/apeks-reg/ap-alt-air/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ap-ean-reg/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ap-erste-zweite/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ap-first-second/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ap-instrumente/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ap-set/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/apeks-reg/ap-tek-set/ /de/store/category/equipment/ 301 
+/de/store/category/equipment/regulator/apeks-reg/regulator-service/ /de/store/category/ 301
 /de/store/category/equipment/regulator/sp-atemregler/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/sp-atemregler/sp-alternative-luftversorgung/ /de/store/category/equipment/ 301 
+/de/store/category/equipment/regulator/sp-regulator/ /de/store/category/equipment/ 301
 /de/store/category/equipment/regulator/sp-atemregler/sp-erste-zweite/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/sp-atemregler/sp-instrumente/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/sp-regulator/sp-alternativ-air/ /de/store/category/equipment/ 301 
@@ -519,6 +525,8 @@
 /de/suchen-und-bergen-beim-tauchen/ /de/posts/scuba-knowledge/about-search-recovery/ 301
 /de/surface-marker-buoy-smb-warum-ist-sie-wichtig-und-was-bedeuten-die-farben/ /de/posts/scuba-knowledge/smb-guide/ 301
 /de/sustainable-diving/ /de/posts/straight-talk/sustainable-diving/ 301
+/de/tag/koh-chang/ /de/posts/ 301
+/de/tag/tdi/ /de/posts/ 301
 /de/tauchen-fuer-anfaenger-guide/ /de/posts/koh-chang-diving-travel-guides/beginner-guide/ 301 
 /de/tauchen-golf-von-thailand-vs-andamanensee/ /de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/ 301
 /de/tauchen-mythen-und-wahrheit/ /de/posts/straight-talk/diving-myths/ 301
@@ -872,8 +880,11 @@
 /en/store/category/equipment/page/2/ /en/store/category/equipment/ 301
 /en/store/category/equipment/regulator/ /en/store/category/equipment/ 301
 /en/store/category/equipment/regulator/apeks-reg/ /en/store/category/equipment/ 301
+/en/store/category/equipment/regulator/apeks-reg/ap-tek-set/ /en/store/category/equipment/ 301
+/en/store/category/equipment/regulator/apeks-reg/ap-alt-air/ /en/store/category/equipment/ 301
 /en/store/category/equipment/regulator/apeks-reg/ap-ean-reg/ /en/store/category/equipment/ 301
 /en/store/category/equipment/regulator/apeks-reg/regulator-service/ /en/store/category/equipment/ 301
+/en/store/category/equipment/regulator/apeks-reg/ap-instruments/ /en/store/category/equipment/ 301
 /en/store/category/equipment/regulator/apeks/ /en/store/category/equipment/ 301 
 /en/store/category/equipment/regulator/apeks/ap-alternative-air/ /en/store/category/equipment/ 301 
 /en/store/category/equipment/regulator/apeks/ap-tech-sets/ /en/store/category/equipment/ 301 
@@ -915,6 +926,7 @@
 /en/tag/dive-center/ /en/about/ 301
 /en/tag/padi/ /en/404/ 404
 /en/tag/tdi/ /en/404/ 404
+/en/tag/koh-chang/ /en/posts/ 301
 /en/team/ /en/404/ 404
 /en/team/ /en/about/ 301
 /en/team/andreas-maier/ /en/404/ 404
@@ -1891,6 +1903,7 @@
 /th/store/category/equipment/masks/ap-masks/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/masks/apeks-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/store/category/equipment/ 301
 /th/store/category/equipment/masks/deep-blue/ /th/store/category/equipment/ 301 
+/th/store/category/equipment/masks/db-mask/ /th/store/category/equipment/ 301
 /th/store/category/equipment/masks/scubapro-%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/store/category/equipment/ 301
 /th/store/category/equipment/masks/sp-mask/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/ /th/store/category/equipment/ 301
@@ -1904,7 +1917,7 @@
 /th/store/category/equipment/regulator/apeks-reg/ap-tek-set/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/apeks-reg/first-second-stage/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/regulator/apeks-reg/instruments/ /th/store/category/equipment/ 301 
-/th/store/category/equipment/regulator/apeks-reg/instruments/ /th/store/category/equipment/ 301 
+/th/store/category/equipment/regulator/apeks-reg/ap-instruments/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/regulator/scubapro-%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/sp-regulator/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/sp-regulator/alternativ-air-sources/ /th/store/category/equipment/ 301
@@ -1932,6 +1945,7 @@
 /th/th/contact/ /th/404/ 404
 /th/th/dive-sites/ /th/404/ 404 
 /th/th/getting-to-koh-chang/ /th/faqs/faq-getting-here-accommodation/ 301
+/th/product/apeks-dry12l/ /th/store/category/equipment/ 301
 /th/th/product/advanced/ /th/404/ 404 
 /th/th/product/deep-wreck-nitrox/ /th/404/ 404 
 /th/th/product/divemaster/ /th/404/ 404 
@@ -1948,6 +1962,7 @@
 /th/th/store/category/courses/ /th/404/ 404 
 /th/th/store/category/day-trips/ /th/404/ 404 
 /th/th/store/category/packages/ /th/404/ 404 
+/th/product/scuba-promotions/ /th/store/category/courses/ 301
 /th/th/videos/ /th/404/ 404 
 /th/thailand-diving-comparison/ /th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/ 301
 /th/the-best-dive-computers-2025/ /en/posts/scuba-knowledge/best-dive-computers/ 301
