@@ -62,6 +62,7 @@
 /de/2025/04/ /de/404/ 404
 /de/2025/05/ /de/404/ 404
 /de/about /de/about/ 301
+/de/about-us/ /de/about/ 301 
 /de/about/dive-schedule/ /de/about/ 301
 /de/about/refund-policy/ /de/refund-policy/ 301
 /de/about-search-recovery/ /de/posts/scuba-knowledge/about-search-recovery/ 301
@@ -95,6 +96,7 @@
 /de/dauer-owd-kurs-koh-chang/ /de/posts/tips-and-tricks/open-water-duration/ 301
 /de/download-der-erforderlichen-unterlagen/ /de/posts/ 301
 /de/de/getting-to-koh-chang/ /de/404/ 404
+/de/de/about/ /de/404/ 404
 /de/getting-to-koh-chang/ /de/faqs/faq-getting-here-accommodation/ 301
 /de/de/terms-and-conditions/ /de/404/ 404
 /de/deep-diving/ /de/posts/tips-and-tricks/deep-diving/ 301
@@ -411,6 +413,7 @@
 /de/store/category/equipment/masks/sp-mask/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/masks/sp-masken/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/neopren/sp-neoprenzubehoer/ /de/store/category/equipment/ 301 
+/de/store/category/equipment/neopren/ap-neoprenzubehoer/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/ap-atemregler/ap-alternative-luftversorgung/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/regulator/ap-atemregler/ap-erste-zweite/ /de/store/category/equipment/ 301 
@@ -630,6 +633,7 @@
 /de/tauchplätze/phutthayotfa-chulalok-wrack-koh-chang/ /de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/ 301
 /de/tauchplätze/tauchen-sie-die-htms-chang-das-groesste-schiffswrack-thailands-auf-koh-chang/ /de/dive-sites/htms-chang-wreck/ 301
 /de/tauchplätze/tauchplatzkarte-koh-chang/ /de/dive-sites/dive-site-map-koh-chang/ 301
+/de/tauchplätze/htms-chang-wreck/ /de/dive-sites/htms-chang-wreck/ 301
 /de/team/andreas-maier/ /de/404/ 404
 /de/team/capitan-bo/ /de/about/ 301
 /de/team/rittichai-chamhan/ /de/404/ 404
@@ -767,6 +771,7 @@
 /en/diving-myths/ /en/posts/straight-talk/diving-myths/ 301
 /en/diving-social-media/ /en/posts/straight-talk/diving-social-media/ 301
 /en/emergency-plan/ /en/posts/straight-talk/emergency-plan/ 301
+/en/en/about/ /en/404/ 404 
 /en/en/about/refund-policy/ /en/404/ 404 
 /en/en/about/the-dive-process/ /en/404/ 404 
 /en/en/faqs/ /en/404/ 404 
@@ -1157,6 +1162,7 @@
 /product/advanced/ /en/product/advanced/ 301 
 /product/apeks-backplate/ /en/store/category/equipment/ 301
 /product/apeks-double-tank-wing-set-wtx-d/ /en/store/category/equipment/ 301
+/product/apeks-black-ice/ /en/store/category/equipment/ 301
 /product/apeks-dry75-backpack/ /en/store/category/equipment/ 301
 /product/apeks-line-markers/ /en/store/category/equipment/ 301
 /product/apeks-mtx-r-octopus/ /en/store/category/equipment/ 301
@@ -1245,6 +1251,7 @@
 /product/suunto-zoop-novo/ /en/store/category/equipment/ 301
 /product/search-recovery/ /en/product/search-recovery/ 301
 /product/tdi-advanced-wreck-diving/ /en/product/advanced-wreck/ 301
+/product/tdi-advanced-nitrox-diver/ /en/product/advanced-nitrox/ 301 
 /product/tdi-intro-to-tech-course/ /en/product/intro-to-tech/ 301 
 /product/tech-package/ /en/product/tech-package/ 301
 /product/the-padi-sdi-or-tdi-sidemount-diver/ /en/product/sidemount/ 301
