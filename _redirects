@@ -1,24 +1,17 @@
 # URLs redirects
 /%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/%E0%B8%AB%E0%B8%A1%E0%B8%A7%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81/professional-courses/ /th/store/category/courses/professional-courses/ 301
-/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/%E0%B8%AB%E0%B8%A1%E0%B8%A7%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81/professional-courses/ /th/store/category/courses/professional-courses/ 301
-/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/%E0%B8%AB%E0%B8%A1%E0%B8%A7%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81/speciality/ /th/store/category/courses/speciality/ 301
 /%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/%E0%B8%AB%E0%B8%A1%E0%B8%A7%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88/%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81/speciality/ /th/store/category/courses/speciality/ 301
 /about-search-recovery/ /en/posts/scuba-knowledge/about-search-recovery/ 301
-/about-search-recovery/ /en/posts/scuba-knowledge/about-search-recovery/ 301
-/about-underwater-photography/ /en/posts/tips-and-tricks/about-underwater-photography/ 301
 /about-underwater-photography/ /en/posts/tips-and-tricks/about-underwater-photography/ 301
 /about-us-chang-diving-center-koh-chang-thailand/ /en/about/ 301
 /about-us-chang-diving-center-koh-chang-thailand/ /en/about/ 301
 /about-us-chang-diving-center-koh-chang-thailand/dive-schedule/ /en/404/ 404
-/about-us-chang-diving-center-koh-chang-thailand/dive-schedule/ /en/404/ 404
-/about-us-chang-diving-center-koh-chang-thailand/refund-policy/ /en/about/ 301
 /about-us-chang-diving-center-koh-chang-thailand/refund-policy/ /en/about/ 301
 /about-us/ /en/about/ 301 
 /about-us/ /en/about/ 301 
 /about-us/dive-schedule /en/404/ 404
 /about-us/dive-schedule /en/404/ 404
 /about-us/dive-schedule/ /en/about/ 301
-/about-us/getting-to-koh-chang/ /en/faqs/faq-getting-here-accommodation/ 301
 /about-us/getting-to-koh-chang/ /en/faqs/faq-getting-here-accommodation/ 301
 /about-us/refund-policy/ /en/refund-policy/ 301
 /about-us/refund-policy/ /en/refund-policy/ 301
@@ -30,6 +23,7 @@
 /agencies/ /en/posts/straight-talk/padi-vs-sdi-tdi/ 301 
 /apeks-first-stage-operation-dst4/ /en/404/ 404
 /apeks-xtx-regulator-features/ /de/posts/ 301
+/apeks-xtx/ /en/store/category/equipment/ 301
 /barracudas-koh-chang/ /en/posts/marine-life-koh-chang/marine-life-barracuda/ 301
 /batfish-koh-chang/ /en/posts/marine-life-koh-chang/marine-life-batfish/ 301
 /best-dive-computers/ /en/posts/scuba-knowledge/best-dive-computers/ 301
@@ -38,9 +32,12 @@
 /blog/ /en/posts/ 301 
 /category/all-about-wreck-diving/ /en/404/ 404
 /category/booking/ /en/posts/straight-talk/book-in-advance/ 301
-/category/chang-diving-blog/ /en/404/ 404
+/category/chang-diving-blog/ /en/posts/ 301
 /category/equipment/ /en/store/category/equipment/ 301
 /category/thailand/ /en/posts/koh-chang-diving-travel-guides/ 301 
+/category/scuba-knowledge/ /en/posts/scuba-knowledge/ 301
+/category/required-paperwork/ /en/posts/ 301
+/category/all-about-wreck-diving/ /en/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
 /certification-agencies/ /en/404/ 404
 /contact /en/contact/ 301
 /contact/ /en/contact/ 301
@@ -49,6 +46,16 @@
 /courses/emergency-first-response/ /en/product/first-aid/ 301 
 /courses/open-water/ /en/product/open-water-diver/ 301
 /courses/rescue/ /en/product/rescue-diver/ 301 
+/dive-sites/koh-rang-pinnacle/ /en/dive-sites/koh-rang-pinnacle/ 301
+/dive-logbook/ /en/posts/scuba-knowledge/dive-logbook/ 301
+/faqs/faq-booking-payment-scuba-koh-chang/ /en/faqs/faq-booking-payment-scuba-koh-chang/ 301
+/faqs/faq-diving-health-safety-thailand/ /en/faqs/faq-diving-health-safety-thailand/ 301
+/forms/ /en/posts/ 301
+/product/apeks-bungee-connector-kit/ /en/store/category/equipment/ 301
+/product/apeks-xtx40-octopus/ /en/store/category/equipment/ 301
+/product/advanced-wreck/ /en/product/advanced-wreck/ 301
+/store/category/equipment/masks/ /en/store/category/equipment/ 301
+/videos/divestrong-2/ /en/videos/ 301
 /da/about/ /de/about/ 301 
 /de/123test/ /de/404/ 404
 /de /de/ 301
@@ -88,6 +95,7 @@
 /de/dauer-owd-kurs-koh-chang/ /de/posts/tips-and-tricks/open-water-duration/ 301
 /de/download-der-erforderlichen-unterlagen/ /de/posts/ 301
 /de/de/getting-to-koh-chang/ /de/404/ 404
+/de/getting-to-koh-chang/ /de/faqs/faq-getting-here-accommodation/ 301
 /de/de/terms-and-conditions/ /de/404/ 404
 /de/deep-diving/ /de/posts/tips-and-tricks/deep-diving/ 301
 /de/der-weg-eines-sport-tauchers/ /de/posts/straight-talk/dive-professional-training/ 301 
@@ -215,6 +223,8 @@
 /de/product/advanced-wreck /de/product/advanced-wreck/ 301
 /de/product/advanced-wreck-diver/ /de/product/advanced-wreck/ 301
 /de/product/apeks-backplate/ /de/store/category/equipment/ 301
+/de/product/apeks-regulator-service/ /de/store/category/equipment/ 301
+/de/product/apeks-xl4-nitrox/ /de/store/category/equipment/ 301
 /de/product/apeks-black-ice/ /de/store/category/equipment/ 301
 /de/product/apeks-bungee-connector-kit/ /de/store/category/equipment/ 301
 /de/product/apeks-bungee-connector-kit/ /de/store/category/equipment/ 301
@@ -275,6 +285,7 @@
 /de/product/open-to-divemaster /de/product/open-to-divemaster/ 301
 /de/product/open-water-diver /de/product/open-water-diver/ 301
 /de/product/open-water-diver-referral-kurs/ /de/404/ 404
+/de/product/open-water-diver-to-divemaster/ /de/product/open-to-divemaster/ 301
 /de/product/privat-dive-boat/ /de/store/category/courses/ 301
 /de/product/rent-gopro /de/product/rent-gopro/ 301
 /de/product/rescue-diver /de/product/rescue-diver/ 301
@@ -289,6 +300,7 @@
 /de/product/scubapro-solo-mask/ /de/store/category/equipment/ 301 
 /de/product/scubapro-solo-maske/ /de/store/category/equipment/ 301 
 /de/product/scubapro-x-tek-donut-wing/ /de/store/category/equipment/ 301 
+/de/product/scubapro-x-tek-sidemount/ /de/store/category/equipment/ 301 
 /de/product/scubapro-x-tek-wing-set/ /de/store/category/equipment/ 301 
 /de/product/sdi-idc /de/product/sdi-idc/ 301
 /de/product/sdi-ie /de/product/sdi-ie/ 301
@@ -329,7 +341,9 @@
 /de/product/apeks-xtx-50-40regulator-set/ /de/store/category/equipment/ 301
 /de/product/apeks-xtx40-octopus/ /de/store/category/equipment/ 301
 /de/product/apeks-xtx50-sidemount-set/ /de/store/category/equipment/ 301
+/de/product/apeks-tek3-regulator/ /de/store/category/equipment/ 301
 /de/product/deep-blue-xtreme-mask-set/ /de/store/category/equipment/ 301
+/de/product/deep-blue-dry-bags/ /de/store/category/equipment/ 301 
 /de/product/deep-diver-kurs/ /de/product/deep-diver/ 301
 /de/product/hydros-pro-bcd/ /de/store/category/equipment/ 301
 /de/product/scubapro_r195_octopus/ /de/store/category/equipment/ 301
@@ -340,6 +354,7 @@
 /de/product/apeks-dry12l/ /de/store/category/equipment/ 301
 /de/product/apeks-dry75-rucksack/ /de/store/category/equipment/ 301
 /de/product/apeks-single-tank-adaptor/ /de/store/category/equipment/ 301
+/de/product/privates-tauchboot-tech/ /de/store/category/courses/ 301
 /de/reel-and-guideline-use/ /de/posts/tips-and-tricks/reel-guideline/ 301
 /de/reel-guideline/ /de/posts/tips-and-tricks/reel-guideline/ 301
 /de/refund-policy /de/refund-policy/ 301
@@ -371,6 +386,7 @@
 /de/store/category/equipment/atemregler/sp-atemregler/sp-instrumente/ /de/store/category/equipment/ 301 
 /de/store/category/equipment/bcds/scubapro/ /de/store/category/equipment/ 301
 /de/store/category/equipment/bcds/apeks-bc/ /de/store/category/equipment/ 301
+/de/store/category/equipment/bcds/ /de/store/category/equipment/ 301
 /de/store/category/equipment/fins/ /de/store/category/equipment/ 301
 /de/store/category/equipment/accesorries/ /de/store/category/equipment/ 301
 /de/store/category/equipment/accesorries/dive-computer/ /de/store/category/equipment/ 301
@@ -646,6 +662,7 @@
 /de/warum-es-wichtig-ist-dein-tauchabenteuer-in-koh-chang-im-voraus-zu-buchen/ /de/posts/straight-talk/book-in-advance/ 301
 /de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig-chang-diving-center/ /de/posts/scuba-knowledge/gas-consumption/ 301 
 /de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig/ /de/posts/scuba-knowledge/gas-consumption/ 301 
+/de/warum-ist-ein-sicherheitscheck-vor-dem-tauchen-auf-koh-chang-wichtig/ /de/posts/scuba-knowledge/safety-check/ 301
 /de/was-ist-nitrox/ /de/posts/scuba-knowledge/nitrox-info/ 301
 /de/weather /de/weather/ 301
 /de/wetter-koh-chang/ /de/weather/ 301
@@ -698,7 +715,7 @@
 /emergency-plan/ /en/posts/straight-talk/emergency-plan/ 301 
 /en/about /en/about/ 301
 /en/about-search-recovery/ /en/posts/scuba-knowledge/about-search-recovery/ 301
-/en/about-underwater-photography/ /en/posts/tips-and-triks/about-underwater-photography/ 301
+/en/about-underwater-photography/ /en/posts/tips-and-tricks/about-underwater-photography/ 301
 /en/about-us/ /en/about/ 301 
 /en/about-us/refund-policy/ /en/refund-policy/ 301
 /en/about/dive-schedule/ /en/404/ 404
@@ -721,6 +738,8 @@
 /en/category/required-paperwork/ /en/404/ 404
 /en/category/thailand/ /en/404/ 404
 /en/category/all-about-wreck-diving/ /en/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
+/en/category/scuba-knowledge/ /en/posts/scuba-knowledge/ 301
+/en/category/booking/ /en/faqs/faq-booking-payment-scuba-koh-chang/ 301
 /en/certification-agencies/ /en/404/ 404
 /en/certification-type/padi/ /en/posts/straight-talk/padi-vs-sdi-tdi/ 301
 /en/certification-type/sdi/ /en/posts/straight-talk/padi-vs-sdi-tdi/ 301
@@ -827,6 +846,7 @@
 /en/product/advanced-wreck /en/product/advanced-wreck/ 301
 /en/product/apeks-backplate/ /en/store/category/equipment/ 301
 /en/product/apeks-bungee-connector-kit/ /en/store/category/equipment/ 301
+/en/product/apeks-black-ice/ /en/store/category/equipment/ 301
 /en/product/apeks-dry100l/ /en/store/category/equipment/ 301
 /en/product/apeks-dry75-backpack/ /en/store/category/equipment/ 301
 /en/product/apeks-dry75/ /en/store/category/equipment/ 301
@@ -852,6 +872,7 @@
 /en/product/apeks-wtx-deluxe-harness/ /en/store/category/equipment/ 301
 /en/product/apeks-wtx-ultralight-travel-plate/ /en/store/category/equipment/ 301
 /en/product/apeks-wtxd-double-wing-set/ /en/store/category/equipment/ 301
+/en/product/apeks-wtxd-single-wing/ /en/store/category/equipment/ 301
 /en/product/apeks-xl-4-set/ /en/store/category/equipment/ 301
 /en/product/apeks-xl4-nitrox/ /en/store/category/equipment/ 301
 /en/product/apeks-xl4-octopus/ /en/store/category/equipment/ 301
@@ -869,6 +890,7 @@
 /en/product/deep-blue-dry-bags/ /en/store/category/equipment/ 301
 /en/product/deep-blue-speed3-snorkel-fin/ /en/store/category/equipment/ 301
 /en/product/deep-blue-xtreme-mask/ /en/store/category/equipment/ 301
+/en/product/deep-blue-xtreme-mask-set/ /en/store/category/equipment/ 301
 /en/product/deep-diver /en/product/deep-diver/ 301
 /en/product/deep-wreck-nitrox /en/product/deep-wreck-nitrox/ 301
 /en/product/divemaster /en/product/divemaster/ 301
@@ -919,6 +941,7 @@
 /en/product/snorkeling /en/product/snorkeling/ 301
 /en/product/solo-diver /en/product/solo-diver/ 301
 /en/product/suunto-d4i-novo/ /en/store/category/equipment/ 301
+/en/product/suunto-eon-core/ /en/store/category/equipment/ 301
 /en/product/suunto-d5/ /en/store/category/equipment/ 301
 /en/product/suunto-zoop-novo/ /en/store/category/equipment/ 301
 /en/product/tech-package /en/product/tech-package/ 301
@@ -953,6 +976,7 @@
 /en/store/category/equipment/bcds/apeks-bc/ /en/store/category/equipment/ 301
 /en/store/category/equipment/bcds/scubapro/ /en/store/category/equipment/ 301
 /en/store/category/equipment/bcds/sp-bcds/ /en/store/category/equipment/ 301 
+/en/store/category/equipment/bcds/ /en/store/category/equipment/ 301 
 /en/store/category/equipment/fins/sp-fins/ /en/store/category/equipment/ 301
 /en/store/category/equipment/masks/ /en/store/category/equipment/ 301
 /en/store/category/equipment/masks/ap-masks/ /en/store/category/equipment/ 301
@@ -1000,6 +1024,7 @@
 /en/store/page/3/ /en/404/ 404
 /en/store/page/3/ /en/404/ 404 
 /en/store/page/3/ /en/store/category/equipment/ 301
+/en/store/tag/apeks/ /en/404/ 404
 /en/store/tag/apeks/page/2/ /en/404/ 404
 /en/store/tag/deep-blue/ /en/404/ 404
 /en/store/tag/padi/ /en/404/ 404
@@ -1051,6 +1076,7 @@
 /forms/ /en/404/ 404
 /fun-diving-koh-chang-step-by-step-2025/ /en/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/ 301
 /gas-consumption-while-scuba-diving/ /en/posts/scuba-knowledge/gas-consumption/ 301
+/gas-consumption/ /en/posts/scuba-knowledge/gas-consumption/ 301
 /getting-to-koh-chang/ /en/faqs/faq-getting-here-accommodation/ 301
 /getting-to-koh-chang//1000 /en/faqs/faq-getting-here-accommodation/ 301
 /green-sea-turtle-koh-chang/ /en/posts/marine-life-koh-chang/marine-life-green-sea-turtle/ 301 
@@ -1271,6 +1297,7 @@
 /store/category/courses/technical-diving-courses/„ /en/store/category/courses/technical-diving-courses/ 301
 /store/category/tauch-kurse/speciality/ /en/store/category/courses/speciality/ 301
 /store/category/day-trips /en/store/category/day-trips/ 301 
+/store/category/day-trips/ /en/store/category/day-trips/ 301
 /store/category/equipment/ /en/store/category/equipment/ 301
 /store/category/equipment/accesorries/dive-computer/ /en/store/category/equipment/ 301
 /store/category/equipment/bcds/ /en/store/category/equipment/ 301 
@@ -1370,6 +1397,7 @@
 /team/andreas-maier/ /en/about/ 301
 /team/rittichai-chamhan/ /en/404/ 404
 /terms-and-conditions/ /en/terms-and-conditions/ 301
+/ru/about/ /en/about/ 301
 /th /th/ 301
 /th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87-apeks-dst4/ /th/404/ 404 
 /th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87/ /th/faqs/ 301
@@ -1706,6 +1734,7 @@
 /th/cdc-w/ /th/404/ 404 
 /th/cdc-w/ /th/404/ 404 
 /th/cdc/ /th/404/ 404 
+/th/cdc-smb/ /th/404/ 404
 /th/cdc/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/404/ 404
 /th/cdc/%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/refund-policy/ 301
 /th/cdc/%E0%B8%99%E0%B9%82%E0%B8%A2%E0%B8%9A%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%84%E0%B8%B7%E0%B8%99%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99/ /th/refund-policy/ 301
@@ -1732,6 +1761,7 @@
 /th/diving-social-media/ /th/posts/straight-talk/diving-social-media/ 301
 /th/diving-thailand-gulf-vs-andaman/ /th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/ 301
 /th/ds/ /th/dive-sites/ 301 
+/th/ds/dive-site-map-koh-chang/ /th/dive-sites/dive-site-map-koh-chang/ 301
 /th/ds/%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%AB%E0%B8%B4%E0%B8%99%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%94%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%88/ 301 undefined
 /th/ds/%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%AE%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B8-5-%E0%B9%81%E0%B8%9E%E0%B8%841-%E0%B8%8B/ /th/dive-sites/koho-maru-5/ 301
 /th/ds/%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%82%E0%B8%84%E0%B9%82%E0%B8%AE%E0%B8%A1%E0%B8%B2%E0%B8%A3%E0%B8%B8-5-%E0%B9%81%E0%B8%9E%E0%B8%841-%E0%B8%8B/ /th/dive-sites/koho-maru-5/ 301
@@ -1885,6 +1915,7 @@
 /th/product/apeks-line-markers/ /th/store/category/equipment/ 301
 /th/product/apeks-line-markers/ /th/store/category/equipment/ 301
 /th/product/apeks-mtx-r-regulator-set/ /th/store/category/equipment/ 301
+/th/product/apeks-mtx-r-sidemount-set/ /th/store/category/equipment/ 301
 /th/product/apeks-mtx-rc-octopus/ /th/store/category/equipment/ 301
 /th/product/apeks-mtx-rc-regulator-set/ /th/store/category/equipment/ 301
 /th/product/apeks-mtx-rc/ /th/store/category/equipment/ 301
@@ -1894,13 +1925,17 @@
 /th/product/apeks-spools-lifeline/ /th/store/category/equipment/ 301
 /th/product/apeks-surface-marker-buoy/ /th/store/category/equipment/ 301
 /th/product/apeks-tech-shorts/ /th/store/category/equipment/ 301
+/th/product/apeks-rk3-fins/ /th/store/category/equipment/ 301
 /th/product/apeks-vx1-mask/ /th/store/category/equipment/ 301
 /th/product/apeks-wetnotes/ /th/store/category/equipment/ 301
 /th/product/apeks-wtxd-single-wing/ /th/store/category/equipment/ 301
 /th/product/apeks-xl-4-regulator-set/ /th/store/category/equipment/ 301
 /th/product/apeks-xtx50-sidemount-set/ /th/store/category/equipment/ 301
+/th/product/apeks-xtx-50-40regulator-set/ /th/store/category/equipment/ 301
 /th/product/apeks-xtx50/ /th/store/category/equipment/ 301
+/th/product/apeks-xtx40-octopus/ /th/store/category/equipment/ 301
 /th/product/apeks-xl-4-set/ /th/store/category/equipment/ 301
+/th/product/apeks-wtx-deluxe-harness/ /th/store/category/equipment/ 301 
 /th/product/deco-procedures /th/product/deco-procedures/ 301
 /th/product/deep-blue-dry-bags/ /th/store/category/equipment/ 301
 /th/product/hydros-pro-bcd/ /th/store/category/equipment/ 301
@@ -1938,12 +1973,15 @@
 /th/product/rent-gopro /th/product/rent-gopro/ 301
 /th/product/rescue-diver /th/product/rescue-diver/ 301
 /th/product/s-tek-donut-wing/ /th/store/category/equipment/ 301
+/th/product/s-tek-pure-tek-harness/ /th/store/category/equipment/ 301
 /th/product/scuba-review /th/product/scuba-review/ 301
 /th/product/scuba-review-%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%8A%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B8%B1/ /th/product/scuba-review/ 301
 /th/product/scubapro-mash-bag/ /th/store/category/equipment/ 301
 /th/product/scubapro-solo-mask/ /th/store/category/equipment/ 301
 /th/product/scubapro-t-one-bcd/ /th/store/category/equipment/ 301
 /th/product/scubapro-x-tek-40/ /th/store/category/equipment/ 301
+/th/product/scubapro_r195_octopus/ /th/store/category/equipment/ 301
+/th/product/scubapro-mk-25-evo-s600-set/ /th/store/category/equipment/ 301
 /th/product/sdi-idc /th/product/sdi-idc/ 301
 /th/product/sdi-ie /th/product/sdi-ie/ 301
 /th/product/search-and-recovery-diver/ /th/product/search-recovery/ 301
@@ -2018,6 +2056,7 @@
 /th/store/category/equipment/bcds/apeks/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/bcds/scubapro/ /th/store/category/equipment/ 301
 /th/store/category/equipment/fins/ap-fins/ /th/store/category/equipment/ 301
+/th/store/category/equipment/fins/db-fins/ /th/store/category/equipment/ 301
 /th/store/category/equipment/fins/deep-blue-scuba-fins/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/fins/sp-fins/ /th/store/category/equipment/ 301
 /th/store/category/equipment/masks/ap-masks/ /th/store/category/equipment/ 301
@@ -2032,6 +2071,7 @@
 /th/store/category/equipment/regulator/apeks-%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/%E0%B8%8A%E0%B8%B8%E0%B8%94%E0%B8%AD%E0%B8%B8%E0%B8%9B%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%84%E0%B8%B1%E0%B8%A5-apeks/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/apeks-%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/instruments/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/apeks-reg/ /th/store/category/equipment/ 301
+/th/store/category/equipment/regulator/apeks-reg/ap-first-second/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/regulator/apeks-reg/ap-alt-air/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/apeks-reg/ap-ean-reg/ /th/store/category/equipment/ 301
 /th/store/category/equipment/regulator/apeks-reg/ap-set/ /th/store/category/equipment/ 301
@@ -2062,8 +2102,10 @@
 /th/sustainable-diving/ /th/posts/straight-talk/sustainable-diving/ 301
 /th/terms-and-conditions /th/terms-and-conditions/ 301
 /th/th/about/ /th/404/ 404
+/th/th/terms-and-conditions/ /th/terms-and-conditions/ 301
 /th/th/about/refund-policy/ /th/404/ 404 
 /th/th/about/the-dive-process/ /th/404/ 404 
+/th/about/dive-schedule/ /th/404/ 404
 /th/th/contact/ /th/404/ 404
 /th/th/dive-sites/ /th/404/ 404 
 /th/th/getting-to-koh-chang/ /th/faqs/faq-getting-here-accommodation/ 301
@@ -2089,6 +2131,7 @@
 /th/thailand-diving-comparison/ /th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/ 301
 /th/the-best-dive-computers-2025/ /en/posts/scuba-knowledge/best-dive-computers/ 301
 /th/the-ocean-as-the-largest-co₂-supplier/ /th/posts/straight-talk/ocean-climate/ 301
+/th/the-dive-logbook/ /th/posts/scuba-knowledge/dive-logbook/ 301
 /th/tips-tricks-for-digital-underwater-photography/ /th/posts/tips-and-tricks/about-underwater-photography/ 301
 /th/titan-triggerfish-koh-chang/ /th/posts/marine-life-koh-chang/marine-life-titan-triggerfish/ 301
 /th/travel-guide/ /th/posts/koh-chang-diving-travel-guides/travel-guide/ 301
@@ -2105,6 +2148,7 @@
 /the-10-most-popular-diving-activities-on-koh-chang/ /en/posts/tips-and-tricks/diving-activities/ 301
 /the-best-dive-computers-2025/ /en/posts/scuba-knowledge/best-dive-computers/ 301
 /the-dive-logbook/ /en/posts/scuba-knowledge/dive-logbook/ 301
+/dive-logbook/ /en/posts/scuba-knowledge/dive-logbook/ 301
 /the-dive-process/ /en/404/ 404
 /the-fascinating-wrecks-of-koh-chang-a-paradise-for-wreck-diving-enthusiasts/ /en/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
 /the-way-of-a-scuba-diver/ /en/404/ 404 
@@ -2122,7 +2166,8 @@
 /walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art/ /en/posts/marine-life-koh-chang/marine-life-whale-shark/ 301
 /weather-forecast-in-koh-chang/ /en/weather/ 301
 /weather/ /en/weather/ 301
-/what-is-nitrox/ /en/posts/scuba-knowledge/nitrox-info/ 301 
+/what-is-nitrox/ /en/posts/scuba-knowledge/nitrox-info/ 301
+/what-is-nitrox/1000  /en/posts/scuba-knowledge/nitrox-info/ 301
 /which-course/ /en/posts/tips-and-tricks/which-course/ 301
 /who-and-what/ /en/404/ 404
 /why-its-important-to-book-your-diving-adventure-in-koh-chang-in-advance/ /en/posts/straight-talk/book-in-advance/ 301
