@@ -146,7 +146,8 @@
 /de/funktion-der-ersten-stufe-apeks-dst/ /de/posts/ 301 
 /de/gas-consumption/ /de/posts/scuba-knowledge/gas-consumption/ 301
 /de/gasverbrauch-beim-tauchen/ /de/posts/scuba-knowledge/gas-consumption/ 301 
-/de/geschaeftsbedingungen/ /de/terms-and-conditions/ 301 
+/de/geschaeftsbedingungen/ /de/terms-and-conditions/ 301
+/de/gruene-meeresschildkroete-koh-chang/ /en/posts/marine-life-koh-chang/marine-life-green-sea-turtle/ 301 
 /de/home/ /de/ 301 
 /de/how-the-advanced-open-water-diver-course-at-chang-diving-is-conducted-step-by-step-2025-koh-chang/ /de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/ 301
 /de/how-to-advanced-course/ /de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/ 301
@@ -167,6 +168,7 @@
 /de/Kategorie/marine-life-koh-chang/ /de/posts/marine-life-koh-chang/ 301
 /de/Kategorie/taucher-wissen/ /de/posts/scuba-knowledge/ 301 
 /de/Kategorie/wrack-tauchen/ /de/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
+/de/Kategorie/diving-courses/ /de/store/category/courses/ 301
 /de/koh-chang-reisefuehrer/ /de/posts/koh-chang-diving-travel-guides/travel-guide/ 301 
 /de/kontakt/ /de/contact/ 301 
 /de/kurse/advanced-open-water/ /de/product/advanced/ 301 
@@ -334,8 +336,10 @@
 /de/product/scubapro-mk21-c370/ /de/store/category/equipment/ 301
 /de/product/scubapro-mk25-evo-s600/ /de/store/category/equipment/ 301
 /de/product/scubapro-pressure-gauge/ /de/store/category/equipment/ 301
+/de/product/scubapro-mash-bag/ /de/store/category/equipment/ 301
 /de/product/apeks-dry12l/ /de/store/category/equipment/ 301
 /de/product/apeks-dry75-rucksack/ /de/store/category/equipment/ 301
+/de/product/apeks-single-tank-adaptor/ /de/store/category/equipment/ 301
 /de/reel-and-guideline-use/ /de/posts/tips-and-tricks/reel-guideline/ 301
 /de/reel-guideline/ /de/posts/tips-and-tricks/reel-guideline/ 301
 /de/refund-policy /de/refund-policy/ 301
@@ -663,6 +667,7 @@
 /dive-courses/open-water/ /en/product/open-water-diver/ 301 
 /dive-courses/scuba-diver/ /en/product/open-water-diver/ 301 
 /dive-courses/discover-scuba-diving/ /en/product/try-dive/ 301
+/dive-courses/divemaster/ /en/product/divemaster/ 301
 /dive-professional-training/ /en/posts/straight-talk/dive-professional-training/ 301
 /dive-sites/ /en/dive-sites/ 301
 /dive-sites/blueberry-hill/ /en/dive-sites/blueberry-hill/ 301 
@@ -715,6 +720,7 @@
 /en/category/marine-life-koh-chang/ /en/posts/marine-life-koh-chang/ 301
 /en/category/required-paperwork/ /en/404/ 404
 /en/category/thailand/ /en/404/ 404
+/en/category/all-about-wreck-diving/ /en/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
 /en/certification-agencies/ /en/404/ 404
 /en/certification-type/padi/ /en/posts/straight-talk/padi-vs-sdi-tdi/ 301
 /en/certification-type/sdi/ /en/posts/straight-talk/padi-vs-sdi-tdi/ 301
@@ -1894,8 +1900,11 @@
 /th/product/apeks-xl-4-regulator-set/ /th/store/category/equipment/ 301
 /th/product/apeks-xtx50-sidemount-set/ /th/store/category/equipment/ 301
 /th/product/apeks-xtx50/ /th/store/category/equipment/ 301
+/th/product/apeks-xl-4-set/ /th/store/category/equipment/ 301
 /th/product/deco-procedures /th/product/deco-procedures/ 301
 /th/product/deep-blue-dry-bags/ /th/store/category/equipment/ 301
+/th/product/hydros-pro-bcd/ /th/store/category/equipment/ 301
+/th/product/wtx-d-double-donut-wing/ /th/store/category/equipment/ 301
 /th/product/deep-blue-speed3-snorkel-fin/ /th/store/category/equipment/ 301
 /th/product/deep-blue-xtreme-mask-set/ /th/store/category/equipment/ 301
 /th/product/deep-diver /th/product/deep-diver/ 301
@@ -2041,6 +2050,7 @@
 /th/store/category/equipment/regulator/sp-regulator/regulator-set-41/ /th/store/category/equipment/ 301 
 /th/store/category/equipment/regulator/sp-regulator/sp-alternativ-air/ /th/store/category/equipment/ 301
 /th/store/category/equipment/wetsuits/ /th/store/category/equipment/ 301
+/th/store/category/equipment/wetsuits/sp-wetsuits/ /th/store/category/equipment/ 301
 /th/store/category/equipment/wetsuits/apeks-%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%AA%E0%B8%B9%E0%B8%97/ /th/store/category/equipment/ 301
 /th/store/category/equipment/wetsuits/scubapro-%E0%B9%80%E0%B8%A7%E0%B8%97%E0%B8%AA%E0%B8%B9%E0%B8%97/ /th/store/category/equipment/ 301
 /th/store/category/packages/ /th/404/ 404
