@@ -649,7 +649,244 @@
           Luk Bat. Unsere Touren richten sich sowohl an Anfänger als auch an
           fortgeschrittene Taucher.
         </p>
+        <section id="dive-site-map-section">
+          <!-- Accessible, Leaflet-based Interactive Dive Site Map for Chang Diving -->
+          <div
+            id="chang-dive-map"
+            role="application"
+            aria-label="Interactive map of scuba dive sites around Koh Chang including wrecks, reefs, pinnacles, and boat departure point."
+            style="
+              height: 600px;
+              width: 100%;
+              border-radius: 12px;
+              box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            "
+          ></div>
 
+          <!-- Leaflet CSS -->
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            crossorigin=""
+          />
+          <!-- Leaflet JS -->
+          <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            crossorigin=""
+          ></script>
+
+          <style>
+            .leaflet-container:focus {
+              outline: 3px solid #0077b6;
+              outline-offset: 4px;
+            }
+            .custom-marker-icon {
+              font-size: 18px;
+              width: 32px;
+              height: 32px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              font-weight: bold;
+              border-radius: 50%;
+              box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+            }
+            .marker-divecenter {
+              background: #ff6b35;
+            }
+            .marker-boat {
+              background: #4a90e2;
+            }
+            .marker-wreck {
+              background: #0077b6;
+            }
+            .marker-reef {
+              background: #00b894;
+            }
+          </style>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const diveMap = L.map("chang-dive-map", {
+                center: [12.0, 102.3],
+                zoom: 10,
+                zoomControl: true,
+                scrollWheelZoom: true,
+              });
+
+              L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+                  maxZoom: 18,
+                  attribution:
+                    'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+                },
+              ).addTo(diveMap);
+
+              const diveSites = [
+                {
+                  name: "Chang Diving Center",
+                  lat: 12.0629406,
+                  lng: 102.2898555,
+                  iconClass: "marker-divecenter",
+                  label: "🏢",
+                  url: "https://share.google/GyJikvWzsZybBoz5g",
+                  desc: "Our main dive shop and briefing area before each trip.",
+                },
+                {
+                  name: "Boat Departure Point",
+                  lat: 12.0639183,
+                  lng: 102.2854556,
+                  iconClass: "marker-boat",
+                  label: "🚤",
+                  url: "https://maps.app.goo.gl/rm4HGMsGvREGKbuXA",
+                  desc: "Meeting and departure point for all boat trips to the dive sites.",
+                },
+                {
+                  name: "HTMS Chang Wreck",
+                  lat: 11.894307,
+                  lng: 102.257597,
+                  iconClass: "marker-wreck",
+                  label: "🛳️",
+                  url: "/de/dive-sites/htms-chang-wreck/",
+                  desc: "Wreck Dive | 5–30 m | Advanced divers only.",
+                },
+                {
+                  name: "Hin Luk Bat",
+                  lat: 11.945638,
+                  lng: 102.283831,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/hin-luk-bat/",
+                  desc: "Large reef pinnacle | 5–22 m | Suitable for all levels.",
+                },
+                {
+                  name: "Secret Reef",
+                  lat: 11.905193,
+                  lng: 102.317283,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/secret-reef/",
+                  desc: "Hidden coral garden | 8–14 m | Perfect for beginners.",
+                },
+                {
+                  name: "Hin Raab South",
+                  lat: 11.906629,
+                  lng: 102.317528,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/hin-raab-south/",
+                  desc: "Shallow reef plateau | 6–12 m | Calm conditions.",
+                },
+                {
+                  name: "Blueberry Hill",
+                  lat: 11.905294,
+                  lng: 102.317584,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/blueberry-hill/",
+                  desc: "Macro paradise with soft corals | 8–18 m | Intermediate.",
+                },
+                {
+                  name: "T11 Wreck",
+                  lat: 11.906928,
+                  lng: 102.317469,
+                  iconClass: "marker-wreck",
+                  label: "🛳️",
+                  url: "/de/dive-sites/t11-wreck/",
+                  desc: "Training wreck site | 10–16 m | Intermediate divers.",
+                },
+                {
+                  name: "Hin Rua Tek",
+                  lat: 11.914959,
+                  lng: 102.337596,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/hin-rua-tek/",
+                  desc: "Advanced reef with swim-throughs | 10–25 m.",
+                },
+                {
+                  name: "Hin Raab North",
+                  lat: 12.052088,
+                  lng: 102.239444,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/hin-raab-north/",
+                  desc: "Gentle sloping reef | 6–16 m | Ideal for courses.",
+                },
+                {
+                  name: "Hin Sam Sao",
+                  lat: 12.044852,
+                  lng: 102.245475,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/hin-sam-sao/",
+                  desc: "Colorful three-peak reef | 5–14 m | Beginner friendly.",
+                },
+                {
+                  name: "Hin Pray Nam",
+                  lat: 11.850662,
+                  lng: 102.410604,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/hin-pray-nam/",
+                  desc: "Deep reef wall | 8–18 m | Good for drift dives.",
+                },
+                {
+                  name: "Koh Rang Pinnacle",
+                  lat: 11.809782,
+                  lng: 102.370472,
+                  iconClass: "marker-reef",
+                  label: "🪸",
+                  url: "/de/dive-sites/koh-rang-pinnacle/",
+                  desc: "Remote granite pinnacle | 12–30 m | For advanced divers.",
+                },
+              ];
+
+              diveSites.forEach((site) => {
+                const iconHTML = `<div class="custom-marker-icon ${site.iconClass}" aria-hidden="true">${site.label}</div>`;
+                const icon = L.divIcon({
+                  html: iconHTML,
+                  className: "",
+                  iconSize: [32, 32],
+                  iconAnchor: [16, 16],
+                });
+                const marker = L.marker([site.lat, site.lng], {
+                  icon: icon,
+                  keyboard: true,
+                });
+
+                const popupContent = `<strong>${site.name}</strong><br>${site.desc}${site.url ? `<br><a href='${site.url}' target='_blank'>More info</a>` : ""}`;
+
+                marker.bindPopup(popupContent);
+
+                marker.on("add", function () {
+                  const el = this.getElement();
+                  if (el) {
+                    el.setAttribute("tabindex", "0");
+                    el.setAttribute("role", "button");
+                    el.setAttribute(
+                      "aria-label",
+                      `${site.name} – ${site.desc}`,
+                    );
+                    el.addEventListener("keydown", function (e) {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        marker.openPopup();
+                      }
+                      if (e.key === "Escape") {
+                        marker.closePopup();
+                      }
+                    });
+                  }
+                });
+
+                marker.addTo(diveMap);
+              });
+            });
+          </script>
+        </section>
         <p>
           Tauche ein in die faszinierende Unterwasserwelt von Koh Chang und
           begegne einer Vielzahl mariner Lebewesen. Erfahre mehr über die
