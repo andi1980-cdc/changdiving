@@ -91,6 +91,9 @@
       content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp"
     />
 
+    <!-- Google Fonts - Noto Sans Thai for better accessibility -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -544,11 +547,33 @@
       crossorigin
     />
     <style>
+      /* Thai Font Accessibility - Professional Solution */
+      body {
+        font-family: 'Noto Sans Thai', 'Roboto', Arial, sans-serif;
+      }
+      
+      /* Thai text specific styling for better contrast */
+      .thai-text, h1, h2, h3, p, nav, button, a {
+        font-family: 'Noto Sans Thai', 'Roboto', Arial, sans-serif;
+        font-weight: 600;
+        color: #001a33;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      
+      /* Specific styling for dive site names in Thai */
+      .dive-site-name-thai {
+        font-weight: 700;
+        color: #001122;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      
       h1 {
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: 'Noto Sans Thai', 'Roboto', Arial, sans-serif;
         font-size: 2.5rem;
         font-weight: 700;
-        color: #222;
+        color: #001122;
         margin: 0 0 1rem 0;
         line-height: 1.1;
       }
