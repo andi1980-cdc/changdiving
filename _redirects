@@ -1091,7 +1091,12 @@
 /how-to-open-advanced/ /en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/ 301
 /how-to-open-water-course/ /de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/ 301
 /how-to-try-dive/ /en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/ 301
-/how-we-run-your-diving-course-or-day-trip/ /en/posts/diving-how-to-guides-koh-chang/ 301 
+/how-we-run-your-diving-course-or-day-trip/ /en/posts/diving-how-to-guides-koh-chang/ 301
+/home.php?language=german&link=rescue.php /en/404/ 301
+/home.php?language=german&link=divemaster.php /en/404/ 301
+/home.php?language=german&link=bubble.php /en/404/ 301
+/home.php?language=english&link=rescue.php /en/404/ 301
+/home.php?language=english&link=divemaster.php /en/404/ 301
 /koh-chang-dive-sites/ /en/dive-sites/ 301 
 /koh-chang-travel-guide/ /en/posts/koh-chang-diving-travel-guides/travel-guide/ 301
 /marine-life-barracuda/ /en/posts/marine-life-koh-chang/marine-life-barracuda/ 301
@@ -1305,6 +1310,7 @@
 /store/category/equipment/wetsuits/ap-wetsuits/ /en/store/category/equipment/ 301 
 /store/category/equipment/wetsuits/sp-wetsuits/ /en/store/category/equipment/ 301 
 /store/category/packages/ /en/404/ 301
+/store/category/day-trips /en/store/category/day-trips/ 301
 /store/courses/ /en/store/category/courses/ 301 
 /store/courses/advanced-courses/scuba-review/ /en/product/scuba-review/ 301 
 /store/courses/advanced-open-water-diver/ /en/product/advanced/ 301 
