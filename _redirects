@@ -1107,4 +1107,7 @@
 /tag/* /en/404/ 301
 /nl/* /en/ 301
 /home.php* /en/404/ 301
+/de/store/category/equipment/* /de/store/category/equipment/ 301
+/en/store/category/equipment/* /en/store/category/equipment/ 301
+/th/store/category/equipment/* /th/store/category/equipment/ 301
 
