@@ -863,6 +863,8 @@
 /en/team/* /en/about/ 301
 /en/store/page/* /en/404/ 301
 /en/store/tag/* /en/404/ 301
+/en/store/category/equipment/bcds/* /en/store/category/equipment/ 301
+/en/store/category/equipment/regulator/* /en/store/category/equipment/ 301
 /%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2584%25E0%25B9%2589%25E0%25B8%25B2/* /th/ 301
 /de/category/* /de/posts/ 301
 /de/Kategorie/* /de/posts/ 301
