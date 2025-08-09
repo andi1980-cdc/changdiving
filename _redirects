@@ -1088,9 +1088,6 @@
 /store/tag/* /en/404/ 301
 /about-us/* /en/about/ 301
 /category/* /en/posts/ 301
-/de/about/* /de/about/ 301
-/en/about/* /en/about/ 301
-/th/about/* /th/about/ 301
 /2018/06/* /en/posts/ 301
 /2019/11/* /en/posts/ 301
 /2020/03/* /en/posts/ 301
