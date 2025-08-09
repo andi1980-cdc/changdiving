@@ -161,12 +161,6 @@
 /travel-agencys-booking-offices-scuba-diving-koh-chang/ /en/404/ 301
 /de/posts/tips-and-tricks/about-underwater-photography /de/posts/tips-and-tricks/about-underwater-photography/ 301
 /en/posts/marine-life-koh-chang/marine-life-nudibranch /en/posts/marine-life-koh-chang/marine-life-nudibranch/ 301
-/home.php%3Flanguage%3DEnglish%26link%3Ddivemaster.php /en/404/ 301
-/home.php%3Flanguage%3Denglish%26link%3Ddivemaster.php /en/404/ 301
-/home.php%3Flanguage%3Denglish%26link%3Drescue.php /en/404/ 301
-/home.php%3Flanguage%3Dgerman%26link%3Dbubble.php /en/404/ 301
-/home.php%3Flanguage%3Dgerman%26link%3Ddivemaster.php /en/404/ 301
-/home.php%3Flanguage%3Dgerman%26link%3Drescue.php /en/404/ 301
 /de/dive-sites/phutthayotfa-chulalok-wrack-koh-chang/ /de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/ 301
 /de/pirm-udom-sub-nachhaltiges-tauchen-auf-koh-chang/ /de/posts/straight-talk/sustainable-diving/ 301
 /de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig/ /de/posts/scuba-knowledge/gas-consumption/ 301
@@ -1113,5 +1107,5 @@
 /team/* /de/about/ 301
 /tag/* /en/404/ 301
 /nl/* /en/ 301
-
+/home.php* /en/404/ 301
 
