@@ -841,10 +841,10 @@
 /th/weather /th/weather/ 301
 /th/which-course/ /th/posts/tips-and-tricks/which-course/ 301
 /th/why-advanced/ /th/404/ 301
-/de/store/page/* /de/404/ 410
-/de/store/seite/* /de/404/ 410
-/de/store/tag/* /de/404/ 410
-/th/store/tag/* /th/404/ 410
+/de/store/page/* /de/404/ 301
+/de/store/seite/* /de/404/ 301
+/de/store/tag/* /de/404/ 301
+/th/store/tag/* /th/404/ 301
 /th/store/category/dcth/* /th/store/category/courses/ 301
 /th/2018/07/* /th/posts/ 301
 /th/2019/11/* /th/posts/ 301
@@ -856,10 +856,10 @@
 /th/%25E0%25B8%2584%25E0%25B8%25B3%25E0%25B8%2596%25E0%25B8%25B2%25E0%25B8%25A1%25E0%25B8%2597%25E0%25B8%25B5%25E0%25B9%2588%25E0%25B8%259E%25E0%25B8%259A%25E0%25B8%259A%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%25A2/* /th/faqs/ 301
 /th/%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B9%2588%25E0%25B8%25A2%25E0%25B8%25A7%25E0%25B8%2581%25E0%25B8%25B1%25E0%25B8%259A%25E0%25B9%2580%25E0%25B8%25A3%25E0%25B8%25B2-%25E0%25B8%25A8%25E0%25B8%25B9%25E0%25B8%2599%25E0%25B8%25A2%25E0%25B9%258C%25E0%25B8%2594%25E0%25B8%25B3%25E0%25B8%2599%25E0%25B9%2589/* /th/about/ 301
 /en/videos/* /en/videos/ 301
-/en/tag/* /en/404/ 410
+/en/tag/* /en/404/ 301
 /en/team/* /en/about/ 301
-/en/store/page/* /en/404/ 410
-/en/store/tag/* /en/404/ 410
+/en/store/page/* /en/404/ 301
+/en/store/tag/* /en/404/ 301
 /%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2584%25E0%25B9%2589%25E0%25B8%25B2/* /th/ 301
 /de/category/* /de/posts/ 301
 /de/Kategorie/* /de/posts/ 301
@@ -884,7 +884,7 @@
 /de/store/tauch-packete/* /de/store/category/courses/ 301
 /de/store/tauchausruestung/* /de/store/category/equipment/ 301
 /de/store/tauchkurse/* /de/store/category/courses/ 301
-/de/tag/* /de/404/ 410
+/de/tag/* /de/404/ 301
 /de/tauchpl%25C3%25A4tze/* /de/dive-sites/ 301
 /de/team/* /de/about/ 301
 /de/ueber-uns-chang-diving-center-koh-chang-thailand/* /de/about/ 301
