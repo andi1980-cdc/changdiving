@@ -542,6 +542,7 @@
 /th/%25E0%25B9%2583%25E0%25B8%258A%25E0%25B9%2588-%25E0%25B9%2580%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%2584%25E0%25B8%25A2%25E0%25B8%2594%25E0%25B8%25B3%25E0%25B8%2599%25E0%25B9%2589%25E0%25B8%25B3%25E0%25B8%258B%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B9%2580%25E0%25B8%25A3%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%2588/ /th/404/ 301
 /th/%25E0%25B9%2584%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%25A3%25E0%25B9%2587%25E0%25B8%25AD%25E0%25B8%2581%25E0%25B8%258B%25E0%25B9%258C%25E0%25B8%2584%25E0%25B8%25B7%25E0%25B8%25AD%25E0%25B8%25AD%25E0%25B8%25B0%25E0%25B9%2584%25E0%25B8%25A3-%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B8%25B0%25E0%25B8%2597%25E0%25B8%25B3%25E0%25B9%2584/ /th/404/ 301
 /th/about /th/about/ 301
+/th/about/dive-schedule/ /th/about/ 301
 /th/about-search-recovery/ /th/posts/scuba-knowledge/about-search-recovery/ 301
 /th/about-us/ /th/about/ 301
 /th/apeks-dst4/ /th/store/category/equipment/ 301
@@ -849,6 +850,11 @@
 /de/store/tag/* /de/404/ 301
 /th/store/tag/* /th/404/ 301
 /th/store/category/dcth/* /th/store/category/courses/ 301
+/th/store/category/equipment/bcds/* /th/store/category/equipment/ 301
+/th/store/category/equipment/fins/* /th/store/category/equipment/ 301
+/th/store/category/equipment/masks/* /th/store/category/equipment/ 301
+/th/store/category/equipment/regulator/* /th/store/category/equipment/ 301
+/th/store/category/equipment/wetsuits/* /th/store/category/equipment/ 301
 /th/2018/07/* /th/posts/ 301
 /th/2019/11/* /th/posts/ 301
 /th/ds/* /th/dive-sites/ 301
