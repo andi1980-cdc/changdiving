@@ -41,119 +41,6 @@ const priorityMap = {
   'default': 0.5               // Everything else
 };
 
-// Image extraction and sitemap generation
-const imageConfig = {
-  supportedFormats: ['jpg', 'jpeg', 'png', 'webp', 'gif'],
-  outputFile: 'sitemap-images.xml',
-  maxImagesPerPage: 10 // Google recommends max 1000 per sitemap
-};
-
-function extractImages(filePath, urlPath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const images = [];
-    
-    // Extract img tags
-    const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi;
-    let match;
-    
-    while ((match = imgRegex.exec(content)) !== null) {
-      const imgSrc = match[1];
-      
-      // Skip if it's a base64 image or external image
-      if (imgSrc.startsWith('data:') || imgSrc.startsWith('http')) {
-        continue;
-      }
-      
-      // Convert relative paths to absolute URLs
-      let imageUrl = imgSrc;
-      if (imageUrl.startsWith('/')) {
-        imageUrl = config.baseUrl + imageUrl;
-      } else if (!imageUrl.startsWith('http')) {
-        imageUrl = config.baseUrl + '/' + imageUrl;
-      }
-      
-      // Check if it's a supported format
-      const extension = imageUrl.split('.').pop().toLowerCase();
-      if (imageConfig.supportedFormats.includes(extension)) {
-        images.push({
-          loc: imageUrl,
-          title: getImageTitle(content, imgSrc),
-          caption: getImageCaption(content, imgSrc)
-        });
-      }
-    }
-    
-    return images.slice(0, imageConfig.maxImagesPerPage);
-  } catch (error) {
-    console.log(`  ❌ Error extracting images from ${filePath}: ${error.message}`);
-    return [];
-  }
-}
-
-function getImageTitle(content, imgSrc) {
-  // Try to extract alt text as title
-  const altRegex = new RegExp(`<img[^>]+src=["']${imgSrc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]+alt=["']([^"']+)["']`, 'i');
-  const match = content.match(altRegex);
-  return match ? match[1] : '';
-}
-
-function getImageCaption(content, imgSrc) {
-  // Try to find figcaption or nearby text
-  const figcaptionRegex = new RegExp(`<img[^>]+src=["']${imgSrc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*>\\s*</figure>\\s*<figcaption>([^<]+)</figcaption>`, 'i');
-  const match = content.match(figcaptionRegex);
-  return match ? match[1] : '';
-}
-
-function generateImageSitemap(pageData) {
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-`;
-
-  for (const page of pageData) {
-    if (page.images && page.images.length > 0) {
-      xml += `  <url>
-    <loc>${page.url}</loc>
-`;
-      
-      for (const image of page.images) {
-        xml += `    <image:image>
-      <image:loc>${image.loc}</image:loc>`;
-        
-        if (image.title) {
-          xml += `
-      <image:title>${escapeXml(image.title)}</image:title>`;
-        }
-        
-        if (image.caption) {
-          xml += `
-      <image:caption>${escapeXml(image.caption)}</image:caption>`;
-        }
-        
-        xml += `
-    </image:image>
-`;
-      }
-      
-      xml += `  </url>
-`;
-    }
-  }
-
-  xml += '</urlset>';
-  return xml;
-}
-
-function escapeXml(text) {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
-
 // Change frequency for different page types
 const changefreqMap = {
   'index.html': 'weekly',
@@ -277,15 +164,11 @@ function scanDirectory(dir, urls = []) {
       // Get file modification time
       const lastmod = stat.mtime.toISOString().split('T')[0];
       
-      // Extract images from this page
-      const images = extractImages(filePath, urlPath);
-      
       urls.push({
         url: fullUrl,
         lastmod,
         changefreq,
-        priority,
-        images
+        priority
       });
     }
   }
@@ -341,7 +224,6 @@ console.log('==================================================');
 try {
   console.log('📁 Scanning directories for HTML files...');
   console.log('🔍 Checking for noindex and redirect pages...');
-  console.log('🖼️  Extracting images for image sitemap...');
   const urls = scanDirectory('.');
   
   console.log('\n📊 Statistics:');
@@ -350,10 +232,6 @@ try {
   for (const [lang, count] of Object.entries(stats)) {
     console.log(`   ${lang.toUpperCase()}: ${count} pages`);
   }
-  
-  // Count total images
-  const totalImages = urls.reduce((sum, page) => sum + (page.images ? page.images.length : 0), 0);
-  console.log(`   IMAGES: ${totalImages} total images found`);
   
   console.log('\n🏆 Top priority pages:');
   const topPages = urls
@@ -370,20 +248,6 @@ try {
   
   fs.writeFileSync(config.outputFile, sitemapXml);
   console.log(`✅ Sitemap generated: ${config.outputFile}`);
-  
-  // Generate image sitemap if images found
-  if (totalImages > 0) {
-    console.log('\n🖼️  Generating image sitemap...');
-    const imageSitemapXml = generateImageSitemap(urls);
-    
-    fs.writeFileSync(imageConfig.outputFile, imageSitemapXml);
-    console.log(`✅ Image sitemap generated: ${imageConfig.outputFile}`);
-    
-    const imageStats = fs.statSync(imageConfig.outputFile);
-    const imageFileSize = (imageStats.size / 1024).toFixed(2);
-    console.log(`📊 Image sitemap size: ${imageFileSize} KB`);
-  }
-  
   console.log(`🌐 Total URLs: ${urls.length}`);
   console.log(`📍 Base URL: ${config.baseUrl}`);
   
@@ -396,9 +260,6 @@ try {
   console.log('   • Excluded noindex pages');
   console.log('   • Excluded redirect pages'); 
   console.log('   • Excluded 404 pages');
-  if (totalImages > 0) {
-    console.log('   • Generated image sitemap');
-  }
   
 } catch (error) {
   console.error('❌ Error generating sitemap:', error);

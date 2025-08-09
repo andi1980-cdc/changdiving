@@ -28,4 +28,6 @@ Allow: /th/
 
 # SITEMAP DECLARATION
 Sitemap: https://changdiving.com/sitemap.xml
-Sitemap: https://changdiving.com/sitemap-images.xml
+
+# Crawl-delay to be respectful to servers
+Crawl-delay: 1 
