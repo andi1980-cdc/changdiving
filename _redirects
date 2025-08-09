@@ -877,7 +877,7 @@
 /de/ueber-uns/* /de/about/ 301
 /de/videos/* /de/videos/ 301
 /en/category/* /en/posts/ 301
-/en/en/* /en/404/ 410
-/de/de/* /de/404/ 410
-/th/th/* /th/404/ 410
+/en/en/* /en/404/ 301
+/de/de/* /de/404/ 301
+/th/th/* /th/404/ 301
 /th/%25E0%25B8%2588%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B8%2594%25E0%25B8%25B3%25E0%25B8%2599%25E0%25B9%2589%25E0%25B8%25B3/* /th/dive-sites/ 301
