@@ -794,6 +794,7 @@
 /en/en/store/category/day-trips/ /en/404/ 301
 /en/en/store/category/packages/ /en/404/ 301
 /en/en/videos/ /en/404/ 301
+/en/en/* /en/404/ 301
 /en/faqs /en/faqs/ 301
 /en/faqs/faq-booking-payment-scuba-koh-chang /en/faqs/faq-booking-payment-scuba-koh-chang/ 301
 /en/faqs/faq-dive-courses-koh-chang /en/faqs/faq-dive-courses-koh-chang/ 301
@@ -1064,7 +1065,6 @@
 /en/which-course/ /en/posts/tips-and-tricks/which-course/ 301
 /en/why-advanced/ /en/posts/ 301
 /en/wreck-diving-koh-chang/ /en/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
-/en/en/* /en/404/ 301
 /faqs/ /en/faqs/ 301
 /faqs/can-we-pay-with-creditcard-at-the-shop/ /en/faqs/faq-booking-payment-scuba-koh-chang/ 301
 /faqs/diving-faq-koh-chang/ /en/faqs/faq-diving-koh-chang/ 301
