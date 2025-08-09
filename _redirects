@@ -861,7 +861,6 @@
 /en/store/tag/* /en/404/ 410
 /%25E0%25B8%25A3%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%2584%25E0%25B9%2589%25E0%25B8%25B2/* /th/ 301
 /de/category/* /de/posts/ 301
-/de/de/* /de/404/ 410
 /de/Kategorie/* /de/posts/ 301
 /de/store/category/tages-ausfluege/* /de/store/category/day-trips/ 301
 /de/store/category/tauchkurse/* /de/store/category/courses/ 301
@@ -880,4 +879,6 @@
 /de/videos/* /de/videos/ 301
 /en/category/* /en/posts/ 301
 /en/en/* /en/404/ 410
+/de/de/* /de/404/ 410
+/th/th/* /th/404/ 410
 /th/%25E0%25B8%2588%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B8%2594%25E0%25B8%25B3%25E0%25B8%2599%25E0%25B9%2589%25E0%25B8%25B3/* /th/dive-sites/ 301
