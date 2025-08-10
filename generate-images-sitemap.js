@@ -82,9 +82,6 @@ function generateImagesSitemap(images) {
     xml += `  <url>
     <loc>${imageData.url}</loc>
     <lastmod>${imageData.lastmod}</lastmod>
-    <image:image>
-      <image:loc>${imageData.url}</image:loc>
-    </image:image>
   </url>
 `;
   }
