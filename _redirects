@@ -1,3 +1,4 @@
+/wp-content/uploads/* /wp-content/uploads/:splat 200
 /da/about/ /de/about/ 301
 /de /de/ 301
 /de/2025/04/ /de/posts/ 301
@@ -907,4 +908,3 @@
 /de/de/* /de/404/ 301
 /th/th/* /th/404/ 301
 /th/%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/* /th/dive-sites/ 301
-/wp-content/uploads/* /en/404/ 301
