@@ -7,7 +7,7 @@ export async function onRequest(context) {
   if (context.request.method === "OPTIONS") return context.next();
 
   // Sprachpfade (Seiten)
-  const allowPrefixes = ["/en/", "/de/", "/th/"];
+  const allowPrefixes = ["/en/", "/de/", "/th/", "/nl/", "/ru/", "/sv/"];
 
   // Öffentliche Asset-Ordner (falls du docs NICHT brauchst, nimm "/docs/" raus)
   const assetPrefixes = ["/img/", "/css/", "/js/", "/fonts/", "/docs/"];
