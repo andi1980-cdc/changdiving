@@ -1,4 +1,97 @@
 /wp-content/uploads/* /wp-content/uploads/:splat 200
+/de/about/boots-plan/ 410
+/de/about/die-anmeldung/ 410
+/de/about/the-dive-process/ 410
+/de/nationalparks-in-thailand-und-koh-chang/ 410
+/de/natuerlich-haben-wir-schon-wracks-betaucht/ 410
+/de/product/privat-dive-boat/ 410
+/de/product/privates-tauchboot-tech/ 410
+/de/product/scuba-promotions/ 410
+/de/store/category/packages 410
+/de/store/category/privat-boat/ 410
+/de/store/category/privates-boot/ 410
+/en/apeks-dst4/ 410
+/en/apeks-xtx/  410
+/en/forms/ 410
+/en/nationalparks-in-thailand-and-koh-chang/ 410
+/en/product/privat-dive-boat-tech/ 410
+/en/product/privat-dive-boat/ 410
+/en/product/scuba-promotions/ 410
+/en/service-technician/ 410
+/en/store/category/packages/covid-19-koh-chang/ 410
+/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81/ 410
+/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81/ 410
+/th/%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81/ 410
+/th/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B3/ 410
+/th/%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%B2%E0%B8%93%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%88/ 410
+/th/%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%AA%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2/ 410
+/th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/  410
+/th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/ 410
+/th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/ 410
+/th/%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%AA%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9%E0%B9%84%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%AD%E0%B8%81-%E0%B8%84%E0%B8%B7%E0%B8%AD/ 410
+/th/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4/ 410
+/th/%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%9E%E0%B8%A2%E0%B9%8C-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89/ 410
+/th/%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3/ 410
+/th/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%99/ 410
+/th/%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%89%E0%B8%B8%E0%B8%81%E0%B9%80%E0%B8%89%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4/ 410
+/th/%E0%B9%83%E0%B8%8A%E0%B9%88-%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%88/ 410
+/th/%E0%B9%83%E0%B8%8A%E0%B9%88-%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%88/ 410
+/th/cdc-b/ 410
+/th/cdc-smb/ 410
+/th/cdc-w/ 410
+/th/cdc/ 410
+/th/cdc/%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ 410
+/th/cdc/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E 410
+/th/fun-diving-koh-chang-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3-2025/ 410
+/th/product-category/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ 410
+/th/product/%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B8%97%E0%B8%9A%E0%B8%97%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99/ 410
+/th/product/%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B8%97%E0%B8%9A%E0%B8%97%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99/ 410
+/th/product/%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9/ 410
+/th/product/%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9/ 410
+/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%AA%E0%B8%A1/  410
+/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%AA%E0%B8%A1/ 410
+/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99/ 410
+/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99/ 410
+/th/product/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81-%E0%B8%95/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%90/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%90/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9-%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%96/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9-%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%96/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B9%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%8140%E0%B9%80%E0%B8%A1%E0%B8%95%E0%B8%A3/ 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B9%80%E0%B8%A3%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B9%80%E0%B8%A3%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0 410
+/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0 410
+/th/product/dtin/ 410
+/th/product/fd1/ 410
+/th/product/fd12/ 410
+/th/product/fd14/ 410
+/th/product/fd9/ 410
+/th/product/scuba-review-%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%8A%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B8%B1/ 410
+/th/store/category/courses/dcadth/ 410
+/th/store/category/courses/dcspth/ 410
+/th/store/category/dtb/ 410
+/th/store/category/dtp/%E0%B9%82%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%94-19-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87/ 410
+/th/store/category/dtth/ 410
+/th/store/category/packages/ 410
+/th/store/category/privat-boat/ 410
+/th/why-advanced/ 410
+/th/why-advanced/ 410
+/en/why-advanced/ /en/404/ 301
 /da/about/ /de/about/ 301
 /de /de/ 301
 /de/2025/04/ /de/posts/ 301
@@ -7,10 +100,7 @@
 /de/about-search-recovery/ /de/posts/scuba-knowledge/about-search-recovery/ 301
 /de/about-underwater-photography/ /de/posts/tips-and-tricks/about-underwater-photography/ 301
 /de/about-us/ /de/about/ 301
-/de/about/boots-plan/ /de/404/ 301
-/de/about/die-anmeldung/ /de/404/ 301
 /de/about/stornierung-und-rueckersattung/ /de/refund-policy/ 301
-/de/about/the-dive-process/ /de/404/ 301
 /de/agbs/ /de/terms-and-conditions/ 301
 /de/anreise/ /de/faqs/faq-getting-here-accommodation/ 301
 /de/apeks-dst4/ /de/store/category/equipment/ 301
@@ -93,8 +183,6 @@
 /de/marine-life-titan-triggerfish/ /de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/ 301
 /de/marine-life-whale-shark/ /de/posts/marine-life-koh-chang/marine-life-whale-shark/ 301
 /de/marine-life/ /de/posts/marine-life-koh-chang/ 301
-/de/nationalparks-in-thailand-und-koh-chang/ /de/404/ 301
-/de/natuerlich-haben-wir-schon-wracks-betaucht/ /de/404/ 301
 /de/nitrox-info/ /de/posts/scuba-knowledge/nitrox-info/ 301
 /de/padi-vs-sdi-tdi-welches-tauchausbildungssystem-passt-zu-dir/ /de/posts/straight-talk/padi-vs-sdi-tdi/ 301
 /de/pirm-udom-sub-nachhaltiges-tauchen-auf-koh-chang/ /de/posts/straight-talk/sustainable-diving/ 301
@@ -195,15 +283,12 @@
 /de/product/open-water-diver /de/product/open-water-diver/ 301
 /de/product/open-water-diver-referral-kurs/ /de/product/open-water-diver/ 301
 /de/product/open-water-diver-to-divemaster/ /de/product/open-to-divemaster/ 301
-/de/product/privat-dive-boat/ /de/404/ 301
-/de/product/privates-tauchboot-tech/ /de/404/ 301
 /de/product/rent-gopro /de/product/rent-gopro/ 301
 /de/product/rescue-diver /de/product/rescue-diver/ 301
 /de/product/s-tek-donut-wing/ /de/store/category/equipment/ 301
 /de/product/s-tek-pure-tek-harness/ /de/store/category/equipment/ 301
 /de/product/schnorcheln-auf-koh-chang-erkunde-die-unterwasserwelt-mit-unserem-tauchboot/ /de/product/snorkeling/ 301
 /de/product/schnorcheln-gehen-in-koh-chang/ /de/product/snorkeling/ 301
-/de/product/scuba-promotions/ /de/404/ 301
 /de/product/scuba-review /de/product/scuba-review/ 301
 /de/product/scubapro-backplate/ /de/store/category/equipment/ 301
 /de/product/scubapro-finimeter/ /de/store/category/equipment/ 301
@@ -245,8 +330,8 @@
 /de/schwarzspitzen-riffhaie-koh-chang/ /de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/ 301
 /de/smb-guide/ /de/posts/scuba-knowledge/smb-guide/ 301
 /de/so-laeuft-der-open-water-diver-kurs-bei-chang-diving-ab-schritt-fuer-schritt-2025-koh-chang/ /de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/ 301
-/de/store /de/404/ 301
-/de/store/category /de/404/ 301
+/de/store /de/store/ 301
+/de/store/category /de/store/category/ 301
 /de/store/category/courses /de/store/category/courses/ 301
 /de/store/category/Courses/ /de/store/category/courses/ 301
 /de/store/category/courses/advanced-courses /de/store/category/courses/advanced-courses/ 301
@@ -258,9 +343,6 @@
 /de/store/category/courses/technical-diving-courses /de/store/category/courses/technical-diving-courses/ 301
 /de/store/category/day-trips /de/store/category/day-trips/ 301
 /de/store/category/Day-trips/ /de/store/category/day-trips/ 301
-/de/store/category/packages /de/404/ 301
-/de/store/category/privat-boat/ /de/404/ 301
-/de/store/category/privates-boot/ /de/404/ 301
 /de/suchen-und-bergen-beim-tauchen/ /de/posts/scuba-knowledge/about-search-recovery/ 301
 /de/surface-marker-buoy-smb-warum-ist-sie-wichtig-und-was-bedeuten-die-farben/ /de/posts/scuba-knowledge/smb-guide/ 301
 /de/sustainable-diving/ /de/posts/straight-talk/sustainable-diving/ 301
@@ -295,8 +377,6 @@
 /en/about-search-recovery/ /en/posts/scuba-knowledge/about-search-recovery/ 301
 /en/about-underwater-photography/ /en/posts/tips-and-tricks/about-underwater-photography/ 301
 /en/about-us/ /en/about/ 301
-/en/apeks-dst4/ /en/404/ 301
-/en/apeks-xtx/ /en/404/ 301
 /en/contact /en/contact/ 301
 /en/dive-professional-training/ /en/posts/straight-talk/dive-professional-training/ 301
 /en/dive-sites /en/dive-sites/ 301
@@ -326,7 +406,6 @@
 /en/faqs/faq-general-questions-koh-chang /en/faqs/faq-general-questions-koh-chang/ 301
 /en/faqs/faq-try-dive-fun-dives-koh-chang /en/faqs/faq-try-dive-fun-dives-koh-chang/ 301
 /en/faqs/getting-here-accommodation-frequently-asked-questions/ /en/faqs/faq-getting-here-accommodation/ 301
-/en/forms/ /en/404/ 301
 /en/gas-consumption/ /en/posts/scuba-knowledge/gas-consumption/ 301
 /en/getting-to-koh-chang/ /en/faqs/faq-getting-here-accommodation/ 301
 /en/how-to-advanced-course/ /en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/ 301
@@ -345,7 +424,6 @@
 /en/marine-life-titan-triggerfish/ /en/posts/marine-life-koh-chang/marine-life-titan-triggerfish/ 301
 /en/marine-life-whale-shark/ /en/posts/marine-life-koh-chang/marine-life-whale-shark/ 301
 /en/marine-life/ /en/posts/marine-life-koh-chang/ 301
-/en/nationalparks-in-thailand-and-koh-chang/ /en/404/ 301
 /en/nitrox-info/ /en/posts/scuba-knowledge/nitrox-info/ 301
 /en/ocean-climate/ /en/posts/straight-talk/ocean-climate/ 301
 /en/padi-vs-sdi-tdi/ /en/posts/straight-talk/padi-vs-sdi-tdi/ 301
@@ -435,13 +513,10 @@
 /en/product/open-water-diver /en/product/open-water-diver/ 301
 /en/product/open-water-diver-referral-course/ /en/product/open-water-diver/ 301
 /en/product/open-water-scuba-instructor/ /en/product/sdi-idc/ 301
-/en/product/privat-dive-boat-tech/ /en/404/ 301
-/en/product/privat-dive-boat/ /en/404/ 301
 /en/product/rent-a-gopro-hero-7-black/ /en/product/rent-gopro/ 301
 /en/product/rent-gopro /en/product/rent-gopro/ 301
 /en/product/rescue-diver /en/product/rescue-diver/ 301
 /en/product/s-tek-donut-wing/ /en/store/category/equipment/ 301
-/en/product/scuba-promotions/ /en/404/ 301
 /en/product/scuba-review /en/product/scuba-review/ 301
 /en/product/scubapro_r195_octopus/ /en/store/category/equipment/ 301
 /en/product/scubapro-backplate/ /en/store/category/equipment/ 301
@@ -471,11 +546,10 @@
 /en/product/x-tek-pure-tek-harness/ /en/store/category/equipment/ 301
 /en/reel-guideline/ /en/posts/tips-and-tricks/reel-guideline/ 301
 /en/refund-policy /en/refund-policy/ 301
-/en/service-technician/ /en/404/ 301
 /en/smb-guide/ /en/posts/scuba-knowledge/smb-guide/ 301
-/en/store /en/404/ 301
-/en/store/ /en/404/ 301
-/en/store/category /en/404/ 301
+/en/store /en/store/ 301
+/en/store/ /en/store/ 301
+/en/store/category /en/store/category/ 301
 /en/store/category/courses /en/store/category/courses/ 301
 /en/store/category/courses/advanced-courses /en/store/category/courses/advanced-courses/ 301
 /en/store/category/courses/beginner-courses /en/store/category/courses/beginner-courses/ 301
@@ -486,7 +560,6 @@
 /en/store/category/day-trips /en/store/category/day-trips/ 301
 /en/store/category/equipment /en/store/category/equipment/ 301
 /en/store/category/packages/ /en/store/category/courses/ 301
-/en/store/category/packages/covid-19-koh-chang/ /en/404/ 301
 /en/store/courses/advanced-open-water-diver/ /en/product/advanced/ 301
 /en/store/courses/divemaster/ /en/product/divemaster/ 301
 /en/store/courses/open-water-diver/ /en/product/open-water-diver/ 301
@@ -507,40 +580,21 @@
 /en/videos /en/videos/ 301
 /en/weather /en/weather/ 301
 /en/which-course/ /en/posts/tips-and-tricks/which-course/ 301
-/en/why-advanced/ /en/404/ 301
 /en/wreck-diving-koh-chang/ /en/posts/scuba-knowledge/wreck-diving-koh-chang/ 301
 /th /th/ 301
 /th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3-try-dive-%E0%B8%81%E0%B8%B1%E0%B8%9A-chang-diving-%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%87/ /th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/ 301
 /th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87-apeks-dst4/ /th/store/category/equipment/ 301
 /th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87/ /th/faqs/faq-getting-here-accommodation/ 301
-/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81/ /th/404/ 301
-/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81/ /th/404/ 301
 /th/%E0%B8%89%E0%B8%A5%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B2%E0%B8%AC%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA/ /th/posts/marine-life-koh-chang/marine-life-whale-shark/ 301
 /th/%E0%B8%89%E0%B8%A5%E0%B8%B2%E0%B8%A1%E0%B8%A7%E0%B8%B2%E0%B8%AC%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%AA/ /th/posts/marine-life-koh-chang/marine-life-whale-shark/ 301
-/th/%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%97%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%80%E0%B8%81/ /th/404/ 301
-/th/%E0%B8%94%E0%B8%B2%E0%B8%A7%E0%B8%99%E0%B9%8C%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%9F%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%A1%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B3/ /th/404/ 301
 /th/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B9%88%E0%B8%AD/ /th/contact/ 301
 /th/%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%A3%E0%B8%B2/ /th/contact/ 301
-/th/%E0%B8%9B%E0%B8%A3%E0%B8%B4%E0%B8%A1%E0%B8%B2%E0%B8%93%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AB%E0%B8%B2%E0%B8%A2%E0%B9%83%E0%B8%88/ /th/404/ 301
 /th/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%88/ /th/posts/marine-life-koh-chang/ 301
 /th/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%88/ /th/posts/marine-life-koh-chang/ 301
 /th/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%95/ /th/posts/marine-life-koh-chang/ 301
 /th/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%95/ /th/posts/marine-life-koh-chang/ 301
-/th/%E0%B8%9E%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%93%E0%B9%8C%E0%B8%AA%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2/ /th/404/ 301
-/th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/ /th/404/ 301
-/th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/ /th/404/ 301
-/th/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88/ /th/404/ 301
-/th/%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%AA%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9%E0%B9%84%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%AD%E0%B8%81-%E0%B8%84%E0%B8%B7%E0%B8%AD/ /th/404/ 301
-/th/%E0%B8%AD%E0%B8%B8%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%95%E0%B8%B4/ /th/404/ 301
-/th/%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%AD%E0%B8%B8%E0%B8%94%E0%B8%A1%E0%B8%97%E0%B8%A3%E0%B8%B1%E0%B8%9E%E0%B8%A2%E0%B9%8C-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89/ /th/404/ 301
-/th/%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3/ /th/404/ 301
 /th/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3-open-water-%E0%B8%81%E0%B8%B1%E0%B8%9A-chang-diving-%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA/ /th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/ 301
 /th/%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/posts/straight-talk/dive-professional-training/ 301
-/th/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%88%E0%B8%B3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%99/ /th/404/ 301
-/th/%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B8%89%E0%B8%B8%E0%B8%81%E0%B9%80%E0%B8%89%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AD%E0%B8%B8%E0%B8%9A%E0%B8%B1%E0%B8%95%E0%B8%B4/ /th/404/ 301
-/th/%E0%B9%83%E0%B8%8A%E0%B9%88-%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%88/ /th/404/ 301
-/th/%E0%B9%83%E0%B8%8A%E0%B9%88-%E0%B9%80%E0%B8%A3%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A2%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%8B%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%88/ /th/404/ 301
-/th/%E0%B9%84%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B9%87%E0%B8%AD%E0%B8%81%E0%B8%8B%E0%B9%8C%E0%B8%84%E0%B8%B7%E0%B8%AD%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B3%E0%B9%84/ /th/404/ 301
 /th/about /th/about/ 301
 /th/about/dive-schedule/ /th/about/ 301
 /th/about-search-recovery/ /th/posts/scuba-knowledge/about-search-recovery/ 301
@@ -550,12 +604,6 @@
 /th/apeks-xtx/ /th/store/category/equipment/ 301
 /th/category/diving-how-to-guides-koh-chang/ /th/posts/diving-how-to-guides-koh-chang/ 301
 /th/category/marine-life-koh-chang/ /th/posts/marine-life-koh-chang/ 301
-/th/cdc-b/ /th/404/ 301
-/th/cdc-smb/ /th/404/ 301
-/th/cdc-w/ /th/404/ 301
-/th/cdc/ /th/404/ 301
-/th/cdc/%E0%B8%95%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/404/ 301
-/th/cdc/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/404/ 301
 /th/deep-diving/ /th/posts/tips-and-tricks/deep-diving/ 301
 /th/dive-courses/advanced-open-water/ /th/product/advanced/ 301
 /th/dive-logbook/ /th/posts/scuba-knowledge/dive-logbook/ 301
@@ -590,7 +638,6 @@
 /th/faqs/faq-getting-here-accommodation /th/faqs/faq-getting-here-accommodation/ 301
 /th/faqs/faq-try-dive-fun-dives-koh-chang /th/product/fun-dives/ 301
 /th/faqs/getting-here-accommodation-frequently-asked-questions/ /th/faqs/faq-getting-here-accommodation/ 301
-/th/fun-diving-koh-chang-%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3-2025/ /th/404/ 301
 /th/gas-consumption/ /th/posts/scuba-knowledge/gas-consumption/ 301
 /th/getting-to-koh-chang/ /th/faqs/faq-getting-here-accommodation/ 301
 /th/green-sea-turtle-koh-chang/ /th/posts/marine-life-koh-chang/marine-life-green-sea-turtle/ 301
@@ -630,7 +677,6 @@
 /th/posts/tips-and-tricks/reel-guideline /th/posts/tips-and-tricks/reel-guideline/ 301
 /th/prices /th/prices/ 301
 /th/privacy-policy /th/privacy-policy/ 301
-/th/product-category/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/404/ 301
 /th/product/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B9%8B%E0%B8%B2%E0%B8%95%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A2/ /th/store/category/equipment/ 301
 /th/product/%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B9%8B%E0%B8%B2%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%A2-apeks-dry75/ /th/store/category/equipment/ 301
 /th/product/%E0%B8%81%E0%B8%B2%E0%B8%87%E0%B9%80%E0%B8%81%E0%B8%87%E0%B8%82%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%99-hybrid-cargo-1%E0%B8%A1%E0%B8%A1/ /th/store/category/equipment/ 301
@@ -669,21 +715,10 @@
 /th/product/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B8%9F%E0%B9%8C/ /th/product/fun-dives/ 301
 /th/product/%E0%B8%9F%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B8%9F%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87/ /th/product/fun-dives/ 301
 /th/product/%E0%B8%A3%E0%B8%AD%E0%B8%81%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B8%AD%E0%B8%81-apeks-spools-lifeline/ /th/store/category/equipment/ 301
-/th/product/%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B8%97%E0%B8%9A%E0%B8%97%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99/ /th/404/ 301
-/th/product/%E0%B8%AA%E0%B8%84%E0%B8%B9%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%A7-%E0%B8%97%E0%B8%9A%E0%B8%97%E0%B8%A7%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99/ /th/404/ 301
 /th/product/%E0%B8%AA%E0%B8%A1%E0%B8%B8%E0%B8%94%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%E0%B9%83%E0%B8%95%E0%B9%89%E0%B8%99%E0%B9%89%E0%B8%B3-apeks-wetnotes/ /th/store/category/equipment/ 301
-/th/product/%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9/ /th/404/ 301
-/th/product/%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9/ /th/404/ 301
 /th/product/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%81-apeks-vx1/ /th/store/category/equipment/ 301
 /th/product/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%81-deep-blue-xtreme/ /th/store/category/equipment/ 301
 /th/product/%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%81-scubapro-solo/ /th/store/category/equipment/ 301
-/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%AA%E0%B8%A1/ /th/404/ 301
-/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%AA%E0%B8%A1/ /th/404/ 301
-/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99/ /th/404/ 301
-/th/product/%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%93%E0%B8%B2%E0%B8%93%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%81%E0%B8%A5%E0%B8%B2%E0%B8%87%E0%B8%84%E0%B8%B7%E0%B8%99/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81-%E0%B8%95/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88-2/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-%E0%B9%80%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD-%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88-2/ /th/404/ 301
 /th/product/%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%B2-gopro-hero-7-black/ /th/product/rent-gopro/ 301
 /th/product/%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-apeks-mtx-rc/ /th/store/category/equipment/ 301
 /th/product/%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-apeks-tek3/ /th/store/category/equipment/ 301
@@ -692,36 +727,6 @@
 /th/product/%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%AD%E0%B8%87-apeks-mtx-r-octopus/ /th/store/category/equipment/ 301
 /th/product/%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%AD%E0%B8%87-apeks-xl4-octopus/ /th/store/category/equipment/ 301
 /th/product/%E0%B9%80%E0%B8%A3%E0%B8%81%E0%B8%81%E0%B8%B9%E0%B9%80%E0%B8%A5%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%AD%E0%B8%87-scubapro_r195_octopus/ /th/store/category/equipment/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%90/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A%E0%B8%B5%E0%B8%A7%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%90/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%84%E0%B8%A3%E0%B8%B9%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B8%AA%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B8%8A/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%A2%E0%B9%80%E0%B8%AB%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9-%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%96/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9E%E0%B8%B4%E0%B9%80%E0%B8%A8%E0%B8%A9-%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%96/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B9%80%E0%B8%A3%E0%B8%B4%E0%B9%88/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%AA%E0%B8%B9%E0%B8%87/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4-2/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4-2/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4-3/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4-3/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4-4/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4-4/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%8140%E0%B9%80%E0%B8%A1%E0%B8%95%E0%B8%A3/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B8%B3%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B8%AD/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%84/ /th/404/ 301
-/th/product/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81%E0%B8%AA%E0%B8%B9%E0%B8%95%E0%B8%A3%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%84/ /th/404/ 301
-/th/product/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6/ /th/404/ 301
-/th/product/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99-%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6/ /th/404/ 301
-/th/product/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%9A/ /th/404/ 301
-/th/product/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B9%80%E0%B8%9A/ /th/404/ 301
-/th/product/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89/ /th/404/ 301
-/th/product/%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%94%E0%B9%89/ /th/404/ 301
 /th/product/advanced /th/product/advanced/ 301
 /th/product/advanced-nitrox /th/product/advanced-nitrox/ 301
 /th/product/advanced-wreck /th/product/advanced-wreck/ 301
@@ -760,12 +765,7 @@
 /th/product/deep-diver /th/product/deep-diver/ 301
 /th/product/deep-wreck-nitrox /th/product/nitrox-diver/ 301
 /th/product/divemaster /th/product/divemaster/ 301
-/th/product/dtin/ /th/404/ 301
 /th/product/efr-instructor /th/product/efr-instructor/ 301
-/th/product/fd1/ /th/404/ 301
-/th/product/fd12/ /th/404/ 301
-/th/product/fd14/ /th/404/ 301
-/th/product/fd9/ /th/404/ 301
 /th/product/first-aid /th/product/first-aid/ 301
 /th/product/fun-dives /th/product/fun-dives/ 301
 /th/product/go-sport-fin/ /th/store/category/equipment/ 301
@@ -788,7 +788,6 @@
 /th/product/s-tek-donut-wing/ /th/store/category/equipment/ 301
 /th/product/s-tek-pure-tek-harness/ /th/store/category/equipment/ 301
 /th/product/scuba-review /th/product/scuba-review/ 301
-/th/product/scuba-review-%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA%E0%B8%A3%E0%B8%B5%E0%B9%80%E0%B8%9F%E0%B8%A3%E0%B8%8A%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B8%B1/ /th/404/ 301
 /th/product/scubapro_r195_octopus/ /th/store/category/equipment/ 301
 /th/product/scubapro-mash-bag/ /th/store/category/equipment/ 301
 /th/product/scubapro-mk-25-evo-s600-set/ /th/store/category/equipment/ 301
@@ -817,22 +816,15 @@
 /th/refund-policy /th/refund-policy/ 301
 /th/scuba-diving-beginner-guide/ /th/posts/koh-chang-diving-travel-guides/beginner-guide/ 301
 /th/smb-guide/ /th/posts/scuba-knowledge/smb-guide/ 301
-/th/store /th/404/ 301
+/th/store /th/store/ 301
 /th/store/category/courses /th/store/category/courses/ 301
 /th/store/category/courses/advanced-courses /th/store/category/courses/advanced-courses/ 301
 /th/store/category/courses/beginner-courses /th/store/category/courses/beginner-courses/ 301
-/th/store/category/courses/dcadth/ /th/404/ 301
-/th/store/category/courses/dcspth/ /th/404/ 301
 /th/store/category/courses/professional-courses /th/store/category/courses/professional-courses/ 301
 /th/store/category/courses/speciality /th/store/category/courses/speciality/ 301
 /th/store/category/courses/technical-diving-courses /th/store/category/courses/technical-diving-courses/ 301
 /th/store/category/day-trips /th/store/category/day-trips/ 301
-/th/store/category/dtb/ /th/404/ 301
-/th/store/category/dtp/%E0%B9%82%E0%B8%84%E0%B8%A7%E0%B8%B4%E0%B8%94-19-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87/ /th/404/ 301
-/th/store/category/dtth/ /th/404/ 301
 /th/store/category/equipment /th/store/category/equipment/ 301
-/th/store/category/packages/ /th/404/ 301
-/th/store/category/privat-boat/ /th/404/ 301
 /th/sustainable-diving/ /th/posts/straight-talk/sustainable-diving/ 301
 /th/terms-and-conditions /th/terms-and-conditions/ 301
 /th/thailand-diving-comparison/ /th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/ 301
@@ -844,11 +836,19 @@
 /th/walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art/ /th/posts/marine-life-koh-chang/marine-life-whale-shark/ 301
 /th/weather /th/weather/ 301
 /th/which-course/ /th/posts/tips-and-tricks/which-course/ 301
-/th/why-advanced/ /th/404/ 301
-/de/store/page/* /de/404/ 301
-/de/store/seite/* /de/404/ 301
-/de/store/tag/* /de/404/ 301
-/th/store/tag/* /th/404/ 301
+/de/store/page/* 410
+/de/store/seite/* 410
+/de/store/tag/* 410
+/th/store/tag/* 410
+/th/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/* 410
+/en/tag/* 410
+/en/store/page/* 410
+/en/store/tag/*  410
+/de/store/kategorie/* 410
+/de/tag/* 410
+/en/en/* 410
+/de/de/* 410
+/th/th/* 410
 /th/store/category/dcth/* /th/store/category/courses/ 301
 /th/store/category/equipment/bcds/* /th/store/category/equipment/ 301
 /th/store/category/equipment/fins/* /th/store/category/equipment/ 301
@@ -858,7 +858,6 @@
 /th/2018/07/* /th/posts/ 301
 /th/2019/11/* /th/posts/ 301
 /th/ds/* /th/dive-sites/ 301
-/th/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/* /th/404/ 301
 /th/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/* /th/ 301
 /th/%E0%B8%A7%E0%B8%B4%E0%B8%94%E0%B8%B5%E0%B9%82%E0%B8%AD/* /th/videos/ 301
 /th/%E0%B8%AB%E0%B8%A1%E0%B8%A7%E0%B8%94%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88/* /th/posts/ 301
@@ -866,10 +865,7 @@
 /th/%E0%B8%84%E0%B8%B3%E0%B8%96%E0%B8%B2%E0%B8%A1%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9E%E0%B8%9A%E0%B8%9A%E0%B9%88%E0%B8%AD%E0%B8%A2/* /th/faqs/ 301
 /th/%E0%B9%80%E0%B8%81%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%A7%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B2-%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89/* /th/about/ 301
 /en/videos/* /en/videos/ 301
-/en/tag/* /en/404/ 301
 /en/team/* /en/about/ 301
-/en/store/page/* /en/404/ 301
-/en/store/tag/* /en/404/ 301
 /en/store/category/equipment/bcds/* /en/store/category/equipment/ 301
 /en/store/category/equipment/regulator/* /en/store/category/equipment/ 301
 /%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B9%89%E0%B8%B2/* /th/ 301
@@ -890,20 +886,15 @@
 /de/store/category/packages/* /de/store/category/equipment/ 301
 /de/store/category/tages-ausfluege/* /de/store/category/day-trips/ 301
 /de/store/category/tauchkurse/* /de/store/category/courses/ 301
-/de/store/kategorie/* /de/404/ 301
 /de/store/tages-ausfluege/* /de/store/category/day-trips/ 301
 /de/store/tauch-kurse/* /de/store/category/courses/ 301
 /de/store/tauch-packete/* /de/store/category/courses/ 301
 /de/store/tauchausruestung/* /de/store/category/equipment/ 301
 /de/store/tauchkurse/* /de/store/category/courses/ 301
-/de/tag/* /de/404/ 301
 /de/tauchpl%C3%A4tze/* /de/dive-sites/ 301
 /de/team/* /de/about/ 301
 /de/ueber-uns-chang-diving-center-koh-chang-thailand/* /de/about/ 301
 /de/ueber-uns/* /de/about/ 301
 /de/videos/* /de/videos/ 301
 /en/category/* /en/posts/ 301
-/en/en/* /en/404/ 301
-/de/de/* /de/404/ 301
-/th/th/* /th/404/ 301
 /th/%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3/* /th/dive-sites/ 301
