@@ -17,7 +17,8 @@ export async function onRequest(context) {
       "/img/", "/images/", "/css/", "/js/", "/fonts/", "/.well-known/"
     ];
     const allowRootFiles = [
-      "/",                    // Root
+      "/",
+      "/style.css",                    // Root
       "/robots.txt",
       "/sitemap.xml",
       "/sitemap-images.xml",
