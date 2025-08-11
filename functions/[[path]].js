@@ -805,6 +805,26 @@ const REDIRECTS_EXACT_RAW = [
   // weitere paare hier … ["/de/alt", "/de/neu/"],
 ];
 
+// Prefix/Wildcard 301, die den Rest *verwerfen* (kein :splat)
+const REDIRECTS_PREFIX_DROP_RAW = [
+  { from: "/de/store/category/equipment/atemregler", to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/bcds",       to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/tarierjackets", to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/taschen-rucksaecke", to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/tauchzubehoer", to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/fins",       to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/flossen",    to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/masken",     to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/masks",      to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/neopren",    to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/regulator",  to: "/de/store/category/equipment/" },
+  { from: "/de/store/category/equipment/wetsuits",   to: "/de/store/category/equipment/" },
+];
+const REDIRECTS_PREFIX_DROP = REDIRECTS_PREFIX_DROP_RAW
+  .map(({ from, to }) => ({ from: normPath(ensureLeadingSlash(from)), to: ensureLeadingSlash(to) }))
+  .filter(({ from, to }) => from !== normPath(to));
+  
+
 // 2) PREFIX/WILDCARD 301 — als Objekte { from, to }
 //    wirkt wie /from/* -> /to/:splat
 const REDIRECTS_PREFIX_RAW = [
