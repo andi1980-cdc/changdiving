@@ -903,9 +903,6 @@
 /de/ueber-uns/* /de/about/ 301
 /de/videos/* /de/videos/ 301
 /en/category/* /en/posts/ 301
-/nl/* /en/ 301
-/ru/* /en/ 301
-/sv/* /en/ 301
 /en/en/* /en/404/ 301
 /de/de/* /de/404/ 301
 /th/th/* /th/404/ 301
