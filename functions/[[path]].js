@@ -983,6 +983,7 @@ const FORCE_GONE_PREFIX = [
      "/de/store/tauchausruestung",
      "/de/store/tauchkurse",
      "/de/tauchpl%C3%A4tze",
+     "/de/tauchplätze",
      "/de/team",
      "/de/tag",
      "/en/en",
