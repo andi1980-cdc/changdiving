@@ -1,11 +1,12 @@
-name: Auto-Generate Sitemap
+name: Auto-Generate Sitemap (DISABLED)
 
 on:
-  push:
-    branches: [ main ]
-    paths: 
-      - '**.html'
-      - '!sitemap.xml'
+  # push:
+  #   branches: [ main ]
+  #   paths: 
+  #     - '**.html'
+  #     - '!sitemap.xml'
+  workflow_dispatch:
 
 permissions:
   contents: write
