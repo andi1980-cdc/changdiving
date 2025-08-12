@@ -1035,38 +1035,71 @@ export async function onRequest(context) {
 
   // --- 4) Wenn 404: 410 EXAKT ---
   if (FORCE_GONE_EXACT.has(path)) {
-    const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-    return new Response(html, { 
-      status: 410, 
-      headers: { 
-        "Content-Type": "text/html; charset=utf-8",
-        "X-Debug": "410-exact" 
-      } 
-    });
+    try {
+      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+      return new Response(html, { 
+        status: 410, 
+        headers: { 
+          "Content-Type": "text/html; charset=utf-8",
+          "X-Debug": "410-exact" 
+        } 
+      });
+    } catch (error) {
+      // Fallback: einfache 410 Response
+      return new Response("410 Gone", { 
+        status: 410, 
+        headers: { 
+          "Content-Type": "text/plain; charset=utf-8",
+          "X-Debug": "410-exact-fallback" 
+        } 
+      });
+    }
   }
 
   // --- 5) 410 PREFIX ---
   if (findPrefixRule(path, FORCE_GONE_PREFIX)) {
-    const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-    return new Response(html, { 
-      status: 410, 
-      headers: { 
-        "Content-Type": "text/html; charset=utf-8",
-        "X-Debug": "410-prefix" 
-      } 
-    });
+    try {
+      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+      return new Response(html, { 
+        status: 410, 
+        headers: { 
+          "Content-Type": "text/html; charset=utf-8",
+          "X-Debug": "410-prefix" 
+        } 
+      });
+    } catch (error) {
+      // Fallback: einfache 410 Response
+      return new Response("410 Gone", { 
+        status: 410, 
+        headers: { 
+          "Content-Type": "text/plain; charset=utf-8",
+          "X-Debug": "410-prefix-fallback" 
+        } 
+      });
+    }
   }
 
   // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(path) && !isAsset(path)) {
-    const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-    return new Response(html, { 
-      status: 410, 
-      headers: { 
-        "Content-Type": "text/html; charset=utf-8",
-        "X-Debug": "410-global" 
-      } 
-    });
+    try {
+      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+      return new Response(html, { 
+        status: 410, 
+        headers: { 
+          "Content-Type": "text/html; charset=utf-8",
+          "X-Debug": "410-global" 
+        } 
+      });
+    } catch (error) {
+      // Fallback: einfache 410 Response
+      return new Response("410 Gone", { 
+        status: 410, 
+        headers: { 
+          "Content-Type": "text/plain; charset=utf-8",
+          "X-Debug": "410-global-fallback" 
+        } 
+      });
+    }
   }
 
   // Sprachpfad 404 bleibt 404 (echter Tippfehler in gültiger Sprache)
