@@ -75,3 +75,16 @@ backup_*/
 *_backup/
 *_backup_*/
 [0-9]*_backup/
+
+# Development and utility scripts
+fix_*.py
+sort_*.py
+.htmltest.yml
+generate-sitemap.js
+generate-images-sitemap.js
+
+# Temporary and working files
+*.tmp
+*.temp
+*.bak
+*~
