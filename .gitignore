@@ -80,8 +80,6 @@ backup_*/
 fix_*.py
 sort_*.py
 .htmltest.yml
-generate-sitemap.js
-generate-images-sitemap.js
 
 # Temporary and working files
 *.tmp
