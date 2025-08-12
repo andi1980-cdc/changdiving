@@ -29,7 +29,7 @@ function joinUrl(base, suffix) {
 // --- Root-Dateien, die auch außerhalb Sprachpfaden 200 sein dürfen ---
 const ROOT_FILES = new Set([
   "/", "/style.css", "/robots.txt", "/sitemap.xml", "/sitemap-images.xml",
-  "/site.webmanifest", "/favicon.ico", "/favicon.svg", "/404.html"
+  "/site.webmanifest", "/favicon.ico", "/favicon.svg", "/404.html", "/410.html"
 ]);
 
 function isAsset(path) {
@@ -562,7 +562,6 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%9B%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%87-%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87-%E0%B8%95", "/th/posts/marine-life-koh-chang/"],
   ["/th/%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%99%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3-open-water-%E0%B8%81%E0%B8%B1%E0%B8%9A-chang-diving-%E0%B8%84%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%AA", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
   ["/th/%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%B1%E0%B8%81%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3", "/th/posts/straight-talk/dive-professional-training/"],
-  ["/th/about", "/th/about/"],
   ["/th/about/dive-schedule", "/th/about/"],
   ["/th/about-search-recovery", "/th/posts/scuba-knowledge/about-search-recovery/"],
   ["/th/about-us", "/th/about/"],
@@ -1036,17 +1035,79 @@ export async function onRequest(context) {
 
   // --- 4) Wenn 404: 410 EXAKT ---
   if (FORCE_GONE_EXACT.has(path)) {
-    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-exact" } });
+    // Lade die 410.html und setze Status auf 410
+    const response = await context.next();
+    if (response.status === 404) {
+      // Wenn 404, dann 410.html laden
+      const url = new URL(context.request.url);
+      url.pathname = "/410.html";
+      const newRequest = new Request(url, context.request);
+      const htmlResponse = await context.next(newRequest);
+      return new Response(htmlResponse.body, { 
+        status: 410, 
+        headers: { 
+          "X-Debug": "410-exact",
+          "Content-Type": "text/html"
+        } 
+      });
+    }
+    return new Response(response.body, { 
+      status: 410, 
+      headers: { 
+        "X-Debug": "410-exact",
+        "Content-Type": "text/html"
+      } 
+    });
   }
 
   // --- 5) 410 PREFIX ---
   if (findPrefixRule(path, FORCE_GONE_PREFIX)) {
-    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-prefix" } });
+    const response = await context.next();
+    if (response.status === 404) {
+      const url = new URL(context.request.url);
+      url.pathname = "/410.html";
+      const newRequest = new Request(url, context.request);
+      const htmlResponse = await context.next(newRequest);
+      return new Response(htmlResponse.body, { 
+        status: 410, 
+        headers: { 
+          "X-Debug": "410-prefix",
+          "Content-Type": "text/html"
+        } 
+      });
+    }
+    return new Response(response.body, { 
+      status: 410, 
+      headers: { 
+        "X-Debug": "410-prefix",
+        "Content-Type": "text/html"
+      } 
+    });
   }
 
   // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(path) && !isAsset(path)) {
-    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-global" } });
+    const response = await context.next();
+    if (response.status === 404) {
+      const url = new URL(context.request.url);
+      url.pathname = "/410.html";
+      const newRequest = new Request(url, context.request);
+      const htmlResponse = await context.next(newRequest);
+      return new Response(htmlResponse.body, { 
+        status: 410, 
+        headers: { 
+          "X-Debug": "410-global",
+          "Content-Type": "text/html"
+        } 
+      });
+    }
+    return new Response(response.body, { 
+      status: 410, 
+      headers: { 
+        "X-Debug": "410-global",
+        "Content-Type": "text/html"
+      } 
+    });
   }
 
   // Sprachpfad 404 bleibt 404 (echter Tippfehler in gültiger Sprache)
