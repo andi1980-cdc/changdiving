@@ -1035,79 +1035,17 @@ export async function onRequest(context) {
 
   // --- 4) Wenn 404: 410 EXAKT ---
   if (FORCE_GONE_EXACT.has(path)) {
-    // Lade die 410.html und setze Status auf 410
-    const response = await context.next();
-    if (response.status === 404) {
-      // Wenn 404, dann 410.html laden
-      const url = new URL(context.request.url);
-      url.pathname = "/410.html";
-      const newRequest = new Request(url, context.request);
-      const htmlResponse = await context.next(newRequest);
-      return new Response(htmlResponse.body, { 
-        status: 410, 
-        headers: { 
-          "X-Debug": "410-exact",
-          "Content-Type": "text/html"
-        } 
-      });
-    }
-    return new Response(response.body, { 
-      status: 410, 
-      headers: { 
-        "X-Debug": "410-exact",
-        "Content-Type": "text/html"
-      } 
-    });
+    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-exact" } });
   }
 
   // --- 5) 410 PREFIX ---
   if (findPrefixRule(path, FORCE_GONE_PREFIX)) {
-    const response = await context.next();
-    if (response.status === 404) {
-      const url = new URL(context.request.url);
-      url.pathname = "/410.html";
-      const newRequest = new Request(url, context.request);
-      const htmlResponse = await context.next(newRequest);
-      return new Response(htmlResponse.body, { 
-        status: 410, 
-        headers: { 
-          "X-Debug": "410-prefix",
-          "Content-Type": "text/html"
-        } 
-      });
-    }
-    return new Response(response.body, { 
-      status: 410, 
-      headers: { 
-        "X-Debug": "410-prefix",
-        "Content-Type": "text/html"
-      } 
-    });
+    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-prefix" } });
   }
 
   // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(path) && !isAsset(path)) {
-    const response = await context.next();
-    if (response.status === 404) {
-      const url = new URL(context.request.url);
-      url.pathname = "/410.html";
-      const newRequest = new Request(url, context.request);
-      const htmlResponse = await context.next(newRequest);
-      return new Response(htmlResponse.body, { 
-        status: 410, 
-        headers: { 
-          "X-Debug": "410-global",
-          "Content-Type": "text/html"
-        } 
-      });
-    }
-    return new Response(response.body, { 
-      status: 410, 
-      headers: { 
-        "X-Debug": "410-global",
-        "Content-Type": "text/html"
-      } 
-    });
+    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-global" } });
   }
 
   // Sprachpfad 404 bleibt 404 (echter Tippfehler in gültiger Sprache)
