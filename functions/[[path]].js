@@ -1035,17 +1035,38 @@ export async function onRequest(context) {
 
   // --- 4) Wenn 404: 410 EXAKT ---
   if (FORCE_GONE_EXACT.has(path)) {
-    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-exact" } });
+    const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+    return new Response(html, { 
+      status: 410, 
+      headers: { 
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Debug": "410-exact" 
+      } 
+    });
   }
 
   // --- 5) 410 PREFIX ---
   if (findPrefixRule(path, FORCE_GONE_PREFIX)) {
-    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-prefix" } });
+    const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+    return new Response(html, { 
+      status: 410, 
+      headers: { 
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Debug": "410-prefix" 
+      } 
+    });
   }
 
   // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(path) && !isAsset(path)) {
-    return new Response("410 Gone", { status: 410, headers: { "X-Debug": "410-global" } });
+    const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+    return new Response(html, { 
+      status: 410, 
+      headers: { 
+        "Content-Type": "text/html; charset=utf-8",
+        "X-Debug": "410-global" 
+      } 
+    });
   }
 
   // Sprachpfad 404 bleibt 404 (echter Tippfehler in gültiger Sprache)
