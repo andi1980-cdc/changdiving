@@ -10,6 +10,15 @@ const LANG_ROOTS = ["/en", "/de/", "/th/"];
 function normPath(raw) {
   // strip query/hash, compress //, trim, remove trailing slash (außer '/', '/en/', '/de/', '/th/')
   let p = raw.split("?")[0].split("#")[0].replace(/\/{2,}/g, "/").trim();
+  
+  // URL-decode the path to handle encoded characters
+  try {
+    p = decodeURIComponent(p);
+  } catch (error) {
+    // If decoding fails, keep the original path
+    console.warn("URL decode failed for:", p, error);
+  }
+  
   if (p === "/") return "/";
   if (LANG_ROOTS.includes(p)) return p;
   return p.replace(/\/+$/, "");
@@ -337,7 +346,6 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/wie-ein-try-dive-bei-chang-diving-ablaeuft-schritt-fuer-schritt-2025-koh-chang", "/de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"],
   ["/de/wracktauchen-koh-chang", "/de/posts/scuba-knowledge/wreck-diving-koh-chang/"],
   ["/de/wreck-diving-koh-chang", "/de/posts/scuba-knowledge/wreck-diving-koh-chang/"],
-  ["/en", "/en/"],
   ["/en/about", "/en/about/"],
   ["/en/about/dive-schedule", "/en/about/"],
   ["/en/about/refund-policy", "/en/about/"],
@@ -548,7 +556,6 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/weather", "/en/weather/"],
   ["/en/which-course", "/en/posts/tips-and-tricks/which-course/"],
   ["/en/wreck-diving-koh-chang", "/en/posts/scuba-knowledge/wreck-diving-koh-chang/"],
-  ["/th", "/th/"],
   ["/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3-try-dive-%E0%B8%81%E0%B8%B1%E0%B8%9A-chang-diving-%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%87", "/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"],
   ["/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B3%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B8%AD%E0%B8%87-apeks-dst4", "/th/store/category/equipment/"],
   ["/th/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%94%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87", "/th/faqs/faq-getting-here-accommodation/"],
@@ -1000,6 +1007,25 @@ function findPrefixRule(path, rules) {
   return null;
 }
 
+function findExactRedirect(path, redirectsMap) {
+  // First try exact match
+  if (redirectsMap.has(path)) {
+    return redirectsMap.get(path);
+  }
+  
+  // If not found, try URL-decoded version
+  try {
+    const decodedPath = decodeURIComponent(path);
+    if (decodedPath !== path && redirectsMap.has(decodedPath)) {
+      return redirectsMap.get(decodedPath);
+    }
+  } catch (error) {
+    // If decoding fails, continue with original path
+  }
+  
+  return null;
+}
+
 function findPrefixRedirect(path, rules) {
   for (const { from, to } of rules) {
     if (path === from || path.startsWith(from + "/")) {
@@ -1021,9 +1047,9 @@ export async function onRequest(context) {
   const path = normPath(url.pathname);
 
   // --- 1) 301 EXAKT ---
-  if (REDIRECTS_EXACT.has(path)) {
-    const location = REDIRECTS_EXACT.get(path);
-    return new Response(null, { status: 301, headers: { Location: location, "X-Debug": "301-exact" } });
+  const exactRedirect = findExactRedirect(path, REDIRECTS_EXACT);
+  if (exactRedirect) {
+    return new Response(null, { status: 301, headers: { Location: exactRedirect, "X-Debug": "301-exact" } });
   }
 
   // --- 2) 301 PREFIX/WILDCARD ---
@@ -1037,7 +1063,7 @@ export async function onRequest(context) {
   if (res.status !== 404) return withDebug(res, "pages-pass");
 
   // --- 4) Wenn 404: 410 EXAKT ---
-  if (FORCE_GONE_EXACT.has(path)) {
+  if (FORCE_GONE_EXACT.has(path) || findExactRedirect(path, FORCE_GONE_EXACT)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
