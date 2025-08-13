@@ -1681,6 +1681,7 @@ const FORCE_GONE_PREFIX = [
   "/de/store/category/equipment/wetsuits",
   "/en/store/category/equipment/bcds",
   "/en/store/category/equipment/regulator",
+  "/en/store/category/equipment/masks",
   "/de/store/kategorie",
   "/de/store/category/tauchkurse",
   "/de/store/tages-ausfluege",
