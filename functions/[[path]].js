@@ -758,6 +758,8 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/safety-check/", "/en/posts/scuba-knowledge/safety-check/"],
   ["/en/gas-consumption", "/en/posts/scuba-knowledge/gas-consumption/"],
   ["/en/getting-to-koh-chang", "/en/faqs/faq-getting-here-accommodation/"],
+  ["/en/how-to-master-scuba-diver", "/en/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/"],
+  ["/en/how-to-rescue-diver", "/en/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/"],
   [
     "/en/how-to-advanced-course",
     "/en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/",
@@ -822,7 +824,8 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/nitrox-info", "/en/posts/scuba-knowledge/nitrox-info/"],
   ["/en/ocean-climate", "/en/posts/straight-talk/ocean-climate/"],
   ["/en/padi-vs-sdi-tdi", "/en/posts/straight-talk/padi-vs-sdi-tdi/"],
-  ["/en/posts", "/en/posts/"],
+  ["/en/beginner-guide", "/en/posts/koh-chang-diving-travel-guides/beginner-guide/"],
+  ["/en/open-water-duration", "/en/posts/tips-and-tricks/open-water-duration/"],
   [
     "/en/posts/diving-how-to-guides-koh-chang",
     "/en/posts/diving-how-to-guides-koh-chang/",
@@ -850,10 +853,6 @@ const REDIRECTS_EXACT_RAW = [
   [
     "/en/posts/koh-chang-diving-travel-guides/beginner-guide",
     "/en/posts/koh-chang-diving-travel-guides/beginner-guide/",
-  ],
-  [
-    "/en/posts/marine-life-koh-chang",
-    "/en/posts/marine-life-koh-chang/marine-life/",
   ],
   [
     "/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark",
@@ -1193,6 +1192,9 @@ const REDIRECTS_EXACT_RAW = [
     "/th/posts/marine-life-koh-chang/marine-life-green-sea-turtle/",
   ],
   ["/th/how-to-fun-dives", "/th/product/fun-dives/"],
+  ["/th/how-to-advanced-course", "/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"],
+  ["/th/how-to-open-advanced", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
+  ["/th/how-to-rescue-diver", "/th/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/"],
   [
     "/th/how-to-open-water-course",
     "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
@@ -1620,6 +1622,7 @@ const FORCE_GONE_EXACT = new Set(
     "/de/store/category/privates-boot",
     "/de/the-dive-process/",
     "/de/warum-der-advanced-open-water-diver//1000",
+    "/de/Verfasser/andi/",
     "/en/apeks-dst4",
     "/en/apeks-xtx",
     "/en/forms",
@@ -1751,6 +1754,10 @@ const FORCE_GONE_PREFIX = [
   "/en/store/category/equipment/bcds",
   "/en/store/category/equipment/regulator",
   "/en/store/category/equipment/masks",
+  "/en/store/category/equipment/accesorries",
+  "/en/store/category/equipment/fins",
+  "/en/store/category/privat-boat/",
+  "/en/why-advanced/",
   "/de/store/kategorie",
   "/de/store/category/tauchkurse",
   "/de/store/tages-ausfluege",
