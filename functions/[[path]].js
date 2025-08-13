@@ -170,6 +170,9 @@ const REDIRECTS_EXACT_RAW = [
     "/de/faqs/faq-schnuppertauchen-fun-dives-koh-chang",
     "/de/faqs/faq-try-dive-fun-dives-koh-chang/",
   ],
+  ["/de/faqs/faq-buchung-bezahlung-tauchen-koh-chang",
+   "/de/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
   ["/de/faqs/faq-tauchen-koh-chang", "/de/faqs/faq-diving-koh-chang/"],
   [
     "/de/faqs/getting-here-accommodation-frequently-asked-questions",
@@ -211,6 +214,7 @@ const REDIRECTS_EXACT_RAW = [
     "/de/faqs/wo-befindet-sich-die-tauchbasis",
     "/de/faqs/faq-getting-here-accommodation/",
   ],
+  ["/de/fun-diving-koh-chang-schritt-fuer-schritt-2025/", "/de/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/"],
   ["/de/forms", "/de/posts/"],
   ["/de/funktion-der-ersten-stufe-apeks-dst", "/de/posts/"],
   [
@@ -469,6 +473,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/go-travel-fin-2", "/de/store/category/equipment/"],
   ["/de/product/go-travel-fin", "/de/store/category/equipment/"],
   ["/de/product/hybrid-cargo-shorts", "/de/store/category/equipment/"],
+  ["/de/product/hybrid-cargo-shorts-1mm", "/de/store/category/equipment/"],
   ["/de/product/instructor-crossover", "/de/product/instructor-crossover/"],
   ["/de/product/insurance", "/de/product/insurance/"],
   ["/de/product/intro-to-tech", "/de/product/intro-to-tech/"],
@@ -516,6 +521,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/sdi-idc", "/de/product/sdi-idc/"],
   ["/de/product/sdi-ie", "/de/product/sdi-ie/"],
   ["/de/product/sdi-instructor-development-course-idc", "/de/product/sdi-idc/"],
+  ["/de/product/sdi-instructor-examination", "/de/product/sdi-ie/"],
   ["/de/product/search-recovery", "/de/product/search-recovery/"],
   ["/de/product/sidemount", "/de/product/sidemount/"],
   ["/de/product/snorkeling", "/de/product/snorkeling/"],
@@ -651,10 +657,12 @@ const REDIRECTS_EXACT_RAW = [
     "/de/wie-ein-try-dive-bei-chang-diving-ablaeuft-schritt-fuer-schritt-2025-koh-chang",
     "/de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/",
   ],
+  ["/de/open-water-duration", "/de/posts/tips-and-tricks/open-water-duration/"],
   [
     "/de/wracktauchen-koh-chang",
     "/de/posts/scuba-knowledge/wreck-diving-koh-chang/",
   ],
+  ["/de/nudibranchs-koh-chang/", "/de/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   [
     "/de/wreck-diving-koh-chang",
     "/de/posts/scuba-knowledge/wreck-diving-koh-chang/",
@@ -975,6 +983,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/tech-package", "/en/product/tech-package/"],
   ["/en/product/try-dive", "/en/product/try-dive/"],
   ["/en/product/wreck-diver", "/en/product/wreck-diver/"],
+  ["/en/product/wtx-d-single-donut-wing", "/en/store/category/equipment/"],
   ["/en/product/x-tek-pure-tek-harness", "/en/store/category/equipment/"],
   ["/en/reel-guideline", "/en/posts/tips-and-tricks/reel-guideline/"],
   ["/en/refund-policy", "/en/refund-policy/"],
@@ -1057,6 +1066,7 @@ const REDIRECTS_EXACT_RAW = [
   ],
   ["/th/การทำงานของ-apeks-dst4", "/th/store/category/equipment/"],
   ["/th/การเดินทางไปเกาะช้าง", "/th/faqs/faq-getting-here-accommodation/"],
+  ["/th/how-the-open-water-and-advanced-open-water-course-package-at-chang-diving-is-conducted-step-by-step-2025-koh-chang", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
   [
     "/th/ฉลามวาฬที่เกาะช้าง-ประส",
     "/th/posts/marine-life-koh-chang/marine-life-whale-shark/",
@@ -1123,6 +1133,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/dive-sites/secret-reef", "/th/dive-sites/secret-reef/"],
   ["/th/dive-sites/t11-wreck", "/th/dive-sites/t11-wreck/"],
   ["/th/diving-activities", "/th/posts/tips-and-tricks/diving-activities/"],
+  ["/th/diving-social-media", "/th/posts/straight-talk/diving-social-media/"],
   ["/th/diving-myths", "/th/posts/straight-talk/diving-myths/"],
   [
     "/th/diving-thailand-gulf-vs-andaman",
@@ -1286,6 +1297,8 @@ const REDIRECTS_EXACT_RAW = [
     "/th/product/ชุดเรกกูเลเตอร์-apeks-mtx-r-sidemount",
     "/th/store/category/equipment/",
   ],
+  ["/th/service-technician", "/th/store/category/equipment/"],
+  ["/th/search-and-recovery-diving", "/th/posts/scuba-knowledge/about-search-recovery/"],
   ["/th/product/ชุดเรกกูเลเตอร์-apeks-mtx-rc", "/th/store/category/equipment/"],
   ["/th/product/ชุดเรกกูเลเตอร์-apeks-xl4-2", "/th/store/category/equipment/"],
   [
