@@ -9,8 +9,12 @@ const LANG_ROOTS = ["/en", "/de/", "/th/"];
 
 function normPath(raw) {
   // strip query/hash, compress //, trim, remove trailing slash (außer '/', '/en/', '/de/', '/th/')
-  let p = raw.split("?")[0].split("#")[0].replace(/\/{2,}/g, "/").trim();
-  
+  let p = raw
+    .split("?")[0]
+    .split("#")[0]
+    .replace(/\/{2,}/g, "/")
+    .trim();
+
   if (p === "/") return "/";
   if (LANG_ROOTS.includes(p)) return p;
   return p.replace(/\/+$/, "");
@@ -29,22 +33,34 @@ function joinUrl(base, suffix) {
 
 // --- Root-Dateien, die auch außerhalb Sprachpfaden 200 sein dürfen ---
 const ROOT_FILES = new Set([
-  "/", "/style.css", "/robots.txt", "/sitemap.xml", "/sitemap-images.xml",
-  "/site.webmanifest", "/favicon.ico", "/favicon.svg", "/404.html", "/410.html"
+  "/",
+  "/style.css",
+  "/robots.txt",
+  "/sitemap.xml",
+  "/sitemap-images.xml",
+  "/site.webmanifest",
+  "/favicon.ico",
+  "/favicon.svg",
+  "/404.html",
+  "/410.html",
 ]);
 
 function isAsset(path) {
   return (
-    path.startsWith("/img/") || path.startsWith("/images/") ||
-    path.startsWith("/css/") || path.startsWith("/js/") ||
-    path.startsWith("/fonts/") || path.startsWith("/docs/") ||
-    path.startsWith("/.well-known/") || ROOT_FILES.has(path) ||
+    path.startsWith("/img/") ||
+    path.startsWith("/images/") ||
+    path.startsWith("/css/") ||
+    path.startsWith("/js/") ||
+    path.startsWith("/fonts/") ||
+    path.startsWith("/docs/") ||
+    path.startsWith("/.well-known/") ||
+    ROOT_FILES.has(path) ||
     path.startsWith("/favicon") // z. B. /favicon-32x32.png
   );
 }
 
 function isInLang(path) {
-  return path === "/" || LANG_ROOTS.some(pre => path.startsWith(pre));
+  return path === "/" || LANG_ROOTS.some((pre) => path.startsWith(pre));
 }
 
 // --------------------- 301 REDIRECT LISTEN ---------------------
@@ -59,8 +75,14 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/2025/04", "/de/posts/"],
   ["/de/2025/05", "/de/posts/"],
   ["/de/about", "/de/about/"],
-  ["/de/about-search-recovery", "/de/posts/scuba-knowledge/about-search-recovery/"],
-  ["/de/about-underwater-photography", "/de/posts/tips-and-tricks/about-underwater-photography/"],
+  [
+    "/de/about-search-recovery",
+    "/de/posts/scuba-knowledge/about-search-recovery/",
+  ],
+  [
+    "/de/about-underwater-photography",
+    "/de/posts/tips-and-tricks/about-underwater-photography/",
+  ],
   ["/de/about-us", "/de/about/"],
   ["/de/about/stornierung-und-rueckersattung", "/de/refund-policy/"],
   ["/de/agbs", "/de/terms-and-conditions/"],
@@ -68,20 +90,41 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/apeks-dst4", "/de/store/category/equipment/"],
   ["/de/apeks-xtx-atemregulator-ueberblick", "/de/store/category/equipment/"],
   ["/de/apeks-xtx", "/de/store/category/equipment/"],
-  ["/de/barrakudas-koh-chang", "/de/posts/marine-life-koh-chang/marine-life-barracuda/"],
+  [
+    "/de/barrakudas-koh-chang",
+    "/de/posts/marine-life-koh-chang/marine-life-barracuda/",
+  ],
   ["/de/best-dive-computers", "/de/posts/scuba-knowledge/best-dive-computers/"],
   ["/de/blogs", "/de/posts/"],
   ["/de/contact", "/de/contact/"],
   ["/de/das-taucher-logbuch", "/de/posts/scuba-knowledge/dive-logbook/"],
   ["/de/deep-diving", "/de/posts/tips-and-tricks/deep-diving/"],
-  ["/de/der-weg-eines-sport-tauchers", "/de/posts/straight-talk/dive-professional-training/"],
-  ["/de/die-10-beliebtesten-tauchaktivitaeten-auf-koh-chang-chang-diving-center", "/de/posts/tips-and-tricks/diving-activities/"],
-  ["/de/die-besten-tauchcomputer-2025", "/de/posts/scuba-knowledge/best-dive-computers/"],
-  ["/de/die-meerestiere-von-koh-chang-asianisches-pazifikum", "/de/posts/marine-life-koh-chang/"],
-  ["/de/dive-professional-training", "/de/posts/straight-talk/dive-professional-training/"],
+  [
+    "/de/der-weg-eines-sport-tauchers",
+    "/de/posts/straight-talk/dive-professional-training/",
+  ],
+  [
+    "/de/die-10-beliebtesten-tauchaktivitaeten-auf-koh-chang-chang-diving-center",
+    "/de/posts/tips-and-tricks/diving-activities/",
+  ],
+  [
+    "/de/die-besten-tauchcomputer-2025",
+    "/de/posts/scuba-knowledge/best-dive-computers/",
+  ],
+  [
+    "/de/die-meerestiere-von-koh-chang-asianisches-pazifikum",
+    "/de/posts/marine-life-koh-chang/",
+  ],
+  [
+    "/de/dive-professional-training",
+    "/de/posts/straight-talk/dive-professional-training/",
+  ],
   ["/de/dive-sites", "/de/dive-sites/"],
   ["/de/dive-sites/blueberry-hill", "/de/dive-sites/blueberry-hill/"],
-  ["/de/dive-sites/dive-site-map-koh-chang", "/de/dive-sites/dive-site-map-koh-chang/"],
+  [
+    "/de/dive-sites/dive-site-map-koh-chang",
+    "/de/dive-sites/dive-site-map-koh-chang/",
+  ],
   ["/de/dive-sites/hin-luk-bat", "/de/dive-sites/hin-luk-bat/"],
   ["/de/dive-sites/hin-pray-nam", "/de/dive-sites/hin-pray-nam/"],
   ["/de/dive-sites/hin-raab-north", "/de/dive-sites/hin-raab-north/"],
@@ -91,46 +134,130 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/dive-sites/htms-chang-wreck", "/de/dive-sites/htms-chang-wreck/"],
   ["/de/dive-sites/koh-rang-pinnacle", "/de/dive-sites/koh-rang-pinnacle/"],
   ["/de/dive-sites/koho-maru-5", "/de/dive-sites/koho-maru-5/"],
-  ["/de/dive-sites/phutthayotfa-chulalok-wrack-koh-chang", "/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"],
-  ["/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang", "/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"],
+  [
+    "/de/dive-sites/phutthayotfa-chulalok-wrack-koh-chang",
+    "/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/",
+  ],
+  [
+    "/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang",
+    "/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/",
+  ],
   ["/de/dive-sites/secret-reef", "/de/dive-sites/secret-reef/"],
   ["/de/dive-sites/t11-wreck", "/de/dive-sites/t11-wreck/"],
   ["/de/diving-myths", "/de/posts/straight-talk/diving-myths/"],
   ["/de/faqs", "/de/faqs/"],
-  ["/de/faqs/faq-allgemeine-fragen-koh-chang", "/de/faqs/faq-general-questions-koh-chang/"],
-  ["/de/faqs/faq-anreise-unterkunft-koh-chang", "/de/faqs/faq-getting-here-accommodation/"],
-  ["/de/faqs/faq-diving-health-safety-thailand", "/de/faqs/faq-diving-health-safety-thailand/"],
-  ["/de/faqs/faq-general-questions-koh-chang", "/de/faqs/faq-general-questions-koh-chang/"],
-  ["/de/faqs/faq-getting-here-accommodation", "/de/faqs/faq-getting-here-accommodation/"],
-  ["/de/faqs/faq-schnuppertauchen-fun-dives-koh-chang", "/de/faqs/faq-try-dive-fun-dives-koh-chang/"],
+  [
+    "/de/faqs/faq-allgemeine-fragen-koh-chang",
+    "/de/faqs/faq-general-questions-koh-chang/",
+  ],
+  [
+    "/de/faqs/faq-anreise-unterkunft-koh-chang",
+    "/de/faqs/faq-getting-here-accommodation/",
+  ],
+  [
+    "/de/faqs/faq-diving-health-safety-thailand",
+    "/de/faqs/faq-diving-health-safety-thailand/",
+  ],
+  [
+    "/de/faqs/faq-general-questions-koh-chang",
+    "/de/faqs/faq-general-questions-koh-chang/",
+  ],
+  [
+    "/de/faqs/faq-getting-here-accommodation",
+    "/de/faqs/faq-getting-here-accommodation/",
+  ],
+  [
+    "/de/faqs/faq-schnuppertauchen-fun-dives-koh-chang",
+    "/de/faqs/faq-try-dive-fun-dives-koh-chang/",
+  ],
   ["/de/faqs/faq-tauchen-koh-chang", "/de/faqs/faq-diving-koh-chang/"],
-  ["/de/faqs/getting-here-accommodation-frequently-asked-questions", "/de/faqs/faq-getting-here-accommodation/"],
-  ["/de/faqs/hotels-in-der-naehe-der-tauchbasis", "/de/faqs/faq-getting-here-accommodation/"],
-  ["/de/faqs/kreditkarten-zahlung", "/de/faqs/faq-booking-payment-scuba-koh-chang/"],
-  ["/de/faqs/medizinischer-fragebogen-fuer-taucher", "/de/faqs/faq-diving-health-safety-thailand/"],
-  ["/de/faqs/sollte-ich-vorab-buchen", "/de/faqs/faq-booking-payment-scuba-koh-chang/"],
-  ["/de/faqs/tauchen-als-brillentraeger", "/de/faqs/faq-diving-health-safety-thailand/"],
-  ["/de/faqs/wann-ist-die-beste-tauchzeit-auf-koh-chang-und-was-erwartet-mich", "/de/faqs/faq-general-questions-koh-chang/"],
-  ["/de/faqs/was-ist-die-beste-moeglichkeit-geld-nach-thailand-zu-ueberweisen", "/de/faqs/faq-booking-payment-scuba-koh-chang/"],
-  ["/de/faqs/wie-komme-ich-zur-tauchbasis", "/de/faqs/faq-getting-here-accommodation/"],
-  ["/de/faqs/wo-befindet-sich-die-tauchbasis", "/de/faqs/faq-getting-here-accommodation/"],
+  [
+    "/de/faqs/getting-here-accommodation-frequently-asked-questions",
+    "/de/faqs/faq-getting-here-accommodation/",
+  ],
+  [
+    "/de/faqs/hotels-in-der-naehe-der-tauchbasis",
+    "/de/faqs/faq-getting-here-accommodation/",
+  ],
+  [
+    "/de/faqs/kreditkarten-zahlung",
+    "/de/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
+  [
+    "/de/faqs/medizinischer-fragebogen-fuer-taucher",
+    "/de/faqs/faq-diving-health-safety-thailand/",
+  ],
+  [
+    "/de/faqs/sollte-ich-vorab-buchen",
+    "/de/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
+  [
+    "/de/faqs/tauchen-als-brillentraeger",
+    "/de/faqs/faq-diving-health-safety-thailand/",
+  ],
+  [
+    "/de/faqs/wann-ist-die-beste-tauchzeit-auf-koh-chang-und-was-erwartet-mich",
+    "/de/faqs/faq-general-questions-koh-chang/",
+  ],
+  [
+    "/de/faqs/was-ist-die-beste-moeglichkeit-geld-nach-thailand-zu-ueberweisen",
+    "/de/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
+  [
+    "/de/faqs/wie-komme-ich-zur-tauchbasis",
+    "/de/faqs/faq-getting-here-accommodation/",
+  ],
+  [
+    "/de/faqs/wo-befindet-sich-die-tauchbasis",
+    "/de/faqs/faq-getting-here-accommodation/",
+  ],
   ["/de/forms", "/de/posts/"],
   ["/de/funktion-der-ersten-stufe-apeks-dst", "/de/posts/"],
-  ["/de/gasverbrauch-beim-tauchen", "/de/posts/scuba-knowledge/gas-consumption/"],
+  [
+    "/de/gasverbrauch-beim-tauchen",
+    "/de/posts/scuba-knowledge/gas-consumption/",
+  ],
   ["/de/geschaeftsbedingungen", "/de/terms-and-conditions/"],
   ["/de/getting-to-koh-chang", "/de/faqs/faq-getting-here-accommodation/"],
-  ["/de/gruene-meeresschildkroete-koh-chang", "/de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/"],
+  [
+    "/de/gruene-meeresschildkroete-koh-chang",
+    "/de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/",
+  ],
   ["/de/home", "/de/"],
-  ["/de/how-to-advanced-course", "/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"],
-  ["/de/how-to-fun-dives", "/de/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/"],
-  ["/de/how-to-master-scuba-diver", "/de/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/"],
-  ["/de/how-to-open-advanced", "/de/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
-  ["/de/how-to-rescue-diver", "/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/"],
-  ["/de/how-to-specialty-courses", "/de/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/"],
+  [
+    "/de/how-to-advanced-course",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/",
+  ],
+  [
+    "/de/how-to-fun-dives",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/",
+  ],
+  [
+    "/de/how-to-master-scuba-diver",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/",
+  ],
+  [
+    "/de/how-to-open-advanced",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/",
+  ],
+  [
+    "/de/how-to-rescue-diver",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/",
+  ],
+  [
+    "/de/how-to-specialty-courses",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/",
+  ],
   ["/de/how-to-try-dive", "/de/posts/diving-how-to-guides-koh-chang/"],
-  ["/de/how-we-run-your-diving-course-or-day-trip", "/de/posts/diving-how-to-guides-koh-chang/"],
+  [
+    "/de/how-we-run-your-diving-course-or-day-trip",
+    "/de/posts/diving-how-to-guides-koh-chang/",
+  ],
   ["/de/index.html", "/de/"],
-  ["/de/koh-chang-reisefuehrer", "/de/posts/koh-chang-diving-travel-guides/travel-guide/"],
+  [
+    "/de/koh-chang-reisefuehrer",
+    "/de/posts/koh-chang-diving-travel-guides/travel-guide/",
+  ],
   ["/de/kontakt", "/de/contact/"],
   ["/de/Kategorie/chang-diving-blog", "/de/posts/"],
   ["/de/Kategorie/tauchblog", "/de/posts/"],
@@ -143,41 +270,131 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/Kategorie/videos", "/de/posts/"],
   ["/de/kurse/advanced-open-water", "/de/product/advanced/"],
   ["/de/kurse/divemaster", "/de/product/divemaster/"],
-  ["/de/luftverbrauch-beim-sport-tauchen", "/de/posts/scuba-knowledge/gas-consumption/"],
-  ["/de/marine-life-barracuda", "/de/posts/marine-life-koh-chang/marine-life-barracuda/"],
-  ["/de/marine-life-batfish", "/de/posts/marine-life-koh-chang/marine-life-batfish/"],
-  ["/de/marine-life-blacktip-reef-shark", "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/"],
-  ["/de/marine-life-green-sea-turtle", "/de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/"],
-  ["/de/marine-life-nudibranch", "/de/posts/marine-life-koh-chang/marine-life-nudibranch/"],
-  ["/de/marine-life-titan-triggerfish", "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/de/marine-life-whale-shark", "/de/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/de/luftverbrauch-beim-sport-tauchen",
+    "/de/posts/scuba-knowledge/gas-consumption/",
+  ],
+  [
+    "/de/marine-life-barracuda",
+    "/de/posts/marine-life-koh-chang/marine-life-barracuda/",
+  ],
+  [
+    "/de/marine-life-batfish",
+    "/de/posts/marine-life-koh-chang/marine-life-batfish/",
+  ],
+  [
+    "/de/marine-life-blacktip-reef-shark",
+    "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/",
+  ],
+  [
+    "/de/marine-life-green-sea-turtle",
+    "/de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/",
+  ],
+  [
+    "/de/marine-life-nudibranch",
+    "/de/posts/marine-life-koh-chang/marine-life-nudibranch/",
+  ],
+  [
+    "/de/marine-life-titan-triggerfish",
+    "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/de/marine-life-whale-shark",
+    "/de/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/de/marine-life", "/de/posts/marine-life-koh-chang/"],
   ["/de/nitrox-info", "/de/posts/scuba-knowledge/nitrox-info/"],
-  ["/de/padi-vs-sdi-tdi-welches-tauchausbildungssystem-passt-zu-dir", "/de/posts/straight-talk/padi-vs-sdi-tdi/"],
-  ["/de/pirm-udom-sub-nachhaltiges-tauchen-auf-koh-chang", "/de/posts/straight-talk/sustainable-diving/"],
+  [
+    "/de/padi-vs-sdi-tdi-welches-tauchausbildungssystem-passt-zu-dir",
+    "/de/posts/straight-talk/padi-vs-sdi-tdi/",
+  ],
+  [
+    "/de/pirm-udom-sub-nachhaltiges-tauchen-auf-koh-chang",
+    "/de/posts/straight-talk/sustainable-diving/",
+  ],
   ["/de/posts", "/de/posts/"],
-  ["/de/posts/diving-how-to-guides-koh-chang", "/de/posts/diving-how-to-guides-koh-chang/"],
-  ["/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course", "/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"],
-  ["/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver", "/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/"],
-  ["/de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review", "/de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/"],
-  ["/de/posts/koh-chang-diving-travel-guides", "/de/posts/koh-chang-diving-travel-guides/"],
+  [
+    "/de/posts/diving-how-to-guides-koh-chang",
+    "/de/posts/diving-how-to-guides-koh-chang/",
+  ],
+  [
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/",
+  ],
+  [
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/",
+  ],
+  [
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/",
+  ],
+  [
+    "/de/posts/koh-chang-diving-travel-guides",
+    "/de/posts/koh-chang-diving-travel-guides/",
+  ],
   ["/de/posts/marine-life-koh-chang", "/de/posts/marine-life-koh-chang/"],
-  ["/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark", "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/"],
-  ["/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish", "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/de/posts/scuba-knowledge/about-search-recovery", "/de/posts/scuba-knowledge/about-search-recovery/"],
-  ["/de/posts/scuba-knowledge/best-dive-computers", "/de/posts/scuba-knowledge/best-dive-computers/"],
-  ["/de/posts/scuba-knowledge/dive-logbook", "/de/posts/scuba-knowledge/dive-logbook/"],
-  ["/de/posts/scuba-knowledge/gas-consumption", "/de/posts/scuba-knowledge/gas-consumption/"],
-  ["/de/posts/scuba-knowledge/safety-check", "/de/posts/scuba-knowledge/safety-check/"],
-  ["/de/posts/scuba-knowledge/wreck-diving-koh-chang", "/de/posts/scuba-knowledge/wreck-diving-koh-chang/"],
+  [
+    "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark",
+    "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/",
+  ],
+  [
+    "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish",
+    "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/de/posts/scuba-knowledge/about-search-recovery",
+    "/de/posts/scuba-knowledge/about-search-recovery/",
+  ],
+  [
+    "/de/posts/scuba-knowledge/best-dive-computers",
+    "/de/posts/scuba-knowledge/best-dive-computers/",
+  ],
+  [
+    "/de/posts/scuba-knowledge/dive-logbook",
+    "/de/posts/scuba-knowledge/dive-logbook/",
+  ],
+  [
+    "/de/posts/scuba-knowledge/gas-consumption",
+    "/de/posts/scuba-knowledge/gas-consumption/",
+  ],
+  [
+    "/de/posts/scuba-knowledge/safety-check",
+    "/de/posts/scuba-knowledge/safety-check/",
+  ],
+  [
+    "/de/posts/scuba-knowledge/wreck-diving-koh-chang",
+    "/de/posts/scuba-knowledge/wreck-diving-koh-chang/",
+  ],
   ["/de/posts/straight-talk", "/de/posts/straight-talk/"],
-  ["/de/posts/straight-talk/diving-myths", "/de/posts/straight-talk/diving-myths/"],
-  ["/de/posts/straight-talk/diving-social-media", "/de/posts/straight-talk/diving-social-media/"],
-  ["/de/posts/straight-talk/ozean-und-klima", "/de/posts/straight-talk/ocean-climate/"],
-  ["/de/posts/straight-talk/padi-vs-sdi-tdi", "/de/posts/straight-talk/padi-vs-sdi-tdi/"],
-  ["/de/posts/tipps-und-tricks/tauchaktivitaeten", "/de/posts/tips-and-tricks/diving-activities/"],
-  ["/de/posts/tips-and-tricks/about-underwater-photography", "/de/posts/tips-and-tricks/about-underwater-photography/"],
-  ["/de/posts/tips-and-tricks/deep-diving", "/de/posts/tips-and-tricks/deep-diving/"],
+  [
+    "/de/posts/straight-talk/diving-myths",
+    "/de/posts/straight-talk/diving-myths/",
+  ],
+  [
+    "/de/posts/straight-talk/diving-social-media",
+    "/de/posts/straight-talk/diving-social-media/",
+  ],
+  [
+    "/de/posts/straight-talk/ozean-und-klima",
+    "/de/posts/straight-talk/ocean-climate/",
+  ],
+  [
+    "/de/posts/straight-talk/padi-vs-sdi-tdi",
+    "/de/posts/straight-talk/padi-vs-sdi-tdi/",
+  ],
+  [
+    "/de/posts/tipps-und-tricks/tauchaktivitaeten",
+    "/de/posts/tips-and-tricks/diving-activities/",
+  ],
+  [
+    "/de/posts/tips-and-tricks/about-underwater-photography",
+    "/de/posts/tips-and-tricks/about-underwater-photography/",
+  ],
+  [
+    "/de/posts/tips-and-tricks/deep-diving",
+    "/de/posts/tips-and-tricks/deep-diving/",
+  ],
   ["/de/preise", "/de/prices/"],
   ["/de/prices", "/de/prices/"],
   ["/de/privacy-policy", "/de/privacy-policy/"],
@@ -199,7 +416,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/apeks-regulator-service", "/de/store/category/equipment/"],
   ["/de/product/apeks-single-tank-adapter", "/de/store/category/equipment/"],
   ["/de/product/apeks-single-tank-adaptor", "/de/store/category/equipment/"],
-  ["/de/product/apeks-single-tank-wing-set-wtx-d", "/de/store/category/equipment/"],
+  [
+    "/de/product/apeks-single-tank-wing-set-wtx-d",
+    "/de/store/category/equipment/",
+  ],
   ["/de/product/apeks-spools-lifeline", "/de/store/category/equipment/"],
   ["/de/product/apeks-surface-marker-buoy", "/de/store/category/equipment/"],
   ["/de/product/apeks-tech-shorts", "/de/store/category/equipment/"],
@@ -231,7 +451,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/discover-scuba-diving", "/de/product/try-dive/"],
   ["/de/product/divemaster", "/de/product/divemaster/"],
   ["/de/product/efr-instructor", "/de/product/efr-instructor/"],
-  ["/de/product/emergency-first-response-instructor-course-efri-course", "/de/product/efr-instructor/"],
+  [
+    "/de/product/emergency-first-response-instructor-course-efri-course",
+    "/de/product/efr-instructor/",
+  ],
   ["/de/product/first-aid", "/de/product/first-aid/"],
   ["/de/product/fun-dives", "/de/product/fun-dives/"],
   ["/de/product/fun-dives-koh-chang", "/de/product/fun-dives/"],
@@ -251,13 +474,22 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/open-advanced-package", "/de/product/open-advanced-package/"],
   ["/de/product/open-to-divemaster", "/de/product/open-to-divemaster/"],
   ["/de/product/open-water-diver", "/de/product/open-water-diver/"],
-  ["/de/product/open-water-diver-referral-kurs", "/de/product/open-water-diver/"],
-  ["/de/product/open-water-diver-to-divemaster", "/de/product/open-to-divemaster/"],
+  [
+    "/de/product/open-water-diver-referral-kurs",
+    "/de/product/open-water-diver/",
+  ],
+  [
+    "/de/product/open-water-diver-to-divemaster",
+    "/de/product/open-to-divemaster/",
+  ],
   ["/de/product/rent-gopro", "/de/product/rent-gopro/"],
   ["/de/product/rescue-diver", "/de/product/rescue-diver/"],
   ["/de/product/s-tek-donut-wing", "/de/store/category/equipment/"],
   ["/de/product/s-tek-pure-tek-harness", "/de/store/category/equipment/"],
-  ["/de/product/schnorcheln-auf-koh-chang-erkunde-die-unterwasserwelt-mit-unserem-tauchboot", "/de/product/snorkeling/"],
+  [
+    "/de/product/schnorcheln-auf-koh-chang-erkunde-die-unterwasserwelt-mit-unserem-tauchboot",
+    "/de/product/snorkeling/",
+  ],
   ["/de/product/schnorcheln-gehen-in-koh-chang", "/de/product/snorkeling/"],
   ["/de/product/scuba-review", "/de/product/scuba-review/"],
   ["/de/product/scubapro-backplate", "/de/store/category/equipment/"],
@@ -267,7 +499,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/scubapro-mk21-c370-set", "/de/store/category/equipment/"],
   ["/de/product/scubapro-mk21-c370", "/de/store/category/equipment/"],
   ["/de/product/scubapro-pressure-gauge", "/de/store/category/equipment/"],
-  ["/de/product/scubapro-single-tank-adapter-sta", "/de/store/category/equipment/"],
+  [
+    "/de/product/scubapro-single-tank-adapter-sta",
+    "/de/store/category/equipment/",
+  ],
   ["/de/product/scubapro-solo-mask", "/de/store/category/equipment/"],
   ["/de/product/scubapro-x-tek-donut-wing", "/de/store/category/equipment/"],
   ["/de/product/scubapro-x-tek-sidemount", "/de/store/category/equipment/"],
@@ -297,60 +532,147 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/produkt/try-dive", "/de/product/try-dive/"],
   ["/de/reel-and-guideline-use", "/de/posts/tips-and-tricks/reel-guideline/"],
   ["/de/refund-policy", "/de/refund-policy/"],
-  ["/de/schwarzspitzen-riffhaie-koh-chang", "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/"],
+  [
+    "/de/schwarzspitzen-riffhaie-koh-chang",
+    "/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/",
+  ],
   ["/de/smb-guide", "/de/posts/scuba-knowledge/smb-guide/"],
-  ["/de/so-laeuft-der-open-water-diver-kurs-bei-chang-diving-ab-schritt-fuer-schritt-2025-koh-chang", "/de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
+  [
+    "/de/so-laeuft-der-open-water-diver-kurs-bei-chang-diving-ab-schritt-fuer-schritt-2025-koh-chang",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ],
   ["/de/store", "/de/store/"],
   ["/de/store/category", "/de/store/category/"],
   ["/de/store/category/courses", "/de/store/category/courses/"],
   ["/de/store/category/Courses", "/de/store/category/courses/"],
-  ["/de/store/category/courses/advanced-courses", "/de/store/category/courses/advanced-courses/"],
-  ["/de/store/category/courses/beginner-courses", "/de/store/category/courses/beginner-courses/"],
-  ["/de/store/category/courses/fortgeschrittenen-kurse", "/de/store/category/courses/advanced-courses/"],
-  ["/de/store/category/courses/professional-courses", "/de/store/category/courses/professional-courses/"],
-  ["/de/store/category/courses/speciality", "/de/store/category/courses/speciality/"],
-  ["/de/store/category/courses/spezialkurse", "/de/store/category/courses/speciality/"],
-  ["/de/store/category/courses/technical-diving-courses", "/de/store/category/courses/technical-diving-courses/"],
+  [
+    "/de/store/category/courses/advanced-courses",
+    "/de/store/category/courses/advanced-courses/",
+  ],
+  [
+    "/de/store/category/courses/beginner-courses",
+    "/de/store/category/courses/beginner-courses/",
+  ],
+  [
+    "/de/store/category/courses/fortgeschrittenen-kurse",
+    "/de/store/category/courses/advanced-courses/",
+  ],
+  [
+    "/de/store/category/courses/professional-courses",
+    "/de/store/category/courses/professional-courses/",
+  ],
+  [
+    "/de/store/category/courses/speciality",
+    "/de/store/category/courses/speciality/",
+  ],
+  [
+    "/de/store/category/courses/spezialkurse",
+    "/de/store/category/courses/speciality/",
+  ],
+  [
+    "/de/store/category/courses/technical-diving-courses",
+    "/de/store/category/courses/technical-diving-courses/",
+  ],
   ["/de/store/category/day-trips", "/de/store/category/day-trips/"],
   ["/de/store/category/Day-trips", "/de/store/category/day-trips/"],
   ["/de/store/category/tages-ausfluege/", "/de/store/category/day-trips/"],
-  ["/de/suchen-und-bergen-beim-tauchen", "/de/posts/scuba-knowledge/about-search-recovery/"],
-  ["/de/surface-marker-buoy-smb-warum-ist-sie-wichtig-und-was-bedeuten-die-farben", "/de/posts/scuba-knowledge/smb-guide/"],
+  [
+    "/de/suchen-und-bergen-beim-tauchen",
+    "/de/posts/scuba-knowledge/about-search-recovery/",
+  ],
+  [
+    "/de/surface-marker-buoy-smb-warum-ist-sie-wichtig-und-was-bedeuten-die-farben",
+    "/de/posts/scuba-knowledge/smb-guide/",
+  ],
   ["/de/sustainable-diving", "/de/posts/straight-talk/sustainable-diving/"],
-  ["/de/tauchen-fuer-anfaenger-guide", "/de/posts/koh-chang-diving-travel-guides/beginner-guide/"],
-  ["/de/tauchen-golf-von-thailand-vs-andamanensee", "/de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"],
+  [
+    "/de/tauchen-fuer-anfaenger-guide",
+    "/de/posts/koh-chang-diving-travel-guides/beginner-guide/",
+  ],
+  [
+    "/de/tauchen-golf-von-thailand-vs-andamanensee",
+    "/de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/",
+  ],
   ["/de/tauchen-mythen-und-wahrheit", "/de/posts/straight-talk/diving-myths/"],
   ["/de/tauchen-social-media", "/de/posts/straight-talk/diving-social-media/"],
   ["/de/terms-and-conditions", "/de/terms-and-conditions/"],
-  ["/de/thailand-diving-comparison", "/de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"],
+  [
+    "/de/thailand-diving-comparison",
+    "/de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/",
+  ],
   ["/de/tieftauchen-was-ist-das", "/de/posts/tips-and-tricks/deep-diving/"],
-  ["/de/titan-drueckerfisch-koh-chang", "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/de/travel-guide", "/de/posts/koh-chang-diving-travel-guides/travel-guide/"],
-  ["/de/unterwasserfotografie-tipps", "/de/posts/tips-and-tricks/about-underwater-photography/"],
-  ["/de/walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art", "/de/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/de/titan-drueckerfisch-koh-chang",
+    "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/de/travel-guide",
+    "/de/posts/koh-chang-diving-travel-guides/travel-guide/",
+  ],
+  [
+    "/de/unterwasserfotografie-tipps",
+    "/de/posts/tips-and-tricks/about-underwater-photography/",
+  ],
+  [
+    "/de/walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art",
+    "/de/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/de/warum-der-advanced-open-water-diver", "/de/product/advanced/"],
-  ["/de/warum-es-wichtig-ist-dein-tauchabenteuer-in-koh-chang-im-voraus-zu-buchen", "/de/posts/straight-talk/book-in-advance/"],
-  ["/de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig-chang-diving-center", "/de/posts/scuba-knowledge/gas-consumption/"],
-  ["/de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig", "/de/posts/scuba-knowledge/gas-consumption/"],
-  ["/de/warum-ist-ein-sicherheitscheck-vor-dem-tauchen-auf-koh-chang-wichtig", "/de/posts/scuba-knowledge/safety-check/"],
+  [
+    "/de/warum-es-wichtig-ist-dein-tauchabenteuer-in-koh-chang-im-voraus-zu-buchen",
+    "/de/posts/straight-talk/book-in-advance/",
+  ],
+  [
+    "/de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig-chang-diving-center",
+    "/de/posts/scuba-knowledge/gas-consumption/",
+  ],
+  [
+    "/de/warum-ist-der-luftverbrauch-beim-tauchen-wichtig",
+    "/de/posts/scuba-knowledge/gas-consumption/",
+  ],
+  [
+    "/de/warum-ist-ein-sicherheitscheck-vor-dem-tauchen-auf-koh-chang-wichtig",
+    "/de/posts/scuba-knowledge/safety-check/",
+  ],
   ["/de/was-ist-nitrox", "/de/posts/scuba-knowledge/nitrox-info/"],
   ["/de/weather", "/de/weather/"],
   ["/de/wetter-koh-chang", "/de/weather/"],
-  ["/de/wie-ein-try-dive-bei-chang-diving-ablaeuft-schritt-fuer-schritt-2025-koh-chang", "/de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"],
-  ["/de/wracktauchen-koh-chang", "/de/posts/scuba-knowledge/wreck-diving-koh-chang/"],
-  ["/de/wreck-diving-koh-chang", "/de/posts/scuba-knowledge/wreck-diving-koh-chang/"],
+  [
+    "/de/wie-ein-try-dive-bei-chang-diving-ablaeuft-schritt-fuer-schritt-2025-koh-chang",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/",
+  ],
+  [
+    "/de/wracktauchen-koh-chang",
+    "/de/posts/scuba-knowledge/wreck-diving-koh-chang/",
+  ],
+  [
+    "/de/wreck-diving-koh-chang",
+    "/de/posts/scuba-knowledge/wreck-diving-koh-chang/",
+  ],
   ["/en/about", "/en/about/"],
   ["/en/about/dive-schedule", "/en/about/"],
   ["/en/about/refund-policy", "/en/about/"],
   ["/en/about/the-dive-process", "/en/about/"],
-  ["/en/about-search-recovery", "/en/posts/scuba-knowledge/about-search-recovery/"],
-  ["/en/about-underwater-photography", "/en/posts/tips-and-tricks/about-underwater-photography/"],
+  [
+    "/en/about-search-recovery",
+    "/en/posts/scuba-knowledge/about-search-recovery/",
+  ],
+  [
+    "/en/about-underwater-photography",
+    "/en/posts/tips-and-tricks/about-underwater-photography/",
+  ],
   ["/en/about-us", "/en/about/"],
   ["/en/contact", "/en/contact/"],
-  ["/en/dive-professional-training", "/en/posts/straight-talk/dive-professional-training/"],
+  [
+    "/en/dive-professional-training",
+    "/en/posts/straight-talk/dive-professional-training/",
+  ],
   ["/en/dive-sites", "/en/dive-sites/"],
   ["/en/dive-sites/blueberry-hill", "/en/dive-sites/blueberry-hill/"],
-  ["/en/dive-sites/dive-site-map-koh-chang", "/en/dive-sites/dive-site-map-koh-chang/"],
+  [
+    "/en/dive-sites/dive-site-map-koh-chang",
+    "/en/dive-sites/dive-site-map-koh-chang/",
+  ],
   ["/en/dive-sites/hin-luk-bat", "/en/dive-sites/hin-luk-bat/"],
   ["/en/dive-sites/hin-pray-nam", "/en/dive-sites/hin-pray-nam/"],
   ["/en/dive-sites/hin-raab-north", "/en/dive-sites/hin-raab-north/"],
@@ -360,61 +682,178 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/dive-sites/htms-chang-wreck", "/en/dive-sites/htms-chang-wreck/"],
   ["/en/dive-sites/koh-rang-pinnacle", "/en/dive-sites/koh-rang-pinnacle/"],
   ["/en/dive-sites/koho-maru-5", "/en/dive-sites/koho-maru-5/"],
-  ["/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang", "/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"],
+  [
+    "/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang",
+    "/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/",
+  ],
   ["/en/dive-sites/secret-reef", "/en/dive-sites/secret-reef/"],
   ["/en/dive-sites/t11-wreck", "/en/dive-sites/t11-wreck/"],
   ["/en/diving-myths", "/en/posts/straight-talk/diving-myths/"],
   ["/en/diving-social-media", "/en/posts/straight-talk/diving-social-media/"],
   ["/en/emergency-plan", "/en/posts/straight-talk/emergency-plan/"],
   ["/en/faqs", "/en/faqs/"],
-  ["/en/faqs/faq-booking-payment-scuba-koh-chang", "/en/faqs/faq-booking-payment-scuba-koh-chang/"],
-  ["/en/faqs/faq-dive-courses-koh-chang", "/en/faqs/faq-dive-courses-koh-chang/"],
-  ["/en/faqs/faq-diving-health-safety-thailand", "/en/faqs/faq-diving-health-safety-thailand/"],
+  [
+    "/en/faqs/faq-booking-payment-scuba-koh-chang",
+    "/en/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
+  [
+    "/en/faqs/faq-dive-courses-koh-chang",
+    "/en/faqs/faq-dive-courses-koh-chang/",
+  ],
+  [
+    "/en/faqs/faq-diving-health-safety-thailand",
+    "/en/faqs/faq-diving-health-safety-thailand/",
+  ],
   ["/en/faqs/faq-diving-koh-chang", "/en/faqs/faq-diving-koh-chang/"],
-  ["/en/faqs/faq-equipment-logistics-koh-chang", "/en/faqs/faq-equipment-logistics-koh-chang/"],
-  ["/en/faqs/faq-general-questions-koh-chang", "/en/faqs/faq-general-questions-koh-chang/"],
-  ["/en/faqs/faq-try-dive-fun-dives-koh-chang", "/en/faqs/faq-try-dive-fun-dives-koh-chang/"],
-  ["/en/faqs/getting-here-accommodation-frequently-asked-questions", "/en/faqs/faq-getting-here-accommodation/"],
+  [
+    "/en/faqs/faq-equipment-logistics-koh-chang",
+    "/en/faqs/faq-equipment-logistics-koh-chang/",
+  ],
+  [
+    "/en/faqs/faq-general-questions-koh-chang",
+    "/en/faqs/faq-general-questions-koh-chang/",
+  ],
+  [
+    "/en/faqs/faq-try-dive-fun-dives-koh-chang",
+    "/en/faqs/faq-try-dive-fun-dives-koh-chang/",
+  ],
+  [
+    "/en/faqs/getting-here-accommodation-frequently-asked-questions",
+    "/en/faqs/faq-getting-here-accommodation/",
+  ],
   ["/en/gas-consumption", "/en/posts/scuba-knowledge/gas-consumption/"],
   ["/en/getting-to-koh-chang", "/en/faqs/faq-getting-here-accommodation/"],
-  ["/en/how-to-advanced-course", "/en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
-  ["/en/how-to-fun-dives", "/en/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/"],
-  ["/en/how-to-open-advanced", "/en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
-  ["/en/how-to-open-water-course", "/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
-  ["/en/how-to-scuba-review", "/en/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/"],
-  ["/en/how-to-specialty-courses", "/en/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/"],
-  ["/en/how-to-try-dive", "/en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"],
-  ["/en/life-as-a-diver", "/en/posts/straight-talk/dive-professional-training/"],
-  ["/en/marine-life-barracuda", "/en/posts/marine-life-koh-chang/marine-life-barracuda/"],
-  ["/en/marine-life-batfish", "/en/posts/marine-life-koh-chang/marine-life-batfish/"],
-  ["/en/marine-life-blacktip-reef-shark", "/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/"],
-  ["/en/marine-life-green-sea-turtle", "/en/posts/marine-life-koh-chang/marine-life-green-sea-turtle/"],
-  ["/en/marine-life-nudibranch", "/en/posts/marine-life-koh-chang/marine-life-nudibranch/"],
-  ["/en/marine-life-titan-triggerfish", "/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/en/marine-life-whale-shark", "/en/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/en/how-to-advanced-course",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/",
+  ],
+  [
+    "/en/how-to-fun-dives",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/",
+  ],
+  [
+    "/en/how-to-open-advanced",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/",
+  ],
+  [
+    "/en/how-to-open-water-course",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ],
+  [
+    "/en/how-to-scuba-review",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/",
+  ],
+  [
+    "/en/how-to-specialty-courses",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/",
+  ],
+  [
+    "/en/how-to-try-dive",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/",
+  ],
+  [
+    "/en/life-as-a-diver",
+    "/en/posts/straight-talk/dive-professional-training/",
+  ],
+  [
+    "/en/marine-life-barracuda",
+    "/en/posts/marine-life-koh-chang/marine-life-barracuda/",
+  ],
+  [
+    "/en/marine-life-batfish",
+    "/en/posts/marine-life-koh-chang/marine-life-batfish/",
+  ],
+  [
+    "/en/marine-life-blacktip-reef-shark",
+    "/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/",
+  ],
+  [
+    "/en/marine-life-green-sea-turtle",
+    "/en/posts/marine-life-koh-chang/marine-life-green-sea-turtle/",
+  ],
+  [
+    "/en/marine-life-nudibranch",
+    "/en/posts/marine-life-koh-chang/marine-life-nudibranch/",
+  ],
+  [
+    "/en/marine-life-titan-triggerfish",
+    "/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/en/marine-life-whale-shark",
+    "/en/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/en/marine-life", "/en/posts/marine-life-koh-chang/"],
   ["/en/nitrox-info", "/en/posts/scuba-knowledge/nitrox-info/"],
   ["/en/ocean-climate", "/en/posts/straight-talk/ocean-climate/"],
   ["/en/padi-vs-sdi-tdi", "/en/posts/straight-talk/padi-vs-sdi-tdi/"],
   ["/en/posts", "/en/posts/"],
-  ["/en/posts/diving-how-to-guides-koh-chang", "/en/posts/diving-how-to-guides-koh-chang/"],
-  ["/en/posts/diving-how-to-guides-koh-chang/how-to-advanced-course", "/en/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"],
-  ["/en/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver", "/en/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/"],
-  ["/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course", "/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
-  ["/en/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver", "/en/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/"],
-  ["/en/posts/koh-chang-diving-travel-guides", "/en/posts/koh-chang-diving-travel-guides/"],
-  ["/en/posts/koh-chang-diving-travel-guides/beginner-guide", "/en/posts/koh-chang-diving-travel-guides/beginner-guide/"],
-  ["/en/posts/marine-life-koh-chang", "/en/posts/marine-life-koh-chang/marine-life/"],
-  ["/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark", "/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/"],
-  ["/en/posts/marine-life-koh-chang/marine-life-nudibranch", "/en/posts/marine-life-koh-chang/marine-life-nudibranch/"],
-  ["/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish", "/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/en/posts/marine-life-koh-chang/marine-life-whale-shark", "/en/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/en/posts/diving-how-to-guides-koh-chang",
+    "/en/posts/diving-how-to-guides-koh-chang/",
+  ],
+  [
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-advanced-course",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/",
+  ],
+  [
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/",
+  ],
+  [
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ],
+  [
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/",
+  ],
+  [
+    "/en/posts/koh-chang-diving-travel-guides",
+    "/en/posts/koh-chang-diving-travel-guides/",
+  ],
+  [
+    "/en/posts/koh-chang-diving-travel-guides/beginner-guide",
+    "/en/posts/koh-chang-diving-travel-guides/beginner-guide/",
+  ],
+  [
+    "/en/posts/marine-life-koh-chang",
+    "/en/posts/marine-life-koh-chang/marine-life/",
+  ],
+  [
+    "/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark",
+    "/en/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/",
+  ],
+  [
+    "/en/posts/marine-life-koh-chang/marine-life-nudibranch",
+    "/en/posts/marine-life-koh-chang/marine-life-nudibranch/",
+  ],
+  [
+    "/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish",
+    "/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/en/posts/marine-life-koh-chang/marine-life-whale-shark",
+    "/en/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/en/posts/scuba-knowledge", "/en/posts/scuba-knowledge/"],
-  ["/en/posts/scuba-knowledge/about-search-recovery", "/en/posts/scuba-knowledge/about-search-recovery/"],
-  ["/en/posts/scuba-knowledge/best-dive-computers", "/en/posts/scuba-knowledge/best-dive-computers/"],
-  ["/en/posts/scuba-knowledge/smb-guide", "/en/posts/scuba-knowledge/smb-guide/"],
+  [
+    "/en/posts/scuba-knowledge/about-search-recovery",
+    "/en/posts/scuba-knowledge/about-search-recovery/",
+  ],
+  [
+    "/en/posts/scuba-knowledge/best-dive-computers",
+    "/en/posts/scuba-knowledge/best-dive-computers/",
+  ],
+  [
+    "/en/posts/scuba-knowledge/smb-guide",
+    "/en/posts/scuba-knowledge/smb-guide/",
+  ],
   ["/en/posts/straight-talk", "/en/posts/straight-talk/"],
-  ["/en/posts/straight-talk/padi-vs-sdi-tdi", "/en/posts/straight-talk/padi-vs-sdi-tdi/"],
+  [
+    "/en/posts/straight-talk/padi-vs-sdi-tdi",
+    "/en/posts/straight-talk/padi-vs-sdi-tdi/",
+  ],
   ["/en/posts/tips-and-tricks", "/en/posts/tips-and-tricks/"],
   ["/en/prices", "/en/prices/"],
   ["/en/privacy-policy", "/en/privacy-policy/"],
@@ -443,7 +882,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/apeks-vx1-mask", "/en/store/category/equipment/"],
   ["/en/product/apeks-wsx-sidemount-harness", "/en/store/category/equipment/"],
   ["/en/product/apeks-wtx-deluxe-harness", "/en/store/category/equipment/"],
-  ["/en/product/apeks-wtx-ultralight-travel-plate", "/en/store/category/equipment/"],
+  [
+    "/en/product/apeks-wtx-ultralight-travel-plate",
+    "/en/store/category/equipment/",
+  ],
   ["/en/product/apeks-wtxd-double-wing-set", "/en/store/category/equipment/"],
   ["/en/product/apeks-wtxd-single-wing", "/en/store/category/equipment/"],
   ["/en/product/apeks-xl-4-regulator-set", "/en/store/category/equipment/"],
@@ -465,7 +907,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/deep-wreck-nitrox", "/en/product/nitrox-diver/"],
   ["/en/product/divemaster", "/en/product/divemaster/"],
   ["/en/product/efr-instructor", "/en/product/efr-instructor/"],
-  ["/en/product/emergency-first-response-instructor", "/en/product/efr-instructor/"],
+  [
+    "/en/product/emergency-first-response-instructor",
+    "/en/product/efr-instructor/",
+  ],
   ["/en/product/first-aid", "/en/product/first-aid/"],
   ["/en/product/fun-dives", "/en/product/fun-dives/"],
   ["/en/product/hybrid-cargo-shorts", "/en/store/category/equipment/"],
@@ -480,7 +925,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/open-advanced-package", "/en/product/open-advanced-package/"],
   ["/en/product/open-to-divemaster", "/en/product/open-to-divemaster/"],
   ["/en/product/open-water-diver", "/en/product/open-water-diver/"],
-  ["/en/product/open-water-diver-referral-course", "/en/product/open-water-diver/"],
+  [
+    "/en/product/open-water-diver-referral-course",
+    "/en/product/open-water-diver/",
+  ],
   ["/en/product/open-water-scuba-instructor", "/en/product/sdi-idc/"],
   ["/en/product/rent-a-gopro-hero-7-black", "/en/product/rent-gopro/"],
   ["/en/product/rent-gopro", "/en/product/rent-gopro/"],
@@ -494,7 +942,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/scubapro-mk21-c370-set", "/en/store/category/equipment/"],
   ["/en/product/scubapro-mk21-c370", "/en/store/category/equipment/"],
   ["/en/product/scubapro-mk25-evo-s600", "/en/store/category/equipment/"],
-  ["/en/product/scubapro-single-tank-adapter-sta", "/en/store/category/equipment/"],
+  [
+    "/en/product/scubapro-single-tank-adapter-sta",
+    "/en/store/category/equipment/",
+  ],
   ["/en/product/scubapro-solo-mask", "/en/store/category/equipment/"],
   ["/en/product/scubapro-t-one-bcd", "/en/store/category/equipment/"],
   ["/en/product/scubapro-x-tek-sidemount", "/en/store/category/equipment/"],
@@ -520,12 +971,30 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/store", "/en/store/"],
   ["/en/store/category", "/en/store/category/"],
   ["/en/store/category/courses", "/en/store/category/courses/"],
-  ["/en/store/category/courses/advanced-courses", "/en/store/category/courses/advanced-courses/"],
-  ["/en/store/category/courses/beginner-courses", "/en/store/category/courses/beginner-courses/"],
-  ["/en/store/category/courses/professional-courses", "/en/store/category/courses/professional-courses/"],
-  ["/en/store/category/courses/speciality", "/en/store/category/courses/speciality/"],
-  ["/en/store/category/courses/technical-diving-courses", "/en/store/category/courses/technical-diving-courses/"],
-  ["/en/store/category/courses/technical-diving-courses/%E2%80%9E", "/en/store/category/courses/technical-diving-courses/"],
+  [
+    "/en/store/category/courses/advanced-courses",
+    "/en/store/category/courses/advanced-courses/",
+  ],
+  [
+    "/en/store/category/courses/beginner-courses",
+    "/en/store/category/courses/beginner-courses/",
+  ],
+  [
+    "/en/store/category/courses/professional-courses",
+    "/en/store/category/courses/professional-courses/",
+  ],
+  [
+    "/en/store/category/courses/speciality",
+    "/en/store/category/courses/speciality/",
+  ],
+  [
+    "/en/store/category/courses/technical-diving-courses",
+    "/en/store/category/courses/technical-diving-courses/",
+  ],
+  [
+    "/en/store/category/courses/technical-diving-courses/%E2%80%9E",
+    "/en/store/category/courses/technical-diving-courses/",
+  ],
   ["/en/store/category/day-trips", "/en/store/category/day-trips/"],
   ["/en/store/category/equipment", "/en/store/category/equipment/"],
   ["/en/store/category/packages", "/en/store/category/courses/"],
@@ -533,50 +1002,98 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/store/courses/divemaster", "/en/product/divemaster/"],
   ["/en/store/courses/open-water-diver", "/en/product/open-water-diver/"],
   ["/en/store/courses/rescue-diver", "/en/product/rescue-diver/"],
-  ["/en/store/courses/sdi-instructor-development-course-idc", "/en/product/sdi-idc/"],
+  [
+    "/en/store/courses/sdi-instructor-development-course-idc",
+    "/en/product/sdi-idc/",
+  ],
   ["/en/store/day-trips/discover-scuba-diving", "/en/product/try-dive/"],
   ["/en/store/day-trips/fun-dives", "/en/product/fun-dives/"],
   ["/en/store/day-trips/scuba-review", "/en/product/scuba-review/"],
   ["/en/store/day-trips/snorkeling", "/en/product/snorkeling/"],
   ["/en/store/packages/deep-wreck-nitrox", "/en/product/nitrox-diver/"],
-  ["/en/store/packages/open-water-advanced-open-water-diver", "/en/product/open-advanced-package/"],
-  ["/en/store/packages/open-water-diver-to-divemaster", "/en/product/open-to-divemaster/"],
-  ["/en/store/packages/tdi-technical-diver-training", "/en/product/tech-package/"],
+  [
+    "/en/store/packages/open-water-advanced-open-water-diver",
+    "/en/product/open-advanced-package/",
+  ],
+  [
+    "/en/store/packages/open-water-diver-to-divemaster",
+    "/en/product/open-to-divemaster/",
+  ],
+  [
+    "/en/store/packages/tdi-technical-diver-training",
+    "/en/product/tech-package/",
+  ],
   ["/en/sustainable-diving", "/en/posts/straight-talk/sustainable-diving/"],
   ["/en/terms-and-conditions", "/en/terms-and-conditions/"],
-  ["/en/thailand-diving-comparison", "/en/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"],
-  ["/en/travel-guide", "/en/posts/koh-chang-diving-travel-guides/travel-guide/"],
+  [
+    "/en/thailand-diving-comparison",
+    "/en/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/",
+  ],
+  [
+    "/en/travel-guide",
+    "/en/posts/koh-chang-diving-travel-guides/travel-guide/",
+  ],
   ["/en/weather", "/en/weather/"],
   ["/en/which-course", "/en/posts/tips-and-tricks/which-course/"],
-  ["/en/wreck-diving-koh-chang", "/en/posts/scuba-knowledge/wreck-diving-koh-chang/"],
-  ["/th/การดำน้ำ-try-dive-กับ-chang-diving-ขั้นตอนง", "/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"],
+  [
+    "/en/wreck-diving-koh-chang",
+    "/en/posts/scuba-knowledge/wreck-diving-koh-chang/",
+  ],
+  [
+    "/th/การดำน้ำ-try-dive-กับ-chang-diving-ขั้นตอนง",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/",
+  ],
   ["/th/การทำงานของ-apeks-dst4", "/th/store/category/equipment/"],
   ["/th/การเดินทางไปเกาะช้าง", "/th/faqs/faq-getting-here-accommodation/"],
-  ["/th/ฉลามวาฬที่เกาะช้าง-ประส", "/th/posts/marine-life-koh-chang/marine-life-whale-shark/"],
-  ["/th/ฉลามวาฬที่เกาะช้าง-ประส", "/th/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/th/ฉลามวาฬที่เกาะช้าง-ประส",
+    "/th/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
+  [
+    "/th/ฉลามวาฬที่เกาะช้าง-ประส",
+    "/th/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/th/ติดต่อ", "/th/contact/"],
   ["/th/ติดต่อเรา", "/th/contact/"],
   ["/th/ปลาและปะการัง-เกาะช้าง-จ", "/th/posts/marine-life-koh-chang/"],
   ["/th/ปลาและปะการัง-เกาะช้าง-จ", "/th/posts/marine-life-koh-chang/"],
   ["/th/ปลาและปะการัง-เกาะช้าง-ต", "/th/posts/marine-life-koh-chang/"],
   ["/th/ปลาและปะการัง-เกาะช้าง-ต", "/th/posts/marine-life-koh-chang/"],
-  ["/th/เรียนดำน้ำ-open-water-กับ-chang-diving-คอร์ส", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
-  ["/th/เส้นทางของนักดำน้ำ", "/th/posts/straight-talk/dive-professional-training/"],
+  [
+    "/th/เรียนดำน้ำ-open-water-กับ-chang-diving-คอร์ส",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ],
+  [
+    "/th/เส้นทางของนักดำน้ำ",
+    "/th/posts/straight-talk/dive-professional-training/",
+  ],
   ["/th/about/dive-schedule", "/th/about/"],
-  ["/th/about-search-recovery", "/th/posts/scuba-knowledge/about-search-recovery/"],
+  [
+    "/th/about-search-recovery",
+    "/th/posts/scuba-knowledge/about-search-recovery/",
+  ],
   ["/th/about-us", "/th/about/"],
   ["/th/apeks-dst4", "/th/store/category/equipment/"],
   ["/th/apeks-first-stage-operation-dst4", "/th/store/category/equipment/"],
   ["/th/apeks-xtx", "/th/store/category/equipment/"],
-  ["/th/category/diving-how-to-guides-koh-chang", "/th/posts/diving-how-to-guides-koh-chang/"],
+  [
+    "/th/category/diving-how-to-guides-koh-chang",
+    "/th/posts/diving-how-to-guides-koh-chang/",
+  ],
   ["/th/category/marine-life-koh-chang", "/th/posts/marine-life-koh-chang/"],
   ["/th/deep-diving", "/th/posts/tips-and-tricks/deep-diving/"],
   ["/th/dive-courses/advanced-open-water", "/th/product/advanced/"],
   ["/th/dive-logbook", "/th/posts/scuba-knowledge/dive-logbook/"],
-  ["/th/dive-professional-training", "/th/posts/straight-talk/dive-professional-training/"],
+  [
+    "/th/dive-professional-training",
+    "/th/posts/straight-talk/dive-professional-training/",
+  ],
   ["/th/dive-sites", "/th/dive-sites/"],
   ["/th/dive-sites/blueberry-hill", "/th/dive-sites/blueberry-hill/"],
-  ["/th/dive-sites/dive-site-map-koh-chang", "/th/dive-sites/dive-site-map-koh-chang/"],
+  [
+    "/th/dive-sites/dive-site-map-koh-chang",
+    "/th/dive-sites/dive-site-map-koh-chang/",
+  ],
   ["/th/dive-sites/hin-kra-duang", "/th/dive-sites/"],
   ["/th/dive-sites/hin-luk-bat", "/th/dive-sites/hin-luk-bat/"],
   ["/th/dive-sites/hin-pray-nam", "/th/dive-sites/hin-pray-nam/"],
@@ -588,59 +1105,161 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/dive-sites/htms-chang-wreck", "/th/dive-sites/htms-chang-wreck/"],
   ["/th/dive-sites/koh-rang-pinnacle", "/th/dive-sites/koh-rang-pinnacle/"],
   ["/th/dive-sites/koho-maru-5", "/th/dive-sites/koho-maru-5/"],
-  ["/th/dive-sites/phutthayotfa-chulalok-wreck-koh-chang", "/th/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"],
+  [
+    "/th/dive-sites/phutthayotfa-chulalok-wreck-koh-chang",
+    "/th/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/",
+  ],
   ["/th/dive-sites/secret-reef", "/th/dive-sites/secret-reef/"],
   ["/th/dive-sites/t11-wreck", "/th/dive-sites/t11-wreck/"],
   ["/th/diving-activities", "/th/posts/tips-and-tricks/diving-activities/"],
   ["/th/diving-myths", "/th/posts/straight-talk/diving-myths/"],
-  ["/th/diving-thailand-gulf-vs-andaman", "/th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"],
+  [
+    "/th/diving-thailand-gulf-vs-andaman",
+    "/th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/",
+  ],
   ["/th/emergency-plan", "/th/posts/straight-talk/emergency-plan/"],
   ["/th/faqs", "/th/faqs/"],
-  ["/th/faqs/faq-booking-payment-scuba-koh-chang", "/th/faqs/faq-booking-payment-scuba-koh-chang/"],
-  ["/th/faqs/faq-dive-courses-koh-chang", "/th/faqs/faq-dive-courses-koh-chang/"],
+  [
+    "/th/faqs/faq-booking-payment-scuba-koh-chang",
+    "/th/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
+  [
+    "/th/faqs/faq-dive-courses-koh-chang",
+    "/th/faqs/faq-dive-courses-koh-chang/",
+  ],
   ["/th/faqs/faq-diving-koh-chang", "/th/faqs/faq-diving-koh-chang/"],
-  ["/th/faqs/faq-equipment-logistics-koh-chang", "/th/faqs/faq-equipment-logistics-koh-chang/"],
-  ["/th/faqs/faq-general-questions-koh-chang", "/th/faqs/faq-general-questions-koh-chang/"],
-  ["/th/faqs/faq-getting-here-accommodation", "/th/faqs/faq-getting-here-accommodation/"],
+  [
+    "/th/faqs/faq-equipment-logistics-koh-chang",
+    "/th/faqs/faq-equipment-logistics-koh-chang/",
+  ],
+  [
+    "/th/faqs/faq-general-questions-koh-chang",
+    "/th/faqs/faq-general-questions-koh-chang/",
+  ],
+  [
+    "/th/faqs/faq-getting-here-accommodation",
+    "/th/faqs/faq-getting-here-accommodation/",
+  ],
   ["/th/faqs/faq-try-dive-fun-dives-koh-chang", "/th/product/fun-dives/"],
-  ["/th/faqs/getting-here-accommodation-frequently-asked-questions", "/th/faqs/faq-getting-here-accommodation/"],
+  [
+    "/th/faqs/getting-here-accommodation-frequently-asked-questions",
+    "/th/faqs/faq-getting-here-accommodation/",
+  ],
   ["/th/gas-consumption", "/th/posts/scuba-knowledge/gas-consumption/"],
   ["/th/getting-to-koh-chang", "/th/faqs/faq-getting-here-accommodation/"],
-  ["/th/green-sea-turtle-koh-chang", "/th/posts/marine-life-koh-chang/marine-life-green-sea-turtle/"],
+  [
+    "/th/green-sea-turtle-koh-chang",
+    "/th/posts/marine-life-koh-chang/marine-life-green-sea-turtle/",
+  ],
   ["/th/how-to-fun-dives", "/th/product/fun-dives/"],
-  ["/th/how-to-open-water-course", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
-  ["/th/how-to-specialty-courses", "/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/"],
-  ["/th/how-to-try-dive", "/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"],
+  [
+    "/th/how-to-open-water-course",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ],
+  [
+    "/th/how-to-specialty-courses",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/",
+  ],
+  [
+    "/th/how-to-try-dive",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/",
+  ],
   ["/th/index.html", "/th/"],
-  ["/th/koh-chang-travel-guide", "/th/posts/koh-chang-diving-travel-guides/travel-guide/"],
-  ["/th/life-as-a-diver", "/th/posts/straight-talk/dive-professional-training/"],
-  ["/th/marine-life-barracuda", "/th/posts/marine-life-koh-chang/marine-life-barracuda/"],
-  ["/th/marine-life-batfish", "/th/posts/marine-life-koh-chang/marine-life-batfish/"],
-  ["/th/marine-life-blacktip-reef-shark", "/th/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/"],
-  ["/th/marine-life-titan-triggerfish", "/th/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/th/marine-life-whale-shark", "/th/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/th/koh-chang-travel-guide",
+    "/th/posts/koh-chang-diving-travel-guides/travel-guide/",
+  ],
+  [
+    "/th/life-as-a-diver",
+    "/th/posts/straight-talk/dive-professional-training/",
+  ],
+  [
+    "/th/marine-life-barracuda",
+    "/th/posts/marine-life-koh-chang/marine-life-barracuda/",
+  ],
+  [
+    "/th/marine-life-batfish",
+    "/th/posts/marine-life-koh-chang/marine-life-batfish/",
+  ],
+  [
+    "/th/marine-life-blacktip-reef-shark",
+    "/th/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/",
+  ],
+  [
+    "/th/marine-life-titan-triggerfish",
+    "/th/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/th/marine-life-whale-shark",
+    "/th/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/th/marine-life", "/th/posts/marine-life-koh-chang/"],
   ["/th/nitrox-info", "/th/posts/scuba-knowledge/nitrox-info/"],
-  ["/th/nudibranchs-koh-chang", "/th/posts/marine-life-koh-chang/marine-life-nudibranch/"],
+  [
+    "/th/nudibranchs-koh-chang",
+    "/th/posts/marine-life-koh-chang/marine-life-nudibranch/",
+  ],
   ["/th/padi-vs-sdi-tdi", "/th/posts/straight-talk/padi-vs-sdi-tdi/"],
   ["/th/posts", "/th/posts/"],
-  ["/th/posts/diving-how-to-guides-koh-chang", "/th/posts/diving-how-to-guides-koh-chang/"],
-  ["/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course", "/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"],
-  ["/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
-  ["/th/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver", "/th/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/"],
-  ["/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses", "/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/"],
-  ["/th/posts/koh-chang-diving-travel-guides", "/th/posts/koh-chang-diving-travel-guides/"],
+  [
+    "/th/posts/diving-how-to-guides-koh-chang",
+    "/th/posts/diving-how-to-guides-koh-chang/",
+  ],
+  [
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/",
+  ],
+  [
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/",
+  ],
+  [
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/",
+  ],
+  [
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses",
+    "/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/",
+  ],
+  [
+    "/th/posts/koh-chang-diving-travel-guides",
+    "/th/posts/koh-chang-diving-travel-guides/",
+  ],
   ["/th/posts/marine-life-koh-chang", "/th/posts/marine-life-koh-chang/"],
-  ["/th/posts/marine-life-koh-chang/marine-life", "/th/posts/marine-life-koh-chang/marine-life/"],
-  ["/th/posts/marine-life-koh-chang/marine-life-batfish", "/th/posts/marine-life-koh-chang/marine-life-batfish/"],
+  [
+    "/th/posts/marine-life-koh-chang/marine-life",
+    "/th/posts/marine-life-koh-chang/marine-life/",
+  ],
+  [
+    "/th/posts/marine-life-koh-chang/marine-life-batfish",
+    "/th/posts/marine-life-koh-chang/marine-life-batfish/",
+  ],
   ["/th/posts/scuba-knowledge", "/th/posts/scuba-knowledge/"],
-  ["/th/posts/scuba-knowledge/about-search-recovery", "/th/posts/scuba-knowledge/about-search-recovery/"],
-  ["/th/posts/straight-talk/book-in-advance", "/th/posts/straight-talk/book-in-advance/"],
-  ["/th/posts/straight-talk/diving-social-media", "/th/posts/straight-talk/diving-social-media/"],
-  ["/th/posts/straight-talk/emergency-plan", "/th/posts/straight-talk/emergency-plan/"],
-  ["/th/posts/straight-talk/padi-vs-sdi-tdi", "/th/posts/straight-talk/padi-vs-sdi-tdi/"],
+  [
+    "/th/posts/scuba-knowledge/about-search-recovery",
+    "/th/posts/scuba-knowledge/about-search-recovery/",
+  ],
+  [
+    "/th/posts/straight-talk/book-in-advance",
+    "/th/posts/straight-talk/book-in-advance/",
+  ],
+  [
+    "/th/posts/straight-talk/diving-social-media",
+    "/th/posts/straight-talk/diving-social-media/",
+  ],
+  [
+    "/th/posts/straight-talk/emergency-plan",
+    "/th/posts/straight-talk/emergency-plan/",
+  ],
+  [
+    "/th/posts/straight-talk/padi-vs-sdi-tdi",
+    "/th/posts/straight-talk/padi-vs-sdi-tdi/",
+  ],
   ["/th/posts/tips-and-tricks", "/th/posts/tips-and-tricks/"],
-  ["/th/posts/tips-and-tricks/reel-guideline", "/th/posts/tips-and-tricks/reel-guideline/"],
+  [
+    "/th/posts/tips-and-tricks/reel-guideline",
+    "/th/posts/tips-and-tricks/reel-guideline/",
+  ],
   ["/th/prices", "/th/prices/"],
   ["/th/privacy-policy", "/th/privacy-policy/"],
   ["/th/product/กระเป๋าตาขาย", "/th/store/category/equipment/"],
@@ -652,27 +1271,48 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/product/คอร์สครูสอนการดำน้ำลึกsd", "/th/store/category/equipment/"],
   ["/th/product/คอร์สนักดำน้ำผู้นำ-ไกค์", "/th/store/category/equipment/"],
   ["/th/product/คอร์สนักดำน้ำผู้นำ-ไกค์", "/th/store/category/equipment/"],
-  ["/th/product/ชุดเรกกูเลเตอร์-apeks-mtx-r-sidemount", "/th/store/category/equipment/"],
+  [
+    "/th/product/ชุดเรกกูเลเตอร์-apeks-mtx-r-sidemount",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/ชุดเรกกูเลเตอร์-apeks-mtx-rc", "/th/store/category/equipment/"],
   ["/th/product/ชุดเรกกูเลเตอร์-apeks-xl4-2", "/th/store/category/equipment/"],
-  ["/th/product/ชุดเรกกูเลเตอร์-apeks-xtx-50-40", "/th/store/category/equipment/"],
-  ["/th/product/ชุดเรกกูเลเตอร์-apeks-xtx50-sidemount", "/th/store/category/equipment/"],
+  [
+    "/th/product/ชุดเรกกูเลเตอร์-apeks-xtx-50-40",
+    "/th/store/category/equipment/",
+  ],
+  [
+    "/th/product/ชุดเรกกูเลเตอร์-apeks-xtx50-sidemount",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/ดำน้ำตื้น", "/th/product/snorkeling/"],
   ["/th/product/ดำน้ำตื้นที่เกาะช้าง-ส", "/th/product/snorkeling/"],
   ["/th/product/ดำน้ำสคูบ้า-สำหรับผู้ไม", "/th/product/fun-dives/"],
   ["/th/product/ดำน้ำสคูบ้า-สำหรับผู้ไม", "/th/product/fun-dives/"],
   ["/th/product/ตีนกบ-apeks-rk3", "/th/store/category/equipment/"],
-  ["/th/product/ตีนกบ-deep-blue-speed3-snorkel", "/th/store/category/equipment/"],
+  [
+    "/th/product/ตีนกบ-deep-blue-speed3-snorkel",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/ตีนกบ-go-travel", "/th/store/category/equipment/"],
   ["/th/product/ถุงลม-scubapro-x-tek", "/th/store/category/equipment/"],
-  ["/th/product/ถุงลม-wtx-d-double-donut-wing", "/th/store/category/equipment/"],
+  [
+    "/th/product/ถุงลม-wtx-d-double-donut-wing",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/ถุงลม-x-tek-40-donut-wing", "/th/store/category/equipment/"],
   ["/th/product/ทริปดำน้ำลึกสคูบ้า-ฟันไ", "/th/product/fun-dives/"],
   ["/th/product/ทริปดำน้ำลึกสคูบ้า-ฟันไ", "/th/product/fun-dives/"],
   ["/th/product/ทุ่นทำเครื่องหมาย-apeks-smb", "/th/store/category/equipment/"],
-  ["/th/product/บริการซ่อม-บำรุง-apeks-regulator", "/th/store/category/equipment/"],
+  [
+    "/th/product/บริการซ่อม-บำรุง-apeks-regulator",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/บีซีดี-apeks-black-ice", "/th/store/category/equipment/"],
-  ["/th/product/บีซีดี-apeks-wsx-sidemount-harness", "/th/store/category/equipment/"],
+  [
+    "/th/product/บีซีดี-apeks-wsx-sidemount-harness",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/บีซีดี-hydros-pro", "/th/store/category/equipment/"],
   ["/th/product/บีซีดี-scubapro-t-one", "/th/store/category/equipment/"],
   ["/th/product/บีซีดี-scubapro-x-tek-40", "/th/store/category/equipment/"],
@@ -680,8 +1320,14 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/product/ประกันภัยอุบัติเหตุการ", "/th/product/insurance/"],
   ["/th/product/ฟันไดฟ์", "/th/product/fun-dives/"],
   ["/th/product/ฟันไดฟ์ที่เกาะช้าง", "/th/product/fun-dives/"],
-  ["/th/product/รอกเชือก-apeks-spools-lifeline", "/th/store/category/equipment/"],
-  ["/th/product/สมุดบันทึกใต้น้ำ-apeks-wetnotes", "/th/store/category/equipment/"],
+  [
+    "/th/product/รอกเชือก-apeks-spools-lifeline",
+    "/th/store/category/equipment/",
+  ],
+  [
+    "/th/product/สมุดบันทึกใต้น้ำ-apeks-wetnotes",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/หน้ากาก-apeks-vx1", "/th/store/category/equipment/"],
   ["/th/product/หน้ากาก-deep-blue-xtreme", "/th/store/category/equipment/"],
   ["/th/product/หน้ากาก-scubapro-solo", "/th/store/category/equipment/"],
@@ -690,9 +1336,18 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/product/เรกกูเลเตอร์-apeks-tek3", "/th/store/category/equipment/"],
   ["/th/product/เรกกูเลเตอร์-apeks-xl4-2", "/th/store/category/equipment/"],
   ["/th/product/เรกกูเลเตอร์-apeks-xl4", "/th/store/category/equipment/"],
-  ["/th/product/เรกกูเลเตอร์สำรอง-apeks-mtx-r-octopus", "/th/store/category/equipment/"],
-  ["/th/product/เรกกูเลเตอร์สำรอง-apeks-xl4-octopus", "/th/store/category/equipment/"],
-  ["/th/product/เรกกูเลเตอร์สำรอง-scubapro_r195_octopus", "/th/store/category/equipment/"],
+  [
+    "/th/product/เรกกูเลเตอร์สำรอง-apeks-mtx-r-octopus",
+    "/th/store/category/equipment/",
+  ],
+  [
+    "/th/product/เรกกูเลเตอร์สำรอง-apeks-xl4-octopus",
+    "/th/store/category/equipment/",
+  ],
+  [
+    "/th/product/เรกกูเลเตอร์สำรอง-scubapro_r195_octopus",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/advanced", "/th/product/advanced/"],
   ["/th/product/advanced-nitrox", "/th/product/advanced-nitrox/"],
   ["/th/product/advanced-wreck", "/th/product/advanced-wreck/"],
@@ -716,7 +1371,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/product/apeks-vx1-mask", "/th/store/category/equipment/"],
   ["/th/product/apeks-wetnotes", "/th/store/category/equipment/"],
   ["/th/product/apeks-wtx-deluxe-harness", "/th/store/category/equipment/"],
-  ["/th/product/apeks-wtx-ultralight-travel-plate", "/th/store/category/equipment/"],
+  [
+    "/th/product/apeks-wtx-ultralight-travel-plate",
+    "/th/store/category/equipment/",
+  ],
   ["/th/product/apeks-wtxd-double-wing-set", "/th/store/category/equipment/"],
   ["/th/product/apeks-wtxd-single-wing", "/th/store/category/equipment/"],
   ["/th/product/apeks-xl-4-regulator-set", "/th/store/category/equipment/"],
@@ -781,76 +1439,130 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/product/x-tek-40-donut-wing", "/th/store/category/equipment/"],
   ["/th/reel-guideline", "/th/posts/tips-and-tricks/reel-guideline/"],
   ["/th/refund-policy", "/th/refund-policy/"],
-  ["/th/scuba-diving-beginner-guide", "/th/posts/koh-chang-diving-travel-guides/beginner-guide/"],
+  [
+    "/th/scuba-diving-beginner-guide",
+    "/th/posts/koh-chang-diving-travel-guides/beginner-guide/",
+  ],
   ["/th/smb-guide", "/th/posts/scuba-knowledge/smb-guide/"],
   ["/th/store", "/th/store/"],
   ["/th/store/category/courses", "/th/store/category/courses/"],
-  ["/th/store/category/courses/advanced-courses", "/th/store/category/courses/advanced-courses/"],
-  ["/th/store/category/courses/beginner-courses", "/th/store/category/courses/beginner-courses/"],
-  ["/th/store/category/courses/professional-courses", "/th/store/category/courses/professional-courses/"],
-  ["/th/store/category/courses/speciality", "/th/store/category/courses/speciality/"],
-  ["/th/store/category/courses/technical-diving-courses", "/th/store/category/courses/technical-diving-courses/"],
+  [
+    "/th/store/category/courses/advanced-courses",
+    "/th/store/category/courses/advanced-courses/",
+  ],
+  [
+    "/th/store/category/courses/beginner-courses",
+    "/th/store/category/courses/beginner-courses/",
+  ],
+  [
+    "/th/store/category/courses/professional-courses",
+    "/th/store/category/courses/professional-courses/",
+  ],
+  [
+    "/th/store/category/courses/speciality",
+    "/th/store/category/courses/speciality/",
+  ],
+  [
+    "/th/store/category/courses/technical-diving-courses",
+    "/th/store/category/courses/technical-diving-courses/",
+  ],
   ["/th/store/category/day-trips", "/th/store/category/day-trips/"],
   ["/th/store/category/equipment", "/th/store/category/equipment/"],
   ["/th/sustainable-diving", "/th/posts/straight-talk/sustainable-diving/"],
   ["/th/terms-and-conditions", "/th/terms-and-conditions/"],
-  ["/th/thailand-diving-comparison", "/th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"],
-  ["/th/the-best-dive-computers-2025", "/th/posts/scuba-knowledge/best-dive-computers/"],
+  [
+    "/th/thailand-diving-comparison",
+    "/th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/",
+  ],
+  [
+    "/th/the-best-dive-computers-2025",
+    "/th/posts/scuba-knowledge/best-dive-computers/",
+  ],
   ["/th/the-dive-logbook", "/th/posts/scuba-knowledge/dive-logbook/"],
-  ["/th/titan-triggerfish-koh-chang", "/th/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
-  ["/th/travel-guide", "/th/posts/koh-chang-diving-travel-guides/travel-guide/"],
+  [
+    "/th/titan-triggerfish-koh-chang",
+    "/th/posts/marine-life-koh-chang/marine-life-titan-triggerfish/",
+  ],
+  [
+    "/th/travel-guide",
+    "/th/posts/koh-chang-diving-travel-guides/travel-guide/",
+  ],
   ["/th/videos", "/th/videos/"],
-  ["/th/walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art", "/th/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  [
+    "/th/walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art",
+    "/th/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
   ["/th/weather", "/th/weather/"],
   ["/th/which-course", "/th/posts/tips-and-tricks/which-course/"],
   // weitere paare hier … ["/de/alt", "/de/neu/"],
 ];
-
 
 // 2) PREFIX/WILDCARD 301 — als Objekte { from, to }
 //    wirkt wie /from/* -> /to/:splat
 const REDIRECTS_PREFIX_RAW = [
   // BEISPIELE (kannst du erweitern):
   // { from: "/th/store/category/equipment/bcds",   to: "/th/store/category/equipment/" },
-   { from: "/th/store/category/dcth", to: "/th/store/category/courses/" },
-   { from: "/th/store/category/equipment/bcds", to: "/th/store/category/equipment/" },
-   { from: "/th/store/category/equipment/fins", to: "/th/store/category/equipment/" },
-   { from: "/th/store/category/equipment/masks", to: "/th/store/category/equipment/" },
-   { from: "/th/store/category/equipment/regulator", to: "/th/store/category/equipment/" },
-   { from: "/th/store/category/equipment/wetsuits", to: "/th/store/category/equipment/" },
-   { from: "/th/2018/07", to: "/th/posts/" },
-   { from: "/th/2019/11", to: "/th/posts/" },
-   { from: "/th/ds", to: "/th/dive-sites/" },
-   { from: "/th/ร้านค้า", to: "/th/" },
-   { from: "/th/วิดีโอ", to: "/th/videos/" },
-   { from: "/th/หมวดหมู่", to: "/th/posts/" },
-   { from: "/th/เกี่ยวกับ", to: "/th/about/" },
-   { from: "/th/คำถามที่พบบ่อย", to: "/th/faqs/" },
-   { from: "/th/เกี่ยวกับ-ส่วนย่อยดำน้ำ", to: "/th/about/" },
-   { from: "/en/team", to: "/en/about/" },
-   { from: "/ร้านค้า", to: "/th/" },
-   { from: "/de/category", to: "/de/posts/" },
-   { from: "/de/Kategorie", to: "/de/posts/" },
-   { from: "/de/store/category/packages", to: "/de/store/category/equipment/" },
-   { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
-   { from: "/de/ueber-uns", to: "/de/about/" },
-   { from: "/de/videos", to: "/de/videos/" },
-   { from: "/en/videos", to: "/en/videos/" },
-   { from: "/th/videos", to: "/th/videos/" },
-   { from: "/en/category", to: "/en/posts/" },
-   { from: "/th/จุดดำน้ำ", to: "/th/dive-sites/" },
+  { from: "/th/store/category/dcth", to: "/th/store/category/courses/" },
+  {
+    from: "/th/store/category/equipment/bcds",
+    to: "/th/store/category/equipment/",
+  },
+  {
+    from: "/th/store/category/equipment/fins",
+    to: "/th/store/category/equipment/",
+  },
+  {
+    from: "/th/store/category/equipment/masks",
+    to: "/th/store/category/equipment/",
+  },
+  {
+    from: "/th/store/category/equipment/regulator",
+    to: "/th/store/category/equipment/",
+  },
+  {
+    from: "/th/store/category/equipment/wetsuits",
+    to: "/th/store/category/equipment/",
+  },
+  { from: "/th/2018/07", to: "/th/posts/" },
+  { from: "/th/2019/11", to: "/th/posts/" },
+  { from: "/th/ds", to: "/th/dive-sites/" },
+  { from: "/th/ร้านค้า", to: "/th/" },
+  { from: "/th/วิดีโอ", to: "/th/videos/" },
+  { from: "/th/หมวดหมู่", to: "/th/posts/" },
+  { from: "/th/เกี่ยวกับ", to: "/th/about/" },
+  { from: "/th/คำถามที่พบบ่อย", to: "/th/faqs/" },
+  { from: "/th/เกี่ยวกับ-ส่วนย่อยดำน้ำ", to: "/th/about/" },
+  { from: "/en/team", to: "/en/about/" },
+  { from: "/ร้านค้า", to: "/th/" },
+  { from: "/de/category", to: "/de/posts/" },
+  { from: "/de/Kategorie", to: "/de/posts/" },
+  { from: "/de/store/category/packages", to: "/de/store/category/equipment/" },
+  {
+    from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand",
+    to: "/de/about/",
+  },
+  { from: "/de/ueber-uns", to: "/de/about/" },
+  { from: "/de/videos", to: "/de/videos/" },
+  { from: "/en/videos", to: "/en/videos/" },
+  { from: "/th/videos", to: "/th/videos/" },
+  { from: "/en/category", to: "/en/posts/" },
+  { from: "/th/จุดดำน้ำ", to: "/th/dive-sites/" },
 ];
 
 // In Maps/normalisierte Regeln umwandeln
 const REDIRECTS_EXACT = new Map(
-  REDIRECTS_EXACT_RAW
-    .map(([from, to]) => [normPath(ensureLeadingSlash(from)), ensureLeadingSlash(to)])
+  REDIRECTS_EXACT_RAW.map(([from, to]) => [
+    normPath(ensureLeadingSlash(from)),
+    ensureLeadingSlash(to),
+  ])
     // Selbst-Redirects rausfiltern:
-    .filter(([from, to]) => from !== normPath(to))
+    .filter(([from, to]) => from !== normPath(to)),
 );
 
-const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW
-  .map(({ from, to }) => ({ from: normPath(ensureLeadingSlash(from)), to: ensureLeadingSlash(to) }))
+const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW.map(({ from, to }) => ({
+  from: normPath(ensureLeadingSlash(from)),
+  to: ensureLeadingSlash(to),
+}))
   // Selbst-Redirects entfernen
   .filter(({ from, to }) => from !== normPath(to));
 
@@ -859,144 +1571,144 @@ const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW
 const FORCE_GONE_EXACT = new Set(
   [
     // Beispiele:
-   "/de/about/boots-plan",
-   "/de/about/die-anmeldung",
-   "/de/about/the-dive-process",
-   "/de/nationalparks-in-thailand-und-koh-chang",
-   "/de/natuerlich-haben-wir-schon-wracks-betaucht",
-   "/de/product/privat-dive-boat",
-   "/de/product/privates-tauchboot-tech",
-   "/de/product/scuba-promotions",
-   "/de/store/category/packages",
-   "/de/store/category/privat-boat",
-   "/de/store/category/privates-boot",
-   "/de/the-dive-process/",
-   "/en/apeks-dst4",
-   "/en/apeks-xtx",
-   "/en/forms",
-   "/en/nationalparks-in-thailand-and-koh-chang",
-   "/en/product/privat-dive-boat-tech",
-   "/en/product/privat-dive-boat",
-   "/en/product/scuba-promotions",
-   "/en/service-technician",
-   "/en/store/category/packages/covid-19-koh-chang",
-   "/th/การใช้รอกเชือก-และเชือก",
-   "/th/ซากเรือที่น่าทึ่งของเก",
-   "/th/ดาวน์โหลดแบบฟอร์มที่จำ",
-   "/th/ปริมาณอากาศที่ใช้หายใจ",
-  "/th/พยากรณ์สภาพอากาศที่เกา",
-  "/th/หลักสูตรณาณำน้ำแบบไหนที่/",
-  "/th/หลักสูตรณาณำน้ำแบบไหนที่",
-  "/th/หลักสูตรณาณำน้ำแบบไหนที่",
-  "/th/อากาศผสมพิเศษไนตรอก-คือ",
-  "/th/อุทยานแห่งชาติ",
-  "/th/เพิ่มอุดมทรัพย์-การดำน้",
-  "/th/เราสอนการดำน้ำ-อย่างไร",
-  "/th/เอกสารที่จำเป็นสำหรับน",
-  "/th/แผนฉุกเฉินสำหรับอุบัติ",
-  "/th/ใช่-เราเคยดำน้ำซากเรือจ",
-  "/th/ใช่-เราเคยดำน้ำซากเรือจ",
-  "/th/cdc-b",
-  "/th/cdc-smb",
-  "/th/cdc-w",
-  "/th/cdc",
-  "/th/cdc/ตารางการดำน้ำ",
-  "/th/cdc/บริษัทร้านดำน้ำ",
-  "/th/fun-diving-koh-chang-วิธีการ-2025",
-  "/th/product-category/หลักสูตรดำน้ำ",
-  "/th/product/สคูบ้ารีวิว-ทบทวนการดำน",
-  "/th/product/สคูบ้ารีวิว-ทบทวนการดำน",
-  "/th/product/สอบเปลี่ยนสถาบันสอนครู",
-  "/th/product/สอบเปลี่ยนสถาบันสอนครู",
-  "/th/product/หลักสูตรการใช้อากาศผสม",
-  "/th/product/หลักสูตรการใช้อากาศผสม",
-  "/th/product/หลักสูตรณาณำน้ำกลางคืน",
-  "/th/product/หลักสูตรณาณำน้ำกลางคืน",
-  "/th/product/เช่า-เหมาเรือ-ดำน้ำลึก-ต",
-  "/th/product/เรียนการช่วยชีวิตและปฐ",
-  "/th/product/เรียนการช่วยชีวิตและปฐ",
-  "/th/product/เรียนครูผู้สอนการช่วยช",
-  "/th/product/เรียนครูผู้สอนการช่วยช",
-  "/th/product/เรียนช่วยเหลือนักดำน้ำ",
-  "/th/product/เรียนดำน้ำพิเศษ-ติดถ",
-  "/th/product/เรียนดำน้ำพิเศษ-ติดถ",
-  "/th/product/เรียนดำน้ำลึกคอร์สเร",
-  "/th/product/เรียนดำน้ำลึกคอร์สเร",
-  "/th/product/เรียนดำน้ำลึกคอร์สเร",
-  "/th/product/เรียนดำน้ำลึกคอร์สเร",
-  "/th/product/เรียนดำน้ำลึกราดับส",
-  "/th/product/เรียนนักดำน้ำดานเทค",
-  "/th/product/เรียนนักดำน้ำดานเทค",
-  "/th/product/เรียนนักดำน้ำดานเทค",
-  "/th/product/เรียนนักดำน้ำดานเทค",
-  "/th/product/เรียนนักดำน้ำดานเทค",
-  "/th/product/เรียนนักดำน้ำดานเทค",
-  "/th/product/เรียนนักดำน้ำลึก40เมตร",
-  "/th/product/เรียนนักดำน้ำสามรถเร",
-  "/th/product/เรียนนักดำน้ำสามรถเร",
-  "/th/product/เรียนหลักสูตรนักดำน",
-  "/th/product/เรียนหลักสูตรนักดำน",
-  "/th/product/dtin",
-  "/th/product/fd1",
-  "/th/product/fd12",
-  "/th/product/fd14",
-  "/th/product/fd9",
-  "/th/product/scuba-review-คอร์สรีเฟรชสำหรับนั",
-  "/th/store/category/courses/dcadth",
-  "/th/store/category/courses/dcspth",
-  "/th/store/category/dtb",
-  "/th/store/category/dtp/โควิด-19-เกาะช้าง",
-  "/th/store/category/dtth",
-  "/th/store/category/packages",
-  "/th/store/category/privat-boat",
-  "/th/why-advanced",
+    "/de/about/boots-plan",
+    "/de/about/die-anmeldung",
+    "/de/about/the-dive-process",
+    "/de/nationalparks-in-thailand-und-koh-chang",
+    "/de/natuerlich-haben-wir-schon-wracks-betaucht",
+    "/de/product/privat-dive-boat",
+    "/de/product/privates-tauchboot-tech",
+    "/de/product/scuba-promotions",
+    "/de/store/category/packages",
+    "/de/store/category/privat-boat",
+    "/de/store/category/privates-boot",
+    "/de/the-dive-process/",
+    "/en/apeks-dst4",
+    "/en/apeks-xtx",
+    "/en/forms",
+    "/en/nationalparks-in-thailand-and-koh-chang",
+    "/en/product/privat-dive-boat-tech",
+    "/en/product/privat-dive-boat",
+    "/en/product/scuba-promotions",
+    "/en/service-technician",
+    "/en/store/category/packages/covid-19-koh-chang",
+    "/th/การใช้รอกเชือก-และเชือก",
+    "/th/ซากเรือที่น่าทึ่งของเก",
+    "/th/ดาวน์โหลดแบบฟอร์มที่จำ",
+    "/th/ปริมาณอากาศที่ใช้หายใจ",
+    "/th/พยากรณ์สภาพอากาศที่เกา",
+    "/th/หลักสูตรณาณำน้ำแบบไหนที่/",
+    "/th/หลักสูตรณาณำน้ำแบบไหนที่",
+    "/th/หลักสูตรณาณำน้ำแบบไหนที่",
+    "/th/อากาศผสมพิเศษไนตรอก-คือ",
+    "/th/อุทยานแห่งชาติ",
+    "/th/เพิ่มอุดมทรัพย์-การดำน้",
+    "/th/เราสอนการดำน้ำ-อย่างไร",
+    "/th/เอกสารที่จำเป็นสำหรับน",
+    "/th/แผนฉุกเฉินสำหรับอุบัติ",
+    "/th/ใช่-เราเคยดำน้ำซากเรือจ",
+    "/th/ใช่-เราเคยดำน้ำซากเรือจ",
+    "/th/cdc-b",
+    "/th/cdc-smb",
+    "/th/cdc-w",
+    "/th/cdc",
+    "/th/cdc/ตารางการดำน้ำ",
+    "/th/cdc/บริษัทร้านดำน้ำ",
+    "/th/fun-diving-koh-chang-วิธีการ-2025",
+    "/th/product-category/หลักสูตรดำน้ำ",
+    "/th/product/สคูบ้ารีวิว-ทบทวนการดำน",
+    "/th/product/สคูบ้ารีวิว-ทบทวนการดำน",
+    "/th/product/สอบเปลี่ยนสถาบันสอนครู",
+    "/th/product/สอบเปลี่ยนสถาบันสอนครู",
+    "/th/product/หลักสูตรการใช้อากาศผสม",
+    "/th/product/หลักสูตรการใช้อากาศผสม",
+    "/th/product/หลักสูตรณาณำน้ำกลางคืน",
+    "/th/product/หลักสูตรณาณำน้ำกลางคืน",
+    "/th/product/เช่า-เหมาเรือ-ดำน้ำลึก-ต",
+    "/th/product/เรียนการช่วยชีวิตและปฐ",
+    "/th/product/เรียนการช่วยชีวิตและปฐ",
+    "/th/product/เรียนครูผู้สอนการช่วยช",
+    "/th/product/เรียนครูผู้สอนการช่วยช",
+    "/th/product/เรียนช่วยเหลือนักดำน้ำ",
+    "/th/product/เรียนดำน้ำพิเศษ-ติดถ",
+    "/th/product/เรียนดำน้ำพิเศษ-ติดถ",
+    "/th/product/เรียนดำน้ำลึกคอร์สเร",
+    "/th/product/เรียนดำน้ำลึกคอร์สเร",
+    "/th/product/เรียนดำน้ำลึกคอร์สเร",
+    "/th/product/เรียนดำน้ำลึกคอร์สเร",
+    "/th/product/เรียนดำน้ำลึกราดับส",
+    "/th/product/เรียนนักดำน้ำดานเทค",
+    "/th/product/เรียนนักดำน้ำดานเทค",
+    "/th/product/เรียนนักดำน้ำดานเทค",
+    "/th/product/เรียนนักดำน้ำดานเทค",
+    "/th/product/เรียนนักดำน้ำดานเทค",
+    "/th/product/เรียนนักดำน้ำดานเทค",
+    "/th/product/เรียนนักดำน้ำลึก40เมตร",
+    "/th/product/เรียนนักดำน้ำสามรถเร",
+    "/th/product/เรียนนักดำน้ำสามรถเร",
+    "/th/product/เรียนหลักสูตรนักดำน",
+    "/th/product/เรียนหลักสูตรนักดำน",
+    "/th/product/dtin",
+    "/th/product/fd1",
+    "/th/product/fd12",
+    "/th/product/fd14",
+    "/th/product/fd9",
+    "/th/product/scuba-review-คอร์สรีเฟรชสำหรับนั",
+    "/th/store/category/courses/dcadth",
+    "/th/store/category/courses/dcspth",
+    "/th/store/category/dtb",
+    "/th/store/category/dtp/โควิด-19-เกาะช้าง",
+    "/th/store/category/dtth",
+    "/th/store/category/packages",
+    "/th/store/category/privat-boat",
+    "/th/why-advanced",
     // weitere exakte 410er hier …
-  ].map(p => normPath(ensureLeadingSlash(p)))
+  ].map((p) => normPath(ensureLeadingSlash(p))),
 );
 
 // 4) PREFIX 410 — alles darunter Gone (Strings)
 const FORCE_GONE_PREFIX = [
-     "/de/store/page",
-     "/de/store/seite",
-     "/de/store/tag",
-     "/th/ds/",
-     "/th/store/tag",
-     "/th/store/category/dcth",
-     "/th/store/category/equipment/masks",
-     "/th/store/category/equipment/regulator",
-     "/th/ร้านค้า",
-     "/en/tag",
-     "/en/store/page",
-     "/en/store/tag",
-     "/de/store/category/equipment/atemregler",
-     "/de/store/category/equipment/bcds",
-     "/de/store/category/equipment/tarierjackets",
-     "/de/store/category/equipment/taschen-rucksaecke",
-     "/de/store/category/equipment/tauchzubehoer",
-     "/de/store/category/equipment/fins",
-     "/de/store/category/equipment/flossen",
-     "/de/store/category/equipment/masken",
-     "/de/store/category/equipment/masks",
-     "/de/store/category/equipment/neopren",
-     "/de/store/category/equipment/regulator",
-     "/de/store/category/equipment/wetsuits",
-     "/en/store/category/equipment/bcds",
-     "/en/store/category/equipment/regulator",
-     "/de/store/kategorie",
-     "/de/store/category/tauchkurse",
-     "/de/store/tages-ausfluege",
-     "/de/store/tauch-kurse",
-     "/de/store/tauch-packete",
-     "/de/store/tauchausruestung",
-     "/de/store/tauchkurse",
-     "/de/tauchplätze",
-     "/de/team",
-     "/de/tag",
-     "/en/en",
-     "/de/de",
-     "/th/th",
+  "/de/store/page",
+  "/de/store/seite",
+  "/de/store/tag",
+  "/th/ds/",
+  "/th/store/tag",
+  "/th/store/category/dcth",
+  "/th/store/category/equipment/masks",
+  "/th/store/category/equipment/regulator",
+  "/th/ร้านค้า",
+  "/en/tag",
+  "/en/store/page",
+  "/en/store/tag",
+  "/de/store/category/equipment/atemregler",
+  "/de/store/category/equipment/bcds",
+  "/de/store/category/equipment/tarierjackets",
+  "/de/store/category/equipment/taschen-rucksaecke",
+  "/de/store/category/equipment/tauchzubehoer",
+  "/de/store/category/equipment/fins",
+  "/de/store/category/equipment/flossen",
+  "/de/store/category/equipment/masken",
+  "/de/store/category/equipment/masks",
+  "/de/store/category/equipment/neopren",
+  "/de/store/category/equipment/regulator",
+  "/de/store/category/equipment/wetsuits",
+  "/en/store/category/equipment/bcds",
+  "/en/store/category/equipment/regulator",
+  "/de/store/kategorie",
+  "/de/store/category/tauchkurse",
+  "/de/store/tages-ausfluege",
+  "/de/store/tauch-kurse",
+  "/de/store/tauch-packete",
+  "/de/store/tauchausruestung",
+  "/de/store/tauchkurse",
+  "/de/tauchplätze",
+  "/de/team",
+  "/de/tag",
+  "/en/en",
+  "/de/de",
+  "/th/th",
   // ggf. weitere Präfixe …
-].map(p => normPath(ensureLeadingSlash(p)));
+].map((p) => normPath(ensureLeadingSlash(p)));
 
 function findPrefixRule(path, rules) {
   for (const from of rules) {
@@ -1010,7 +1722,7 @@ function findExactRedirect(path, redirectsMap) {
   if (redirectsMap.has(path)) {
     return redirectsMap.get(path);
   }
-  
+
   return null;
 }
 
@@ -1020,7 +1732,7 @@ function findPrefixRedirect(path, rules) {
     const fromNorm = from.replace(/\/+$/, "");
     // Normalize to path (ensure trailing slash)
     const toNorm = to.endsWith("/") ? to : to + "/";
-    
+
     // Check exact match or prefix match
     if (path === fromNorm || path.startsWith(fromNorm + "/")) {
       // For category redirects, don't append the rest path
@@ -1039,24 +1751,30 @@ function withDebug(res, tag) {
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
-  
+
   // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
   const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
   const path = decodeURI(singleEncoded);
-  
+
   // 2) Pfad normalisieren (Slashes, etc.)
   const normalizedPath = normPath(path);
 
   // --- 1) 301 EXAKT ---
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
-    return new Response(null, { status: 301, headers: { Location: exactRedirect, "X-Debug": "301-exact" } });
+    return new Response(null, {
+      status: 301,
+      headers: { Location: exactRedirect, "X-Debug": "301-exact" },
+    });
   }
 
   // --- 2) 301 PREFIX/WILDCARD ---
   const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX);
   if (loc) {
-    return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix" } });
+    return new Response(null, {
+      status: 301,
+      headers: { Location: loc, "X-Debug": "301-prefix" },
+    });
   }
 
   // --- 3) statische ausliefern lassen ---
@@ -1064,24 +1782,29 @@ export async function onRequest(context) {
   if (res.status !== 404) return withDebug(res, "pages-pass");
 
   // --- 4) Wenn 404: 410 EXAKT ---
-  if (FORCE_GONE_EXACT.has(normalizedPath) || findExactRedirect(normalizedPath, FORCE_GONE_EXACT)) {
+  if (
+    FORCE_GONE_EXACT.has(normalizedPath) ||
+    findExactRedirect(normalizedPath, FORCE_GONE_EXACT)
+  ) {
     try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: { 
+      const html = await context.env.ASSETS.fetch(
+        new URL("/410.html", url),
+      ).then((r) => r.text());
+      return new Response(html, {
+        status: 410,
+        headers: {
           "Content-Type": "text/html; charset=utf-8",
-          "X-Debug": "410-exact" 
-        } 
+          "X-Debug": "410-exact",
+        },
       });
     } catch (error) {
       // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: { 
+      return new Response("410 Gone", {
+        status: 410,
+        headers: {
           "Content-Type": "text/plain; charset=utf-8",
-          "X-Debug": "410-exact-fallback" 
-        } 
+          "X-Debug": "410-exact-fallback",
+        },
       });
     }
   }
@@ -1089,22 +1812,24 @@ export async function onRequest(context) {
   // --- 5) 410 PREFIX ---
   if (findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
     try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: { 
+      const html = await context.env.ASSETS.fetch(
+        new URL("/410.html", url),
+      ).then((r) => r.text());
+      return new Response(html, {
+        status: 410,
+        headers: {
           "Content-Type": "text/html; charset=utf-8",
-          "X-Debug": "410-prefix" 
-        } 
+          "X-Debug": "410-prefix",
+        },
       });
     } catch (error) {
       // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: { 
+      return new Response("410 Gone", {
+        status: 410,
+        headers: {
           "Content-Type": "text/plain; charset=utf-8",
-          "X-Debug": "410-prefix-fallback" 
-        } 
+          "X-Debug": "410-prefix-fallback",
+        },
       });
     }
   }
@@ -1112,22 +1837,24 @@ export async function onRequest(context) {
   // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(normalizedPath) && !isAsset(normalizedPath)) {
     try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: { 
+      const html = await context.env.ASSETS.fetch(
+        new URL("/410.html", url),
+      ).then((r) => r.text());
+      return new Response(html, {
+        status: 410,
+        headers: {
           "Content-Type": "text/html; charset=utf-8",
-          "X-Debug": "410-global" 
-        } 
+          "X-Debug": "410-global",
+        },
       });
     } catch (error) {
       // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: { 
+      return new Response("410 Gone", {
+        status: 410,
+        headers: {
           "Content-Type": "text/plain; charset=utf-8",
-          "X-Debug": "410-global-fallback" 
-        } 
+          "X-Debug": "410-global-fallback",
+        },
       });
     }
   }
