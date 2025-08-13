@@ -11,17 +11,6 @@ function normPath(raw) {
   // strip query/hash, compress //, trim, remove trailing slash (außer '/', '/en/', '/de/', '/th/')
   let p = raw.split("?")[0].split("#")[0].replace(/\/{2,}/g, "/").trim();
   
-  // 1) Erst doppelt-encodete %25… zu %… zurückführen
-  const singleEncoded = p.replace(/%25([0-9A-Fa-f]{2})/g, "%$1"); // aus %25C3 -> %C3
-  
-  // 2) Dann komplett de-codieren, so dass Umlaute als echte Zeichen vorliegen
-  try {
-    p = decodeURI(singleEncoded); // -> /de/tauchplätze/…
-  } catch (error) {
-    // If decoding fails, keep the original path
-    console.warn("URL decode failed for:", p, error);
-  }
-  
   if (p === "/") return "/";
   if (LANG_ROOTS.includes(p)) return p;
   return p.replace(/\/+$/, "");
@@ -1012,22 +1001,9 @@ function findPrefixRule(path, rules) {
 }
 
 function findExactRedirect(path, redirectsMap) {
-  // First try exact match
+  // Direct match since path is already decoded
   if (redirectsMap.has(path)) {
     return redirectsMap.get(path);
-  }
-  
-  // If not found, try URL-decoded version with improved decoding
-  try {
-    // 1) Erst doppelt-encodete %25… zu %… zurückführen
-    const singleEncoded = path.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
-    // 2) Dann komplett de-codieren
-    const decodedPath = decodeURI(singleEncoded);
-    if (decodedPath !== path && redirectsMap.has(decodedPath)) {
-      return redirectsMap.get(decodedPath);
-    }
-  } catch (error) {
-    // If decoding fails, continue with original path
   }
   
   return null;
@@ -1051,16 +1027,22 @@ function withDebug(res, tag) {
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
-  const path = normPath(url.pathname);
+  
+  // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
+  const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
+  const path = decodeURI(singleEncoded);
+  
+  // 2) Pfad normalisieren (Slashes, etc.)
+  const normalizedPath = normPath(path);
 
   // --- 1) 301 EXAKT ---
-  const exactRedirect = findExactRedirect(path, REDIRECTS_EXACT);
+  const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
     return new Response(null, { status: 301, headers: { Location: exactRedirect, "X-Debug": "301-exact" } });
   }
 
   // --- 2) 301 PREFIX/WILDCARD ---
-  const loc = findPrefixRedirect(path, REDIRECTS_PREFIX);
+  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX);
   if (loc) {
     return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix" } });
   }
@@ -1070,7 +1052,7 @@ export async function onRequest(context) {
   if (res.status !== 404) return withDebug(res, "pages-pass");
 
   // --- 4) Wenn 404: 410 EXAKT ---
-  if (FORCE_GONE_EXACT.has(path) || findExactRedirect(path, FORCE_GONE_EXACT)) {
+  if (FORCE_GONE_EXACT.has(normalizedPath) || findExactRedirect(normalizedPath, FORCE_GONE_EXACT)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
@@ -1093,7 +1075,7 @@ export async function onRequest(context) {
   }
 
   // --- 5) 410 PREFIX ---
-  if (findPrefixRule(path, FORCE_GONE_PREFIX)) {
+  if (findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
@@ -1116,7 +1098,7 @@ export async function onRequest(context) {
   }
 
   // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
-  if (!isInLang(path) && !isAsset(path)) {
+  if (!isInLang(normalizedPath) && !isAsset(normalizedPath)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
