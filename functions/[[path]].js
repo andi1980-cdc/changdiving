@@ -960,7 +960,7 @@ const FORCE_GONE_EXACT = new Set(
   ].map(p => normPath(ensureLeadingSlash(p)))
 );
 
-// 4) PREFIX 410 — alles darunter Gone (Strings)
+// 4) PREFIX 410 — alles darunter Gone - wildcard (Strings)
 const FORCE_GONE_PREFIX = [
      "/de/store/page",
      "/de/store/seite",
