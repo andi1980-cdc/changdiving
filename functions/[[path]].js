@@ -1009,6 +1009,18 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix" } });
   }
 
+  // DEBUG: Spezielle Regel für videos
+  if (normalizedPath.startsWith("/en/videos/")) {
+    console.log("DEBUG: Found video path:", normalizedPath);
+    return new Response(null, { 
+      status: 301, 
+      headers: { 
+        Location: "https://changdiving.com/en/videos/",
+        "X-Debug": "video-debug" 
+      } 
+    });
+  }
+
   // --- 3) statische ausliefern lassen ---
   const res = await context.next();
   if (res.status !== 404) return withDebug(res, "pages-pass");
