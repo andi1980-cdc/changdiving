@@ -815,11 +815,9 @@ const REDIRECTS_PREFIX_RAW = [
    { from: "/de/Kategorie", to: "/de/posts/" },
    { from: "/de/store/category/packages", to: "/de/store/category/equipment/" },
    { from: "/de/ueber-uns", to: "/de/about/" },
-   { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
-   { from: "/de/videos", to: "/de/videos/" },
+      { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
    { from: "/en/category", to: "/en/posts/" },
-   { from: "/en/team", to: "/en/about/" },
-   { from: "/en/videos", to: "/en/videos/" },
+      { from: "/en/team", to: "/en/about/" },
    { from: "/ร้านค้า", to: "/th/" },
    { from: "/th/2018/07", to: "/th/posts/" },
    { from: "/th/2019/11", to: "/th/posts/" },
@@ -829,8 +827,7 @@ const REDIRECTS_PREFIX_RAW = [
    { from: "/th/store/category/equipment/fins", to: "/th/store/category/equipment/" },
    { from: "/th/store/category/equipment/masks", to: "/th/store/category/equipment/" },
    { from: "/th/store/category/equipment/regulator", to: "/th/store/category/equipment/" },
-   { from: "/th/store/category/equipment/wetsuits", to: "/th/store/category/equipment/" },
-   { from: "/th/videos", to: "/th/videos/" },
+      { from: "/th/store/category/equipment/wetsuits", to: "/th/store/category/equipment/" },
    { from: "/th/เกี่ยวกับ", to: "/th/about/" },
    { from: "/th/เกี่ยวกับ-ส่วนย่อยดำน้ำ", to: "/th/about/" },
    { from: "/th/คำถามที่พบบ่อย", to: "/th/faqs/" },
@@ -850,15 +847,8 @@ const REDIRECTS_EXACT = new Map(
 
 const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW
   .map(({ from, to }) => ({ from: normPath(ensureLeadingSlash(from)), to: ensureLeadingSlash(to) }))
-  // Selbst-Redirects entfernen, aber wichtige Redirects beibehalten
-  .filter(({ from, to }) => {
-    // Videos-Redirects beibehalten (wichtig für Wildcard-Funktionalität)
-    if (from === "/en/videos" && to === "/en/videos/") return true;
-    if (from === "/de/videos" && to === "/de/videos/") return true;
-    if (from === "/th/videos" && to === "/th/videos/") return true;
-    // Andere Selbst-Redirects entfernen
-    return from !== normPath(to);
-  });
+  // Selbst-Redirects entfernen
+  .filter(({ from, to }) => from !== normPath(to));
 
 // --------------------- 410 GONE LISTEN ---------------------
 // 3) EXAKTE 410 — als Set (Strings). Vollständig URL-encodiert eintragen.
