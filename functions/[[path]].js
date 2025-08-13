@@ -11,9 +11,12 @@ function normPath(raw) {
   // strip query/hash, compress //, trim, remove trailing slash (außer '/', '/en/', '/de/', '/th/')
   let p = raw.split("?")[0].split("#")[0].replace(/\/{2,}/g, "/").trim();
   
-  // URL-decode the path to handle encoded characters
+  // 1) Erst doppelt-encodete %25… zu %… zurückführen
+  const singleEncoded = p.replace(/%25([0-9A-Fa-f]{2})/g, "%$1"); // aus %25C3 -> %C3
+  
+  // 2) Dann komplett de-codieren, so dass Umlaute als echte Zeichen vorliegen
   try {
-    p = decodeURIComponent(p);
+    p = decodeURI(singleEncoded); // -> /de/tauchplätze/…
   } catch (error) {
     // If decoding fails, keep the original path
     console.warn("URL decode failed for:", p, error);
@@ -992,7 +995,7 @@ const FORCE_GONE_PREFIX = [
      "/de/store/tauch-packete",
      "/de/store/tauchausruestung",
      "/de/store/tauchkurse",
-     "/de/tauchpl%C3%A4tze",
+     "/de/tauchplätze",
      "/de/team",
      "/de/tag",
      "/en/en",
@@ -1014,9 +1017,12 @@ function findExactRedirect(path, redirectsMap) {
     return redirectsMap.get(path);
   }
   
-  // If not found, try URL-decoded version
+  // If not found, try URL-decoded version with improved decoding
   try {
-    const decodedPath = decodeURIComponent(path);
+    // 1) Erst doppelt-encodete %25… zu %… zurückführen
+    const singleEncoded = path.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
+    // 2) Dann komplett de-codieren
+    const decodedPath = decodeURI(singleEncoded);
     if (decodedPath !== path && redirectsMap.has(decodedPath)) {
       return redirectsMap.get(decodedPath);
     }
