@@ -834,6 +834,8 @@ const REDIRECTS_PREFIX_RAW = [
    { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
    { from: "/de/ueber-uns", to: "/de/about/" },
    { from: "/de/videos", to: "/de/videos/" },
+   { from: "/en/videos", to: "/en/videos/" },
+   { from: "/th/videos", to: "/th/videos/" },
    { from: "/en/category", to: "/en/posts/" },
    { from: "/th/%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3", to: "/th/dive-sites/" },
 ];
