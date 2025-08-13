@@ -1009,17 +1009,27 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix" } });
   }
 
-  // DEBUG: Spezielle Regel für videos
-  if (normalizedPath.startsWith("/en/videos/")) {
-    console.log("DEBUG: Found video path:", normalizedPath);
+  // --- 2.5) Video Redirects (spezielle Behandlung) ---
+  if (normalizedPath.startsWith("/en/videos/") && normalizedPath !== "/en/videos/") {
     return new Response(null, { 
       status: 301, 
       headers: { 
         Location: "https://changdiving.com/en/videos/",
-        "X-Debug": "video-debug" 
+        "X-Debug": "301-video" 
       } 
     });
   }
+  if (normalizedPath.startsWith("/de/videos/") && normalizedPath !== "/de/videos/") {
+    return new Response(null, { 
+      status: 301, 
+      headers: { 
+        Location: "https://changdiving.com/de/videos/",
+        "X-Debug": "301-video" 
+      } 
+    });
+  }
+
+
 
   // --- 3) statische ausliefern lassen ---
   const res = await context.next();
