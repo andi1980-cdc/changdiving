@@ -99,6 +99,14 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/contact", "/de/contact/"],
   ["/de/das-taucher-logbuch", "/de/posts/scuba-knowledge/dive-logbook/"],
   ["/de/deep-diving", "/de/posts/tips-and-tricks/deep-diving/"],
+  ["/de/dauer-owd-kurs-koh-chang/", "/de/posts/tips-and-tricks/open-water-duration/"],
+  ["/de/diving-activities", "/de/posts/tips-and-tricks/diving-activities/"],
+  ["/de/diving-social-media", "/de/posts/straight-talk/diving-social-media/"],
+  ["/de/download-der-erforderlichen-unterlagen/", "/de/posts/"],
+  ["/de/emergency-plan", "/de/posts/straight-talk/emergency-plan/"],
+  ["/de/gas-consumption", "/de/posts/scuba-knowledge/gas-consumption/"],
+  ["/de/notfallplan-bei-tauchunfaellen-auf-koh-chang/", "/de/posts/straight-talk/emergency-plan/"],
+  ["/de/reel-guideline", "/de/posts/tips-and-tricks/reel-guideline/"],
   [
     "/de/der-weg-eines-sport-tauchers",
     "/de/posts/straight-talk/dive-professional-training/",
@@ -151,6 +159,7 @@ const REDIRECTS_EXACT_RAW = [
     "/de/faqs/faq-allgemeine-fragen-koh-chang",
     "/de/faqs/faq-general-questions-koh-chang/",
   ],
+  ["/de/faqs/faq-ausruestung-logistik-koh-chang/", "/de/faqs/faq-equipment-logistics-koh-chang/"],
   [
     "/de/faqs/faq-anreise-unterkunft-koh-chang",
     "/de/faqs/faq-getting-here-accommodation/",
@@ -427,6 +436,9 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/product/apeks-regulator-service", "/de/store/category/equipment/"],
   ["/de/product/apeks-single-tank-adapter", "/de/store/category/equipment/"],
   ["/de/product/apeks-single-tank-adaptor", "/de/store/category/equipment/"],
+  ["/de/product/apeks-dry100l", "/de/store/category/equipment/"],
+  ["/de/product/apeks-dry75/", "/de/store/category/equipment/"],
+  ["de/product/warum-tauchunfallversicherung-in-koh-chang-wichtig-ist", "/de/product/insurance/"],
   [
     "/de/product/apeks-single-tank-wing-set-wtx-d",
     "/de/store/category/equipment/",
@@ -713,6 +725,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/diving-social-media", "/en/posts/straight-talk/diving-social-media/"],
   ["/en/emergency-plan", "/en/posts/straight-talk/emergency-plan/"],
   ["/en/faqs", "/en/faqs/"],
+  ["/en/deep-diving", "/en/posts/tips-and-tricks/deep-diving/"],
   [
     "/en/faqs/faq-booking-payment-scuba-koh-chang",
     "/en/faqs/faq-booking-payment-scuba-koh-chang/",
@@ -989,6 +1002,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/try-dive", "/en/product/try-dive/"],
   ["/en/product/wreck-diver", "/en/product/wreck-diver/"],
   ["/en/product/wtx-d-single-donut-wing", "/en/store/category/equipment/"],
+  ["/en/product/wtx-d-double-donut-wing", "/en/store/category/equipment/"],
   ["/en/product/x-tek-pure-tek-harness", "/en/store/category/equipment/"],
   ["/en/reel-guideline", "/en/posts/tips-and-tricks/reel-guideline/"],
   ["/en/refund-policy", "/en/refund-policy/"],
