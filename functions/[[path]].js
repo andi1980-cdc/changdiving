@@ -321,7 +321,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/store/category/courses/technical-diving-courses", "/de/store/category/courses/technical-diving-courses/"],
   ["/de/store/category/day-trips", "/de/store/category/day-trips/"],
   ["/de/store/category/Day-trips", "/de/store/category/day-trips/"],
-  ["/de/store/category/tages-ausfluege/", "/de/store/category/day-trips/"]",
+  ["/de/store/category/tages-ausfluege/", "/de/store/category/day-trips/"],
   ["/de/suchen-und-bergen-beim-tauchen", "/de/posts/scuba-knowledge/about-search-recovery/"],
   ["/de/surface-marker-buoy-smb-warum-ist-sie-wichtig-und-was-bedeuten-die-farben", "/de/posts/scuba-knowledge/smb-guide/"],
   ["/de/sustainable-diving", "/de/posts/straight-talk/sustainable-diving/"],
