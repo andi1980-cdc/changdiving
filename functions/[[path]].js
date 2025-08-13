@@ -867,6 +867,7 @@ const FORCE_GONE_EXACT = new Set(
    "/de/store/category/packages",
    "/de/store/category/privat-boat",
    "/de/store/category/privates-boot",
+   "/de/the-dive-process/",
    "/en/apeks-dst4",
    "/en/apeks-xtx",
    "/en/forms",
