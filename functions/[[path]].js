@@ -145,6 +145,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/dive-sites/secret-reef", "/de/dive-sites/secret-reef/"],
   ["/de/dive-sites/t11-wreck", "/de/dive-sites/t11-wreck/"],
   ["/de/diving-myths", "/de/posts/straight-talk/diving-myths/"],
+  ["/de/erforderlicher-unterlagen-fuer-zertifizierte-taucher", "/de/posts/"],
   ["/de/faqs", "/de/faqs/"],
   [
     "/de/faqs/faq-allgemeine-fragen-koh-chang",
@@ -244,6 +245,10 @@ const REDIRECTS_EXACT_RAW = [
     "/de/how-to-rescue-diver",
     "/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/",
   ],
+  [
+    "/de/how-to-open-water-course",
+    "/de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ]
   [
     "/de/how-to-specialty-courses",
     "/de/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/",
@@ -882,6 +887,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/product/apeks-vx1-mask", "/en/store/category/equipment/"],
   ["/en/product/apeks-wsx-sidemount-harness", "/en/store/category/equipment/"],
   ["/en/product/apeks-wtx-deluxe-harness", "/en/store/category/equipment/"],
+  ["/en/product/apeks-xl4/", "/en/store/category/equipment/"],
   [
     "/en/product/apeks-wtx-ultralight-travel-plate",
     "/en/store/category/equipment/",
