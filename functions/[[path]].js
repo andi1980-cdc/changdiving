@@ -1507,22 +1507,6 @@ const REDIRECTS_PREFIX_RAW = [
     from: "/th/store/category/equipment/bcds",
     to: "/th/store/category/equipment/",
   },
-  {
-    from: "/th/store/category/equipment/fins",
-    to: "/th/store/category/equipment/",
-  },
-  {
-    from: "/th/store/category/equipment/masks",
-    to: "/th/store/category/equipment/",
-  },
-  {
-    from: "/th/store/category/equipment/regulator",
-    to: "/th/store/category/equipment/",
-  },
-  {
-    from: "/th/store/category/equipment/wetsuits",
-    to: "/th/store/category/equipment/",
-  },
   { from: "/th/2018/07", to: "/th/posts/" },
   { from: "/th/2019/11", to: "/th/posts/" },
   { from: "/th/ds", to: "/th/dive-sites/" },
@@ -1676,6 +1660,9 @@ const FORCE_GONE_PREFIX = [
   "/th/store/category/dcth",
   "/th/store/category/equipment/masks",
   "/th/store/category/equipment/regulator",
+  "/th/store/category/equipment/bcds",
+  "/th/store/category/equipment/fins",
+  "/th/store/category/equipment/wetsuits/",
   "/th/ร้านค้า",
   "/en/tag",
   "/en/store/page",
