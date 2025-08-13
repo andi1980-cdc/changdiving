@@ -1560,8 +1560,15 @@ const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW.map(({ from, to }) => ({
   from: normPath(ensureLeadingSlash(from)),
   to: ensureLeadingSlash(to),
 }))
-  // Selbst-Redirects entfernen
-  .filter(({ from, to }) => from !== normPath(to));
+  // Selbst-Redirects entfernen, aber wichtige Redirects beibehalten
+  .filter(({ from, to }) => {
+    // Videos-Redirects beibehalten (wichtig für Wildcard-Funktionalität)
+    if (from === "/en/videos" && to === "/en/videos/") return true;
+    if (from === "/de/videos" && to === "/de/videos/") return true;
+    if (from === "/th/videos" && to === "/th/videos/") return true;
+    // Andere Selbst-Redirects entfernen
+    return from !== normPath(to);
+  });
 
 // --------------------- 410 GONE LISTEN ---------------------
 // 3) EXAKTE 410 — als Set (Strings). Vollständig URL-encodiert eintragen.
