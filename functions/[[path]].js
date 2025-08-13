@@ -1655,9 +1655,9 @@ const FORCE_GONE_PREFIX = [
   "/de/store/page",
   "/de/store/seite",
   "/de/store/tag",
-  "/de/cart",
   "/th/account"
   "/th/checkout",
+  "/th/cart",
   "/th/ds/",
   "/th/store/tag",
   "/th/store/category/dcth",
