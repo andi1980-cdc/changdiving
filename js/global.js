@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/en/refund-policy/">Refunds</a>
       </p>
       <p>
-        <strong>DBD:</strong> 0237354800200 &nbsp;
+        <strong>DBD:</strong> 0237354800207 &nbsp;
         <strong>TAT:</strong> 13/02754 &nbsp;
         <strong>Tax ID:</strong> 0-2355-48000-20-7
       </p>
@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/de/refund-policy/">Rückerstattung</a>
       </div>
       <p>
-        <strong>DBD:</strong> 0237354800200 &nbsp;
+        <strong>DBD:</strong> 0237354800207 &nbsp;
         <strong>TAT:</strong> 13/02754 &nbsp;
         <strong>Tax ID:</strong> 0-2355-48000-20-7
       </p>
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="/th/refund-policy/">Refunds</a>
       </p>
       <p>
-        <strong>DBD:</strong> 0237354800200 &nbsp;
+        <strong>DBD:</strong> 0237354800207 &nbsp;
         <strong>TAT:</strong> 13/02754 &nbsp;
         <strong>Tax ID:</strong> 0-2355-48000-20-7
       </p>
