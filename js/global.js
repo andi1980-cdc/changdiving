@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="row">
         <div class="three columns">
           <a href="/en/about/">About us</a>
-          <a href="/en/about/the-dive-process/">How we work</a>
+          <a href="/en/posts/diving-how-to-guides-koh-chang/ ">How to guides</a>
           <a href="/en/getting-to-koh-chang/">Getting to Koh Chang</a>
           <a href="/en/dive-sites/">Dive sites</a>
           <a href="/en/faqs/">FAQs</a>
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="row">
         <div class="three columns">
           <a href="/de/about/">About us</a>
-          <a href="/de/about/the-dive-process/">How we work</a>
+          <a href="/de/posts/diving-how-to-guides-koh-chang/ ">How to guides</a>
           <a href="/de/getting-to-koh-chang/">Getting to Koh Chang</a>
           <a href="/de/dive-sites/">Dive sites</a>
           <a href="/de/faqs/">FAQs</a>
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="row">
         <div class="three columns">
           <a href="/th/about/">About us</a>
-          <a href="/th/about/the-dive-process/">How we work</a>
+          <a href="/th/posts/diving-how-to-guides-koh-chang/ ">How to guides</a>
           <a href="/th/getting-to-koh-chang/">Getting to Koh Chang</a>
           <a href="/th/dive-sites/">Dive sites</a>
           <a href="/th/faqs/">FAQs</a>
