@@ -908,7 +908,6 @@ const REDIRECTS_PREFIX_RAW = [
    { from: "/en/store/category/equipment/regulator", to: "/en/store/category/equipment/" },
    { from: "/en/store/category/equipment/bcds", to: "/en/store/category/equipment/" },
    { from: "/en/store/category/equipment/wetsuits", to: "/en/store/category/equipment/" },
-   { from: "/ร้านค้า", to: "/th/" },
    { from: "/th/2018/07", to: "/th/posts/" },
    { from: "/th/2019/11", to: "/th/posts/" },
    { from: "/th/ds", to: "/th/dive-sites/" },
@@ -924,7 +923,6 @@ const REDIRECTS_PREFIX_RAW = [
    { from: "/th/เกี่ยวกับ-ส่วนย่อยดำน้ำ", to: "/th/about/" },
    { from: "/th/คำถามที่พบบ่อย", to: "/th/faqs/" },
    { from: "/th/จุดดำน้ำ", to: "/th/dive-sites/" },
-   { from: "/th/ร้านค้า", to: "/th/" },
    { from: "/th/วิดีโอ", to: "/th/videos/" },
    { from: "/th/หมวดหมู่", to: "/th/posts/" },
 ];
