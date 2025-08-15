@@ -653,7 +653,115 @@
           >. Our experienced guides ensure a safe and unforgettable adventure.
         </p>
 
-        <div id="map" style="height: 80vh; width: 100%"></div>
+        <script>
+          // Koh-Chang-Grenzen (Fallback, falls du später mehr Spots ergänzt)
+          const FALLBACK_BOUNDS = L => L.latLngBounds(
+            L.latLng(11.75, 102.17),
+            L.latLng(12.20, 102.50)
+          );
+        
+          // Deine Spots (unverändert)
+          const SITES = [
+            { n:"Chang Diving Center",   c:[12.062940593816096,102.28985548228239], e:"🏢", cls:"center", u:"/en/about/" },
+            { n:"Boat Departure Point",  c:[12.06391827176898,102.2854556208762],   e:"🚤", cls:"boat",   u:"https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic" },
+            { n:"HTMS Chang Wreck",      c:[11.894307,102.257597], e:"🛳️", cls:"wreck", u:"/en/dive-sites/htms-chang-wreck/" },
+            { n:"Hin Luk Bat",           c:[11.945638,102.283831], e:"🪸", cls:"reef",  u:"/en/dive-sites/hin-luk-bat/" },
+            { n:"Secret Reef",           c:[11.905192553479965,102.31728325042923], e:"🪸", cls:"reef", u:"/en/dive-sites/secret-reef/" },
+            { n:"Hin Raab South",        c:[11.906629460855415,102.31752797388722], e:"🪸", cls:"reef", u:"/en/dive-sites/hin-raab-south/" },
+            { n:"Blueberry Hill",        c:[11.905294,102.317584], e:"🪸", cls:"reef", u:"/en/dive-sites/blueberry-hill/" },
+            { n:"T11 Wreck",             c:[11.906928322337778,102.31746857203512], e:"🛳️", cls:"wreck", u:"/en/dive-sites/t11-wreck/" },
+            { n:"Hin Rua Tek",           c:[11.914958962232593,102.33759604841904], e:"🪸", cls:"reef", u:"/en/dive-sites/hin-rua-tek/" },
+            { n:"Hin Raab North",        c:[12.052088,102.239444], e:"🪸", cls:"reef", u:"/en/dive-sites/hin-raab-north/" },
+            { n:"Hin Sam Sao",           c:[12.044852024176542,102.24547490125873], e:"🪸", cls:"reef", u:"/en/dive-sites/hin-sam-sao/" },
+            { n:"Hin Pray Nam",          c:[11.850661906393347,102.41060395775406], e:"🪸", cls:"reef", u:"/en/dive-sites/hin-pray-nam/" },
+            { n:"Koh Rang Pinnacle",     c:[11.809782456488609,102.37047235318667], e:"🪸", cls:"reef", u:"/en/dive-sites/koh-rang-pinnacle/" },
+          ];
+        
+          // Leaflet on-demand
+          document.getElementById('kc-load-map').addEventListener('click', async function(){
+            const btn = this;
+            btn.disabled = true;
+        
+            await Promise.all([
+              new Promise(res => { const l=document.createElement('link'); l.rel='stylesheet'; l.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'; l.onload=res; document.head.appendChild(l); }),
+              new Promise(res => { const s=document.createElement('script'); s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload=res; document.head.appendChild(s); })
+            ]);
+        
+            const mapEl = document.getElementById('kc-map');
+            mapEl.hidden = false;
+            btn.setAttribute('aria-expanded','true');
+            btn.textContent = 'Karte geladen';
+        
+            // 1) Karte ohne Center/Zoom erstellen (wir fitten danach dynamisch)
+            const map = L.map('kc-map', {
+              zoomControl: true,
+              scrollWheelZoom: true,
+              worldCopyJump: false,
+              preferCanvas: true,
+              zoomAnimation: false,
+              markerZoomAnimation: false,
+              updateWhenIdle: true
+            });
+        
+            // 2) Tiles hinzufügen (API-KEY-frei)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+              subdomains: 'abc',
+              maxZoom: 19,
+              noWrap: true,
+              detectRetina: false,
+              attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+        
+            // 3) Aus allen Spots dynamische Bounds bauen
+            let bounds;
+            if (SITES.length) {
+              bounds = L.latLngBounds(SITES.map(s => L.latLng(s.c[0], s.c[1])));
+            } else {
+              bounds = FALLBACK_BOUNDS(L);
+            }
+        
+            // 4) „schönes“ Padding je nach Viewport (mehr Luft auf Mobile)
+            const padding = (window.innerWidth < 768) ? [30, 30] : [60, 80];
+        
+            // 5) Auf Bounds zoomen (alle Spots sicher sichtbar)
+            map.fitBounds(bounds, { padding });
+        
+            // 6) MaxBounds leicht größer setzen, damit Nutzer nicht rausscrollen
+            const padLat = 0.08;  // ~9 km Breite/ ~8-10% Luft
+            const padLng = 0.08;
+            const mb = L.latLngBounds(
+              L.latLng(bounds.getSouth() - padLat, bounds.getWest() - padLng),
+              L.latLng(bounds.getNorth() + padLat, bounds.getEast() + padLng)
+            );
+            map.setMaxBounds(mb);
+            map.options.minZoom = map.getZoom() - 1; // etwas herauszoomen erlaubt
+            map.options.maxZoom = 16;                // nicht zu weit rein (weniger Tiles)
+        
+            // 7) Marker rendern
+            SITES.forEach(s => {
+              const icon = L.divIcon({
+                html: `<div class="kc-pin ${s.cls||''}" aria-hidden="true">${s.e||'●'}</div>`,
+                className: 'kc-pin-wrap', iconSize: [44,44], iconAnchor: [22,22]
+              });
+              const m = L.marker(s.c, { icon, keyboard:true, title: s.n }).addTo(map);
+              m.bindPopup(`<strong>${s.n}</strong>${s.u?`<br><a href="${s.u}" target="_blank" rel="noopener">Mehr Infos</a>`:''}`, { closeButton:true });
+        
+              m.on('add', function(){
+                const el = this.getElement();
+                if(!el) return;
+                el.setAttribute('role','button');
+                el.setAttribute('tabindex','0');
+                el.setAttribute('aria-label', s.n);
+                el.addEventListener('keydown', (e) => {
+                  if(e.key==='Enter' || e.key===' '){ e.preventDefault(); m.openPopup(); }
+                  if(e.key==='Escape'){ m.closePopup(); }
+                });
+              });
+            });
+        
+            if (window.innerWidth < 768) map.zoomControl.setPosition('bottomright');
+          });
+        </script>
 
         <p>
           If you have any questions or would like to book a dive, our team is
