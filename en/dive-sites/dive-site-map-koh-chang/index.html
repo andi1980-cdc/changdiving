@@ -654,25 +654,25 @@
         </p>
 
         <section class="kc-map-wrap" aria-labelledby="kc-map-title">
-          <h2 id="kc-map-title">Koh Chang – Dive Sites (interaktive Karte)</h2>
+          <h2 id="kc-map-title">Koh Chang – Dive Sites (Interactive Map)</h2>
         
-          <div class="kc-map-shell" role="img" aria-roledescription="Kartenplatzhalter" aria-label="Karte von Koh Chang. Drücke den Button, um die Karte zu laden.">
+          <div class="kc-map-shell" role="img" aria-roledescription="Map placeholder" aria-label="Map of Koh Chang. Press the button to load the map.">
             <button id="kc-load-map" class="kc-btn" type="button" aria-controls="kc-map" aria-expanded="false">
-              🗺️ Karte laden (schnell & datensparend)
+              🗺️ Load Map (fast & data-saving)
             </button>
             <div id="kc-map" class="kc-map" hidden></div>
         
-            <div class="kc-legend" role="region" aria-label="Legende" tabindex="0">
+            <div class="kc-legend" role="region" aria-label="Legend" tabindex="0">
               <div><span class="dot center">🏢</span> Dive Center</div>
-              <div><span class="dot boat">🚤</span> Boot</div>
-              <div><span class="dot wreck">🛳️</span> Wrack</div>
-              <div><span class="dot reef">🪸</span> Riff / Pinnacle</div>
+              <div><span class="dot boat">🚤</span> Boat</div>
+              <div><span class="dot wreck">🛳️</span> Wreck</div>
+              <div><span class="dot reef">🪸</span> Reef / Pinnacle</div>
             </div>
           </div>
           
-          <!-- Fallback-Liste (SEO/Screenreader) -->
+          <!-- Fallback List (SEO/Screenreader) -->
           <ul class="kc-fallback">
-            <li><a href="/en/about/">Chang Diving Center</a></li>
+            <li><a href="https://share.google/8B4o0sWdeTFjYnMU6">Chang Diving Center</a></li>
             <li><a href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic">Boat Departure Point</a></li>
             <li><a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang Wreck</a></li>
             <li><a href="/en/dive-sites/hin-luk-bat/">Hin Luk Bat</a></li>
@@ -724,7 +724,7 @@
           .dot.center{ border-color:#ff6b35; } .dot.boat{ border-color:#4a90e2; }
           .dot.wreck{ border-color:#0077b6; } .dot.reef{ border-color:#00b894; }
         
-          /* Hochkontrast für Leaflet-Controls */
+          /* High contrast for Leaflet controls */
           .leaflet-control-zoom a{
             background:#fff !important; color:#000 !important;
             border:1px solid #003366 !important; font-weight:700 !important;
@@ -748,13 +748,13 @@
           const btn = document.getElementById('kc-load-map');
           const mapEl = document.getElementById('kc-map');
           if (!btn || !mapEl) {
-            console.error('[KC-MAP] Button oder Map-Container nicht gefunden – prüfe IDs kc-load-map / kc-map.');
+            console.error('[KC-MAP] Button or map container not found – check IDs kc-load-map / kc-map.');
             return;
           }
         
           // Spots
           const SITES = [
-            { n:"Chang Diving Center",   c:[12.062940593816096,102.28985548228239], e:"🏢", cls:"center", u:"/en/about/" },
+            { n:"Chang Diving Center",   c:[12.062940593816096,102.28985548228239], e:"🏢", cls:"center", u:"https://share.google/8B4o0sWdeTFjYnMU6" },
             { n:"Boat Departure Point",  c:[12.06391827176898,102.2854556208762],   e:"🚤", cls:"boat",   u:"https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic" },
             { n:"HTMS Chang Wreck",      c:[11.894307,102.257597], e:"🛳️", cls:"wreck", u:"/en/dive-sites/htms-chang-wreck/" },
             { n:"Hin Luk Bat",           c:[11.945638,102.283831], e:"🪸", cls:"reef",  u:"/en/dive-sites/hin-luk-bat/" },
