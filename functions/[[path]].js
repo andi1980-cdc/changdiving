@@ -686,7 +686,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/nitrox-info", "/th/posts/scuba-knowledge/nitrox-info/"],
   ["/th/nudibranchs-koh-chang", "/th/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   ["/th/padi-vs-sdi-tdi", "/th/posts/straight-talk/padi-vs-sdi-tdi/"],
-  ["/th/open-water-duration", "th/posts/tips-and-tricks/open-water-duration/"],
+  ["/th/open-water-duration", "/th/posts/tips-and-tricks/open-water-duration/"],
   ["/th/posts/diving-how-to-guides-koh-chang", "/th/posts/diving-how-to-guides-koh-chang/"],
   ["/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course", "/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"],
   ["/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/"],
