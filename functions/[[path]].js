@@ -656,7 +656,6 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/faqs/faq-equipment-logistics-koh-chang", "/th/faqs/faq-equipment-logistics-koh-chang/"],
   ["/th/faqs/faq-general-questions-koh-chang", "/th/faqs/faq-general-questions-koh-chang/"],
   ["/th/faqs/faq-getting-here-accommodation", "/th/faqs/faq-getting-here-accommodation/"],
-  ["/th/faqs/faq-try-dive-fun-dives-koh-chang", "/th/product/fun-dives/"],
   ["/th/faqs/getting-here-accommodation-frequently-asked-questions", "/th/faqs/faq-getting-here-accommodation/"],
   ["/th/gas-consumption", "/th/posts/scuba-knowledge/gas-consumption/"],
   ["/th/getting-to-koh-chang", "/th/faqs/faq-getting-here-accommodation/"],
