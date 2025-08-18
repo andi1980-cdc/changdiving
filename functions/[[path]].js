@@ -386,6 +386,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/about-search-recovery", "/en/posts/scuba-knowledge/about-search-recovery/"],
   ["/en/about-underwater-photography", "/en/posts/tips-and-tricks/about-underwater-photography/"],
   ["/en/about-us", "/en/about/"],
+  ["/en/best-dive-computers", "/en/posts/scuba-knowledge/best-dive-computers/"],
   ["/en/certification-agencies", "/en/posts/straight-talk/padi-vs-sdi-tdi/"],
   ["/en/beginner-guide", "/en/posts/koh-chang-diving-travel-guides/beginner-guide/"],
   ["/en/dive-professional-training", "/en/posts/straight-talk/dive-professional-training/"],
