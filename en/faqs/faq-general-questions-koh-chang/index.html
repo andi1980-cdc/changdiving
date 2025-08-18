@@ -345,11 +345,11 @@
     />
     <link
       rel="stylesheet"
-      href="/style.css"
+      href="/style.min.css"
       media="all"
       
     />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
+    <noscript><link rel="stylesheet" href="/style.min.css" />    <!-- Critical Image Preload -->
     <link
       rel="preload"
       as="image"
@@ -774,6 +774,7 @@
           defer
           async
           src="https://cdn.trustindex.io/loader.js?b3e5b7448c6a735187060fc5afd"
+          onload="this.setAttribute('data-loaded', 'true')"
         ></script>
       </div>
     </main>
@@ -782,8 +783,8 @@
     <link
       rel="stylesheet"
       href="/css/cookieconsent.min.css"
-      media="all"
-      
+      media="print"
+      onload="this.media='all'"
     />
     <script
       src="/js/cookieconsent.min.js"
