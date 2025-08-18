@@ -1382,11 +1382,31 @@ export async function onRequest(context) {
 
 
 
-  // --- 3) statische ausliefern lassen ---
+  // --- 3) Canonical Redirects (www→non-www, http→https) für existierende Seiten ---
+  const shouldRedirect = (url.hostname.startsWith('www.') || url.protocol === 'http:');
+  
+  if (shouldRedirect) {
+    const newUrl = new URL(url);
+    if (url.hostname.startsWith('www.')) {
+      newUrl.hostname = url.hostname.replace('www.', '');
+    }
+    if (url.protocol === 'http:') {
+      newUrl.protocol = 'https:';
+    }
+    return new Response(null, { 
+      status: 301, 
+      headers: { 
+        Location: newUrl.toString(),
+        "X-Debug": "301-canonical" 
+      } 
+    });
+  }
+
+  // --- 4) statische ausliefern lassen ---
   const res = await context.next();
   if (res.status !== 404) return withDebug(res, "pages-pass");
 
-  // --- 4) Wenn 404: 410 EXAKT ---
+  // --- 5) Wenn 404: 410 EXAKT ---
   if (FORCE_GONE_EXACT.has(normalizedPath) || findExactRedirect(normalizedPath, FORCE_GONE_EXACT)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
@@ -1409,7 +1429,7 @@ export async function onRequest(context) {
     }
   }
 
-  // --- 5) 410 PREFIX ---
+  // --- 6) 410 PREFIX ---
   if (findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
@@ -1432,7 +1452,7 @@ export async function onRequest(context) {
     }
   }
 
-  // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
+  // --- 7) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(normalizedPath) && !isAsset(normalizedPath)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
