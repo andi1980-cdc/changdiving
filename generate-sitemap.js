@@ -62,6 +62,17 @@ function shouldExclude(filePath) {
 }
 
 function getPriority(urlPath) {
+  // Homepage-Check zuerst - höchste Priorität
+  if (urlPath === '' || urlPath === '/' || urlPath.endsWith('/index.html')) {
+    return 1.0;
+  }
+  
+  // Language homepage check
+  if (urlPath.match(/^\/(en|de|th)\/$/)) {
+    return 1.0;
+  }
+  
+  // Dann andere Checks...
   for (const [key, priority] of Object.entries(priorityMap)) {
     if (key === 'default') continue;
     if (urlPath.includes(key)) {
@@ -72,6 +83,17 @@ function getPriority(urlPath) {
 }
 
 function getChangeFreq(urlPath) {
+  // Homepage-Check zuerst - häufiger Updates
+  if (urlPath === '' || urlPath === '/' || urlPath.endsWith('/index.html')) {
+    return 'weekly';
+  }
+  
+  // Language homepage check
+  if (urlPath.match(/^\/(en|de|th)\/$/)) {
+    return 'weekly';
+  }
+  
+  // Dann andere Checks...
   for (const [key, freq] of Object.entries(changefreqMap)) {
     if (key === 'default') continue;
     if (urlPath.includes(key)) {
@@ -147,7 +169,7 @@ function scanDirectory(dir, urls = []) {
         urlPath = '/' + urlPath;
       }
       
-      // Handle root index.html
+      // Handle root index.html and language homepages
       if (urlPath === '/') {
         urlPath = '';
       } else {
@@ -155,6 +177,13 @@ function scanDirectory(dir, urls = []) {
         if (!urlPath.endsWith('/')) {
           urlPath += '/';
         }
+      }
+      
+      // Special handling for language homepages
+      const langHomepageMatch = urlPath.match(/^\/(en|de|th)\/$/);
+      if (langHomepageMatch) {
+        // This is a language homepage - should have highest priority
+        urlPath = '/' + langHomepageMatch[1] + '/';
       }
       
       const fullUrl = config.baseUrl + urlPath;
