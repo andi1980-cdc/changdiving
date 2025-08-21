@@ -82,12 +82,62 @@ function generateImagesSitemap(images) {
     xml += `  <url>
     <loc>${imageData.url}</loc>
     <lastmod>${imageData.lastmod}</lastmod>
+    <image:image>
+      <image:loc>${imageData.url}</image:loc>
+      <image:title>${generateImageTitle(imageData.url)}</image:title>
+      <image:caption>${generateImageCaption(imageData.url)}</image:caption>
+    </image:image>
   </url>
 `;
   }
 
   xml += '</urlset>';
   return xml;
+}
+
+function generateImageTitle(imageUrl) {
+  // Extract meaningful title from URL
+  const urlParts = imageUrl.split('/');
+  const fileName = urlParts[urlParts.length - 1];
+  const folder = urlParts[urlParts.length - 2];
+  
+  // Remove file extension and convert to readable format
+  const nameWithoutExt = fileName.replace(/\.[^/.]+$/, '');
+  const readableName = nameWithoutExt
+    .replace(/_/g, ' ')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, l => l.toUpperCase());
+  
+  // Add context based on folder
+  if (folder === 'courses') {
+    return `${readableName} - Scuba Diving Course Koh Chang`;
+  } else if (folder === 'dive-sites') {
+    return `${readableName} - Koh Chang Dive Site`;
+  } else if (folder === 'posts') {
+    return `${readableName} - Diving Blog Koh Chang`;
+  } else if (folder === 'home') {
+    return `${readableName} - Chang Diving Center`;
+  }
+  
+  return `${readableName} - Chang Diving Koh Chang`;
+}
+
+function generateImageCaption(imageUrl) {
+  // Generate descriptive caption based on image location
+  const urlParts = imageUrl.split('/');
+  const folder = urlParts[urlParts.length - 2];
+  
+  if (folder === 'courses') {
+    return 'Professional scuba diving courses and training in Koh Chang, Thailand';
+  } else if (folder === 'dive-sites') {
+    return 'Beautiful coral reefs and marine life at Koh Chang dive sites';
+  } else if (folder === 'posts') {
+    return 'Diving tips, guides and underwater photography from Koh Chang';
+  } else if (folder === 'home') {
+    return 'Chang Diving Center - Your trusted scuba diving partner in Koh Chang';
+  }
+  
+  return 'Scuba diving adventures and underwater exploration in Koh Chang, Thailand';
 }
 
 function generateImageStats(images) {
