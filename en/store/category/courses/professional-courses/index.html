@@ -168,23 +168,269 @@
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Professional Diving Courses Koh Chang",
-        "description": "Start your diving career with professional courses at Chang Diving Center Koh Chang – Divemaster, IDC, IE and EFR Instructor certifications",
-        "url": "https://changdiving.com/en/store/category/courses/professional-courses/",
-        "inLanguage": "en",
-        "publisher": {
-          "@type": "Organization",
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://changdiving.com/",
+          "inLanguage": ["en"],
           "name": "Chang Diving Center",
+          "additionalType": "https://www.wikidata.org/wiki/Q1261847",
+          "description": "Chang Diving Center is a dive school and scuba shop on Koh Chang offering SDI/TDI/PADI dive courses, snorkeling day trips, guided wreck dives and certified scuba gear sales. Since 2005.",
+          "image": "https://changdiving.com/img/logos/logo_cdc.webp",
           "url": "https://changdiving.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/courses/professional_courses_header_big.webp"
+          "telephone": "+66 894-013-927",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "21/52 M 4, Klong Prao Beach",
+            "addressLocality": "Koh Chang",
+            "addressRegion": "Trat",
+            "postalCode": "23170",
+            "addressCountry": "TH"
+          },
+          "openingHours": "Mo-Su 08:00-18:00",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.06321,
+            "longitude": 102.28982
+          },
+          "sameAs": [
+            "https://www.facebook.com/changdivingcenter/",
+            "https://www.instagram.com/chang_diving_center",
+            "https://www.youtube.com/@changdiving1842"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": 22
           }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "OfferCatalog",
+          "inLanguage": ["en"],
+          "name": "Chang Diving Center Professional Course Catalog",
+          "url": "https://changdiving.com/en/store/category/courses/professional-courses/",
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Divemaster",
+                "description": "Join the Divemaster Course at Chang Diving Center, Koh Chang. Train with pros, log 20+ dives, and start your professional dive career.",
+                "url": "https://changdiving.com/en/product/divemaster/",
+                "category": "Professional Courses",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P30D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P30D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 35000,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/en/product/divemaster/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "EFR Instructor",
+                "description": "At Chang Diving we can help you to reach your goals in becoming a PADI First Response Instructor. This Course is for everyone who cares about others.",
+                "url": "https://changdiving.com/en/product/efr-instructor/",
+                "category": "Professional Courses",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P3D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P3D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 15990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/en/product/efr-instructor/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "SDI Instructor Development Course",
+                "description": "Make your dream comes true. Become a SCUBA Diving Instructor with the SDI Instructor Development Course (IDC). Join an agency with the freedom to teach.",
+                "url": "https://changdiving.com/en/product/sdi-idc/",
+                "category": "Professional Courses",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P14D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P14D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 89990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/en/product/sdi-idc/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "SDI Instructor Examination",
+                "description": "The SDI Instructor Examination the final Step in becoming a SCUBA Instructor. These 2 Day Examination will be the start into your new SCUBA Career",
+                "url": "https://changdiving.com/en/product/sdi-ie/",
+                "category": "Professional Courses",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 29990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/en/product/sdi-ie/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "SDI Instructor Crossover",
+                "description": "The SDI / TDI Instructor Crossover with the ITI Family. ITI welcomes all Instructor crossovers from other Agencies to join the Family",
+                "url": "https://changdiving.com/en/product/instructor-crossover/",
+                "category": "Professional Courses",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P3D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P3D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 19990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/en/product/instructor-crossover/"
+                }
+              }
+            }
+          ]
         }
-      }
+      ]
     </script>
 
     <!-- Local Fonts -->

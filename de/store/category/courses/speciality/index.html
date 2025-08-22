@@ -125,23 +125,437 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Tauch-Spezialkurse auf Koh Chang",
-        "description": "Spezialkurse für Taucher auf Koh Chang – Nitrox, Tieftauchen, Wracktauchen, Navigation, Nachttauchen, Sidemount & mehr bei Chang Diving.",
-        "url": "https://changdiving.com/de/store/category/courses/speciality/",
-        "inLanguage": "de",
-        "publisher": {
-          "@type": "Organization",
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://changdiving.com/",
+          "inLanguage": ["de"],
           "name": "Chang Diving Center",
+          "additionalType": "https://www.wikidata.org/wiki/Q1261847",
+          "description": "Chang Diving Center ist eine Tauchschule und ein Tauchshop auf Koh Chang, der SDI/TDI/PADI Tauchkurse, Schnorcheltagesausflüge, geführte Wracktauchgänge und zertifizierte Tauchausrüstung anbietet. Seit 2005.",
+          "image": "https://changdiving.com/img/logos/logo_cdc.webp",
           "url": "https://changdiving.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/courses/speciality_courses_header_big.webp"
+          "telephone": "+66 894-013-927",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "21/52 M 4, Klong Prao Beach",
+            "addressLocality": "Koh Chang",
+            "addressRegion": "Trat",
+            "postalCode": "23170",
+            "addressCountry": "TH"
+          },
+          "openingHours": "Mo-Su 08:00-18:00",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.06321,
+            "longitude": 102.28982
+          },
+          "sameAs": [
+            "https://www.facebook.com/changdivingcenter/",
+            "https://www.instagram.com/chang_diving_center",
+            "https://www.youtube.com/@changdiving1842"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": 22
           }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "OfferCatalog",
+          "inLanguage": ["de"],
+          "name": "Chang Diving Center Spezialitäten-Kurskatalog",
+          "url": "https://changdiving.com/de/store/category/courses/speciality/",
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Deep, Wreck & Nitrox Paket",
+                "description": "Erkunde tiefe Gewässer, ikonische Wracks und tauche länger mit Nitrox in unserem Deep, Wreck und Nitrox Tauchpaket im Chang Diving Center, Koh Chang.",
+                "url": "https://changdiving.com/de/product/deep-wreck-nitrox/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P6D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P6D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 23990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/deep-wreck-nitrox/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Nitrox Diver",
+                "description": "Verlängere deine Tauchzeit und verbessere die Sicherheit mit unserem Nitrox Kurs auf Koh Chang. Theorie, Gasblending-Workshop und optionales Tauchen inklusive.",
+                "url": "https://changdiving.com/de/product/nitrox-diver/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 7990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/nitrox-diver/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Deep Diver",
+                "description": "Gehe sicher tiefer! Unser Deep Diver Kurs bringt dich auf 40m Tiefe – perfekte Vorbereitung für Wracktauchabenteuer. Buche jetzt!",
+                "url": "https://changdiving.com/de/product/deep-diver/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 7990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/deep-diver/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Wreck Diver",
+                "description": "Lerne die Grundlagen des Wracktauchens auf Koh Chang – sichere Erkundung versunkener Schiffe voller Geschichte und Meeresleben!",
+                "url": "https://changdiving.com/de/product/wreck-diver/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 7990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/wreck-diver/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Navigation Spezialität",
+                "description": "Werde ein Unterwasser-Navigationsprofi! Der Navigation Spezialitätenkurs ist perfekt für deinen Tauchurlaub in Thailand.",
+                "url": "https://changdiving.com/de/product/navigation/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 7990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/navigation/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Search & Recovery",
+                "description": "Lerne gezielte Unterwassersuche und Liftbag-Techniken. Verfügbar mit SDI oder PADI Zertifizierung auf Koh Chang. Werde heute zertifiziert!",
+                "url": "https://changdiving.com/de/product/search-recovery/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 7990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/search-recovery/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Night Diver",
+                "description": "Entdecke Koh Changs Unterwasserwelt bei Nacht! Mit biolumineszentem Plankton, jagenden Raubtieren und magischer Stille – ein unvergessliches Erlebnis.",
+                "url": "https://changdiving.com/de/product/night/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P2D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P2D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 7990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/night/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Sidemount Kurs",
+                "description": "Der Sidemount Kurs stammt aus dem Höhlentauchen und wird im Sporttauchen immer beliebter. Kein Gewicht auf dem Rücken – mehr Luft und Komfort!",
+                "url": "https://changdiving.com/de/product/sidemount/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P3D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P3D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 12990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/sidemount/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Solo Diver",
+                "description": "Werde ein selbstständiger Taucher mit dem SDI Solo Diver Kurs auf Koh Chang. Perfekt für Fotografen und erfahrene Taucher – starte heute!",
+                "url": "https://changdiving.com/de/product/solo-diver/",
+                "category": "Spezialitätenkurse",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P3D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P3D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Chang Diving Center",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "Koh Chang",
+                      "addressRegion": "Trat",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 12990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/de/product/solo-diver/"
+                }
+              }
+            }
+          ]
         }
-      }
+      ]
     </script>
 
     <!-- Local Fonts -->

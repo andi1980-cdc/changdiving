@@ -169,23 +169,227 @@
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
+      [
       {
         "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "คอร์สดำน้ำที่เกาะช้าง",
-        "description": "ร่วมเรียนดำน้ำกับช้างไดร์วิ่ง เซ็นเตอร์ – คอร์ส PADI, SDI และ TDI พร้อมผู้ฝึกสอนมืออาชีพในอุทยานแห่งชาติเกาะช้าง กลุ่มเรียนขนาดเล็ก ปลอดภัย เรียนสนุก",
-        "url": "https://changdiving.com/th/store/category/courses/beginner-courses/",
-        "inLanguage": "th",
-        "publisher": {
-          "@type": "Organization",
+          "@type": "LocalBusiness",
+          "@id": "https://changdiving.com/",
+          "inLanguage": ["th"],
           "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
+          "additionalType": "https://www.wikidata.org/wiki/Q1261847",
+          "description": "ช้างไดร์วิ่ง เซ็นเตอร์ เป็นโรงเรียนสอนดำน้ำและร้านขายอุปกรณ์ดำน้ำบนเกาะช้าง เปิดสอนหลักสูตร SDI/TDI/PADI ทริปดำน้ำแนวปะการัง ทริปดำน้ำซากเรือ และขายอุปกรณ์ดำน้ำที่ได้รับการรับรอง ตั้งแต่ปี 2005",
+          "image": "https://changdiving.com/img/logos/logo_cdc.webp",
           "url": "https://changdiving.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/courses/beginner_courses_header_big.webp"
+          "telephone": "+66 894-013-927",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "21/52 M 4, Klong Prao Beach",
+            "addressLocality": "เกาะช้าง",
+            "addressRegion": "ตราด",
+            "postalCode": "23170",
+            "addressCountry": "TH"
+          },
+          "openingHours": "Mo-Su 08:00-18:00",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.06321,
+            "longitude": 102.28982
+          },
+          "sameAs": [
+            "https://www.facebook.com/changdivingcenter/",
+            "https://www.instagram.com/chang_diving_center",
+            "https://www.youtube.com/@changdiving1842"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": 22
           }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "OfferCatalog",
+          "inLanguage": ["th"],
+          "name": "แคตตาล็อกหลักสูตรสำหรับผู้เริ่มต้นช้างไดร์วิ่ง เซ็นเตอร์",
+          "url": "https://changdiving.com/th/store/category/courses/beginner-courses/",
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Try Dive",
+                "description": "ลองดำน้ำที่เกาะช้างด้วย 2 ไดฟ์จากเรือ – ไม่ต้องมีใบรับรอง! เหมาะสำหรับผู้เริ่มต้น อุปกรณ์ครบชุดและผู้สอนรวมอยู่ด้วย",
+                "url": "https://changdiving.com/th/product/try-dive/",
+                "category": "หลักสูตรสำหรับผู้เริ่มต้น",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P1D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P1D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "เกาะช้าง",
+                      "addressRegion": "ตราด",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 4890,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/th/product/try-dive/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Open Water Diver",
+                "description": "รับใบรับรองที่เกาะช้างด้วยหลักสูตร Open Water 3 วันของเรา – อุปกรณ์ครบชุด 4 ไดฟ์ eLearning และผู้สอนมืออาชีพ",
+                "url": "https://changdiving.com/th/product/open-water-diver/",
+                "category": "หลักสูตรสำหรับผู้เริ่มต้น",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P3D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P3D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "เกาะช้าง",
+                      "addressRegion": "ตราด",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 14490,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/th/product/open-water-diver/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Open Water & Advanced Package",
+                "description": "เรียนดำน้ำและดำลึกขึ้น! รับใบรับรอง Open Water และ Advanced ใน 4 วัน พร้อมดำน้ำ 9 ไดฟ์ – ประหยัดมากขึ้นด้วยแพ็กเกจนี้!",
+                "url": "https://changdiving.com/th/product/open-advanced-package/",
+                "category": "หลักสูตรสำหรับผู้เริ่มต้น",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P4D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P4D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "เกาะช้าง",
+                      "addressRegion": "ตราด",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 22490,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/th/product/open-advanced-package/"
+                }
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Course",
+                "name": "Open Water to Divemaster Package",
+                "description": "การเดินทางดำน้ำที่สมบูรณ์: รับใบรับรองทุกระดับตั้งแต่ Open Water Diver ถึง Divemaster ในแพ็กเกจเดียวที่ครอบคลุม ประหยัดเงินและเวลา!",
+                "url": "https://changdiving.com/th/product/open-to-divemaster/",
+                "category": "หลักสูตรสำหรับผู้เริ่มต้น",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "Chang Diving Center",
+                  "url": "https://changdiving.com/"
+                },
+                "hasCourseInstance": {
+                  "@type": "CourseInstance",
+                  "courseMode": "Onsite",
+                  "duration": "P56D",
+                  "startDate": "2025-06-10",
+                  "courseWorkload": "P56D",
+                  "location": {
+                    "@type": "Place",
+                    "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "streetAddress": "21/52 M 4, Klong Prao Beach",
+                      "addressLocality": "เกาะช้าง",
+                      "addressRegion": "ตราด",
+                      "postalCode": "23170",
+                      "addressCountry": "TH"
+                    }
+                  }
+                },
+                "offers": {
+                  "@type": "Offer",
+                  "category": "Paid",
+                  "price": 79990,
+                  "priceCurrency": "THB",
+                  "availability": "https://schema.org/InStock",
+                  "url": "https://changdiving.com/th/product/open-to-divemaster/"
+                }
+              }
+            }
+          ]
         }
-      }
+      ]
     </script>
 
     <!-- Local Fonts -->

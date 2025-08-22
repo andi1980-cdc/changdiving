@@ -165,23 +165,219 @@
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Day Trips at Koh Chang – Chang Diving Center",
-        "description": "Explore our ocean day trips from Koh Chang – diving, snorkeling, and marine encounters for all experience levels. Safe and guided adventures daily.",
-        "url": "https://changdiving.com/en/store/category/day-trips/",
-        "inLanguage": "en",
-        "publisher": {
-          "@type": "Organization",
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://changdiving.com/",
+          "inLanguage": ["en"],
           "name": "Chang Diving Center",
+          "additionalType": "https://www.wikidata.org/wiki/Q1261847",
+          "description": "Chang Diving Center is a dive school and scuba shop on Koh Chang offering SDI/TDI/PADI dive courses, snorkeling day trips, guided wreck dives and certified scuba gear sales. Since 2005.",
+          "image": "https://changdiving.com/img/logos/logo_cdc.webp",
           "url": "https://changdiving.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/pages/day-trips-cover.webp"
+          "telephone": "+66 894-013-927",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "21/52 M 4, Klong Prao Beach",
+            "addressLocality": "Koh Chang",
+            "addressRegion": "Trat",
+            "postalCode": "23170",
+            "addressCountry": "TH"
+          },
+          "openingHours": "Mo-Su 08:00-18:00",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.06321,
+            "longitude": 102.28982
+          },
+          "sameAs": [
+            "https://www.facebook.com/changdivingcenter/",
+            "https://www.instagram.com/chang_diving_center",
+            "https://www.youtube.com/@changdiving1842"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": 22
           }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://changdiving.com/en/product/snorkeling/",
+          "name": "Snorkeling on Koh Chang – Explore the Underwater World with Our Dive Boat",
+          "description": "Join our full-day snorkeling trip aboard a real dive boat. Discover vibrant coral reefs around Koh Chang with professional guides, equipment, and lunch included.",
+          "image": [
+            "https://changdiving.com/img/products/snorkeling/snorkeling-header_small.webp"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Koh Chang, Thailand"
+          },
+          "serviceType": "Snorkeling Day Trip",
+          "offers": {
+            "@type": "Offer",
+            "price": 999,
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://changdiving.com/en/product/snorkeling/"
+          },
+          "inLanguage": "en",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://changdiving.com/en/product/fun-dives/",
+          "name": "Guided Fun Dives in Koh Chang – Explore Thailand's Underwater World",
+          "description": "Join our daily guided fun dives and discover the best dive sites around Koh Chang. Perfect for certified divers. Small groups, wrecks, reefs, tanks & weights included.",
+          "image": [
+            "https://changdiving.com/img/products/fun_dive/fun-dive-header_small.webp"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Koh Chang, Thailand"
+          },
+          "serviceType": "Guided Fun Dives",
+          "offers": {
+            "@type": "Offer",
+            "price": 3290,
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://changdiving.com/en/product/fun-dives/"
+          },
+          "inLanguage": "en",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://changdiving.com/en/product/scuba-review/",
+          "name": "Scuba Review Course in Koh Chang – Refresh Your Diving Skills",
+          "description": "Haven't dived in a while? Join our 1-day Scuba Review with 2 dives, theory refresh, and instructor. Full gear & lunch included.",
+          "image": [
+            "https://changdiving.com/img/products/scuba_review/scuba-review-header_small.webp"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Koh Chang, Thailand"
+          },
+          "serviceType": "Scuba Review Course",
+          "offers": {
+            "@type": "Offer",
+            "price": 3950,
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://changdiving.com/en/product/scuba-review/"
+          },
+          "inLanguage": "en",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://changdiving.com/en/product/try-dive/",
+          "name": "Try Dive in Koh Chang – Experience Scuba Diving for Beginners",
+          "description": "Try scuba diving on Koh Chang with 2 boat dives – no license needed! Ideal for beginners. Full equipment & instructor included.",
+          "image": [
+            "https://changdiving.com/img/products/try_dive/try-dive-header_small.webp"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Koh Chang, Thailand"
+          },
+          "serviceType": "Try Dive Experience",
+          "offers": {
+            "@type": "Offer",
+            "price": 4890,
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://changdiving.com/en/product/try-dive/"
+          },
+          "inLanguage": "en",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://changdiving.com/en/product/insurance/",
+          "name": "Diving Insurance Coverage for Koh Chang Adventures",
+          "description": "Comprehensive diving insurance coverage for your underwater adventures. Peace of mind for all diving activities.",
+          "image": [
+            "https://changdiving.com/img/products/insurance/insurance-header_small.webp"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Koh Chang, Thailand"
+          },
+          "serviceType": "Diving Insurance",
+          "offers": {
+            "@type": "Offer",
+            "price": 500,
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://changdiving.com/en/product/insurance/"
+          },
+          "inLanguage": "en",
+          "availableLanguage": ["en"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": "https://changdiving.com/en/product/rent-gopro/",
+          "name": "GoPro Rental Service for Underwater Photography in Koh Chang",
+          "description": "Capture your underwater memories with our GoPro rental service. High-quality cameras for diving and snorkeling adventures.",
+          "image": [
+            "https://changdiving.com/img/products/rent_gopro/rent-gopro-header_small.webp"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "areaServed": {
+            "@type": "Place",
+            "name": "Koh Chang, Thailand"
+          },
+          "serviceType": "GoPro Rental Service",
+          "offers": {
+            "@type": "Offer",
+            "price": 700,
+            "priceCurrency": "THB",
+            "availability": "https://schema.org/InStock",
+            "url": "https://changdiving.com/en/product/rent-gopro/"
+          },
+          "inLanguage": "en",
+          "availableLanguage": ["en"]
         }
-      }
+      ]
     </script>
 
     <!-- Google Fonts: Roboto -->
