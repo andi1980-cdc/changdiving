@@ -190,15 +190,8 @@ function scanDirectory(dir, urls = []) {
       const priority = getPriority(urlPath);
       const changefreq = getChangeFreq(urlPath);
       
-      // Get file modification time or use current date for important pages
-      let lastmod;
-      if (urlPath.match(/^\/(en|de|th)\/$/)) {
-        // For homepages, use current date to ensure freshness
-        lastmod = new Date().toISOString().split('T')[0];
-      } else {
-        // For other pages, use file modification time
-        lastmod = stat.mtime.toISOString().split('T')[0];
-      }
+      // Always use file modification time for accurate lastmod dates
+      const lastmod = stat.mtime.toISOString().split('T')[0];
       
       urls.push({
         url: fullUrl,
@@ -209,7 +202,7 @@ function scanDirectory(dir, urls = []) {
       
       // Debug output for homepages
       if (urlPath.match(/^\/(en|de|th)\/$/)) {
-        console.log(`  🏠 Homepage: ${fullUrl} - Lastmod: ${lastmod} (File: ${stat.mtime.toISOString().split('T')[0]})`);
+        console.log(`  🏠 Homepage: ${fullUrl} - Lastmod: ${lastmod}`);
       }
     }
   }
