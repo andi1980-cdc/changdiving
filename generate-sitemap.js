@@ -31,11 +31,12 @@ const config = {
 const priorityMap = {
   'index.html': 1.0,           // Homepage
   'about': 0.8,                // About pages
-  'product': 0.9,              // Course/Product pages
+  'courses': 0.9,              // Course pages
+  'day-trips': 0.8,            // Day trip pages
+  'equipment': 0.7,            // Equipment pages
   'dive-sites': 0.7,           // Dive sites
   'posts': 0.6,                // Blog posts
   'faqs': 0.5,                 // FAQ pages
-  'store': 0.4,                // Store categories
   'contact': 0.7,              // Contact
   'prices': 0.8,               // Pricing
   'default': 0.5               // Everything else
@@ -45,11 +46,12 @@ const priorityMap = {
 const changefreqMap = {
   'index.html': 'weekly',
   'about': 'monthly',
-  'product': 'monthly',
+  'courses': 'monthly',
+  'day-trips': 'monthly',
+  'equipment': 'monthly',
   'dive-sites': 'monthly',
   'posts': 'weekly',
   'faqs': 'monthly',
-  'store': 'weekly',
   'contact': 'monthly',
   'prices': 'weekly',
   'default': 'monthly'

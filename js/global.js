@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const breadcrumb = document.getElementById("breadcrumb");
   if (breadcrumb) {
     const path = window.location.pathname.split("/").filter(Boolean);
-    const lang = path[0]; // z. B. "en", "de", "th"
+    const lang = path[0]; // z. B. "en", "de", "th"
     const baseHref = "/" + lang + "/";
 
     // Sprachabhängiger Text für "Home"
@@ -15,20 +15,107 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     const homeLabel = homeLabels[lang] || "Home";
 
+    // Mapping für Breadcrumb-Labels und URLs
+    const segmentMapping = {
+      // Store/Category Mappings - diese werden übersprungen
+      "store": { label: "", skip: true },
+      "category": { label: "", skip: true },
+      "product": { label: "", skip: true },
+      
+      // Course Mappings
+      "courses": { label: "Courses", url: "/" + lang + "/courses/" },
+      "open-water-diver": { label: "Open Water Diver", url: "/" + lang + "/courses/open-water-diver/" },
+      "advanced": { label: "Advanced", url: "/" + lang + "/courses/advanced/" },
+      "rescue-diver": { label: "Rescue Diver", url: "/" + lang + "/courses/rescue-diver/" },
+      "divemaster": { label: "Divemaster", url: "/" + lang + "/courses/divemaster/" },
+      "sdi-idc": { label: "IDC", url: "/" + lang + "/courses/sdi-idc/" },
+      "sdi-ie": { label: "IE", url: "/" + lang + "/courses/sdi-ie/" },
+      "open-advanced-package": { label: "OW & Advanced Package", url: "/" + lang + "/courses/open-advanced-package/" },
+      "open-to-divemaster": { label: "Open to Divemaster", url: "/" + lang + "/courses/open-to-divemaster/" },
+      "tech-package": { label: "Tech Package", url: "/" + lang + "/courses/tech-package/" },
+      "deep-wreck-nitrox": { label: "Deep Wreck Nitrox", url: "/" + lang + "/courses/deep-wreck-nitrox/" },
+      "nitrox-diver": { label: "Nitrox Diver", url: "/" + lang + "/courses/nitrox-diver/" },
+      "advanced-nitrox": { label: "Advanced Nitrox", url: "/" + lang + "/courses/advanced-nitrox/" },
+      "deco-procedures": { label: "Deco Procedures", url: "/" + lang + "/courses/deco-procedures/" },
+      "first-aid": { label: "First Aid", url: "/" + lang + "/courses/first-aid/" },
+      "efr-instructor": { label: "EFR Instructor", url: "/" + lang + "/courses/efr-instructor/" },
+      "instructor-crossover": { label: "Instructor Crossover", url: "/" + lang + "/courses/instructor-crossover/" },
+      "solo-diver": { label: "Solo Diver", url: "/" + lang + "/courses/solo-diver/" },
+      "search-recovery": { label: "Search & Recovery", url: "/" + lang + "/courses/search-recovery/" },
+      "intro-to-tech": { label: "Intro to Tech", url: "/" + lang + "/courses/intro-to-tech/" },
+      "night": { label: "Night Diver", url: "/" + lang + "/courses/night/" },
+      "sidemount": { label: "Sidemount", url: "/" + lang + "/courses/sidemount/" },
+      "master-scuba-diver": { label: "Master Scuba Diver", url: "/" + lang + "/courses/master-scuba-diver/" },
+      "wreck-diver": { label: "Wreck Diver", url: "/" + lang + "/courses/wreck-diver/" },
+      "advanced-wreck": { label: "Advanced Wreck", url: "/" + lang + "/courses/advanced-wreck/" },
+      "deep-diver": { label: "Deep Diver", url: "/" + lang + "/courses/deep-diver/" },
+      "navigation": { label: "Navigation", url: "/" + lang + "/courses/navigation/" },
+      "technical-diving-courses": { label: "Technical Diving Courses", url: "/" + lang + "/courses/tech-package/" },
+      "technical": { label: "Technical Diving", url: "/" + lang + "/courses/tech-package/" },
+      "diving-courses": { label: "Diving Courses", url: "/" + lang + "/courses/" },
+      "scuba-courses": { label: "Scuba Courses", url: "/" + lang + "/courses/" },
+      
+      // Day-Trips Mappings
+      "day-trips": { label: "Day Trips", url: "/" + lang + "/day-trips/" },
+      "fun-dives": { label: "Fun Dives", url: "/" + lang + "/day-trips/fun-dives/" },
+      "try-dive": { label: "Try Dive", url: "/" + lang + "/day-trips/try-dive/" },
+      "scuba-review": { label: "Scuba Review", url: "/" + lang + "/day-trips/scuba-review/" },
+      "snorkeling": { label: "Snorkeling", url: "/" + lang + "/day-trips/snorkeling/" },
+      "insurance": { label: "Insurance", url: "/" + lang + "/day-trips/insurance/" },
+      "rent-gopro": { label: "GoPro Rental", url: "/" + lang + "/day-trips/rent-gopro/" },
+      
+      // Equipment Mappings
+      "equipment": { label: "Equipment", url: "/" + lang + "/equipment/" },
+      "used-scuba-gear": { label: "Used Scuba Gear", url: "/" + lang + "/equipment/used-scuba-gear/" },
+      
+      // Other Mappings
+      "posts": { label: "Posts", url: "/" + lang + "/posts/" },
+      "dive-sites": { label: "Dive Sites", url: "/" + lang + "/dive-sites/" },
+      "faqs": { label: "FAQs", url: "/" + lang + "/faqs/" },
+      "about": { label: "About", url: "/" + lang + "/about/" },
+      "contact": { label: "Contact", url: "/" + lang + "/contact/" },
+      "prices": { label: "Prices", url: "/" + lang + "/prices/" },
+      "privacy-policy": { label: "Privacy Policy", url: "/" + lang + "/privacy-policy/" },
+      "refund-policy": { label: "Refund Policy", url: "/" + lang + "/refund-policy/" },
+      "terms-and-conditions": { label: "Terms & Conditions", url: "/" + lang + "/terms-and-conditions/" },
+      "videos": { label: "Videos", url: "/" + lang + "/videos/" },
+      "weather": { label: "Weather", url: "/" + lang + "/weather/" },
+    };
+
     let html = `<a href="${baseHref}">🏠 ${homeLabel}</a>`;
     let cumulative = "";
 
-    const nonClickable = ["store", "category", "product"];
+    // Prüfe ob alte URL-Struktur verwendet wird und leite um
+    const hasOldStructure = path.includes("store") || path.includes("category") || path.includes("product");
+    if (hasOldStructure) {
+      // Erstelle neue URL basierend auf dem letzten Segment
+      const lastSegment = path[path.length - 1];
+      const mapping = segmentMapping[lastSegment];
+      if (mapping && !mapping.skip) {
+        // Umleitung zur neuen URL
+        window.location.href = mapping.url;
+        return;
+      }
+    }
 
     path.forEach((segment, index) => {
+      if (index === 0) return; // Sprache überspringen (z. B. "en")
+
       cumulative += "/" + segment;
-      const label = decodeURIComponent(segment).replace(/-/g, " ");
-
-      if (index === 0) return; // Sprache überspringen (z. B. "en")
-
-      if (nonClickable.includes(segment.toLowerCase())) {
-        html += ` › <span class="breadcrumb-disabled">${label}</span>`;
+      
+      // Prüfe Mapping
+      const mapping = segmentMapping[segment];
+      if (mapping) {
+        if (mapping.skip) {
+          // Segment überspringen (z.B. store, category, product)
+          return;
+        } else {
+          // Verwende Mapping für Label und URL
+          html += ` › <a href="${mapping.url}">${mapping.label}</a>`;
+        }
       } else {
+        // Fallback: Verwende Segment als Label
+        const label = decodeURIComponent(segment).replace(/-/g, " ");
         html += ` › <a href="${cumulative}/">${label}</a>`;
       }
     });
@@ -142,32 +229,32 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="three columns">
           <a href="/en/about/">About us</a>
           <a href="/en/posts/diving-how-to-guides-koh-chang/ ">How to guides</a>
-          <a href="/en/getting-to-koh-chang/">Getting to Koh Chang</a>
+          <a href="/en/faqs/faq-getting-here-accommodation/">Getting to Koh Chang</a>
           <a href="/en/dive-sites/">Dive sites</a>
           <a href="/en/faqs/">FAQs</a>
           <a href="/en/videos/">Videos</a>
           <a href="/en/contact/">Contact us</a>
         </div>
         <div class="three columns">
-          <a href="/en/store/category/courses/">Courses</a>
-          <a href="/en/product/open-water-diver/">Open Water Diver</a>
-          <a href="/en/product/advanced/">Advanced Diver</a>
-          <a href="/en/product/rescue-diver/">Rescue Diver</a>
-          <a href="/en/product/divemaster/">Divemaster</a>
-          <a href="/en/product/sdi-idc/">IDC</a>
+          <a href="/en/courses/">Courses</a>
+          <a href="/en/courses/open-water-diver/">Open Water Diver</a>
+          <a href="/en/courses/advanced/">Advanced Diver</a>
+          <a href="/en/courses/rescue-diver/">Rescue Diver</a>
+          <a href="/en/courses/divemaster/">Divemaster</a>
+          <a href="/en/courses/sdi-idc/">IDC</a>
         </div>
         <div class="three columns">
-          <a href="/en/store/category/day-trips/">Day Trips</a>
-          <a href="/en/product/fun-dives/">Fun Dives</a>
-          <a href="/en/product/try-dive/">Try Diving</a>
-          <a href="/en/product/scuba-review/">Scuba Review</a>
-          <a href="/en/product/snorkeling/">Snorkeling</a>
+          <a href="/en/day-trips/">Day Trips</a>
+          <a href="/en/day-trips/fun-dives/">Fun Dives</a>
+          <a href="/en/day-trips/try-dive/">Try Diving</a>
+          <a href="/en/day-trips/scuba-review/">Scuba Review</a>
+          <a href="/en/day-trips/snorkeling/">Snorkeling</a>
         </div>
         <div class="three columns">
-          <a href="/en/product/open-advanced-package/">OW & Advanced</a>
-          <a href="/en/product/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
-          <a href="/en/product/open-to-divemaster/">Open to Divemaster</a>
-          <a href="/en/product/tech-package/">Technical Diving</a>
+          <a href="/en/courses/open-advanced-package/">OW & Advanced</a>
+          <a href="/en/courses/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
+          <a href="/en/courses/open-to-divemaster/">Open to Divemaster</a>
+          <a href="/en/courses/tech-package/">Technical Diving</a>
         </div>
       </div>
     </div>
@@ -201,32 +288,32 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="three columns">
           <a href="/de/about/">About us</a>
           <a href="/de/posts/diving-how-to-guides-koh-chang/ ">How to guides</a>
-          <a href="/de/getting-to-koh-chang/">Getting to Koh Chang</a>
+          <a href="/de/faqs/faq-getting-here-accommodation/">Getting to Koh Chang</a>
           <a href="/de/dive-sites/">Dive sites</a>
           <a href="/de/faqs/">FAQs</a>
           <a href="/de/videos/">Videos</a>
           <a href="/de/contact/">Contact us</a>
         </div>
         <div class="three columns">
-          <a href="/de/store/category/Courses/">Courses</a>
-          <a href="/de/product/open-water-diver/">Open Water Diver</a>
-          <a href="/de/product/advanced/">Advanced Diver</a>
-          <a href="/de/product/rescue-diver/">Rescue Diver</a>
-          <a href="/de/product/divemaster/">Divemaster</a>
-          <a href="/de/product/sdi-idc/">IDC</a>
+          <a href="/de/courses/">Courses</a>
+          <a href="/de/courses/open-water-diver/">Open Water Diver</a>
+          <a href="/de/courses/advanced/">Advanced Diver</a>
+          <a href="/de/courses/rescue-diver/">Rescue Diver</a>
+          <a href="/de/courses/divemaster/">Divemaster</a>
+          <a href="/de/courses/sdi-idc/">IDC</a>
         </div>
         <div class="three columns">
-          <a href="/de/store/category/Day-trips/">Day Trips</a>
-          <a href="/de/product/fun-dives/">Fun Dives</a>
-          <a href="/de/product/try-dive/">Try Diving</a>
-          <a href="/de/product/scuba-review/">Scuba Review</a>
-          <a href="/de/product/snorkeling/">Snorkeling</a>
+          <a href="/de/day-trips/">Day Trips</a>
+          <a href="/de/day-trips/fun-dives/">Fun Dives</a>
+          <a href="/de/day-trips/try-dive/">Try Diving</a>
+          <a href="/de/day-trips/scuba-review/">Scuba Review</a>
+          <a href="/de/day-trips/snorkeling/">Snorkeling</a>
         </div>
         <div class="three columns">
-          <a href="/de/product/open-advanced-package/">OW & Advanced</a>
-          <a href="/de/product/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
-          <a href="/de/product/open-to-divemaster/">Open to Divemaster</a>
-          <a href="/de/product/tech-package/">Technical Diving</a>
+          <a href="/de/courses/open-advanced-package/">OW & Advanced</a>
+          <a href="/de/courses/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
+          <a href="/de/courses/open-to-divemaster/">Open to Divemaster</a>
+          <a href="/de/courses/tech-package/">Technical Diving</a>
         </div>
       </div>
     </div>
@@ -260,32 +347,32 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="three columns">
           <a href="/th/about/">About us</a>
           <a href="/th/posts/diving-how-to-guides-koh-chang/ ">How to guides</a>
-          <a href="/th/getting-to-koh-chang/">Getting to Koh Chang</a>
+          <a href="/th/faqs/faq-getting-here-accommodation/">Getting to Koh Chang</a>
           <a href="/th/dive-sites/">Dive sites</a>
           <a href="/th/faqs/">FAQs</a>
           <a href="/th/videos/">Videos</a>
           <a href="/th/contact/">Contact us</a>
         </div>
         <div class="three columns">
-          <a href="/th/store/category/courses/">Courses</a>
-          <a href="/th/product/open-water-diver/">Open Water Diver</a>
-          <a href="/th/product/advanced/">Advanced Diver</a>
-          <a href="/th/product/rescue-diver/">Rescue Diver</a>
-          <a href="/th/product/divemaster/">Divemaster</a>
-          <a href="/th/product/sdi-idc/">IDC</a>
+          <a href="/th/courses/">Courses</a>
+          <a href="/th/courses/open-water-diver/">Open Water Diver</a>
+          <a href="/th/courses/advanced/">Advanced Diver</a>
+          <a href="/th/courses/rescue-diver/">Rescue Diver</a>
+          <a href="/th/courses/divemaster/">Divemaster</a>
+          <a href="/th/courses/sdi-idc/">IDC</a>
         </div>
         <div class="three columns">
-          <a href="/th/store/category/day-trips/">Day Trips</a>
-          <a href="/th/product/fun-dives/">Fun Dives</a>
-          <a href="/th/product/try-dive/">Try Diving</a>
-          <a href="/th/product/scuba-review/">Scuba Review</a>
-          <a href="/th/product/snorkeling/">Snorkeling</a>
+          <a href="/th/day-trips/">Day Trips</a>
+          <a href="/th/day-trips/fun-dives/">Fun Dives</a>
+          <a href="/th/day-trips/try-dive/">Try Diving</a>
+          <a href="/th/day-trips/scuba-review/">Scuba Review</a>
+          <a href="/th/day-trips/snorkeling/">Snorkeling</a>
         </div>
         <div class="three columns">
-          <a href="/th/product/open-advanced-package/">OW & Advanced</a>
-          <a href="/th/product/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
-          <a href="/th/product/open-to-divemaster/">Open to Divemaster</a>
-          <a href="/th/product/tech-package/">Technical Diving</a>
+          <a href="/th/courses/open-advanced-package/">OW & Advanced</a>
+          <a href="/th/courses/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
+          <a href="/th/courses/open-to-divemaster/">Open to Divemaster</a>
+          <a href="/th/courses/tech-package/">Technical Diving</a>
         </div>
       </div>
     </div>
