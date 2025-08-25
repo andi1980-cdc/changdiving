@@ -241,7 +241,7 @@
 
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
-    
+
     <link rel="preload" href="/img/posts/how-to-do-a-scuba-review_small.webp" />
     <link
       rel="preload"
@@ -257,31 +257,20 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <link
-      rel="stylesheet"
-      href="/fonts/fonts.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/posts/how-to-do-a-scuba-review_small.webp"
-      imagesrcset="/img/posts/how-to-do-a-scuba-review_small.webp 600w, /img/posts/how-to-do-a-scuba-review_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-
-    </head>
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <link rel="stylesheet" href="/fonts/fonts.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/posts/how-to-do-a-scuba-review_small.webp"
+        imagesrcset="/img/posts/how-to-do-a-scuba-review_small.webp 600w, /img/posts/how-to-do-a-scuba-review_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -335,7 +324,6 @@
             alt="how to scuba review blog header – scuba tips, marine life, how-to guides and diving knowledge for Koh Chang"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -455,7 +443,10 @@
             >Tauchplatzkarte Koh Chang</a
           >
           oder unseren
-          <a href="/de/posts/marine-life-koh-chang/" target="_blank">Meereslebens-Guide</a> an.
+          <a href="/de/posts/marine-life-koh-chang/" target="_blank"
+            >Meereslebens-Guide</a
+          >
+          an.
         </p>
         <hr />
 
@@ -588,17 +579,8 @@
       </div>
     </main>
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-      async
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer async></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"

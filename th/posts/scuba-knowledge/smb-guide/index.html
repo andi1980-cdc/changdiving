@@ -240,7 +240,7 @@
 
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
-    
+
     <link rel="preload" href="/img/posts/surface-marker-buoy_small.webp" />
     <link
       rel="preload"
@@ -256,31 +256,20 @@
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <link
-      rel="stylesheet"
-      href="/fonts/fonts.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/posts/surface-marker-buoy_small.webp"
-      imagesrcset="/img/posts/surface-marker-buoy_small.webp 600w, /img/posts/surface-marker-buoy_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-
-    </head>
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <link rel="stylesheet" href="/fonts/fonts.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/posts/surface-marker-buoy_small.webp"
+        imagesrcset="/img/posts/surface-marker-buoy_small.webp 600w, /img/posts/surface-marker-buoy_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+  </head>
   <body>
     <header>
       <!-- ส่วนเฮโร่ -->
@@ -325,7 +314,6 @@
             alt="ทุ่นทำเครื่องหมายผิวน้ำ (SMB) ถูกปล่อยขึ้นโดยนักดำน้ำเพื่อสัญญาณการขึ้นสู่ผิวน้ำ"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -498,7 +486,9 @@
         </p>
 
         <p>
-          <a href="/th/posts/scuba-knowledge/safety-check/">เรียนรู้เพิ่มเติมเรื่องความปลอดภัย</a>
+          <a href="/th/posts/scuba-knowledge/safety-check/"
+            >เรียนรู้เพิ่มเติมเรื่องความปลอดภัย</a
+          >
           หรือ
           <a href="/th/store/category/courses/">จองคอร์สดำน้ำ</a>
           แล้วมาสำรวจโลกใต้น้ำที่เกาะช้าง!
@@ -506,17 +496,8 @@
       </div>
     </main>
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-      async
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer async></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
