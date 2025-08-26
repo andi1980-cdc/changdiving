@@ -26,12 +26,18 @@ jobs:
       - name: Generate sitemap
         run: node generate-sitemap.js
         
-      - name: Commit sitemap
+      - name: Generate images sitemap
+        run: node generate-images-sitemap.js
+        
+      - name: Generate sitemap index
+        run: node generate-sitemap-index.js
+        
+      - name: Commit sitemaps
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
-          git add sitemap.xml
-          git diff --quiet && git diff --staged --quiet || git commit -m "Update sitemap"
+          git add sitemap.xml sitemap-images.xml sitemap-index.xml
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update sitemaps"
           
       - name: Push changes
         run: git push
