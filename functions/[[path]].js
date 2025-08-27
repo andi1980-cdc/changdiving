@@ -618,6 +618,7 @@ const FORCE_GONE_PREFIX = [
      "/th/จุดดำน้ำ",
      "/th/คำถามที่พบบ่อย",
      "/th/หมวดหมู่",
+     "/th/แท็ก",
      "/th/product",
      "/th/category",
 
