@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VYNMSTFN5M');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suche - Chang Diving Center</title>
+    <meta name="description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Informationen zum Tauchen auf Koh Chang, Thailand." />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Suche - Chang Diving Center" />
+    <meta property="og:description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Informationen zum Tauchen auf Koh Chang, Thailand." />
+    <meta property="og:url" content="https://changdiving.com/de/search/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Suche - Chang Diving Center" />
+    <meta name="twitter:description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Informationen zum Tauchen auf Koh Chang, Thailand." />
+    <meta name="twitter:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://changdiving.com/en/search/" />
+    <link rel="alternate" hreflang="de" href="https://changdiving.com/de/search/" />
+    <link rel="alternate" hreflang="th" href="https://changdiving.com/th/search/" />
+    <link rel="canonical" href="https://changdiving.com/de/search/" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/roboto-v48-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-v48-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="stylesheet" href="/style.min.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/icons/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/icons/favicon/apple-touch-icon.png" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://changdiving.com/",
+        "name": "Chang Diving Center",
+        "description": "Professionelle Tauchkurse und Tauchausflüge auf Koh Chang, Thailand",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://changdiving.com/de/search/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+    
+    <div class="container">
+      <header>
+        <h1>Chang Diving Center durchsuchen</h1>
+        <p>Finden Sie Tauchkurse, Tauchplätze und Informationen zum Tauchen</p>
+      </header>
+      
+      <!-- Search Form -->
+      <div class="search-container">
+        <form id="searchForm" class="search-form">
+          <input 
+            type="text" 
+            id="searchInput" 
+            name="q" 
+            placeholder="Suchen Sie nach Kursen, Tauchplätzen oder Themen..."
+            value=""
+            required
+          />
+          <button type="submit">Suchen</button>
+        </form>
+      </div>
+      
+      <!-- Search Results -->
+      <div id="searchResults" class="search-results">
+        <div class="search-info">
+          <p>Geben Sie oben einen Suchbegriff ein, um relevante Inhalte zu finden.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/js/global.js"></script>
+    <script>
+      // Search functionality
+      document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+          performSearch(query);
+        }
+      });
+      
+      // Check for search query in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('q');
+      if (searchQuery) {
+        document.getElementById('searchInput').value = searchQuery;
+        performSearch(searchQuery);
+      }
+      
+      function performSearch(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        resultsContainer.innerHTML = '<div class="loading">Suche läuft...</div>';
+        
+        // Simple search implementation
+        setTimeout(() => {
+          displaySearchResults(query);
+        }, 500);
+      }
+      
+      function displaySearchResults(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        
+        // Mock results for German
+        const mockResults = [
+          {
+            title: 'Open Water Diver Kurs',
+            url: '/de/courses/open-water-diver/',
+            description: 'Lernen Sie das Tauchen mit unserem PADI Open Water Diver Kurs auf Koh Chang.'
+          },
+          {
+            title: 'Advanced Open Water Diver',
+            url: '/de/courses/advanced/',
+            description: 'Bringen Sie Ihr Tauchen auf das nächste Level mit unserem Advanced Open Water Kurs.'
+          },
+          {
+            title: 'HTMS Chang Wrack',
+            url: '/de/dive-sites/htms-chang-wreck/',
+            description: 'Erkunden Sie das berühmte HTMS Chang Wrack, einer der besten Tauchplätze auf Koh Chang.'
+          }
+        ];
+        
+        const filteredResults = mockResults.filter(result => 
+          result.title.toLowerCase().includes(query.toLowerCase()) ||
+          result.description.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (filteredResults.length > 0) {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h2>Suchergebnisse für "${query}"</h2>
+              <p>${filteredResults.length} Ergebnis(se) gefunden</p>
+            </div>
+            <div class="results-list">
+              ${filteredResults.map(result => `
+                <div class="result-item">
+                  <h3><a href="${result.url}">${result.title}</a></h3>
+                  <p>${result.description}</p>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h2>Keine Ergebnisse für "${query}" gefunden</h2>
+              <p>Versuchen Sie andere Suchbegriffe wie "Tauchen", "Kurse" oder "Tauchplätze".</p>
+            </div>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>

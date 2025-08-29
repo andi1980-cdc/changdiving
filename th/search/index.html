@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VYNMSTFN5M');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ค้นหา - Chang Diving Center</title>
+    <meta name="description" content="ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ค้นหา - Chang Diving Center" />
+    <meta property="og:description" content="ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    <meta property="og:url" content="https://changdiving.com/th/search/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ค้นหา - Chang Diving Center" />
+    <meta name="twitter:description" content="ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    <meta name="twitter:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://changdiving.com/en/search/" />
+    <link rel="alternate" hreflang="de" href="https://changdiving.com/de/search/" />
+    <link rel="alternate" hreflang="th" href="https://changdiving.com/th/search/" />
+    <link rel="canonical" href="https://changdiving.com/th/search/" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/roboto-v48-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-v48-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="stylesheet" href="/style.min.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/icons/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/icons/favicon/apple-touch-icon.png" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://changdiving.com/",
+        "name": "Chang Diving Center",
+        "description": "คอร์สดำน้ำมืออาชีพและการเดินทางดำน้ำบนเกาะช้าง ประเทศไทย",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://changdiving.com/th/search/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+    
+    <div class="container">
+      <header>
+        <h1>ค้นหา Chang Diving Center</h1>
+        <p>ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำ</p>
+      </header>
+      
+      <!-- Search Form -->
+      <div class="search-container">
+        <form id="searchForm" class="search-form">
+          <input 
+            type="text" 
+            id="searchInput" 
+            name="q" 
+            placeholder="ค้นหาคอร์ส สถานที่ดำน้ำ หรือหัวข้อ..."
+            value=""
+            required
+          />
+          <button type="submit">ค้นหา</button>
+        </form>
+      </div>
+      
+      <!-- Search Results -->
+      <div id="searchResults" class="search-results">
+        <div class="search-info">
+          <p>ใส่คำค้นหาด้านบนเพื่อหาข้อมูลที่เกี่ยวข้อง</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/js/global.js"></script>
+    <script>
+      // Search functionality
+      document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+          performSearch(query);
+        }
+      });
+      
+      // Check for search query in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('q');
+      if (searchQuery) {
+        document.getElementById('searchInput').value = searchQuery;
+        performSearch(searchQuery);
+      }
+      
+      function performSearch(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        resultsContainer.innerHTML = '<div class="loading">กำลังค้นหา...</div>';
+        
+        // Simple search implementation
+        setTimeout(() => {
+          displaySearchResults(query);
+        }, 500);
+      }
+      
+      function displaySearchResults(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        
+        // Mock results for Thai
+        const mockResults = [
+          {
+            title: 'คอร์ส Open Water Diver',
+            url: '/th/courses/open-water-diver/',
+            description: 'เรียนดำน้ำกับคอร์ส PADI Open Water Diver บนเกาะช้าง'
+          },
+          {
+            title: 'Advanced Open Water Diver',
+            url: '/th/courses/advanced/',
+            description: 'ยกระดับการดำน้ำของคุณด้วยคอร์ส Advanced Open Water'
+          },
+          {
+            title: 'เรือจม HTMS Chang',
+            url: '/th/dive-sites/htms-chang-wreck/',
+            description: 'สำรวจเรือจม HTMS Chang ที่มีชื่อเสียง หนึ่งในสถานที่ดำน้ำที่ดีที่สุดบนเกาะช้าง'
+          }
+        ];
+        
+        const filteredResults = mockResults.filter(result => 
+          result.title.toLowerCase().includes(query.toLowerCase()) ||
+          result.description.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (filteredResults.length > 0) {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h2>ผลการค้นหาสำหรับ "${query}"</h2>
+              <p>พบ ${filteredResults.length} ผลลัพธ์</p>
+            </div>
+            <div class="results-list">
+              ${filteredResults.map(result => `
+                <div class="result-item">
+                  <h3><a href="${result.url}">${result.title}</a></h3>
+                  <p>${result.description}</p>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h2>ไม่พบผลลัพธ์สำหรับ "${query}"</h2>
+              <p>ลองค้นหาด้วยคำอื่น เช่น "ดำน้ำ", "คอร์ส" หรือ "สถานที่ดำน้ำ"</p>
+            </div>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -19,6 +19,24 @@
     <priority>1</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/en/search/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/de/search/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/th/search/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/de/courses/</loc>
     <lastmod>2025-08-29</lastmod>
     <changefreq>monthly</changefreq>

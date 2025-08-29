@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VYNMSTFN5M');
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - Chang Diving Center</title>
+    <meta name="description" content="Search through our diving courses, dive sites, and scuba diving information on Koh Chang, Thailand." />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Search - Chang Diving Center" />
+    <meta property="og:description" content="Search through our diving courses, dive sites, and scuba diving information on Koh Chang, Thailand." />
+    <meta property="og:url" content="https://changdiving.com/en/search/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Search - Chang Diving Center" />
+    <meta name="twitter:description" content="Search through our diving courses, dive sites, and scuba diving information on Koh Chang, Thailand." />
+    <meta name="twitter:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href="https://changdiving.com/en/search/" />
+    <link rel="alternate" hreflang="de" href="https://changdiving.com/de/search/" />
+    <link rel="alternate" hreflang="th" href="https://changdiving.com/th/search/" />
+    <link rel="canonical" href="https://changdiving.com/en/search/" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/fonts/roboto-v48-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/roboto-v48-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="stylesheet" href="/style.min.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/icons/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" href="/img/icons/favicon/apple-touch-icon.png" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://changdiving.com/",
+        "name": "Chang Diving Center",
+        "description": "Professional scuba diving courses and dive trips on Koh Chang, Thailand",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://changdiving.com/en/search/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+    
+    <div class="container">
+      <header>
+        <h1>Search Chang Diving Center</h1>
+        <p>Find diving courses, dive sites, and scuba diving information</p>
+      </header>
+      
+      <!-- Search Form -->
+      <div class="search-container">
+        <form id="searchForm" class="search-form">
+          <input 
+            type="text" 
+            id="searchInput" 
+            name="q" 
+            placeholder="Search for courses, dive sites, or topics..."
+            value=""
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      
+      <!-- Search Results -->
+      <div id="searchResults" class="search-results">
+        <div class="search-info">
+          <p>Enter a search term above to find relevant content.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/js/global.js"></script>
+    <script>
+      // Search functionality
+      document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.getElementById('searchInput').value.trim();
+        if (query) {
+          performSearch(query);
+        }
+      });
+      
+      // Check for search query in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get('q');
+      if (searchQuery) {
+        document.getElementById('searchInput').value = searchQuery;
+        performSearch(searchQuery);
+      }
+      
+      function performSearch(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        resultsContainer.innerHTML = '<div class="loading">Searching...</div>';
+        
+        // Simple search implementation
+        // In a real implementation, you would search through your content
+        setTimeout(() => {
+          displaySearchResults(query);
+        }, 500);
+      }
+      
+      function displaySearchResults(query) {
+        const resultsContainer = document.getElementById('searchResults');
+        
+        // This is a simplified search - in reality you'd search your actual content
+        const mockResults = [
+          {
+            title: 'Open Water Diver Course',
+            url: '/en/courses/open-water-diver/',
+            description: 'Learn to scuba dive with our PADI Open Water Diver course on Koh Chang.'
+          },
+          {
+            title: 'Advanced Open Water Diver',
+            url: '/en/courses/advanced/',
+            description: 'Take your diving to the next level with our Advanced Open Water course.'
+          },
+          {
+            title: 'HTMS Chang Wreck',
+            url: '/en/dive-sites/htms-chang-wreck/',
+            description: 'Explore the famous HTMS Chang wreck, one of the best dive sites on Koh Chang.'
+          }
+        ];
+        
+        const filteredResults = mockResults.filter(result => 
+          result.title.toLowerCase().includes(query.toLowerCase()) ||
+          result.description.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (filteredResults.length > 0) {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h2>Search Results for "${query}"</h2>
+              <p>Found ${filteredResults.length} result(s)</p>
+            </div>
+            <div class="results-list">
+              ${filteredResults.map(result => `
+                <div class="result-item">
+                  <h3><a href="${result.url}">${result.title}</a></h3>
+                  <p>${result.description}</p>
+                </div>
+              `).join('')}
+            </div>
+          `;
+        } else {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h2>No results found for "${query}"</h2>
+              <p>Try searching for different terms like "diving", "courses", or "dive sites".</p>
+            </div>
+          `;
+        }
+      }
+    </script>
+  </body>
+</html>
