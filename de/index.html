@@ -855,12 +855,15 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://changdiving.com/",
+        "url": "https://changdiving.com/de/",
         "name": "Chang Diving Center",
-        "description": "Professionelle Tauchkurse und Tauchausflüge auf Koh Chang, Thailand",
+        "description": "Professionelle Tauchkurse und Tauchausflüge auf Koh Chang, Thailand. Suche nach Tauchkursen, Tauchplätzen und Tauchinformationen.",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/de/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/de/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }

@@ -853,12 +853,15 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://changdiving.com/",
+        "url": "https://changdiving.com/th/",
         "name": "Chang Diving Center",
-        "description": "คอร์สดำน้ำมืออาชีพและการเดินทางดำน้ำบนเกาะช้าง ประเทศไทย",
+        "description": "คอร์สดำน้ำมืออาชีพและการเดินทางดำน้ำบนเกาะช้าง ประเทศไทย ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำ",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/th/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/th/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }

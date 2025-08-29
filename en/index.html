@@ -851,12 +851,15 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://changdiving.com/",
+        "url": "https://changdiving.com/en/",
         "name": "Chang Diving Center",
-        "description": "Professional scuba diving courses and dive trips on Koh Chang, Thailand",
+        "description": "Professional scuba diving courses and dive trips on Koh Chang, Thailand. Search for diving courses, dive sites, and scuba diving information.",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/en/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/en/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }
