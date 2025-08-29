@@ -842,6 +842,33 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../js/global.js" defer></script>
+    <script src="../../../js/global.js" defer></script
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+            {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://changdiving.com/en/"
+            },
+            {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Courses",
+                  "item": "https://changdiving.com/en/courses/"
+            },
+            {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Advanced",
+                  "item": "https://changdiving.com/en/courses/advanced/"
+            }
+      ]
+}
+    </script>>
   </body>
 </html>
