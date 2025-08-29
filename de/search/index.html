@@ -184,657 +184,163 @@
     <!-- Scripts -->
     <script src="/js/global.js"></script>
     <script>
-      // Comprehensive search data in German
-      const searchData = [
-        // Courses
-        {
-          title: 'Open Water Diver Kurs',
-          url: '/de/courses/open-water-diver/',
-          description: 'Lernen Sie das Tauchen mit unserem PADI Open Water Diver Kurs auf Koh Chang. Ihr erster Schritt in die Unterwasserwelt.',
-          category: 'Kurs',
-          keywords: ['open water', 'diver', 'kurs', 'padi', 'anfänger', 'lernen', 'tauchen', 'scuba']
-        },
-        {
-          title: 'Advanced Open Water Diver',
-          url: '/de/courses/advanced/',
-          description: 'Bringen Sie Ihr Tauchen auf das nächste Level mit unserem Advanced Open Water Kurs. Tieftauchen, Navigation und mehr.',
-          category: 'Kurs',
-          keywords: ['advanced', 'open water', 'diver', 'kurs', 'tief', 'navigation']
-        },
-        {
-          title: 'Rescue Diver Kurs',
-          url: '/de/courses/rescue-diver/',
-          description: 'Lernen Sie, Probleme im Wasser zu verhindern und zu bewältigen, und werden Sie selbstbewusster in Ihren Fähigkeiten.',
-          category: 'Kurs',
-          keywords: ['rescue', 'diver', 'kurs', 'sicherheit', 'notfall', 'prävention']
-        },
-        {
-          title: 'Divemaster Kurs',
-          url: '/de/courses/divemaster/',
-          description: 'Werden Sie ein professioneller Taucher mit unserem Divemaster Kurs. Führen Sie Tauchgänge und unterstützen Sie Tauchlehrer.',
-          category: 'Kurs',
-          keywords: ['divemaster', 'professionell', 'führen', 'tauchlehrer', 'assistent']
-        },
-        {
-          title: 'Nitrox Diver Kurs',
-          url: '/de/courses/nitrox-diver/',
-          description: 'Lernen Sie das Tauchen mit angereicherter Luft Nitrox für längere Grundzeiten und kürzere Oberflächenpausen.',
-          category: 'Kurs',
-          keywords: ['nitrox', 'angereicherte luft', 'längere tauchgänge', 'grundzeit']
-        },
-        {
-          title: 'Deep Diver Kurs',
-          url: '/de/courses/deep-diver/',
-          description: 'Erkunden Sie tiefer gelegene Tauchplätze sicher mit unserem Deep Diver Spezialkurs.',
-          category: 'Kurs',
-          keywords: ['deep', 'diver', 'spezialkurs', 'tiefe', 'erkundung']
-        },
-        {
-          title: 'Wrack Diver Kurs',
-          url: '/de/courses/wrack-diver/',
-          description: 'Lernen Sie, Schiffswracks sicher zu erkunden mit unserem Wrack Diver Spezialkurs.',
-          category: 'Kurs',
-          keywords: ['wrack', 'schiffswrack', 'erkundung', 'spezialkurs']
-        },
-        {
-          title: 'Night Diver Kurs',
-          url: '/de/courses/night/',
-          description: 'Entdecken Sie die Unterwasserwelt bei Nacht mit unserem Night Diver Spezialkurs.',
-          category: 'Kurs',
-          keywords: ['night', 'tauchen', 'spezialkurs', 'nacht', 'meerestiere']
-        },
-        {
-          title: 'Navigation Diver Kurs',
-          url: '/de/courses/navigation/',
-          description: 'Meistern Sie die Unterwassernavigation mit Kompass und natürlichen Referenzen.',
-          category: 'Kurs',
-          keywords: ['navigation', 'kompass', 'unterwasser', 'orientierung']
-        },
-        {
-          title: 'Solo Diver Kurs',
-          url: '/de/courses/solo-diver/',
-          description: 'Lernen Sie das selbstständige und sichere Tauchen mit unserem Solo Diver Kurs.',
-          category: 'Kurs',
-          keywords: ['solo', 'selbstständig', 'tauchen', 'unabhängig']
-        },
-        {
-          title: 'Sidemount Diver Kurs',
-          url: '/de/courses/sidemount/',
-          description: 'Lernen Sie die Sidemount-Tauchkonfiguration für besseren Trim und Gasmanagement.',
-          category: 'Kurs',
-          keywords: ['sidemount', 'konfiguration', 'trim', 'gasmanagement']
-        },
-        {
-          title: 'Technisches Tauchen',
-          url: '/de/courses/technical-diving-courses/',
-          description: 'Fortgeschrittene technische Tauchkurse für erfahrene Taucher.',
-          category: 'Kurs',
-          keywords: ['technisch', 'fortgeschritten', 'deco', 'trimix', 'rebreather']
-        },
-        
-        // Dive Sites
-        {
-          title: 'HTMS Chang Wrack',
-          url: '/de/dive-sites/htms-chang-wreck/',
-          description: 'Erkunden Sie das berühmte HTMS Chang Wrack, einer der besten Tauchplätze auf Koh Chang.',
-          category: 'Tauchplatz',
-          keywords: ['htms chang', 'wrack', 'schiffswrack', 'koh chang', 'berühmt']
-        },
-        {
-          title: 'Koh Rang Pinnacle',
-          url: '/de/dive-sites/koh-rang-pinnacle/',
-          description: 'Schöner Pinnacle-Tauchplatz mit farbenfrohen Korallen und reichem Meeresleben.',
-          category: 'Tauchplatz',
-          keywords: ['koh rang', 'pinnacle', 'korallen', 'meeresleben', 'riff']
-        },
-        {
-          title: 'Hin Luk Bat',
-          url: '/de/dive-sites/hin-luk-bat/',
-          description: 'Felsformation-Tauchplatz mit vielfältigem Meeresleben und guter Sicht.',
-          category: 'Tauchplatz',
-          keywords: ['hin luk bat', 'fels', 'formation', 'meeresleben', 'sicht']
-        },
-        {
-          title: 'Secret Reef',
-          url: '/de/dive-sites/secret-reef/',
-          description: 'Verstecktes Juwel mit unberührten Korallenriffen und tropischen Fischen.',
-          category: 'Tauchplatz',
-          keywords: ['secret reef', 'korallen', 'tropische fische', 'unberührt', 'versteckt']
-        },
-        {
-          title: 'Blueberry Hill',
-          url: '/de/dive-sites/blueberry-hill/',
-          description: 'Flacher Riff-Tauchgang perfekt für Anfänger und Schnorchler.',
-          category: 'Tauchplatz',
-          keywords: ['blueberry hill', 'flach', 'riff', 'anfänger', 'schnorcheln']
-        },
-        {
-          title: 'Hin Raab Nord',
-          url: '/de/dive-sites/hin-raab-north/',
-          description: 'Nördliche Felsformation mit ausgezeichnetem Meeresleben und Korallenbewuchs.',
-          category: 'Tauchplatz',
-          keywords: ['hin raab nord', 'fels', 'meeresleben', 'korallen', 'formation']
-        },
-        {
-          title: 'Hin Raab Süd',
-          url: '/de/dive-sites/hin-raab-south/',
-          description: 'Südliche Felsformation mit vielfältigen Unterwasserlandschaften.',
-          category: 'Tauchplatz',
-          keywords: ['hin raab süd', 'fels', 'landschaft', 'vielfältig', 'formation']
-        },
-        {
-          title: 'Hin Sam Sao',
-          url: '/de/dive-sites/hin-sam-sao/',
-          description: 'Drei Felsformationen, die eine einzigartige Unterwassertopographie schaffen.',
-          category: 'Tauchplatz',
-          keywords: ['hin sam sao', 'drei felsen', 'topographie', 'formation']
-        },
-        {
-          title: 'Hin Pray Nam',
-          url: '/de/dive-sites/hin-pray-nam/',
-          description: 'Felsformation bekannt für klares Wasser und marine Biodiversität.',
-          category: 'Tauchplatz',
-          keywords: ['hin pray nam', 'klares wasser', 'biodiversität', 'meeresleben']
-        },
-        {
-          title: 'Hin Rua Tek',
-          url: '/de/dive-sites/hin-rua-tek/',
-          description: 'Schildkröten-Felsformation mit ausgezeichneter Sicht und Korallengärten.',
-          category: 'Tauchplatz',
-          keywords: ['hin rua tek', 'schildkröte', 'sicht', 'korallengärten']
-        },
-        {
-          title: 'Koho Maru 5 Wrack',
-          url: '/de/dive-sites/koho-maru-5/',
-          description: 'Japanisches Fischerboot-Wrack mit aufregendem Wracktauchen.',
-          category: 'Tauchplatz',
-          keywords: ['koho maru 5', 'japanisch', 'fischerboot', 'wrack', 'tauchen']
-        },
-        {
-          title: 'T11 Wrack',
-          url: '/de/dive-sites/t11-wreck/',
-          description: 'Thailändisches Marine-Schiffswrack mit reichem Meeresleben und historischer Bedeutung.',
-          category: 'Tauchplatz',
-          keywords: ['t11', 'thailändische marine', 'wrack', 'meeresleben', 'historisch']
-        },
-        {
-          title: 'Phutthayotfa Chulalok Wrack',
-          url: '/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/',
-          description: 'Großer Wrack-Tauchplatz mit beeindruckender Struktur und Meeresleben.',
-          category: 'Tauchplatz',
-          keywords: ['phutthayotfa chulalok', 'großes wrack', 'struktur', 'meeresleben']
-        },
-        {
-          title: 'Tauchplatz-Karte Koh Chang',
-          url: '/de/dive-sites/dive-site-map-koh-chang/',
-          description: 'Interaktive Karte mit allen Tauchplätzen rund um die Insel Koh Chang.',
-          category: 'Tauchplatz',
-          keywords: ['tauchplatz karte', 'koh chang', 'interaktiv', 'karte', 'standorte']
-        },
-        
-        // Day Trips
-        {
-          title: 'Fun Dives',
-          url: '/de/day-trips/fun-dives/',
-          description: 'Tägliche Fun Dives zu den besten Tauchplätzen rund um Koh Chang.',
-          category: 'Tagestrip',
-          keywords: ['fun dives', 'täglich', 'tauchplätze', 'freizeit']
-        },
-        {
-          title: 'Try Dive',
-          url: '/de/day-trips/try-dive/',
-          description: 'Erleben Sie das Tauchen zum ersten Mal mit unserem Try Dive Programm.',
-          category: 'Tagestrip',
-          keywords: ['try dive', 'erstes mal', 'erleben', 'entdeckung']
-        },
-        {
-          title: 'Schnorcheln',
-          url: '/de/day-trips/snorkeling/',
-          description: 'Erkunden Sie die Unterwasserwelt mit unseren Schnorchel-Trips.',
-          category: 'Tagestrip',
-          keywords: ['schnorcheln', 'oberfläche', 'erkundung', 'meeresleben']
-        },
-        {
-          title: 'Scuba Review',
-          url: '/de/day-trips/scuba-review/',
-          description: 'Frischen Sie Ihre Tauchfähigkeiten mit unserem Scuba Review Programm auf.',
-          category: 'Tagestrip',
-          keywords: ['scuba review', 'auffrischen', 'fähigkeiten', 'übung']
-        },
-        {
-          title: 'GoPro Verleih',
-          url: '/de/day-trips/rent-gopro/',
-          description: 'Fangen Sie Ihre Unterwasserabenteuer mit unserem GoPro-Verleihservice ein.',
-          category: 'Tagestrip',
-          keywords: ['gopro', 'verleih', 'kamera', 'unterwasser', 'fotos']
-        },
-        {
-          title: 'Tauchversicherung',
-          url: '/de/day-trips/insurance/',
-          description: 'Umfassende Tauchversicherung für Ihre Sicherheit und Ihr Wohlbefinden.',
-          category: 'Tagestrip',
-          keywords: ['versicherung', 'tauchen', 'sicherheit', 'abdeckung', 'schutz']
-        },
-        
-        // Equipment
-        {
-          title: 'Tauchausrüstung',
-          url: '/de/equipment/',
-          description: 'Qualitativ hochwertige Tauchausrüstung zum Verkauf und Verleih.',
-          category: 'Ausrüstung',
-          keywords: ['ausrüstung', 'equipment', 'verleih', 'verkauf', 'tauchen']
-        },
-        {
-          title: 'Gebrauchte Tauchausrüstung',
-          url: '/de/equipment/used-scuba-gear/',
-          description: 'Erschwingliche gebrauchte Tauchausrüstung in gutem Zustand.',
-          category: 'Ausrüstung',
-          keywords: ['gebraucht', 'second hand', 'erschwinglich', 'ausrüstung']
-        },
-        
-        // Posts & Blog
-        {
-          title: 'Tauchblog & Artikel',
-          url: '/de/posts/',
-          description: 'Lesen Sie unsere neuesten Tauchartikel, Tipps, Anleitungen und Meeresleben-Informationen.',
-          category: 'Artikel',
-          keywords: ['blog', 'artikel', 'tipps', 'anleitungen', 'meeresleben']
-        },
-        {
-          title: 'Tauch-Anleitungen',
-          url: '/de/posts/diving-how-to-guides-koh-chang/',
-          description: 'Schritt-für-Schritt-Anleitungen für verschiedene Tauchtechniken und -verfahren.',
-          category: 'Artikel',
-          keywords: ['anleitungen', 'techniken', 'verfahren', 'schritt für schritt']
-        },
-        {
-          title: 'Koh Chang Reiseführer',
-          url: '/de/posts/koh-chang-diving-travel-guides/',
-          description: 'Umfassende Reiseführer für das Tauchen in Koh Chang, Thailand.',
-          category: 'Artikel',
-          keywords: ['reise', 'koh chang', 'thailand', 'führer', 'tauchen']
-        },
-        {
-          title: 'Meeresleben Koh Chang',
-          url: '/de/posts/marine-life-koh-chang/',
-          description: 'Entdecken Sie das erstaunliche Meeresleben rund um die Insel Koh Chang.',
-          category: 'Artikel',
-          keywords: ['meeresleben', 'fische', 'korallen', 'meerestiere', 'koh chang']
-        },
-        {
-          title: 'Tauchwissen',
-          url: '/de/posts/scuba-knowledge/',
-          description: 'Lehrreiche Artikel über Tauchtheorie und -praxis.',
-          category: 'Artikel',
-          keywords: ['tauchwissen', 'theorie', 'bildung', 'lernen', 'tauchen']
-        },
-        {
-          title: 'Tauch-Tipps & Tricks',
-          url: '/de/posts/tips-and-tricks/',
-          description: 'Praktische Tipps und Tricks zur Verbesserung Ihrer Tauchfähigkeiten.',
-          category: 'Artikel',
-          keywords: ['tipps', 'tricks', 'fähigkeiten', 'verbesserung', 'tauchen']
-        },
-        {
-          title: 'Offene Worte zum Tauchen',
-          url: '/de/posts/straight-talk/',
-          description: 'Ehrliche Diskussionen über Tauchthemen und -erfahrungen.',
-          category: 'Artikel',
-          keywords: ['offene worte', 'ehrlich', 'diskussionen', 'erfahrungen', 'tauchen']
-        },
-        
-        // Individual Articles - Scuba Knowledge
-        {
-          title: 'Was ist NITROX und warum Koh Changs einzige Full-Service NITROX Station wählen?',
-          url: '/de/posts/scuba-knowledge/nitrox-info/',
-          description: 'Entdecken Sie die Vorteile von NITROX für das Freizeittauchen und warum Chang Diving Center Koh Changs einzige zertifizierte Full-Service NITROX Station ist.',
-          category: 'Artikel',
-          keywords: ['nitrox', 'angereicherte luft', 'länger tauchen', 'tauchen thailand', 'mod berechnung', 'nitrox zertifizierung', 'koh chang']
-        },
-        {
-          title: 'Such- und Bergungstauchen Anleitung',
-          url: '/de/posts/scuba-knowledge/about-search-recovery/',
-          description: 'Lernen Sie Such- und Bergungstauchtechniken und -verfahren.',
-          category: 'Artikel',
-          keywords: ['suche', 'bergung', 'tauchen', 'techniken', 'verfahren', 'unterwassersuche']
-        },
-        {
-          title: 'Tauch-Sicherheitscheck Anleitung',
-          url: '/de/posts/scuba-knowledge/safety-check/',
-          description: 'Wichtige Sicherheitschecks für das Tauchen für einen sicheren Tauchgang.',
-          category: 'Artikel',
-          keywords: ['sicherheit', 'check', 'tauchen', 'vor dem tauchgang', 'sicherheitsverfahren', 'buddy check']
-        },
-        {
-          title: 'Tauchlogbuch Anleitung',
-          url: '/de/posts/scuba-knowledge/dive-logbook/',
-          description: 'Wie Sie Ihr Tauchlogbuch richtig führen und für die Aufzeichnung Ihrer Taucherfahrungen verwenden.',
-          category: 'Artikel',
-          keywords: ['tauchlogbuch', 'logbuch', 'tauchaufzeichnungen', 'aufzeichnung', 'tauchgeschichte']
-        },
-        {
-          title: 'SMB (Surface Marker Buoy) Anleitung',
-          url: '/de/posts/scuba-knowledge/smb-guide/',
-          description: 'Vollständige Anleitung zur Verwendung von Surface Marker Buoys für sicheres Tauchen.',
-          category: 'Artikel',
-          keywords: ['smb', 'surface marker buoy', 'sicherheit', 'tauchen', 'boje', 'marker']
-        },
-        {
-          title: 'Gasverbrauch Anleitung',
-          url: '/de/posts/scuba-knowledge/gas-consumption/',
-          description: 'Verstehen und verwalten Sie Ihren Gasverbrauch beim Tauchen.',
-          category: 'Artikel',
-          keywords: ['gasverbrauch', 'luftverbrauch', 'atemfrequenz', 'tauchen', 'gasmanagement']
-        },
-        {
-          title: 'Beste Tauchcomputer Anleitung',
-          url: '/de/posts/scuba-knowledge/best-dive-computers/',
-          description: 'Anleitung zur Auswahl des besten Tauchcomputers für Ihre Tauchbedürfnisse.',
-          category: 'Artikel',
-          keywords: ['tauchcomputer', 'computer', 'beste', 'auswahl', 'tauchausrüstung', 'technologie']
-        },
-        {
-          title: 'Wracktauchen Koh Chang Anleitung',
-          url: '/de/posts/scuba-knowledge/wreck-diving-koh-chang/',
-          description: 'Vollständige Anleitung zum Wracktauchen in Koh Chang, Thailand.',
-          category: 'Artikel',
-          keywords: ['wracktauchen', 'koh chang', 'thailand', 'schiffswracks', 'wrackplätze', 'tauchen']
-        },
-        
-        // Individual Articles - Marine Life
-        {
-          title: 'Barrakuda Meeresleben Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-barracuda/',
-          description: 'Lernen Sie über Barrakuda-Fische und ihr Verhalten in Koh Chang Gewässern.',
-          category: 'Artikel',
-          keywords: ['barrakuda', 'fisch', 'meeresleben', 'koh chang', 'räuberfisch', 'unterwasser']
-        },
-        {
-          title: 'Schwarzspitzen-Riffhai Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/',
-          description: 'Entdecken Sie Schwarzspitzen-Riffhaie und ihren Lebensraum rund um Koh Chang.',
-          category: 'Artikel',
-          keywords: ['schwarzspitzen riffhai', 'hai', 'meeresleben', 'koh chang', 'riffhai', 'räuber']
-        },
-        {
-          title: 'Nacktschnecken Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-nudibranch/',
-          description: 'Erkunden Sie die farbenfrohe Welt der Nacktschnecken in Koh Chang Gewässern.',
-          category: 'Artikel',
-          keywords: ['nacktschnecken', 'meeresschnecke', 'meeresleben', 'koh chang', 'farbenfroh', 'wirbellose']
-        },
-        {
-          title: 'Grüne Meeresschildkröte Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/',
-          description: 'Lernen Sie über grüne Meeresschildkröten und ihren Schutz in Koh Chang.',
-          category: 'Artikel',
-          keywords: ['grüne meeresschildkröte', 'schildkröte', 'meeresleben', 'koh chang', 'gefährdet', 'schutz']
-        },
-        {
-          title: 'Walhai Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-whale-shark/',
-          description: 'Entdecken Sie Walhaie und ihre saisonalen Besuche in Koh Chang Gewässern.',
-          category: 'Artikel',
-          keywords: ['walhai', 'hai', 'meeresleben', 'koh chang', 'sanfter riese', 'filterfresser']
-        },
-        {
-          title: 'Fledermausfisch Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-batfish/',
-          description: 'Lernen Sie über Fledermausfische und ihr einzigartiges Schwimmverhalten in Koh Chang.',
-          category: 'Artikel',
-          keywords: ['fledermausfisch', 'fisch', 'meeresleben', 'koh chang', 'schwimmverhalten', 'einzigartig']
-        },
-        {
-          title: 'Titan-Drückerfisch Anleitung',
-          url: '/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/',
-          description: 'Entdecken Sie Titan-Drückerfische und ihr territoriales Verhalten in Koh Chang.',
-          category: 'Artikel',
-          keywords: ['titan-drückerfisch', 'drückerfisch', 'meeresleben', 'koh chang', 'territorial', 'aggressiv']
-        },
-        
-        // Individual Articles - How-To Guides
-        {
-          title: 'Wie man den Advanced Kurs abschließt',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/',
-          description: 'Schritt-für-Schritt-Anleitung zum Abschließen Ihres Advanced Open Water Diver Kurses.',
-          category: 'Artikel',
-          keywords: ['advanced kurs', 'wie man', 'advanced open water', 'tauchkurs', 'schritt für schritt']
-        },
-        {
-          title: 'Wie man Fun Dives macht',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/',
-          description: 'Vollständige Anleitung zum Planen und Genießen von Fun Dives in Koh Chang.',
-          category: 'Artikel',
-          keywords: ['fun dives', 'wie man', 'freizeittauchen', 'planung', 'genuss']
-        },
-        {
-          title: 'Wie man Master Scuba Diver wird',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/',
-          description: 'Anleitung zum Erreichen der Master Scuba Diver Zertifizierung.',
-          category: 'Artikel',
-          keywords: ['master scuba diver', 'wie man', 'zertifizierung', 'fortgeschritten', 'spezialkurse']
-        },
-        {
-          title: 'Wie man einen Try Dive macht',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/',
-          description: 'Vollständige Anleitung zum Erleben Ihres ersten Try Dives in Koh Chang.',
-          category: 'Artikel',
-          keywords: ['try dive', 'wie man', 'erstes mal', 'erfahrung', 'entdeckungstauchgang']
-        },
-        {
-          title: 'Wie man den Open Water Kurs abschließt',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/',
-          description: 'Schritt-für-Schritt-Anleitung zum Abschließen Ihres Open Water Diver Kurses.',
-          category: 'Artikel',
-          keywords: ['open water kurs', 'wie man', 'anfängerkurs', 'zertifizierung', 'schritt für schritt']
-        },
-        {
-          title: 'Wie man den Rescue Diver Kurs abschließt',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/',
-          description: 'Anleitung zum Abschließen Ihres Rescue Diver Kurses und zur Entwicklung von Notfallreaktionsfähigkeiten.',
-          category: 'Artikel',
-          keywords: ['rescue diver kurs', 'wie man', 'rettung', 'notfall', 'sicherheit', 'zertifizierung']
-        },
-        {
-          title: 'Wie man einen Scuba Review macht',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/',
-          description: 'Anleitung zum Auffrischen Ihrer Tauchfähigkeiten mit einem Scuba Review.',
-          category: 'Artikel',
-          keywords: ['scuba review', 'wie man', 'fähigkeiten auffrischen', 'übung', 'auffrischung']
-        },
-        {
-          title: 'Wie man den Open Advanced Kurs abschließt',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/',
-          description: 'Anleitung zum Abschließen des Open Advanced Kurs-Pakets.',
-          category: 'Artikel',
-          keywords: ['open advanced', 'wie man', 'kurs paket', 'fortgeschritten', 'zertifizierung']
-        },
-        {
-          title: 'Wie man Spezialkurse abschließt',
-          url: '/de/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/',
-          description: 'Anleitung zur Auswahl und zum Abschließen von Tauch-Spezialkursen.',
-          category: 'Artikel',
-          keywords: ['spezialkurse', 'wie man', 'spezialität', 'fortgeschritten', 'zertifizierung', 'spezialisiert']
-        },
-        
-        // FAQs
-        {
-          title: 'Tauch-FAQs',
-          url: '/de/faqs/',
-          description: 'Finden Sie Antworten auf häufig gestellte Fragen zum Tauchen in Koh Chang.',
-          category: 'FAQ',
-          keywords: ['faq', 'fragen', 'antworten', 'hilfe', 'tauchen']
-        },
-        {
-          title: 'Tauchkurs-FAQs',
-          url: '/de/faqs/faq-dive-courses-koh-chang/',
-          description: 'Häufige Fragen zu Tauchkursen und Zertifizierungen.',
-          category: 'FAQ',
-          keywords: ['kurse', 'zertifizierung', 'ausbildung', 'fragen', 'tauchen']
-        },
-        {
-          title: 'Ausrüstung & Logistik FAQs',
-          url: '/de/faqs/faq-equipment-logistics-koh-chang/',
-          description: 'Fragen zu Tauchausrüstung, Verleih und Logistik.',
-          category: 'FAQ',
-          keywords: ['ausrüstung', 'logistik', 'verleih', 'equipment', 'fragen']
-        },
-        {
-          title: 'Allgemeine Tauchfragen',
-          url: '/de/faqs/faq-general-questions-koh-chang/',
-          description: 'Allgemeine Fragen zum Tauchen und unseren Dienstleistungen.',
-          category: 'FAQ',
-          keywords: ['allgemein', 'fragen', 'dienstleistungen', 'tauchen', 'hilfe']
-        },
-        {
-          title: 'Anreise & Unterkunft',
-          url: '/de/faqs/faq-getting-here-accommodation/',
-          description: 'Informationen über die Anreise nach Koh Chang und Unterkunftsmöglichkeiten.',
-          category: 'FAQ',
-          keywords: ['anreise', 'unterkunft', 'koh chang', 'thailand', 'reise']
-        },
-        {
-          title: 'Try Dive & Fun Dives FAQs',
-          url: '/de/faqs/faq-try-dive-fun-dives-koh-chang/',
-          description: 'Fragen zu Try Dives und Freizeittauchen.',
-          category: 'FAQ',
-          keywords: ['try dive', 'fun dives', 'freizeit', 'fragen', 'tauchen']
-        },
-        {
-          title: 'Gesundheit & Sicherheit FAQs',
-          url: '/de/faqs/faq-diving-health-safety-thailand/',
-          description: 'Gesundheits- und Sicherheitsinformationen für das Tauchen in Thailand.',
-          category: 'FAQ',
-          keywords: ['gesundheit', 'sicherheit', 'thailand', 'medizin', 'tauchen']
-        },
-        {
-          title: 'Tauchen Koh Chang FAQs',
-          url: '/de/faqs/faq-diving-koh-chang/',
-          description: 'Spezifische Fragen zu Tauchbedingungen und -plätzen auf Koh Chang.',
-          category: 'FAQ',
-          keywords: ['koh chang', 'tauchen', 'bedingungen', 'plätze', 'fragen']
-        },
-        {
-          title: 'Buchung & Zahlung FAQs',
-          url: '/de/faqs/faq-booking-payment-scuba-koh-chang/',
-          description: 'Informationen zu Buchungsverfahren und Zahlungsoptionen.',
-          category: 'FAQ',
-          keywords: ['buchung', 'zahlung', 'verfahren', 'optionen', 'reservierung']
-        },
-        
-        // Other Pages
-        {
-          title: 'Über Chang Diving',
-          url: '/de/about/',
-          description: 'Erfahren Sie mehr über unser Tauchcenter, Tauchlehrer und Erfahrung seit 2005.',
-          category: 'Über uns',
-          keywords: ['über', 'tauchcenter', 'tauchlehrer', 'erfahrung', 'geschichte']
-        },
-        {
-          title: 'Kontakt',
-          url: '/de/contact/',
-          description: 'Kontaktieren Sie uns für Buchungen, Fragen oder Informationen.',
-          category: 'Kontakt',
-          keywords: ['kontakt', 'buchung', 'fragen', 'informationen', 'erreichbar']
-        },
-        {
-          title: 'Tauchpreise',
-          url: '/de/prices/',
-          description: 'Sehen Sie unsere aktuellen Preise für Kurse, Fun Dives und Ausrüstungsverleih.',
-          category: 'Preise',
-          keywords: ['preise', 'kosten', 'tarife', 'kurse', 'fun dives', 'verleih']
-        },
-        {
-          title: 'Wetter Koh Chang',
-          url: '/de/weather/',
-          description: 'Prüfen Sie aktuelle Wetterbedingungen und Vorhersagen für das Tauchen in Koh Chang.',
-          category: 'Wetter',
-          keywords: ['wetter', 'vorhersage', 'bedingungen', 'koh chang', 'tauchen']
-        },
-        {
-          title: 'Tauchvideos',
-          url: '/de/videos/',
-          description: 'Sehen Sie Unterwasservideos und Tauchhighlights von Koh Chang.',
-          category: 'Videos',
-          keywords: ['videos', 'unterwasser', 'tauchen', 'koh chang', 'highlights']
+      // Dynamic search data generation from sitemap
+      let searchData = [];
+      
+      // Function to fetch and parse sitemap
+      async function loadSearchDataFromSitemap() {
+        try {
+          const response = await fetch('/sitemap.xml');
+          const xmlText = await response.text();
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+          
+          const urls = xmlDoc.querySelectorAll('url');
+          const currentLang = window.location.pathname.includes('/de/') ? 'de' : 
+                             window.location.pathname.includes('/th/') ? 'th' : 'en';
+          
+          urls.forEach(url => {
+            const loc = url.querySelector('loc').textContent;
+            const lastmod = url.querySelector('lastmod')?.textContent || '';
+            const priority = url.querySelector('priority')?.textContent || '0.5';
+            
+            // Only include pages for current language
+            if (loc.includes(`/${currentLang}/`) || (currentLang === 'en' && !loc.includes('/de/') && !loc.includes('/th/'))) {
+              const urlPath = loc.replace('https://changdiving.com', '');
+              
+              // Skip search page itself and main index
+              if (urlPath.includes('/search/') || urlPath === '/' || urlPath === `/${currentLang}/`) {
+                return;
+              }
+              
+              // Generate title and description from URL
+              const pathParts = urlPath.split('/').filter(part => part);
+              let title = '';
+              let description = '';
+              let category = '';
+              let keywords = [];
+              
+              // Extract meaningful title from URL
+              if (pathParts.length > 0) {
+                const lastPart = pathParts[pathParts.length - 1];
+                title = lastPart
+                  .split('-')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+                
+                // Add category based on path
+                if (urlPath.includes('/courses/')) {
+                  category = 'Kurs';
+                  keywords = ['kurs', 'tauchen', 'scuba', 'ausbildung', 'zertifizierung'];
+                } else if (urlPath.includes('/dive-sites/')) {
+                  category = 'Tauchplatz';
+                  keywords = ['tauchplatz', 'tauchen', 'unterwasser', 'meeresleben', 'riff'];
+                } else if (urlPath.includes('/day-trips/')) {
+                  category = 'Tagestour';
+                  keywords = ['tagestour', 'fun dive', 'schnorcheln', 'abenteuer'];
+                } else if (urlPath.includes('/posts/')) {
+                  category = 'Artikel';
+                  keywords = ['artikel', 'blog', 'information', 'anleitung', 'wissen'];
+                } else if (urlPath.includes('/faqs/')) {
+                  category = 'FAQ';
+                  keywords = ['faq', 'frage', 'antwort', 'hilfe'];
+                } else if (urlPath.includes('/equipment/')) {
+                  category = 'Ausrüstung';
+                  keywords = ['ausrüstung', 'equipment', 'tauchausrüstung', 'gear'];
+                } else {
+                  category = 'Seite';
+                  keywords = ['information', 'seite'];
+                }
+                
+                // Add specific keywords based on URL content
+                if (urlPath.includes('wreck')) {
+                  keywords.push('wrack', 'schiffswrack');
+                }
+                if (urlPath.includes('nitrox')) {
+                  keywords.push('nitrox', 'angereicherte luft');
+                }
+                if (urlPath.includes('advanced')) {
+                  keywords.push('fortgeschritten', 'erfahren');
+                }
+                if (urlPath.includes('beginner')) {
+                  keywords.push('anfänger', 'start');
+                }
+                if (urlPath.includes('marine')) {
+                  keywords.push('meeresleben', 'fisch', 'koralle');
+                }
+                if (urlPath.includes('safety')) {
+                  keywords.push('sicherheit', 'sicher');
+                }
+                
+                description = `${title} - ${category} auf der Chang Diving Center Website.`;
+              }
+              
+              if (title) {
+                searchData.push({
+                  title: title,
+                  url: urlPath,
+                  description: description,
+                  category: category,
+                  keywords: keywords,
+                  priority: parseFloat(priority)
+                });
+              }
+            }
+          });
+          
+          // Sort by priority
+          searchData.sort((a, b) => b.priority - a.priority);
+          
+          console.log(`Loaded ${searchData.length} searchable items for ${currentLang}`);
+          
+        } catch (error) {
+          console.error('Error loading sitemap:', error);
+          // Fallback to basic search data
+          searchData = [
+            {
+              title: 'Open Water Diver Kurs',
+              url: '/de/courses/open-water-diver/',
+              description: 'Lernen Sie das Tauchen mit unserem PADI Open Water Diver Kurs.',
+              category: 'Kurs',
+              keywords: ['open water', 'anfänger', 'kurs', 'padi', 'tauchen']
+            }
+          ];
         }
-      ];
-
-      // Search functionality
-      document.getElementById('searchForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const query = document.getElementById('searchInput').value.trim();
-        if (query) {
-          performSearch(query);
-        }
+      }
+      
+      // Load search data when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        loadSearchDataFromSitemap().then(() => {
+          // Check if there's a search query in URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const query = urlParams.get('q');
+          if (query) {
+            document.getElementById('searchInput').value = query;
+            performSearch(query);
+          }
+        });
       });
-      
-      // Check for search query in URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const searchQuery = urlParams.get('q');
-      if (searchQuery) {
-        document.getElementById('searchInput').value = searchQuery;
-        performSearch(searchQuery);
-      }
-      
+
       function performSearch(query) {
-        const resultsContainer = document.getElementById('searchResults');
-        resultsContainer.innerHTML = '<div class="loading">Suche läuft...</div>';
+        if (!query.trim()) {
+          document.getElementById('searchResults').innerHTML = '<div class="search-info">Bitte geben Sie einen Suchbegriff ein.</div>';
+          return;
+        }
         
-        // Simulate search delay
-        setTimeout(() => {
-          displaySearchResults(query);
-        }, 300);
-      }
-      
-      function displaySearchResults(query) {
-        const resultsContainer = document.getElementById('searchResults');
         const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
-        
-        // Search through all data
-        const filteredResults = searchData.filter(item => {
+        const results = searchData.filter(item => {
           const searchableText = `${item.title} ${item.description} ${item.keywords.join(' ')} ${item.category}`.toLowerCase();
           return searchTerms.some(term => searchableText.includes(term));
         });
         
-        // Sort by relevance (exact matches first)
-        filteredResults.sort((a, b) => {
-          const aScore = getRelevanceScore(a, searchTerms);
-          const bScore = getRelevanceScore(b, searchTerms);
-          return bScore - aScore;
+        // Sort by relevance
+        results.sort((a, b) => {
+          const scoreA = getRelevanceScore(a, searchTerms);
+          const scoreB = getRelevanceScore(b, searchTerms);
+          return scoreB - scoreA;
         });
         
-        if (filteredResults.length > 0) {
-          resultsContainer.innerHTML = `
-            <div class="search-info">
-              <h2>Suchergebnisse für "${query}"</h2>
-              <p>${filteredResults.length} Ergebnis(se) gefunden</p>
-            </div>
-            <div class="results-list">
-              ${filteredResults.map(result => `
-                <div class="result-item">
-                  <div class="result-category">${result.category}</div>
-                  <h3><a href="${result.url}">${result.title}</a></h3>
-                  <p>${result.description}</p>
-                </div>
-              `).join('')}
-            </div>
-          `;
-        } else {
-          resultsContainer.innerHTML = `
-            <div class="search-info">
-              <h2>Keine Ergebnisse für "${query}" gefunden</h2>
-              <p>Versuchen Sie andere Suchbegriffe wie:</p>
-              <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
-                <li>"tauchen" oder "scuba"</li>
-                <li>"kurse" oder "open water"</li>
-                <li>"tauchplätze" oder "wrack"</li>
-                <li>"ausrüstung" oder "equipment"</li>
-                <li>"fun dives" oder "tagestrips"</li>
-              </ul>
-            </div>
-          `;
-        }
+        displaySearchResults(results, query);
       }
       
       function getRelevanceScore(item, searchTerms) {
@@ -844,13 +350,64 @@
         const keywords = item.keywords.join(' ').toLowerCase();
         
         searchTerms.forEach(term => {
+          // Title matches get highest score
           if (title.includes(term)) score += 10;
-          if (keywords.includes(term)) score += 5;
-          if (description.includes(term)) score += 2;
+          // Keyword matches get high score
+          if (keywords.includes(term)) score += 8;
+          // Description matches get medium score
+          if (description.includes(term)) score += 5;
+          // Partial matches
+          if (title.includes(term.substring(0, 3))) score += 3;
         });
         
         return score;
       }
+      
+      function displaySearchResults(results, query) {
+        const resultsContainer = document.getElementById('searchResults');
+        
+        if (results.length === 0) {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h3>Keine Ergebnisse gefunden für "${query}"</h3>
+              <p>Versuchen Sie andere Suchbegriffe oder schauen Sie sich unsere Kategorien an:</p>
+              <ul>
+                <li>"tauchkurse" oder "open water"</li>
+                <li>"tauchplätze" oder "wrack"</li>
+                <li>"tagestouren" oder "fun dive"</li>
+                <li>"ausrüstung" oder "equipment"</li>
+              </ul>
+            </div>
+          `;
+          return;
+        }
+        
+        let html = `<div class="search-info"><h3>${results.length} Ergebnisse für "${query}"</h3></div>`;
+        
+        results.forEach(item => {
+          html += `
+            <div class="result-item">
+              <div class="result-category">${item.category}</div>
+              <h3><a href="${item.url}">${item.title}</a></h3>
+              <p>${item.description}</p>
+            </div>
+          `;
+        });
+        
+        resultsContainer.innerHTML = html;
+      }
+      
+      // Handle form submission
+      document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.getElementById('searchInput').value;
+        performSearch(query);
+        
+        // Update URL
+        const url = new URL(window.location);
+        url.searchParams.set('q', query);
+        window.history.pushState({}, '', url);
+      });
     </script>
   </body>
 </html>

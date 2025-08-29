@@ -184,657 +184,163 @@
     <!-- Scripts -->
     <script src="/js/global.js"></script>
     <script>
-      // Comprehensive search data in Thai
-      const searchData = [
-        // Courses
-        {
-          title: 'คอร์ส Open Water Diver',
-          url: '/th/courses/open-water-diver/',
-          description: 'เรียนดำน้ำกับคอร์ส PADI Open Water Diver บนเกาะช้าง ก้าวแรกสู่โลกใต้น้ำ',
-          category: 'คอร์ส',
-          keywords: ['open water', 'diver', 'คอร์ส', 'padi', 'เริ่มต้น', 'เรียน', 'ดำน้ำ', 'scuba']
-        },
-        {
-          title: 'คอร์ส Advanced Open Water Diver',
-          url: '/th/courses/advanced/',
-          description: 'พัฒนาการดำน้ำของคุณสู่ระดับถัดไปด้วยคอร์ส Advanced Open Water การดำน้ำลึก การนำทาง และอื่นๆ',
-          category: 'คอร์ส',
-          keywords: ['advanced', 'open water', 'diver', 'คอร์ส', 'ลึก', 'นำทาง']
-        },
-        {
-          title: 'คอร์ส Rescue Diver',
-          url: '/th/courses/rescue-diver/',
-          description: 'เรียนรู้การป้องกันและจัดการปัญหาในน้ำ และเพิ่มความมั่นใจในทักษะของคุณ',
-          category: 'คอร์ส',
-          keywords: ['rescue', 'diver', 'คอร์ส', 'ความปลอดภัย', 'ฉุกเฉิน', 'ป้องกัน']
-        },
-        {
-          title: 'คอร์ส Divemaster',
-          url: '/th/courses/divemaster/',
-          description: 'เป็นนักดำน้ำมืออาชีพด้วยคอร์ส Divemaster นำการดำน้ำและช่วยเหลือผู้สอน',
-          category: 'คอร์ส',
-          keywords: ['divemaster', 'มืออาชีพ', 'นำ', 'ผู้สอน', 'ช่วยเหลือ']
-        },
-        {
-          title: 'คอร์ส Nitrox Diver',
-          url: '/th/courses/nitrox-diver/',
-          description: 'เรียนรู้การดำน้ำด้วยอากาศเสริมไนโตรเจนสำหรับเวลาดำน้ำที่ยาวนานขึ้น',
-          category: 'คอร์ส',
-          keywords: ['nitrox', 'อากาศเสริม', 'ดำน้ำนาน', 'เวลา']
-        },
-        {
-          title: 'คอร์ส Deep Diver',
-          url: '/th/courses/deep-diver/',
-          description: 'สำรวจจุดดำน้ำลึกอย่างปลอดภัยด้วยคอร์สพิเศษ Deep Diver',
-          category: 'คอร์ส',
-          keywords: ['deep', 'diver', 'พิเศษ', 'ลึก', 'สำรวจ']
-        },
-        {
-          title: 'คอร์ส Wrack Diver',
-          url: '/th/courses/wrack-diver/',
-          description: 'เรียนรู้การสำรวจเรือจมอย่างปลอดภัยด้วยคอร์สพิเศษ Wrack Diver',
-          category: 'คอร์ส',
-          keywords: ['wrack', 'เรือจม', 'สำรวจ', 'พิเศษ']
-        },
-        {
-          title: 'คอร์ส Night Diver',
-          url: '/th/courses/night/',
-          description: 'ค้นพบโลกใต้น้ำในยามค่ำคืนด้วยคอร์สพิเศษ Night Diver',
-          category: 'คอร์ส',
-          keywords: ['night', 'ดำน้ำ', 'พิเศษ', 'กลางคืน', 'สัตว์ทะเล']
-        },
-        {
-          title: 'คอร์ส Navigation Diver',
-          url: '/th/courses/navigation/',
-          description: 'เรียนรู้การนำทางใต้น้ำด้วยเข็มทิศและจุดอ้างอิงธรรมชาติ',
-          category: 'คอร์ส',
-          keywords: ['navigation', 'เข็มทิศ', 'นำทาง', 'อ้างอิง']
-        },
-        {
-          title: 'คอร์ส Solo Diver',
-          url: '/th/courses/solo-diver/',
-          description: 'เรียนรู้การดำน้ำอย่างอิสระและปลอดภัยด้วยคอร์ส Solo Diver',
-          category: 'คอร์ส',
-          keywords: ['solo', 'อิสระ', 'ดำน้ำ', 'ปลอดภัย']
-        },
-        {
-          title: 'คอร์ส Sidemount Diver',
-          url: '/th/courses/sidemount/',
-          description: 'เรียนรู้การตั้งค่าการดำน้ำแบบ Sidemount สำหรับการทรงตัวและการจัดการก๊าซที่ดีขึ้น',
-          category: 'คอร์ส',
-          keywords: ['sidemount', 'ตั้งค่า', 'ทรงตัว', 'ก๊าซ']
-        },
-        {
-          title: 'คอร์ส Technical Diving',
-          url: '/th/courses/technical-diving-courses/',
-          description: 'คอร์สดำน้ำเทคนิคขั้นสูงสำหรับนักดำน้ำที่มีประสบการณ์',
-          category: 'คอร์ส',
-          keywords: ['technical', 'เทคนิค', 'ขั้นสูง', 'deco', 'trimix']
-        },
-        
-        // Dive Sites
-        {
-          title: 'เรือจม HTMS Chang',
-          url: '/th/dive-sites/htms-chang-wreck/',
-          description: 'สำรวจเรือจม HTMS Chang ที่มีชื่อเสียง หนึ่งในจุดดำน้ำที่ดีที่สุดบนเกาะช้าง',
-          category: 'จุดดำน้ำ',
-          keywords: ['htms chang', 'เรือจม', 'wreck', 'เกาะช้าง', 'มีชื่อเสียง']
-        },
-        {
-          title: 'เกาะรัง พินนาเคิล',
-          url: '/th/dive-sites/koh-rang-pinnacle/',
-          description: 'จุดดำน้ำพินนาเคิลที่สวยงามด้วยปะการังสีสันสดใสและสัตว์ทะเลอุดมสมบูรณ์',
-          category: 'จุดดำน้ำ',
-          keywords: ['เกาะรัง', 'พินนาเคิล', 'ปะการัง', 'สัตว์ทะเล', 'แนวปะการัง']
-        },
-        {
-          title: 'หินลูกบาต',
-          url: '/th/dive-sites/hin-luk-bat/',
-          description: 'จุดดำน้ำหินก่อตัวด้วยสัตว์ทะเลหลากหลายและทัศนวิสัยดี',
-          category: 'จุดดำน้ำ',
-          keywords: ['หินลูกบาต', 'หิน', 'ก่อตัว', 'สัตว์ทะเล', 'ทัศนวิสัย']
-        },
-        {
-          title: 'ซีเคร็ต รีฟ',
-          url: '/th/dive-sites/secret-reef/',
-          description: 'อัญมณีที่ซ่อนอยู่ด้วยแนวปะการังบริสุทธิ์และปลาเขตร้อน',
-          category: 'จุดดำน้ำ',
-          keywords: ['ซีเคร็ต รีฟ', 'ปะการัง', 'ปลาเขตร้อน', 'บริสุทธิ์', 'ซ่อน']
-        },
-        {
-          title: 'บลูเบอร์รี่ ฮิลล์',
-          url: '/th/dive-sites/blueberry-hill/',
-          description: 'การดำน้ำแนวปะการังตื้นเหมาะสำหรับผู้เริ่มต้นและผู้ที่ชอบดำน้ำตื้น',
-          category: 'จุดดำน้ำ',
-          keywords: ['บลูเบอร์รี่ ฮิลล์', 'ตื้น', 'แนวปะการัง', 'เริ่มต้น', 'ดำน้ำตื้น']
-        },
-        {
-          title: 'หินราบเหนือ',
-          url: '/th/dive-sites/hin-raab-north/',
-          description: 'หินก่อตัวทางเหนือด้วยสัตว์ทะเลและปะการังที่ยอดเยี่ยม',
-          category: 'จุดดำน้ำ',
-          keywords: ['หินราบเหนือ', 'หิน', 'สัตว์ทะเล', 'ปะการัง', 'ก่อตัว']
-        },
-        {
-          title: 'หินราบใต้',
-          url: '/th/dive-sites/hin-raab-south/',
-          description: 'หินก่อตัวทางใต้ด้วยภูมิประเทศใต้น้ำที่หลากหลาย',
-          category: 'จุดดำน้ำ',
-          keywords: ['หินราบใต้', 'หิน', 'ภูมิประเทศ', 'หลากหลาย', 'ก่อตัว']
-        },
-        {
-          title: 'หินสามเสา',
-          url: '/th/dive-sites/hin-sam-sao/',
-          description: 'หินก่อตัวสามก้อนสร้างภูมิประเทศใต้น้ำที่เป็นเอกลักษณ์',
-          category: 'จุดดำน้ำ',
-          keywords: ['หินสามเสา', 'หินสามก้อน', 'ภูมิประเทศ', 'เอกลักษณ์']
-        },
-        {
-          title: 'หินปราสาทน้ำ',
-          url: '/th/dive-sites/hin-pray-nam/',
-          description: 'หินก่อตัวที่รู้จักกันดีในเรื่องน้ำใสและความหลากหลายทางชีวภาพทางทะเล',
-          category: 'จุดดำน้ำ',
-          keywords: ['หินปราสาทน้ำ', 'น้ำใส', 'ความหลากหลาย', 'สัตว์ทะเล']
-        },
-        {
-          title: 'หินเรือเต็ก',
-          url: '/th/dive-sites/hin-rua-tek/',
-          description: 'หินก่อตัวเต่าทะเลด้วยทัศนวิสัยยอดเยี่ยมและสวนปะการัง',
-          category: 'จุดดำน้ำ',
-          keywords: ['หินเรือเต็ก', 'เต่า', 'ทัศนวิสัย', 'สวนปะการัง']
-        },
-        {
-          title: 'เรือจมโคโฮมารุ 5',
-          url: '/th/dive-sites/koho-maru-5/',
-          description: 'เรือจมเรือประมงญี่ปุ่นที่ให้ประสบการณ์การดำน้ำเรือจมที่น่าตื่นเต้น',
-          category: 'จุดดำน้ำ',
-          keywords: ['โคโฮมารุ 5', 'ญี่ปุ่น', 'เรือประมง', 'เรือจม', 'ดำน้ำ']
-        },
-        {
-          title: 'เรือจม T11',
-          url: '/th/dive-sites/t11-wreck/',
-          description: 'เรือจมเรือรบไทยด้วยสัตว์ทะเลอุดมสมบูรณ์และความสำคัญทางประวัติศาสตร์',
-          category: 'จุดดำน้ำ',
-          keywords: ['t11', 'เรือรบไทย', 'เรือจม', 'สัตว์ทะเล', 'ประวัติศาสตร์']
-        },
-        {
-          title: 'เรือจมพุทธยอดฟ้าจุฬาโลก',
-          url: '/th/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/',
-          description: 'จุดดำน้ำเรือจมขนาดใหญ่ด้วยโครงสร้างที่น่าประทับใจและสัตว์ทะเล',
-          category: 'จุดดำน้ำ',
-          keywords: ['พุทธยอดฟ้าจุฬาโลก', 'เรือจมใหญ่', 'โครงสร้าง', 'สัตว์ทะเล']
-        },
-        {
-          title: 'แผนที่จุดดำน้ำเกาะช้าง',
-          url: '/th/dive-sites/dive-site-map-koh-chang/',
-          description: 'แผนที่แบบโต้ตอบแสดงจุดดำน้ำทั้งหมดรอบเกาะช้าง',
-          category: 'จุดดำน้ำ',
-          keywords: ['แผนที่จุดดำน้ำ', 'เกาะช้าง', 'โต้ตอบ', 'แผนที่', 'ตำแหน่ง']
-        },
-        
-        // Day Trips
-        {
-          title: 'ฟันไดฟ์',
-          url: '/th/day-trips/fun-dives/',
-          description: 'ฟันไดฟ์รายวันไปยังจุดดำน้ำที่ดีที่สุดรอบเกาะช้าง',
-          category: 'ไปเช้าเย็นกลับ',
-          keywords: ['ฟันไดฟ์', 'รายวัน', 'จุดดำน้ำ', 'สันทนาการ']
-        },
-        {
-          title: 'ลองดำน้ำ',
-          url: '/th/day-trips/try-dive/',
-          description: 'สัมผัสประสบการณ์การดำน้ำเป็นครั้งแรกด้วยโปรแกรมลองดำน้ำของเรา',
-          category: 'ไปเช้าเย็นกลับ',
-          keywords: ['ลองดำน้ำ', 'ครั้งแรก', 'ประสบการณ์', 'ค้นพบ']
-        },
-        {
-          title: 'ดำน้ำตื้น',
-          url: '/th/day-trips/snorkeling/',
-          description: 'สำรวจโลกใต้น้ำด้วยทริปดำน้ำตื้นของเรา',
-          category: 'ไปเช้าเย็นกลับ',
-          keywords: ['ดำน้ำตื้น', 'ผิวน้ำ', 'สำรวจ', 'สัตว์ทะเล']
-        },
-        {
-          title: 'ทบทวนการดำน้ำ',
-          url: '/th/day-trips/scuba-review/',
-          description: 'ทบทวนทักษะการดำน้ำของคุณด้วยโปรแกรมทบทวนการดำน้ำของเรา',
-          category: 'ไปเช้าเย็นกลับ',
-          keywords: ['ทบทวน', 'ทักษะ', 'การดำน้ำ', 'ฝึกฝน']
-        },
-        {
-          title: 'เช่า GoPro',
-          url: '/th/day-trips/rent-gopro/',
-          description: 'บันทึกการผจญภัยใต้น้ำของคุณด้วยบริการเช่า GoPro ของเรา',
-          category: 'ไปเช้าเย็นกลับ',
-          keywords: ['gopro', 'เช่า', 'กล้อง', 'ใต้น้ำ', 'รูปภาพ']
-        },
-        {
-          title: 'ประกันการดำน้ำ',
-          url: '/th/day-trips/insurance/',
-          description: 'ประกันการดำน้ำที่ครอบคลุมเพื่อความปลอดภัยและความสบายใจของคุณ',
-          category: 'ไปเช้าเย็นกลับ',
-          keywords: ['ประกัน', 'การดำน้ำ', 'ความปลอดภัย', 'ความคุ้มครอง', 'การป้องกัน']
-        },
-        
-        // Equipment
-        {
-          title: 'อุปกรณ์ดำน้ำ',
-          url: '/th/equipment/',
-          description: 'อุปกรณ์ดำน้ำคุณภาพดีสำหรับขายและเช่า',
-          category: 'อุปกรณ์',
-          keywords: ['อุปกรณ์', 'gear', 'เช่า', 'ขาย', 'ดำน้ำ']
-        },
-        {
-          title: 'อุปกรณ์ดำน้ำมือสอง',
-          url: '/th/equipment/used-scuba-gear/',
-          description: 'อุปกรณ์ดำน้ำมือสองราคาประหยัดในสภาพดี',
-          category: 'อุปกรณ์',
-          keywords: ['มือสอง', 'second hand', 'ประหยัด', 'อุปกรณ์']
-        },
-        
-        // Posts & Blog
-        {
-          title: 'บล็อกและบทความการดำน้ำ',
-          url: '/th/posts/',
-          description: 'อ่านบทความการดำน้ำล่าสุด เคล็ดลับ คู่มือ และข้อมูลสัตว์ทะเลของเรา',
-          category: 'บทความ',
-          keywords: ['บล็อก', 'บทความ', 'เคล็ดลับ', 'คู่มือ', 'สัตว์ทะเล']
-        },
-        {
-          title: 'คู่มือการดำน้ำ',
-          url: '/th/posts/diving-how-to-guides-koh-chang/',
-          description: 'คู่มือทีละขั้นตอนสำหรับเทคนิคและขั้นตอนการดำน้ำต่างๆ',
-          category: 'บทความ',
-          keywords: ['คู่มือ', 'เทคนิค', 'ขั้นตอน', 'ทีละขั้นตอน']
-        },
-        {
-          title: 'คู่มือท่องเที่ยวเกาะช้าง',
-          url: '/th/posts/koh-chang-diving-travel-guides/',
-          description: 'คู่มือท่องเที่ยวที่ครอบคลุมสำหรับการดำน้ำในเกาะช้าง ประเทศไทย',
-          category: 'บทความ',
-          keywords: ['ท่องเที่ยว', 'เกาะช้าง', 'ประเทศไทย', 'คู่มือ', 'การดำน้ำ']
-        },
-        {
-          title: 'สัตว์ทะเลเกาะช้าง',
-          url: '/th/posts/marine-life-koh-chang/',
-          description: 'ค้นพบสัตว์ทะเลที่น่าทึ่งที่พบรอบเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['สัตว์ทะเล', 'ปลา', 'ปะการัง', 'สัตว์น้ำ', 'เกาะช้าง']
-        },
-        {
-          title: 'ความรู้การดำน้ำ',
-          url: '/th/posts/scuba-knowledge/',
-          description: 'บทความการศึกษาเกี่ยวกับทฤษฎีและการปฏิบัติการดำน้ำ',
-          category: 'บทความ',
-          keywords: ['ความรู้', 'ทฤษฎี', 'การศึกษา', 'การเรียนรู้', 'การดำน้ำ']
-        },
-        {
-          title: 'เคล็ดลับและเทคนิคการดำน้ำ',
-          url: '/th/posts/tips-and-tricks/',
-          description: 'เคล็ดลับและเทคนิคที่เป็นประโยชน์เพื่อปรับปรุงทักษะการดำน้ำของคุณ',
-          category: 'บทความ',
-          keywords: ['เคล็ดลับ', 'เทคนิค', 'ทักษะ', 'การปรับปรุง', 'การดำน้ำ']
-        },
-        {
-          title: 'พูดตรงๆ เรื่องการดำน้ำ',
-          url: '/th/posts/straight-talk/',
-          description: 'การสนทนาที่ซื่อสัตย์เกี่ยวกับหัวข้อและประสบการณ์การดำน้ำ',
-          category: 'บทความ',
-          keywords: ['พูดตรงๆ', 'ซื่อสัตย์', 'การสนทนา', 'ประสบการณ์', 'การดำน้ำ']
-        },
-        
-        // Individual Articles - Scuba Knowledge
-        {
-          title: 'NITROX คืออะไรและทำไมต้องเลือกสถานี NITROX Full-Service แห่งเดียวของเกาะช้าง?',
-          url: '/th/posts/scuba-knowledge/nitrox-info/',
-          description: 'ค้นพบประโยชน์ของ NITROX สำหรับการดำน้ำสันทนาการและทำไมช้างไดฟ์วิ่งจึงเป็นสถานี NITROX Full-Service ที่ได้รับการรับรองแห่งเดียวของเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['nitrox', 'อากาศเสริม', 'ดำน้ำนานขึ้น', 'การดำน้ำประเทศไทย', 'การคำนวณ mod', 'การรับรอง nitrox', 'เกาะช้าง']
-        },
-        {
-          title: 'คู่มือการดำน้ำค้นหาและกู้คืน',
-          url: '/th/posts/scuba-knowledge/about-search-recovery/',
-          description: 'เรียนรู้เทคนิคและขั้นตอนการดำน้ำค้นหาและกู้คืน',
-          category: 'บทความ',
-          keywords: ['ค้นหา', 'กู้คืน', 'การดำน้ำ', 'เทคนิค', 'ขั้นตอน', 'การค้นหาใต้น้ำ']
-        },
-        {
-          title: 'คู่มือการตรวจสอบความปลอดภัยการดำน้ำ',
-          url: '/th/posts/scuba-knowledge/safety-check/',
-          description: 'การตรวจสอบความปลอดภัยที่สำคัญสำหรับการดำน้ำเพื่อให้แน่ใจว่าการดำน้ำที่ปลอดภัย',
-          category: 'บทความ',
-          keywords: ['ความปลอดภัย', 'ตรวจสอบ', 'การดำน้ำ', 'ก่อนดำน้ำ', 'ขั้นตอนความปลอดภัย', 'การตรวจสอบเพื่อน']
-        },
-        {
-          title: 'คู่มือสมุดบันทึกการดำน้ำ',
-          url: '/th/posts/scuba-knowledge/dive-logbook/',
-          description: 'วิธีการบำรุงรักษาและใช้สมุดบันทึกการดำน้ำของคุณอย่างถูกต้องสำหรับการติดตามประสบการณ์การดำน้ำของคุณ',
-          category: 'บทความ',
-          keywords: ['สมุดบันทึกการดำน้ำ', 'สมุดบันทึก', 'บันทึกการดำน้ำ', 'การติดตาม', 'ประวัติการดำน้ำ']
-        },
-        {
-          title: 'คู่มือ SMB (Surface Marker Buoy)',
-          url: '/th/posts/scuba-knowledge/smb-guide/',
-          description: 'คู่มือที่สมบูรณ์สำหรับการใช้ Surface Marker Buoys สำหรับการดำน้ำที่ปลอดภัย',
-          category: 'บทความ',
-          keywords: ['smb', 'surface marker buoy', 'ความปลอดภัย', 'การดำน้ำ', 'ทุ่น', 'เครื่องหมาย']
-        },
-        {
-          title: 'คู่มือการบริโภคก๊าซ',
-          url: '/th/posts/scuba-knowledge/gas-consumption/',
-          description: 'การเข้าใจและการจัดการการบริโภคก๊าซของคุณขณะดำน้ำ',
-          category: 'บทความ',
-          keywords: ['การบริโภคก๊าซ', 'การบริโภคอากาศ', 'อัตราการหายใจ', 'การดำน้ำ', 'การจัดการก๊าซ']
-        },
-        {
-          title: 'คู่มือคอมพิวเตอร์การดำน้ำที่ดีที่สุด',
-          url: '/th/posts/scuba-knowledge/best-dive-computers/',
-          description: 'คู่มือการเลือกคอมพิวเตอร์การดำน้ำที่ดีที่สุดสำหรับความต้องการการดำน้ำของคุณ',
-          category: 'บทความ',
-          keywords: ['คอมพิวเตอร์การดำน้ำ', 'คอมพิวเตอร์', 'ดีที่สุด', 'การเลือก', 'อุปกรณ์การดำน้ำ', 'เทคโนโลยี']
-        },
-        {
-          title: 'คู่มือการดำน้ำเรือจมเกาะช้าง',
-          url: '/th/posts/scuba-knowledge/wreck-diving-koh-chang/',
-          description: 'คู่มือที่สมบูรณ์สำหรับการดำน้ำเรือจมในเกาะช้าง ประเทศไทย',
-          category: 'บทความ',
-          keywords: ['การดำน้ำเรือจม', 'เกาะช้าง', 'ประเทศไทย', 'เรือจม', 'จุดเรือจม', 'การดำน้ำ']
-        },
-        
-        // Individual Articles - Marine Life
-        {
-          title: 'คู่มือสัตว์ทะเลปลาบาร์ราคูดา',
-          url: '/th/posts/marine-life-koh-chang/marine-life-barracuda/',
-          description: 'เรียนรู้เกี่ยวกับปลาบาร์ราคูดาและพฤติกรรมของพวกมันในน่านน้ำเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['บาร์ราคูดา', 'ปลา', 'สัตว์ทะเล', 'เกาะช้าง', 'ปลานักล่า', 'ใต้น้ำ']
-        },
-        {
-          title: 'คู่มือฉลามครีบดำ',
-          url: '/th/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/',
-          description: 'ค้นพบฉลามครีบดำและถิ่นที่อยู่ของพวกมันรอบเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ฉลามครีบดำ', 'ฉลาม', 'สัตว์ทะเล', 'เกาะช้าง', 'ฉลามแนวปะการัง', 'นักล่า']
-        },
-        {
-          title: 'คู่มือทากทะเล',
-          url: '/th/posts/marine-life-koh-chang/marine-life-nudibranch/',
-          description: 'สำรวจโลกสีสันสดใสของทากทะเลในน่านน้ำเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ทากทะเล', 'ทาก', 'สัตว์ทะเล', 'เกาะช้าง', 'สีสันสดใส', 'สัตว์ไม่มีกระดูกสันหลัง']
-        },
-        {
-          title: 'คู่มือเต่าทะเลเขียว',
-          url: '/th/posts/marine-life-koh-chang/marine-life-green-sea-turtle/',
-          description: 'เรียนรู้เกี่ยวกับเต่าทะเลเขียวและการอนุรักษ์ของพวกมันในเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['เต่าทะเลเขียว', 'เต่า', 'สัตว์ทะเล', 'เกาะช้าง', 'ใกล้สูญพันธุ์', 'การอนุรักษ์']
-        },
-        {
-          title: 'คู่มือฉลามวาฬ',
-          url: '/th/posts/marine-life-koh-chang/marine-life-whale-shark/',
-          description: 'ค้นพบฉลามวาฬและการเยี่ยมชมตามฤดูกาลของพวกมันในน่านน้ำเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ฉลามวาฬ', 'ฉลาม', 'สัตว์ทะเล', 'เกาะช้าง', 'ยักษ์ใหญ่ใจดี', 'ตัวกรองอาหาร']
-        },
-        {
-          title: 'คู่มือปลาค้างคาว',
-          url: '/th/posts/marine-life-koh-chang/marine-life-batfish/',
-          description: 'เรียนรู้เกี่ยวกับปลาค้างคาวและพฤติกรรมการว่ายน้ำที่เป็นเอกลักษณ์ของพวกมันในเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ปลาค้างคาว', 'ปลา', 'สัตว์ทะเล', 'เกาะช้าง', 'พฤติกรรมการว่ายน้ำ', 'เอกลักษณ์']
-        },
-        {
-          title: 'คู่มือปลาปักเป้ายักษ์',
-          url: '/th/posts/marine-life-koh-chang/marine-life-titan-triggerfish/',
-          description: 'ค้นพบปลาปักเป้ายักษ์และพฤติกรรมอาณาเขตของพวกมันในเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ปลาปักเป้ายักษ์', 'ปลาปักเป้า', 'สัตว์ทะเล', 'เกาะช้าง', 'อาณาเขต', 'ก้าวร้าว']
-        },
-        
-        // Individual Articles - How-To Guides
-        {
-          title: 'วิธีการจบคอร์ส Advanced',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/',
-          description: 'คู่มือทีละขั้นตอนสำหรับการจบคอร์ส Advanced Open Water Diver ของคุณ',
-          category: 'บทความ',
-          keywords: ['คอร์ส advanced', 'วิธีการ', 'advanced open water', 'คอร์สการดำน้ำ', 'ทีละขั้นตอน']
-        },
-        {
-          title: 'วิธีการทำฟันไดฟ์',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/',
-          description: 'คู่มือที่สมบูรณ์สำหรับการวางแผนและเพลิดเพลินกับฟันไดฟ์ในเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ฟันไดฟ์', 'วิธีการ', 'การดำน้ำสันทนาการ', 'การวางแผน', 'ความเพลิดเพลิน']
-        },
-        {
-          title: 'วิธีการเป็น Master Scuba Diver',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/',
-          description: 'คู่มือสำหรับการได้รับใบรับรอง Master Scuba Diver',
-          category: 'บทความ',
-          keywords: ['master scuba diver', 'วิธีการ', 'ใบรับรอง', 'ขั้นสูง', 'คอร์สพิเศษ']
-        },
-        {
-          title: 'วิธีการทำลองดำน้ำ',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/',
-          description: 'คู่มือที่สมบูรณ์สำหรับการสัมผัสประสบการณ์ลองดำน้ำครั้งแรกของคุณในเกาะช้าง',
-          category: 'บทความ',
-          keywords: ['ลองดำน้ำ', 'วิธีการ', 'ครั้งแรก', 'ประสบการณ์', 'การดำน้ำค้นพบ']
-        },
-        {
-          title: 'วิธีการจบคอร์ส Open Water',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/',
-          description: 'คู่มือทีละขั้นตอนสำหรับการจบคอร์ส Open Water Diver ของคุณ',
-          category: 'บทความ',
-          keywords: ['คอร์ส open water', 'วิธีการ', 'คอร์สเริ่มต้น', 'ใบรับรอง', 'ทีละขั้นตอน']
-        },
-        {
-          title: 'วิธีการจบคอร์ส Rescue Diver',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/',
-          description: 'คู่มือสำหรับการจบคอร์ส Rescue Diver ของคุณและการพัฒนาทักษะการตอบสนองฉุกเฉิน',
-          category: 'บทความ',
-          keywords: ['คอร์ส rescue diver', 'วิธีการ', 'การช่วยเหลือ', 'ฉุกเฉิน', 'ความปลอดภัย', 'ใบรับรอง']
-        },
-        {
-          title: 'วิธีการทำ Scuba Review',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/',
-          description: 'คู่มือสำหรับการทบทวนทักษะการดำน้ำของคุณด้วย scuba review',
-          category: 'บทความ',
-          keywords: ['scuba review', 'วิธีการ', 'ทบทวนทักษะ', 'การฝึกฝน', 'การทบทวน']
-        },
-        {
-          title: 'วิธีการจบคอร์ส Open Advanced',
-          url: '/th/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/',
-          description: 'คู่มือสำหรับการจบแพ็คเกจคอร์ส Open Advanced',
-          category: 'บทความ',
-          keywords: ['open advanced', 'วิธีการ', 'แพ็คเกจคอร์ส', 'ขั้นสูง', 'ใบรับรอง']
-        },
-                 {
-           title: 'วิธีการจบคอร์สพิเศษ',
-           url: '/th/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/',
-           description: 'คู่มือสำหรับการเลือกและจบคอร์สการดำน้ำพิเศษ',
-           category: 'บทความ',
-           keywords: ['คอร์สพิเศษ', 'วิธีการ', 'พิเศษ', 'ขั้นสูง', 'ใบรับรอง', 'เฉพาะทาง']
-         },
-         
-         // FAQs
-         {
-           title: 'คำถามที่พบบ่อยการดำน้ำ',
-           url: '/th/faqs/',
-           description: 'ค้นหาคำตอบสำหรับคำถามที่พบบ่อยเกี่ยวกับการดำน้ำในเกาะช้าง',
-           category: 'FAQ',
-           keywords: ['faq', 'คำถาม', 'คำตอบ', 'ความช่วยเหลือ', 'การดำน้ำ']
-         },
-         {
-           title: 'คำถามที่พบบ่อยคอร์สดำน้ำ',
-           url: '/th/faqs/faq-dive-courses-koh-chang/',
-           description: 'คำถามทั่วไปเกี่ยวกับคอร์สดำน้ำและการรับรอง',
-           category: 'FAQ',
-           keywords: ['คอร์ส', 'การรับรอง', 'การฝึกอบรม', 'คำถาม', 'การดำน้ำ']
-         },
-         {
-           title: 'คำถามที่พบบ่อยอุปกรณ์และโลจิสติกส์',
-           url: '/th/faqs/faq-equipment-logistics-koh-chang/',
-           description: 'คำถามเกี่ยวกับอุปกรณ์ดำน้ำ การเช่า และโลจิสติกส์',
-           category: 'FAQ',
-           keywords: ['อุปกรณ์', 'โลจิสติกส์', 'การเช่า', 'gear', 'คำถาม']
-         },
-         {
-           title: 'คำถามทั่วไปการดำน้ำ',
-           url: '/th/faqs/faq-general-questions-koh-chang/',
-           description: 'คำถามทั่วไปเกี่ยวกับการดำน้ำและบริการของเรา',
-           category: 'FAQ',
-           keywords: ['ทั่วไป', 'คำถาม', 'บริการ', 'การดำน้ำ', 'ความช่วยเหลือ']
-         },
-         {
-           title: 'การเดินทางและที่พัก',
-           url: '/th/faqs/faq-getting-here-accommodation/',
-           description: 'ข้อมูลเกี่ยวกับการเดินทางไปเกาะช้างและตัวเลือกที่พัก',
-           category: 'FAQ',
-           keywords: ['การเดินทาง', 'ที่พัก', 'เกาะช้าง', 'ประเทศไทย', 'ท่องเที่ยว']
-         },
-         {
-           title: 'คำถามที่พบบ่อยลองดำน้ำและฟันไดฟ์',
-           url: '/th/faqs/faq-try-dive-fun-dives-koh-chang/',
-           description: 'คำถามเกี่ยวกับลองดำน้ำและการดำน้ำสันทนาการ',
-           category: 'FAQ',
-           keywords: ['ลองดำน้ำ', 'ฟันไดฟ์', 'สันทนาการ', 'คำถาม', 'การดำน้ำ']
-         },
-         {
-           title: 'คำถามที่พบบ่อยสุขภาพและความปลอดภัย',
-           url: '/th/faqs/faq-diving-health-safety-thailand/',
-           description: 'ข้อมูลสุขภาพและความปลอดภัยสำหรับการดำน้ำในประเทศไทย',
-           category: 'FAQ',
-           keywords: ['สุขภาพ', 'ความปลอดภัย', 'ประเทศไทย', 'การแพทย์', 'การดำน้ำ']
-         },
-         {
-           title: 'คำถามที่พบบ่อยการดำน้ำเกาะช้าง',
-           url: '/th/faqs/faq-diving-koh-chang/',
-           description: 'คำถามเฉพาะเกี่ยวกับสภาพการดำน้ำและจุดดำน้ำบนเกาะช้าง',
-           category: 'FAQ',
-           keywords: ['เกาะช้าง', 'การดำน้ำ', 'สภาพ', 'จุดดำน้ำ', 'คำถาม']
-         },
-         {
-           title: 'คำถามที่พบบ่อยการจองและการชำระเงิน',
-           url: '/th/faqs/faq-booking-payment-scuba-koh-chang/',
-           description: 'ข้อมูลเกี่ยวกับขั้นตอนการจองและตัวเลือกการชำระเงิน',
-           category: 'FAQ',
-           keywords: ['การจอง', 'การชำระเงิน', 'ขั้นตอน', 'ตัวเลือก', 'การสำรอง']
-         },
-         
-         // Other Pages
-         {
-           title: 'เกี่ยวกับช้างไดฟ์วิ่ง',
-           url: '/th/about/',
-           description: 'เรียนรู้เกี่ยวกับศูนย์ดำน้ำของเรา ผู้สอน และประสบการณ์ตั้งแต่ปี 2005',
-           category: 'เกี่ยวกับเรา',
-           keywords: ['เกี่ยวกับ', 'ศูนย์ดำน้ำ', 'ผู้สอน', 'ประสบการณ์', 'ประวัติศาสตร์']
-         },
-         {
-           title: 'ติดต่อเรา',
-           url: '/th/contact/',
-           description: 'ติดต่อเราเพื่อการจอง คำถาม หรือข้อมูล',
-           category: 'ติดต่อ',
-           keywords: ['ติดต่อ', 'การจอง', 'คำถาม', 'ข้อมูล', 'เข้าถึง']
-         },
-         {
-           title: 'ราคาการดำน้ำ',
-           url: '/th/prices/',
-           description: 'ดูราคาปัจจุบันของเราสำหรับคอร์ส ฟันไดฟ์ และการเช่าอุปกรณ์',
-           category: 'ราคา',
-           keywords: ['ราคา', 'ค่าใช้จ่าย', 'อัตรา', 'คอร์ส', 'ฟันไดฟ์', 'การเช่า']
-         },
-         {
-           title: 'สภาพอากาศเกาะช้าง',
-           url: '/th/weather/',
-           description: 'ตรวจสอบสภาพอากาศปัจจุบันและการพยากรณ์สำหรับการดำน้ำในเกาะช้าง',
-           category: 'สภาพอากาศ',
-           keywords: ['สภาพอากาศ', 'การพยากรณ์', 'สภาพ', 'เกาะช้าง', 'การดำน้ำ']
-         },
-         {
-           title: 'วิดีโอการดำน้ำ',
-           url: '/th/videos/',
-           description: 'ดูวิดีโอใต้น้ำและไฮไลท์การดำน้ำจากเกาะช้าง',
-           category: 'วิดีโอ',
-           keywords: ['วิดีโอ', 'ใต้น้ำ', 'การดำน้ำ', 'เกาะช้าง', 'ไฮไลท์']
-         }
-       ];
-
-      // Search functionality
-      document.getElementById('searchForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const query = document.getElementById('searchInput').value.trim();
-        if (query) {
-          performSearch(query);
+      // Dynamic search data generation from sitemap
+      let searchData = [];
+      
+      // Function to fetch and parse sitemap
+      async function loadSearchDataFromSitemap() {
+        try {
+          const response = await fetch('/sitemap.xml');
+          const xmlText = await response.text();
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+          
+          const urls = xmlDoc.querySelectorAll('url');
+          const currentLang = window.location.pathname.includes('/de/') ? 'de' : 
+                             window.location.pathname.includes('/th/') ? 'th' : 'en';
+          
+          urls.forEach(url => {
+            const loc = url.querySelector('loc').textContent;
+            const lastmod = url.querySelector('lastmod')?.textContent || '';
+            const priority = url.querySelector('priority')?.textContent || '0.5';
+            
+            // Only include pages for current language
+            if (loc.includes(`/${currentLang}/`) || (currentLang === 'en' && !loc.includes('/de/') && !loc.includes('/th/'))) {
+              const urlPath = loc.replace('https://changdiving.com', '');
+              
+              // Skip search page itself and main index
+              if (urlPath.includes('/search/') || urlPath === '/' || urlPath === `/${currentLang}/`) {
+                return;
+              }
+              
+              // Generate title and description from URL
+              const pathParts = urlPath.split('/').filter(part => part);
+              let title = '';
+              let description = '';
+              let category = '';
+              let keywords = [];
+              
+              // Extract meaningful title from URL
+              if (pathParts.length > 0) {
+                const lastPart = pathParts[pathParts.length - 1];
+                title = lastPart
+                  .split('-')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+                
+                // Add category based on path
+                if (urlPath.includes('/courses/')) {
+                  category = 'คอร์ส';
+                  keywords = ['คอร์ส', 'ดำน้ำ', 'scuba', 'การฝึก', 'ใบรับรอง'];
+                } else if (urlPath.includes('/dive-sites/')) {
+                  category = 'จุดดำน้ำ';
+                  keywords = ['จุดดำน้ำ', 'ดำน้ำ', 'ใต้ทะเล', 'สัตว์ทะเล', 'ปะการัง'];
+                } else if (urlPath.includes('/day-trips/')) {
+                  category = 'ทริปวันเดียว';
+                  keywords = ['ทริปวันเดียว', 'fun dive', 'ดำน้ำตื้น', 'ผจญภัย'];
+                } else if (urlPath.includes('/posts/')) {
+                  category = 'บทความ';
+                  keywords = ['บทความ', 'blog', 'ข้อมูล', 'คู่มือ', 'ความรู้'];
+                } else if (urlPath.includes('/faqs/')) {
+                  category = 'คำถามที่พบบ่อย';
+                  keywords = ['faq', 'คำถาม', 'คำตอบ', 'ช่วยเหลือ'];
+                } else if (urlPath.includes('/equipment/')) {
+                  category = 'อุปกรณ์';
+                  keywords = ['อุปกรณ์', 'gear', 'อุปกรณ์ดำน้ำ', 'อุปกรณ์ scuba'];
+                } else {
+                  category = 'หน้าเว็บ';
+                  keywords = ['ข้อมูล', 'หน้าเว็บ'];
+                }
+                
+                // Add specific keywords based on URL content
+                if (urlPath.includes('wreck')) {
+                  keywords.push('เรือจม', 'shipwreck');
+                }
+                if (urlPath.includes('nitrox')) {
+                  keywords.push('nitrox', 'อากาศเสริม');
+                }
+                if (urlPath.includes('advanced')) {
+                  keywords.push('ขั้นสูง', 'มีประสบการณ์');
+                }
+                if (urlPath.includes('beginner')) {
+                  keywords.push('ผู้เริ่มต้น', 'เริ่มต้น');
+                }
+                if (urlPath.includes('marine')) {
+                  keywords.push('สัตว์ทะเล', 'ปลา', 'ปะการัง');
+                }
+                if (urlPath.includes('safety')) {
+                  keywords.push('ความปลอดภัย', 'ปลอดภัย');
+                }
+                
+                description = `${title} - ${category} บนเว็บไซต์ Chang Diving Center`;
+              }
+              
+              if (title) {
+                searchData.push({
+                  title: title,
+                  url: urlPath,
+                  description: description,
+                  category: category,
+                  keywords: keywords,
+                  priority: parseFloat(priority)
+                });
+              }
+            }
+          });
+          
+          // Sort by priority
+          searchData.sort((a, b) => b.priority - a.priority);
+          
+          console.log(`Loaded ${searchData.length} searchable items for ${currentLang}`);
+          
+        } catch (error) {
+          console.error('Error loading sitemap:', error);
+          // Fallback to basic search data
+          searchData = [
+            {
+              title: 'Open Water Diver Course',
+              url: '/th/courses/open-water-diver/',
+              description: 'เรียนรู้การดำน้ำ scuba กับคอร์ส PADI Open Water Diver ของเรา',
+              category: 'คอร์ส',
+              keywords: ['open water', 'ผู้เริ่มต้น', 'คอร์ส', 'padi', 'ดำน้ำ scuba']
+            }
+          ];
         }
+      }
+      
+      // Load search data when page loads
+      document.addEventListener('DOMContentLoaded', function() {
+        loadSearchDataFromSitemap().then(() => {
+          // Check if there's a search query in URL
+          const urlParams = new URLSearchParams(window.location.search);
+          const query = urlParams.get('q');
+          if (query) {
+            document.getElementById('searchInput').value = query;
+            performSearch(query);
+          }
+        });
       });
-      
-      // Check for search query in URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const searchQuery = urlParams.get('q');
-      if (searchQuery) {
-        document.getElementById('searchInput').value = searchQuery;
-        performSearch(searchQuery);
-      }
-      
+
       function performSearch(query) {
-        const resultsContainer = document.getElementById('searchResults');
-        resultsContainer.innerHTML = '<div class="loading">กำลังค้นหา...</div>';
+        if (!query.trim()) {
+          document.getElementById('searchResults').innerHTML = '<div class="search-info">กรุณาใส่คำค้นหา</div>';
+          return;
+        }
         
-        // Simulate search delay
-        setTimeout(() => {
-          displaySearchResults(query);
-        }, 300);
-      }
-      
-      function displaySearchResults(query) {
-        const resultsContainer = document.getElementById('searchResults');
         const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
-        
-        // Search through all data
-        const filteredResults = searchData.filter(item => {
+        const results = searchData.filter(item => {
           const searchableText = `${item.title} ${item.description} ${item.keywords.join(' ')} ${item.category}`.toLowerCase();
           return searchTerms.some(term => searchableText.includes(term));
         });
         
-        // Sort by relevance (exact matches first)
-        filteredResults.sort((a, b) => {
-          const aScore = getRelevanceScore(a, searchTerms);
-          const bScore = getRelevanceScore(b, searchTerms);
-          return bScore - aScore;
+        // Sort by relevance
+        results.sort((a, b) => {
+          const scoreA = getRelevanceScore(a, searchTerms);
+          const scoreB = getRelevanceScore(b, searchTerms);
+          return scoreB - scoreA;
         });
         
-        if (filteredResults.length > 0) {
-          resultsContainer.innerHTML = `
-            <div class="search-info">
-              <h2>ผลการค้นหาสำหรับ "${query}"</h2>
-              <p>พบ ${filteredResults.length} ผลลัพธ์</p>
-            </div>
-            <div class="results-list">
-              ${filteredResults.map(result => `
-                <div class="result-item">
-                  <div class="result-category">${result.category}</div>
-                  <h3><a href="${result.url}">${result.title}</a></h3>
-                  <p>${result.description}</p>
-                </div>
-              `).join('')}
-            </div>
-          `;
-        } else {
-          resultsContainer.innerHTML = `
-            <div class="search-info">
-              <h2>ไม่พบผลลัพธ์สำหรับ "${query}"</h2>
-              <p>ลองค้นหาด้วยคำอื่นๆ เช่น:</p>
-              <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
-                <li>"ดำน้ำ" หรือ "scuba"</li>
-                <li>"คอร์ส" หรือ "open water"</li>
-                <li>"จุดดำน้ำ" หรือ "เรือจม"</li>
-                <li>"อุปกรณ์" หรือ "gear"</li>
-                <li>"ฟันไดฟ์" หรือ "ไปเช้าเย็นกลับ"</li>
-              </ul>
-            </div>
-          `;
-        }
+        displaySearchResults(results, query);
       }
       
       function getRelevanceScore(item, searchTerms) {
@@ -844,13 +350,64 @@
         const keywords = item.keywords.join(' ').toLowerCase();
         
         searchTerms.forEach(term => {
+          // Title matches get highest score
           if (title.includes(term)) score += 10;
-          if (keywords.includes(term)) score += 5;
-          if (description.includes(term)) score += 2;
+          // Keyword matches get high score
+          if (keywords.includes(term)) score += 8;
+          // Description matches get medium score
+          if (description.includes(term)) score += 5;
+          // Partial matches
+          if (title.includes(term.substring(0, 3))) score += 3;
         });
         
         return score;
       }
+      
+      function displaySearchResults(results, query) {
+        const resultsContainer = document.getElementById('searchResults');
+        
+        if (results.length === 0) {
+          resultsContainer.innerHTML = `
+            <div class="search-info">
+              <h3>ไม่พบผลลัพธ์สำหรับ "${query}"</h3>
+              <p>ลองใช้คำค้นหาอื่นหรือดูหมวดหมู่ของเรา:</p>
+              <ul>
+                <li>"คอร์สดำน้ำ" หรือ "open water"</li>
+                <li>"จุดดำน้ำ" หรือ "เรือจม"</li>
+                <li>"ทริปวันเดียว" หรือ "fun dive"</li>
+                <li>"อุปกรณ์" หรือ "equipment"</li>
+              </ul>
+            </div>
+          `;
+          return;
+        }
+        
+        let html = `<div class="search-info"><h3>${results.length} ผลลัพธ์สำหรับ "${query}"</h3></div>`;
+        
+        results.forEach(item => {
+          html += `
+            <div class="result-item">
+              <div class="result-category">${item.category}</div>
+              <h3><a href="${item.url}">${item.title}</a></h3>
+              <p>${item.description}</p>
+            </div>
+          `;
+        });
+        
+        resultsContainer.innerHTML = html;
+      }
+      
+      // Handle form submission
+      document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const query = document.getElementById('searchInput').value;
+        performSearch(query);
+        
+        // Update URL
+        const url = new URL(window.location);
+        url.searchParams.set('q', query);
+        window.history.pushState({}, '', url);
+      });
     </script>
   </body>
 </html>
