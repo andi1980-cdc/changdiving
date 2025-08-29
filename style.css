@@ -1173,6 +1173,18 @@ button:focus,
     padding: 4px 0;
     font-size: 0.95em;
   }
+  
+  /* Zentriertes Menü nur für Hauptseiten (index.html) */
+  body:not(.search-page) .lang-switch {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  /* Dropdown-Menü auch zentrieren für Hauptseiten */
+  body:not(.search-page) .dropdown-menu {
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 /* =====================
