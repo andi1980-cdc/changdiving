@@ -51,16 +51,102 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://changdiving.com/",
+        "url": "https://changdiving.com/en/",
         "name": "Chang Diving Center",
         "description": "Professional scuba diving courses and dive trips on Koh Chang, Thailand",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/en/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/en/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }
     </script>
+    
+    <style>
+      .search-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      
+      .search-form {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .search-form input {
+        flex: 1;
+        padding: 1rem;
+        border: 2px solid #0077b6;
+        border-radius: 8px;
+        font-size: 1.1rem;
+      }
+      
+      .search-form button {
+        padding: 1rem 2rem;
+        background: #0077b6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+      
+      .search-form button:hover {
+        background: #005a8b;
+      }
+      
+      .search-results {
+        margin-top: 2rem;
+      }
+      
+      .result-item {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-left: 4px solid #0077b6;
+      }
+      
+      .result-item h3 {
+        margin: 0 0 0.5rem 0;
+        color: #0077b6;
+      }
+      
+      .result-item a {
+        color: #0077b6;
+        text-decoration: none;
+      }
+      
+      .result-item a:hover {
+        text-decoration: underline;
+      }
+      
+      .result-category {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      
+      .loading {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+      
+      .search-info {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -98,6 +184,171 @@
     <!-- Scripts -->
     <script src="/js/global.js"></script>
     <script>
+      // Comprehensive search data
+      const searchData = [
+        // Courses
+        {
+          title: 'Open Water Diver Course',
+          url: '/en/courses/open-water-diver/',
+          description: 'Learn to scuba dive with our PADI Open Water Diver course on Koh Chang. Your first step into the underwater world.',
+          category: 'Course',
+          keywords: ['open water', 'diver', 'course', 'padi', 'beginner', 'learn', 'scuba', 'diving']
+        },
+        {
+          title: 'Advanced Open Water Diver',
+          url: '/en/courses/advanced/',
+          description: 'Take your diving to the next level with our Advanced Open Water course. Deep diving, navigation, and more.',
+          category: 'Course',
+          keywords: ['advanced', 'open water', 'diver', 'course', 'deep', 'navigation']
+        },
+        {
+          title: 'Rescue Diver Course',
+          url: '/en/courses/rescue-diver/',
+          description: 'Learn to prevent and manage problems in the water, and become more confident in your skills.',
+          category: 'Course',
+          keywords: ['rescue', 'diver', 'course', 'safety', 'emergency', 'prevention']
+        },
+        {
+          title: 'Divemaster Course',
+          url: '/en/courses/divemaster/',
+          description: 'Become a professional diver with our Divemaster course. Lead dives and assist instructors.',
+          category: 'Course',
+          keywords: ['divemaster', 'professional', 'lead', 'instructor', 'assistant']
+        },
+        {
+          title: 'Nitrox Diver Course',
+          url: '/en/courses/nitrox-diver/',
+          description: 'Learn to dive with enriched air nitrox for longer bottom times and shorter surface intervals.',
+          category: 'Course',
+          keywords: ['nitrox', 'enriched air', 'longer dives', 'bottom time']
+        },
+        {
+          title: 'Deep Diver Course',
+          url: '/en/courses/deep-diver/',
+          description: 'Explore deeper dive sites safely with our Deep Diver specialty course.',
+          category: 'Course',
+          keywords: ['deep', 'diver', 'specialty', 'depth', 'exploration']
+        },
+        {
+          title: 'Wreck Diver Course',
+          url: '/en/courses/wreck-diver/',
+          description: 'Learn to safely explore shipwrecks with our Wreck Diver specialty course.',
+          category: 'Course',
+          keywords: ['wreck', 'shipwreck', 'exploration', 'specialty']
+        },
+        {
+          title: 'Night Diver Course',
+          url: '/en/courses/night/',
+          description: 'Discover the underwater world at night with our Night Diver specialty course.',
+          category: 'Course',
+          keywords: ['night', 'diving', 'specialty', 'nocturnal', 'marine life']
+        },
+        {
+          title: 'Navigation Diver Course',
+          url: '/en/courses/navigation/',
+          description: 'Master underwater navigation with compass and natural references.',
+          category: 'Course',
+          keywords: ['navigation', 'compass', 'underwater', 'orientation']
+        },
+        {
+          title: 'Solo Diver Course',
+          url: '/en/courses/solo-diver/',
+          description: 'Learn to dive independently and safely with our Solo Diver course.',
+          category: 'Course',
+          keywords: ['solo', 'independent', 'diving', 'self-reliant']
+        },
+        {
+          title: 'Sidemount Diver Course',
+          url: '/en/courses/sidemount/',
+          description: 'Learn sidemount diving configuration for better trim and gas management.',
+          category: 'Course',
+          keywords: ['sidemount', 'configuration', 'trim', 'gas management']
+        },
+        {
+          title: 'Technical Diving Courses',
+          url: '/en/courses/technical-diving-courses/',
+          description: 'Advanced technical diving courses for experienced divers.',
+          category: 'Course',
+          keywords: ['technical', 'advanced', 'deco', 'trimix', 'rebreather']
+        },
+        
+        // Dive Sites
+        {
+          title: 'HTMS Chang Wreck',
+          url: '/en/dive-sites/htms-chang-wreck/',
+          description: 'Explore the famous HTMS Chang wreck, one of the best dive sites on Koh Chang.',
+          category: 'Dive Site',
+          keywords: ['htms chang', 'wreck', 'shipwreck', 'koh chang', 'famous']
+        },
+        {
+          title: 'Koh Rang Pinnacle',
+          url: '/en/dive-sites/koh-rang-pinnacle/',
+          description: 'Beautiful pinnacle dive site with colorful coral and abundant marine life.',
+          category: 'Dive Site',
+          keywords: ['koh rang', 'pinnacle', 'coral', 'marine life', 'reef']
+        },
+        {
+          title: 'Hin Luk Bat',
+          url: '/en/dive-sites/hin-luk-bat/',
+          description: 'Rock formation dive site with diverse marine life and good visibility.',
+          category: 'Dive Site',
+          keywords: ['hin luk bat', 'rock', 'formation', 'marine life', 'visibility']
+        },
+        {
+          title: 'Secret Reef',
+          url: '/en/dive-sites/secret-reef/',
+          description: 'Hidden gem with pristine coral reefs and tropical fish.',
+          category: 'Dive Site',
+          keywords: ['secret reef', 'coral', 'tropical fish', 'pristine', 'hidden']
+        },
+        {
+          title: 'Blueberry Hill',
+          url: '/en/dive-sites/blueberry-hill/',
+          description: 'Shallow reef dive perfect for beginners and snorkelers.',
+          category: 'Dive Site',
+          keywords: ['blueberry hill', 'shallow', 'reef', 'beginner', 'snorkeling']
+        },
+        
+        // Day Trips
+        {
+          title: 'Fun Dives',
+          url: '/en/day-trips/fun-dives/',
+          description: 'Daily fun dives to the best dive sites around Koh Chang.',
+          category: 'Day Trip',
+          keywords: ['fun dives', 'daily', 'dive sites', 'recreational']
+        },
+        {
+          title: 'Try Dive',
+          url: '/en/day-trips/try-dive/',
+          description: 'Experience scuba diving for the first time with our try dive program.',
+          category: 'Day Trip',
+          keywords: ['try dive', 'first time', 'experience', 'discovery']
+        },
+        {
+          title: 'Snorkeling Trips',
+          url: '/en/day-trips/snorkeling/',
+          description: 'Explore the underwater world with our snorkeling trips.',
+          category: 'Day Trip',
+          keywords: ['snorkeling', 'surface', 'exploration', 'marine life']
+        },
+        
+        // Equipment
+        {
+          title: 'Scuba Equipment',
+          url: '/en/equipment/',
+          description: 'Quality scuba diving equipment for sale and rental.',
+          category: 'Equipment',
+          keywords: ['equipment', 'gear', 'rental', 'sale', 'scuba']
+        },
+        {
+          title: 'Used Scuba Gear',
+          url: '/en/equipment/used-scuba-gear/',
+          description: 'Affordable used scuba diving equipment in good condition.',
+          category: 'Equipment',
+          keywords: ['used', 'second hand', 'affordable', 'gear', 'equipment']
+        }
+      ];
+
       // Search functionality
       document.getElementById('searchForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -119,39 +370,28 @@
         const resultsContainer = document.getElementById('searchResults');
         resultsContainer.innerHTML = '<div class="loading">Searching...</div>';
         
-        // Simple search implementation
-        // In a real implementation, you would search through your content
+        // Simulate search delay
         setTimeout(() => {
           displaySearchResults(query);
-        }, 500);
+        }, 300);
       }
       
       function displaySearchResults(query) {
         const resultsContainer = document.getElementById('searchResults');
+        const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
         
-        // This is a simplified search - in reality you'd search your actual content
-        const mockResults = [
-          {
-            title: 'Open Water Diver Course',
-            url: '/en/courses/open-water-diver/',
-            description: 'Learn to scuba dive with our PADI Open Water Diver course on Koh Chang.'
-          },
-          {
-            title: 'Advanced Open Water Diver',
-            url: '/en/courses/advanced/',
-            description: 'Take your diving to the next level with our Advanced Open Water course.'
-          },
-          {
-            title: 'HTMS Chang Wreck',
-            url: '/en/dive-sites/htms-chang-wreck/',
-            description: 'Explore the famous HTMS Chang wreck, one of the best dive sites on Koh Chang.'
-          }
-        ];
+        // Search through all data
+        const filteredResults = searchData.filter(item => {
+          const searchableText = `${item.title} ${item.description} ${item.keywords.join(' ')} ${item.category}`.toLowerCase();
+          return searchTerms.some(term => searchableText.includes(term));
+        });
         
-        const filteredResults = mockResults.filter(result => 
-          result.title.toLowerCase().includes(query.toLowerCase()) ||
-          result.description.toLowerCase().includes(query.toLowerCase())
-        );
+        // Sort by relevance (exact matches first)
+        filteredResults.sort((a, b) => {
+          const aScore = getRelevanceScore(a, searchTerms);
+          const bScore = getRelevanceScore(b, searchTerms);
+          return bScore - aScore;
+        });
         
         if (filteredResults.length > 0) {
           resultsContainer.innerHTML = `
@@ -162,6 +402,7 @@
             <div class="results-list">
               ${filteredResults.map(result => `
                 <div class="result-item">
+                  <div class="result-category">${result.category}</div>
                   <h3><a href="${result.url}">${result.title}</a></h3>
                   <p>${result.description}</p>
                 </div>
@@ -172,10 +413,32 @@
           resultsContainer.innerHTML = `
             <div class="search-info">
               <h2>No results found for "${query}"</h2>
-              <p>Try searching for different terms like "diving", "courses", or "dive sites".</p>
+              <p>Try searching for different terms like:</p>
+              <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
+                <li>"diving" or "scuba"</li>
+                <li>"courses" or "open water"</li>
+                <li>"dive sites" or "wreck"</li>
+                <li>"equipment" or "gear"</li>
+                <li>"fun dives" or "day trips"</li>
+              </ul>
             </div>
           `;
         }
+      }
+      
+      function getRelevanceScore(item, searchTerms) {
+        let score = 0;
+        const title = item.title.toLowerCase();
+        const description = item.description.toLowerCase();
+        const keywords = item.keywords.join(' ').toLowerCase();
+        
+        searchTerms.forEach(term => {
+          if (title.includes(term)) score += 10;
+          if (keywords.includes(term)) score += 5;
+          if (description.includes(term)) score += 2;
+        });
+        
+        return score;
       }
     </script>
   </body>

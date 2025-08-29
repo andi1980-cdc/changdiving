@@ -13,11 +13,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Suche - Chang Diving Center</title>
-    <meta name="description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Informationen zum Tauchen auf Koh Chang, Thailand." />
+    <meta name="description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Tauchinformationen auf Koh Chang, Thailand." />
     
     <!-- Open Graph -->
     <meta property="og:title" content="Suche - Chang Diving Center" />
-    <meta property="og:description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Informationen zum Tauchen auf Koh Chang, Thailand." />
+    <meta property="og:description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Tauchinformationen auf Koh Chang, Thailand." />
     <meta property="og:url" content="https://changdiving.com/de/search/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
@@ -25,7 +25,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Suche - Chang Diving Center" />
-    <meta name="twitter:description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Informationen zum Tauchen auf Koh Chang, Thailand." />
+    <meta name="twitter:description" content="Durchsuchen Sie unsere Tauchkurse, Tauchplätze und Tauchinformationen auf Koh Chang, Thailand." />
     <meta name="twitter:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
     
     <!-- Hreflang -->
@@ -51,16 +51,102 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://changdiving.com/",
+        "url": "https://changdiving.com/de/",
         "name": "Chang Diving Center",
         "description": "Professionelle Tauchkurse und Tauchausflüge auf Koh Chang, Thailand",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/de/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/de/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }
     </script>
+    
+    <style>
+      .search-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      
+      .search-form {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .search-form input {
+        flex: 1;
+        padding: 1rem;
+        border: 2px solid #0077b6;
+        border-radius: 8px;
+        font-size: 1.1rem;
+      }
+      
+      .search-form button {
+        padding: 1rem 2rem;
+        background: #0077b6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+      
+      .search-form button:hover {
+        background: #005a8b;
+      }
+      
+      .search-results {
+        margin-top: 2rem;
+      }
+      
+      .result-item {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-left: 4px solid #0077b6;
+      }
+      
+      .result-item h3 {
+        margin: 0 0 0.5rem 0;
+        color: #0077b6;
+      }
+      
+      .result-item a {
+        color: #0077b6;
+        text-decoration: none;
+      }
+      
+      .result-item a:hover {
+        text-decoration: underline;
+      }
+      
+      .result-category {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      
+      .loading {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+      
+      .search-info {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -68,8 +154,8 @@
     
     <div class="container">
       <header>
-        <h1>Chang Diving Center durchsuchen</h1>
-        <p>Finden Sie Tauchkurse, Tauchplätze und Informationen zum Tauchen</p>
+        <h1>Suche Chang Diving Center</h1>
+        <p>Finden Sie Tauchkurse, Tauchplätze und Tauchinformationen</p>
       </header>
       
       <!-- Search Form -->
@@ -98,6 +184,136 @@
     <!-- Scripts -->
     <script src="/js/global.js"></script>
     <script>
+      // Comprehensive search data in German
+      const searchData = [
+        // Courses
+        {
+          title: 'Open Water Diver Kurs',
+          url: '/de/courses/open-water-diver/',
+          description: 'Lernen Sie das Tauchen mit unserem PADI Open Water Diver Kurs auf Koh Chang. Ihr erster Schritt in die Unterwasserwelt.',
+          category: 'Kurs',
+          keywords: ['open water', 'diver', 'kurs', 'padi', 'anfänger', 'lernen', 'tauchen', 'scuba']
+        },
+        {
+          title: 'Advanced Open Water Diver',
+          url: '/de/courses/advanced/',
+          description: 'Bringen Sie Ihr Tauchen auf das nächste Level mit unserem Advanced Open Water Kurs. Tieftauchen, Navigation und mehr.',
+          category: 'Kurs',
+          keywords: ['advanced', 'open water', 'diver', 'kurs', 'tief', 'navigation']
+        },
+        {
+          title: 'Rescue Diver Kurs',
+          url: '/de/courses/rescue-diver/',
+          description: 'Lernen Sie, Probleme im Wasser zu verhindern und zu bewältigen, und werden Sie selbstbewusster in Ihren Fähigkeiten.',
+          category: 'Kurs',
+          keywords: ['rescue', 'diver', 'kurs', 'sicherheit', 'notfall', 'prävention']
+        },
+        {
+          title: 'Divemaster Kurs',
+          url: '/de/courses/divemaster/',
+          description: 'Werden Sie ein professioneller Taucher mit unserem Divemaster Kurs. Führen Sie Tauchgänge und unterstützen Sie Tauchlehrer.',
+          category: 'Kurs',
+          keywords: ['divemaster', 'professionell', 'führen', 'tauchlehrer', 'assistent']
+        },
+        {
+          title: 'Nitrox Diver Kurs',
+          url: '/de/courses/nitrox-diver/',
+          description: 'Lernen Sie das Tauchen mit angereicherter Luft Nitrox für längere Grundzeiten und kürzere Oberflächenpausen.',
+          category: 'Kurs',
+          keywords: ['nitrox', 'angereicherte luft', 'längere tauchgänge', 'grundzeit']
+        },
+        {
+          title: 'Deep Diver Kurs',
+          url: '/de/courses/deep-diver/',
+          description: 'Erkunden Sie tiefer gelegene Tauchplätze sicher mit unserem Deep Diver Spezialkurs.',
+          category: 'Kurs',
+          keywords: ['deep', 'diver', 'spezialkurs', 'tiefe', 'erkundung']
+        },
+        {
+          title: 'Wrack Diver Kurs',
+          url: '/de/courses/wrack-diver/',
+          description: 'Lernen Sie, Schiffswracks sicher zu erkunden mit unserem Wrack Diver Spezialkurs.',
+          category: 'Kurs',
+          keywords: ['wrack', 'schiffswrack', 'erkundung', 'spezialkurs']
+        },
+        {
+          title: 'Night Diver Kurs',
+          url: '/de/courses/night/',
+          description: 'Entdecken Sie die Unterwasserwelt bei Nacht mit unserem Night Diver Spezialkurs.',
+          category: 'Kurs',
+          keywords: ['night', 'tauchen', 'spezialkurs', 'nacht', 'meerestiere']
+        },
+        
+        // Dive Sites
+        {
+          title: 'HTMS Chang Wrack',
+          url: '/de/dive-sites/htms-chang-wreck/',
+          description: 'Erkunden Sie das berühmte HTMS Chang Wrack, einer der besten Tauchplätze auf Koh Chang.',
+          category: 'Tauchplatz',
+          keywords: ['htms chang', 'wrack', 'schiffswrack', 'koh chang', 'berühmt']
+        },
+        {
+          title: 'Koh Rang Pinnacle',
+          url: '/de/dive-sites/koh-rang-pinnacle/',
+          description: 'Schöner Pinnacle-Tauchplatz mit farbenfrohen Korallen und reichem Meeresleben.',
+          category: 'Tauchplatz',
+          keywords: ['koh rang', 'pinnacle', 'korallen', 'meeresleben', 'riff']
+        },
+        {
+          title: 'Hin Luk Bat',
+          url: '/de/dive-sites/hin-luk-bat/',
+          description: 'Felsformation-Tauchplatz mit vielfältigem Meeresleben und guter Sicht.',
+          category: 'Tauchplatz',
+          keywords: ['hin luk bat', 'fels', 'formation', 'meeresleben', 'sicht']
+        },
+        {
+          title: 'Secret Reef',
+          url: '/de/dive-sites/secret-reef/',
+          description: 'Verstecktes Juwel mit unberührten Korallenriffen und tropischen Fischen.',
+          category: 'Tauchplatz',
+          keywords: ['secret reef', 'korallen', 'tropische fische', 'unberührt', 'versteckt']
+        },
+        
+        // Day Trips
+        {
+          title: 'Fun Dives',
+          url: '/de/day-trips/fun-dives/',
+          description: 'Tägliche Fun Dives zu den besten Tauchplätzen rund um Koh Chang.',
+          category: 'Tagestrip',
+          keywords: ['fun dives', 'täglich', 'tauchplätze', 'freizeit']
+        },
+        {
+          title: 'Try Dive',
+          url: '/de/day-trips/try-dive/',
+          description: 'Erleben Sie das Tauchen zum ersten Mal mit unserem Try Dive Programm.',
+          category: 'Tagestrip',
+          keywords: ['try dive', 'erstes mal', 'erleben', 'entdeckung']
+        },
+        {
+          title: 'Schnorcheln',
+          url: '/de/day-trips/snorkeling/',
+          description: 'Erkunden Sie die Unterwasserwelt mit unseren Schnorchel-Trips.',
+          category: 'Tagestrip',
+          keywords: ['schnorcheln', 'oberfläche', 'erkundung', 'meeresleben']
+        },
+        
+        // Equipment
+        {
+          title: 'Tauchausrüstung',
+          url: '/de/equipment/',
+          description: 'Qualitativ hochwertige Tauchausrüstung zum Verkauf und Verleih.',
+          category: 'Ausrüstung',
+          keywords: ['ausrüstung', 'equipment', 'verleih', 'verkauf', 'tauchen']
+        },
+        {
+          title: 'Gebrauchte Tauchausrüstung',
+          url: '/de/equipment/used-scuba-gear/',
+          description: 'Erschwingliche gebrauchte Tauchausrüstung in gutem Zustand.',
+          category: 'Ausrüstung',
+          keywords: ['gebraucht', 'second hand', 'erschwinglich', 'ausrüstung']
+        }
+      ];
+
       // Search functionality
       document.getElementById('searchForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -119,38 +335,28 @@
         const resultsContainer = document.getElementById('searchResults');
         resultsContainer.innerHTML = '<div class="loading">Suche läuft...</div>';
         
-        // Simple search implementation
+        // Simulate search delay
         setTimeout(() => {
           displaySearchResults(query);
-        }, 500);
+        }, 300);
       }
       
       function displaySearchResults(query) {
         const resultsContainer = document.getElementById('searchResults');
+        const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
         
-        // Mock results for German
-        const mockResults = [
-          {
-            title: 'Open Water Diver Kurs',
-            url: '/de/courses/open-water-diver/',
-            description: 'Lernen Sie das Tauchen mit unserem PADI Open Water Diver Kurs auf Koh Chang.'
-          },
-          {
-            title: 'Advanced Open Water Diver',
-            url: '/de/courses/advanced/',
-            description: 'Bringen Sie Ihr Tauchen auf das nächste Level mit unserem Advanced Open Water Kurs.'
-          },
-          {
-            title: 'HTMS Chang Wrack',
-            url: '/de/dive-sites/htms-chang-wreck/',
-            description: 'Erkunden Sie das berühmte HTMS Chang Wrack, einer der besten Tauchplätze auf Koh Chang.'
-          }
-        ];
+        // Search through all data
+        const filteredResults = searchData.filter(item => {
+          const searchableText = `${item.title} ${item.description} ${item.keywords.join(' ')} ${item.category}`.toLowerCase();
+          return searchTerms.some(term => searchableText.includes(term));
+        });
         
-        const filteredResults = mockResults.filter(result => 
-          result.title.toLowerCase().includes(query.toLowerCase()) ||
-          result.description.toLowerCase().includes(query.toLowerCase())
-        );
+        // Sort by relevance (exact matches first)
+        filteredResults.sort((a, b) => {
+          const aScore = getRelevanceScore(a, searchTerms);
+          const bScore = getRelevanceScore(b, searchTerms);
+          return bScore - aScore;
+        });
         
         if (filteredResults.length > 0) {
           resultsContainer.innerHTML = `
@@ -161,6 +367,7 @@
             <div class="results-list">
               ${filteredResults.map(result => `
                 <div class="result-item">
+                  <div class="result-category">${result.category}</div>
                   <h3><a href="${result.url}">${result.title}</a></h3>
                   <p>${result.description}</p>
                 </div>
@@ -171,10 +378,32 @@
           resultsContainer.innerHTML = `
             <div class="search-info">
               <h2>Keine Ergebnisse für "${query}" gefunden</h2>
-              <p>Versuchen Sie andere Suchbegriffe wie "Tauchen", "Kurse" oder "Tauchplätze".</p>
+              <p>Versuchen Sie andere Suchbegriffe wie:</p>
+              <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
+                <li>"tauchen" oder "scuba"</li>
+                <li>"kurse" oder "open water"</li>
+                <li>"tauchplätze" oder "wrack"</li>
+                <li>"ausrüstung" oder "equipment"</li>
+                <li>"fun dives" oder "tagestrips"</li>
+              </ul>
             </div>
           `;
         }
+      }
+      
+      function getRelevanceScore(item, searchTerms) {
+        let score = 0;
+        const title = item.title.toLowerCase();
+        const description = item.description.toLowerCase();
+        const keywords = item.keywords.join(' ').toLowerCase();
+        
+        searchTerms.forEach(term => {
+          if (title.includes(term)) score += 10;
+          if (keywords.includes(term)) score += 5;
+          if (description.includes(term)) score += 2;
+        });
+        
+        return score;
       }
     </script>
   </body>

@@ -12,20 +12,20 @@
     
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ค้นหา - Chang Diving Center</title>
-    <meta name="description" content="ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    <title>ค้นหา - ช้างไดฟ์วิ่ง</title>
+    <meta name="description" content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
     
     <!-- Open Graph -->
-    <meta property="og:title" content="ค้นหา - Chang Diving Center" />
-    <meta property="og:description" content="ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    <meta property="og:title" content="ค้นหา - ช้างไดฟ์วิ่ง" />
+    <meta property="og:description" content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
     <meta property="og:url" content="https://changdiving.com/th/search/" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ค้นหา - Chang Diving Center" />
-    <meta name="twitter:description" content="ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    <meta name="twitter:title" content="ค้นหา - ช้างไดฟ์วิ่ง" />
+    <meta name="twitter:description" content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
     <meta name="twitter:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
     
     <!-- Hreflang -->
@@ -51,16 +51,102 @@
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "url": "https://changdiving.com/",
+        "url": "https://changdiving.com/th/",
         "name": "Chang Diving Center",
         "description": "คอร์สดำน้ำมืออาชีพและการเดินทางดำน้ำบนเกาะช้าง ประเทศไทย",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/th/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/th/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }
     </script>
+    
+    <style>
+      .search-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      
+      .search-form {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      
+      .search-form input {
+        flex: 1;
+        padding: 1rem;
+        border: 2px solid #0077b6;
+        border-radius: 8px;
+        font-size: 1.1rem;
+      }
+      
+      .search-form button {
+        padding: 1rem 2rem;
+        background: #0077b6;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+      
+      .search-form button:hover {
+        background: #005a8b;
+      }
+      
+      .search-results {
+        margin-top: 2rem;
+      }
+      
+      .result-item {
+        background: white;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-left: 4px solid #0077b6;
+      }
+      
+      .result-item h3 {
+        margin: 0 0 0.5rem 0;
+        color: #0077b6;
+      }
+      
+      .result-item a {
+        color: #0077b6;
+        text-decoration: none;
+      }
+      
+      .result-item a:hover {
+        text-decoration: underline;
+      }
+      
+      .result-category {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      
+      .loading {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+      
+      .search-info {
+        text-align: center;
+        padding: 2rem;
+        color: #666;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -68,8 +154,8 @@
     
     <div class="container">
       <header>
-        <h1>ค้นหา Chang Diving Center</h1>
-        <p>ค้นหาคอร์สดำน้ำ สถานที่ดำน้ำ และข้อมูลการดำน้ำ</p>
+        <h1>ค้นหาช้างไดฟ์วิ่ง</h1>
+        <p>ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำ</p>
       </header>
       
       <!-- Search Form -->
@@ -79,7 +165,7 @@
             type="text" 
             id="searchInput" 
             name="q" 
-            placeholder="ค้นหาคอร์ส สถานที่ดำน้ำ หรือหัวข้อ..."
+            placeholder="ค้นหาคอร์ส จุดดำน้ำ หรือหัวข้อ..."
             value=""
             required
           />
@@ -98,6 +184,143 @@
     <!-- Scripts -->
     <script src="/js/global.js"></script>
     <script>
+      // Comprehensive search data in Thai
+      const searchData = [
+        // Courses
+        {
+          title: 'คอร์ส Open Water Diver',
+          url: '/th/courses/open-water-diver/',
+          description: 'เรียนดำน้ำกับคอร์ส PADI Open Water Diver บนเกาะช้าง ก้าวแรกสู่โลกใต้น้ำ',
+          category: 'คอร์ส',
+          keywords: ['open water', 'diver', 'คอร์ส', 'padi', 'เริ่มต้น', 'เรียน', 'ดำน้ำ', 'scuba']
+        },
+        {
+          title: 'คอร์ส Advanced Open Water Diver',
+          url: '/th/courses/advanced/',
+          description: 'พัฒนาการดำน้ำของคุณสู่ระดับถัดไปด้วยคอร์ส Advanced Open Water การดำน้ำลึก การนำทาง และอื่นๆ',
+          category: 'คอร์ส',
+          keywords: ['advanced', 'open water', 'diver', 'คอร์ส', 'ลึก', 'นำทาง']
+        },
+        {
+          title: 'คอร์ส Rescue Diver',
+          url: '/th/courses/rescue-diver/',
+          description: 'เรียนรู้การป้องกันและจัดการปัญหาในน้ำ และเพิ่มความมั่นใจในทักษะของคุณ',
+          category: 'คอร์ส',
+          keywords: ['rescue', 'diver', 'คอร์ส', 'ความปลอดภัย', 'ฉุกเฉิน', 'ป้องกัน']
+        },
+        {
+          title: 'คอร์ส Divemaster',
+          url: '/th/courses/divemaster/',
+          description: 'เป็นนักดำน้ำมืออาชีพด้วยคอร์ส Divemaster นำการดำน้ำและช่วยเหลือผู้สอน',
+          category: 'คอร์ส',
+          keywords: ['divemaster', 'มืออาชีพ', 'นำ', 'ผู้สอน', 'ช่วยเหลือ']
+        },
+        {
+          title: 'คอร์ส Nitrox Diver',
+          url: '/th/courses/nitrox-diver/',
+          description: 'เรียนรู้การดำน้ำด้วยอากาศเสริมไนโตรเจนสำหรับเวลาดำน้ำที่ยาวนานขึ้น',
+          category: 'คอร์ส',
+          keywords: ['nitrox', 'อากาศเสริม', 'ดำน้ำนาน', 'เวลา']
+        },
+        {
+          title: 'คอร์ส Deep Diver',
+          url: '/th/courses/deep-diver/',
+          description: 'สำรวจจุดดำน้ำลึกอย่างปลอดภัยด้วยคอร์สพิเศษ Deep Diver',
+          category: 'คอร์ส',
+          keywords: ['deep', 'diver', 'พิเศษ', 'ลึก', 'สำรวจ']
+        },
+        {
+          title: 'คอร์ส Wrack Diver',
+          url: '/th/courses/wrack-diver/',
+          description: 'เรียนรู้การสำรวจเรือจมอย่างปลอดภัยด้วยคอร์สพิเศษ Wrack Diver',
+          category: 'คอร์ส',
+          keywords: ['wrack', 'เรือจม', 'สำรวจ', 'พิเศษ']
+        },
+        {
+          title: 'คอร์ส Night Diver',
+          url: '/th/courses/night/',
+          description: 'ค้นพบโลกใต้น้ำในยามค่ำคืนด้วยคอร์สพิเศษ Night Diver',
+          category: 'คอร์ส',
+          keywords: ['night', 'ดำน้ำ', 'พิเศษ', 'กลางคืน', 'สัตว์ทะเล']
+        },
+        
+        // Dive Sites
+        {
+          title: 'เรือจม HTMS Chang',
+          url: '/th/dive-sites/htms-chang-wreck/',
+          description: 'สำรวจเรือจม HTMS Chang ที่มีชื่อเสียง หนึ่งในจุดดำน้ำที่ดีที่สุดบนเกาะช้าง',
+          category: 'จุดดำน้ำ',
+          keywords: ['htms chang', 'เรือจม', 'wreck', 'เกาะช้าง', 'มีชื่อเสียง']
+        },
+        {
+          title: 'เกาะรัง พินนาเคิล',
+          url: '/th/dive-sites/koh-rang-pinnacle/',
+          description: 'จุดดำน้ำพินนาเคิลที่สวยงามด้วยปะการังสีสันสดใสและสัตว์ทะเลอุดมสมบูรณ์',
+          category: 'จุดดำน้ำ',
+          keywords: ['เกาะรัง', 'พินนาเคิล', 'ปะการัง', 'สัตว์ทะเล', 'แนวปะการัง']
+        },
+        {
+          title: 'หินลูกบาต',
+          url: '/th/dive-sites/hin-luk-bat/',
+          description: 'จุดดำน้ำหินก่อตัวด้วยสัตว์ทะเลหลากหลายและทัศนวิสัยดี',
+          category: 'จุดดำน้ำ',
+          keywords: ['หินลูกบาต', 'หิน', 'ก่อตัว', 'สัตว์ทะเล', 'ทัศนวิสัย']
+        },
+        {
+          title: 'ซีเคร็ต รีฟ',
+          url: '/th/dive-sites/secret-reef/',
+          description: 'อัญมณีที่ซ่อนอยู่ด้วยแนวปะการังบริสุทธิ์และปลาเขตร้อน',
+          category: 'จุดดำน้ำ',
+          keywords: ['ซีเคร็ต รีฟ', 'ปะการัง', 'ปลาเขตร้อน', 'บริสุทธิ์', 'ซ่อน']
+        },
+        {
+          title: 'บลูเบอร์รี่ ฮิลล์',
+          url: '/th/dive-sites/blueberry-hill/',
+          description: 'การดำน้ำแนวปะการังตื้นเหมาะสำหรับผู้เริ่มต้นและผู้ที่ชอบดำน้ำตื้น',
+          category: 'จุดดำน้ำ',
+          keywords: ['บลูเบอร์รี่ ฮิลล์', 'ตื้น', 'แนวปะการัง', 'เริ่มต้น', 'ดำน้ำตื้น']
+        },
+        
+        // Day Trips
+        {
+          title: 'ฟันไดฟ์',
+          url: '/th/day-trips/fun-dives/',
+          description: 'ฟันไดฟ์รายวันไปยังจุดดำน้ำที่ดีที่สุดรอบเกาะช้าง',
+          category: 'ไปเช้าเย็นกลับ',
+          keywords: ['ฟันไดฟ์', 'รายวัน', 'จุดดำน้ำ', 'สันทนาการ']
+        },
+        {
+          title: 'ลองดำน้ำ',
+          url: '/th/day-trips/try-dive/',
+          description: 'สัมผัสประสบการณ์การดำน้ำเป็นครั้งแรกด้วยโปรแกรมลองดำน้ำของเรา',
+          category: 'ไปเช้าเย็นกลับ',
+          keywords: ['ลองดำน้ำ', 'ครั้งแรก', 'ประสบการณ์', 'ค้นพบ']
+        },
+        {
+          title: 'ดำน้ำตื้น',
+          url: '/th/day-trips/snorkeling/',
+          description: 'สำรวจโลกใต้น้ำด้วยทริปดำน้ำตื้นของเรา',
+          category: 'ไปเช้าเย็นกลับ',
+          keywords: ['ดำน้ำตื้น', 'ผิวน้ำ', 'สำรวจ', 'สัตว์ทะเล']
+        },
+        
+        // Equipment
+        {
+          title: 'อุปกรณ์ดำน้ำ',
+          url: '/th/equipment/',
+          description: 'อุปกรณ์ดำน้ำคุณภาพดีสำหรับขายและเช่า',
+          category: 'อุปกรณ์',
+          keywords: ['อุปกรณ์', 'gear', 'เช่า', 'ขาย', 'ดำน้ำ']
+        },
+        {
+          title: 'อุปกรณ์ดำน้ำมือสอง',
+          url: '/th/equipment/used-scuba-gear/',
+          description: 'อุปกรณ์ดำน้ำมือสองราคาประหยัดในสภาพดี',
+          category: 'อุปกรณ์',
+          keywords: ['มือสอง', 'second hand', 'ประหยัด', 'อุปกรณ์']
+        }
+      ];
+
       // Search functionality
       document.getElementById('searchForm').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -119,38 +342,28 @@
         const resultsContainer = document.getElementById('searchResults');
         resultsContainer.innerHTML = '<div class="loading">กำลังค้นหา...</div>';
         
-        // Simple search implementation
+        // Simulate search delay
         setTimeout(() => {
           displaySearchResults(query);
-        }, 500);
+        }, 300);
       }
       
       function displaySearchResults(query) {
         const resultsContainer = document.getElementById('searchResults');
+        const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
         
-        // Mock results for Thai
-        const mockResults = [
-          {
-            title: 'คอร์ส Open Water Diver',
-            url: '/th/courses/open-water-diver/',
-            description: 'เรียนดำน้ำกับคอร์ส PADI Open Water Diver บนเกาะช้าง'
-          },
-          {
-            title: 'Advanced Open Water Diver',
-            url: '/th/courses/advanced/',
-            description: 'ยกระดับการดำน้ำของคุณด้วยคอร์ส Advanced Open Water'
-          },
-          {
-            title: 'เรือจม HTMS Chang',
-            url: '/th/dive-sites/htms-chang-wreck/',
-            description: 'สำรวจเรือจม HTMS Chang ที่มีชื่อเสียง หนึ่งในสถานที่ดำน้ำที่ดีที่สุดบนเกาะช้าง'
-          }
-        ];
+        // Search through all data
+        const filteredResults = searchData.filter(item => {
+          const searchableText = `${item.title} ${item.description} ${item.keywords.join(' ')} ${item.category}`.toLowerCase();
+          return searchTerms.some(term => searchableText.includes(term));
+        });
         
-        const filteredResults = mockResults.filter(result => 
-          result.title.toLowerCase().includes(query.toLowerCase()) ||
-          result.description.toLowerCase().includes(query.toLowerCase())
-        );
+        // Sort by relevance (exact matches first)
+        filteredResults.sort((a, b) => {
+          const aScore = getRelevanceScore(a, searchTerms);
+          const bScore = getRelevanceScore(b, searchTerms);
+          return bScore - aScore;
+        });
         
         if (filteredResults.length > 0) {
           resultsContainer.innerHTML = `
@@ -161,6 +374,7 @@
             <div class="results-list">
               ${filteredResults.map(result => `
                 <div class="result-item">
+                  <div class="result-category">${result.category}</div>
                   <h3><a href="${result.url}">${result.title}</a></h3>
                   <p>${result.description}</p>
                 </div>
@@ -171,10 +385,32 @@
           resultsContainer.innerHTML = `
             <div class="search-info">
               <h2>ไม่พบผลลัพธ์สำหรับ "${query}"</h2>
-              <p>ลองค้นหาด้วยคำอื่น เช่น "ดำน้ำ", "คอร์ส" หรือ "สถานที่ดำน้ำ"</p>
+              <p>ลองค้นหาด้วยคำอื่นๆ เช่น:</p>
+              <ul style="text-align: left; max-width: 400px; margin: 1rem auto;">
+                <li>"ดำน้ำ" หรือ "scuba"</li>
+                <li>"คอร์ส" หรือ "open water"</li>
+                <li>"จุดดำน้ำ" หรือ "เรือจม"</li>
+                <li>"อุปกรณ์" หรือ "gear"</li>
+                <li>"ฟันไดฟ์" หรือ "ไปเช้าเย็นกลับ"</li>
+              </ul>
             </div>
           `;
         }
+      }
+      
+      function getRelevanceScore(item, searchTerms) {
+        let score = 0;
+        const title = item.title.toLowerCase();
+        const description = item.description.toLowerCase();
+        const keywords = item.keywords.join(' ').toLowerCase();
+        
+        searchTerms.forEach(term => {
+          if (title.includes(term)) score += 10;
+          if (keywords.includes(term)) score += 5;
+          if (description.includes(term)) score += 2;
+        });
+        
+        return score;
       }
     </script>
   </body>
