@@ -1174,16 +1174,7 @@ button:focus,
     font-size: 0.95em;
   }
   
-  /* Zentriertes Menü nur für Hauptseiten (index.html) */
-  body.main-page .lang-switch {
-    right: 50%;
-    transform: translateX(50%);
-  }
-  
-  /* Dropdown-Menü für Hauptseiten - nur z-index erhöht */
-  body.main-page .dropdown-menu {
-    z-index: 99999;
-  }
+
 }
 
 /* =====================
