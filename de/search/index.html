@@ -317,6 +317,10 @@
           if (query) {
             document.getElementById('searchInput').value = query;
             performSearch(query);
+          } else {
+            // Ensure search field is empty if no query
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').innerHTML = '<div class="search-info"><p>Geben Sie einen Suchbegriff ein, um relevante Inhalte zu finden.</p></div>';
           }
         });
       });

@@ -317,13 +317,17 @@
           if (query) {
             document.getElementById('searchInput').value = query;
             performSearch(query);
+          } else {
+            // Ensure search field is empty if no query
+            document.getElementById('searchInput').value = '';
+            document.getElementById('searchResults').innerHTML = '<div class="search-info"><p>Enter a search term above to find relevant content.</p></div>';
           }
         });
       });
 
       function performSearch(query) {
         if (!query.trim()) {
-          document.getElementById('searchResults').innerHTML = '<div class="search-info">Bitte geben Sie einen Suchbegriff ein.</div>';
+          document.getElementById('searchResults').innerHTML = '<div class="search-info">Please enter a search term.</div>';
           return;
         }
         
@@ -369,20 +373,20 @@
         if (results.length === 0) {
           resultsContainer.innerHTML = `
             <div class="search-info">
-              <h3>Keine Ergebnisse gefunden für "${query}"</h3>
-              <p>Versuchen Sie andere Suchbegriffe oder schauen Sie sich unsere Kategorien an:</p>
+              <h3>No results found for "${query}"</h3>
+              <p>Try different search terms or browse our categories:</p>
               <ul>
-                <li>"tauchkurse" oder "open water"</li>
-                <li>"tauchplätze" oder "wrack"</li>
-                <li>"tagestouren" oder "fun dive"</li>
-                <li>"ausrüstung" oder "equipment"</li>
+                <li>"courses" or "open water"</li>
+                <li>"dive sites" or "wreck"</li>
+                <li>"day trips" or "fun dive"</li>
+                <li>"equipment" or "gear"</li>
               </ul>
             </div>
           `;
           return;
         }
         
-        let html = `<div class="search-info"><h3>${results.length} Ergebnisse für "${query}"</h3></div>`;
+        let html = `<div class="search-info"><h3>${results.length} results for "${query}"</h3></div>`;
         
         results.forEach(item => {
           html += `
