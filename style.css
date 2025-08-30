@@ -1195,7 +1195,8 @@ button:focus,
 }
 
 /* =====================
-   Galerie-Layout: 2 nebeneinander, mobil 1
+   Galerie-Layout: 2 nebeneinander, 
+    1
    ===================== */
 .dive-site-gallery {
   display: flex;
