@@ -4,6 +4,7 @@
 // 2) Pages laufen lassen (statische Dateien + _redirects)
 // 3) Wenn 404: 410 (EXACT, dann PREFIX, dann global außerhalb Sprachpfade)
 // Robust gg. Slashes & Tippfehler, mit X-Debug-Header zur Diagnose.
+// Cache-Control: no-store für 410-Responses verhindert Caching von gelöschten Inhalten.
 
 const LANG_ROOTS = ["/en", "/de/", "/th/"];
 
@@ -25,6 +26,17 @@ function joinUrl(base, suffix) {
   const b = base.replace(/\/+$/, "");
   const s = suffix.replace(/^\/+/, "");
   return `${b}/${s}`;
+}
+
+// Cache-Control-Header für 410-Responses (verhindert Caching von gelöschten Inhalten)
+function getNoCacheHeaders(contentType, debugInfo) {
+  return {
+    "Content-Type": contentType,
+    "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+    "Pragma": "no-cache",
+    "Expires": "0",
+    "X-Debug": debugInfo
+  };
 }
 
 // --- Root-Dateien, die auch außerhalb Sprachpfaden 200 sein dürfen ---
@@ -614,19 +626,13 @@ export async function onRequest(context) {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
         status: 410, 
-        headers: { 
-          "Content-Type": "text/html; charset=utf-8",
-          "X-Debug": "410-exact" 
-        } 
+        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-exact")
       });
     } catch (error) {
       // Fallback: einfache 410 Response
       return new Response("410 Gone", { 
         status: 410, 
-        headers: { 
-          "Content-Type": "text/plain; charset=utf-8",
-          "X-Debug": "410-exact-fallback" 
-        } 
+        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-exact-fallback")
       });
     }
   }
@@ -637,19 +643,13 @@ export async function onRequest(context) {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
         status: 410, 
-        headers: { 
-          "Content-Type": "text/html; charset=utf-8",
-          "X-Debug": "410-prefix" 
-        } 
+        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-prefix")
       });
     } catch (error) {
       // Fallback: einfache 410 Response
       return new Response("410 Gone", { 
         status: 410, 
-        headers: { 
-          "Content-Type": "text/plain; charset=utf-8",
-          "X-Debug": "410-prefix-fallback" 
-        } 
+        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-prefix-fallback")
       });
     }
   }
@@ -660,19 +660,13 @@ export async function onRequest(context) {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
         status: 410, 
-        headers: { 
-          "Content-Type": "text/html; charset=utf-8",
-          "X-Debug": "410-global" 
-        } 
+        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-global")
       });
     } catch (error) {
       // Fallback: einfache 410 Response
       return new Response("410 Gone", { 
         status: 410, 
-        headers: { 
-          "Content-Type": "text/plain; charset=utf-8",
-          "X-Debug": "410-global-fallback" 
-        } 
+        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-global-fallback")
       });
     }
   }
