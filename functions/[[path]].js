@@ -213,7 +213,6 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/about/the-dive-process", "/en/about/"],
   ["/en/about-search-recovery", "/en/posts/scuba-knowledge/about-search-recovery/"],
   ["/en/about-underwater-photography", "/en/posts/tips-and-tricks/about-underwater-photography/"],
-  ["/en/about-us", "/en/about/"],
   
   ["/en/best-dive-computers", "/en/posts/scuba-knowledge/best-dive-computers/"],
   ["/en/certification-agencies", "/en/posts/straight-talk/padi-vs-sdi-tdi/"],
@@ -389,6 +388,7 @@ const REDIRECTS_PREFIX_RAW = [
    { from: "/de/ueber-uns", to: "/de/about/" },
    { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
    { from: "/en/team", to: "/en/about/" },
+   { from: "/en/about-us", to: "/en/about/" },
    { from: "/en/videos", to: "/en/videos/" },
    { from: "/de/videos", to: "/de/videos/" },
    { from: "/th/2018/07", to: "/th/posts/" },
@@ -430,6 +430,7 @@ const FORCE_GONE_EXACT = new Set(
    "/de/download-der-erforderlichen-unterlagen/",
    "/de/nationalparks-in-thailand-und-koh-chang",
    "/de/natuerlich-haben-wir-schon-wracks-betaucht",
+   "/de/required-paperwork-for-certified-divers",
    "/de/service-technician",
    "/de/the-dive-process",
    "/de/warum-der-advanced-open-water-diver//1000",
@@ -442,6 +443,7 @@ const FORCE_GONE_EXACT = new Set(
    "/en/forms",
   "/en/nationalparks-in-thailand-and-koh-chang",
   "/en/service-technician",
+  "/en/the-dive-process",
   "/th/ปริมาณอากาศที่ใช้หายใจ", 
   "/th/อุทยานแห่งชาติ",
   "/th/about/ตารางการดำน้ำ",
@@ -529,6 +531,7 @@ const FORCE_GONE_PREFIX = [
      "/de/store",
      "/de/team",
      "/de/tag",
+     "/de/Verfasser",
      "/de/de",
   // ggf. weitere Präfixe …
 ].map(p => normPath(ensureLeadingSlash(p)));
