@@ -19,35 +19,6 @@ Disallow: /fonts/
 Disallow: /*.css$
 Disallow: /*.js$
 
-# Block 410 Gone paths to save crawl budget
-# These paths return 410 Gone and should not be crawled
-Disallow: /de/product/
-Disallow: /de/category/
-Disallow: /de/Kategorie/
-Disallow: /de/store/
-Disallow: /de/team/
-Disallow: /de/tag/
-Disallow: /de/de/
-Disallow: /de/tauchplätze/
-
-Disallow: /en/product/
-Disallow: /en/category/
-Disallow: /en/store/
-Disallow: /en/tag/
-Disallow: /en/en/
-
-Disallow: /th/product/
-Disallow: /th/category/
-Disallow: /th/store/
-Disallow: /th/th/
-Disallow: /th/ds/
-Disallow: /th/cdc/
-Disallow: /th/ร้านค้า/
-Disallow: /th/จุดดำน้ำ/
-Disallow: /th/คำถามที่พบบ่อย/
-Disallow: /th/หมวดหมู่/
-Disallow: /th/แท็ก/
-
 # Allow important content (explicitly stated for clarity)
 Allow: /img/
 Allow: /docs/
