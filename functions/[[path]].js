@@ -420,7 +420,7 @@ const FORCE_GONE_EXACT = new Set(
   [
     // Beispiele:
    "/what-is-nitrox//1000",
-   "/de/123test/", 
+   "/de/123test/",
    "/de/about/boots-plan",
    "/de/about/die-anmeldung",
    "/de/about/dive-schedule",
@@ -524,6 +524,7 @@ const FORCE_GONE_PREFIX = [
      "/en/category",
 
      // DE Wildcards
+     "/de/2020",
      "/de/tauchplätze",
      "/de/product",
      "/de/category",
