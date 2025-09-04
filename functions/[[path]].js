@@ -507,6 +507,7 @@ const FORCE_GONE_PREFIX = [
      "/th/ds/",
      "/th/cdc",
      "/th/store",
+     "/th/tag",
      "/th/ร้านค้า",
      "/th/จุดดำน้ำ",
      "/th/คำถามที่พบบ่อย",
