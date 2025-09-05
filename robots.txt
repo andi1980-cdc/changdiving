@@ -21,6 +21,7 @@ Disallow: /*.js$
 
 # Allow important content (explicitly stated for clarity)
 Allow: /img/
+Allow: /favicon/
 Allow: /docs/
 Allow: /en/
 Allow: /de/
