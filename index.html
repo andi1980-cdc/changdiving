@@ -125,7 +125,10 @@
         "inLanguage": "en",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://changdiving.com/en/search/?q={search_term_string}",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://changdiving.com/en/search/?q={search_term_string}"
+          },
           "query-input": "required name=search_term_string"
         }
       }
