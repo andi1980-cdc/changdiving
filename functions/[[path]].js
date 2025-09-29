@@ -159,6 +159,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/marine-life-titan-triggerfish", "/de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
   ["/de/marine-life-whale-shark", "/de/posts/marine-life-koh-chang/marine-life-whale-shark/"],
   ["/de/marine-life", "/de/posts/marine-life-koh-chang/"],
+  ["/de/posts/marine-life-koh-chang/nudibranchs", "/de/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   
   ["/de/nitrox-info", "/de/posts/scuba-knowledge/nitrox-info/"],
   ["/de/nudibranchs-koh-chang", "/en/posts/marine-life-koh-chang/marine-life-nudibranch/"],
@@ -260,6 +261,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/marine-life-nudibranch", "/en/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   ["/en/marine-life-titan-triggerfish", "/en/posts/marine-life-koh-chang/marine-life-titan-triggerfish/"],
   ["/en/marine-life-whale-shark", "/en/posts/marine-life-koh-chang/marine-life-whale-shark/"],
+  ["/en/posts/marine-life-koh-chang/nudibranchs", "/en/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   
   ["/en/nitrox-info", "/en/posts/scuba-knowledge/nitrox-info/"],
   ["/en/ocean-climate", "/en/posts/straight-talk/ocean-climate/"],
@@ -354,6 +356,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/marine-life-nudibranch/", "/th/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   ["/th/marine-life-green-sea-turtle", "/th/posts/marine-life-koh-chang/marine-life-green-sea-turtle/"],
   ["/th/marine-life", "/th/posts/marine-life-koh-chang/"],
+  ["/th/posts/marine-life-koh-chang/nudibranchs", "/th/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   
   ["/th/nitrox-info", "/th/posts/scuba-knowledge/nitrox-info/"],
   ["/th/nudibranchs-koh-chang", "/th/posts/marine-life-koh-chang/marine-life-nudibranch/"],
