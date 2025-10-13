@@ -20,16 +20,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
+    <meta name="robots" content="index, follow" />
     <meta name="msvalidate.01" content="3B62EB4E2CBC2BE9F36223BA830DBF03" />
     <title>Welcome to Chang Diving</title>
     <meta
       name="description"
       content="Chang Diving Center – Scuba Diving, Courses & Day Trips in Koh Chang. Choose your language: English, Deutsch, ไทย."
     />
-    <link rel="alternate" hreflang="en" href="/en/" />
-    <link rel="alternate" hreflang="de" href="/de/" />
-    <link rel="alternate" hreflang="th" href="/th/" />
-    <link rel="alternate" hreflang="x-default" href="/" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://changdiving.com/" />
+    
+    <!-- Language Alternatives -->
+    <link rel="alternate" hreflang="en" href="https://changdiving.com/en/" />
+    <link rel="alternate" hreflang="de" href="https://changdiving.com/de/" />
+    <link rel="alternate" hreflang="th" href="https://changdiving.com/th/" />
+    <link rel="alternate" hreflang="x-default" href="https://changdiving.com/" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.ico" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
     
     <!-- Open Graph for Social Media -->
     <meta property="og:title" content="Scuba Diving Koh Chang – Courses & Fun Dives | Chang Diving" />
@@ -96,14 +111,19 @@
       }
     </style>
     <script>
-      // Auto-Redirect nach Browsersprache
+      // Auto-Redirect nach Browsersprache (nur für echte Benutzer, nicht für Bots)
       document.addEventListener("DOMContentLoaded", function () {
-        var lang = (
-          navigator.language ||
-          navigator.userLanguage ||
-          "en"
-        ).toLowerCase();
-        if (window.location.search.indexOf("noredirect") === -1) {
+        // Erkennung von Crawlern/Bots
+        var isCrawler = /bot|crawler|spider|crawling|google|bing|yahoo|duckduckgo|baidu|yandex|slurp/i.test(navigator.userAgent);
+        
+        // Nur echte Benutzer werden weitergeleitet, Bots bleiben auf der Seite
+        if (!isCrawler && window.location.search.indexOf("noredirect") === -1) {
+          var lang = (
+            navigator.language ||
+            navigator.userLanguage ||
+            "en"
+          ).toLowerCase();
+          
           if (lang.startsWith("de")) {
             window.location.replace("/de/");
           } else if (lang.startsWith("th")) {
@@ -135,25 +155,69 @@
       }
     </script>
     
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "DiveShop",
+        "@id": "https://changdiving.com/#organization",
+        "name": "Chang Diving Center",
+        "url": "https://changdiving.com/",
+        "logo": "https://changdiving.com/img/logos/logo.webp",
+        "image": "https://changdiving.com/img/pages/mobile_header.webp",
+        "description": "Professional scuba diving center in Koh Chang, Thailand. Offering diving courses, fun dives, and day trips for all levels.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Koh Chang",
+          "addressRegion": "Trat",
+          "addressCountry": "TH"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "12.06293",
+          "longitude": "102.28985"
+        },
+        "priceRange": "$$",
+        "telephone": "+66894013927",
+        "sameAs": [
+          "https://www.facebook.com/changdivingcenter",
+          "https://www.instagram.com/chang_diving_center"
+        ]
+      }
+    </script>
+    
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/index.html/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/"
+          }
+        ]
+      }
     </script>
   </head>
   <body>
     <div class="lang-select">
       <h1>Welcome to Chang Diving</h1>
+      
+      <!-- Mehrsprachige Beschreibung für besseren SEO Content -->
+      <p style="margin: 0 0 1.5em 0; color: #555; line-height: 1.6;">
+        <strong>🇬🇧 English:</strong> Professional scuba diving center in Koh Chang, Thailand. 
+        Offering PADI & SDI courses, fun dives, and day trips for all levels.<br><br>
+        
+        <strong>🇩🇪 Deutsch:</strong> Professionelles Tauchzentrum auf Koh Chang, Thailand. 
+        Wir bieten PADI & SDI Kurse, Tauchgänge und Tagesausflüge für alle Levels.<br><br>
+        
+        <strong>🇹🇭 ไทย:</strong> ศูนย์สอนดำน้ำมืออาชีพที่เกาะช้าง ประเทศไทย 
+        มีหลักสูตร PADI & SDI, Fun Dives และทริปดำน้ำสำหรับทุกระดับ
+      </p>
+      
       <div class="lang-btns">
         <a href="/en/">🇬🇧 English</a>
         <a href="/de/">🇩🇪 Deutsch</a>
