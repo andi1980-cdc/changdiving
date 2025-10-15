@@ -13,11 +13,8 @@
 User-agent: *
 Allow: /
 
-# Block only technical files that shouldn't be indexed
-Disallow: /js/
-Disallow: /fonts/
-Disallow: /*.css$
-Disallow: /*.js$
+# Do not block CSS/JS/Fonts — needed for proper rendering by search engines
+# (Previously blocked; removed to improve crawl and rendering.)
 
 # Allow important content (explicitly stated for clarity)
 Allow: /img/
