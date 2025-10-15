@@ -28,7 +28,4 @@ Allow: /de/
 Allow: /th/
 
 # SITEMAP DECLARATION
-Sitemap: https://changdiving.com/sitemap-index.xml
-
-# Crawl-delay to be respectful to servers
-Crawl-delay: 1 
+Sitemap: https://changdiving.com/sitemap-index.xml 
