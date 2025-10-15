@@ -386,22 +386,39 @@ const REDIRECTS_EXACT_RAW = [
 // 2) PREFIX/WILDCARD 301 — als Objekte { from, to }
 //    wirkt wie /from/* -> /to/:splat
 const REDIRECTS_PREFIX_RAW = [
-  // BEISPIELE (kannst du erweitern):
-  // { from: "/th/store/category/equipment/bcds",   to: "/th/store/category/equipment/" },
-   { from: "/de/ueber-uns", to: "/de/about/" },
-   { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
-   { from: "/en/team", to: "/en/about/" },
-   { from: "/en/about-us", to: "/en/about/" },
-   { from: "/en/videos", to: "/en/videos/" },
-   { from: "/de/videos", to: "/de/videos/" },
-   { from: "/th/2018/07", to: "/th/posts/" },
-   { from: "/th/2019/11", to: "/th/posts/" },
-   { from: "/th/ds", to: "/th/dive-sites/" },
-   { from: "/th/เกี่ยวกับ", to: "/th/about/" },
-   { from: "/th/เกี่ยวกับ-ส่วนย่อยดำน้ำ", to: "/th/about/" },
-   { from: "/th/จุดดำน้ำ", to: "/th/dive-sites/" },
-   { from: "/th/วิดีโอ", to: "/th/videos/" },
-   { from: "/th/หมวดหมู่", to: "/th/posts/" },
+  // Redirect old product/store URLs to appropriate new pages
+  // These were previously returning 410 (Gone) which hurt SEO
+  { from: "/en/product", to: "/en/courses/" },
+  { from: "/de/product", to: "/de/courses/" },
+  { from: "/th/product", to: "/th/courses/" },
+
+  { from: "/en/category", to: "/en/courses/" },
+  { from: "/de/category", to: "/de/courses/" },
+  { from: "/th/category", to: "/th/courses/" },
+
+  { from: "/en/store", to: "/en/prices/" },
+  { from: "/de/store", to: "/de/prices/" },
+  { from: "/th/store", to: "/th/prices/" },
+
+  { from: "/en/tag", to: "/en/posts/" },
+  { from: "/de/tag", to: "/de/posts/" },
+  { from: "/th/tag", to: "/th/posts/" },
+
+  // Existing redirects
+  { from: "/de/ueber-uns", to: "/de/about/" },
+  { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
+  { from: "/en/team", to: "/en/about/" },
+  { from: "/en/about-us", to: "/en/about/" },
+  { from: "/en/videos", to: "/en/videos/" },
+  { from: "/de/videos", to: "/de/videos/" },
+  { from: "/th/2018/07", to: "/th/posts/" },
+  { from: "/th/2019/11", to: "/th/posts/" },
+  { from: "/th/ds", to: "/th/dive-sites/" },
+  { from: "/th/เกี่ยวกับ", to: "/th/about/" },
+  { from: "/th/เกี่ยวกับ-ส่วนย่อยดำน้ำ", to: "/th/about/" },
+  { from: "/th/จุดดำน้ำ", to: "/th/dive-sites/" },
+  { from: "/th/วิดีโอ", to: "/th/videos/" },
+  { from: "/th/หมวดหมู่", to: "/th/posts/" },
 ];
 
 // In Maps/normalisierte Regeln umwandeln
@@ -503,39 +520,25 @@ const FORCE_GONE_EXACT = new Set(
 );
 
 // 4) PREFIX 410 — alles darunter Gone - wildcard (Strings)
+// IMPORTANT: Removed product/category/store/tag - these now redirect via REDIRECTS_PREFIX
 const FORCE_GONE_PREFIX = [
-     
-     // TH Wildcards
+
+     // TH Wildcards (only truly gone pages)
      "/th/th",
-     "/th/ds/",
      "/th/cdc",
-     "/th/store",
-     "/th/tag",
      "/th/ร้านค้า",
-     "/th/จุดดำน้ำ",
      "/th/คำถามที่พบบ่อย",
-     "/th/หมวดหมู่",
      "/th/แท็ก",
-     "/th/product",
-     "/th/category",
 
-     // EN Wildcards
+     // EN Wildcards (only truly gone pages)
      "/en/en",
-     "/en/tag",
-     "/en/store",
-     "/en/product",
-     "/en/category",
 
-     // DE Wildcards
+     // DE Wildcards (only truly gone pages)
      "/de/2020",
      "/de/tauchplätze",
-     "/de/product",
-     "/de/category",
      "/de/Kategorie",
      "de/kurse",
-     "/de/store",
      "/de/team",
-     "/de/tag",
      "/de/Verfasser",
      "/de/de",
   // ggf. weitere Präfixe …
