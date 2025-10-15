@@ -110,31 +110,8 @@
         margin-top: 1.5em;
       }
     </style>
-    <script>
-      // Auto-Redirect nach Browsersprache (nur für echte Benutzer, nicht für Bots)
-      document.addEventListener("DOMContentLoaded", function () {
-        // Erkennung von Crawlern/Bots
-        var isCrawler = /bot|crawler|spider|crawling|google|bing|yahoo|duckduckgo|baidu|yandex|slurp/i.test(navigator.userAgent);
-        
-        // Nur echte Benutzer werden weitergeleitet, Bots bleiben auf der Seite
-        if (!isCrawler && window.location.search.indexOf("noredirect") === -1) {
-          var lang = (
-            navigator.language ||
-            navigator.userLanguage ||
-            "en"
-          ).toLowerCase();
-          
-          if (lang.startsWith("de")) {
-            window.location.replace("/de/");
-          } else if (lang.startsWith("th")) {
-            window.location.replace("/th/");
-          } else if (lang.startsWith("en")) {
-            window.location.replace("/en/");
-          }
-        }
-      });
-    </script>
-    
+    <!-- JavaScript Auto-Redirect REMOVED - Now handled server-side via Cloudflare Function -->
+
     <!-- Sitelinks Searchbox Schema -->
     <script type="application/ld+json">
       {
@@ -224,8 +201,7 @@
         <a href="/th/">🇹🇭 ไทย</a>
       </div>
       <div class="note">
-        You will be redirected automatically based on your browser language.<br />
-        If not, please select your language above.
+        Please select your language above to continue.
       </div>
     </div>
   </body>

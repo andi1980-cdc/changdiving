@@ -11,7 +11,7 @@ const LANG_ROOTS = ["/en", "/de/", "/th/"];
 function normPath(raw) {
   // strip query/hash, compress //, trim, remove trailing slash (außer '/', '/en/', '/de/', '/th/')
   let p = raw.split("?")[0].split("#")[0].replace(/\/{2,}/g, "/").trim();
-  
+
   if (p === "/") return "/";
   if (LANG_ROOTS.includes(p)) return p;
   return p.replace(/\/+$/, "");
@@ -582,13 +582,66 @@ function withDebug(res, tag) {
 
 export async function onRequest(context) {
   const url = new URL(context.request.url);
-  
+  const { request } = context;
+
   // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
   const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
   const path = decodeURI(singleEncoded);
-  
+
   // 2) Pfad normalisieren (Slashes, etc.)
   const normalizedPath = normPath(path);
+
+  // --- SPECIAL: Server-side language detection for root domain ---
+  if (normalizedPath === '/') {
+    // Check if it's a bot/crawler
+    const userAgent = request.headers.get('User-Agent') || '';
+    const isBot = /bot|crawler|spider|crawling|google|bing|yahoo|duckduckgo|baidu|yandex|slurp|facebookexternalhit|linkedinbot|whatsapp|telegram|slack/i.test(userAgent);
+
+    // Don't redirect bots or if noredirect parameter is present
+    if (!isBot && !url.searchParams.has('noredirect')) {
+      // Detect language from Accept-Language header
+      let detectedLang = 'en'; // default
+
+      // 1. Check for language cookie
+      const cookieString = request.headers.get('Cookie');
+      if (cookieString) {
+        const langCookie = cookieString.split(';').find(c => c.trim().startsWith('user_lang='));
+        if (langCookie) {
+          const lang = langCookie.split('=')[1];
+          if (['en', 'de', 'th'].includes(lang)) {
+            detectedLang = lang;
+          }
+        }
+      }
+
+      // 2. If no cookie, check Accept-Language header
+      if (detectedLang === 'en' && !cookieString?.includes('user_lang')) {
+        const acceptLanguage = request.headers.get('Accept-Language');
+        if (acceptLanguage) {
+          const langCode = acceptLanguage.split(',')[0].toLowerCase().substring(0, 2);
+          if (langCode === 'de') detectedLang = 'de';
+          else if (langCode === 'th') detectedLang = 'th';
+        }
+      }
+
+      // 3. Check country for Thailand
+      if (detectedLang === 'en' && request.headers.get('CF-IPCountry') === 'TH') {
+        detectedLang = 'th';
+      }
+
+      // Redirect to detected language
+      const redirectUrl = `${url.origin}/${detectedLang}/`;
+      return new Response(null, {
+        status: 302, // Temporary redirect for language preference
+        headers: {
+          'Location': redirectUrl,
+          'Set-Cookie': `user_lang=${detectedLang}; Path=/; Max-Age=2592000; SameSite=Lax`, // 30 days
+          'Cache-Control': 'no-cache, no-store',
+          'X-Debug': 'language-redirect'
+        }
+      });
+    }
+  }
 
   // --- 1) 301 EXAKT ---
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
