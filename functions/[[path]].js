@@ -6,7 +6,7 @@
 // Robust gg. Slashes & Tippfehler, mit X-Debug-Header zur Diagnose.
 // Cache-Control: no-store für 410-Responses verhindert Caching von gelöschten Inhalten.
 
-const LANG_ROOTS = ["/en", "/de/", "/th/"];
+const LANG_ROOTS = ["/en/", "/de/", "/th/"];
 
 function normPath(raw) {
   // strip query/hash, compress //, trim, remove trailing slash (außer '/', '/en/', '/de/', '/th/')
@@ -208,6 +208,10 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/wreck-diving-koh-chang", "/de/posts/scuba-knowledge/wreck-diving-koh-chang/"],
   ["/de/which-course", "/de/posts/tips-and-tricks/which-course/"],
   
+  // Additional missing redirects from Google Search Console errors
+  ["/en/apeks-xtx", "/en/equipment/"],
+  ["/en/book-in-advance", "/en/posts/straight-talk/book-in-advance/"],
+  
   // EN about
   ["/en/about/dive-schedule", "/en/about/"],
   ["/en/about/refund-policy", "/en/about/"],
@@ -370,6 +374,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/search-and-recovery-diving/", "/th/courses/search-recovery/"],
   ["/th/sustainable-diving", "/th/posts/straight-talk/sustainable-diving/"],
   ["/th/safety-check", "/th/posts/scuba-knowledge/safety-check/"],
+  ["/th/safety-check/", "/th/posts/scuba-knowledge/safety-check/"],
   ["/th/terms-and-conditions", "/th/terms-and-conditions/"],
   ["/th/thailand-diving-comparison", "/th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"],
   ["/th/the-best-dive-computers-2025", "/th/posts/scuba-knowledge/best-dive-computers/"],
@@ -388,22 +393,32 @@ const REDIRECTS_EXACT_RAW = [
 const REDIRECTS_PREFIX_RAW = [
   // Redirect old product/store URLs to appropriate new pages
   // These were previously returning 410 (Gone) which hurt SEO
+  { from: "/product", to: "/en/courses/" },
   { from: "/en/product", to: "/en/courses/" },
   { from: "/de/product", to: "/de/courses/" },
   { from: "/th/product", to: "/th/courses/" },
 
+  { from: "/category", to: "/en/courses/" },
   { from: "/en/category", to: "/en/courses/" },
   { from: "/de/category", to: "/de/courses/" },
   { from: "/th/category", to: "/th/courses/" },
 
+  { from: "/store", to: "/en/prices/" },
   { from: "/en/store", to: "/en/prices/" },
   { from: "/de/store", to: "/de/prices/" },
   { from: "/th/store", to: "/th/prices/" },
 
+  { from: "/tag", to: "/en/posts/" },
   { from: "/en/tag", to: "/en/posts/" },
   { from: "/de/tag", to: "/de/posts/" },
   { from: "/th/tag", to: "/th/posts/" },
 
+  // Old dive-sites without language prefix -> redirect to English
+  { from: "/dive-sites", to: "/en/dive-sites/" },
+  
+  // Old German dive-sites with wrong structure
+  { from: "/de/tauchplätze", to: "/de/dive-sites/" },
+  
   // Existing redirects
   { from: "/de/ueber-uns", to: "/de/about/" },
   { from: "/de/ueber-uns-chang-diving-center-koh-chang-thailand", to: "/de/about/" },
@@ -644,6 +659,17 @@ export async function onRequest(context) {
         }
       });
     }
+  }
+
+  // --- 0.5) Language root redirects (ensure trailing slash) ---
+  if (normalizedPath === '/en' || normalizedPath === '/de' || normalizedPath === '/th') {
+    return new Response(null, { 
+      status: 301, 
+      headers: { 
+        Location: `https://changdiving.com${normalizedPath}/`,
+        "X-Debug": "301-lang-root" 
+      } 
+    });
   }
 
   // --- 1) 301 EXAKT ---
