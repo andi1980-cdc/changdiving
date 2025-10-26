@@ -639,12 +639,13 @@ export async function onRequest(context) {
           const langCode = acceptLanguage.split(',')[0].toLowerCase().substring(0, 2);
           if (langCode === 'de') detectedLang = 'de';
           else if (langCode === 'th') detectedLang = 'th';
+          // If Accept-Language is set but not de/th, keep 'en' as default
+        } else {
+          // 3. Only check country if NO Accept-Language header exists
+          if (request.headers.get('CF-IPCountry') === 'TH') {
+            detectedLang = 'th';
+          }
         }
-      }
-
-      // 3. Check country for Thailand
-      if (detectedLang === 'en' && request.headers.get('CF-IPCountry') === 'TH') {
-        detectedLang = 'th';
       }
 
       // Redirect to detected language
