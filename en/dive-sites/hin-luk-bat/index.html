@@ -214,6 +214,84 @@
       }
     </script>
 
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Dive Sites",
+            "item": "https://changdiving.com/en/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hin Luk Bat",
+            "item": "https://changdiving.com/en/dive-sites/hin-luk-bat/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Hin Luk Bat suitable for beginner divers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Hin Luk Bat is one of the most beginner-friendly dive sites in Koh Chang, with depths from 5-22 meters. It's perfect for Open Water divers and training dives."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What marine life can I see at Hin Luk Bat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hin Luk Bat features vibrant coral gardens, reef fish, moray eels, lionfish, scorpionfish, and occasional stingrays. The pinnacle attracts diverse marine life."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How deep is Hin Luk Bat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hin Luk Bat ranges from 5 to 22 meters depth, making it accessible for all certification levels from beginners to advanced divers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes Hin Luk Bat special?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hin Luk Bat is Koh Chang's most popular dive site featuring beautiful coral formations, natural swim-throughs, and a pinnacle structure. It offers excellent visibility and diverse marine ecosystems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I do a try dive at Hin Luk Bat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! The shallow areas of Hin Luk Bat (5-12m) are perfect for try dives and discover scuba experiences, while deeper sections challenge advanced divers."
+            }
+          }
+        ]
+      }
+    </script>
+
     <!-- Google Fonts: Roboto -->
     <link
       rel="stylesheet"
@@ -598,6 +676,90 @@
             039 586-131
           </li>
         </ul>
+
+        <hr />
+
+        <!-- Related Dive Sites Section -->
+        <h2 style="
+            margin-top: 50px;
+            font-size: 32px;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          ">
+          Similar Dive Sites
+        </h2>
+        <p>
+          Explore more beginner-friendly reef dives around Koh Chang. These sites offer similar depths and difficulty levels, perfect for building your diving experience.
+        </p>
+
+        <div class="row">
+          <a href="/en/dive-sites/hin-sam-sao/" class="three columns">
+            <img
+              src="/img/dive-sites/hin-sam-sao_head_small.webp"
+              alt="Hin Sam Sao dive site - Coral gardens and marine life near Koh Chang"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🏝️ Hin Sam Sao</h3>
+              <p style="min-height: 60px">
+                Three iconic rocks create unique underwater topography with coral gardens and diverse marine life. Perfect for beginners! (Max depth: 20m)
+              </p>
+            </div>
+          </a>
+
+          <a href="/en/dive-sites/secret-reef/" class="three columns">
+            <img
+              src="/img/dive-sites/secret-reef_header_small.webp"
+              alt="Secret Reef dive site - Hidden coral reef near Koh Chang"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🪸 Secret Reef</h3>
+              <p style="min-height: 60px">
+                A hidden gem with vibrant coral formations and excellent marine biodiversity. Great for photographers and nature lovers. (Max depth: 18m)
+              </p>
+            </div>
+          </a>
+
+          <a href="/en/dive-sites/hin-pray-nam/" class="three columns">
+            <img
+              src="/img/dive-sites/hin-pray-nam_header_small.webp"
+              alt="Hin Pray Nam dive site - Scenic coral reef near Koh Chang"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🐚 Hin Pray Nam</h3>
+              <p style="min-height: 60px">
+                Scenic coral reef with excellent macro life. Relaxed drift diving and perfect for building dive experience. (Max depth: 16m)
+              </p>
+            </div>
+          </a>
+
+          <a href="/en/dive-sites/" class="three columns">
+            <img
+              src="/img/dive-sites/dive-site-map_small.webp"
+              alt="View all dive sites in Koh Chang"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🗺️ View All Sites</h3>
+              <p style="min-height: 60px">
+                Explore all 13 dive sites around Koh Chang. From shallow reefs to deep wrecks - find your perfect dive adventure.
+              </p>
+            </div>
+          </a>
+        </div>
+
       </div>
     </main>
 
