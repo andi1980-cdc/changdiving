@@ -128,33 +128,682 @@
       }
     </script>
     
-    <!-- Organization Structured Data -->
+    <!-- LocalBusiness Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "DiveShop",
-        "@id": "https://changdiving.com/#organization",
+        "@type": "LocalBusiness",
+        "@id": "https://changdiving.com/",
+        "inLanguage": ["en"],
         "name": "Chang Diving Center",
+        "additionalType": "https://www.wikidata.org/wiki/Q1261847",
+        "description": "Chang Diving Center is a dive school and scuba shop on Koh Chang offering SDI/TDI/PADI dive courses, snorkeling day trips, guided wreck dives and certified scuba gear sales. Since 2005.",
+        "image": "https://changdiving.com/img/logos/logo_cdc.webp",
         "url": "https://changdiving.com/",
-        "logo": "https://changdiving.com/img/logos/logo.webp",
-        "image": "https://changdiving.com/img/pages/mobile_header.webp",
-        "description": "Professional scuba diving center in Koh Chang, Thailand. Offering diving courses, fun dives, and day trips for all levels.",
+        "telephone": "+66 894-013-927",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "21/52 M 4, Klong Prao Beach",
           "addressLocality": "Koh Chang",
           "addressRegion": "Trat",
+          "postalCode": "23170",
           "addressCountry": "TH"
         },
+        "openingHours": "Mo-Su 08:00-18:00",
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "12.06293",
-          "longitude": "102.28985"
+          "latitude": 12.06321,
+          "longitude": 102.28982
         },
-        "priceRange": "$$",
-        "telephone": "+66894013927",
         "sameAs": [
-          "https://www.facebook.com/changdivingcenter",
-          "https://www.instagram.com/chang_diving_center"
+          "https://www.facebook.com/changdivingcenter/",
+          "https://www.instagram.com/chang_diving_center",
+          "https://www.youtube.com/@changdiving1842"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": 22
+        }
+      }
+    </script>
+    
+    <!-- OfferCatalog Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "OfferCatalog",
+        "inLanguage": ["en"],
+        "name": "Chang Diving Center Course & Trip Catalog",
+        "url": "https://changdiving.com/",
+        "provider": {
+          "@type": "Organization",
+          "name": "Chang Diving Center",
+          "url": "https://changdiving.com/"
+        },
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Day Trips",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Snorkeling",
+                  "description": "Snorkeling day trip by boat to coral reefs around Koh Chang.",
+                  "url": "https://changdiving.com/en/day-trips/snorkeling/",
+                  "category": "Day Trips",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 999,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/day-trips/snorkeling/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fun Dives",
+                  "description": "2-tank dive trip for certified divers – guided reef or wreck dives.",
+                  "url": "https://changdiving.com/en/day-trips/fun-dives/",
+                  "category": "Day Trips",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 3290,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/day-trips/fun-dives/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Try Dives",
+                  "description": "1-day introduction to scuba diving with instructor – no license needed.",
+                  "url": "https://changdiving.com/en/day-trips/try-dive/",
+                  "category": "Beginner Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P1D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P1D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 4890,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/day-trips/try-dive/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Scuba Review",
+                  "description": "Refresher dive session with theory and skills for certified divers.",
+                  "url": "https://changdiving.com/en/day-trips/scuba-review/",
+                  "category": "Day Trips",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P1D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P1D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 3950,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/day-trips/scuba-review/"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Beginner Courses",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Try Dive",
+                  "description": "Introductory dive for first-timers – guided session with equipment included.",
+                  "url": "https://changdiving.com/en/day-trips/try-dive/",
+                  "category": "Beginner Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P1D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P1D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 4890,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/day-trips/try-dive/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Scuba Diver Course",
+                  "description": "Short certification course for supervised dives up to 12m.",
+                  "url": "https://changdiving.com/en/courses/open-water-diver/",
+                  "category": "Beginner Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P2D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P2D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 10490,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/open-water-diver/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Open Water Diver Course",
+                  "description": "3-day entry-level scuba certification – dive to 18m with buddy.",
+                  "url": "https://changdiving.com/en/courses/open-water-diver/",
+                  "category": "Beginner Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P3D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P3D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 14490,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/open-water-diver/"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Advanced Courses",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Advanced Open Water Diver",
+                  "description": "Build your skills and dive deeper – certification up to 30m.",
+                  "url": "https://changdiving.com/en/courses/advanced/",
+                  "category": "Advanced Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P2D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P2D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 13490,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/advanced/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "First Aid (CPR/React Right)",
+                  "description": "Emergency response and first aid training for divers.",
+                  "url": "https://changdiving.com/en/courses/first-aid/",
+                  "category": "Advanced Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P1D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P1D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 4990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/first-aid/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Rescue Diver Course",
+                  "description": "Learn to prevent and manage dive emergencies – advanced rescue certification.",
+                  "url": "https://changdiving.com/en/courses/rescue-diver/",
+                  "category": "Advanced Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P3D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P3D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 14990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/rescue-diver/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Specialty Courses (e.g., Wreck, Deep, Nitrox)",
+                  "description": "Focus on wreck, deep, nitrox and more – expand your dive skills.",
+                  "url": "https://changdiving.com/en/courses/speciality/",
+                  "category": "Advanced Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P2D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P2D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 7990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/speciality/"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Professional Courses",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Divemaster Course",
+                  "description": "First professional level in diving – assist instructors and lead dives.",
+                  "url": "https://changdiving.com/en/courses/divemaster/",
+                  "category": "Professional Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P30D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P30D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 29990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/divemaster/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "First Aid Instructor",
+                  "description": "Become a certified emergency first response instructor.",
+                  "url": "https://changdiving.com/en/courses/efr-instructor/",
+                  "category": "Professional Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P2D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P2D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 9990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/efr-instructor/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Open Water Scuba Instructor",
+                  "description": "Teach diving and certify students worldwide – instructor course.",
+                  "url": "https://changdiving.com/en/courses/sdi-idc/",
+                  "category": "Professional Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P20D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P20D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 34990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/sdi-idc/"
+                  }
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Course",
+                  "name": "Crossover Instructor Courses",
+                  "description": "Convert your existing instructor license to SDI/TDI standards.",
+                  "url": "https://changdiving.com/en/courses/instructor-crossover/",
+                  "category": "Professional Courses",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Chang Diving Center",
+                    "url": "https://changdiving.com/"
+                  },
+                  "hasCourseInstance": {
+                    "@type": "CourseInstance",
+                    "courseMode": "Onsite",
+                    "duration": "P4D",
+                    "startDate": "2025-06-10",
+                    "courseWorkload": "P4D",
+                    "location": {
+                      "@type": "Place",
+                      "name": "Chang Diving Center",
+                      "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "21/52 M 4, Klong Prao Beach",
+                        "addressLocality": "Koh Chang",
+                        "addressRegion": "Trat",
+                        "postalCode": "23170",
+                        "addressCountry": "TH"
+                      }
+                    }
+                  },
+                  "offers": {
+                    "@type": "Offer",
+                    "category": "Paid",
+                    "price": 15990,
+                    "priceCurrency": "THB",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://changdiving.com/en/courses/instructor-crossover/"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Dive Equipment",
+            "itemListElement": []
+          }
         ]
       }
     </script>
@@ -170,6 +819,96 @@
             "position": 1,
             "name": "Home",
             "item": "https://changdiving.com/"
+          }
+        ]
+      }
+    </script>
+    
+    <!-- FAQ Schema for Koh Chang Diving -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What marine life can I see diving in Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Koh Chang's waters host incredible marine biodiversity: sea turtles, bamboo sharks, moray eels, lionfish, scorpionfish, octopus, cuttlefish, and large schools of barracuda, trevally, and snappers. At wreck sites like HTMS Chang, you'll find batfish, groupers, and massive schools of fish. Macro enthusiasts love our nudibranchs, ghost pipefishes, and ornate ghost pipefishes. Reef sites feature angelfish, butterflyfish, triggerfish, and colorful soft corals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Koh Chang offer wreck dives?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! Koh Chang is famous for wreck diving. The HTMS Chang is Thailand's biggest wreck – a 100-meter navy frigate at 31m depth with intact structure and swim-throughs. We also have the T11 Wreck (20m), Phutthayotfa Wreck (40m), and Koho Maru 5 (43m) – a Japanese WWII freighter. All wrecks are artificial reefs teeming with marine life. Wreck diving is available year-round for certified divers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best time to dive in Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The best diving season is November to April (high season) with calm seas, excellent visibility (15-25m), and water temperatures 27-29°C. March and April offer the clearest water. May to October is monsoon season with rougher conditions, but diving is still possible with reduced visibility (8-15m) and lower prices. The HTMS Chang wreck is diveable year-round. We operate daily trips throughout the year."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need experience to scuba dive in Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No experience needed! Complete beginners can start with a Try Dive – a supervised introduction to scuba diving in shallow water (max 12m). If you want certification, our 3-day Open Water course gets you qualified to dive worldwide. Already certified? Join our Fun Dive trips to explore reefs and wrecks. We cater to all levels from first-timers to technical divers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many dive sites are around Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Koh Chang has 13 main dive sites within 30-60 minutes by boat. This includes 4 wreck sites (HTMS Chang, T11, Phutthayotfa, Koho Maru 5) and 9 reef sites ranging from shallow beginner-friendly reefs (10-18m) to advanced pinnacles and walls (25m+). Popular sites include Koh Rang Pinnacle, Hin Raab, Blueberry Hill, and the Hin sites. Each site offers unique topography and marine life."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Koh Chang good for beginner divers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! Koh Chang is perfect for beginners. We have multiple shallow reef sites (10-15m) with calm conditions, gentle currents, and rich marine life. Sites like Hin Pray Nam, Hin Rua Tek, and Hin Sam Sao are ideal training locations. Small group sizes (max 4 divers per instructor) ensure personal attention. Many dive centers offer courses in multiple languages. The warm water (27-29°C) and good visibility make learning comfortable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How deep are the dive sites in Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dive depths vary by site and certification level. Beginner sites: 10-18 meters (Hin Pray Nam, Hin Rua Tek, Hin Sam Sao). Intermediate sites: 18-25 meters (Blueberry Hill, Secret Reef, Hin Raab). Advanced sites: 25-43 meters (Koh Rang Pinnacle 25m, HTMS Chang 31m, Koho Maru 5 43m). Try Dives stay at 6-12 meters. Open Water divers can dive to 18m, Advanced divers to 30m+."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes Koh Chang special for diving?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Koh Chang offers Thailand's biggest wreck dive (HTMS Chang), uncrowded dive sites, diverse marine life, and sites for all levels – all within a pristine national marine park. Unlike busier destinations, you'll dive in small groups at sites with minimal boat traffic. The combination of dramatic wreck dives, colorful reef walls, and intact coral gardens in warm, clear water makes Koh Chang a hidden gem. Plus, it's easily accessible from Bangkok (5-6 hours)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How far are the dive sites from Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most dive sites are 20-45 minutes by boat from Koh Chang's west coast. Closer sites (Hin Pray Nam, Hin Rua Tek) take 20-30 minutes. Mid-range sites (Blueberry Hill, Secret Reef) are 30-40 minutes. The HTMS Chang wreck and Koh Rang sites are 40-60 minutes. All trips depart from Bang Bao Pier. Boats are spacious with shade, toilets, and refreshments. Surface intervals are spent at scenic islands or aboard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the water visibility like in Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Visibility varies by season and location. High season (November-April): 15-25 meters, with March-April offering the clearest conditions (20-25m+). Low season (May-October): 8-15 meters due to plankton and runoff. Wreck sites generally have better visibility than shallow reefs. Koh Rang sites (national park) consistently offer the best clarity. Water temperature stays 27-29°C year-round, making diving comfortable in 3mm wetsuits."
+            }
           }
         ]
       }
