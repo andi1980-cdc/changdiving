@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/koh-rang-pinnacle/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/koh-rang-pinacle_header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/koh-rang-pinacle_header_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="หินกระเดื่อง – จุดดำน้ำลึกใกล้เกาะช้าง" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "โขดหินพินนาเคิล เกาะรัง – จุดดำน้ำใกล้เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/koh-rang-pinacle_header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/koh-rang-pinacle_header_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "หินกระเดื่อง – จุดดำน้ำลึกใกล้เกาะช้าง"
+          },
         "description": "โขดหินพินนาเคิลเกาะรังเป็นจุดดำน้ำลึก เหมาะสำหรับนักดำน้ำระดับสูง พบอินทรีทะเล ปลาตะเพียนเงิน ปลาทะเลน้ำลึก และอื่นๆ ใกล้เกาะช้าง",
         "address": {
           "@type": "PostalAddress",

@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/secret-reef/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/secret-reef_header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/secret-reef_header_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="ซีเคร็ตรีฟ – จุดดำน้ำลับใกล้หินราบใต้ เกาะช้าง" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "ซีเคร็ตรีฟ – เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/secret-reef_header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/secret-reef_header_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "ซีเคร็ตรีฟ – จุดดำน้ำลับใกล้หินราบใต้ เกาะช้าง"
+          },
         "description": "ซีเคร็ตรีฟเป็นแนวปะการังน้ำตื้นสีสันสดใส มีแคนยอน ปลาหิน ทากทะเล กระเบน และปะการังอ่อนหลากสี – เหมาะสำหรับการดำน้ำสนุกใกล้เกาะช้าง",
         "address": {
           "@type": "PostalAddress",

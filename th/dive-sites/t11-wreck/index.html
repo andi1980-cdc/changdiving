@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/t11-wreck/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="เรือจม ต11 – จุดดำน้ำเรือตรวจการณ์ประวัติศาสตร์แห่งเกาะช้าง" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "เรือจม ต11 – เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "เรือจม ต11 – จุดดำน้ำเรือตรวจการณ์ประวัติศาสตร์แห่งเกาะช้าง"
+          },
         "description": "ต11 เป็นเรือลาดตระเวนชายฝั่งที่จมในปี 2013 เพื่อสร้างแนวปะการังเทียมใกล้เกาะช้าง จุดดำน้ำซากเรือยอดเยี่ยมพร้อมปลาหินและปลาฉลาม",
         "address": {
           "@type": "PostalAddress",

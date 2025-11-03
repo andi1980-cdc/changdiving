@@ -94,10 +94,11 @@
       property="og:url"
       content="https://changdiving.com/en/dive-sites/dive-site-map-koh-chang/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Dive Site Map of Koh Chang | Explore the Best Dive Spots" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -183,7 +184,13 @@
         "name": "Dive Sites around Koh Chang",
         "description": "Interactive map of dive sites around Koh Chang, including wrecks, reefs, pinnacles, dive centers, and boat access points for all levels.",
         "url": "https://changdiving.com/en/dive-sites/dive-site-map-koh-chang/",
-        "image": "https://changdiving.com/img/dive-sites/dive-site-map_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/dive-site-map_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "Dive Site Map of Koh Chang | Explore the Best Dive Spots"
+          },
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "en",

@@ -89,10 +89,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/hin-sam-sao/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/hin-sam-sao_header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/hin-sam-sao_header_big.webp" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="400" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="หินสามเส้า – จุดดำน้ำเกาะช้าง" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -173,7 +174,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "หินสามเส้า – จุดดำน้ำ เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/hin-sam-sao_header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/hin-sam-sao_header_big.webp",
+            "width": "600",
+            "height": "400",
+            "caption": "หินสามเส้า – จุดดำน้ำเกาะช้าง"
+          },
         "description": "ดำน้ำที่หินสามเส้ากับช้างไดร์วิ่ง – แนวปะการังน้ำตื้นที่มีหินเด่นสามก้อน สวนปะการัง และสิ่งมีชีวิตใต้น้ำที่น่าสนใจ",
         "address": {
           "@type": "PostalAddress",

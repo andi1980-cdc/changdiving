@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/de/dive-sites/hin-pray-nam/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/hin-pray-nam_header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/hin-pray-nam_header_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="Hin Pray Nam – Verstecktes Korallenriff bei Koh Chang" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "Hin Pray Nam – Tauchplatz bei Koh Chang",
-        "image": "https://changdiving.com/img/dive-sites/hin-pray-nam_header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/hin-pray-nam_header_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "Hin Pray Nam – Verstecktes Korallenriff bei Koh Chang"
+          },
         "description": "Hin Pray Nam ist ein malerischer Korallenriff-Tauchplatz nahe Koh Chang, ideal für Anfänger und erfahrene Taucher.",
         "address": {
           "@type": "PostalAddress",

@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/koho-maru-5/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="โคโฮมารุ 5 – จุดดำน้ำลึกเชิงเทคนิคใกล้เกาะช้าง" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "ซากเรือโคโฮะ มารุ 5 – เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "โคโฮมารุ 5 – จุดดำน้ำลึกเชิงเทคนิคใกล้เกาะช้าง"
+          },
         "description": "โคโฮะ มารุ 5 เป็นจุดดำน้ำลึกสำหรับดำน้ำเทคนิคใกล้เกาะช้าง ประเทศไทย เดิมเป็นเรือบรรทุกน้ำมันของญี่ปุ่น ปัจจุบันเป็นซากเรือประวัติศาสตร์ที่ความลึก 42 เมตร",
         "address": {
           "@type": "PostalAddress",

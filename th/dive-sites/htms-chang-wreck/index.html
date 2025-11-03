@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/htms-chang-wreck/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="เรือหลวงช้าง – ซากเรือจมที่ใหญ่ที่สุดในประเทศไทย" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "ซากเรือ เรือหลวงช้าง – เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "เรือหลวงช้าง – ซากเรือจมที่ใหญ่ที่สุดในประเทศไทย"
+          },
         "description": "เรือหลวงช้าง เป็นจุดดำน้ำซากเรือที่ใหญ่ที่สุดในประเทศไทย พบปลาค้างคาว ปลากระโทงแทง และปลาสิงโต เหมาะสำหรับนักดำน้ำขั้นสูง",
         "address": {
           "@type": "PostalAddress",

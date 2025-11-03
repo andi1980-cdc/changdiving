@@ -97,10 +97,13 @@
       property="og:url"
       content="https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="
+      Tauchplatzkarte von Koh Chang | Entdecke die besten Tauchspots
+    " />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -186,7 +189,15 @@
         "name": "Tauchplätze rund um Koh Chang",
         "description": "Interaktive Karte der Tauchplätze rund um Koh Chang, inklusive Wracks, Riffen, Pinnacles, Tauchbasen und Bootszugänge – für alle Erfahrungsstufen.",
         "url": "https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/",
-        "image": "https://changdiving.com/img/dive-sites/dive-site-map_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/dive-site-map_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "
+      Tauchplatzkarte von Koh Chang | Entdecke die besten Tauchspots
+    "
+          },
         "address": {
           "@type": "PostalAddress",
           "addressCountry": "DE",

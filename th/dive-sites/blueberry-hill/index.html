@@ -93,10 +93,11 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/blueberry-hill/"
     />
-    <meta
-      property="og:image"
-      content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp"
-    />
+    <meta property="og:image" content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp" />
+    <meta property="og:image:width" content="2580" />
+    <meta property="og:image:height" content="1460" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:alt" content="จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -180,7 +181,13 @@
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "บลูเบอร์รี่ฮิลล์ – เกาะช้าง",
-        "image": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
+            "width": "2580",
+            "height": "1460",
+            "caption": "จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง"
+          },
         "description": "บลูเบอร์รี่ฮิลล์เป็นแนวปะการังตื้นที่สวยงามในเกาะช้าง มีแคนยอน ปะการัง และระบบนิเวศทางทะเลที่หลากหลาย เหมาะสำหรับผู้เริ่มต้นดำน้ำ",
         "address": {
           "@type": "PostalAddress",
