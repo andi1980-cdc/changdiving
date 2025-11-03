@@ -413,6 +413,16 @@ const REDIRECTS_PREFIX_RAW = [
   { from: "/de/tag", to: "/de/posts/" },
   { from: "/th/tag", to: "/th/posts/" },
 
+  // Old WordPress account/my-account URLs -> redirect to contact
+  { from: "/account", to: "/en/contact/" },
+  { from: "/en/account", to: "/en/contact/" },
+  { from: "/de/account", to: "/de/contact/" },
+  { from: "/th/account", to: "/th/contact/" },
+  { from: "/my-account", to: "/en/contact/" },
+  { from: "/en/my-account", to: "/en/contact/" },
+  { from: "/de/my-account", to: "/de/contact/" },
+  { from: "/th/my-account", to: "/th/contact/" },
+
   // Old dive-sites without language prefix -> redirect to English
   { from: "/dive-sites", to: "/en/dive-sites/" },
   
