@@ -629,53 +629,59 @@ export async function onRequest(context) {
 
   // --- SPECIAL: Server-side language detection for root domain ---
   if (normalizedPath === '/') {
-    // Check if it's a bot/crawler
     const userAgent = request.headers.get('User-Agent') || '';
     const isBot = /bot|crawler|spider|crawling|google|bing|yahoo|duckduckgo|baidu|yandex|slurp|facebookexternalhit|linkedinbot|whatsapp|telegram|slack/i.test(userAgent);
 
-    // Don't redirect bots or if noredirect parameter is present
     if (!isBot && !url.searchParams.has('noredirect')) {
-      // Detect language from Accept-Language header
-      let detectedLang = 'en'; // default
+      let detectedLang = 'en';
+      const cookieString = request.headers.get('Cookie') || '';
 
-      // 1. Check for language cookie
-      const cookieString = request.headers.get('Cookie');
-      if (cookieString) {
-        const langCookie = cookieString.split(';').find(c => c.trim().startsWith('user_lang='));
-        if (langCookie) {
-          const lang = langCookie.split('=')[1];
-          if (['en', 'de', 'th'].includes(lang)) {
-            detectedLang = lang;
-          }
+      const langCookie = cookieString.split(';').find(c => c.trim().startsWith('user_lang='));
+      if (langCookie) {
+        const lang = langCookie.split('=')[1];
+        if (['en', 'de', 'th'].includes(lang)) {
+          detectedLang = lang;
         }
       }
 
-      // 2. If no cookie, check Accept-Language header
-      if (detectedLang === 'en' && !cookieString?.includes('user_lang')) {
+      if (!langCookie) {
         const acceptLanguage = request.headers.get('Accept-Language');
         if (acceptLanguage) {
-          const langCode = acceptLanguage.split(',')[0].toLowerCase().substring(0, 2);
+          const langCode = acceptLanguage.split(',')[0].trim().toLowerCase().substring(0, 2);
           if (langCode === 'de') detectedLang = 'de';
           else if (langCode === 'th') detectedLang = 'th';
-          // If Accept-Language is set but not de/th, keep 'en' as default
-        } else {
-          // 3. Only check country if NO Accept-Language header exists
-          if (request.headers.get('CF-IPCountry') === 'TH') {
-            detectedLang = 'th';
-          }
+        } else if (request.headers.get('CF-IPCountry') === 'TH') {
+          detectedLang = 'th';
         }
       }
 
-      // Redirect to detected language
-      const redirectUrl = `${url.origin}/${detectedLang}/`;
-      return new Response(null, {
-        status: 302, // Temporary redirect for language preference
-        headers: {
-          'Location': redirectUrl,
-          'Set-Cookie': `user_lang=${detectedLang}; Path=/; Max-Age=2592000; SameSite=Lax`, // 30 days
-          'Cache-Control': 'no-cache, no-store',
-          'X-Debug': 'language-redirect'
-        }
+      let assetResponse = await context.env.ASSETS.fetch(new URL(`/${detectedLang}/index.html`, url));
+      if (!assetResponse.ok) {
+        assetResponse = await context.env.ASSETS.fetch(new URL('/en/index.html', url));
+        detectedLang = 'en';
+      }
+
+      const headers = new Headers(assetResponse.headers);
+      headers.set('Content-Language', detectedLang);
+      headers.set('Set-Cookie', `user_lang=${detectedLang}; Path=/; Max-Age=2592000; SameSite=Lax`);
+      headers.set('Cache-Control', 'private, max-age=0, no-cache, no-store');
+
+      const existingVary = headers.get('Vary');
+      const varyValues = new Set(
+        (existingVary || '')
+          .split(',')
+          .map(v => v.trim())
+          .filter(Boolean)
+      );
+      varyValues.add('Accept-Language');
+      varyValues.add('Cookie');
+      headers.set('Vary', Array.from(varyValues).join(', '));
+
+      headers.set('X-Debug', 'language-rewrite');
+
+      return new Response(assetResponse.body, {
+        status: assetResponse.status,
+        headers
       });
     }
   }
