@@ -546,7 +546,10 @@ const FORCE_GONE_EXACT = new Set(
   ["/th/forms", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
   ["/th/why-advanced", "/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"],
     // weitere exakte 410er hier …
-  ].map(p => normPath(ensureLeadingSlash(p)))
+  ].map(entry => {
+    const raw = Array.isArray(entry) ? entry[0] : entry;
+    return normPath(ensureLeadingSlash(raw));
+  })
 );
 
 // 4) PREFIX 410 — alles darunter Gone - wildcard (Strings)
