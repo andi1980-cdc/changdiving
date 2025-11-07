@@ -674,12 +674,27 @@ export async function onRequest(context) {
 
   // --- 0.5) Language root redirects (ensure trailing slash) ---
   if (normalizedPath === '/en' || normalizedPath === '/de' || normalizedPath === '/th') {
-    return new Response(null, { 
-      status: 301, 
-      headers: { 
+    return new Response(null, {
+      status: 301,
+      headers: {
         Location: `https://changdiving.com${normalizedPath}/`,
-        "X-Debug": "301-lang-root" 
-      } 
+        "X-Debug": "301-lang-root"
+      }
+    });
+  }
+
+  // --- 0.6) CRITICAL FIX: Force trailing slash for all language paths ---
+  // Google sees URLs without trailing slashes and marks them as "Page with redirect"
+  // We need to handle these with 301 BEFORE Cloudflare's automatic 308 redirect
+  // This applies to language paths that don't end with slash and aren't assets/files
+  if (isInLang(path) && !isAsset(path) && !path.endsWith('/') && !LANG_ROOTS.includes(path)) {
+    // URL like /en/dive-sites should redirect to /en/dive-sites/
+    return new Response(null, {
+      status: 301,
+      headers: {
+        Location: `https://changdiving.com${path}/`,
+        "X-Debug": "301-trailing-slash"
+      }
     });
   }
 
