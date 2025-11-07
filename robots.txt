@@ -1,28 +1,4 @@
-# NOTICE: The collection of content and other data on this
-# site through automated means, including any device, tool,
-# or process designed to data mine or scrape content, is
-# prohibited except (1) for the purpose of search engine indexing or
-# artificial intelligence retrieval augmented generation or (2) with express
-# written permission from this site's operator.
-
-# To request permission to license our intellectual
-# property and/or other materials, please contact this
-# site's operator directly.
-
-# PRIMARY RULES - Allow all search engines and AI bots
 User-agent: *
 Allow: /
 
-# Do not block CSS/JS/Fonts — needed for proper rendering by search engines
-# (Previously blocked; removed to improve crawl and rendering.)
-
-# Allow important content (explicitly stated for clarity)
-Allow: /img/
-Allow: /favicon/
-Allow: /docs/
-Allow: /en/
-Allow: /de/
-Allow: /th/
-
-# SITEMAP DECLARATION
 Sitemap: https://changdiving.com/sitemap-index.xml 
