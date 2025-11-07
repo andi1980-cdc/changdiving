@@ -225,7 +225,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/beginner-guide", "/en/posts/koh-chang-diving-travel-guides/beginner-guide/"],
   ["/en/dive-professional-training", "/en/posts/straight-talk/dive-professional-training/"],
   ["/en/courses/technical-diving", "/en/courses/technical-diving-courses/"],
- 
+
   ["/en/dive-logbook", "/en/posts/scuba-knowledge/dive-logbook/"],
   ["/en/deep-diving", "/en/posts/tips-and-tricks/deep-diving/"],
   ["/en/diving-myths", "/en/posts/straight-talk/diving-myths/"],
@@ -679,12 +679,12 @@ export async function onRequest(context) {
 
   // --- 0.5) Language root redirects (ensure trailing slash) ---
   if (normalizedPath === '/en' || normalizedPath === '/de' || normalizedPath === '/th') {
-    return new Response(null, {
-      status: 301,
-      headers: {
+    return new Response(null, { 
+      status: 301, 
+      headers: { 
         Location: `https://changdiving.com${normalizedPath}/`,
-        "X-Debug": "301-lang-root"
-      }
+        "X-Debug": "301-lang-root" 
+      } 
     });
   }
 
