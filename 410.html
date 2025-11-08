@@ -1,57 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <script>
-      // Get the path from the URL
-      const path = window.location.pathname;
-      
-      // Function to get preferred language based on browser settings
-      function getPreferredLanguage() {
-        const language = navigator.language || navigator.userLanguage;
-        const lang = language.toLowerCase().substring(0, 2);
-        
-        // Map browser language codes to our supported languages
-        switch (lang) {
-          case 'de':
-            return 'de';
-          case 'th':
-            return 'th';
-          default:
-            return 'en';
-        }
-      }
-
-      // First check URL path
-      if (path.startsWith('/de/')) {
-        window.location.href = '/de/410/';
-      } else if (path.startsWith('/th/')) {
-        window.location.href = '/th/410/';
-      } else if (path.startsWith('/en/')) {
-        window.location.href = '/en/410/';
-      } else {
-        // If no language in path, use browser language
-        const preferredLang = getPreferredLanguage();
-        window.location.href = `/${preferredLang}/410/`;
-      }
-    </script>
-    <!-- Breadcrumb Structured Data -->
-    <script type="application/ld+json">
-      {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/410/"
-            }
-      ]
-}
-    </script>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=/410/" />
+    <title>Page removed</title>
   </head>
-  <body>
-    <p>Redirecting to 410 page...</p>
-  </body>
+  <body></body>
 </html>

@@ -635,6 +635,11 @@ export async function onRequest(context) {
   const url = new URL(context.request.url);
   const { request } = context;
 
+  async function loadHtmlFromAssets(path) {
+    const response = await context.env.ASSETS.fetch(new URL(path, url));
+    return response.text();
+  }
+
   // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
   const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
   const path = decodeURI(singleEncoded);
@@ -701,6 +706,22 @@ export async function onRequest(context) {
     }
   }
 
+  if (normalizedPath === '/404' || normalizedPath === '/404/' || normalizedPath === '/404/index.html') {
+    const html = await loadHtmlFromAssets('/404/index.html');
+    return new Response(html, {
+      status: 404,
+      headers: getNoCacheHeaders("text/html; charset=utf-8", "root-404")
+    });
+  }
+
+  if (normalizedPath === '/410' || normalizedPath === '/410/' || normalizedPath === '/410/index.html') {
+    const html = await loadHtmlFromAssets('/410/index.html');
+    return new Response(html, {
+      status: 410,
+      headers: getNoCacheHeaders("text/html; charset=utf-8", "root-410")
+    });
+  }
+
   // --- 0.5) Language root redirects (ensure trailing slash) ---
   if (normalizedPath === '/en' || normalizedPath === '/de' || normalizedPath === '/th') {
     return new Response(null, { 
@@ -729,23 +750,15 @@ export async function onRequest(context) {
 
   // --- 0.7) FORCE GONE EXAKT/PREFIX ---
   if (FORCE_GONE_EXACT.has(normalizedPath) || findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
-    // Assets haben eigene Handhabung unten – nur wenn kein Asset
+    // Assets sollen normal weiter geprüft werden
     if (isAsset(normalizedPath)) {
       return await context.next();
     }
-    try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-prefix")
-      });
-    } catch (error) {
-      // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-prefix-fallback")
-      });
-    }
+    const html = await loadHtmlFromAssets('/410/index.html');
+    return new Response(html, {
+      status: 410,
+      headers: getNoCacheHeaders("text/html; charset=utf-8", "410-prefix")
+    });
   }
 
   // --- 1) 301 EXAKT ---
@@ -788,19 +801,11 @@ export async function onRequest(context) {
 
   // --- 4) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(normalizedPath) && !isAsset(normalizedPath)) {
-    try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-global")
-      });
-    } catch (error) {
-      // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-global-fallback")
-      });
-    }
+    const html = await loadHtmlFromAssets('/410/index.html');
+    return new Response(html, {
+      status: 410,
+      headers: getNoCacheHeaders("text/html; charset=utf-8", "410-global")
+    });
   }
 
   // Sprachpfad 404 bleibt 404 (echter Tippfehler in gültiger Sprache)
