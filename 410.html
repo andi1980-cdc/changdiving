@@ -24,17 +24,17 @@
 
       // First check URL path
       if (path.startsWith('/de/')) {
-        window.location.href = '/de/410/index.html';
+        window.location.href = '/de/410/';
       } else if (path.startsWith('/th/')) {
-        window.location.href = '/th/410/index.html';
+        window.location.href = '/th/410/';
       } else if (path.startsWith('/en/')) {
-        window.location.href = '/en/410/index.html';
+        window.location.href = '/en/410/';
       } else {
         // If no language in path, use browser language
         const preferredLang = getPreferredLanguage();
-        window.location.href = `/${preferredLang}/410/index.html`;
+        window.location.href = `/${preferredLang}/410/`;
       }
-    </script
+    </script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
@@ -45,7 +45,7 @@
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://changdiving.com/410.html/"
+                  "item": "https://changdiving.com/410/"
             }
       ]
 }
