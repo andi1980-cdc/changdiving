@@ -729,6 +729,10 @@ export async function onRequest(context) {
 
   // --- 0.7) FORCE GONE EXAKT/PREFIX ---
   if (FORCE_GONE_EXACT.has(normalizedPath) || findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
+    // Assets haben eigene Handhabung unten – nur wenn kein Asset
+    if (isAsset(normalizedPath)) {
+      return await context.next();
+    }
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
       return new Response(html, { 
