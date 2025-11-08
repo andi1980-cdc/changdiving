@@ -574,6 +574,21 @@ const FORCE_GONE_PREFIX = [
      "/de/team",
      "/de/Verfasser",
      "/de/de",
+     // Legacy WordPress / Store assets no longer served
+     "/wp-content",
+     "/wp-includes",
+     "/wp-admin",
+     "/store",
+     "/product",
+     "/en/store",
+     "/de/store",
+     "/th/store",
+     "/en/product",
+     "/de/product",
+     "/th/product",
+     "/en/forms",
+     "/de/forms",
+     "/th/forms",
   // ggf. weitere Präfixe …
 ].map(p => normPath(ensureLeadingSlash(p)));
 
@@ -712,6 +727,23 @@ export async function onRequest(context) {
     });
   }
 
+  // --- 0.7) FORCE GONE EXAKT/PREFIX ---
+  if (FORCE_GONE_EXACT.has(normalizedPath) || findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
+    try {
+      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
+      return new Response(html, { 
+        status: 410, 
+        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-prefix")
+      });
+    } catch (error) {
+      // Fallback: einfache 410 Response
+      return new Response("410 Gone", { 
+        status: 410, 
+        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-prefix-fallback")
+      });
+    }
+  }
+
   // --- 1) 301 EXAKT ---
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
@@ -750,41 +782,7 @@ export async function onRequest(context) {
   const res = await context.next();
   if (res.status !== 404) return withDebug(res, "pages-pass");
 
-  // --- 4) Wenn 404: 410 EXAKT ---
-  if (FORCE_GONE_EXACT.has(normalizedPath) || findExactRedirect(normalizedPath, FORCE_GONE_EXACT)) {
-    try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-exact")
-      });
-    } catch (error) {
-      // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-exact-fallback")
-      });
-    }
-  }
-
-  // --- 5) 410 PREFIX ---
-  if (findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
-    try {
-      const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
-      return new Response(html, { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/html; charset=utf-8", "410-prefix")
-      });
-    } catch (error) {
-      // Fallback: einfache 410 Response
-      return new Response("410 Gone", { 
-        status: 410, 
-        headers: getNoCacheHeaders("text/plain; charset=utf-8", "410-prefix-fallback")
-      });
-    }
-  }
-
-  // --- 6) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
+  // --- 4) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(normalizedPath) && !isAsset(normalizedPath)) {
     try {
       const html = await context.env.ASSETS.fetch(new URL("/410.html", url)).then(r => r.text());
