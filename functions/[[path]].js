@@ -28,6 +28,25 @@ function joinUrl(base, suffix) {
   return `${b}/${s}`;
 }
 
+const CSP_DIRECTIVES = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-ancestors 'self'",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.trustindex.io https://unpkg.com https://cdn.jsdelivr.net",
+  "style-src 'self' 'unsafe-inline' https://unpkg.com https://cdn.jsdelivr.net",
+  "img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://cdn.trustindex.io https://i.ytimg.com https://img.youtube.com https://unpkg.com https://*.tile.openstreetmap.org",
+  "font-src 'self' data:",
+  "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://cdn.trustindex.io",
+  "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
+  "child-src 'self' https://www.youtube.com https://www.youtube-nocookie.com",
+  "manifest-src 'self'",
+  "media-src 'self'",
+  "upgrade-insecure-requests"
+];
+
+const CSP_HEADER_VALUE = CSP_DIRECTIVES.join("; ");
+
 // Cache-Control-Header für 410-Responses (verhindert Caching von gelöschten Inhalten)
 function getNoCacheHeaders(contentType, debugInfo) {
   return {
@@ -36,13 +55,17 @@ function getNoCacheHeaders(contentType, debugInfo) {
     "Pragma": "no-cache",
     "Expires": "0",
     "X-Debug": debugInfo,
-    "X-Frame-Options": "SAMEORIGIN"
+    "X-Frame-Options": "SAMEORIGIN",
+    "Content-Security-Policy": CSP_HEADER_VALUE
   };
 }
 
 function ensureSecurityHeaders(headers) {
   if (!headers.has("X-Frame-Options")) {
     headers.set("X-Frame-Options", "SAMEORIGIN");
+  }
+  if (!headers.has("Content-Security-Policy")) {
+    headers.set("Content-Security-Policy", CSP_HEADER_VALUE);
   }
   return headers;
 }
@@ -734,14 +757,11 @@ export async function onRequest(context) {
 
   // --- 0.5) Language root redirects (ensure trailing slash) ---
   if (normalizedPath === '/en' || normalizedPath === '/de' || normalizedPath === '/th') {
-    return new Response(null, { 
-      status: 301, 
-      headers: { 
-        Location: `https://changdiving.com${normalizedPath}/`,
-        "X-Debug": "301-lang-root",
-        "X-Frame-Options": "SAMEORIGIN"
-      } 
-    });
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: `https://changdiving.com${normalizedPath}/`,
+      "X-Debug": "301-lang-root"
+    }));
+    return new Response(null, { status: 301, headers });
   }
 
   // --- 0.6) CRITICAL FIX: Force trailing slash for all language paths ---
@@ -750,14 +770,11 @@ export async function onRequest(context) {
   // This applies to language paths that don't end with slash and aren't assets/files
   if (isInLang(path) && !isAsset(path) && !path.endsWith('/') && !LANG_ROOTS.includes(path)) {
     // URL like /en/dive-sites should redirect to /en/dive-sites/
-    return new Response(null, {
-      status: 301,
-      headers: {
-        Location: `https://changdiving.com${path}/`,
-        "X-Debug": "301-trailing-slash",
-        "X-Frame-Options": "SAMEORIGIN"
-      }
-    });
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: `https://changdiving.com${path}/`,
+      "X-Debug": "301-trailing-slash"
+    }));
+    return new Response(null, { status: 301, headers });
   }
 
   // --- 0.7) FORCE GONE EXAKT/PREFIX ---
@@ -776,35 +793,37 @@ export async function onRequest(context) {
   // --- 1) 301 EXAKT ---
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
-    return new Response(null, { status: 301, headers: { Location: exactRedirect, "X-Debug": "301-exact", "X-Frame-Options": "SAMEORIGIN" } });
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: exactRedirect,
+      "X-Debug": "301-exact"
+    }));
+    return new Response(null, { status: 301, headers });
   }
 
   // --- 2) 301 PREFIX/WILDCARD ---
   const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX);
   if (loc) {
-    return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix", "X-Frame-Options": "SAMEORIGIN" } });
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: loc,
+      "X-Debug": "301-prefix"
+    }));
+    return new Response(null, { status: 301, headers });
   }
 
   // --- 2.5) Video Redirects (spezielle Behandlung) ---
   if (normalizedPath.startsWith("/en/videos/") && normalizedPath !== "/en/videos/") {
-    return new Response(null, { 
-      status: 301, 
-      headers: { 
-        Location: "https://changdiving.com/en/videos/",
-        "X-Debug": "301-video",
-        "X-Frame-Options": "SAMEORIGIN"
-      } 
-    });
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: "https://changdiving.com/en/videos/",
+      "X-Debug": "301-video"
+    }));
+    return new Response(null, { status: 301, headers });
   }
   if (normalizedPath.startsWith("/de/videos/") && normalizedPath !== "/de/videos/") {
-    return new Response(null, { 
-      status: 301, 
-      headers: { 
-        Location: "https://changdiving.com/de/videos/",
-        "X-Debug": "301-video",
-        "X-Frame-Options": "SAMEORIGIN"
-      } 
-    });
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: "https://changdiving.com/de/videos/",
+      "X-Debug": "301-video"
+    }));
+    return new Response(null, { status: 301, headers });
   }
 
 
