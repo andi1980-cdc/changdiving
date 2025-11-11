@@ -35,8 +35,16 @@ function getNoCacheHeaders(contentType, debugInfo) {
     "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
     "Pragma": "no-cache",
     "Expires": "0",
-    "X-Debug": debugInfo
+    "X-Debug": debugInfo,
+    "X-Frame-Options": "SAMEORIGIN"
   };
+}
+
+function ensureSecurityHeaders(headers) {
+  if (!headers.has("X-Frame-Options")) {
+    headers.set("X-Frame-Options", "SAMEORIGIN");
+  }
+  return headers;
 }
 
 // --- Root-Dateien, die auch außerhalb Sprachpfaden 200 sein dürfen ---
@@ -628,6 +636,7 @@ function findPrefixRedirect(path, rules) {
 function withDebug(res, tag) {
   const h = new Headers(res.headers || {});
   if (!h.has("X-Debug")) h.set("X-Debug", tag);
+  ensureSecurityHeaders(h);
   return new Response(res.body, { status: res.status, headers: h });
 }
 
@@ -697,6 +706,7 @@ export async function onRequest(context) {
       varyValues.add('Cookie');
       headers.set('Vary', Array.from(varyValues).join(', '));
 
+      ensureSecurityHeaders(headers);
       headers.set('X-Debug', 'language-rewrite');
 
       return new Response(assetResponse.body, {
@@ -728,7 +738,8 @@ export async function onRequest(context) {
       status: 301, 
       headers: { 
         Location: `https://changdiving.com${normalizedPath}/`,
-        "X-Debug": "301-lang-root" 
+        "X-Debug": "301-lang-root",
+        "X-Frame-Options": "SAMEORIGIN"
       } 
     });
   }
@@ -743,7 +754,8 @@ export async function onRequest(context) {
       status: 301,
       headers: {
         Location: `https://changdiving.com${path}/`,
-        "X-Debug": "301-trailing-slash"
+        "X-Debug": "301-trailing-slash",
+        "X-Frame-Options": "SAMEORIGIN"
       }
     });
   }
@@ -764,13 +776,13 @@ export async function onRequest(context) {
   // --- 1) 301 EXAKT ---
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
-    return new Response(null, { status: 301, headers: { Location: exactRedirect, "X-Debug": "301-exact" } });
+    return new Response(null, { status: 301, headers: { Location: exactRedirect, "X-Debug": "301-exact", "X-Frame-Options": "SAMEORIGIN" } });
   }
 
   // --- 2) 301 PREFIX/WILDCARD ---
   const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX);
   if (loc) {
-    return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix" } });
+    return new Response(null, { status: 301, headers: { Location: loc, "X-Debug": "301-prefix", "X-Frame-Options": "SAMEORIGIN" } });
   }
 
   // --- 2.5) Video Redirects (spezielle Behandlung) ---
@@ -779,7 +791,8 @@ export async function onRequest(context) {
       status: 301, 
       headers: { 
         Location: "https://changdiving.com/en/videos/",
-        "X-Debug": "301-video" 
+        "X-Debug": "301-video",
+        "X-Frame-Options": "SAMEORIGIN"
       } 
     });
   }
@@ -788,7 +801,8 @@ export async function onRequest(context) {
       status: 301, 
       headers: { 
         Location: "https://changdiving.com/de/videos/",
-        "X-Debug": "301-video" 
+        "X-Debug": "301-video",
+        "X-Frame-Options": "SAMEORIGIN"
       } 
     });
   }
