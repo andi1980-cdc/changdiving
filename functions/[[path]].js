@@ -265,7 +265,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/apeks-xtx", "/en/equipment/"],
   ["/en/book-in-advance", "/en/posts/straight-talk/book-in-advance/"],
   ["/th/safety-check", "/th/posts/scuba-knowledge/safety-check/"],
-  ["/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang", "/en/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang/"],
+  ["/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang", "/en/dive-sites/htms-chang-wreck/"],
   
   // EN about
   ["/en/about/dive-schedule", "/en/about/"],
@@ -720,22 +720,6 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers });
   }
 
-  // --- 0.1) WWW to non-WWW Redirect (Prevent redirect chains) ---
-  // This must happen BEFORE path normalization to avoid double redirects
-  if (url.hostname.startsWith('www.')) {
-    url.hostname = url.hostname.replace(/^www\./, '');
-    // Preserve path and query string
-    const redirectUrl = url.href;
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: redirectUrl
-    }));
-    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
-    if (env !== 'production') {
-      headers.set("X-Debug", "301-www-to-nonwww");
-    }
-    return new Response(null, { status: 301, headers });
-  }
-
   async function loadHtmlFromAssets(path) {
     try {
       const response = await context.env.ASSETS.fetch(new URL(path, url));
@@ -856,26 +840,30 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers });
   }
 
+  // --- 0.1) WWW to non-WWW handling: Combine with path redirects to avoid chains ---
+  const isWww = url.hostname.startsWith('www.');
+  const nonWwwOrigin = isWww ? url.origin.replace(/^https?:\/\/www\./, 'https://') : url.origin;
+
   // --- 1) 301 EXAKT --- (MUST come before trailing slash and 410 checks)
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
-    // Construct full URL to avoid relative path issues
+    // Construct full URL - always use non-www to combine www→non-www with path redirect
     const redirectUrl = exactRedirect.startsWith('http') 
-      ? exactRedirect 
-      : `${url.origin}${exactRedirect}`;
+      ? exactRedirect.replace(/^https?:\/\/www\./, 'https://')
+      : `${nonWwwOrigin}${exactRedirect}`;
     const headers = ensureSecurityHeaders(new Headers({
       Location: redirectUrl
     }));
     // Only add debug header in development/staging
     const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
     if (env !== 'production') {
-      headers.set("X-Debug", "301-exact");
+      headers.set("X-Debug", isWww ? "301-www+exact" : "301-exact");
     }
     return new Response(null, { status: 301, headers });
   }
 
   // --- 2) 301 PREFIX/WILDCARD --- (MUST come before trailing slash and 410 checks)
-  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX, url.origin);
+  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX, nonWwwOrigin);
   if (loc) {
     const headers = ensureSecurityHeaders(new Headers({
       Location: loc
@@ -883,7 +871,20 @@ export async function onRequest(context) {
     // Only add debug header in development/staging
     const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
     if (env !== 'production') {
-      headers.set("X-Debug", "301-prefix");
+      headers.set("X-Debug", isWww ? "301-www+prefix" : "301-prefix");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
+  // --- 0.2) WWW to non-WWW Redirect (only if no path redirect matched) ---
+  if (isWww) {
+    url.hostname = url.hostname.replace(/^www\./, '');
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: url.href
+    }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-www-to-nonwww");
     }
     return new Response(null, { status: 301, headers });
   }
