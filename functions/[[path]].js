@@ -261,19 +261,8 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/which-course", "/de/posts/tips-and-tricks/which-course/"],
   
   // Additional missing redirects from Google Search Console errors
-  // Note: normPath removes trailing slashes, so we only need one entry per path
   ["/en/apeks-xtx", "/en/equipment/"],
   ["/en/book-in-advance", "/en/posts/straight-talk/book-in-advance/"],
-  ["/th/safety-check", "/th/posts/scuba-knowledge/safety-check/"],
-  ["/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang", "/en/dive-sites/htms-chang-wreck/"],
-  // Old German dive site URLs with Umlauts - redirect to new structure
-  ["/de/tauchplätze/tauchen-sie-koh-rang-pinnacle-das-fortgeschrittene-tauchabenteuer-im-marinepark-von-koh-chang", "/de/dive-sites/koh-rang-pinnacle/"],
-  ["/de/tauchplätze/entdecken-sie-das-t11-wrack-das-legendaere-schiffswrack-auf-koh-chang", "/de/dive-sites/t11-wreck/"],
-  ["/de/tauchplätze/entdecken-sie-secret-reef-das-verborgene-unterwasserparadies-von-koh-chang", "/de/dive-sites/secret-reef/"],
-  ["/de/tauchplätze/entdecken-sie-hin-sam-sao-der-geheime-tauchspot-auf-koh-chang", "/de/dive-sites/hin-sam-sao/"],
-  
-  // Old Thai store URLs - redirect to prices/equipment
-  ["/th/ร้านค้า/หมวดหมู่/อุปกรณ์ดำน้ำ/เรกกูเลเตอร์/scubapro-สคูบ้าเรกกูเลเตอร์", "/th/prices/"],
   
   // EN about
   ["/en/about/dive-schedule", "/en/about/"],
@@ -616,8 +605,8 @@ const FORCE_GONE_EXACT = new Set(
 
 // 4) PREFIX 410 — alles darunter Gone - wildcard (Strings)
 // IMPORTANT: Removed product/category/store/tag - these now redirect via REDIRECTS_PREFIX
-// NOTE: /nl is handled separately - redirects to root for language detection
 const FORCE_GONE_PREFIX = [
+
      // TH Wildcards (only truly gone pages)
      "/th/th",
      "/th/cdc",
@@ -711,18 +700,7 @@ function withDebug(res, tag) {
 }
 
 export async function onRequest(context) {
-  let url;
-  try {
-    url = new URL(context.request.url);
-  } catch (error) {
-    // Invalid URL - return 400 Bad Request
-    return new Response('Bad Request: Invalid URL', { 
-      status: 400,
-      headers: ensureSecurityHeaders(new Headers({
-        'Content-Type': 'text/plain'
-      }))
-    });
-  }
+  const url = new URL(context.request.url);
   const { request } = context;
 
   // --- 0) HTTP to HTTPS Redirect (Security: Force HTTPS) ---
@@ -759,43 +737,9 @@ export async function onRequest(context) {
     }
   }
 
-  // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung mit Fehlerbehandlung
-  // Handle both properly encoded URLs and URLs with raw Unicode characters (Umlauts, Thai, etc.)
-  // Note: url.pathname is already decoded by the URL constructor, but we handle edge cases
-  let path;
-  try {
-    // Handle double-encoded URLs (%25XX -> %XX)
-    const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
-    
-    // Check if pathname contains encoded characters
-    if (singleEncoded.includes('%')) {
-      // Try to decode properly encoded URLs
-      try {
-        path = decodeURI(singleEncoded);
-      } catch (decodeError) {
-        // If decodeURI fails, try decodeURIComponent for individual segments
-        // This handles mixed encoding scenarios
-        try {
-          path = singleEncoded.split('/').map(segment => {
-            try {
-              return decodeURIComponent(segment);
-            } catch (e) {
-              return segment; // Use as-is if decoding fails
-            }
-          }).join('/');
-        } catch (fallbackError) {
-          // Last resort: use pathname as-is (already decoded by URL constructor)
-          path = url.pathname;
-        }
-      }
-    } else {
-      // No encoding found, use pathname as-is (handles raw Unicode like Umlauts, Thai)
-      path = url.pathname;
-    }
-  } catch (error) {
-    // If all decoding fails, use pathname as-is
-    path = url.pathname;
-  }
+  // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
+  const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
+  const path = decodeURI(singleEncoded);
 
   // 2) Pfad normalisieren (Slashes, etc.)
   const normalizedPath = normPath(path);
@@ -893,80 +837,10 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers });
   }
 
-  // --- 0.1) WWW to non-WWW handling: Combine with path redirects to avoid chains ---
-  const isWww = url.hostname.startsWith('www.');
-  const nonWwwOrigin = isWww ? url.origin.replace(/^https?:\/\/www\./, 'https://') : url.origin;
-
-  // --- 0.3) Unsupported languages - redirect to root for language detection ---
-  // Any language code that's not in LANG_ROOTS should redirect to root where language is auto-detected
-  // This handles old language codes like /nl/, /fr/, /es/, etc. that are no longer supported
-  const langMatch = normalizedPath.match(/^\/([a-z]{2})(\/|$)/);
-  if (langMatch && langMatch[1]) {
-    const langCode = langMatch[1];
-    const langPath = `/${langCode}/`;
-    // If it's a language code but not in our supported languages, redirect to root
-    if (!LANG_ROOTS.includes(langPath) && !isAsset(normalizedPath)) {
-      const headers = ensureSecurityHeaders(new Headers({
-        Location: `${nonWwwOrigin}/`
-      }));
-      const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
-      if (env !== 'production') {
-        headers.set("X-Debug", `301-unsupported-lang-${langCode}-to-root`);
-      }
-      return new Response(null, { status: 301, headers });
-    }
-  }
-
-  // --- 1) 301 EXAKT --- (MUST come before trailing slash and 410 checks)
-  const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
-  if (exactRedirect) {
-    // Construct full URL - always use non-www to combine www→non-www with path redirect
-    const redirectUrl = exactRedirect.startsWith('http') 
-      ? exactRedirect.replace(/^https?:\/\/www\./, 'https://')
-      : `${nonWwwOrigin}${exactRedirect}`;
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: redirectUrl
-    }));
-    // Only add debug header in development/staging
-    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
-    if (env !== 'production') {
-      headers.set("X-Debug", isWww ? "301-www+exact" : "301-exact");
-    }
-    return new Response(null, { status: 301, headers });
-  }
-
-  // --- 2) 301 PREFIX/WILDCARD --- (MUST come before trailing slash and 410 checks)
-  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX, nonWwwOrigin);
-  if (loc) {
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: loc
-    }));
-    // Only add debug header in development/staging
-    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
-    if (env !== 'production') {
-      headers.set("X-Debug", isWww ? "301-www+prefix" : "301-prefix");
-    }
-    return new Response(null, { status: 301, headers });
-  }
-
-  // --- 0.2) WWW to non-WWW Redirect (only if no path redirect matched) ---
-  if (isWww) {
-    url.hostname = url.hostname.replace(/^www\./, '');
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: url.href
-    }));
-    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
-    if (env !== 'production') {
-      headers.set("X-Debug", "301-www-to-nonwww");
-    }
-    return new Response(null, { status: 301, headers });
-  }
-
   // --- 0.6) CRITICAL FIX: Force trailing slash for all language paths ---
   // Google sees URLs without trailing slashes and marks them as "Page with redirect"
   // We need to handle these with 301 BEFORE Cloudflare's automatic 308 redirect
   // This applies to language paths that don't end with slash and aren't assets/files
-  // IMPORTANT: This must come AFTER redirect checks to avoid double redirects
   if (isInLang(path) && !isAsset(path) && !path.endsWith('/') && !LANG_ROOTS.includes(path)) {
     // URL like /en/dive-sites should redirect to /en/dive-sites/
     const headers = ensureSecurityHeaders(new Headers({
@@ -975,6 +849,34 @@ export async function onRequest(context) {
     const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
     if (env !== 'production') {
       headers.set("X-Debug", "301-trailing-slash");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
+  // --- 1) 301 EXAKT --- (MUST come before 410 checks to allow redirects)
+  const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
+  if (exactRedirect) {
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: exactRedirect
+    }));
+    // Only add debug header in development/staging
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-exact");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
+  // --- 2) 301 PREFIX/WILDCARD --- (MUST come before 410 checks to allow redirects)
+  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX, url.origin);
+  if (loc) {
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: loc
+    }));
+    // Only add debug header in development/staging
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-prefix");
     }
     return new Response(null, { status: 301, headers });
   }
