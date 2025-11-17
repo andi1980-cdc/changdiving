@@ -261,8 +261,11 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/which-course", "/de/posts/tips-and-tricks/which-course/"],
   
   // Additional missing redirects from Google Search Console errors
+  // Note: normPath removes trailing slashes, so we only need one entry per path
   ["/en/apeks-xtx", "/en/equipment/"],
   ["/en/book-in-advance", "/en/posts/straight-talk/book-in-advance/"],
+  ["/th/safety-check", "/th/posts/scuba-knowledge/safety-check/"],
+  ["/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang", "/en/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang/"],
   
   // EN about
   ["/en/about/dive-schedule", "/en/about/"],
@@ -717,6 +720,22 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers });
   }
 
+  // --- 0.1) WWW to non-WWW Redirect (Prevent redirect chains) ---
+  // This must happen BEFORE path normalization to avoid double redirects
+  if (url.hostname.startsWith('www.')) {
+    url.hostname = url.hostname.replace(/^www\./, '');
+    // Preserve path and query string
+    const redirectUrl = url.href;
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: redirectUrl
+    }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-www-to-nonwww");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
   async function loadHtmlFromAssets(path) {
     try {
       const response = await context.env.ASSETS.fetch(new URL(path, url));
@@ -837,27 +856,15 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers });
   }
 
-  // --- 0.6) CRITICAL FIX: Force trailing slash for all language paths ---
-  // Google sees URLs without trailing slashes and marks them as "Page with redirect"
-  // We need to handle these with 301 BEFORE Cloudflare's automatic 308 redirect
-  // This applies to language paths that don't end with slash and aren't assets/files
-  if (isInLang(path) && !isAsset(path) && !path.endsWith('/') && !LANG_ROOTS.includes(path)) {
-    // URL like /en/dive-sites should redirect to /en/dive-sites/
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: `${url.origin}${path}/`
-    }));
-    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
-    if (env !== 'production') {
-      headers.set("X-Debug", "301-trailing-slash");
-    }
-    return new Response(null, { status: 301, headers });
-  }
-
-  // --- 1) 301 EXAKT --- (MUST come before 410 checks to allow redirects)
+  // --- 1) 301 EXAKT --- (MUST come before trailing slash and 410 checks)
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
   if (exactRedirect) {
+    // Construct full URL to avoid relative path issues
+    const redirectUrl = exactRedirect.startsWith('http') 
+      ? exactRedirect 
+      : `${url.origin}${exactRedirect}`;
     const headers = ensureSecurityHeaders(new Headers({
-      Location: exactRedirect
+      Location: redirectUrl
     }));
     // Only add debug header in development/staging
     const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
@@ -867,7 +874,7 @@ export async function onRequest(context) {
     return new Response(null, { status: 301, headers });
   }
 
-  // --- 2) 301 PREFIX/WILDCARD --- (MUST come before 410 checks to allow redirects)
+  // --- 2) 301 PREFIX/WILDCARD --- (MUST come before trailing slash and 410 checks)
   const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX, url.origin);
   if (loc) {
     const headers = ensureSecurityHeaders(new Headers({
@@ -877,6 +884,23 @@ export async function onRequest(context) {
     const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
     if (env !== 'production') {
       headers.set("X-Debug", "301-prefix");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
+  // --- 0.6) CRITICAL FIX: Force trailing slash for all language paths ---
+  // Google sees URLs without trailing slashes and marks them as "Page with redirect"
+  // We need to handle these with 301 BEFORE Cloudflare's automatic 308 redirect
+  // This applies to language paths that don't end with slash and aren't assets/files
+  // IMPORTANT: This must come AFTER redirect checks to avoid double redirects
+  if (isInLang(path) && !isAsset(path) && !path.endsWith('/') && !LANG_ROOTS.includes(path)) {
+    // URL like /en/dive-sites should redirect to /en/dive-sites/
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: `${url.origin}${path}/`
+    }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-trailing-slash");
     }
     return new Response(null, { status: 301, headers });
   }
