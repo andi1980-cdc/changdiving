@@ -266,6 +266,8 @@ const REDIRECTS_EXACT_RAW = [
   ["/en/book-in-advance", "/en/posts/straight-talk/book-in-advance/"],
   ["/th/safety-check", "/th/posts/scuba-knowledge/safety-check/"],
   ["/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang", "/en/dive-sites/htms-chang-wreck/"],
+  // Old German dive site URLs with Umlauts - redirect to new structure
+  ["/de/tauchplätze/tauchen-sie-koh-rang-pinnacle-das-fortgeschrittene-tauchabenteuer-im-marinepark-von-koh-chang", "/de/dive-sites/koh-rang-pinnacle/"],
   
   // EN about
   ["/en/about/dive-schedule", "/en/about/"],
@@ -703,7 +705,18 @@ function withDebug(res, tag) {
 }
 
 export async function onRequest(context) {
-  const url = new URL(context.request.url);
+  let url;
+  try {
+    url = new URL(context.request.url);
+  } catch (error) {
+    // Invalid URL - return 400 Bad Request
+    return new Response('Bad Request: Invalid URL', { 
+      status: 400,
+      headers: ensureSecurityHeaders(new Headers({
+        'Content-Type': 'text/plain'
+      }))
+    });
+  }
   const { request } = context;
 
   // --- 0) HTTP to HTTPS Redirect (Security: Force HTTPS) ---
@@ -740,9 +753,21 @@ export async function onRequest(context) {
     }
   }
 
-  // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
-  const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
-  const path = decodeURI(singleEncoded);
+  // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung mit Fehlerbehandlung
+  let path;
+  try {
+    const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
+    path = decodeURI(singleEncoded);
+  } catch (error) {
+    // If URL decoding fails (e.g., malformed encoding), try to handle gracefully
+    // Return 400 Bad Request for truly invalid URLs
+    return new Response('Bad Request: Invalid URL encoding', { 
+      status: 400,
+      headers: ensureSecurityHeaders(new Headers({
+        'Content-Type': 'text/plain'
+      }))
+    });
+  }
 
   // 2) Pfad normalisieren (Slashes, etc.)
   const normalizedPath = normPath(path);
