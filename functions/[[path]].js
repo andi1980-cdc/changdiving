@@ -268,6 +268,12 @@ const REDIRECTS_EXACT_RAW = [
   ["/dive-sites/dive-htms-chang-thailands-largest-shipwreck-at-koh-chang", "/en/dive-sites/htms-chang-wreck/"],
   // Old German dive site URLs with Umlauts - redirect to new structure
   ["/de/tauchplätze/tauchen-sie-koh-rang-pinnacle-das-fortgeschrittene-tauchabenteuer-im-marinepark-von-koh-chang", "/de/dive-sites/koh-rang-pinnacle/"],
+  ["/de/tauchplätze/entdecken-sie-das-t11-wrack-das-legendaere-schiffswrack-auf-koh-chang", "/de/dive-sites/t11-wreck/"],
+  ["/de/tauchplätze/entdecken-sie-secret-reef-das-verborgene-unterwasserparadies-von-koh-chang", "/de/dive-sites/secret-reef/"],
+  ["/de/tauchplätze/entdecken-sie-hin-sam-sao-der-geheime-tauchspot-auf-koh-chang", "/de/dive-sites/hin-sam-sao/"],
+  
+  // Old Thai store URLs - redirect to prices/equipment
+  ["/th/ร้านค้า/หมวดหมู่/อุปกรณ์ดำน้ำ/เรกกูเลเตอร์/scubapro-สคูบ้าเรกกูเลเตอร์", "/th/prices/"],
   
   // EN about
   ["/en/about/dive-schedule", "/en/about/"],
@@ -754,19 +760,41 @@ export async function onRequest(context) {
   }
 
   // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung mit Fehlerbehandlung
+  // Handle both properly encoded URLs and URLs with raw Unicode characters (Umlauts, Thai, etc.)
+  // Note: url.pathname is already decoded by the URL constructor, but we handle edge cases
   let path;
   try {
+    // Handle double-encoded URLs (%25XX -> %XX)
     const singleEncoded = url.pathname.replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
-    path = decodeURI(singleEncoded);
+    
+    // Check if pathname contains encoded characters
+    if (singleEncoded.includes('%')) {
+      // Try to decode properly encoded URLs
+      try {
+        path = decodeURI(singleEncoded);
+      } catch (decodeError) {
+        // If decodeURI fails, try decodeURIComponent for individual segments
+        // This handles mixed encoding scenarios
+        try {
+          path = singleEncoded.split('/').map(segment => {
+            try {
+              return decodeURIComponent(segment);
+            } catch (e) {
+              return segment; // Use as-is if decoding fails
+            }
+          }).join('/');
+        } catch (fallbackError) {
+          // Last resort: use pathname as-is (already decoded by URL constructor)
+          path = url.pathname;
+        }
+      }
+    } else {
+      // No encoding found, use pathname as-is (handles raw Unicode like Umlauts, Thai)
+      path = url.pathname;
+    }
   } catch (error) {
-    // If URL decoding fails (e.g., malformed encoding), try to handle gracefully
-    // Return 400 Bad Request for truly invalid URLs
-    return new Response('Bad Request: Invalid URL encoding', { 
-      status: 400,
-      headers: ensureSecurityHeaders(new Headers({
-        'Content-Type': 'text/plain'
-      }))
-    });
+    // If all decoding fails, use pathname as-is
+    path = url.pathname;
   }
 
   // 2) Pfad normalisieren (Slashes, etc.)
