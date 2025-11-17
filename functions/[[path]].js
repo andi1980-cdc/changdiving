@@ -49,15 +49,23 @@ const CSP_HEADER_VALUE = CSP_DIRECTIVES.join("; ");
 
 // Cache-Control-Header für 410-Responses (verhindert Caching von gelöschten Inhalten)
 function getNoCacheHeaders(contentType, debugInfo) {
-  return {
+  const headers = new Headers({
     "Content-Type": contentType,
     "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
     "Pragma": "no-cache",
-    "Expires": "0",
-    "X-Debug": debugInfo,
-    "X-Frame-Options": "SAMEORIGIN",
-    "Content-Security-Policy": CSP_HEADER_VALUE
-  };
+    "Expires": "0"
+  });
+  
+  // Add all security headers
+  ensureSecurityHeaders(headers);
+  
+  // Only add debug header in development/staging (check environment)
+  const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+  if (env !== 'production' && debugInfo) {
+    headers.set("X-Debug", debugInfo);
+  }
+  
+  return headers;
 }
 
 function ensureSecurityHeaders(headers) {
@@ -66,6 +74,18 @@ function ensureSecurityHeaders(headers) {
   }
   if (!headers.has("Content-Security-Policy")) {
     headers.set("Content-Security-Policy", CSP_HEADER_VALUE);
+  }
+  if (!headers.has("Strict-Transport-Security")) {
+    headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+  }
+  if (!headers.has("Referrer-Policy")) {
+    headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  }
+  if (!headers.has("Permissions-Policy")) {
+    headers.set("Permissions-Policy", "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()");
+  }
+  if (!headers.has("X-Content-Type-Options")) {
+    headers.set("X-Content-Type-Options", "nosniff");
   }
   return headers;
 }
@@ -601,22 +621,16 @@ const FORCE_GONE_PREFIX = [
      "/de/2020",
      "/de/tauchplätze",
      "/de/Kategorie",
-     "de/kurse",
+     "/de/kurse",
      "/de/team",
      "/de/Verfasser",
      "/de/de",
-     // Legacy WordPress / Store assets no longer served
+     // Legacy WordPress assets no longer served
      "/wp-content",
      "/wp-includes",
      "/wp-admin",
-     "/store",
-     "/product",
-     "/en/store",
-     "/de/store",
-     "/th/store",
-     "/en/product",
-     "/de/product",
-     "/th/product",
+     // NOTE: /store, /product, /category, /tag are handled by REDIRECTS_PREFIX (301 redirects)
+     // Do NOT add them here as 410, as they should redirect instead
      "/en/forms",
      "/de/forms",
      "/th/forms",
@@ -639,7 +653,7 @@ function findExactRedirect(path, redirectsMap) {
   return null;
 }
 
-function findPrefixRedirect(path, rules) {
+function findPrefixRedirect(path, rules, baseUrl = "https://changdiving.com") {
   for (const { from, to } of rules) {
     // Normalize from path (remove trailing slash)
     const fromNorm = from.replace(/\/+$/, "");
@@ -650,7 +664,7 @@ function findPrefixRedirect(path, rules) {
     if (path === fromNorm || path.startsWith(fromNorm + "/")) {
       // For category redirects, don't append the rest path
       // This bundles all subcategories to the main category
-      return `https://changdiving.com${toNorm}`;
+      return `${baseUrl}${toNorm}`;
     }
   }
   return null;
@@ -658,8 +672,30 @@ function findPrefixRedirect(path, rules) {
 
 function withDebug(res, tag) {
   const h = new Headers(res.headers || {});
-  if (!h.has("X-Debug")) h.set("X-Debug", tag);
+  
+  // Only add debug header in development/staging
+  const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+  if (env !== 'production' && !h.has("X-Debug")) {
+    h.set("X-Debug", tag);
+  }
+  
   ensureSecurityHeaders(h);
+  
+  // Add cache headers for static assets (images, fonts, CSS, JS)
+  if (res.status === 200) {
+    const contentType = h.get("content-type") || "";
+    const path = res.url || "";
+    
+    // Check by content-type or file extension
+    const isStaticAsset = 
+      contentType.match(/\/(css|javascript|image|font|woff|woff2|ttf|eot|svg\+xml)/i) ||
+      path.match(/\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$/i);
+    
+    if (isStaticAsset && !h.has("Cache-Control")) {
+      h.set("Cache-Control", "public, max-age=31536000, immutable");
+    }
+  }
+  
   return new Response(res.body, { status: res.status, headers: h });
 }
 
@@ -667,9 +703,38 @@ export async function onRequest(context) {
   const url = new URL(context.request.url);
   const { request } = context;
 
+  // --- 0) HTTP to HTTPS Redirect (Security: Force HTTPS) ---
+  if (url.protocol === 'http:') {
+    url.protocol = 'https:';
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: url.href
+    }));
+    // Only add debug header in development/staging
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-http-to-https");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
   async function loadHtmlFromAssets(path) {
-    const response = await context.env.ASSETS.fetch(new URL(path, url));
-    return response.text();
+    try {
+      const response = await context.env.ASSETS.fetch(new URL(path, url));
+      if (!response.ok) {
+        // Fallback to 410 page if asset not found
+        const fallbackResponse = await context.env.ASSETS.fetch(new URL('/410/index.html', url));
+        return fallbackResponse.ok ? await fallbackResponse.text() : '<html><body><h1>410 Gone</h1></body></html>';
+      }
+      return await response.text();
+    } catch (error) {
+      // Error handling: return minimal HTML if asset loading fails
+      // Only log errors in development/staging
+      const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+      if (env !== 'production') {
+        console.error(`Error loading asset ${path}:`, error);
+      }
+      return '<html><body><h1>410 Gone</h1></body></html>';
+    }
   }
 
   // 1) Pfad sauber normalisieren - verbesserte URL-Dekodierung
@@ -730,7 +795,12 @@ export async function onRequest(context) {
       headers.set('Vary', Array.from(varyValues).join(', '));
 
       ensureSecurityHeaders(headers);
-      headers.set('X-Debug', 'language-rewrite');
+      
+      // Only add debug header in development/staging
+      const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+      if (env !== 'production') {
+        headers.set('X-Debug', 'language-rewrite');
+      }
 
       return new Response(assetResponse.body, {
         status: assetResponse.status,
@@ -758,9 +828,12 @@ export async function onRequest(context) {
   // --- 0.5) Language root redirects (ensure trailing slash) ---
   if (normalizedPath === '/en' || normalizedPath === '/de' || normalizedPath === '/th') {
     const headers = ensureSecurityHeaders(new Headers({
-      Location: `https://changdiving.com${normalizedPath}/`,
-      "X-Debug": "301-lang-root"
+      Location: `${url.origin}${normalizedPath}/`
     }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-lang-root");
+    }
     return new Response(null, { status: 301, headers });
   }
 
@@ -771,13 +844,44 @@ export async function onRequest(context) {
   if (isInLang(path) && !isAsset(path) && !path.endsWith('/') && !LANG_ROOTS.includes(path)) {
     // URL like /en/dive-sites should redirect to /en/dive-sites/
     const headers = ensureSecurityHeaders(new Headers({
-      Location: `https://changdiving.com${path}/`,
-      "X-Debug": "301-trailing-slash"
+      Location: `${url.origin}${path}/`
     }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-trailing-slash");
+    }
     return new Response(null, { status: 301, headers });
   }
 
-  // --- 0.7) FORCE GONE EXAKT/PREFIX ---
+  // --- 1) 301 EXAKT --- (MUST come before 410 checks to allow redirects)
+  const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
+  if (exactRedirect) {
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: exactRedirect
+    }));
+    // Only add debug header in development/staging
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-exact");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
+  // --- 2) 301 PREFIX/WILDCARD --- (MUST come before 410 checks to allow redirects)
+  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX, url.origin);
+  if (loc) {
+    const headers = ensureSecurityHeaders(new Headers({
+      Location: loc
+    }));
+    // Only add debug header in development/staging
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-prefix");
+    }
+    return new Response(null, { status: 301, headers });
+  }
+
+  // --- 3) FORCE GONE EXAKT/PREFIX --- (Only after redirects are checked)
   if (FORCE_GONE_EXACT.has(normalizedPath) || findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)) {
     // Assets sollen normal weiter geprüft werden
     if (isAsset(normalizedPath)) {
@@ -790,39 +894,25 @@ export async function onRequest(context) {
     });
   }
 
-  // --- 1) 301 EXAKT ---
-  const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
-  if (exactRedirect) {
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: exactRedirect,
-      "X-Debug": "301-exact"
-    }));
-    return new Response(null, { status: 301, headers });
-  }
-
-  // --- 2) 301 PREFIX/WILDCARD ---
-  const loc = findPrefixRedirect(normalizedPath, REDIRECTS_PREFIX);
-  if (loc) {
-    const headers = ensureSecurityHeaders(new Headers({
-      Location: loc,
-      "X-Debug": "301-prefix"
-    }));
-    return new Response(null, { status: 301, headers });
-  }
-
   // --- 2.5) Video Redirects (spezielle Behandlung) ---
   if (normalizedPath.startsWith("/en/videos/") && normalizedPath !== "/en/videos/") {
     const headers = ensureSecurityHeaders(new Headers({
-      Location: "https://changdiving.com/en/videos/",
-      "X-Debug": "301-video"
+      Location: `${url.origin}/en/videos/`
     }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-video");
+    }
     return new Response(null, { status: 301, headers });
   }
   if (normalizedPath.startsWith("/de/videos/") && normalizedPath !== "/de/videos/") {
     const headers = ensureSecurityHeaders(new Headers({
-      Location: "https://changdiving.com/de/videos/",
-      "X-Debug": "301-video"
+      Location: `${url.origin}/de/videos/`
     }));
+    const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+    if (env !== 'production') {
+      headers.set("X-Debug", "301-video");
+    }
     return new Response(null, { status: 301, headers });
   }
 
