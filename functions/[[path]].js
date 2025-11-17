@@ -610,8 +610,8 @@ const FORCE_GONE_EXACT = new Set(
 
 // 4) PREFIX 410 — alles darunter Gone - wildcard (Strings)
 // IMPORTANT: Removed product/category/store/tag - these now redirect via REDIRECTS_PREFIX
+// NOTE: /nl is handled separately - redirects to root for language detection
 const FORCE_GONE_PREFIX = [
-
      // TH Wildcards (only truly gone pages)
      "/th/th",
      "/th/cdc",
@@ -868,6 +868,26 @@ export async function onRequest(context) {
   // --- 0.1) WWW to non-WWW handling: Combine with path redirects to avoid chains ---
   const isWww = url.hostname.startsWith('www.');
   const nonWwwOrigin = isWww ? url.origin.replace(/^https?:\/\/www\./, 'https://') : url.origin;
+
+  // --- 0.3) Unsupported languages - redirect to root for language detection ---
+  // Any language code that's not in LANG_ROOTS should redirect to root where language is auto-detected
+  // This handles old language codes like /nl/, /fr/, /es/, etc. that are no longer supported
+  const langMatch = normalizedPath.match(/^\/([a-z]{2})(\/|$)/);
+  if (langMatch && langMatch[1]) {
+    const langCode = langMatch[1];
+    const langPath = `/${langCode}/`;
+    // If it's a language code but not in our supported languages, redirect to root
+    if (!LANG_ROOTS.includes(langPath) && !isAsset(normalizedPath)) {
+      const headers = ensureSecurityHeaders(new Headers({
+        Location: `${nonWwwOrigin}/`
+      }));
+      const env = typeof process !== 'undefined' ? process.env?.NODE_ENV : 'production';
+      if (env !== 'production') {
+        headers.set("X-Debug", `301-unsupported-lang-${langCode}-to-root`);
+      }
+      return new Response(null, { status: 301, headers });
+    }
+  }
 
   // --- 1) 301 EXAKT --- (MUST come before trailing slash and 410 checks)
   const exactRedirect = findExactRedirect(normalizedPath, REDIRECTS_EXACT);
