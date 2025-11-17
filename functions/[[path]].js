@@ -140,7 +140,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/certification-agencies", "/de/posts/straight-talk/padi-vs-sdi-tdi/"],
   ["/de/das-taucher-logbuch", "/de/posts/scuba-knowledge/dive-logbook/"],
   ["/de/diving-activities", "/de/posts/tips-and-tricks/diving-activities/"],
-  ["de/diving-social-media/", "/de/posts/straight-talk/diving-social-media/"],
+  ["/de/diving-social-media/", "/de/posts/straight-talk/diving-social-media/"],
   ["/de/deep-diving", "/de/posts/tips-and-tricks/deep-diving/"],
   ["/de/der-weg-eines-sport-tauchers", "/de/posts/straight-talk/dive-professional-training/"],
   ["/de/die-10-beliebtesten-tauchaktivitaeten-auf-koh-chang-chang-diving-center", "/de/posts/tips-and-tricks/diving-activities/"],
