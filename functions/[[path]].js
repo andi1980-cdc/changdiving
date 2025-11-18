@@ -215,6 +215,8 @@ const REDIRECTS_EXACT_RAW = [
   ["/de/nitrox-info", "/de/posts/scuba-knowledge/nitrox-info/"],
   ["/de/nudibranchs-koh-chang", "/en/posts/marine-life-koh-chang/marine-life-nudibranch/"],
   ["/de/ocean-climate", "/de/posts/straight-talk/ocean-climate/"],
+  ["/de/das-meer-als-groesster-co₂-lieferant-die-verborgene-rolle-der-ozeane-im-klimawandel", "/de/posts/straight-talk/ocean-climate/"],
+  ["/de/das-meer-als-groesster-co₂-lieferant-die-verborgene-rolle-der-ozeane-im-klimawandel/", "/de/posts/straight-talk/ocean-climate/"],
   ["/de/open-water-duration", "/de/posts/tips-and-tricks/open-water-duration/"],
   ["/de/notfallplan-bei-tauchunfaellen-auf-koh-chang", "/de/posts/straight-talk/emergency-plan/"],
   ["/de/padi-vs-sdi-tdi-welches-tauchausbildungssystem-passt-zu-dir", "/de/posts/straight-talk/padi-vs-sdi-tdi/"],
