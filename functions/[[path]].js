@@ -457,6 +457,8 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/ocean-climate/", "/th/posts/straight-talk/ocean-climate/"],
   ["/th/padi-vs-sdi-tdi", "/th/posts/straight-talk/padi-vs-sdi-tdi/"],
   ["/th/certification-agencies", "/th/posts/straight-talk/padi-vs-sdi-tdi/"],
+  ["/th/แท็ก/sdi", "/th/posts/"],
+  ["/th/แท็ก/sdi/", "/th/posts/"],
   ["/th/certification-agencies/", "/th/posts/straight-talk/padi-vs-sdi-tdi/"],
   ["/th/about-underwater-photography", "/th/posts/tips-and-tricks/about-underwater-photography/"],
   ["/th/about-underwater-photography/", "/th/posts/tips-and-tricks/about-underwater-photography/"],
