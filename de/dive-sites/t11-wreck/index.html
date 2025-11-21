@@ -305,7 +305,12 @@
       }
     </script>
 
-    <!-- Google Fonts: Roboto -->
+    
+        <!-- Google Fonts - Noto Sans Thai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="/style.css"
@@ -322,23 +327,11 @@
     />
 
 </noscript>
-    <link
-      rel="preload"
-      href="/fonts/roboto-v48-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/roboto-v48-latin-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+    
+    
     <style>
       h1 {
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: var(--font-sans);
         font-size: 2.5rem;
         font-weight: 700;
         color: #222;
@@ -483,7 +476,7 @@
             border-collapse: collapse;
             margin: 20px auto;
             font-size: 1em;
-            font-family: Roboto, sans-serif;
+            font-family: var(--font-sans);
             background: #f9f9f9;
             border: 1px solid #ccc;
             text-align: center;
