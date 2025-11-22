@@ -251,6 +251,14 @@
         will-change: auto !important;
       }
       
+      /* CRITICAL: Exclude dropdown menu from contain rules to allow proper functionality */
+      .lang-switch,
+      .lang-switch *,
+      .dropdown-menu,
+      .dropdown-menu * {
+        contain: none !important;
+      }
+      
       /* CRITICAL: Force all windguru content to stay within bounds */
       .windguru-container *,
       .windguru-container iframe,
@@ -280,6 +288,12 @@
        /* CRITICAL: Prevent any content from breaking out */
        main, section, article, div {
          contain: layout !important;
+       }
+       
+       /* CRITICAL: Ensure dropdown menu works properly on mobile */
+       .lang-switch,
+       .dropdown-menu {
+         contain: none !important;
        }
     </style>
     

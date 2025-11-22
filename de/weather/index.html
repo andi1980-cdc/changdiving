@@ -70,6 +70,14 @@
         contain: layout !important;
         will-change: auto !important;
       }
+      
+      /* CRITICAL: Exclude dropdown menu from contain rules to allow proper functionality */
+      .lang-switch,
+      .lang-switch *,
+      .dropdown-menu,
+      .dropdown-menu * {
+        contain: none !important;
+      }
     </style>
     
     <!-- Load fonts after critical CSS to prevent shifts -->
