@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (index === 0) return; // Sprache überspringen (z. B. "en")
 
       cumulative += "/" + segment;
+      const isLastSegment = index === path.length - 1;
       
       // Prüfe Mapping
       const mapping = segmentMapping[segment];
@@ -143,12 +144,22 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         } else {
           // Verwende Mapping für Label und URL
-          html += ` › <a href="${mapping.url}">${mapping.label}</a>`;
+          if (isLastSegment) {
+            // Letztes Segment: nicht klickbar (aktuelle Seite)
+            html += ` › ${mapping.label}`;
+          } else {
+            html += ` › <a href="${mapping.url}">${mapping.label}</a>`;
+          }
         }
       } else {
         // Fallback: Verwende Segment als Label
         const label = decodeURIComponent(segment).replace(/-/g, " ");
-        html += ` › <a href="${cumulative}/">${label}</a>`;
+        if (isLastSegment) {
+          // Letztes Segment: nicht klickbar (aktuelle Seite)
+          html += ` › ${label}`;
+        } else {
+          html += ` › <a href="${cumulative}/">${label}</a>`;
+        }
       }
     });
 
