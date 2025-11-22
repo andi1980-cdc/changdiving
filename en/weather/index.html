@@ -277,16 +277,24 @@
       
              /* CRITICAL: Cookie consent will be loaded async */
        
-       /* CRITICAL: Prevent any content from breaking out */
-       main, section, article, div {
+       /* CRITICAL: Prevent any content from breaking out - exclude dropdown menu */
+       main, section, article, div:not(.lang-switch):not(.dropdown-menu):not(.lang-switch *):not(.dropdown-menu *) {
          contain: layout !important;
        }
        
        /* CRITICAL: Ensure dropdown menu appears above all content on mobile */
        .lang-switch,
-       .dropdown-menu {
+       .lang-switch *,
+       .dropdown-menu,
+       .dropdown-menu * {
          contain: none !important;
          z-index: 99999 !important;
+         position: relative !important;
+       }
+       
+       /* CRITICAL: Override any font-family from style.css to use system fonts */
+       html:not(:lang(th)) * {
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
        }
     </style>
     
