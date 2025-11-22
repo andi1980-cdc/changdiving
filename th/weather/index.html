@@ -52,19 +52,16 @@
 
     <!-- CRITICAL: Inline CSS to prevent ANY layout shifts -->
     <style>
-      /* CRITICAL: Force system fonts to prevent font loading shifts */
+      /* CRITICAL: Box-sizing for all elements */
       *, *::before, *::after {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
         box-sizing: border-box !important;
       }
       body { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important; 
         line-height: 1.6 !important;
         margin: 0 !important;
         padding: 0 !important;
       }
       h1, h2, h3, h4, h5, h6 { 
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
         font-weight: 700 !important;
         line-height: 1.2 !important;
         margin: 1rem 0 !important;
@@ -106,9 +103,14 @@
              /* CRITICAL: Cookie consent will be loaded async */
       
       /* CRITICAL: Layout performance for all elements */
-      main, section, article, div, h1, h2, h3 {
+      main, section, article, h1, h2, h3 {
         contain: layout !important;
         will-change: auto !important;
+      }
+      
+      /* CRITICAL: Exclude dropdown menu from contain rules */
+      .lang-switch, .dropdown-menu {
+        contain: none !important;
       }
     </style>
     
@@ -257,23 +259,18 @@
       }
     </script>
 
-    <!-- Optimized Google Fonts: Roboto with font-display:optional -->
-    
-    <noscript>
-      
-    </noscript>
-        <!-- Google Fonts - Noto Sans Thai -->
+    <!-- Critical CSS and Font Loading -->
+    <!-- Google Fonts - Noto Sans Thai -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
+    
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript>
+      <link rel="stylesheet" href="/style.css" />
+    </noscript>
+    
+    <!-- Critical Image Preload -->
     <link
       rel="preload"
       as="image"
