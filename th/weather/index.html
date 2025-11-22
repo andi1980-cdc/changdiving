@@ -111,12 +111,11 @@
         will-change: auto !important;
       }
       
-      /* CRITICAL: Exclude dropdown menu from contain rules to allow proper functionality */
+      /* CRITICAL: Ensure dropdown menu appears above all content on mobile */
       .lang-switch,
-      .lang-switch *,
-      .dropdown-menu,
-      .dropdown-menu * {
+      .dropdown-menu {
         contain: none !important;
+        z-index: 99999 !important;
       }
     </style>
     
