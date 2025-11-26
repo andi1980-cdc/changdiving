@@ -283,6 +283,16 @@
        main, section, article {
          contain: layout !important;
        }
+       
+       /* Mobile-only notice */
+       .mobile-only {
+         display: none;
+       }
+       @media (max-width: 767px) {
+         .mobile-only {
+           display: block !important;
+         }
+       }
     </style>
     
     <!-- Critical CSS and Font Loading -->
@@ -397,6 +407,9 @@
           Stay informed about wind conditions on Koh Chang. Use the Windguru
           widget below for real-time updates.
         </p>
+        <div style="display: block; margin: 15px 0; padding: 12px; background: #e3f2fd; border-left: 4px solid #1976d2; border-radius: 4px; font-size: 0.9em; color: #1565c0;" class="mobile-only">
+          <strong>📱 Mobile Tip:</strong> For the best view of the forecast table, please rotate your device to landscape mode (hold your phone sideways).
+        </div>
         <div class="windguru-container">
           <div class="windguru-placeholder" style="
             position: absolute;

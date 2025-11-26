@@ -112,6 +112,16 @@
       .lang-switch, .dropdown-menu {
         contain: none !important;
       }
+      
+      /* Mobile-only notice */
+      .mobile-only {
+        display: none;
+      }
+      @media (max-width: 767px) {
+        .mobile-only {
+          display: block !important;
+        }
+      }
     </style>
     
     <!-- Load fonts after critical CSS to prevent shifts -->
@@ -367,6 +377,9 @@
 
         <h2>พยากรณ์ลม</h2>
         <p>อัปเดตสภาพลมของเกาะช้างแบบเรียลไทม์ด้วยวิดเจ็ต Windguru ด้านล่าง</p>
+        <div style="display: block; margin: 15px 0; padding: 12px; background: #e3f2fd; border-left: 4px solid #1976d2; border-radius: 4px; font-size: 0.9em; color: #1565c0;" class="mobile-only">
+          <strong>📱 เคล็ดลับมือถือ:</strong> เพื่อดูตารางพยากรณ์ได้ดีที่สุด กรุณาหมุนอุปกรณ์เป็นแนวนอน (ถือโทรศัพท์ในแนวนอน)
+        </div>
         <div class="windguru-container">
           <div class="windguru-placeholder" style="
             position: absolute;
