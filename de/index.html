@@ -1057,7 +1057,7 @@
         </picture>
 
         <!-- Safety Banner -->
-        <div id="safety-banner" class="safety-banner" style="display: none;">
+        <div id="safety-banner" class="safety-banner">
           <div class="safety-banner-content">
             <span class="safety-banner-icon">🛡️</span>
             <span class="safety-banner-text">
@@ -1069,14 +1069,19 @@
         <style>
           .safety-banner {
             position: absolute;
-            top: 0;
+            top: 60px;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
-            border-bottom: 3px solid #ffc107;
+            background: linear-gradient(135deg, rgba(255, 243, 205, 0.85) 0%, rgba(255, 230, 156, 0.85) 100%);
+            border-bottom: 3px solid rgba(255, 193, 7, 0.7);
             padding: 12px 20px;
-            z-index: 1000;
+            z-index: 3;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          }
+          @media (min-width: 768px) {
+            .safety-banner {
+              top: 70px;
+            }
           }
           .safety-banner-content {
             max-width: 1200px;
@@ -1141,17 +1146,8 @@
             const banner = document.getElementById('safety-banner');
             if (banner) {
               banner.style.display = 'none';
-              localStorage.setItem('safetyBannerClosed', 'true');
             }
           }
-          document.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('safetyBannerClosed') !== 'true') {
-              const banner = document.getElementById('safety-banner');
-              if (banner) {
-                banner.style.display = 'block';
-              }
-            }
-          });
         </script>
 
         <div class="hero-text">
