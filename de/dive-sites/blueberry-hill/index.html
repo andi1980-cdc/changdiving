@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -95,13 +102,19 @@
       property="og:url"
       content="https://changdiving.com/de/dive-sites/blueberry-hill/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       Tauchplatz Blueberry Hill – Bunter Canyon-Riffspot auf Koh Chang
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -120,16 +133,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -153,18 +158,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -180,51 +184,68 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/blueberry-hill_header_small.webp"
+        imagesrcset="/img/dive-sites/blueberry-hill_header_small.webp 600w, /img/dive-sites/blueberry-hill_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Place",
-        "name": "Blueberry Hill – Koh Chang",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "
-      Tauchplatz Blueberry Hill – Bunter Canyon-Riffspot auf Koh Chang
-    "
+        {
+          "@context": "https://schema.org",
+          "@type": "Place",
+          "name": "Blueberry Hill – Koh Chang",
+          "image": {
+              "@type": "ImageObject",
+              "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
+              "width": "2580",
+              "height": "1460",
+              "caption": "
+        Tauchplatz Blueberry Hill – Bunter Canyon-Riffspot auf Koh Chang
+      "
+            },
+          "description": "Blueberry Hill ist ein malerisches, flaches Riff auf Koh Chang mit Canyons, Korallen und einem lebendigen Meeresökosystem. Ideal für Anfänger.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TH",
+            "addressRegion": "Trat",
+            "addressLocality": "Koh Chang"
           },
-        "description": "Blueberry Hill ist ein malerisches, flaches Riff auf Koh Chang mit Canyons, Korallen und einem lebendigen Meeresökosystem. Ideal für Anfänger.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "TH",
-          "addressRegion": "Trat",
-          "addressLocality": "Koh Chang"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 11.9447,
-          "longitude": 102.2841
-        },
-        "url": "https://changdiving.com/de/dive-sites/blueberry-hill/",
-        "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Tiefe",
-            "value": "3–15 m"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 11.9447,
+            "longitude": 102.2841
           },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Zugang",
-            "value": "Nur per Boot"
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Schwierigkeitsgrad",
-            "value": "Anfänger bis Fortgeschrittene"
-          }
-        ]
-      }
+          "url": "https://changdiving.com/de/dive-sites/blueberry-hill/",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Tiefe",
+              "value": "3–15 m"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Zugang",
+              "value": "Nur per Boot"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Schwierigkeitsgrad",
+              "value": "Anfänger bis Fortgeschrittene"
+            }
+          ]
+        }
     </script>
 
     <!-- BreadcrumbList Schema -->
@@ -305,31 +326,6 @@
       }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/blueberry-hill_header_small.webp"
-      imagesrcset="/img/dive-sites/blueberry-hill_header_small.webp 600w, /img/dive-sites/blueberry-hill_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -340,7 +336,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -385,7 +381,6 @@
             alt="Tauchplatz Blueberry Hill – Korallentürme nahe Koh Chang"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -405,15 +400,15 @@
 
       <div class="dive-site-box">
         <!-- Untermenü: Navigation -->
-      <nav class="posts-submenu">
-        <a href="/de/posts/diving-how-to-guides-koh-chang/">Anleitungen</a>
-        <a href="/de/day-trips/">Tagesausflüge</a>
-        <a href="/de/courses/">Kurse</a>
-        <a href="/de/equipment/">Ausrüstung</a>
-        <a href="/de/day-trips/insurance/">Versicherung</a>
-        <a href="/de/faqs/">FAQ's</a>
-      </nav>
-      
+        <nav class="posts-submenu">
+          <a href="/de/posts/diving-how-to-guides-koh-chang/">Anleitungen</a>
+          <a href="/de/day-trips/">Tagesausflüge</a>
+          <a href="/de/courses/">Kurse</a>
+          <a href="/de/equipment/">Ausrüstung</a>
+          <a href="/de/day-trips/insurance/">Versicherung</a>
+          <a href="/de/faqs/">FAQ's</a>
+        </nav>
+
         <h2
           style="
             text-align: center;
@@ -437,9 +432,7 @@
             >Fun Dives</a
           >
           und
-          <a href="/de/courses/" rel="noopener" target="_blank"
-            >Tauchkurse</a
-          >.
+          <a href="/de/courses/" rel="noopener" target="_blank">Tauchkurse</a>.
         </p>
 
         <h2>Warum Blueberry Hill?</h2>
@@ -510,9 +503,7 @@
             >Fun Dive</a
           >
           oder
-          <a href="/de/courses/" rel="noopener" target="_blank"
-            >Tauchkurs</a
-          >
+          <a href="/de/courses/" rel="noopener" target="_blank">Tauchkurs</a>
           jetzt!
         </p>
         <hr />
@@ -660,42 +651,95 @@
 
         <hr />
 
-        <h2 style="margin-top: 50px; font-size: 32px; background: linear-gradient(to right, #0077b6, #c0c0c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Ähnliche Tauchplätze</h2>
-        <p>Erkunde weitere fortgeschrittene Rifftauchgänge rund um Koh Chang. Diese Plätze bieten ähnliche Tiefen und Herausforderungen für erfahrene Taucher.</p>
+        <h2
+          style="
+            margin-top: 50px;
+            font-size: 32px;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          "
+        >
+          Ähnliche Tauchplätze
+        </h2>
+        <p>
+          Erkunde weitere fortgeschrittene Rifftauchgänge rund um Koh Chang.
+          Diese Plätze bieten ähnliche Tiefen und Herausforderungen für
+          erfahrene Taucher.
+        </p>
 
         <div class="row">
           <a href="/de/dive-sites/koh-rang-pinnacle/" class="three columns">
-            <img src="/img/dive-sites/koh-rang-pinacle_header_small.webp" alt="Koh Rang Pinnacle" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🏔️ Koh Rang Pinnacle</h3><p style="min-height: 60px">Dramatischer Unterwasser-Pinnacle mit starken Strömungen und großen Fischen. Fortgeschritten! (Max. Tiefe: 28m)</p></div>
+            <img
+              src="/img/dive-sites/koh-rang-pinacle_header_small.webp"
+              alt="Koh Rang Pinnacle"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🏔️ Koh Rang Pinnacle</h3>
+              <p style="min-height: 60px">
+                Dramatischer Unterwasser-Pinnacle mit starken Strömungen und
+                großen Fischen. Fortgeschritten! (Max. Tiefe: 28m)
+              </p>
+            </div>
           </a>
           <a href="/de/dive-sites/secret-reef/" class="three columns">
-            <img src="/img/dive-sites/secret-reef_header_small.webp" alt="Secret Reef" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🪸 Secret Reef</h3><p style="min-height: 60px">Verstecktes Juwel mit lebendigen Korallenformationen und exzellenter Artenvielfalt. (Max. Tiefe: 18m)</p></div>
+            <img
+              src="/img/dive-sites/secret-reef_header_small.webp"
+              alt="Secret Reef"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🪸 Secret Reef</h3>
+              <p style="min-height: 60px">
+                Verstecktes Juwel mit lebendigen Korallenformationen und
+                exzellenter Artenvielfalt. (Max. Tiefe: 18m)
+              </p>
+            </div>
           </a>
           <a href="/de/dive-sites/hin-raab-south/" class="three columns">
-            <img src="/img/dive-sites/hin-raab-south_header_small.webp" alt="Hin Raab South" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🌊 Hin Raab South</h3><p style="min-height: 60px">Spannender Drift-Tauchgang mit Korallenwänden und vielfältigem Meeresleben. (Max. Tiefe: 25m)</p></div>
+            <img
+              src="/img/dive-sites/hin-raab-south_header_small.webp"
+              alt="Hin Raab South"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🌊 Hin Raab South</h3>
+              <p style="min-height: 60px">
+                Spannender Drift-Tauchgang mit Korallenwänden und vielfältigem
+                Meeresleben. (Max. Tiefe: 25m)
+              </p>
+            </div>
           </a>
           <a href="/de/dive-sites/" class="three columns">
-            <img src="/img/dive-sites/dive-site-map_small.webp" alt="Alle Tauchplätze" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🗺️ Alle Tauchplätze</h3><p style="min-height: 60px">Erkunde alle 13 Tauchplätze rund um Koh Chang.</p></div>
+            <img
+              src="/img/dive-sites/dive-site-map_small.webp"
+              alt="Alle Tauchplätze"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🗺️ Alle Tauchplätze</h3>
+              <p style="min-height: 60px">
+                Erkunde alle 13 Tauchplätze rund um Koh Chang.
+              </p>
+            </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner DE -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -703,7 +747,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -721,29 +766,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Tauchplätze",
-                  "item": "https://changdiving.com/de/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Blueberry Hill",
-                  "item": "https://changdiving.com/de/dive-sites/blueberry-hill/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tauchplätze",
+            "item": "https://changdiving.com/de/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Blueberry Hill",
+            "item": "https://changdiving.com/de/dive-sites/blueberry-hill/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

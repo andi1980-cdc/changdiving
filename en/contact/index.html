@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us – Chang Diving Center, Koh Chang</title>
@@ -90,7 +97,10 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Contact Us – Chang Diving Center, Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="Contact Us – Chang Diving Center, Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -109,16 +119,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -142,18 +144,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -169,6 +170,13 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -201,20 +209,6 @@
         }
       }
     </script>
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
   </head>
   <body>
     <main>
@@ -261,35 +255,63 @@
           <p>Booking your dive with us is easy!</p>
           <ol style="padding-left: 22px; line-height: 1.6">
             <li>
-              <strong>Use the Search or Menu</strong> – If you already know what you're
-              looking for, click the 🔍 search icon in the menu bar of the homepage and
-              type the course or trip name. Or open the menu and choose between
-              <a href="/en/courses/" target="_self" style="text-decoration: underline; color: #0066cc"><strong>Diving Courses</strong></a>
+              <strong>Use the Search or Menu</strong> – If you already know what
+              you're looking for, click the 🔍 search icon in the menu bar of
+              the homepage and type the course or trip name. Or open the menu
+              and choose between
+              <a
+                href="/en/courses/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                ><strong>Diving Courses</strong></a
+              >
               (OWD, AOWD, Rescue, etc.) and
-              <a href="/en/day-trips/" target="_self" style="text-decoration: underline; color: #0066cc"><strong>Diving Day Trips</strong></a>
+              <a
+                href="/en/day-trips/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                ><strong>Diving Day Trips</strong></a
+              >
               (fun dives, snorkeling, try dives, etc.).
             </li>
             <li>
-              <strong>Switch Language</strong> – Click on the flags in the top menu to change
-              the website language to English, Deutsch, or ไทย.
+              <strong>Switch Language</strong> – Click on the flags in the top
+              menu to change the website language to English, Deutsch, or ไทย.
             </li>
             <li>
-              <strong>Return Home</strong> – Click the Chang Diving Center logo at the top of
-              any page to go back to the <a href="/en/" target="_self" style="text-decoration: underline; color: #0066cc">homepage</a>.
+              <strong>Return Home</strong> – Click the Chang Diving Center logo
+              at the top of any page to go back to the
+              <a
+                href="/en/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                >homepage</a
+              >.
             </li>
             <li>
-              <strong>Find Your Course or Trip</strong> – Browse the list and click on the
-              activity you’re interested in. Use the <strong>submenu</strong> (appears after clicking Courses or Day Trips) to navigate between different activities. On mobile, you can swipe the submenu left or right to see all options. Check the <strong>breadcrumbs</strong> at the top to see where you are on the site.
+              <strong>Find Your Course or Trip</strong> – Browse the list and
+              click on the activity you’re interested in. Use the
+              <strong>submenu</strong> (appears after clicking Courses or Day
+              Trips) to navigate between different activities. On mobile, you
+              can swipe the submenu left or right to see all options. Check the
+              <strong>breadcrumbs</strong> at the top to see where you are on
+              the site.
             </li>
             <li>
-              <strong>Get the Details</strong> – On each course or trip page, you’ll find all
-              the important information, <a href="/en/prices/" target="_self" style="text-decoration: underline; color: #0066cc">prices</a>, and schedules.
+              <strong>Get the Details</strong> – On each course or trip page,
+              you’ll find all the important information,
+              <a
+                href="/en/prices/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                >prices</a
+              >, and schedules.
             </li>
             <li>
-              <strong>Book by Email</strong> – Below the price section, click the
-              “Book Now by Email” button. Fill out the form (opens in your email) with your
-              details and send it to us. That’s it! We’ll reply shortly with your booking
-              confirmation. 🐠
+              <strong>Book by Email</strong> – Below the price section, click
+              the “Book Now by Email” button. Fill out the form (opens in your
+              email) with your details and send it to us. That’s it! We’ll reply
+              shortly with your booking confirmation. 🐠
             </li>
           </ol>
         </section>
@@ -326,7 +348,8 @@
                     text-decoration: none;
                     font-size: 1.1em;
                   "
-                 rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   🔍 Visit our FAQ Section
                 </a>
                 <div style="margin-top: 10px">
@@ -374,23 +397,16 @@
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -408,23 +424,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Contact",
-                  "item": "https://changdiving.com/en/contact/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://changdiving.com/en/contact/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

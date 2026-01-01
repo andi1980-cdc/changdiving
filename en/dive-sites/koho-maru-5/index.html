@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Koho Maru 5 – Deep Technical Wreck Dive off Koh Chang</title>
@@ -93,11 +100,17 @@
       property="og:url"
       content="https://changdiving.com/en/dive-sites/koho-maru-5/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Koho Maru 5 – Deep Technical Wreck Dive off Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="Koho Maru 5 – Deep Technical Wreck Dive off Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -116,16 +129,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -149,18 +154,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -176,18 +180,35 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/pack-1-wreck_header_small.webp"
+        imagesrcset="/img/dive-sites/pack-1-wreck_header_small.webp 600w, /img/dive-sites/pack-1-wreck_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "Koho Maru 5 Wreck – Koh Chang",
         "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "Koho Maru 5 – Deep Technical Wreck Dive off Koh Chang"
-          },
+          "@type": "ImageObject",
+          "url": "https://changdiving.com/img/dive-sites/pack-1-wreck_header_big.webp",
+          "width": "2580",
+          "height": "1460",
+          "caption": "Koho Maru 5 – Deep Technical Wreck Dive off Koh Chang"
+        },
         "description": "Koho Maru 5 is a deep technical dive site near Koh Chang, Thailand. Originally a Japanese tanker, now a historic wreck resting at 42 meters.",
         "address": {
           "@type": "PostalAddress",
@@ -299,31 +320,6 @@
       }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/pack-1-wreck_header_small.webp"
-      imagesrcset="/img/dive-sites/pack-1-wreck_header_small.webp 600w, /img/dive-sites/pack-1-wreck_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -334,7 +330,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -379,7 +375,6 @@
             alt="Deep wreck dive Koho Maru 5 Pak1 near Koh Chang – Technical diving in the Gulf of Thailand"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -402,15 +397,17 @@
 
       <div class="dive-site-box">
         <!-- Submenu: Optional Navigation -->
-      <nav class="posts-submenu">
-        <a href="/en/posts/diving-how-to-guides-koh-chang/">How to... guides</a>
-        <a href="/en/day-trips/">Day Trips</a>
-        <a href="/en/courses/">Courses</a>
-        <a href="/en/equipment/">Equipment</a>
-        <a href="/en/day-trips/insurance/">Insurance</a>
-        <a href="/en/faqs/">FAQ's</a>
-      </nav>
-      
+        <nav class="posts-submenu">
+          <a href="/en/posts/diving-how-to-guides-koh-chang/"
+            >How to... guides</a
+          >
+          <a href="/en/day-trips/">Day Trips</a>
+          <a href="/en/courses/">Courses</a>
+          <a href="/en/equipment/">Equipment</a>
+          <a href="/en/day-trips/insurance/">Insurance</a>
+          <a href="/en/faqs/">FAQ's</a>
+        </nav>
+
         <h2
           style="
             text-align: center;
@@ -623,18 +620,22 @@
         <hr />
 
         <!-- Related Dive Sites Section -->
-        <h2 style="
+        <h2
+          style="
             margin-top: 50px;
             font-size: 32px;
             background: linear-gradient(to right, #0077b6, #c0c0c0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
-          ">
+          "
+        >
           More Wreck Dives
         </h2>
         <p>
-          Explore more wreck diving adventures around Koh Chang. These historic wrecks offer fascinating underwater exploration and abundant marine life.
+          Explore more wreck diving adventures around Koh Chang. These historic
+          wrecks offer fascinating underwater exploration and abundant marine
+          life.
         </p>
 
         <div class="row">
@@ -649,7 +650,9 @@
             <div class="excerpt">
               <h3>⚓ HTMS Chang Wreck</h3>
               <p style="min-height: 60px">
-                Thailand's most famous wreck dive! Explore this impressive ex-Navy vessel with stunning coral growth and diverse marine life. (Max depth: 31m)
+                Thailand's most famous wreck dive! Explore this impressive
+                ex-Navy vessel with stunning coral growth and diverse marine
+                life. (Max depth: 31m)
               </p>
             </div>
           </a>
@@ -665,12 +668,17 @@
             <div class="excerpt">
               <h3>🚢 T11 Wreck</h3>
               <p style="min-height: 60px">
-                Explore the T11 shipwreck with its intact structure and abundant marine life. Perfect for wreck diving enthusiasts! (Max depth: 20m)
+                Explore the T11 shipwreck with its intact structure and abundant
+                marine life. Perfect for wreck diving enthusiasts! (Max depth:
+                20m)
               </p>
             </div>
           </a>
 
-          <a href="/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/" class="three columns">
+          <a
+            href="/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"
+            class="three columns"
+          >
             <img
               src="/img/dive-sites/phutthayotfa-chulalok-fregatte_small.webp"
               alt="Phutthayotfa Chulalok Wreck dive site near Koh Chang"
@@ -681,7 +689,9 @@
             <div class="excerpt">
               <h3>🛳️ Phutthayotfa Wreck</h3>
               <p style="min-height: 60px">
-                Discover this Thai Navy vessel wreck with impressive structure and thriving coral growth. Great for underwater photographers. (Max depth: 40m)
+                Discover this Thai Navy vessel wreck with impressive structure
+                and thriving coral growth. Great for underwater photographers.
+                (Max depth: 40m)
               </p>
             </div>
           </a>
@@ -697,26 +707,18 @@
             <div class="excerpt">
               <h3>🗺️ View All Sites</h3>
               <p style="min-height: 60px">
-                Explore all 13 dive sites around Koh Chang. From shallow reefs to deep wrecks - find your perfect dive adventure.
+                Explore all 13 dive sites around Koh Chang. From shallow reefs
+                to deep wrecks - find your perfect dive adventure.
               </p>
             </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -724,7 +726,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -737,29 +740,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Dive Sites",
-                  "item": "https://changdiving.com/en/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Koho Maru 5",
-                  "item": "https://changdiving.com/en/dive-sites/koho-maru-5/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Dive Sites",
+            "item": "https://changdiving.com/en/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Koho Maru 5",
+            "item": "https://changdiving.com/en/dive-sites/koho-maru-5/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

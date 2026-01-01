@@ -14,3 +14,20 @@
   src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
   font-display: swap;
 }
+
+/* Noto Sans Thai Font Definitions - Prevent FOUT/FOIT and Layout Shifts */
+@font-face {
+  font-family: "Noto Sans Thai";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/noto-sans-thai-400.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/noto-sans-thai-700.ttf") format("truetype");
+  font-display: swap;
+}

@@ -2,14 +2,21 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>สุขภาพ & ความปลอดภัย – คำถามที่พบบ่อย | ดำน้ำเกาะช้าง</title>
@@ -97,7 +104,10 @@
       property="og:image"
       content="https://changdiving.com/img/faq/faq-health-safety_big.webp"
     />
-    <meta property="og:image:alt" content="สุขภาพ & ความปลอดภัย – คำถามที่พบบ่อย | ดำน้ำเกาะช้าง" />
+    <meta
+      property="og:image:alt"
+      content="สุขภาพ & ความปลอดภัย – คำถามที่พบบ่อย | ดำน้ำเกาะช้าง"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
@@ -121,16 +131,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -154,18 +156,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -181,6 +182,26 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+
+    <!-- Styles -->
+
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/faq/faq-health-safety_big.webp"
+        imagesrcset="/img/faq/faq-health-safety_big.webp 600w, /img/faq/faq-health-safety_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -237,36 +258,7 @@
     <link rel="preconnect" href="https://cdn.trustindex.io" crossorigin />
 
     <!-- Preload critical assets -->
-    
-    
-    <link rel="preload" href="/style.css" as="style" />
-    
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <!-- Styles -->
-        
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/faq/faq-health-safety_big.webp"
-      imagesrcset="/img/faq/faq-health-safety_big.webp 600w, /img/faq/faq-health-safety_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- ฮีโร่ -->
@@ -338,8 +330,8 @@
             alt="คำถามเกี่ยวกับสุขภาพและความปลอดภัยในการดำน้ำที่เกาะช้าง ประเทศไทย"
             width="2580"
             height="1460"
-            
             loading="eager"
+            fetchpriority="high"
           />
         </picture>
 
@@ -393,7 +385,8 @@
               href="/docs/Liability-Release-new-v1.3.pdf"
               target="_blank"
               class="faq-link"
-             rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               <span aria-hidden="true">📄</span> ดูแบบฟอร์มสุขภาพ
             </a>
           </dd>
@@ -405,7 +398,12 @@
           <dd>
             ได้เลย! คอนแทคเลนส์มักจะไม่มีปัญหา
             และเรามีหน้ากากดำน้ำแบบเลนส์สายตาให้บริการ
-            <a href="/th/contact/" target="_blank" class="faq-link" rel="noopener noreferrer">
+            <a
+              href="/th/contact/"
+              target="_blank"
+              class="faq-link"
+              rel="noopener noreferrer"
+            >
               <span aria-hidden="true">💬</span>
               สอบถามเกี่ยวกับหน้ากากแบบเลนส์สายตา
             </a>
@@ -418,7 +416,12 @@
           <dd>
             ขอแนะนำให้มีประกันการดำน้ำ
             คุณสามารถซื้อแบบรายวันหรือรายปีได้ในราคาประหยัด
-            <a href="/th/day-trips/insurance/" target="_blank" class="faq-link" rel="noopener noreferrer">
+            <a
+              href="/th/day-trips/insurance/"
+              target="_blank"
+              class="faq-link"
+              rel="noopener noreferrer"
+            >
               <span aria-hidden="true">ℹ️</span> ดูตัวเลือกประกันการดำน้ำ
             </a>
           </dd>
@@ -435,7 +438,8 @@
               href="/th/posts/straight-talk/emergency-plan/"
               target="_blank"
               class="faq-link"
-             rel="noopener noreferrer">
+              rel="noopener noreferrer"
+            >
               <span aria-hidden="true">🚑</span> ดูแผนฉุกเฉินของเรา
             </a>
           </dd>
@@ -472,23 +476,16 @@
     </main>
 
     <!-- Cookie Consent Banner TH -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -506,29 +503,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "หน้าแรก",
-                  "item": "https://changdiving.com/th/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "คำถามที่พบบ่อย",
-                  "item": "https://changdiving.com/th/faqs/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Faq Diving Health Safety Thailand",
-                  "item": "https://changdiving.com/th/faqs/faq-diving-health-safety-thailand/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "หน้าแรก",
+            "item": "https://changdiving.com/th/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "คำถามที่พบบ่อย",
+            "item": "https://changdiving.com/th/faqs/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Faq Diving Health Safety Thailand",
+            "item": "https://changdiving.com/th/faqs/faq-diving-health-safety-thailand/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

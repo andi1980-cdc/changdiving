@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt – Chang Diving Center, Koh Chang</title>
@@ -90,7 +97,10 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Kontakt – Chang Diving Center, Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="Kontakt – Chang Diving Center, Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -108,6 +118,13 @@
     />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -140,20 +157,6 @@
         }
       }
     </script>
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
   </head>
   <body>
     <main>
@@ -200,35 +203,67 @@
           <p>Das Buchen deines Tauchgangs ist ganz einfach!</p>
           <ol style="padding-left: 22px; line-height: 1.6">
             <li>
-              <strong>Suche oder Menü nutzen</strong> – Wenn du schon weißt, was du suchst,
-              klicke auf das 🔍 Suchsymbol in der Menüleiste der Startseite und gib den Kurs-
-              oder Trip-Namen ein. Oder öffne das Menü und wähle zwischen
-              <a href="/de/courses/" target="_self" style="text-decoration: underline; color: #0066cc"><strong>Tauchkurse</strong></a>
+              <strong>Suche oder Menü nutzen</strong> – Wenn du schon weißt, was
+              du suchst, klicke auf das 🔍 Suchsymbol in der Menüleiste der
+              Startseite und gib den Kurs- oder Trip-Namen ein. Oder öffne das
+              Menü und wähle zwischen
+              <a
+                href="/de/courses/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                ><strong>Tauchkurse</strong></a
+              >
               (OWD, AOWD, Rescue etc.) und
-              <a href="/de/day-trips/" target="_self" style="text-decoration: underline; color: #0066cc"><strong>Tauchtagestouren</strong></a>
-              (Fun Dives, Schnorcheln,
-              Try Dives etc.).
+              <a
+                href="/de/day-trips/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                ><strong>Tauchtagestouren</strong></a
+              >
+              (Fun Dives, Schnorcheln, Try Dives etc.).
             </li>
             <li>
-              <strong>Sprache wechseln</strong> – Klicke auf die Flaggen im oberen Menü, um
-              die Sprache auf Deutsch, English oder ไทย zu ändern.
+              <strong>Sprache wechseln</strong> – Klicke auf die Flaggen im
+              oberen Menü, um die Sprache auf Deutsch, English oder ไทย zu
+              ändern.
             </li>
             <li>
-              <strong>Zur Startseite</strong> – Klicke auf das Chang Diving Center Logo oben
-              auf jeder Seite, um zurück zur <a href="/de/" target="_self" style="text-decoration: underline; color: #0066cc">Startseite</a> zu gelangen.
+              <strong>Zur Startseite</strong> – Klicke auf das Chang Diving
+              Center Logo oben auf jeder Seite, um zurück zur
+              <a
+                href="/de/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                >Startseite</a
+              >
+              zu gelangen.
             </li>
             <li>
-              <strong>Kurs oder Trip finden</strong> – Stöbere in der Liste und klicke auf die
-              Aktivität, die dich interessiert. Nutze das <strong>Untermenü</strong> (erscheint nach Klick auf Kurse oder Tagestouren), um zwischen verschiedenen Aktivitäten zu navigieren. Auf mobilen Geräten kannst du das Untermenü nach links oder rechts wischen, um alle Optionen zu sehen. Prüfe die <strong>Breadcrumbs</strong> oben, um zu sehen, wo du dich auf der Seite befindest.
+              <strong>Kurs oder Trip finden</strong> – Stöbere in der Liste und
+              klicke auf die Aktivität, die dich interessiert. Nutze das
+              <strong>Untermenü</strong> (erscheint nach Klick auf Kurse oder
+              Tagestouren), um zwischen verschiedenen Aktivitäten zu navigieren.
+              Auf mobilen Geräten kannst du das Untermenü nach links oder rechts
+              wischen, um alle Optionen zu sehen. Prüfe die
+              <strong>Breadcrumbs</strong> oben, um zu sehen, wo du dich auf der
+              Seite befindest.
             </li>
             <li>
-              <strong>Details ansehen</strong> – Auf jeder Kurs- oder Trip-Seite findest du
-              alle wichtigen Infos, <a href="/de/prices/" target="_self" style="text-decoration: underline; color: #0066cc">Preise</a> und Zeitpläne.
+              <strong>Details ansehen</strong> – Auf jeder Kurs- oder Trip-Seite
+              findest du alle wichtigen Infos,
+              <a
+                href="/de/prices/"
+                target="_self"
+                style="text-decoration: underline; color: #0066cc"
+                >Preise</a
+              >
+              und Zeitpläne.
             </li>
             <li>
-              <strong>Per E-Mail buchen</strong> – Unter dem Preisbereich auf „Jetzt per E‑Mail
-              buchen“ klicken. Formular (öffnet sich in deiner E‑Mail) ausfüllen und an uns
-              senden. Fertig! Wir antworten zeitnah mit deiner Buchungsbestätigung. 🐠
+              <strong>Per E-Mail buchen</strong> – Unter dem Preisbereich auf
+              „Jetzt per E‑Mail buchen“ klicken. Formular (öffnet sich in deiner
+              E‑Mail) ausfüllen und an uns senden. Fertig! Wir antworten zeitnah
+              mit deiner Buchungsbestätigung. 🐠
             </li>
           </ol>
         </section>
@@ -266,7 +301,8 @@
                     text-decoration: none;
                     font-size: 1.1em;
                   "
-                 rel="noopener noreferrer">
+                  rel="noopener noreferrer"
+                >
                   🔍 Zur FAQ-Seite
                 </a>
                 <div style="margin-top: 10px">
@@ -313,23 +349,16 @@
     </main>
 
     <!-- Cookie Consent Banner DE -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -347,23 +376,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Contact",
-                  "item": "https://changdiving.com/de/contact/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://changdiving.com/de/contact/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

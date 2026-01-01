@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -92,9 +99,12 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       Diving Prices – Plan Your Dive Adventure in Koh Chang | Chang Diving
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -113,16 +123,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -146,18 +148,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -173,6 +174,23 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/prices/prices_header_big.webp"
+        imagesrcset="/img/prices/prices_header_big.webp 600w, /img/prices/prices_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -192,32 +210,7 @@
         }
       }
     </script>
-
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/prices/prices_header_big.webp"
-      imagesrcset="/img/prices/prices_header_big.webp 600w, /img/prices/prices_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -270,8 +263,8 @@
             title="Scuba Diving Prices Koh Chang – Courses, Day Trips & Packages"
             width="2580"
             height="1460"
-            
             loading="eager"
+            fetchpriority="high"
           />
         </picture>
 
@@ -338,15 +331,21 @@
           <tbody>
             <tr>
               <td>
-                <a href="/en/day-trips/" target="_blank"
-                   rel="noopener noreferrer">Day Trips</a
+                <a
+                  href="/en/day-trips/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Day Trips</a
                 >
               </td>
               <td>Day tours & fun dive packages for certified divers</td>
               <td><strong>999 THB</strong></td>
               <td>
-                <a href="/en/day-trips/" target="_blank"
-                   rel="noopener noreferrer">Details & Booking</a
+                <a
+                  href="/en/day-trips/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Details & Booking</a
                 >
               </td>
             </tr>
@@ -355,7 +354,8 @@
                 <a
                   href="/en/courses/beginner-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Beginner Courses</a
+                  rel="noopener noreferrer"
+                  >Beginner Courses</a
                 >
               </td>
               <td>Perfect for first-time divers – gain certification</td>
@@ -364,7 +364,8 @@
                 <a
                   href="/en/courses/beginner-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Booking</a
+                  rel="noopener noreferrer"
+                  >Details & Booking</a
                 >
               </td>
             </tr>
@@ -373,7 +374,8 @@
                 <a
                   href="/en/courses/advanced-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Advanced Courses</a
+                  rel="noopener noreferrer"
+                  >Advanced Courses</a
                 >
               </td>
               <td>Enhance your skills with further training</td>
@@ -382,7 +384,8 @@
                 <a
                   href="/en/courses/advanced-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Booking</a
+                  rel="noopener noreferrer"
+                  >Details & Booking</a
                 >
               </td>
             </tr>
@@ -391,7 +394,8 @@
                 <a
                   href="/en/courses/professional-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Professional Courses</a
+                  rel="noopener noreferrer"
+                  >Professional Courses</a
                 >
               </td>
               <td>Become a Divemaster or Instructor</td>
@@ -400,21 +404,28 @@
                 <a
                   href="/en/courses/professional-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Booking</a
+                  rel="noopener noreferrer"
+                  >Details & Booking</a
                 >
               </td>
             </tr>
             <tr>
               <td>
-                <a href="/en/courses/speciality/" target="_blank"
-                   rel="noopener noreferrer">Specialty Courses</a
+                <a
+                  href="/en/courses/speciality/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Specialty Courses</a
                 >
               </td>
               <td>Wreck diving, deep diving, nitrox & more</td>
               <td><strong>7,990 THB</strong></td>
               <td>
-                <a href="/en/courses/speciality/" target="_blank"
-                   rel="noopener noreferrer">Details & Booking</a
+                <a
+                  href="/en/courses/speciality/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Details & Booking</a
                 >
               </td>
             </tr>
@@ -423,7 +434,8 @@
                 <a
                   href="/en/courses/technical-diving-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Technical Diving Courses</a
+                  rel="noopener noreferrer"
+                  >Technical Diving Courses</a
                 >
               </td>
               <td>
@@ -434,7 +446,8 @@
                 <a
                   href="/en/courses/technical-diving-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Booking</a
+                  rel="noopener noreferrer"
+                  >Details & Booking</a
                 >
               </td>
             </tr>
@@ -450,8 +463,11 @@
           more in our article:
         </p>
         <p>
-          <a href="/en/posts/straight-talk/book-in-advance/" target="_blank"
-             rel="noopener noreferrer">? Why it’s important to book your diving adventure on Koh Chang in
+          <a
+            href="/en/posts/straight-talk/book-in-advance/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >? Why it’s important to book your diving adventure on Koh Chang in
             advance</a
           >
         </p>
@@ -462,8 +478,8 @@
           Check out our blog:
         </p>
         <p>
-          <a href="/en/posts/" target="_blank"
-             rel="noopener noreferrer">? Explore our blog posts about diving on Koh Chang</a
+          <a href="/en/posts/" target="_blank" rel="noopener noreferrer"
+            >? Explore our blog posts about diving on Koh Chang</a
           >
         </p>
 
@@ -477,7 +493,11 @@
         </p>
         <p>
           <strong>Download our booking information PDF here:</strong>
-          <a href="/docs/Booking-Information.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href="/docs/Booking-Information.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ➡️ Booking Information (PDF)
           </a>
         </p>
@@ -487,31 +507,24 @@
         </p>
         <p>
           Still have questions?
-          <a href="/en/faqs/" target="_blank"
-             rel="noopener noreferrer">Check out our FAQ section here ?</a
+          <a href="/en/faqs/" target="_blank" rel="noopener noreferrer"
+            >Check out our FAQ section here ?</a
           >
         </p>
       </section>
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -524,23 +537,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Prices",
-                  "item": "https://changdiving.com/en/prices/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Prices",
+            "item": "https://changdiving.com/en/prices/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

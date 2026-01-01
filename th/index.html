@@ -2,14 +2,21 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="3B62EB4E2CBC2BE9F36223BA830DBF03" />
@@ -72,11 +79,17 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://changdiving.com/th/" />
-    <meta property="og:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="ดำน้ำเกาะช้าง ประเทศไทย - ช้างไดฟ์วิ่ง เซ็นเตอร์" />
+    <meta
+      property="og:image:alt"
+      content="ดำน้ำเกาะช้าง ประเทศไทย - ช้างไดฟ์วิ่ง เซ็นเตอร์"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -88,20 +101,15 @@
       name="twitter:description"
       content="ฟันไดฟ์ คอร์ส การผจญภัยแนวปะการังและเรือจมตั้งแต่ปี 2005 กับครูผู้สอนที่ได้รับการรับรอง SDI/TDI & PADI จองออนไลน์ได้เลยวันนี้!"
     />
-    <meta name="twitter:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      name="twitter:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -125,25 +133,22 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
     <!-- Critical CSS and Font Loading -->
-    
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
     <link rel="stylesheet" href="/style.css" media="all" />
     <noscript>
       <link rel="stylesheet" href="/style.css" />
@@ -993,26 +998,37 @@
 
         <div class="lang-switch">
           <button class="menu-toggle">☰ เมนู:</button>
-          
+
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
             <form action="/th/search/" method="get" class="search-form-elegant">
-              <input 
-                type="text" 
-                name="q" 
-                placeholder="ค้นหา..." 
+              <input
+                type="text"
+                name="q"
+                placeholder="ค้นหา..."
                 aria-label="ค้นหา"
                 class="search-input-elegant"
               />
-              <button type="submit" class="search-btn-elegant" aria-label="ค้นหา">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                type="submit"
+                class="search-btn-elegant"
+                aria-label="ค้นหา"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <circle cx="11" cy="11" r="8"></circle>
                   <path d="m21 21-4.35-4.35"></path>
                 </svg>
               </button>
             </form>
           </div>
-          
+
           <a href="/" title="หน้าหลักเลือกภาษาอัตโนมัติ">🌐</a>
           <a href="/en/">🇬🇧</a>
           <a href="/de/">🇩🇪</a>
@@ -1063,9 +1079,19 @@
           <div class="safety-banner-content">
             <span class="safety-banner-icon">🛡️</span>
             <span class="safety-banner-text">
-              <strong>อัปเดตความปลอดภัยในการเดินทาง:</strong> แม้จะมีความขัดแย้งชายแดนระหว่างไทยและกัมพูชา แต่การเดินทางและการพักผ่อนบนเกาะช้างยังคงปลอดภัย กิจกรรมท่องเที่ยวทั้งหมด รวมถึงการดำน้ำ สามารถทำได้โดยไม่มีข้อจำกัด
+              <strong>อัปเดตความปลอดภัยในการเดินทาง:</strong>
+              แม้จะมีความขัดแย้งชายแดนระหว่างไทยและกัมพูชา
+              แต่การเดินทางและการพักผ่อนบนเกาะช้างยังคงปลอดภัย
+              กิจกรรมท่องเที่ยวทั้งหมด รวมถึงการดำน้ำ
+              สามารถทำได้โดยไม่มีข้อจำกัด
             </span>
-            <button class="safety-banner-close" aria-label="ปิดแบนเนอร์" onclick="closeSafetyBanner()">×</button>
+            <button
+              class="safety-banner-close"
+              aria-label="ปิดแบนเนอร์"
+              onclick="closeSafetyBanner()"
+            >
+              ×
+            </button>
           </div>
         </div>
         <style>
@@ -1074,11 +1100,15 @@
             top: 60px;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, rgba(255, 243, 205, 0.85) 0%, rgba(255, 230, 156, 0.85) 100%);
+            background: linear-gradient(
+              135deg,
+              rgba(255, 243, 205, 0.85) 0%,
+              rgba(255, 230, 156, 0.85) 100%
+            );
             border-bottom: 3px solid rgba(255, 193, 7, 0.7);
             padding: 12px 20px;
             z-index: 3;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           }
           @media (min-width: 768px) {
             .safety-banner {
@@ -1145,9 +1175,9 @@
         </style>
         <script>
           function closeSafetyBanner() {
-            const banner = document.getElementById('safety-banner');
+            const banner = document.getElementById("safety-banner");
             if (banner) {
-              banner.style.display = 'none';
+              banner.style.display = "none";
             }
           }
         </script>
@@ -1222,7 +1252,14 @@
                 ทริปวันเดียวที่ปลอดภัย สนุก
                 และมีการแนะนำครบครันโดยทีมผู้เชี่ยวชาญ
               </p>
-              <p style="text-align: center; margin: 10px 0; font-weight: bold; color: #0077b6;">
+              <p
+                style="
+                  text-align: center;
+                  margin: 10px 0;
+                  font-weight: bold;
+                  color: #0077b6;
+                "
+              >
                 💸 เริ่มต้นที่ 999 THB
               </p>
             </div>
@@ -1241,7 +1278,14 @@
                 เรียนดำน้ำทีละขั้นตอน – จากมือใหม่สู่มืออาชีพ
                 เข้าร่วมคอร์สในเกาะช้างและได้รับการรับรองอย่างมั่นใจ
               </p>
-              <p style="text-align: center; margin: 10px 0; font-weight: bold; color: #0077b6;">
+              <p
+                style="
+                  text-align: center;
+                  margin: 10px 0;
+                  font-weight: bold;
+                  color: #0077b6;
+                "
+              >
                 💸 เริ่มต้นที่ 3,950 THB
               </p>
             </div>
@@ -1260,8 +1304,19 @@
                 สำรวจแนวปะการัง ฝูงปลา และจุดดำน้ำที่มีชีวิตชีวาในเกาะช้าง –
                 เหมาะสำหรับทุกระดับ เดินทางง่ายด้วยเรือ
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   ข้อมูลเพิ่มเติม
                 </span>
               </div>
@@ -1282,8 +1337,19 @@
                 เหมาะสำหรับการดำน้ำเพื่อความสนุก ลึก ซากเรือ และการฝึก Advanced
                 ในน้ำใส
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   ข้อมูลเพิ่มเติม
                 </span>
               </div>
@@ -1337,8 +1403,19 @@
                 ซื้ออุปกรณ์ดำน้ำคุณภาพสูงที่ทดสอบโดยมืออาชีพ – เหมาะสำหรับการฝึก
                 การเดินทาง และพักผ่อน จัดส่งเร็ว
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   ข้อมูลเพิ่มเติม
                 </span>
               </div>
@@ -1358,8 +1435,19 @@
                 ชมภาพใต้น้ำ การดำน้ำซากเรือ และไฮไลท์ของแนวปะการังจากเกาะช้าง
                 ได้รับแรงบันดาลใจ
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   ข้อมูลเพิ่มเติม
                 </span>
               </div>
@@ -1379,8 +1467,19 @@
                 อ่านเคล็ดลับการดำน้ำของผู้เชี่ยวชาญ ไอเดียการวางแผนทริป และ
                 บทความวิธีการ – เขียนโดยผู้สอน ทดสอบในสภาพจริง
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   ข้อมูลเพิ่มเติม
                 </span>
               </div>
@@ -1400,8 +1499,19 @@
                 พบสิ่งมีชีวิตใต้น้ำของเกาะช้าง – ภาพเหมือนปลา ผู้อาศัยซากเรือ
                 และไฮไลท์ของแนวปะการัง
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   ข้อมูลเพิ่มเติม
                 </span>
               </div>
@@ -1450,7 +1560,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -1468,17 +1579,17 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "หน้าแรก",
-                  "item": "https://changdiving.com/th/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "หน้าแรก",
+            "item": "https://changdiving.com/th/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

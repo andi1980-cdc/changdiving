@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       How the Advanced Open Water Course Works – Step-by-Step Guide | Chang
@@ -102,10 +109,13 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       How the Advanced Open Water Course Works – Step-by-Step Guide | Chang
       Diving
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -124,16 +134,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -157,18 +159,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -184,6 +185,24 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/posts/how-the-advanced-open-water-diver_small.webp"
+        imagesrcset="/img/posts/how-the-advanced-open-water-diver_small.webp 600w, /img/posts/how-the-advanced-open-water-diver_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -261,30 +280,12 @@
     </script>
 
     <!-- Local Fonts with Preload -->
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
     <!-- Preload critical resources -->
 
     <link
       rel="preload"
       href="/img/posts/how-the-advanced-open-water-diver_small.webp"
     />
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-        
-    <noscript
-      ><link rel="stylesheet" href="/style.css" />
-      <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/how-the-advanced-open-water-diver_small.webp"
-        imagesrcset="/img/posts/how-the-advanced-open-water-diver_small.webp 600w, /img/posts/how-the-advanced-open-water-diver_big.webp 1200w"
-        imagesizes="100vw"
-      />
-    </noscript>
   </head>
   <body>
     <header>
@@ -404,7 +405,8 @@
             href="/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"
             target="_blank"
             title="Learn more about the Open Water Diver course at Chang Diving"
-             rel="noopener noreferrer">How the Open Water Diver Course Works</a
+            rel="noopener noreferrer"
+            >How the Open Water Diver Course Works</a
           >
         </p>
 
@@ -428,7 +430,8 @@
             href="/en/posts/straight-talk/padi-vs-sdi-tdi/"
             target="_blank"
             title="PADI vs. SDI/TDI – Which diving agency is right for you?"
-             rel="noopener noreferrer">See our full SDI vs. PADI guide</a
+            rel="noopener noreferrer"
+            >See our full SDI vs. PADI guide</a
           >
         </p>
 
@@ -483,7 +486,8 @@
             href="/en/posts/straight-talk/sustainable-diving/"
             target="_blank"
             title="Our sustainable dive boat"
-             rel="noopener noreferrer">Pirm Udom Sub</a
+            rel="noopener noreferrer"
+            >Pirm Udom Sub</a
           >
         </p>
 
@@ -600,7 +604,8 @@
               href="/en/courses/deep-diver/"
               target="_blank"
               title="Deep Diver Specialty – Up to 40m"
-               rel="noopener noreferrer">Deep Diver</a
+              rel="noopener noreferrer"
+              >Deep Diver</a
             >
           </li>
           <li>
@@ -608,7 +613,8 @@
               href="/en/courses/wreck-diver/"
               target="_blank"
               title="Wreck Diver Specialty – Explore HTMS Chang"
-               rel="noopener noreferrer">Wreck Diver</a
+              rel="noopener noreferrer"
+              >Wreck Diver</a
             >
           </li>
           <li>
@@ -616,7 +622,8 @@
               href="/en/courses/nitrox-diver/"
               target="_blank"
               title="Nitrox Diver – Safer, longer dives"
-               rel="noopener noreferrer">Nitrox Diver</a
+              rel="noopener noreferrer"
+              >Nitrox Diver</a
             >
           </li>
           <li>
@@ -624,7 +631,8 @@
               href="/en/courses/night/"
               target="_blank"
               title="Night Diver – Explore after sunset"
-               rel="noopener noreferrer">Night Diver</a
+              rel="noopener noreferrer"
+              >Night Diver</a
             >
           </li>
           <li>
@@ -632,7 +640,8 @@
               href="/en/courses/sidemount/"
               target="_blank"
               title="Sidemount Diver – Balanced and efficient diving"
-               rel="noopener noreferrer">Sidemount Diver</a
+              rel="noopener noreferrer"
+              >Sidemount Diver</a
             >
           </li>
           <li>
@@ -640,7 +649,8 @@
               href="/en/courses/search-recovery/"
               target="_blank"
               title="Search & Recovery – Find lost objects underwater"
-               rel="noopener noreferrer">Search and Recovery</a
+              rel="noopener noreferrer"
+              >Search and Recovery</a
             >
           </li>
         </ul>
@@ -649,7 +659,8 @@
             href="/en/courses/speciality/"
             target="_blank"
             title="View all diving specialties"
-             rel="noopener noreferrer">See all Specialty Courses</a
+            rel="noopener noreferrer"
+            >See all Specialty Courses</a
           >
         </p>
 
@@ -693,7 +704,8 @@
               text-decoration: none;
               border-radius: 6px;
             "
-           rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             Book Your Advanced Open Water Course Now
           </a>
         </div>
@@ -740,7 +752,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -756,35 +769,35 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Posts",
-                  "item": "https://changdiving.com/en/posts/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Diving How To Guides Koh Chang",
-                  "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "name": "How To Advanced Course",
-                  "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Posts",
+            "item": "https://changdiving.com/en/posts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Diving How To Guides Koh Chang",
+            "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "How To Advanced Course",
+            "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

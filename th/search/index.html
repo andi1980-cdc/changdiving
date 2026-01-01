@@ -2,57 +2,96 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, follow" />
     <title>ค้นหา - ช้างไดฟ์วิ่ง</title>
-    <meta name="description" content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
-    
+    <meta
+      name="description"
+      content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย"
+    />
+
     <!-- Open Graph -->
     <meta property="og:title" content="ค้นหา - ช้างไดฟ์วิ่ง" />
-    <meta property="og:description" content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
+    <meta
+      property="og:description"
+      content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย"
+    />
     <meta property="og:url" content="https://changdiving.com/th/search/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/home/chang-diving-courses.webp"
+    />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="400" />
     <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:alt" content="ค้นหา - ช้างไดฟ์วิ่ง" />
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ค้นหา - ช้างไดฟ์วิ่ง" />
-    <meta name="twitter:description" content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย" />
-    <meta name="twitter:image" content="https://changdiving.com/img/home/chang-diving-courses.webp" />
-    
+    <meta
+      name="twitter:description"
+      content="ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย"
+    />
+    <meta
+      name="twitter:image"
+      content="https://changdiving.com/img/home/chang-diving-courses.webp"
+    />
+
     <!-- Hreflang -->
-    <link rel="alternate" hreflang="en" href="https://changdiving.com/en/search/" />
-    <link rel="alternate" hreflang="de" href="https://changdiving.com/de/search/" />
-    <link rel="alternate" hreflang="th" href="https://changdiving.com/th/search/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://changdiving.com/en/search/"
+    />
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="https://changdiving.com/de/search/"
+    />
+    <link
+      rel="alternate"
+      hreflang="th"
+      href="https://changdiving.com/th/search/"
+    />
     <link rel="canonical" href="https://changdiving.com/th/search/" />
-    
+
     <!-- Preload critical resources -->
 
     <!-- Styles -->
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css" />
-    
+    />
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" href="https://changdiving.com/favicon/apple-touch-icon.png" />
-    
+    <link
+      rel="apple-touch-icon"
+      href="https://changdiving.com/favicon/apple-touch-icon.png"
+    />
+
     <!-- JSON-LD Structured Data for Search Page -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -67,33 +106,33 @@
         }
       }
     </script>
-    
+
     <style>
       /* Search Page Specific Styles */
       .search-hero {
         height: 50vh !important; /* Schlanker als die normale 75vh */
       }
-      
+
       .search-hero .hero-text {
         padding: 2rem 1rem;
       }
-      
+
       .search-hero .hero-text h1 {
         font-size: 2.2rem;
         margin-bottom: 0.5rem;
       }
-      
+
       .search-hero .hero-text p {
         font-size: 1.1rem;
         opacity: 0.9;
       }
-      
+
       .search-container {
         max-width: 800px;
         margin: 0 auto 3rem auto;
         padding: 0 2rem;
       }
-      
+
       .search-form-main {
         display: flex;
         gap: 1rem;
@@ -104,7 +143,7 @@
         padding: 1.5rem;
         border: 1px solid rgba(0, 119, 182, 0.1);
       }
-      
+
       .search-form-main input {
         flex: 1;
         padding: 1rem 1.5rem;
@@ -115,14 +154,14 @@
         transition: all 0.3s ease;
         background: #f8f9fa;
       }
-      
+
       .search-form-main input:focus {
         outline: none;
         border-color: var(--primary-blue);
         background: white;
         box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1);
       }
-      
+
       .search-form-main button {
         padding: 1rem 2rem;
         background: var(--primary-blue);
@@ -138,23 +177,23 @@
         align-items: center;
         gap: 0.5rem;
       }
-      
+
       .search-form-main button:hover {
         background: var(--blue-dark);
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
       }
-      
+
       .search-form-main button:active {
         transform: translateY(0);
       }
-      
+
       .search-results {
         max-width: 800px;
         margin: 0 auto;
         padding: 0 2rem;
       }
-      
+
       .result-item {
         background: white;
         padding: 2rem;
@@ -166,9 +205,9 @@
         position: relative;
         overflow: hidden;
       }
-      
+
       .result-item::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -178,33 +217,33 @@
         transform: scaleY(0);
         transition: transform 0.3s ease;
       }
-      
+
       .result-item:hover {
         transform: translateY(-2px);
         box-shadow: var(--box-shadow-blue);
       }
-      
+
       .result-item:hover::before {
         transform: scaleY(1);
       }
-      
+
       .result-item h3 {
         margin: 0 0 0.5rem 0;
         color: var(--primary-blue);
         font-size: 1.3rem;
         font-weight: 700;
       }
-      
+
       .result-item a {
         color: var(--primary-blue);
         text-decoration: none;
         transition: color 0.3s ease;
       }
-      
+
       .result-item a:hover {
         color: var(--blue-dark);
       }
-      
+
       .result-category {
         font-size: 0.85rem;
         color: #666;
@@ -218,13 +257,13 @@
         border-radius: 20px;
         display: inline-block;
       }
-      
+
       .result-description {
         color: #555;
         line-height: 1.6;
         margin: 0;
       }
-      
+
       .search-info {
         text-align: center;
         padding: 3rem 2rem;
@@ -234,13 +273,13 @@
         box-shadow: var(--box-shadow-grey);
         margin-bottom: 2rem;
       }
-      
+
       .search-info h3 {
         color: var(--primary-blue);
         margin-bottom: 1rem;
         font-size: 1.5rem;
       }
-      
+
       .search-info ul {
         list-style: none;
         padding: 0;
@@ -250,7 +289,7 @@
         gap: 1rem;
         justify-content: center;
       }
-      
+
       .search-info li {
         background: rgba(0, 119, 182, 0.1);
         color: var(--primary-blue);
@@ -259,15 +298,15 @@
         font-size: 0.9rem;
         font-weight: 500;
       }
-      
+
       .loading {
         text-align: center;
         padding: 3rem;
         color: #666;
       }
-      
+
       .loading::after {
-        content: '';
+        content: "";
         display: inline-block;
         width: 20px;
         height: 20px;
@@ -277,49 +316,51 @@
         animation: spin 1s ease-in-out infinite;
         margin-left: 0.5rem;
       }
-      
+
       @keyframes spin {
-        to { transform: rotate(360deg); }
+        to {
+          transform: rotate(360deg);
+        }
       }
-      
+
       /* Mobile Responsive */
       @media (max-width: 768px) {
         .search-hero {
           height: 40vh !important; /* Noch schlanker auf mobilen Geräten */
         }
-        
+
         .search-hero .hero-text {
           padding: 1.5rem 1rem;
         }
-        
+
         .search-hero .hero-text h1 {
           font-size: 1.8rem;
         }
-        
+
         .search-hero .hero-text p {
           font-size: 1rem;
         }
-        
+
         .search-form-main {
           flex-direction: column;
           gap: 1rem;
           padding: 1rem;
         }
-        
+
         .search-form-main button {
           width: 100%;
           justify-content: center;
         }
-        
+
         .search-container,
         .search-results {
           padding: 0 1rem;
         }
-        
+
         .result-item {
           padding: 1.5rem;
         }
-        
+
         .search-info ul {
           flex-direction: column;
           align-items: center;
@@ -339,26 +380,37 @@
 
         <div class="lang-switch">
           <button class="menu-toggle">☰ เมนู:</button>
-          
+
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
             <form action="/th/search/" method="get" class="search-form-elegant">
-              <input 
-                type="text" 
-                name="q" 
-                placeholder="ค้นหา..." 
+              <input
+                type="text"
+                name="q"
+                placeholder="ค้นหา..."
                 aria-label="ค้นหา"
                 class="search-input-elegant"
               />
-              <button type="submit" class="search-btn-elegant" aria-label="ค้นหา">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                type="submit"
+                class="search-btn-elegant"
+                aria-label="ค้นหา"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <circle cx="11" cy="11" r="8"></circle>
                   <path d="m21 21-4.35-4.35"></path>
                 </svg>
               </button>
             </form>
           </div>
-          
+
           <a href="/en/">🇬🇧</a>
           <a href="/de/">🇩🇪</a>
           <a href="/th/">🇹🇭</a>
@@ -405,9 +457,7 @@
 
         <div class="hero-text">
           <h1>ค้นหาช้างไดฟ์วิ่ง</h1>
-          <p>
-            ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง
-          </p>
+          <p>ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง</p>
         </div>
       </div>
     </header>
@@ -416,16 +466,23 @@
       <!-- Search Form -->
       <div class="search-container">
         <form id="searchForm" class="search-form-main">
-          <input 
-            type="text" 
-            id="searchInput" 
-            name="q" 
+          <input
+            type="text"
+            id="searchInput"
+            name="q"
             placeholder="ค้นหาคอร์ส จุดดำน้ำ หรือหัวข้อ..."
             value=""
             required
           />
           <button type="submit">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <circle cx="11" cy="11" r="8"></circle>
               <path d="m21 21-4.35-4.35"></path>
             </svg>
@@ -433,12 +490,15 @@
           </button>
         </form>
       </div>
-      
+
       <!-- Search Results -->
       <div id="searchResults" class="search-results">
         <div class="search-info">
           <h3>🔍 พร้อมค้นหา</h3>
-          <p>ใส่คำค้นหาด้านบนเพื่อหาข้อมูลที่เกี่ยวข้องจากคอร์สดำน้ำ จุดดำน้ำ และบทความของเรา</p>
+          <p>
+            ใส่คำค้นหาด้านบนเพื่อหาข้อมูลที่เกี่ยวข้องจากคอร์สดำน้ำ จุดดำน้ำ
+            และบทความของเรา
+          </p>
           <p>ลองค้นหาด้วย:</p>
           <ul>
             <li>"คอร์ส" หรือ "open water"</li>
@@ -455,95 +515,124 @@
     <script>
       // Dynamic search data generation from sitemap
       let searchData = [];
-      
+
       // Function to fetch and parse sitemap
       async function loadSearchDataFromSitemap() {
         try {
-          const response = await fetch('/sitemap.xml');
+          const response = await fetch("/sitemap.xml");
           const xmlText = await response.text();
           const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-          
-          const urls = xmlDoc.querySelectorAll('url');
-          const currentLang = window.location.pathname.includes('/de/') ? 'de' : 
-                             window.location.pathname.includes('/th/') ? 'th' : 'en';
-          
-          urls.forEach(url => {
-            const loc = url.querySelector('loc').textContent;
-            const lastmod = url.querySelector('lastmod')?.textContent || '';
-            const priority = url.querySelector('priority')?.textContent || '0.5';
-            
+          const xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
+          const urls = xmlDoc.querySelectorAll("url");
+          const currentLang = window.location.pathname.includes("/de/")
+            ? "de"
+            : window.location.pathname.includes("/th/")
+              ? "th"
+              : "en";
+
+          urls.forEach((url) => {
+            const loc = url.querySelector("loc").textContent;
+            const lastmod = url.querySelector("lastmod")?.textContent || "";
+            const priority =
+              url.querySelector("priority")?.textContent || "0.5";
+
             // Only include pages for current language
-            if (loc.includes(`/${currentLang}/`) || (currentLang === 'en' && !loc.includes('/de/') && !loc.includes('/th/'))) {
-              const urlPath = loc.replace('https://changdiving.com', '');
-              
+            if (
+              loc.includes(`/${currentLang}/`) ||
+              (currentLang === "en" &&
+                !loc.includes("/de/") &&
+                !loc.includes("/th/"))
+            ) {
+              const urlPath = loc.replace("https://changdiving.com", "");
+
               // Skip search page itself and main index
-              if (urlPath.includes('/search/') || urlPath === '/' || urlPath === `/${currentLang}/`) {
+              if (
+                urlPath.includes("/search/") ||
+                urlPath === "/" ||
+                urlPath === `/${currentLang}/`
+              ) {
                 return;
               }
-              
+
               // Generate title and description from URL
-              const pathParts = urlPath.split('/').filter(part => part);
-              let title = '';
-              let description = '';
-              let category = '';
+              const pathParts = urlPath.split("/").filter((part) => part);
+              let title = "";
+              let description = "";
+              let category = "";
               let keywords = [];
-              
+
               // Extract meaningful title from URL
               if (pathParts.length > 0) {
                 const lastPart = pathParts[pathParts.length - 1];
                 title = lastPart
-                  .split('-')
-                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(' ');
-                
+                  .split("-")
+                  .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(" ");
+
                 // Add category based on path
-                if (urlPath.includes('/courses/')) {
-                  category = 'คอร์ส';
-                  keywords = ['คอร์ส', 'ดำน้ำ', 'scuba', 'การฝึก', 'ใบรับรอง'];
-                } else if (urlPath.includes('/dive-sites/')) {
-                  category = 'จุดดำน้ำ';
-                  keywords = ['จุดดำน้ำ', 'ดำน้ำ', 'ใต้ทะเล', 'สัตว์ทะเล', 'ปะการัง'];
-                } else if (urlPath.includes('/day-trips/')) {
-                  category = 'ทริปวันเดียว';
-                  keywords = ['ทริปวันเดียว', 'fun dive', 'ดำน้ำตื้น', 'ผจญภัย'];
-                } else if (urlPath.includes('/posts/')) {
-                  category = 'บทความ';
-                  keywords = ['บทความ', 'blog', 'ข้อมูล', 'คู่มือ', 'ความรู้'];
-                } else if (urlPath.includes('/faqs/')) {
-                  category = 'คำถามที่พบบ่อย';
-                  keywords = ['faq', 'คำถาม', 'คำตอบ', 'ช่วยเหลือ'];
-                } else if (urlPath.includes('/equipment/')) {
-                  category = 'อุปกรณ์';
-                  keywords = ['อุปกรณ์', 'gear', 'อุปกรณ์ดำน้ำ', 'อุปกรณ์ scuba'];
+                if (urlPath.includes("/courses/")) {
+                  category = "คอร์ส";
+                  keywords = ["คอร์ส", "ดำน้ำ", "scuba", "การฝึก", "ใบรับรอง"];
+                } else if (urlPath.includes("/dive-sites/")) {
+                  category = "จุดดำน้ำ";
+                  keywords = [
+                    "จุดดำน้ำ",
+                    "ดำน้ำ",
+                    "ใต้ทะเล",
+                    "สัตว์ทะเล",
+                    "ปะการัง",
+                  ];
+                } else if (urlPath.includes("/day-trips/")) {
+                  category = "ทริปวันเดียว";
+                  keywords = [
+                    "ทริปวันเดียว",
+                    "fun dive",
+                    "ดำน้ำตื้น",
+                    "ผจญภัย",
+                  ];
+                } else if (urlPath.includes("/posts/")) {
+                  category = "บทความ";
+                  keywords = ["บทความ", "blog", "ข้อมูล", "คู่มือ", "ความรู้"];
+                } else if (urlPath.includes("/faqs/")) {
+                  category = "คำถามที่พบบ่อย";
+                  keywords = ["faq", "คำถาม", "คำตอบ", "ช่วยเหลือ"];
+                } else if (urlPath.includes("/equipment/")) {
+                  category = "อุปกรณ์";
+                  keywords = [
+                    "อุปกรณ์",
+                    "gear",
+                    "อุปกรณ์ดำน้ำ",
+                    "อุปกรณ์ scuba",
+                  ];
                 } else {
-                  category = 'หน้าเว็บ';
-                  keywords = ['ข้อมูล', 'หน้าเว็บ'];
+                  category = "หน้าเว็บ";
+                  keywords = ["ข้อมูล", "หน้าเว็บ"];
                 }
-                
+
                 // Add specific keywords based on URL content
-                if (urlPath.includes('wreck')) {
-                  keywords.push('เรือจม', 'shipwreck');
+                if (urlPath.includes("wreck")) {
+                  keywords.push("เรือจม", "shipwreck");
                 }
-                if (urlPath.includes('nitrox')) {
-                  keywords.push('nitrox', 'อากาศเสริม');
+                if (urlPath.includes("nitrox")) {
+                  keywords.push("nitrox", "อากาศเสริม");
                 }
-                if (urlPath.includes('advanced')) {
-                  keywords.push('ขั้นสูง', 'มีประสบการณ์');
+                if (urlPath.includes("advanced")) {
+                  keywords.push("ขั้นสูง", "มีประสบการณ์");
                 }
-                if (urlPath.includes('beginner')) {
-                  keywords.push('ผู้เริ่มต้น', 'เริ่มต้น');
+                if (urlPath.includes("beginner")) {
+                  keywords.push("ผู้เริ่มต้น", "เริ่มต้น");
                 }
-                if (urlPath.includes('marine')) {
-                  keywords.push('สัตว์ทะเล', 'ปลา', 'ปะการัง');
+                if (urlPath.includes("marine")) {
+                  keywords.push("สัตว์ทะเล", "ปลา", "ปะการัง");
                 }
-                if (urlPath.includes('safety')) {
-                  keywords.push('ความปลอดภัย', 'ปลอดภัย');
+                if (urlPath.includes("safety")) {
+                  keywords.push("ความปลอดภัย", "ปลอดภัย");
                 }
-                
+
                 description = `${title} - ${category} บนเว็บไซต์ Chang Diving Center`;
               }
-              
+
               if (title) {
                 searchData.push({
                   title: title,
@@ -551,77 +640,90 @@
                   description: description,
                   category: category,
                   keywords: keywords,
-                  priority: parseFloat(priority)
+                  priority: parseFloat(priority),
                 });
               }
             }
           });
-          
+
           // Sort by priority
           searchData.sort((a, b) => b.priority - a.priority);
-          
-          console.log(`Loaded ${searchData.length} searchable items for ${currentLang}`);
-          
+
+          console.log(
+            `Loaded ${searchData.length} searchable items for ${currentLang}`,
+          );
         } catch (error) {
-          console.error('Error loading sitemap:', error);
+          console.error("Error loading sitemap:", error);
           // Fallback to basic search data
           searchData = [
             {
-              title: 'Open Water Diver Course',
-              url: '/th/courses/open-water-diver/',
-              description: 'เรียนรู้การดำน้ำ scuba กับคอร์ส PADI Open Water Diver ของเรา',
-              category: 'คอร์ส',
-              keywords: ['open water', 'ผู้เริ่มต้น', 'คอร์ส', 'padi', 'ดำน้ำ scuba']
-            }
+              title: "Open Water Diver Course",
+              url: "/th/courses/open-water-diver/",
+              description:
+                "เรียนรู้การดำน้ำ scuba กับคอร์ส PADI Open Water Diver ของเรา",
+              category: "คอร์ส",
+              keywords: [
+                "open water",
+                "ผู้เริ่มต้น",
+                "คอร์ส",
+                "padi",
+                "ดำน้ำ scuba",
+              ],
+            },
           ];
         }
       }
-      
+
       // Load search data when page loads
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         loadSearchDataFromSitemap().then(() => {
           // Check if there's a search query in URL
           const urlParams = new URLSearchParams(window.location.search);
-          const query = urlParams.get('q');
+          const query = urlParams.get("q");
           if (query) {
-            document.getElementById('searchInput').value = query;
+            document.getElementById("searchInput").value = query;
             performSearch(query);
           } else {
             // Ensure search field is empty if no query
-            document.getElementById('searchInput').value = '';
+            document.getElementById("searchInput").value = "";
           }
         });
       });
 
       function performSearch(query) {
         if (!query.trim()) {
-          document.getElementById('searchResults').innerHTML = '<div class="search-info"><h3>กรุณาใส่คำค้นหา</h3></div>';
+          document.getElementById("searchResults").innerHTML =
+            '<div class="search-info"><h3>กรุณาใส่คำค้นหา</h3></div>';
           return;
         }
-        
-        const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
-        const results = searchData.filter(item => {
-          const searchableText = `${item.title} ${item.description} ${item.keywords.join(' ')} ${item.category}`.toLowerCase();
-          return searchTerms.some(term => searchableText.includes(term));
+
+        const searchTerms = query
+          .toLowerCase()
+          .split(" ")
+          .filter((term) => term.length > 0);
+        const results = searchData.filter((item) => {
+          const searchableText =
+            `${item.title} ${item.description} ${item.keywords.join(" ")} ${item.category}`.toLowerCase();
+          return searchTerms.some((term) => searchableText.includes(term));
         });
-        
+
         // Sort by relevance
         results.sort((a, b) => {
           const scoreA = getRelevanceScore(a, searchTerms);
           const scoreB = getRelevanceScore(b, searchTerms);
           return scoreB - scoreA;
         });
-        
+
         displaySearchResults(results, query);
       }
-      
+
       function getRelevanceScore(item, searchTerms) {
         let score = 0;
         const title = item.title.toLowerCase();
         const description = item.description.toLowerCase();
-        const keywords = item.keywords.join(' ').toLowerCase();
-        
-        searchTerms.forEach(term => {
+        const keywords = item.keywords.join(" ").toLowerCase();
+
+        searchTerms.forEach((term) => {
           // Title matches get highest score
           if (title.includes(term)) score += 10;
           // Keyword matches get high score
@@ -631,13 +733,13 @@
           // Partial matches
           if (title.includes(term.substring(0, 3))) score += 3;
         });
-        
+
         return score;
       }
-      
+
       function displaySearchResults(results, query) {
-        const resultsContainer = document.getElementById('searchResults');
-        
+        const resultsContainer = document.getElementById("searchResults");
+
         if (results.length === 0) {
           resultsContainer.innerHTML = `
             <div class="search-info">
@@ -653,10 +755,10 @@
           `;
           return;
         }
-        
+
         let html = `<div class="search-info"><h3>🔍 ${results.length} ผลลัพธ์สำหรับ "${query}"</h3></div>`;
-        
-        results.forEach(item => {
+
+        results.forEach((item) => {
           html += `
             <div class="result-item">
               <div class="result-category">${item.category}</div>
@@ -665,21 +767,23 @@
             </div>
           `;
         });
-        
+
         resultsContainer.innerHTML = html;
       }
-      
+
       // Handle form submission
-      document.getElementById('searchForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const query = document.getElementById('searchInput').value;
-        performSearch(query);
-        
-        // Update URL
-        const url = new URL(window.location);
-        url.searchParams.set('q', query);
-        window.history.pushState({}, '', url);
-      });
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const query = document.getElementById("searchInput").value;
+          performSearch(query);
+
+          // Update URL
+          const url = new URL(window.location);
+          url.searchParams.set("q", query);
+          window.history.pushState({}, "", url);
+        });
     </script>
   </body>
 </html>

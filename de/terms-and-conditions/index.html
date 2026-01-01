@@ -11,8 +11,10 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-VYNMSTFN5M");
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
 
     <meta charset="UTF-8" />
@@ -178,6 +180,13 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -197,19 +206,6 @@
         }
       }
     </script>
-
-    <!-- Google Fonts: Roboto -->
-
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
   </head>
 
   <body>

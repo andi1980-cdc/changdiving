@@ -11,8 +11,10 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-VYNMSTFN5M");
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
 
     <meta charset="UTF-8" />
@@ -172,6 +174,23 @@
     <link rel="preconnect" href="https://cdn.trustindex.io" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript>
+      <link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/products/owd/open-water-diver-header_small.webp"
+        imagesrcset="/img/products/owd/open-water-diver-header_small.webp 600w, /img/products/owd/open-water-diver-header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -265,28 +284,7 @@
         ]
       }
     </script>
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Critical CSS and Font Loading -->
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-    <noscript>
-      <link rel="stylesheet" href="/style.css" />
-      <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/products/owd/open-water-diver-header_small.webp"
-        imagesrcset="/img/products/owd/open-water-diver-header_small.webp 600w, /img/products/owd/open-water-diver-header_big.webp 1200w"
-        imagesizes="100vw"
-      />
-    </noscript>
 
     <!-- Performance Optimizations -->
     <link rel="dns-prefetch" href="//www.youtube.com" />
@@ -343,6 +341,7 @@
             width="600"
             height="400"
             loading="eager"
+            fetchpriority="high"
           />
         </picture>
 

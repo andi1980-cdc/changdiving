@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hin Raab North – Exklusiver Tauchplatz in Koh Chang</title>
@@ -93,11 +100,17 @@
       property="og:url"
       content="https://changdiving.com/de/dive-sites/hin-raab-north/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/hin-raab-north_header_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/hin-raab-north_header_big.webp"
+    />
     <meta property="og:image:width" content="600" />
     <meta property="og:image:height" content="400" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Hin Raab North – Exklusiver Tauchplatz in Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="Hin Raab North – Exklusiver Tauchplatz in Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -116,16 +129,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -149,18 +154,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -176,18 +180,35 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/hin-raab-north_header_small.webp"
+        imagesrcset="/img/dive-sites/hin-raab-north_header_small.webp 600w, /img/dive-sites/hin-raab-north_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "Hin Raab North – Koh Chang",
         "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/hin-raab-north_header_big.webp",
-            "width": "600",
-            "height": "400",
-            "caption": "Hin Raab North – Exklusiver Tauchplatz in Koh Chang"
-          },
+          "@type": "ImageObject",
+          "url": "https://changdiving.com/img/dive-sites/hin-raab-north_header_big.webp",
+          "width": "600",
+          "height": "400",
+          "caption": "Hin Raab North – Exklusiver Tauchplatz in Koh Chang"
+        },
         "description": "Privater Korallenriff-Tauchplatz im Norden von Koh Chang mit Haien, Canyons und lebendigem Meeresleben.",
         "address": {
           "@type": "PostalAddress",
@@ -299,31 +320,6 @@
       }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/hin-raab-north_header_small.webp"
-      imagesrcset="/img/dive-sites/hin-raab-north_header_small.webp 600w, /img/dive-sites/hin-raab-north_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -334,7 +330,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -379,7 +375,6 @@
             alt="Taucher erkunden Hin Raab North – ein lebhaftes Korallenriff bei Koh Chang"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -400,15 +395,15 @@
 
       <div class="dive-site-box">
         <!-- Untermenü: Navigation -->
-      <nav class="posts-submenu">
-        <a href="/de/posts/diving-how-to-guides-koh-chang/">Anleitungen</a>
-        <a href="/de/day-trips/">Tagesausflüge</a>
-        <a href="/de/courses/">Kurse</a>
-        <a href="/de/equipment/">Ausrüstung</a>
-        <a href="/de/day-trips/insurance/">Versicherung</a>
-        <a href="/de/faqs/">FAQ's</a>
-      </nav>
-      
+        <nav class="posts-submenu">
+          <a href="/de/posts/diving-how-to-guides-koh-chang/">Anleitungen</a>
+          <a href="/de/day-trips/">Tagesausflüge</a>
+          <a href="/de/courses/">Kurse</a>
+          <a href="/de/equipment/">Ausrüstung</a>
+          <a href="/de/day-trips/insurance/">Versicherung</a>
+          <a href="/de/faqs/">FAQ's</a>
+        </nav>
+
         <h2
           style="
             text-align: center;
@@ -423,23 +418,73 @@
         </h2>
 
         <p>
-          Stell dir vor, du tauchst in einen Unterwasser-Kindergarten, in dem Fischschulen so dicht sind, dass du dich fühlst, als würdest du <em>durch</em> Fische schwimmen, nicht durch Wasser. Willkommen bei <strong>Hin Raab North</strong> – Koh Changs Kronjuwel der Korallenvielfalt und einer der exklusivsten Tauchplätze Thailands. Das ist nicht einfach nur ein weiterer Riff-Tauchgang; es ist eine sensorische Überflutung aus Farbe, Leben und Bewegung, die selbst die erfahrensten Taucher sprachlos macht.
+          Stell dir vor, du tauchst in einen Unterwasser-Kindergarten, in dem
+          Fischschulen so dicht sind, dass du dich fühlst, als würdest du
+          <em>durch</em> Fische schwimmen, nicht durch Wasser. Willkommen bei
+          <strong>Hin Raab North</strong> – Koh Changs Kronjuwel der
+          Korallenvielfalt und einer der exklusivsten Tauchplätze Thailands. Das
+          ist nicht einfach nur ein weiterer Riff-Tauchgang; es ist eine
+          sensorische Überflutung aus Farbe, Leben und Bewegung, die selbst die
+          erfahrensten Taucher sprachlos macht.
         </p>
-        
+
         <p>
-          Was Hin Raab North wirklich außergewöhnlich macht, ist nicht nur das, was du siehst – es ist das schiere <em>Volumen</em> an Leben. Dieser Platz bietet die <strong>größte Korallenvielfalt aller Tauchplätze in Koh Chang</strong>, mit sowohl Weich- als auch Hartkorallen, die einen lebenden Teppich schaffen, der den berühmtesten Riffen in Südostasien Konkurrenz macht. Aber hier ist der Punkt: Die Korallen sind nur die Kulisse. Die wahren Stars sind die Fische – Tausende und Abertausende von ihnen, die sich in synchronisierten Schulen bewegen und lebende Wände aus Silber, Gelb und Blau bilden.
+          Was Hin Raab North wirklich außergewöhnlich macht, ist nicht nur das,
+          was du siehst – es ist das schiere <em>Volumen</em> an Leben. Dieser
+          Platz bietet die
+          <strong>größte Korallenvielfalt aller Tauchplätze in Koh Chang</strong
+          >, mit sowohl Weich- als auch Hartkorallen, die einen lebenden Teppich
+          schaffen, der den berühmtesten Riffen in Südostasien Konkurrenz macht.
+          Aber hier ist der Punkt: Die Korallen sind nur die Kulisse. Die wahren
+          Stars sind die Fische – Tausende und Abertausende von ihnen, die sich
+          in synchronisierten Schulen bewegen und lebende Wände aus Silber, Gelb
+          und Blau bilden.
         </p>
-        
+
         <p>
-          Stell dir das vor: Du steigst entlang der Mooring-Leine an der Nord-Ost-Ecke ab und bist sofort umgeben. Schulen von <strong>Barrakudas</strong> patrouillieren die Ränder wie Unterwasser-Wächter. <strong>Fledermausfische</strong> treiben träge über dir, ihre markanten Formen gegen das Oberflächenlicht abgezeichnet. <strong>Gelbrücken-Füsilieren</strong> bilden massive Schulen, die sich um dich herum wie ein lebender Vorhang teilen. Und überall, wo du hinschaust, schweben <strong>große Kugelfische</strong> – das Highlight des Platzes – wie neugierige, aufgeblähte Ballons, ihre großen Augen folgen deiner jeden Bewegung. Es ist, als würde man durch einen Fischmarkt schwimmen, nur dass die Fische lebendig, wild und völlig unbeeindruckt von deiner Anwesenheit sind.
+          Stell dir das vor: Du steigst entlang der Mooring-Leine an der
+          Nord-Ost-Ecke ab und bist sofort umgeben. Schulen von
+          <strong>Barrakudas</strong> patrouillieren die Ränder wie
+          Unterwasser-Wächter. <strong>Fledermausfische</strong> treiben träge
+          über dir, ihre markanten Formen gegen das Oberflächenlicht
+          abgezeichnet. <strong>Gelbrücken-Füsilieren</strong> bilden massive
+          Schulen, die sich um dich herum wie ein lebender Vorhang teilen. Und
+          überall, wo du hinschaust, schweben
+          <strong>große Kugelfische</strong> – das Highlight des Platzes – wie
+          neugierige, aufgeblähte Ballons, ihre großen Augen folgen deiner jeden
+          Bewegung. Es ist, als würde man durch einen Fischmarkt schwimmen, nur
+          dass die Fische lebendig, wild und völlig unbeeindruckt von deiner
+          Anwesenheit sind.
         </p>
-        
+
         <p>
-          Der Tauchplatz selbst ist ein Meisterwerk der Unterwassertopografie. Zwei markante Felsformationen durchbrechen die Oberfläche und verlaufen von Ost nach West wie natürliche Landmarken. Das sind nicht nur Navigationshilfen – sie sind die Anker für ein ganzes Ökosystem. Zwischen ihnen liegt eine flache mittlere Plattform bei etwa 5 Metern, perfekt für deinen Sicherheitsstopp, aber dorthin zu gelangen ist die halbe Abenteuer. Du folgst der Riffkante nach Westen, navigierst durch einen dramatischen Kanyon, der nach Nord-Ost schneidet, und tauchst auf diesem Unterwasserplateau auf, wo die Korallenvielfalt ihren Höhepunkt erreicht. Es ist ein Tauchgang, der das Beste aus allem kombiniert: dramatische Struktur, unglaubliche Biodiversität und dieses seltene Gefühl, vollständig in die Fülle der Natur eingetaucht zu sein.
+          Der Tauchplatz selbst ist ein Meisterwerk der Unterwassertopografie.
+          Zwei markante Felsformationen durchbrechen die Oberfläche und
+          verlaufen von Ost nach West wie natürliche Landmarken. Das sind nicht
+          nur Navigationshilfen – sie sind die Anker für ein ganzes Ökosystem.
+          Zwischen ihnen liegt eine flache mittlere Plattform bei etwa 5 Metern,
+          perfekt für deinen Sicherheitsstopp, aber dorthin zu gelangen ist die
+          halbe Abenteuer. Du folgst der Riffkante nach Westen, navigierst durch
+          einen dramatischen Kanyon, der nach Nord-Ost schneidet, und tauchst
+          auf diesem Unterwasserplateau auf, wo die Korallenvielfalt ihren
+          Höhepunkt erreicht. Es ist ein Tauchgang, der das Beste aus allem
+          kombiniert: dramatische Struktur, unglaubliche Biodiversität und
+          dieses seltene Gefühl, vollständig in die Fülle der Natur eingetaucht
+          zu sein.
         </p>
-        
+
         <p>
-          Hier ist, was Hin Raab North besonders macht: <strong>Exklusiver Zugang</strong>. Dieser Platz ist nur mit <a href="/de/about/">Chang Diving Center</a> während der Hochsaison zugänglich, wenn unser Boot am Klong Prao Beach vertäut ist. Wir bringen dich nicht einfach hierher – wir kennen dieses Riff intim, und wir werden dich durch seine Highlights führen, dir die ansässigen Kugelfische zeigen und dir helfen zu verstehen, warum dieser Ort sich mehr wie eine Fischaufzuchtstation anfühlt als ein Tauchplatz. Bereit zu erleben, wie es ist, in einem lebenden Aquarium zu schwimmen? Hin Raab North wartet – und vertrau uns, dein Instagram-Feed wird es dir danken! 🌊🐠
+          Hier ist, was Hin Raab North besonders macht:
+          <strong>Exklusiver Zugang</strong>. Dieser Platz ist nur mit
+          <a href="/de/about/">Chang Diving Center</a> während der Hochsaison
+          zugänglich, wenn unser Boot am Klong Prao Beach vertäut ist. Wir
+          bringen dich nicht einfach hierher – wir kennen dieses Riff intim, und
+          wir werden dich durch seine Highlights führen, dir die ansässigen
+          Kugelfische zeigen und dir helfen zu verstehen, warum dieser Ort sich
+          mehr wie eine Fischaufzuchtstation anfühlt als ein Tauchplatz. Bereit
+          zu erleben, wie es ist, in einem lebenden Aquarium zu schwimmen? Hin
+          Raab North wartet – und vertrau uns, dein Instagram-Feed wird es dir
+          danken! 🌊🐠
         </p>
 
         <div class="dive-site-gallery">
@@ -503,8 +548,7 @@
         <p>
           Bereit, diese exklusive Unterwasserwelt zu entdecken? Buche jetzt
           deinen nächsten <a href="/de/day-trips/fun-dives/">Fun Dive</a> oder
-          <a href="/de/courses/">Tauchkurs</a> mit dem Chang
-          Diving Center!
+          <a href="/de/courses/">Tauchkurs</a> mit dem Chang Diving Center!
         </p>
 
         <div class="dive-site-gallery">
@@ -550,7 +594,7 @@
         >
         möglich: Ja
         <hr />
-        
+
         <h2
           style="
             text-align: center;
@@ -564,270 +608,734 @@
         >
           Tauchbriefing-Beispiel für Tauchprofis – Hin Raab North
         </h2>
-        
-        <p style="text-align: center; font-size: 1.1em; color: #555; margin-bottom: 30px;">
-          Dies ist ein umfassendes Tauchbriefing-Template/Beispiel für Tauchprofis. Nutze dies als Referenz-Guide, um deine eigenen Briefings zu strukturieren. Passe die Platzhalter (in eckigen Klammern markiert) mit deinen spezifischen Informationen, Guide-Namen und aktuellen Bedingungen an. Dies gewährleistet ein sicheres, organisiertes und professionelles Tauchbriefing-Erlebnis.
+
+        <p
+          style="
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+          "
+        >
+          Dies ist ein umfassendes Tauchbriefing-Template/Beispiel für
+          Tauchprofis. Nutze dies als Referenz-Guide, um deine eigenen Briefings
+          zu strukturieren. Passe die Platzhalter (in eckigen Klammern markiert)
+          mit deinen spezifischen Informationen, Guide-Namen und aktuellen
+          Bedingungen an. Dies gewährleistet ein sicheres, organisiertes und
+          professionelles Tauchbriefing-Erlebnis.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           1. Tauchplatzname & Einführung
         </h3>
         <p>
-          <strong>Hallo zusammen und willkommen am Hin Raab North!</strong> Hin Raab North ist einer der exklusivsten Tauchplätze Koh Changs und bietet die <strong>größte Korallenvielfalt aller Tauchplätze in Koh Chang</strong>. Mit sowohl Weich- als auch Hartkorallen, die einen lebenden Teppich schaffen, ist dieser Platz wie ein Unterwasser-Kindergarten, in dem Fischschulen so dicht sind, dass du dich fühlst, als würdest du <em>durch</em> Fische schwimmen, nicht durch Wasser.
+          <strong>Hallo zusammen und willkommen am Hin Raab North!</strong> Hin
+          Raab North ist einer der exklusivsten Tauchplätze Koh Changs und
+          bietet die
+          <strong>größte Korallenvielfalt aller Tauchplätze in Koh Chang</strong
+          >. Mit sowohl Weich- als auch Hartkorallen, die einen lebenden Teppich
+          schaffen, ist dieser Platz wie ein Unterwasser-Kindergarten, in dem
+          Fischschulen so dicht sind, dass du dich fühlst, als würdest du
+          <em>durch</em> Fische schwimmen, nicht durch Wasser.
         </p>
         <p>
-          Mein Name ist [Dein Name] und ich werde heute euer Tauchguide sein. Ich tauche diesen Platz seit [X] Jahren und freue mich, diesen unglaublichen Ort mit euch zu teilen!
+          Mein Name ist [Dein Name] und ich werde heute euer Tauchguide sein.
+          Ich tauche diesen Platz seit [X] Jahren und freue mich, diesen
+          unglaublichen Ort mit euch zu teilen!
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           2. Platzbeschreibung & Tauchroute
         </h3>
         <p>
-          Wir haben heute ausgezeichnete Tauchbedingungen am Hin Raab North. Die Sicht beträgt typischerweise 10-20 Meter, und wir haben ruhige Oberflächenbedingungen mit minimaler Strömung.
+          Wir haben heute ausgezeichnete Tauchbedingungen am Hin Raab North. Die
+          Sicht beträgt typischerweise 10-20 Meter, und wir haben ruhige
+          Oberflächenbedingungen mit minimaler Strömung.
         </p>
         <ul>
           <li><strong>Maximale Tiefe:</strong> 18 Meter</li>
-          <li><strong>Durchschnittliche Tiefe:</strong> 12-15 Meter (Hauptriff-Bereich)</li>
-          <li><strong>Tauchroute:</strong> Wir steigen entlang der Mooring-Leine an der <strong>Nord-Ost-Ecke</strong> des Tauchplatzes ab. Von dort aus starten wir Richtung <strong>Süden</strong>, dann folgen wir der <strong>Riffkante nach Westen</strong>. Wenn wir die <strong>zweite Felsformation</strong> erreichen, drehen wir in einen <strong>Kanyon Richtung Nord-Ost</strong>, der uns zu einer flachen mittleren Plattform bei etwa <strong>5 Metern</strong> führt. Hier führen wir unseren schwimmenden Sicherheitsstopp durch, indem wir der Riffkante <strong>Richtung Osten</strong> zurück zum Boot folgen.</li>
-          <li><strong>Platzmerkmale:</strong> Zwei markante Felsformationen durchbrechen die Oberfläche und verlaufen von Ost nach West wie natürliche Landmarken. Diese Formationen verankern das gesamte Ökosystem und dienen als ausgezeichnete Navigationshilfen.</li>
-          <li><strong>Wetterbedingungen:</strong> [Aktuelle Bedingungen - z.B. "Niedrigwasser, Wellenhöhe 0,5 Meter, leichte Oberflächenströmung"]</li>
+          <li>
+            <strong>Durchschnittliche Tiefe:</strong> 12-15 Meter
+            (Hauptriff-Bereich)
+          </li>
+          <li>
+            <strong>Tauchroute:</strong> Wir steigen entlang der Mooring-Leine
+            an der <strong>Nord-Ost-Ecke</strong> des Tauchplatzes ab. Von dort
+            aus starten wir Richtung <strong>Süden</strong>, dann folgen wir der
+            <strong>Riffkante nach Westen</strong>. Wenn wir die
+            <strong>zweite Felsformation</strong> erreichen, drehen wir in einen
+            <strong>Kanyon Richtung Nord-Ost</strong>, der uns zu einer flachen
+            mittleren Plattform bei etwa <strong>5 Metern</strong> führt. Hier
+            führen wir unseren schwimmenden Sicherheitsstopp durch, indem wir
+            der Riffkante <strong>Richtung Osten</strong> zurück zum Boot
+            folgen.
+          </li>
+          <li>
+            <strong>Platzmerkmale:</strong> Zwei markante Felsformationen
+            durchbrechen die Oberfläche und verlaufen von Ost nach West wie
+            natürliche Landmarken. Diese Formationen verankern das gesamte
+            Ökosystem und dienen als ausgezeichnete Navigationshilfen.
+          </li>
+          <li>
+            <strong>Wetterbedingungen:</strong> [Aktuelle Bedingungen - z.B.
+            "Niedrigwasser, Wellenhöhe 0,5 Meter, leichte Oberflächenströmung"]
+          </li>
         </ul>
         <p>
-          Die Topografie des Platzes schafft dramatische Unterwasserpassagen voller farbenfroher Korallen, und die flache mittlere Plattform bei 5 Metern ist perfekt für unseren Sicherheitsstopp, während wir immer noch von unglaublichem Meeresleben umgeben sind.
+          Die Topografie des Platzes schafft dramatische Unterwasserpassagen
+          voller farbenfroher Korallen, und die flache mittlere Plattform bei 5
+          Metern ist perfekt für unseren Sicherheitsstopp, während wir immer
+          noch von unglaublichem Meeresleben umgeben sind.
         </p>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Was du am Hin Raab North sehen kannst</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Was du am Hin Raab North sehen kannst
+        </h4>
         <p>
-          Hin Raab North ist ein blühendes Korallenriff, das eine unglaubliche Vielfalt an Meereslebewesen anzieht. Während deines Tauchgangs kannst du erwarten:
+          Hin Raab North ist ein blühendes Korallenriff, das eine unglaubliche
+          Vielfalt an Meereslebewesen anzieht. Während deines Tauchgangs kannst
+          du erwarten:
         </p>
         <ul>
-          <li><strong>Massive Fischschulen:</strong> Schulen von <strong>Barrakudas</strong> patrouillieren die Ränder wie Unterwasser-Wächter, während <strong>Fledermausfische</strong> träge über dir treiben. <strong>Gelbrücken-Füsilieren</strong> bilden massive Schulen, die lebende Wände aus Silber und Gelb schaffen – es ist, als würde man durch einen Fischmarkt schwimmen, nur dass die Fische lebendig und wild sind!</li>
-          <li><strong>Korallenvielfalt:</strong> Dieser Platz hat die größte Korallenvielfalt in Koh Chang, mit sowohl Weich- als auch Hartkorallen, die einen lebenden Teppich schaffen, der den berühmtesten Riffen in Südostasien Konkurrenz macht</li>
-          <li><strong>Große Kugelfische:</strong> Das Highlight des Platzes – <strong>große Kugelfische</strong> schweben wie neugierige, aufgeblähte Ballons während des gesamten Tauchgangs, ihre großen Augen folgen deiner jeden Bewegung</li>
-          <li><strong>Rifffische:</strong> Bunte Rifffische aller Größen, von winzigen Grundeln bis hin zu größeren Zackenbarschen, schaffen ein lebendiges Unterwasserökosystem</li>
-          <li><strong>Gelegentliche Besucher:</strong> Schwarzspitzen-Riffhaie, Stachelrochen, Muränen und Rotfeuerfische werden häufig um die Riffstruktur gesichtet</li>
+          <li>
+            <strong>Massive Fischschulen:</strong> Schulen von
+            <strong>Barrakudas</strong> patrouillieren die Ränder wie
+            Unterwasser-Wächter, während <strong>Fledermausfische</strong> träge
+            über dir treiben. <strong>Gelbrücken-Füsilieren</strong> bilden
+            massive Schulen, die lebende Wände aus Silber und Gelb schaffen – es
+            ist, als würde man durch einen Fischmarkt schwimmen, nur dass die
+            Fische lebendig und wild sind!
+          </li>
+          <li>
+            <strong>Korallenvielfalt:</strong> Dieser Platz hat die größte
+            Korallenvielfalt in Koh Chang, mit sowohl Weich- als auch
+            Hartkorallen, die einen lebenden Teppich schaffen, der den
+            berühmtesten Riffen in Südostasien Konkurrenz macht
+          </li>
+          <li>
+            <strong>Große Kugelfische:</strong> Das Highlight des Platzes –
+            <strong>große Kugelfische</strong> schweben wie neugierige,
+            aufgeblähte Ballons während des gesamten Tauchgangs, ihre großen
+            Augen folgen deiner jeden Bewegung
+          </li>
+          <li>
+            <strong>Rifffische:</strong> Bunte Rifffische aller Größen, von
+            winzigen Grundeln bis hin zu größeren Zackenbarschen, schaffen ein
+            lebendiges Unterwasserökosystem
+          </li>
+          <li>
+            <strong>Gelegentliche Besucher:</strong> Schwarzspitzen-Riffhaie,
+            Stachelrochen, Muränen und Rotfeuerfische werden häufig um die
+            Riffstruktur gesichtet
+          </li>
         </ul>
         <p>
-          Für einen vollständigen Guide zu den Meereslebewesen, die du beim Tauchen in Koh Chang antreffen könntest, schau dir unseren <a href="/de/posts/marine-life-koh-chang/" target="_blank" rel="noopener noreferrer">Meereslebewesen-Guide</a> an. Diese umfassende Ressource deckt Artenidentifikation, Verhalten und die besten Spots ab, um verschiedene Meereslebewesen zu finden.
+          Für einen vollständigen Guide zu den Meereslebewesen, die du beim
+          Tauchen in Koh Chang antreffen könntest, schau dir unseren
+          <a
+            href="/de/posts/marine-life-koh-chang/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Meereslebewesen-Guide</a
+          >
+          an. Diese umfassende Ressource deckt Artenidentifikation, Verhalten
+          und die besten Spots ab, um verschiedene Meereslebewesen zu finden.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           3. Die Rolle deines Guides & Positionierung
         </h3>
         <p>
-          Ich werde diesen Tauchgang führen und trage <strong>[Farbe] und [Farbe] Flossen</strong> mit einem <strong>[Beschreibung der Ausrüstung/identifizierendes Merkmal]</strong>. Du kannst mich leicht identifizieren durch [spezifisches visuelles Merkmal - z.B. "mein leuchtend gelbes BCD mit dem Chang Diving Logo"].
+          Ich werde diesen Tauchgang führen und trage
+          <strong>[Farbe] und [Farbe] Flossen</strong> mit einem
+          <strong
+            >[Beschreibung der Ausrüstung/identifizierendes Merkmal]</strong
+          >. Du kannst mich leicht identifizieren durch [spezifisches visuelles
+          Merkmal - z.B. "mein leuchtend gelbes BCD mit dem Chang Diving Logo"].
         </p>
         <p>
-          [Falls zutreffend] Unser Divemaster [Name] wird sich am Ende der Gruppe positionieren und ein Auge auf alle haben. [Name] wird <strong>[Farbe] Flossen</strong> tragen und wird [Signalgerät - z.B. "diesen Tank-Banger"] verwenden, um deine Aufmerksamkeit zu erregen, falls nötig.
+          [Falls zutreffend] Unser Divemaster [Name] wird sich am Ende der
+          Gruppe positionieren und ein Auge auf alle haben. [Name] wird
+          <strong>[Farbe] Flossen</strong> tragen und wird [Signalgerät - z.B.
+          "diesen Tank-Banger"] verwenden, um deine Aufmerksamkeit zu erregen,
+          falls nötig.
         </p>
         <p>
-          <strong>Wichtig:</strong> Bleib nah bei der Gruppe und halte zu jeder Zeit visuellen Kontakt mit deinem Buddy und dem Guide. Wenn du kommunizieren musst, verwende Standard-Handzeichen oder erreg meine Aufmerksamkeit, indem du auf deine Flasche klopfst.
+          <strong>Wichtig:</strong> Bleib nah bei der Gruppe und halte zu jeder
+          Zeit visuellen Kontakt mit deinem Buddy und dem Guide. Wenn du
+          kommunizieren musst, verwende Standard-Handzeichen oder erreg meine
+          Aufmerksamkeit, indem du auf deine Flasche klopfst.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           4. Ein- und Ausstiegstechniken
         </h3>
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Bootseinstieg (Giant Stride)</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Bootseinstieg (Giant Stride)
+        </h4>
         <p>
-          Wir steigen von der Seite des Tauchboots mit einem <strong>Giant Stride</strong> ein. Hier ist, woran du dich erinnern solltest:
+          Wir steigen von der Seite des Tauchboots mit einem
+          <strong>Giant Stride</strong> ein. Hier ist, woran du dich erinnern
+          solltest:
         </p>
         <ul>
-          <li><strong>Pre-Dive Sicherheitscheck:</strong> Führe deinen BIG WHALES REALLY ARE FUN Check vor dem Einstieg durch</li>
-          <li><strong>BCD-Aufblasen:</strong> Blase dein BCD vollständig vor dem Einstieg auf</li>
+          <li>
+            <strong>Pre-Dive Sicherheitscheck:</strong> Führe deinen BIG WHALES
+            REALLY ARE FUN Check vor dem Einstieg durch
+          </li>
+          <li>
+            <strong>BCD-Aufblasen:</strong> Blase dein BCD vollständig vor dem
+            Einstieg auf
+          </li>
           <li><strong>Atemregler:</strong> Halte deinen Atemregler im Mund</li>
-          <li><strong>Maske:</strong> Stelle sicher, dass deine Maske richtig sitzt</li>
-          <li><strong>Einstieg:</strong> Schritt vorwärts mit einem Bein, dann dem anderen, Beine zusammenhalten</li>
-          <li><strong>Nach dem Einstieg:</strong> Räume den Bereich sofort frei, signalisiere OK und schwimme zur Mooring-Leine</li>
-        </ul>
-        
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Bootsausstieg (Leiter)</h4>
-        <p>
-          Nach dem Abschluss deines Sicherheitsstopps und dem Auftauchen:
-        </p>
-        <ul>
-          <li>Schwimme zurück zur Leiter an der Seite des Boots</li>
-          <li>Stehe auf der Leiter und entferne deine Flossen (übergib sie der Crew)</li>
-          <li>Steige die Leiter mit deinem Atemregler noch im Mund hinauf</li>
-          <li><strong>KRITISCH:</strong> Positioniere dich niemals direkt unter einem anderen Taucher, der die Leiter hinaufklettert</li>
-          <li>Sobald du an Deck bist, entferne dich vom Ein-/Ausstiegsbereich</li>
+          <li>
+            <strong>Maske:</strong> Stelle sicher, dass deine Maske richtig
+            sitzt
+          </li>
+          <li>
+            <strong>Einstieg:</strong> Schritt vorwärts mit einem Bein, dann dem
+            anderen, Beine zusammenhalten
+          </li>
+          <li>
+            <strong>Nach dem Einstieg:</strong> Räume den Bereich sofort frei,
+            signalisiere OK und schwimme zur Mooring-Leine
+          </li>
         </ul>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Schlauchbooteinstieg (Rückwärtsrolle)</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Bootsausstieg (Leiter)
+        </h4>
+        <p>Nach dem Abschluss deines Sicherheitsstopps und dem Auftauchen:</p>
+        <ul>
+          <li>Schwimme zurück zur Leiter an der Seite des Boots</li>
+          <li>
+            Stehe auf der Leiter und entferne deine Flossen (übergib sie der
+            Crew)
+          </li>
+          <li>Steige die Leiter mit deinem Atemregler noch im Mund hinauf</li>
+          <li>
+            <strong>KRITISCH:</strong> Positioniere dich niemals direkt unter
+            einem anderen Taucher, der die Leiter hinaufklettert
+          </li>
+          <li>
+            Sobald du an Deck bist, entferne dich vom Ein-/Ausstiegsbereich
+          </li>
+        </ul>
+
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Schlauchbooteinstieg (Rückwärtsrolle)
+        </h4>
         <p>
-          Wenn wir ein Schlauchboot verwenden, steigen wir mit einem <strong>Rückwärtsrolleinstieg</strong> ein:
+          Wenn wir ein Schlauchboot verwenden, steigen wir mit einem
+          <strong>Rückwärtsrolleinstieg</strong> ein:
         </p>
         <ul>
-          <li>Setze dich auf die Kante des Schlauchboots mit dem Rücken zum Wasser</li>
+          <li>
+            Setze dich auf die Kante des Schlauchboots mit dem Rücken zum Wasser
+          </li>
           <li>Führe deinen Pre-Dive Sicherheitscheck durch</li>
           <li>Halte deine Maske und deinen Atemregler an Ort und Stelle</li>
           <li>Bei drei, lehne dich zurück und rolle ins Wasser</li>
           <li>Räume den Bereich frei und signalisiere OK</li>
         </ul>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           5. Tauchverfahren & Umkehrpunkte
         </h3>
         <p>
-          Um sicherzustellen, dass wir genug Luft für eine sichere Rückkehr und den Sicherheitsstopp haben:
+          Um sicherzustellen, dass wir genug Luft für eine sichere Rückkehr und
+          den Sicherheitsstopp haben:
         </p>
         <ul>
-          <li><strong>Umkehrpunkt:</strong> Wir werden den Tauchgang umkehren, wenn du <strong>130 bar</strong> (oder 1900 PSI) erreichst. Das gibt uns mehr als genug Luftreserve, um sicher zum Einstiegspunkt zurückzukehren und unseren Sicherheitsstopp zu absolvieren.</li>
-          <li><strong>Luftüberwachung:</strong> Überprüfe deinen Luftmesser häufig während des Tauchgangs. Warte nicht, bis du wenig Luft hast, um zu signalisieren – kommuniziere früh!</li>
-          <li><strong>Sicherheitsstopp:</strong> Bei 5 Metern Tiefe führen wir einen <strong>schwimmenden Sicherheitsstopp</strong> für 3 Minuten durch. Das bedeutet, wir schwimmen langsam entlang der Riffkante <strong>Richtung Osten</strong> zurück zum Boot, während wir 5 Meter Tiefe beibehalten, anstatt uns an einer Leine festzuhalten. Die flache mittlere Plattform bietet perfekte Bedingungen dafür.</li>
-          <li><strong>Nullzeitgrenzen:</strong> Für diese Tiefe (12-18 Meter) beträgt deine Nullzeitgrenze etwa 50 Minuten. Wir halten den Tauchgang gut innerhalb dieser Grenzen.</li>
+          <li>
+            <strong>Umkehrpunkt:</strong> Wir werden den Tauchgang umkehren,
+            wenn du <strong>130 bar</strong> (oder 1900 PSI) erreichst. Das gibt
+            uns mehr als genug Luftreserve, um sicher zum Einstiegspunkt
+            zurückzukehren und unseren Sicherheitsstopp zu absolvieren.
+          </li>
+          <li>
+            <strong>Luftüberwachung:</strong> Überprüfe deinen Luftmesser häufig
+            während des Tauchgangs. Warte nicht, bis du wenig Luft hast, um zu
+            signalisieren – kommuniziere früh!
+          </li>
+          <li>
+            <strong>Sicherheitsstopp:</strong> Bei 5 Metern Tiefe führen wir
+            einen <strong>schwimmenden Sicherheitsstopp</strong> für 3 Minuten
+            durch. Das bedeutet, wir schwimmen langsam entlang der Riffkante
+            <strong>Richtung Osten</strong> zurück zum Boot, während wir 5 Meter
+            Tiefe beibehalten, anstatt uns an einer Leine festzuhalten. Die
+            flache mittlere Plattform bietet perfekte Bedingungen dafür.
+          </li>
+          <li>
+            <strong>Nullzeitgrenzen:</strong> Für diese Tiefe (12-18 Meter)
+            beträgt deine Nullzeitgrenze etwa 50 Minuten. Wir halten den
+            Tauchgang gut innerhalb dieser Grenzen.
+          </li>
         </ul>
         <p>
-          <strong>Denk daran:</strong> Die wichtigste Regel beim Tauchen ist, niemals die Luft anzuhalten. Atme normal und kontinuierlich während des gesamten Tauchgangs.
+          <strong>Denk daran:</strong> Die wichtigste Regel beim Tauchen ist,
+          niemals die Luft anzuhalten. Atme normal und kontinuierlich während
+          des gesamten Tauchgangs.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           6. Notfallverfahren
         </h3>
         <p>
-          Während wir keine Probleme erwarten, ist es wichtig, dass jeder weiß, was im Notfall zu tun ist:
+          Während wir keine Probleme erwarten, ist es wichtig, dass jeder weiß,
+          was im Notfall zu tun ist:
         </p>
-        
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Buddy-Trennung</h4>
+
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Buddy-Trennung
+        </h4>
         <ul>
-          <li>Wenn du dich von deinem Buddy trennst, suche <strong>1 Minute</strong> lang, während du auf derselben Tiefe bleibst</li>
-          <li>Wenn du deinen Buddy nicht finden kannst, mache einen <strong>kontrollierten Sicherheitsaufstieg</strong> zur Oberfläche</li>
-          <li>Warte an der Oberfläche – wir werden uns dort wiedervereinigen</li>
+          <li>
+            Wenn du dich von deinem Buddy trennst, suche
+            <strong>1 Minute</strong> lang, während du auf derselben Tiefe
+            bleibst
+          </li>
+          <li>
+            Wenn du deinen Buddy nicht finden kannst, mache einen
+            <strong>kontrollierten Sicherheitsaufstieg</strong> zur Oberfläche
+          </li>
+          <li>
+            Warte an der Oberfläche – wir werden uns dort wiedervereinigen
+          </li>
           <li><strong>TAUCHE NICHT</strong> alleine weiter</li>
         </ul>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Keine Luft / Wenig Luft</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Keine Luft / Wenig Luft
+        </h4>
         <ul>
-          <li><strong>Wenig Luft:</strong> Signalisiere sofort – wir beenden den Tauchgang und steigen zusammen auf</li>
-          <li><strong>Keine Luft:</strong> Signalisiere "keine Luft" und verwende die alternative Luftquelle deines Buddys oder mache einen kontrollierten Notfall-Schwimmaufstieg (CESA)</li>
-          <li>Signalisiere Probleme immer früh – warte nicht, bis es ein Notfall ist!</li>
+          <li>
+            <strong>Wenig Luft:</strong> Signalisiere sofort – wir beenden den
+            Tauchgang und steigen zusammen auf
+          </li>
+          <li>
+            <strong>Keine Luft:</strong> Signalisiere "keine Luft" und verwende
+            die alternative Luftquelle deines Buddys oder mache einen
+            kontrollierten Notfall-Schwimmaufstieg (CESA)
+          </li>
+          <li>
+            Signalisiere Probleme immer früh – warte nicht, bis es ein Notfall
+            ist!
+          </li>
         </ul>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Notfallkontakte & Ausrüstung</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Notfallkontakte & Ausrüstung
+        </h4>
         <ul>
           <li><strong>Polizei:</strong> 191</li>
           <li><strong>Touristenpolizei:</strong> 1155</li>
           <li><strong>Notfallmedizinischer Dienst:</strong> 1669</li>
-          <li><strong>DAN International:</strong> <a href="https://www.diversalertnetwork.org/contact/" target="_blank" rel="noopener noreferrer">+1-919-684-9111</a> (24/7 Notfallhotline für Tauchnotfälle)</li>
-          <li><strong>Druckkammer:</strong> Koh Chang Hospital, Telefon: 039 521-657 oder 039 586-131</li>
-          <li><strong>Verdacht auf DCS:</strong> Siehe unser <a href="/docs/EN_DCS_Field_Evaluation_Slate.pdf" target="_blank" rel="noopener noreferrer">DCS Feldbewertungs-Slate (PDF)</a> für Bewertungsverfahren</li>
-          <li><strong>Notfall-Sauerstoff:</strong> Befindet sich in der Transportbox rechts vom Kapitänssitz in der Kapitänskabine</li>
-          <li><strong>Erste-Hilfe-Kasten:</strong> Befindet sich in der Transportbox rechts vom Kapitänssitz in der Kapitänskabine</li>
-          <li><strong>Notfallaktionsplan:</strong> Für detaillierte Notfallverfahren siehe unseren <a href="/de/posts/straight-talk/emergency-plan/" target="_blank" rel="noopener noreferrer">Notfallplan-Guide</a></li>
+          <li>
+            <strong>DAN International:</strong>
+            <a
+              href="https://www.diversalertnetwork.org/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >+1-919-684-9111</a
+            >
+            (24/7 Notfallhotline für Tauchnotfälle)
+          </li>
+          <li>
+            <strong>Druckkammer:</strong> Koh Chang Hospital, Telefon: 039
+            521-657 oder 039 586-131
+          </li>
+          <li>
+            <strong>Verdacht auf DCS:</strong> Siehe unser
+            <a
+              href="/docs/EN_DCS_Field_Evaluation_Slate.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DCS Feldbewertungs-Slate (PDF)</a
+            >
+            für Bewertungsverfahren
+          </li>
+          <li>
+            <strong>Notfall-Sauerstoff:</strong> Befindet sich in der
+            Transportbox rechts vom Kapitänssitz in der Kapitänskabine
+          </li>
+          <li>
+            <strong>Erste-Hilfe-Kasten:</strong> Befindet sich in der
+            Transportbox rechts vom Kapitänssitz in der Kapitänskabine
+          </li>
+          <li>
+            <strong>Notfallaktionsplan:</strong> Für detaillierte
+            Notfallverfahren siehe unseren
+            <a
+              href="/de/posts/straight-talk/emergency-plan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Notfallplan-Guide</a
+            >
+          </li>
         </ul>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           7. Handzeichen-Überprüfung
         </h3>
         <p>
-          Handzeichen können zwischen Ländern und Zertifizierungsagenturen variieren, also stellen wir sicher, dass wir alle auf derselben Seite sind. Hier sind die wesentlichen Signale, die wir heute verwenden werden:
+          Handzeichen können zwischen Ländern und Zertifizierungsagenturen
+          variieren, also stellen wir sicher, dass wir alle auf derselben Seite
+          sind. Hier sind die wesentlichen Signale, die wir heute verwenden
+          werden:
         </p>
         <ul>
-          <li><strong>OK:</strong> [Beschreibung/visuell] - Wird verwendet, um "Geht es dir gut?" zu fragen und "Mir geht es gut" zu antworten</li>
-          <li><strong>Problem:</strong> [Beschreibung/visuell] - Hand seitlich hin und her bewegen, um ein Problem anzuzeigen</li>
-          <li><strong>Hoch:</strong> [Beschreibung/visuell] - Daumen hoch bedeutet "Ich möchte hoch"</li>
-          <li><strong>Runter:</strong> [Beschreibung/visuell] - Daumen runter bedeutet "Ich möchte runter"</li>
-          <li><strong>Luftdruck:</strong> [Beschreibung/visuell] - Zahlen mit Fingern zeigen (z.B. "Ich habe 120 bar")</li>
-          <li><strong>Wenig Luft:</strong> [Beschreibung/visuell] - Hand über den Hals</li>
-          <li><strong>Keine Luft:</strong> [Beschreibung/visuell] - Hand über den Hals, dann auf den Atemregler zeigen</li>
-          <li><strong>Sicherheitsstopp:</strong> [Beschreibung/visuell] - Hand horizontal, Handfläche nach unten, bei 5 Metern</li>
-          <li><strong>Stopp/Halten:</strong> [Beschreibung/visuell] - Hand hoch, Handfläche nach vorne</li>
-          <li><strong>Schauen/Zeigen:</strong> [Beschreibung/visuell] - Auf etwas Interessantes zeigen</li>
+          <li>
+            <strong>OK:</strong> [Beschreibung/visuell] - Wird verwendet, um
+            "Geht es dir gut?" zu fragen und "Mir geht es gut" zu antworten
+          </li>
+          <li>
+            <strong>Problem:</strong> [Beschreibung/visuell] - Hand seitlich hin
+            und her bewegen, um ein Problem anzuzeigen
+          </li>
+          <li>
+            <strong>Hoch:</strong> [Beschreibung/visuell] - Daumen hoch bedeutet
+            "Ich möchte hoch"
+          </li>
+          <li>
+            <strong>Runter:</strong> [Beschreibung/visuell] - Daumen runter
+            bedeutet "Ich möchte runter"
+          </li>
+          <li>
+            <strong>Luftdruck:</strong> [Beschreibung/visuell] - Zahlen mit
+            Fingern zeigen (z.B. "Ich habe 120 bar")
+          </li>
+          <li>
+            <strong>Wenig Luft:</strong> [Beschreibung/visuell] - Hand über den
+            Hals
+          </li>
+          <li>
+            <strong>Keine Luft:</strong> [Beschreibung/visuell] - Hand über den
+            Hals, dann auf den Atemregler zeigen
+          </li>
+          <li>
+            <strong>Sicherheitsstopp:</strong> [Beschreibung/visuell] - Hand
+            horizontal, Handfläche nach unten, bei 5 Metern
+          </li>
+          <li>
+            <strong>Stopp/Halten:</strong> [Beschreibung/visuell] - Hand hoch,
+            Handfläche nach vorne
+          </li>
+          <li>
+            <strong>Schauen/Zeigen:</strong> [Beschreibung/visuell] - Auf etwas
+            Interessantes zeigen
+          </li>
         </ul>
         <p>
-          <strong>Übungsfrage:</strong> Kannst du mir zeigen, wie du kommunizieren würdest, dass du noch 120 bar Luftdruck hast?
+          <strong>Übungsfrage:</strong> Kannst du mir zeigen, wie du
+          kommunizieren würdest, dass du noch 120 bar Luftdruck hast?
         </p>
         <p>
           <a
             href="/docs/Handsignals01.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: #0077b6; color: white; text-decoration: none; border-radius: 5px;"
+            style="
+              display: inline-block;
+              margin-top: 10px;
+              padding: 10px 20px;
+              background: #0077b6;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+            "
             >📋 Kompletten Handzeichen-Guide herunterladen (PDF)</a
           >
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           8. Teilnehmerliste & Buddy-Check (Paarung)
         </h3>
         <p>
           Stellen wir sicher, dass alle anwesend sind und richtig gepaart sind:
         </p>
         <ul>
-          <li><strong>Teilnehmerliste:</strong> [Gehe die Namen durch] - Ist jeder hier?</li>
-          <li><strong>Buddy-Paare:</strong> 
+          <li>
+            <strong>Teilnehmerliste:</strong> [Gehe die Namen durch] - Ist jeder
+            hier?
+          </li>
+          <li>
+            <strong>Buddy-Paare:</strong>
             <ul>
               <li>[Name] und [Name] - ihr werdet Buddys sein</li>
               <li>[Name] und [Name] - ihr werdet Buddys sein</li>
-              <li>[Name] - du wirst heute mein Buddy sein (für weniger erfahrene Taucher)</li>
+              <li>
+                [Name] - du wirst heute mein Buddy sein (für weniger erfahrene
+                Taucher)
+              </li>
             </ul>
           </li>
-          <li><strong>Buddy-Check:</strong> Vor dem Einstieg ins Wasser, führe einen finalen Check mit deinem Buddy durch – stelle sicher, dass alle Ausrüstung sicher und funktionsfähig ist</li>
+          <li>
+            <strong>Buddy-Check:</strong> Vor dem Einstieg ins Wasser, führe
+            einen finalen Check mit deinem Buddy durch – stelle sicher, dass
+            alle Ausrüstung sicher und funktionsfähig ist
+          </li>
         </ul>
         <p>
-          <strong>Hinweis:</strong> Buddy-Paare werden typischerweise nach Erfahrungsniveau und Zertifizierung zusammengestellt. Wenn du mit einer bestimmten Person tauchen möchtest, lass es mich jetzt wissen.
+          <strong>Hinweis:</strong> Buddy-Paare werden typischerweise nach
+          Erfahrungsniveau und Zertifizierung zusammengestellt. Wenn du mit
+          einer bestimmten Person tauchen möchtest, lass es mich jetzt wissen.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           9. Umweltbewusstsein & Meeresgefahren
         </h3>
         <p>
-          Hin Raab North ist ein geschütztes Korallenriff, und wir müssen die Meeresumwelt respektieren:
+          Hin Raab North ist ein geschütztes Korallenriff, und wir müssen die
+          Meeresumwelt respektieren:
         </p>
         <ul>
-          <li><strong>Allgemeine Regel:</strong> Schauen, aber nicht anfassen. Vermeide Kontakt mit allen Meereslebewesen, einschließlich Korallen, Schwämmen und Fischen</li>
-          <li><strong>Meereslebewesen, auf die man achten sollte:</strong>
+          <li>
+            <strong>Allgemeine Regel:</strong> Schauen, aber nicht anfassen.
+            Vermeide Kontakt mit allen Meereslebewesen, einschließlich Korallen,
+            Schwämmen und Fischen
+          </li>
+          <li>
+            <strong>Meereslebewesen, auf die man achten sollte:</strong>
             <ul>
-              <li><strong>Rotfeuerfische:</strong> Schön, aber giftig – halte einen sicheren Abstand (mindestens 2 Meter)</li>
-              <li><strong>Muränen:</strong> Normalerweise scheu, aber können territorial sein – greife nicht in Löcher oder Spalten</li>
-              <li><strong>Feuerkorallen:</strong> Können Hautreizungen verursachen – vermeide Kontakt</li>
-              <li><strong>Seeigel:</strong> Scharfe Stacheln – achte auf deine Hände und Knie</li>
-              <li><strong>Kugelfische:</strong> Große Kugelfische sind hier häufig – bewundere sie aus der Distanz, sie können defensiv sein</li>
+              <li>
+                <strong>Rotfeuerfische:</strong> Schön, aber giftig – halte
+                einen sicheren Abstand (mindestens 2 Meter)
+              </li>
+              <li>
+                <strong>Muränen:</strong> Normalerweise scheu, aber können
+                territorial sein – greife nicht in Löcher oder Spalten
+              </li>
+              <li>
+                <strong>Feuerkorallen:</strong> Können Hautreizungen verursachen
+                – vermeide Kontakt
+              </li>
+              <li>
+                <strong>Seeigel:</strong> Scharfe Stacheln – achte auf deine
+                Hände und Knie
+              </li>
+              <li>
+                <strong>Kugelfische:</strong> Große Kugelfische sind hier häufig
+                – bewundere sie aus der Distanz, sie können defensiv sein
+              </li>
             </ul>
           </li>
-          <li><strong>Tarierungskontrolle:</strong> Halte gute Tarierung, um das Riff nicht zu beschädigen oder Sediment aufzuwirbeln</li>
-          <li><strong>Fotografie:</strong> Wenn du Fotos machst, sei vorsichtig, nichts anzufassen. Verwende ein Kameragehäuse oder einen Griff</li>
-          <li><strong>Naturschutz:</strong> Nimm nur Fotos, hinterlasse nur Blasen. Entferne niemals etwas vom Riff</li>
+          <li>
+            <strong>Tarierungskontrolle:</strong> Halte gute Tarierung, um das
+            Riff nicht zu beschädigen oder Sediment aufzuwirbeln
+          </li>
+          <li>
+            <strong>Fotografie:</strong> Wenn du Fotos machst, sei vorsichtig,
+            nichts anzufassen. Verwende ein Kameragehäuse oder einen Griff
+          </li>
+          <li>
+            <strong>Naturschutz:</strong> Nimm nur Fotos, hinterlasse nur
+            Blasen. Entferne niemals etwas vom Riff
+          </li>
         </ul>
         <p>
-          <strong>Denk daran:</strong> Wir sind Gäste in ihrem Zuhause. Lass uns respektvolle Besucher sein und den Platz genau so verlassen, wie wir ihn vorgefunden haben.
+          <strong>Denk daran:</strong> Wir sind Gäste in ihrem Zuhause. Lass uns
+          respektvolle Besucher sein und den Platz genau so verlassen, wie wir
+          ihn vorgefunden haben.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           10. Pre-Dive Sicherheitscheck
         </h3>
         <p>
-          Vor jedem Tauchgang verwenden wir das Akronym <strong>"BIG WHALES REALLY ARE FUN"</strong>, um sicherzustellen, dass nichts vergessen wird. Für einen detaillierten Guide darüber, warum Sicherheitschecks wichtig sind und wie man sie korrekt durchführt, schau dir unseren <a href="/de/posts/scuba-knowledge/safety-check/" target="_blank" rel="noopener noreferrer">Sicherheitscheck-Guide</a> an:
+          Vor jedem Tauchgang verwenden wir das Akronym
+          <strong>"BIG WHALES REALLY ARE FUN"</strong>, um sicherzustellen, dass
+          nichts vergessen wird. Für einen detaillierten Guide darüber, warum
+          Sicherheitschecks wichtig sind und wie man sie korrekt durchführt,
+          schau dir unseren
+          <a
+            href="/de/posts/scuba-knowledge/safety-check/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sicherheitscheck-Guide</a
+          >
+          an:
         </p>
-        <ul style="list-style: none; padding-left: 0;">
-          <li style="margin-bottom: 10px;"><strong>B</strong> - <strong>BCD:</strong> Überprüfe, dass sich dein BCD korrekt auf- und abbläst. Teste den Power-Inflator und die Ablassventile.</li>
-          <li style="margin-bottom: 10px;"><strong>I</strong> - <strong>Inflation:</strong> Stelle sicher, dass dein BCD richtig sitzt und alle Gurte sicher sind.</li>
-          <li style="margin-bottom: 10px;"><strong>G</strong> - <strong>Gauges:</strong> Überprüfe deinen SPG (Tauchdruckmesser), Tiefenmesser und Computer. Stelle sicher, dass sie funktionieren und lesbar sind.</li>
-          <li style="margin-bottom: 10px;"><strong>W</strong> - <strong>Weights:</strong> Überprüfe, dass dein Gewichtsgurt oder die integrierten Gewichte sicher und richtig positioniert sind.</li>
-          <li style="margin-bottom: 10px;"><strong>H</strong> - <strong>Hose:</strong> Überprüfe alle Schläuche auf Knicke oder Beschädigungen. Stelle sicher, dass deine Atemreglerschläuche richtig verlegt sind.</li>
-          <li style="margin-bottom: 10px;"><strong>A</strong> - <strong>Air:</strong> Öffne deine Luft, überprüfe deinen Flaschendruck und nimm 2-3 Atemzüge von deinem Atemregler.</li>
-          <li style="margin-bottom: 10px;"><strong>L</strong> - <strong>Releases:</strong> Teste alle Schnellverschlüsse an deinem BCD, Gewichtssystem und jeder anderen Ausrüstung.</li>
-          <li style="margin-bottom: 10px;"><strong>E</strong> - <strong>Everything:</strong> Überprüfe noch einmal, dass alles an Ort und Stelle ist und funktioniert.</li>
-          <li style="margin-bottom: 10px;"><strong>S</strong> - <strong>Snaps:</strong> Stelle sicher, dass alle Schnallen und Verschlüsse sicher sind.</li>
-          <li style="margin-bottom: 10px;"><strong>R</strong> - <strong>Releases:</strong> (Zweiter Check) Überprüfe, dass alle Verschlüsse funktionieren.</li>
-          <li style="margin-bottom: 10px;"><strong>E</strong> - <strong>Everything:</strong> Finaler Check – ist alles bereit?</li>
-          <li style="margin-bottom: 10px;"><strong>A</strong> - <strong>Air:</strong> Finaler Luftcheck – Atemregler funktioniert, Flaschendruck gut.</li>
-          <li style="margin-bottom: 10px;"><strong>L</strong> - <strong>Look:</strong> Schau dich um – ist dein Buddy bereit? Ist der Einstiegsbereich frei?</li>
-          <li style="margin-bottom: 10px;"><strong>L</strong> - <strong>Listen:</strong> Höre auf finale Anweisungen von deinem Guide.</li>
-          <li style="margin-bottom: 10px;"><strong>Y</strong> - <strong>You:</strong> Bist DU bereit? Atme tief durch, entspanne dich und genieße den Tauchgang!</li>
-          <li style="margin-bottom: 10px;"><strong>A</strong> - <strong>Again:</strong> Noch ein schneller Check – alles sicher?</li>
-          <li style="margin-bottom: 10px;"><strong>R</strong> - <strong>Ready:</strong> Bist du bereit zum Tauchen?</li>
-          <li style="margin-bottom: 10px;"><strong>E</strong> - <strong>Everything:</strong> Finaler Everything-Check.</li>
-          <li style="margin-bottom: 10px;"><strong>F</strong> - <strong>Fun:</strong> Denk daran – Tauchen macht SPASS! Entspanne dich und genieße!</li>
-          <li style="margin-bottom: 10px;"><strong>U</strong> - <strong>Underwater:</strong> Bereit, unter Wasser zu gehen?</li>
-          <li style="margin-bottom: 10px;"><strong>N</strong> - <strong>Now:</strong> Lass uns JETZT tauchen!</li>
+        <ul style="list-style: none; padding-left: 0">
+          <li style="margin-bottom: 10px">
+            <strong>B</strong> - <strong>BCD:</strong> Überprüfe, dass sich dein
+            BCD korrekt auf- und abbläst. Teste den Power-Inflator und die
+            Ablassventile.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>I</strong> - <strong>Inflation:</strong> Stelle sicher, dass
+            dein BCD richtig sitzt und alle Gurte sicher sind.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>G</strong> - <strong>Gauges:</strong> Überprüfe deinen SPG
+            (Tauchdruckmesser), Tiefenmesser und Computer. Stelle sicher, dass
+            sie funktionieren und lesbar sind.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>W</strong> - <strong>Weights:</strong> Überprüfe, dass dein
+            Gewichtsgurt oder die integrierten Gewichte sicher und richtig
+            positioniert sind.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>H</strong> - <strong>Hose:</strong> Überprüfe alle Schläuche
+            auf Knicke oder Beschädigungen. Stelle sicher, dass deine
+            Atemreglerschläuche richtig verlegt sind.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>A</strong> - <strong>Air:</strong> Öffne deine Luft,
+            überprüfe deinen Flaschendruck und nimm 2-3 Atemzüge von deinem
+            Atemregler.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>L</strong> - <strong>Releases:</strong> Teste alle
+            Schnellverschlüsse an deinem BCD, Gewichtssystem und jeder anderen
+            Ausrüstung.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>E</strong> - <strong>Everything:</strong> Überprüfe noch
+            einmal, dass alles an Ort und Stelle ist und funktioniert.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>S</strong> - <strong>Snaps:</strong> Stelle sicher, dass
+            alle Schnallen und Verschlüsse sicher sind.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>R</strong> - <strong>Releases:</strong> (Zweiter Check)
+            Überprüfe, dass alle Verschlüsse funktionieren.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>E</strong> - <strong>Everything:</strong> Finaler Check –
+            ist alles bereit?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>A</strong> - <strong>Air:</strong> Finaler Luftcheck –
+            Atemregler funktioniert, Flaschendruck gut.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>L</strong> - <strong>Look:</strong> Schau dich um – ist dein
+            Buddy bereit? Ist der Einstiegsbereich frei?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>L</strong> - <strong>Listen:</strong> Höre auf finale
+            Anweisungen von deinem Guide.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>Y</strong> - <strong>You:</strong> Bist DU bereit? Atme tief
+            durch, entspanne dich und genieße den Tauchgang!
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>A</strong> - <strong>Again:</strong> Noch ein schneller
+            Check – alles sicher?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>R</strong> - <strong>Ready:</strong> Bist du bereit zum
+            Tauchen?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>E</strong> - <strong>Everything:</strong> Finaler
+            Everything-Check.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>F</strong> - <strong>Fun:</strong> Denk daran – Tauchen
+            macht SPASS! Entspanne dich und genieße!
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>U</strong> - <strong>Underwater:</strong> Bereit, unter
+            Wasser zu gehen?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>N</strong> - <strong>Now:</strong> Lass uns JETZT tauchen!
+          </li>
         </ul>
-        <p style="margin-top: 20px;">
-          <strong>Pro-Tipp:</strong> Führe diesen Check mit deinem Buddy durch. Es ist eine großartige Möglichkeit, Probleme vor dem Einstieg ins Wasser zu erkennen und hilft, Vertrauen aufzubauen.
+        <p style="margin-top: 20px">
+          <strong>Pro-Tipp:</strong> Führe diesen Check mit deinem Buddy durch.
+          Es ist eine großartige Möglichkeit, Probleme vor dem Einstieg ins
+          Wasser zu erkennen und hilft, Vertrauen aufzubauen.
         </p>
 
-        <div style="background: #e8f4f8; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #0077b6;">
-          <h4 style="margin-top: 0; color: #0077b6;">📋 Schnelle Briefing-Checkliste</h4>
-          <ul style="margin-bottom: 0;">
+        <div
+          style="
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #0077b6;
+          "
+        >
+          <h4 style="margin-top: 0; color: #0077b6">
+            📋 Schnelle Briefing-Checkliste
+          </h4>
+          <ul style="margin-bottom: 0">
             <li>✅ Platzname und Bedingungen verstanden</li>
             <li>✅ Tauchroute und Tiefen klar</li>
             <li>✅ Guide-Identifikation bestätigt</li>
@@ -841,14 +1349,40 @@
           </ul>
         </div>
 
-        <p style="text-align: center; font-size: 1.1em; margin-top: 40px; padding: 20px; background: #f0f8ff; border-radius: 8px;">
-          <strong>Fragen?</strong> Wenn du Fragen oder Bedenken hast, frag jetzt – ich bin hier, um zu helfen! Denk daran, es gibt keine dummen Fragen, wenn es um Tauchsicherheit geht. Lass uns einen sicheren und großartigen Tauchgang haben! 🌊🤿
+        <p
+          style="
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 8px;
+          "
+        >
+          <strong>Fragen?</strong> Wenn du Fragen oder Bedenken hast, frag jetzt
+          – ich bin hier, um zu helfen! Denk daran, es gibt keine dummen Fragen,
+          wenn es um Tauchsicherheit geht. Lass uns einen sicheren und
+          großartigen Tauchgang haben! 🌊🤿
         </p>
 
-        <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffa500;">
-          <h4 style="margin-top: 0; color: #ff8c00;">📝 Nach deinem Tauchgang: Logge deine Erfahrung</h4>
+        <div
+          style="
+            background: #fff9e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #ffa500;
+          "
+        >
+          <h4 style="margin-top: 0; color: #ff8c00">
+            📝 Nach deinem Tauchgang: Logge deine Erfahrung
+          </h4>
           <p>
-            Vergiss nicht, deinen Tauchgang zu loggen! Dein Tauchlogbuch ist ein wichtiger Nachweis deiner Taucherfahrung und wird für viele fortgeschrittene Kurse benötigt. Ob du eine digitale App oder ein traditionelles Logbuch verwendest, stelle sicher, dass du aufzeichnest:
+            Vergiss nicht, deinen Tauchgang zu loggen! Dein Tauchlogbuch ist ein
+            wichtiger Nachweis deiner Taucherfahrung und wird für viele
+            fortgeschrittene Kurse benötigt. Ob du eine digitale App oder ein
+            traditionelles Logbuch verwendest, stelle sicher, dass du
+            aufzeichnest:
           </p>
           <ul>
             <li>Datum und Ort</li>
@@ -858,15 +1392,28 @@
             <li>Dein Buddy und Guide</li>
             <li>Highlights (gesichtete Meereslebewesen, Bedingungen, etc.)</li>
           </ul>
-          <p style="margin-bottom: 0;">
-            Für weitere Informationen darüber, warum Tauchlogbücher wichtig sind und was enthalten sein sollte, schau dir unseren <a href="/de/posts/scuba-knowledge/dive-logbook/" target="_blank" rel="noopener noreferrer">Tauchlogbuch-Guide</a> an. Du findest den Tauchplatz-Stempel und kannst dein Logbuch von deinem Guide an der Kaffeestation auf dem Boot unterschreiben lassen.
+          <p style="margin-bottom: 0">
+            Für weitere Informationen darüber, warum Tauchlogbücher wichtig sind
+            und was enthalten sein sollte, schau dir unseren
+            <a
+              href="/de/posts/scuba-knowledge/dive-logbook/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Tauchlogbuch-Guide</a
+            >
+            an. Du findest den Tauchplatz-Stempel und kannst dein Logbuch von
+            deinem Guide an der Kaffeestation auf dem Boot unterschreiben
+            lassen.
           </p>
         </div>
 
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc" />
-        <h3 style="color: #333; margin-top: 30px;">Was andere Taucher entdeckten</h3>
-        <p style="font-size: 14px; margin-bottom: 20px;">
-          Echte Bewertungen und Erfahrungen unserer Gäste – sieh, was andere bei ihrem Tauchabenteuer mit uns erlebt haben!
+        <h3 style="color: #333; margin-top: 30px">
+          Was andere Taucher entdeckten
+        </h3>
+        <p style="font-size: 14px; margin-bottom: 20px">
+          Echte Bewertungen und Erfahrungen unserer Gäste – sieh, was andere bei
+          ihrem Tauchabenteuer mit uns erlebt haben!
         </p>
         <div style="margin-top: 20px">
           <script
@@ -879,42 +1426,94 @@
 
         <hr />
 
-        <h2 style="margin-top: 50px; font-size: 32px; background: linear-gradient(to right, #0077b6, #c0c0c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Ähnliche Tauchplätze</h2>
-        <p>Erkunde weitere fortgeschrittene Rifftauchgänge rund um Koh Chang. Diese Plätze bieten ähnliche Tiefen und Herausforderungen.</p>
+        <h2
+          style="
+            margin-top: 50px;
+            font-size: 32px;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          "
+        >
+          Ähnliche Tauchplätze
+        </h2>
+        <p>
+          Erkunde weitere fortgeschrittene Rifftauchgänge rund um Koh Chang.
+          Diese Plätze bieten ähnliche Tiefen und Herausforderungen.
+        </p>
 
         <div class="row">
           <a href="/de/dive-sites/hin-raab-south/" class="three columns">
-            <img src="/img/dive-sites/hin-raab-south_header_small.webp" alt="Hin Raab South" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🌊 Hin Raab South</h3><p style="min-height: 60px">Spannender Drift-Tauchgang mit Korallenwänden. Schwesterplatz zum Nord-Platz. (Max. Tiefe: 25m)</p></div>
+            <img
+              src="/img/dive-sites/hin-raab-south_header_small.webp"
+              alt="Hin Raab South"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🌊 Hin Raab South</h3>
+              <p style="min-height: 60px">
+                Spannender Drift-Tauchgang mit Korallenwänden. Schwesterplatz
+                zum Nord-Platz. (Max. Tiefe: 25m)
+              </p>
+            </div>
           </a>
           <a href="/de/dive-sites/blueberry-hill/" class="three columns">
-            <img src="/img/dive-sites/blueberry-hill_header_small.webp" alt="Blueberry Hill" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🫐 Blueberry Hill</h3><p style="min-height: 60px">Schöner Korallen-Pinnacle mit vielfältigem Meeresleben. (Max. Tiefe: 25m)</p></div>
+            <img
+              src="/img/dive-sites/blueberry-hill_header_small.webp"
+              alt="Blueberry Hill"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🫐 Blueberry Hill</h3>
+              <p style="min-height: 60px">
+                Schöner Korallen-Pinnacle mit vielfältigem Meeresleben. (Max.
+                Tiefe: 25m)
+              </p>
+            </div>
           </a>
           <a href="/de/dive-sites/koh-rang-pinnacle/" class="three columns">
-            <img src="/img/dive-sites/koh-rang-pinacle_header_small.webp" alt="Koh Rang Pinnacle" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🏔️ Koh Rang Pinnacle</h3><p style="min-height: 60px">Dramatischer Pinnacle mit starken Strömungen. Fortgeschritten! (Max. Tiefe: 28m)</p></div>
+            <img
+              src="/img/dive-sites/koh-rang-pinacle_header_small.webp"
+              alt="Koh Rang Pinnacle"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🏔️ Koh Rang Pinnacle</h3>
+              <p style="min-height: 60px">
+                Dramatischer Pinnacle mit starken Strömungen. Fortgeschritten!
+                (Max. Tiefe: 28m)
+              </p>
+            </div>
           </a>
           <a href="/de/dive-sites/" class="three columns">
-            <img src="/img/dive-sites/dive-site-map_small.webp" alt="Alle Tauchplätze" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🗺️ Alle Tauchplätze</h3><p style="min-height: 60px">Erkunde alle 13 Tauchplätze rund um Koh Chang.</p></div>
+            <img
+              src="/img/dive-sites/dive-site-map_small.webp"
+              alt="Alle Tauchplätze"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🗺️ Alle Tauchplätze</h3>
+              <p style="min-height: 60px">
+                Erkunde alle 13 Tauchplätze rund um Koh Chang.
+              </p>
+            </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner DE -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -922,7 +1521,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -940,29 +1540,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Tauchplätze",
-                  "item": "https://changdiving.com/de/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Hin Raab North",
-                  "item": "https://changdiving.com/de/dive-sites/hin-raab-north/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tauchplätze",
+            "item": "https://changdiving.com/de/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hin Raab North",
+            "item": "https://changdiving.com/de/dive-sites/hin-raab-north/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

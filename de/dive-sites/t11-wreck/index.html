@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -95,13 +102,19 @@
       property="og:url"
       content="https://changdiving.com/de/dive-sites/t11-wreck/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       T11 Wrack – Koh Changs historisches Patrouillenboot als Tauchplatz
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -120,16 +133,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -153,18 +158,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -180,51 +184,68 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/t-11-wreck_head_smal.webp"
+        imagesrcset="/img/dive-sites/t-11-wreck_head_smal.webp 600w, /img/dive-sites/t-11-wreck_head_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Place",
-        "name": "T11 Wrack – Koh Chang",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "
-      T11 Wrack – Koh Changs historisches Patrouillenboot als Tauchplatz
-    "
+        {
+          "@context": "https://schema.org",
+          "@type": "Place",
+          "name": "T11 Wrack – Koh Chang",
+          "image": {
+              "@type": "ImageObject",
+              "url": "https://changdiving.com/img/dive-sites/t-11-wreck_head_big.webp",
+              "width": "2580",
+              "height": "1460",
+              "caption": "
+        T11 Wrack – Koh Changs historisches Patrouillenboot als Tauchplatz
+      "
+            },
+          "description": "T11 ist ein Küsten-Patrouillenboot, das 2013 versenkt wurde, um ein künstliches Riff bei Koh Chang zu schaffen. Ein perfekter Wracktauchgang mit Rifffischen und Haien.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "TH",
+            "addressRegion": "Trat",
+            "addressLocality": "Koh Chang"
           },
-        "description": "T11 ist ein Küsten-Patrouillenboot, das 2013 versenkt wurde, um ein künstliches Riff bei Koh Chang zu schaffen. Ein perfekter Wracktauchgang mit Rifffischen und Haien.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "TH",
-          "addressRegion": "Trat",
-          "addressLocality": "Koh Chang"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 11.8698,
-          "longitude": 102.3133
-        },
-        "url": "https://changdiving.com/de/dive-sites/t11-wreck/",
-        "amenityFeature": [
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Tiefe",
-            "value": "16 m"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 11.8698,
+            "longitude": 102.3133
           },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Zugang",
-            "value": "Nur per Boot"
-          },
-          {
-            "@type": "LocationFeatureSpecification",
-            "name": "Level",
-            "value": "Open Water und Wracktaucher"
-          }
-        ]
-      }
+          "url": "https://changdiving.com/de/dive-sites/t11-wreck/",
+          "amenityFeature": [
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Tiefe",
+              "value": "16 m"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Zugang",
+              "value": "Nur per Boot"
+            },
+            {
+              "@type": "LocationFeatureSpecification",
+              "name": "Level",
+              "value": "Open Water und Wracktaucher"
+            }
+          ]
+        }
     </script>
 
     <!-- BreadcrumbList Schema -->
@@ -305,30 +326,6 @@
       }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/t-11-wreck_head_smal.webp"
-      imagesrcset="/img/dive-sites/t-11-wreck_head_smal.webp 600w, /img/dive-sites/t-11-wreck_head_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -339,7 +336,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -384,7 +381,6 @@
             alt="T11 Wrack – Legendärer Tauchplatz bei Koh Chang"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -405,15 +401,15 @@
 
       <div class="dive-site-box">
         <!-- Untermenü: Navigation -->
-      <nav class="posts-submenu">
-        <a href="/de/posts/diving-how-to-guides-koh-chang/">Anleitungen</a>
-        <a href="/de/day-trips/">Tagesausflüge</a>
-        <a href="/de/courses/">Kurse</a>
-        <a href="/de/equipment/">Ausrüstung</a>
-        <a href="/de/day-trips/insurance/">Versicherung</a>
-        <a href="/de/faqs/">FAQ's</a>
-      </nav>
-      
+        <nav class="posts-submenu">
+          <a href="/de/posts/diving-how-to-guides-koh-chang/">Anleitungen</a>
+          <a href="/de/day-trips/">Tagesausflüge</a>
+          <a href="/de/courses/">Kurse</a>
+          <a href="/de/equipment/">Ausrüstung</a>
+          <a href="/de/day-trips/insurance/">Versicherung</a>
+          <a href="/de/faqs/">FAQ's</a>
+        </nav>
+
         <h2
           style="
             text-align: center;
@@ -661,18 +657,22 @@
         <hr />
 
         <!-- Related Dive Sites Section -->
-        <h2 style="
+        <h2
+          style="
             margin-top: 50px;
             font-size: 32px;
             background: linear-gradient(to right, #0077b6, #c0c0c0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
-          ">
+          "
+        >
           Weitere Wracktauchgänge
         </h2>
         <p>
-          Entdecke weitere Wracktauch-Abenteuer rund um Koh Chang. Diese historischen Wracks bieten faszinierende Unterwasser-Erkundungen und reiches Meeresleben.
+          Entdecke weitere Wracktauch-Abenteuer rund um Koh Chang. Diese
+          historischen Wracks bieten faszinierende Unterwasser-Erkundungen und
+          reiches Meeresleben.
         </p>
 
         <div class="row">
@@ -687,7 +687,9 @@
             <div class="excerpt">
               <h3>⚓ HTMS Chang Wrack</h3>
               <p style="min-height: 60px">
-                Thailands berühmtester Wracktauchgang! Erkunde dieses beeindruckende Ex-Marineschiff mit prächtigem Korallenwuchs und vielfältigem Meeresleben. (Max. Tiefe: 31m)
+                Thailands berühmtester Wracktauchgang! Erkunde dieses
+                beeindruckende Ex-Marineschiff mit prächtigem Korallenwuchs und
+                vielfältigem Meeresleben. (Max. Tiefe: 31m)
               </p>
             </div>
           </a>
@@ -703,12 +705,17 @@
             <div class="excerpt">
               <h3>🚢 Koho Maru 5</h3>
               <p style="min-height: 60px">
-                Tauche zum historischen japanischen Frachtschiff aus dem 2. Weltkrieg. Ein atmosphärisches Wrack mit faszinierender Geschichte. (Max. Tiefe: 43m)
+                Tauche zum historischen japanischen Frachtschiff aus dem 2.
+                Weltkrieg. Ein atmosphärisches Wrack mit faszinierender
+                Geschichte. (Max. Tiefe: 43m)
               </p>
             </div>
           </a>
 
-          <a href="/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/" class="three columns">
+          <a
+            href="/de/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"
+            class="three columns"
+          >
             <img
               src="/img/dive-sites/phutthayotfa-chulalok-fregatte_small.webp"
               alt="Phutthayotfa Chulalok Wrack bei Koh Chang"
@@ -719,7 +726,9 @@
             <div class="excerpt">
               <h3>🛳️ Phutthayotfa Wrack</h3>
               <p style="min-height: 60px">
-                Entdecke dieses thailändische Marineschiff mit beeindruckender Struktur und blühendem Korallenwachstum. Toll für Unterwasserfotografen! (Max. Tiefe: 40m)
+                Entdecke dieses thailändische Marineschiff mit beeindruckender
+                Struktur und blühendem Korallenwachstum. Toll für
+                Unterwasserfotografen! (Max. Tiefe: 40m)
               </p>
             </div>
           </a>
@@ -735,26 +744,19 @@
             <div class="excerpt">
               <h3>🗺️ Alle Tauchplätze</h3>
               <p style="min-height: 60px">
-                Erkunde alle 13 Tauchplätze rund um Koh Chang. Von flachen Riffen bis zu tiefen Wracks - finde dein perfektes Tauchabenteuer.
+                Erkunde alle 13 Tauchplätze rund um Koh Chang. Von flachen
+                Riffen bis zu tiefen Wracks - finde dein perfektes
+                Tauchabenteuer.
               </p>
             </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner DE -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -762,7 +764,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -780,29 +783,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Tauchplätze",
-                  "item": "https://changdiving.com/de/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "T11 Wreck",
-                  "item": "https://changdiving.com/de/dive-sites/t11-wreck/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tauchplätze",
+            "item": "https://changdiving.com/de/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "T11 Wreck",
+            "item": "https://changdiving.com/de/dive-sites/t11-wreck/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

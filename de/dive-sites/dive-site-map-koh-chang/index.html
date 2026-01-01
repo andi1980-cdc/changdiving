@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -97,13 +104,19 @@
       property="og:url"
       content="https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/dive-site-map_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       Tauchplatzkarte von Koh Chang | Entdecke die besten Tauchspots
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -122,16 +135,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -155,18 +160,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -182,380 +186,372 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/dive-site-map_small.webp"
+        imagesrcset="/img/dive-sites/dive-site-map_small.webp 600w, /img/dive-sites/dive-site-map_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Place",
-        "name": "Tauchplätze rund um Koh Chang",
-        "description": "Interaktive Karte der Tauchplätze rund um Koh Chang, inklusive Wracks, Riffen, Pinnacles, Tauchbasen und Bootszugänge – für alle Erfahrungsstufen.",
-        "url": "https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/",
-        "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/dive-site-map_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "
-      Tauchplatzkarte von Koh Chang | Entdecke die besten Tauchspots
-    "
-          },
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "DE",
-          "addressRegion": "Trat",
-          "addressLocality": "Koh Chang"
-        },
-        "hasPart": [
-          {
-            "@type": "Place",
-            "name": "Chang Diving Center",
-            "description": "Our main dive shop and briefing area before each trip.",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 12.062940593816096,
-              "longitude": 102.28985548228239
+        {
+          "@context": "https://schema.org",
+          "@type": "Place",
+          "name": "Tauchplätze rund um Koh Chang",
+          "description": "Interaktive Karte der Tauchplätze rund um Koh Chang, inklusive Wracks, Riffen, Pinnacles, Tauchbasen und Bootszugänge – für alle Erfahrungsstufen.",
+          "url": "https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/",
+          "image": {
+              "@type": "ImageObject",
+              "url": "https://changdiving.com/img/dive-sites/dive-site-map_big.webp",
+              "width": "2580",
+              "height": "1460",
+              "caption": "
+        Tauchplatzkarte von Koh Chang | Entdecke die besten Tauchspots
+      "
             },
-            "url": "https://changdiving.com/de/about/",
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Type",
-                "value": "Dive Center"
-              }
-            ]
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressRegion": "Trat",
+            "addressLocality": "Koh Chang"
           },
-          {
-            "@type": "Place",
-            "name": "Boat Departure Point",
-            "description": "Meeting and departure point for all boat trips to the dive sites.",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 12.06391827176898,
-              "longitude": 102.2854556208762
+          "hasPart": [
+            {
+              "@type": "Place",
+              "name": "Chang Diving Center",
+              "description": "Our main dive shop and briefing area before each trip.",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.062940593816096,
+                "longitude": 102.28985548228239
+              },
+              "url": "https://changdiving.com/de/about/",
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Type",
+                  "value": "Dive Center"
+                }
+              ]
             },
-            "url": "https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic",
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Type",
-                "value": "Boat Departure"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "HTMS Chang Wreck",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.894307,
-              "longitude": 102.257597
+            {
+              "@type": "Place",
+              "name": "Boat Departure Point",
+              "description": "Meeting and departure point for all boat trips to the dive sites.",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.06391827176898,
+                "longitude": 102.2854556208762
+              },
+              "url": "https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic",
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Type",
+                  "value": "Boat Departure"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "5–30 m"
+            {
+              "@type": "Place",
+              "name": "HTMS Chang Wreck",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.894307,
+                "longitude": 102.257597
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Advanced"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Hin Luk Bat",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.945638,
-              "longitude": 102.283831
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "5–30 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Advanced"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "5–22 m"
+            {
+              "@type": "Place",
+              "name": "Hin Luk Bat",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.945638,
+                "longitude": 102.283831
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Beginner to Intermediate"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Secret Reef",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.905192553479965,
-              "longitude": 102.31728325042923
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "5–22 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Beginner to Intermediate"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "8–14 m"
+            {
+              "@type": "Place",
+              "name": "Secret Reef",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.905192553479965,
+                "longitude": 102.31728325042923
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Beginner"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Hin Raab South",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.906629460855415,
-              "longitude": 102.31752797388722
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "8–14 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Beginner"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "6–12 m"
+            {
+              "@type": "Place",
+              "name": "Hin Raab South",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.906629460855415,
+                "longitude": 102.31752797388722
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Beginner"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Blueberry Hill",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.905294,
-              "longitude": 102.317584
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "6–12 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Beginner"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "8–18 m"
+            {
+              "@type": "Place",
+              "name": "Blueberry Hill",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.905294,
+                "longitude": 102.317584
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Intermediate"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "T11 Wreck",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.906928322337778,
-              "longitude": 102.31746857203512
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "8–18 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Intermediate"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "10–16 m"
+            {
+              "@type": "Place",
+              "name": "T11 Wreck",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.906928322337778,
+                "longitude": 102.31746857203512
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Intermediate"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Hin Rua Tek",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.914958962232593,
-              "longitude": 102.33759604841904
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "10–16 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Intermediate"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "10–25 m"
+            {
+              "@type": "Place",
+              "name": "Hin Rua Tek",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.914958962232593,
+                "longitude": 102.33759604841904
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Advanced"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Hin Raab North",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 12.052088,
-              "longitude": 102.239444
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "10–25 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Advanced"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "6–16 m"
+            {
+              "@type": "Place",
+              "name": "Hin Raab North",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.052088,
+                "longitude": 102.239444
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Beginner"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Hin Sam Sao",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 12.044852024176542,
-              "longitude": 102.24547490125873
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "6–16 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Beginner"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "5–14 m"
+            {
+              "@type": "Place",
+              "name": "Hin Sam Sao",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 12.044852024176542,
+                "longitude": 102.24547490125873
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Beginner"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Hin Pray Nam",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.850661906393347,
-              "longitude": 102.41060395775406
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "5–14 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Beginner"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "8–18 m"
+            {
+              "@type": "Place",
+              "name": "Hin Pray Nam",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.850661906393347,
+                "longitude": 102.41060395775406
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Intermediate"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          },
-          {
-            "@type": "Place",
-            "name": "Koh Rang Pinnacle",
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 11.809782456488609,
-              "longitude": 102.37047235318667
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "8–18 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Intermediate"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
             },
-            "amenityFeature": [
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Depth",
-                "value": "12–30 m"
+            {
+              "@type": "Place",
+              "name": "Koh Rang Pinnacle",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 11.809782456488609,
+                "longitude": 102.37047235318667
               },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Level",
-                "value": "Advanced"
-              },
-              {
-                "@type": "LocationFeatureSpecification",
-                "name": "Access",
-                "value": "Boat only"
-              }
-            ]
-          }
-        ]
-      }
+              "amenityFeature": [
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Depth",
+                  "value": "12–30 m"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Level",
+                  "value": "Advanced"
+                },
+                {
+                  "@type": "LocationFeatureSpecification",
+                  "name": "Access",
+                  "value": "Boat only"
+                }
+              ]
+            }
+          ]
+        }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/dive-site-map_small.webp"
-      imagesrcset="/img/dive-sites/dive-site-map_small.webp 600w, /img/dive-sites/dive-site-map_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -566,7 +562,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -611,7 +607,7 @@
             alt="Interaktive Tauchplatzkarte von Koh Chang – Entdecke die besten Spots"
             width="600"
             height="400"
-            
+            fetchpriority="high"
           />
         </picture>
 
@@ -676,26 +672,52 @@
 
         <section class="kc-map-wrap" aria-labelledby="kc-map-title">
           <h2 id="kc-map-title">Koh Chang – Tauchplätze (Interaktive Karte)</h2>
-        
-          <div class="kc-map-shell" role="img" aria-roledescription="Kartenplatzhalter" aria-label="Karte von Koh Chang. Drücke den Button, um die Karte zu laden.">
-            <button id="kc-load-map" class="kc-btn" type="button" aria-controls="kc-map" aria-expanded="false">
+
+          <div
+            class="kc-map-shell"
+            role="img"
+            aria-roledescription="Kartenplatzhalter"
+            aria-label="Karte von Koh Chang. Drücke den Button, um die Karte zu laden."
+          >
+            <button
+              id="kc-load-map"
+              class="kc-btn"
+              type="button"
+              aria-controls="kc-map"
+              aria-expanded="false"
+            >
               🗺️ Karte laden (schnell & datensparend)
             </button>
             <div id="kc-map" class="kc-map" hidden></div>
-        
-            <div class="kc-legend" role="region" aria-label="Legende" tabindex="0">
+
+            <div
+              class="kc-legend"
+              role="region"
+              aria-label="Legende"
+              tabindex="0"
+            >
               <div><span class="dot center">🏢</span> Tauchcenter</div>
               <div><span class="dot boat">🚤</span> Boot</div>
               <div><span class="dot wreck">🛳️</span> Wrack</div>
               <div><span class="dot reef">🪸</span> Riff / Pinnacle</div>
             </div>
           </div>
-          
+
           <!-- Fallback List (SEO/Screenreader) -->
           <ul class="kc-fallback">
-            <li><a href="https://share.google/8B4o0sWdeTFjYnMU6">Chang Diving Center</a></li>
-            <li><a href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic">Boat Departure Point</a></li>
-            <li><a href="/de/dive-sites/htms-chang-wreck/">HTMS Chang Wreck</a></li>
+            <li>
+              <a href="https://share.google/8B4o0sWdeTFjYnMU6"
+                >Chang Diving Center</a
+              >
+            </li>
+            <li>
+              <a href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic"
+                >Boat Departure Point</a
+              >
+            </li>
+            <li>
+              <a href="/de/dive-sites/htms-chang-wreck/">HTMS Chang Wreck</a>
+            </li>
             <li><a href="/de/dive-sites/hin-luk-bat/">Hin Luk Bat</a></li>
             <li><a href="/de/dive-sites/secret-reef/">Secret Reef</a></li>
             <li><a href="/de/dive-sites/hin-raab-south/">Hin Raab South</a></li>
@@ -705,32 +727,61 @@
             <li><a href="/de/dive-sites/hin-raab-north/">Hin Raab North</a></li>
             <li><a href="/de/dive-sites/hin-sam-sao/">Hin Sam Sao</a></li>
             <li><a href="/de/dive-sites/hin-pray-nam/">Hin Pray Nam</a></li>
-            <li><a href="/de/dive-sites/koh-rang-pinnacle/">Koh Rang Pinnacle</a></li>
+            <li>
+              <a href="/de/dive-sites/koh-rang-pinnacle/">Koh Rang Pinnacle</a>
+            </li>
           </ul>
         </section>
-        
+
         <style>
-          .kc-map-wrap { margin: 24px 0; }
-          .kc-map-shell{
-            position:relative; border-radius:12px; overflow:hidden;
-            aspect-ratio: 3 / 2; background:#eef2f7;
-            box-shadow:0 6px 18px rgba(0,0,0,.12);
+          .kc-map-wrap {
+            margin: 24px 0;
           }
-          .kc-btn{
-            position:absolute; inset:auto auto 12px 12px;
-            background:#003366; color:#fff; font-weight:700; font-size:16px;
-            border:2px solid #001a33; border-radius:10px; padding:10px 14px;
-            box-shadow:0 2px 10px rgba(0,0,0,.25); cursor:pointer;
+          .kc-map-shell {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 3 / 2;
+            background: #eef2f7;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+          }
+          .kc-btn {
+            position: absolute;
+            inset: auto auto 12px 12px;
+            background: #003366;
+            color: #fff;
+            font-weight: 700;
+            font-size: 16px;
+            border: 2px solid #001a33;
+            border-radius: 10px;
+            padding: 10px 14px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
             z-index: 2;
           }
-          .kc-btn:focus{ outline:4px solid #ffcc00; outline-offset:2px; }
-          .kc-map{ width:100%; height:100%; min-height: 320px; }
-        
-          .kc-legend{
-            position:absolute; right:10px; top:10px; z-index: 2;
-            background:rgba(255,255,255,.96); color:#001a33;
-            padding:8px 10px; border-radius:8px; min-width:150px;
-            box-shadow:0 2px 8px rgba(0,0,0,.15); font-size:12px; line-height:1.3;
+          .kc-btn:focus {
+            outline: 4px solid #ffcc00;
+            outline-offset: 2px;
+          }
+          .kc-map {
+            width: 100%;
+            height: 100%;
+            min-height: 320px;
+          }
+
+          .kc-legend {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.96);
+            color: #001a33;
+            padding: 8px 10px;
+            border-radius: 8px;
+            min-width: 150px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            font-size: 12px;
+            line-height: 1.3;
           }
           .kc-fallback {
             position: absolute;
@@ -740,141 +791,311 @@
             height: 1px;
             overflow: hidden;
           }
-          .dot{ display:inline-flex; width:22px; height:22px; align-items:center; justify-content:center;
-                border:2px solid #003366; border-radius:50%; background:#fff; margin-right:6px; }
-          .dot.center{ border-color:#ff6b35; } .dot.boat{ border-color:#4a90e2; }
-          .dot.wreck{ border-color:#0077b6; } .dot.reef{ border-color:#00b894; }
-        
+          .dot {
+            display: inline-flex;
+            width: 22px;
+            height: 22px;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #003366;
+            border-radius: 50%;
+            background: #fff;
+            margin-right: 6px;
+          }
+          .dot.center {
+            border-color: #ff6b35;
+          }
+          .dot.boat {
+            border-color: #4a90e2;
+          }
+          .dot.wreck {
+            border-color: #0077b6;
+          }
+          .dot.reef {
+            border-color: #00b894;
+          }
+
           /* High contrast for Leaflet controls */
-          .leaflet-control-zoom a{
-            background:#fff !important; color:#000 !important;
-            border:1px solid #003366 !important; font-weight:700 !important;
+          .leaflet-control-zoom a {
+            background: #fff !important;
+            color: #000 !important;
+            border: 1px solid #003366 !important;
+            font-weight: 700 !important;
           }
-          .leaflet-control-attribution{ background:rgba(255,255,255,.9) !important; color:#000 !important; }
-          .leaflet-control-attribution a{ color:#0077b6 !important; text-decoration:underline !important; }
-        
-          .kc-pin{
-            background:#fff; color:#000; border:3px solid #003366; border-radius:50%;
-            width:44px; height:44px; display:flex; align-items:center; justify-content:center;
-            font-size:22px; box-shadow:0 2px 10px rgba(0,0,0,.25);
+          .leaflet-control-attribution {
+            background: rgba(255, 255, 255, 0.9) !important;
+            color: #000 !important;
           }
-          .kc-pin.center{ border-color:#ff6b35; }
-          .kc-pin.boat{ border-color:#4a90e2; }
-          .kc-pin.wreck{ border-color:#0077b6; }
-          .kc-pin.reef{ border-color:#00b894; }
+          .leaflet-control-attribution a {
+            color: #0077b6 !important;
+            text-decoration: underline !important;
+          }
+
+          .kc-pin {
+            background: #fff;
+            color: #000;
+            border: 3px solid #003366;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+          }
+          .kc-pin.center {
+            border-color: #ff6b35;
+          }
+          .kc-pin.boat {
+            border-color: #4a90e2;
+          }
+          .kc-pin.wreck {
+            border-color: #0077b6;
+          }
+          .kc-pin.reef {
+            border-color: #00b894;
+          }
         </style>
-        
+
         <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const btn = document.getElementById('kc-load-map');
-          const mapEl = document.getElementById('kc-map');
-          if (!btn || !mapEl) {
-            console.error('[KC-MAP] Button oder Map-Container nicht gefunden – prüfe IDs kc-load-map / kc-map.');
-            return;
-          }
-        
-          // Spots
-          const SITES = [
-            { n:"Chang Diving Center",   c:[12.062940593816096,102.28985548228239], e:"🏢", cls:"center", u:"https://share.google/8B4o0sWdeTFjYnMU6" },
-            { n:"Boat Departure Point",  c:[12.06391827176898,102.2854556208762],   e:"🚤", cls:"boat",   u:"https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic" },
-            { n:"HTMS Chang Wreck",      c:[11.894307,102.257597], e:"🛳️", cls:"wreck", u:"/de/dive-sites/htms-chang-wreck/" },
-            { n:"Hin Luk Bat",           c:[11.945638,102.283831], e:"🪸", cls:"reef",  u:"/de/dive-sites/hin-luk-bat/" },
-            { n:"Secret Reef",           c:[11.905192553479965,102.31728325042923], e:"🪸", cls:"reef", u:"/de/dive-sites/secret-reef/" },
-            { n:"Hin Raab South",        c:[11.906629460855415,102.31752797388722], e:"🪸", cls:"reef", u:"/de/dive-sites/hin-raab-south/" },
-            { n:"Blueberry Hill",        c:[11.905294,102.317584], e:"🪸", cls:"reef", u:"/de/dive-sites/blueberry-hill/" },
-            { n:"T11 Wreck",             c:[11.906928322337778,102.31746857203512], e:"🛳️", cls:"wreck", u:"/de/dive-sites/t11-wreck/" },
-            { n:"Hin Rua Tek",           c:[11.914958962232593,102.33759604841904], e:"🪸", cls:"reef", u:"/de/dive-sites/hin-rua-tek/" },
-            { n:"Hin Raab North",        c:[12.052088,102.239444], e:"🪸", cls:"reef", u:"/de/dive-sites/hin-raab-north/" },
-            { n:"Hin Sam Sao",           c:[12.044852024176542,102.24547490125873], e:"🪸", cls:"reef", u:"/de/dive-sites/hin-sam-sao/" },
-            { n:"Hin Pray Nam",          c:[11.850661906393347,102.41060395775406], e:"🪸", cls:"reef", u:"/de/dive-sites/hin-pray-nam/" },
-            { n:"Koh Rang Pinnacle",     c:[11.809782456488609,102.37047235318667], e:"🪸", cls:"reef", u:"/de/dive-sites/koh-rang-pinnacle/" },
-          ];
-        
-          function buildBounds(L) {
-            if (!SITES.length) return L.latLngBounds(L.latLng(11.75, 102.17), L.latLng(12.20, 102.50));
-            return L.latLngBounds(SITES.map(s => L.latLng(s.c[0], s.c[1])));
-          }
-        
-          btn.addEventListener('click', async () => {
-            try {
-              btn.disabled = true;
-        
-              // Leaflet laden
-              await Promise.all([
-                new Promise((res, rej) => { const l=document.createElement('link'); l.rel='stylesheet'; l.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'; l.onload=res; l.onerror=rej; document.head.appendChild(l); }),
-                new Promise((res, rej) => { const s=document.createElement('script');  s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload=res; s.onerror=rej; document.head.appendChild(s); })
-              ]);
-        
-              if (!window.L) { console.error('[KC-MAP] Leaflet L nicht verfügbar. CSP oder Netzwerkproblem?'); return; }
-        
-              // sichtbar machen
-              mapEl.hidden = false;
-              btn.setAttribute('aria-expanded','true');
-              btn.textContent = 'Karte geladen';
-        
-              const map = L.map('kc-map', {
-                zoomControl: true,
-                scrollWheelZoom: true,
-                worldCopyJump: false,
-                preferCanvas: true,
-                zoomAnimation: false,
-                markerZoomAnimation: false,
-                updateWhenIdle: true
-              });
-        
-              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                subdomains: 'abc',
-                maxZoom: 19,
-                noWrap: true,
-                detectRetina: false,
-                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-              }).addTo(map);
-        
-              // Bounds & MaxBounds
-              const bounds = buildBounds(L);
-              const padding = (window.innerWidth < 768) ? [30, 30] : [60, 80];
-              map.fitBounds(bounds, { padding });
-        
-              const padLat = 0.08, padLng = 0.08;
-              const mb = L.latLngBounds(
-                L.latLng(bounds.getSouth() - padLat, bounds.getWest() - padLng),
-                L.latLng(bounds.getNorth() + padLat, bounds.getEast() + padLng)
+          document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.getElementById("kc-load-map");
+            const mapEl = document.getElementById("kc-map");
+            if (!btn || !mapEl) {
+              console.error(
+                "[KC-MAP] Button oder Map-Container nicht gefunden – prüfe IDs kc-load-map / kc-map.",
               );
-              map.setMaxBounds(mb);
-              map.options.minZoom = map.getZoom() - 1;
-              map.options.maxZoom = 16;
-        
-              // Marker
-              SITES.forEach(s => {
-                const icon = L.divIcon({
-                  html: `<div class="kc-pin ${s.cls||''}" aria-hidden="true">${s.e||'●'}</div>`,
-                  className: 'kc-pin-wrap', iconSize: [44,44], iconAnchor: [22,22]
+              return;
+            }
+
+            // Spots
+            const SITES = [
+              {
+                n: "Chang Diving Center",
+                c: [12.062940593816096, 102.28985548228239],
+                e: "🏢",
+                cls: "center",
+                u: "https://share.google/8B4o0sWdeTFjYnMU6",
+              },
+              {
+                n: "Boat Departure Point",
+                c: [12.06391827176898, 102.2854556208762],
+                e: "🚤",
+                cls: "boat",
+                u: "https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic",
+              },
+              {
+                n: "HTMS Chang Wreck",
+                c: [11.894307, 102.257597],
+                e: "🛳️",
+                cls: "wreck",
+                u: "/de/dive-sites/htms-chang-wreck/",
+              },
+              {
+                n: "Hin Luk Bat",
+                c: [11.945638, 102.283831],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/hin-luk-bat/",
+              },
+              {
+                n: "Secret Reef",
+                c: [11.905192553479965, 102.31728325042923],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/secret-reef/",
+              },
+              {
+                n: "Hin Raab South",
+                c: [11.906629460855415, 102.31752797388722],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/hin-raab-south/",
+              },
+              {
+                n: "Blueberry Hill",
+                c: [11.905294, 102.317584],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/blueberry-hill/",
+              },
+              {
+                n: "T11 Wreck",
+                c: [11.906928322337778, 102.31746857203512],
+                e: "🛳️",
+                cls: "wreck",
+                u: "/de/dive-sites/t11-wreck/",
+              },
+              {
+                n: "Hin Rua Tek",
+                c: [11.914958962232593, 102.33759604841904],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/hin-rua-tek/",
+              },
+              {
+                n: "Hin Raab North",
+                c: [12.052088, 102.239444],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/hin-raab-north/",
+              },
+              {
+                n: "Hin Sam Sao",
+                c: [12.044852024176542, 102.24547490125873],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/hin-sam-sao/",
+              },
+              {
+                n: "Hin Pray Nam",
+                c: [11.850661906393347, 102.41060395775406],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/hin-pray-nam/",
+              },
+              {
+                n: "Koh Rang Pinnacle",
+                c: [11.809782456488609, 102.37047235318667],
+                e: "🪸",
+                cls: "reef",
+                u: "/de/dive-sites/koh-rang-pinnacle/",
+              },
+            ];
+
+            function buildBounds(L) {
+              if (!SITES.length)
+                return L.latLngBounds(
+                  L.latLng(11.75, 102.17),
+                  L.latLng(12.2, 102.5),
+                );
+              return L.latLngBounds(SITES.map((s) => L.latLng(s.c[0], s.c[1])));
+            }
+
+            btn.addEventListener("click", async () => {
+              try {
+                btn.disabled = true;
+
+                // Leaflet laden
+                await Promise.all([
+                  new Promise((res, rej) => {
+                    const l = document.createElement("link");
+                    l.rel = "stylesheet";
+                    l.href = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
+                    l.onload = res;
+                    l.onerror = rej;
+                    document.head.appendChild(l);
+                  }),
+                  new Promise((res, rej) => {
+                    const s = document.createElement("script");
+                    s.src = "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js";
+                    s.onload = res;
+                    s.onerror = rej;
+                    document.head.appendChild(s);
+                  }),
+                ]);
+
+                if (!window.L) {
+                  console.error(
+                    "[KC-MAP] Leaflet L nicht verfügbar. CSP oder Netzwerkproblem?",
+                  );
+                  return;
+                }
+
+                // sichtbar machen
+                mapEl.hidden = false;
+                btn.setAttribute("aria-expanded", "true");
+                btn.textContent = "Karte geladen";
+
+                const map = L.map("kc-map", {
+                  zoomControl: true,
+                  scrollWheelZoom: true,
+                  worldCopyJump: false,
+                  preferCanvas: true,
+                  zoomAnimation: false,
+                  markerZoomAnimation: false,
+                  updateWhenIdle: true,
                 });
-                const m = L.marker(s.c, { icon, keyboard:true, title: s.n }).addTo(map);
-                m.bindPopup(`<strong>${s.n}</strong>${s.u?`<br><a href="${s.u}" target="_blank" rel="noopener">Mehr Infos</a>`:''}`, { closeButton:true });
-        
-                m.on('add', function(){
-                  const el = this.getElement();
-                  if(!el) return;
-                  el.setAttribute('role','button');
-                  el.setAttribute('tabindex','0');
-                  el.setAttribute('aria-label', s.n);
-                  el.addEventListener('keydown', (e) => {
-                    if(e.key==='Enter' || e.key===' '){ e.preventDefault(); m.openPopup(); }
-                    if(e.key==='Escape'){ m.closePopup(); }
+
+                L.tileLayer(
+                  "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                  {
+                    subdomains: "abc",
+                    maxZoom: 19,
+                    noWrap: true,
+                    detectRetina: false,
+                    attribution:
+                      '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+                  },
+                ).addTo(map);
+
+                // Bounds & MaxBounds
+                const bounds = buildBounds(L);
+                const padding = window.innerWidth < 768 ? [30, 30] : [60, 80];
+                map.fitBounds(bounds, { padding });
+
+                const padLat = 0.08,
+                  padLng = 0.08;
+                const mb = L.latLngBounds(
+                  L.latLng(
+                    bounds.getSouth() - padLat,
+                    bounds.getWest() - padLng,
+                  ),
+                  L.latLng(
+                    bounds.getNorth() + padLat,
+                    bounds.getEast() + padLng,
+                  ),
+                );
+                map.setMaxBounds(mb);
+                map.options.minZoom = map.getZoom() - 1;
+                map.options.maxZoom = 16;
+
+                // Marker
+                SITES.forEach((s) => {
+                  const icon = L.divIcon({
+                    html: `<div class="kc-pin ${s.cls || ""}" aria-hidden="true">${s.e || "●"}</div>`,
+                    className: "kc-pin-wrap",
+                    iconSize: [44, 44],
+                    iconAnchor: [22, 22],
+                  });
+                  const m = L.marker(s.c, {
+                    icon,
+                    keyboard: true,
+                    title: s.n,
+                  }).addTo(map);
+                  m.bindPopup(
+                    `<strong>${s.n}</strong>${s.u ? `<br><a href="${s.u}" target="_blank" rel="noopener">Mehr Infos</a>` : ""}`,
+                    { closeButton: true },
+                  );
+
+                  m.on("add", function () {
+                    const el = this.getElement();
+                    if (!el) return;
+                    el.setAttribute("role", "button");
+                    el.setAttribute("tabindex", "0");
+                    el.setAttribute("aria-label", s.n);
+                    el.addEventListener("keydown", (e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        m.openPopup();
+                      }
+                      if (e.key === "Escape") {
+                        m.closePopup();
+                      }
+                    });
                   });
                 });
-              });
-        
-              if (window.innerWidth < 768) map.zoomControl.setPosition('bottomright');
-        
-            } catch (e) {
-              console.error('[KC-MAP] Fehler beim Laden/Initialisieren:', e);
-              btn.disabled = false;
-              btn.textContent = 'Karte laden (erneut versuchen)';
-            }
+
+                if (window.innerWidth < 768)
+                  map.zoomControl.setPosition("bottomright");
+              } catch (e) {
+                console.error("[KC-MAP] Fehler beim Laden/Initialisieren:", e);
+                btn.disabled = false;
+                btn.textContent = "Karte laden (erneut versuchen)";
+              }
+            });
           });
-        });
         </script>
 
         <p>
@@ -888,22 +1109,16 @@
         <p>
           ❓Du suchst schnelle Antworten zu Buchung, Ausrüstung, Zahlung oder
           Ablauf des Tauchtages?
-          <a href="/de/faqs/" target="_blank" rel="noopener noreferrer">Schau in unseren FAQ-Bereich ❯</a>
+          <a href="/de/faqs/" target="_blank" rel="noopener noreferrer"
+            >Schau in unseren FAQ-Bereich ❯</a
+          >
         </p>
       </div>
     </main>
 
     <!-- Cookie Consent Banner DE -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -911,7 +1126,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -929,29 +1145,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Tauchplätze",
-                  "item": "https://changdiving.com/de/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Dive Site Map Koh Chang",
-                  "item": "https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tauchplätze",
+            "item": "https://changdiving.com/de/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dive Site Map Koh Chang",
+            "item": "https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

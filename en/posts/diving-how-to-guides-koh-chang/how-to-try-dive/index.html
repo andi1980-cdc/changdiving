@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How a Try Dive Works – Beginner Scuba Adventure at Koh Chang</title>
     <meta
@@ -99,7 +106,10 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="How a Try Dive Works – Beginner Scuba Adventure at Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="How a Try Dive Works – Beginner Scuba Adventure at Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -118,16 +128,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -151,18 +153,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -178,6 +179,24 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/posts/how-a-try-dive_small.webp"
+        imagesrcset="/img/posts/how-a-try-dive_small.webp 600w, /img/posts/how-a-try-dive_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -247,25 +266,7 @@
     </script>
 
     <!-- Local Fonts with Preload -->
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
     <!-- Preload critical resources -->
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-        
-    <noscript
-      ><link rel="stylesheet" href="/style.css" />
-      <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/how-a-try-dive_small.webp"
-        imagesrcset="/img/posts/how-a-try-dive_small.webp 600w, /img/posts/how-a-try-dive_big.webp 1200w"
-        imagesizes="100vw"
-      />
-    </noscript>
   </head>
   <body>
     <header>
@@ -400,7 +401,8 @@
               href="/en/day-trips/insurance/"
               target="_blank"
               title="Add optional dive insurance for your Try Dive adventure"
-               rel="noopener noreferrer">Learn more about Dive Insurance</a
+              rel="noopener noreferrer"
+              >Learn more about Dive Insurance</a
             >
           </li>
         </ul>
@@ -453,7 +455,8 @@
             href="/docs/EN_DSD-Freshup-Book.pdf"
             target="_blank"
             title="Download Try Dive Information"
-             rel="noopener noreferrer">Download Try Dive Guide</a
+            rel="noopener noreferrer"
+            >Download Try Dive Guide</a
           >.
         </p>
         <hr />
@@ -514,7 +517,8 @@
               href="/en/day-trips/insurance/"
               target="_blank"
               title="Optional dive accident insurance for Try Dives"
-               rel="noopener noreferrer">Learn more here</a
+              rel="noopener noreferrer"
+              >Learn more here</a
             >
           </li>
         </ul>
@@ -531,7 +535,8 @@
             href="/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/"
             target="_blank"
             title="Learn how the Open Water Course works at Chang Diving"
-             rel="noopener noreferrer">How the Open Water Diver Course Works</a
+            rel="noopener noreferrer"
+            >How the Open Water Diver Course Works</a
           >
         </p>
         <div style="margin-top: 1.5em; text-align: center">
@@ -549,7 +554,8 @@
               border-radius: 6px;
               transition: background 0.3s ease;
             "
-           rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             👉 Continue to Open Water Course
           </a>
         </div>
@@ -583,7 +589,8 @@
               border-radius: 6px;
               transition: background 0.3s ease;
             "
-           rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             👉 Book Your Try Dive Experience Now
           </a>
         </div>
@@ -629,7 +636,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -645,35 +653,35 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Posts",
-                  "item": "https://changdiving.com/en/posts/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Diving How To Guides Koh Chang",
-                  "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 4,
-                  "name": "How To Try Dive",
-                  "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Posts",
+            "item": "https://changdiving.com/en/posts/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Diving How To Guides Koh Chang",
+            "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "How To Try Dive",
+            "item": "https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

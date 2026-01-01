@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Equipment & Dive Day Logistics – FAQ | Chang Diving Koh Chang</title>
     <meta
@@ -99,7 +106,10 @@
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Equipment & Dive Day Logistics – FAQ | Chang Diving Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="Equipment & Dive Day Logistics – FAQ | Chang Diving Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -118,16 +128,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -151,18 +153,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -178,6 +179,28 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts with Preload -->
+    <!-- Preload critical resources -->
+
+    <link rel="preload" href="/img/faq/faq-equipment-logistics_small.webp" />
+
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/faq/faq-equipment-logistics_small.webp"
+        imagesrcset="/img/faq/faq-equipment-logistics_small.webp 600w, /img/faq/faq-equipment-logistics_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -335,37 +358,7 @@
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <!-- Local Fonts with Preload -->
-    <!-- Preload critical resources -->
-    
-    <link rel="preload" href="/img/faq/faq-equipment-logistics_small.webp" />
-    
-    
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/faq/faq-equipment-logistics_small.webp"
-      imagesrcset="/img/faq/faq-equipment-logistics_small.webp 600w, /img/faq/faq-equipment-logistics_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -410,7 +403,6 @@
             alt="Scuba diving gear on a boat in Koh Chang – logistics and preparation for your dive day"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -620,11 +612,17 @@
               tanks.
             </p>
             <p>
-              <a href="/en/posts/scuba-knowledge/nitrox-info/" target="_blank"
-                 rel="noopener noreferrer">Learn more about NITROX diving</a
+              <a
+                href="/en/posts/scuba-knowledge/nitrox-info/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Learn more about NITROX diving</a
               ><br />
-              <a href="/en/courses/nitrox-diver/" target="_blank"
-                 rel="noopener noreferrer">Get your NITROX certification</a
+              <a
+                href="/en/courses/nitrox-diver/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Get your NITROX certification</a
               >
             </p>
 
@@ -653,7 +651,8 @@
               <a
                 href="/en/posts/scuba-knowledge/gas-consumption/"
                 target="_blank"
-                 rel="noopener noreferrer">Learn about gas consumption and tank selection</a
+                rel="noopener noreferrer"
+                >Learn about gas consumption and tank selection</a
               >
             </p>
 
@@ -791,7 +790,8 @@
                 <a
                   href="/en/posts/scuba-knowledge/dive-logbook/"
                   target="_blank"
-                   rel="noopener noreferrer">More Info ?</a
+                  rel="noopener noreferrer"
+                  >More Info ?</a
                 >
               </li>
               <li>A big smile ?</li>
@@ -851,8 +851,11 @@
 
             <p>
               Your gear will be ready – just bring your smile ?
-              <a href="/docs/Booking-Information.pdf" target="_blank"
-                 rel="noopener noreferrer">See full dive plan ?</a
+              <a
+                href="/docs/Booking-Information.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >See full dive plan ?</a
               >
             </p>
 
@@ -875,8 +878,11 @@
               We have created detailed step-by-step guides to help you
               understand what to expect for each course:
             </p>
-            <a href="/en/posts/diving-how-to-guides-koh-chang/" target="_blank"
-               rel="noopener noreferrer">See our Diving How-To Guides ?</a
+            <a
+              href="/en/posts/diving-how-to-guides-koh-chang/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >See our Diving How-To Guides ?</a
             >
 
             <p>
@@ -900,8 +906,11 @@
               Don't forget to consider the transfer time from the beach back to
               your hotel.
             </p>
-            <a href="/en/dive-sites/dive-site-map-koh-chang/" target="_blank"
-               rel="noopener noreferrer">More about our dive sites ?</a
+            <a
+              href="/en/dive-sites/dive-site-map-koh-chang/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >More about our dive sites ?</a
             >
 
             <p>
@@ -1081,23 +1090,16 @@
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -1110,29 +1112,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "FAQs",
-                  "item": "https://changdiving.com/en/faqs/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Faq Equipment Logistics Koh Chang",
-                  "item": "https://changdiving.com/en/faqs/faq-equipment-logistics-koh-chang/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "FAQs",
+            "item": "https://changdiving.com/en/faqs/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Faq Equipment Logistics Koh Chang",
+            "item": "https://changdiving.com/en/faqs/faq-equipment-logistics-koh-chang/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

@@ -2,14 +2,21 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -88,13 +95,19 @@
       property="og:url"
       content="https://changdiving.com/th/privacy-policy/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       นโยบายความเป็นส่วนตัว – ข้อมูลของคุณที่ ช้างไดร์วิ่ง เซ็นเตอร์ เกาะช้าง
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -106,20 +119,15 @@
       name="twitter:description"
       content="รายละเอียดเกี่ยวกับการใช้ข้อมูลส่วนบุคคล สิทธิ และการปกป้องข้อมูล โดย ช้างไดร์วิ่ง เซ็นเตอร์ โปรดอ่านนโยบายความเป็นส่วนตัวฉบับเต็มของเรา"
     />
-    <meta name="twitter:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      name="twitter:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -143,18 +151,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -170,6 +177,13 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -189,47 +203,37 @@
         }
       }
     </script>
-
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
   </head>
   <body>
     <main>
       <div class="changdiving-box">
         <div class="lang-switch">
-            <button class="menu-toggle">☰ Menue</button>
-            <a href="/en/privacy-policy/">🇬🇧</a>
-            <a href="/de/privacy-policy/">🇩🇪</a>
-            <a href="/th/privacy-policy/">🇹🇭</a>
+          <button class="menu-toggle">☰ Menue</button>
+          <a href="/en/privacy-policy/">🇬🇧</a>
+          <a href="/de/privacy-policy/">🇩🇪</a>
+          <a href="/th/privacy-policy/">🇹🇭</a>
 
-            <div class="dropdown-menu">
-              <a href="/th/courses/">Courses</a>
-              <a href="/th/day-trips/">Day Trips</a>
-              <a href="/th/prices/">Prices</a>
-              <a href="/th/about/">About us</a>
-              <a href="/th/equipment/">Equipment</a>
-              <a href="/th/weather/">Weather</a>
-              <a href="/th/dive-sites/">Dive Sites</a>
-              <a href="/th/posts/">Posts</a>
-              <a href="/th/faqs/">Faq's</a>
-              <a href="/th/contact/">Contact</a>
-            </div>
+          <div class="dropdown-menu">
+            <a href="/th/courses/">Courses</a>
+            <a href="/th/day-trips/">Day Trips</a>
+            <a href="/th/prices/">Prices</a>
+            <a href="/th/about/">About us</a>
+            <a href="/th/equipment/">Equipment</a>
+            <a href="/th/weather/">Weather</a>
+            <a href="/th/dive-sites/">Dive Sites</a>
+            <a href="/th/posts/">Posts</a>
+            <a href="/th/faqs/">Faq's</a>
+            <a href="/th/contact/">Contact</a>
           </div>
+        </div>
 
         <nav id="breadcrumb" class="breadcrumb"></nav>
         <hr />
         <h1>นโยบายความเป็นส่วนตัว</h1>
-        บริษัท ช้างไดร์วิ่ง เซ็นเตอร์ จำกัด ("เรา", "ของเรา")
-        ดำเนินการเว็บไซต์ changdiving.com ("บริการ")
-        หน้านี้แจ้งให้คุณทราบเกี่ยวกับนโยบายของเราเกี่ยวกับการเก็บรวบรวม
-        การใช้ และการเปิดเผยข้อมูลส่วนบุคคลเมื่อคุณใช้บริการของเรา
+        บริษัท ช้างไดร์วิ่ง เซ็นเตอร์ จำกัด ("เรา", "ของเรา") ดำเนินการเว็บไซต์
+        changdiving.com ("บริการ")
+        หน้านี้แจ้งให้คุณทราบเกี่ยวกับนโยบายของเราเกี่ยวกับการเก็บรวบรวม การใช้
+        และการเปิดเผยข้อมูลส่วนบุคคลเมื่อคุณใช้บริการของเรา
         รวมถึงทางเลือกของคุณที่เกี่ยวข้องกับข้อมูลนั้น
         เราใช้ข้อมูลของคุณเพื่อให้บริการและปรับปรุงบริการ โดยการใช้บริการ
         ถือว่าคุณยอมรับการเก็บและใช้ข้อมูลตามนโยบายนี้
@@ -261,17 +265,14 @@
 
         <h4>การติดตามและคุกกี้</h4>
         เราใช้คุกกี้และเทคโนโลยีติดตามอื่นๆ
-        เพื่อวิเคราะห์และปรับปรุงบริการของเรา
-        คุกกี้คือไฟล์ขนาดเล็กที่มีข้อมูล
+        เพื่อวิเคราะห์และปรับปรุงบริการของเรา คุกกี้คือไฟล์ขนาดเล็กที่มีข้อมูล
         ซึ่งอาจรวมถึงตัวระบุเฉพาะแบบไม่ระบุตัวตน
         คุกกี้จะถูกส่งไปยังเบราว์เซอร์ของคุณและจัดเก็บในอุปกรณ์ของคุณ
         คุณสามารถตั้งค่าเบราว์เซอร์ให้ปฏิเสธคุกกี้ทั้งหมดหรือแจ้งเตือนเมื่อมีการส่งคุกกี้
         หากคุณไม่ยอมรับคุกกี้ บริการบางส่วนอาจไม่สามารถใช้งานได้
         ตัวอย่างคุกกี้ที่เราใช้:
         <ul>
-          <li>
-            <strong>คุกกี้เซสชัน:</strong> ใช้เพื่อให้บริการของเราทำงาน
-          </li>
+          <li><strong>คุกกี้เซสชัน:</strong> ใช้เพื่อให้บริการของเราทำงาน</li>
           <li>
             <strong>คุกกี้การตั้งค่า:</strong>
             ใช้เพื่อจดจำการตั้งค่าและความชอบของคุณ
@@ -288,9 +289,7 @@
         <ul>
           <li>เพื่อให้และดูแลรักษาบริการ</li>
           <li>เพื่อแจ้งให้คุณทราบเกี่ยวกับการเปลี่ยนแปลงบริการ</li>
-          <li>
-            เพื่อให้คุณเข้าร่วมฟีเจอร์เชิงโต้ตอบของบริการเมื่อคุณเลือก
-          </li>
+          <li>เพื่อให้คุณเข้าร่วมฟีเจอร์เชิงโต้ตอบของบริการเมื่อคุณเลือก</li>
           <li>เพื่อให้บริการดูแลและสนับสนุนลูกค้า</li>
           <li>เพื่อวิเคราะห์และปรับปรุงบริการ</li>
           <li>เพื่อตรวจสอบการใช้งานของบริการ</li>
@@ -331,8 +330,7 @@
 
         <h1>ผู้ให้บริการ</h1>
         เราอาจใช้บริษัทภายนอกหรือบุคคลที่สามเพื่ออำนวยความสะดวกในการให้บริการ
-        ("ผู้ให้บริการ") ดำเนินงานแทนเรา
-        หรือช่วยเราวิเคราะห์การใช้งานของบริการ
+        ("ผู้ให้บริการ") ดำเนินงานแทนเรา หรือช่วยเราวิเคราะห์การใช้งานของบริการ
         ผู้ให้บริการเหล่านี้จะเข้าถึงข้อมูลของคุณได้เฉพาะในขอบเขตที่จำเป็นเท่านั้น
         และต้องไม่เปิดเผยหรือใช้เพื่อวัตถุประสงค์อื่นใด
 
@@ -341,8 +339,7 @@
         หากคุณคลิกลิงก์ของบุคคลที่สาม
         คุณจะถูกเปลี่ยนเส้นทางไปยังเว็บไซต์ของบุคคลที่สามนั้น
         เราขอแนะนำให้คุณตรวจสอบนโยบายความเป็นส่วนตัวของเว็บไซต์ทุกแห่งที่คุณเข้าเยี่ยมชม
-        เราจะไม่รับผิดชอบต่อเนื้อหา นโยบาย หรือแนวทางปฏิบัติใด ๆ
-        ของบุคคลที่สาม
+        เราจะไม่รับผิดชอบต่อเนื้อหา นโยบาย หรือแนวทางปฏิบัติใด ๆ ของบุคคลที่สาม
 
         <h1>ความเป็นส่วนตัวของเด็ก</h1>
         บริการของเราไม่เกี่ยวข้องกับผู้ที่มีอายุต่ำกว่า 18 ปี ("เด็ก")
@@ -356,14 +353,14 @@
         เราขอสงวนสิทธิ์ในการเปลี่ยนแปลงนโยบายนี้ได้ทุกเมื่อ
         โดยจะแจ้งให้คุณทราบโดยการอัปเดตหน้านี้
         เราจะแจ้งให้คุณทราบผ่านทางอีเมลหรือประกาศชัดเจนในบริการก่อนที่การเปลี่ยนแปลงจะมีผลบังคับใช้
-        และจะอัปเดต "วันที่มีผลบังคับใช้" ด้านบน
-        คุณควรตรวจสอบนโยบายนี้เป็นระยะ ๆ เพื่อรับทราบการเปลี่ยนแปลง
+        และจะอัปเดต "วันที่มีผลบังคับใช้" ด้านบน คุณควรตรวจสอบนโยบายนี้เป็นระยะ
+        ๆ เพื่อรับทราบการเปลี่ยนแปลง
 
         <h1>ติดต่อเรา</h1>
         หากคุณมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ โปรดติดต่อเรา:
         <ul>
           <li>อีเมล: info@changdiving.com</li>
-          <li>เว็บไซต์: </li>
+          <li>เว็บไซต์:</li>
         </ul>
       </div>
     </main>
@@ -377,7 +374,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -395,23 +393,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "หน้าแรก",
-                  "item": "https://changdiving.com/th/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Privacy Policy",
-                  "item": "https://changdiving.com/th/privacy-policy/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "หน้าแรก",
+            "item": "https://changdiving.com/th/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://changdiving.com/th/privacy-policy/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

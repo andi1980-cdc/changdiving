@@ -1,4 +1,38 @@
-/* Font definitions removed - using system fonts and Google Fonts (Noto Sans Thai) */
+/* Local Font Definitions - Roboto & Noto Sans Thai */
+
+/* Roboto Font Definitions - Prevent FOUT/FOIT and Layout Shifts */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Noto Sans Thai Font Definitions - Prevent FOUT/FOIT and Layout Shifts */
+@font-face {
+  font-family: "Noto Sans Thai";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/noto-sans-thai-400.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Thai";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/noto-sans-thai-700.ttf") format("truetype");
+  font-display: swap;
+}
 
 /* =====================
    CSS Variablen & Reset
@@ -26,14 +60,18 @@
     0 4px 20px 0 rgba(158, 158, 158, 0.2),
     0 8px 40px 0 rgba(224, 224, 224, 0.35);
   --box-shadow-black-silver:
-    0 4px 20px 0 rgba(0, 0, 0, 0.3),
-    0 8px 40px 0 rgba(192, 192, 192, 0.25);
-  --font-sans: system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 8px 40px 0 rgba(192, 192, 192, 0.25);
+  --font-sans:
+    system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-main: var(--font-sans);
 }
 
 :lang(th) {
-  --font-sans: 'Noto Sans Thai', system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-sans:
+    "Noto Sans Thai", system-ui, ui-sans-serif, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 
 * {
@@ -47,7 +85,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   font-family: var(--font-sans);
 }
 
@@ -795,11 +833,28 @@ button:focus,
 }
 
 .scroll-note {
-  background: linear-gradient(135deg, #f4f1e8 0%, #e8ddc7 50%, #f4f1e8 100%),
-              radial-gradient(circle at 20% 80%, rgba(184, 159, 113, 0.1) 0%, transparent 30%),
-              radial-gradient(circle at 80% 20%, rgba(184, 159, 113, 0.1) 0%, transparent 30%),
-              radial-gradient(circle at 40% 40%, rgba(184, 159, 113, 0.05) 0%, transparent 20%);
-  background-size: 100% 100%, 60px 60px, 80px 80px, 40px 40px;
+  background:
+    linear-gradient(135deg, #f4f1e8 0%, #e8ddc7 50%, #f4f1e8 100%),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(184, 159, 113, 0.1) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(184, 159, 113, 0.1) 0%,
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(184, 159, 113, 0.05) 0%,
+      transparent 20%
+    );
+  background-size:
+    100% 100%,
+    60px 60px,
+    80px 80px,
+    40px 40px;
   border: 4px solid #b39b71;
   padding: 20px;
   margin: 20px 0;
@@ -1068,7 +1123,9 @@ button:focus,
 .search-form-elegant:focus-within {
   background: rgba(255, 255, 255, 1);
   border-color: var(--primary-blue);
-  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.1), 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 0 0 3px rgba(0, 119, 182, 0.1),
+    0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .search-input-elegant {
@@ -1129,15 +1186,15 @@ button:focus,
     font-size: 0.8rem;
     padding: 6px 10px 6px 12px;
   }
-  
+
   .search-input-elegant:focus {
     width: 120px;
   }
-  
+
   .search-btn-elegant {
     padding: 6px 10px;
   }
-  
+
   .search-btn-elegant svg {
     width: 14px;
     height: 14px;
@@ -1148,7 +1205,7 @@ button:focus,
   .search-input-elegant {
     width: 80px;
   }
-  
+
   .search-input-elegant:focus {
     width: 100px;
   }
@@ -1166,8 +1223,6 @@ button:focus,
     padding: 4px 0;
     font-size: 0.95em;
   }
-  
-
 }
 
 /* =====================
@@ -1303,8 +1358,6 @@ button:focus,
     margin-left: 10px;
     margin-right: 10px;
   }
-  
-
 
   .changdiving-box img,
   .dive-site-box img,
@@ -1319,9 +1372,7 @@ button:focus,
     border-radius: 4vw;
     box-shadow: 0 2px 12px rgba(33, 150, 243, 0.13);
   }
-  
 
-  
   /* Grid-Container Text */
   .grid-container h1 {
     font-size: 2rem;
@@ -1343,7 +1394,7 @@ button:focus,
     line-height: 1.6;
     max-width: 99vw;
   }
-  
+
   /* Galerie: 1 Bild/Video pro Zeile */
   .dive-site-gallery {
     display: flex;
@@ -1359,7 +1410,7 @@ button:focus,
     margin-bottom: 18px;
     border-radius: 4vw;
   }
-  
+
   /* Video-Flex: 1 Video pro Zeile */
   .video-flex {
     flex-direction: column;
@@ -1413,7 +1464,7 @@ button:focus,
     aspect-ratio: 3/2 !important;
     display: block !important;
   }
-  
+
   /* Hero images on mobile - critical for CLS prevention */
   .hero picture img {
     position: relative !important;
@@ -2068,7 +2119,7 @@ button:focus,
     max-width: 100vw;
     padding: 0;
   }
-  
+
   .product-gallery img,
   .product-gallery iframe {
     flex: 1 1 100%;
@@ -2345,7 +2396,9 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
   padding: 1.5rem;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-grey);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .result-item:hover {
@@ -2380,16 +2433,16 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .search-form button {
     width: 100%;
   }
-  
+
   .search-container,
   .search-results {
     padding: 0 0.5rem;
   }
-  
+
   .result-item {
     padding: 1rem;
   }

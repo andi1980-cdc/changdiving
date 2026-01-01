@@ -11,8 +11,10 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-VYNMSTFN5M");
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -181,6 +183,24 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/posts/walshark-koh-chang_small.webp"
+        imagesrcset="/img/posts/walshark-koh-chang_small.webp 600w, /img/posts/walshark-koh-chang_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -250,30 +270,9 @@
     </script>
 
     <!-- Local Fonts with Preload -->
-    <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
     <!-- Preload critical resources -->
 
     <link rel="preload" href="/img/posts/walshark-koh-chang_small.webp" />
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-
-    <noscript
-      ><link rel="stylesheet" href="/style.css" />
-      <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/walshark-koh-chang_small.webp"
-        imagesrcset="/img/posts/walshark-koh-chang_small.webp 600w, /img/posts/walshark-koh-chang_big.webp 1200w"
-        imagesizes="100vw"
-      />
-    </noscript>
   </head>
   <body>
     <header>

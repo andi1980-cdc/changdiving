@@ -2,14 +2,21 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง</title>
@@ -93,11 +100,17 @@
       property="og:url"
       content="https://changdiving.com/th/dive-sites/blueberry-hill/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง" />
+    <meta
+      property="og:image:alt"
+      content="จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -116,16 +129,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -149,18 +154,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -176,18 +180,35 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/blueberry-hill_header_small.webp"
+        imagesrcset="/img/dive-sites/blueberry-hill_header_small.webp 600w, /img/dive-sites/blueberry-hill_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "บลูเบอร์รี่ฮิลล์ – เกาะช้าง",
         "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง"
-          },
+          "@type": "ImageObject",
+          "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
+          "width": "2580",
+          "height": "1460",
+          "caption": "จุดดำน้ำ Blueberry Hill – แนวปะการังหุบเขาหลากสีที่เกาะช้าง"
+        },
         "description": "บลูเบอร์รี่ฮิลล์เป็นแนวปะการังตื้นที่สวยงามในเกาะช้าง มีแคนยอน ปะการัง และระบบนิเวศทางทะเลที่หลากหลาย เหมาะสำหรับผู้เริ่มต้นดำน้ำ",
         "address": {
           "@type": "PostalAddress",
@@ -299,31 +320,6 @@
       }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/blueberry-hill_header_small.webp"
-      imagesrcset="/img/dive-sites/blueberry-hill_header_small.webp 600w, /img/dive-sites/blueberry-hill_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -334,14 +330,17 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
         <div class="hero-logo">
           <a href="/th/">
-            <img src="/img/logos/logo_cdc_white.webp" alt="โลโก้ ช้างไดฟ์วิ่ง" />
+            <img
+              src="/img/logos/logo_cdc_white.webp"
+              alt="โลโก้ ช้างไดฟ์วิ่ง"
+            />
           </a>
         </div>
 
@@ -379,7 +378,6 @@
             alt="จุดดำน้ำ บลูเบอร์รี่ฮิลล์ – ยอดปะการังใกล้เกาะช้าง"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -398,15 +396,15 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="dive-site-box">
-       <!-- Submenu: Optional Navigation -->
-      <nav class="posts-submenu">
-        <a href="/th/posts/diving-how-to-guides-koh-chang/">คู่มือ</a>
-        <a href="/th/day-trips/">ทริปวันเดียว</a>
-        <a href="/th/courses/">คอร์สเรียน</a>
-        <a href="/th/equipment/">อุปกรณ์</a>
-        <a href="/th/day-trips/insurance/">ประกัน</a>
-        <a href="/th/faqs/">คำถามที่พบบ่อย</a>
-      </nav>
+        <!-- Submenu: Optional Navigation -->
+        <nav class="posts-submenu">
+          <a href="/th/posts/diving-how-to-guides-koh-chang/">คู่มือ</a>
+          <a href="/th/day-trips/">ทริปวันเดียว</a>
+          <a href="/th/courses/">คอร์สเรียน</a>
+          <a href="/th/equipment/">อุปกรณ์</a>
+          <a href="/th/day-trips/insurance/">ประกัน</a>
+          <a href="/th/faqs/">คำถามที่พบบ่อย</a>
+        </nav>
 
         <h2
           style="
@@ -435,9 +433,7 @@
             >การดำน้ำสนุก</a
           >
           และ
-          <a href="/th/courses/" rel="noopener" target="_blank"
-            >คอร์สดำน้ำ</a
-          >
+          <a href="/th/courses/" rel="noopener" target="_blank">คอร์สดำน้ำ</a>
         </p>
 
         <h2>ทำไมต้องดำน้ำที่ บลูเบอร์รี่ฮิลล์</h2>
@@ -509,9 +505,7 @@
             >การดำน้ำสนุก</a
           >
           หรือ
-          <a href="/th/courses/" rel="noopener" target="_blank"
-            >คอร์สดำน้ำ</a
-          >
+          <a href="/th/courses/" rel="noopener" target="_blank">คอร์สดำน้ำ</a>
           ได้เลยวันนี้
         </p>
 
@@ -655,42 +649,94 @@
 
         <hr />
 
-        <h2 style="margin-top: 50px; font-size: 32px; background: linear-gradient(to right, #0077b6, #c0c0c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">จุดดำน้ำที่คล้ายกัน</h2>
-        <p>สำรวจจุดดำน้ำแนวปะการังระดับกลางถึงสูงเพิ่มเติมรอบเกาะช้าง จุดเหล่านี้มีความลึกและระดับความท้าทายที่คล้ายกันสำหรับนักดำน้ำที่มีประสบการณ์</p>
+        <h2
+          style="
+            margin-top: 50px;
+            font-size: 32px;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          "
+        >
+          จุดดำน้ำที่คล้ายกัน
+        </h2>
+        <p>
+          สำรวจจุดดำน้ำแนวปะการังระดับกลางถึงสูงเพิ่มเติมรอบเกาะช้าง
+          จุดเหล่านี้มีความลึกและระดับความท้าทายที่คล้ายกันสำหรับนักดำน้ำที่มีประสบการณ์
+        </p>
 
         <div class="row">
           <a href="/th/dive-sites/koh-rang-pinnacle/" class="three columns">
-            <img src="/img/dive-sites/koh-rang-pinacle_header_small.webp" alt="Koh Rang Pinnacle" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🏔️ เกาะรังพินนาเคิล</h3><p style="min-height: 60px">ยอดเขาใต้น้ำที่น่าทึ่งพร้อมกระแสน้ำแรงและปลาใหญ่ ระดับสูง! (ความลึกสูงสุด: 28 ม.)</p></div>
+            <img
+              src="/img/dive-sites/koh-rang-pinacle_header_small.webp"
+              alt="Koh Rang Pinnacle"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🏔️ เกาะรังพินนาเคิล</h3>
+              <p style="min-height: 60px">
+                ยอดเขาใต้น้ำที่น่าทึ่งพร้อมกระแสน้ำแรงและปลาใหญ่ ระดับสูง!
+                (ความลึกสูงสุด: 28 ม.)
+              </p>
+            </div>
           </a>
           <a href="/th/dive-sites/secret-reef/" class="three columns">
-            <img src="/img/dive-sites/secret-reef_header_small.webp" alt="Secret Reef" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🪸 Secret Reef</h3><p style="min-height: 60px">อัญมณีที่ซ่อนอยู่พร้อมปะการังที่สดใสและความหลากหลายทางชีวภาพยอดเยี่ยม (ความลึกสูงสุด: 18 ม.)</p></div>
+            <img
+              src="/img/dive-sites/secret-reef_header_small.webp"
+              alt="Secret Reef"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🪸 Secret Reef</h3>
+              <p style="min-height: 60px">
+                อัญมณีที่ซ่อนอยู่พร้อมปะการังที่สดใสและความหลากหลายทางชีวภาพยอดเยี่ยม
+                (ความลึกสูงสุด: 18 ม.)
+              </p>
+            </div>
           </a>
           <a href="/th/dive-sites/hin-raab-south/" class="three columns">
-            <img src="/img/dive-sites/hin-raab-south_header_small.webp" alt="Hin Raab South" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🌊 หินราบใต้</h3><p style="min-height: 60px">การดำน้ำไดรฟท์ที่น่าตื่นเต้นพร้อมกำแพงปะการังและสิ่งมีชีวิตทางทะเลหลากหลาย (ความลึกสูงสุด: 25 ม.)</p></div>
+            <img
+              src="/img/dive-sites/hin-raab-south_header_small.webp"
+              alt="Hin Raab South"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🌊 หินราบใต้</h3>
+              <p style="min-height: 60px">
+                การดำน้ำไดรฟท์ที่น่าตื่นเต้นพร้อมกำแพงปะการังและสิ่งมีชีวิตทางทะเลหลากหลาย
+                (ความลึกสูงสุด: 25 ม.)
+              </p>
+            </div>
           </a>
           <a href="/th/dive-sites/" class="three columns">
-            <img src="/img/dive-sites/dive-site-map_small.webp" alt="ดูจุดดำน้ำทั้งหมด" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🗺️ ดูจุดดำน้ำทั้งหมด</h3><p style="min-height: 60px">สำรวจจุดดำน้ำทั้ง 13 แห่งรอบเกาะช้าง</p></div>
+            <img
+              src="/img/dive-sites/dive-site-map_small.webp"
+              alt="ดูจุดดำน้ำทั้งหมด"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🗺️ ดูจุดดำน้ำทั้งหมด</h3>
+              <p style="min-height: 60px">
+                สำรวจจุดดำน้ำทั้ง 13 แห่งรอบเกาะช้าง
+              </p>
+            </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner TH -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -698,7 +744,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -716,29 +763,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "หน้าแรก",
-                  "item": "https://changdiving.com/th/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "จุดดำน้ำ",
-                  "item": "https://changdiving.com/th/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Blueberry Hill",
-                  "item": "https://changdiving.com/th/dive-sites/blueberry-hill/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "หน้าแรก",
+            "item": "https://changdiving.com/th/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "จุดดำน้ำ",
+            "item": "https://changdiving.com/th/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Blueberry Hill",
+            "item": "https://changdiving.com/th/dive-sites/blueberry-hill/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

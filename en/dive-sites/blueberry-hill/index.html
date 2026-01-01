@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blueberry Hill Dive Site – Colorful Canyon Reef in Koh Chang</title>
     <meta
@@ -92,11 +99,17 @@
       property="og:url"
       content="https://changdiving.com/en/dive-sites/blueberry-hill/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Blueberry Hill Dive Site – Colorful Canyon Reef in Koh Chang" />
+    <meta
+      property="og:image:alt"
+      content="Blueberry Hill Dive Site – Colorful Canyon Reef in Koh Chang"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -115,16 +128,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -148,18 +153,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -175,18 +179,35 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/blueberry-hill_header_small.webp"
+        imagesrcset="/img/dive-sites/blueberry-hill_header_small.webp 600w, /img/dive-sites/blueberry-hill_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "Blueberry Hill – Koh Chang",
         "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "Blueberry Hill Dive Site – Colorful Canyon Reef in Koh Chang"
-          },
+          "@type": "ImageObject",
+          "url": "https://changdiving.com/img/dive-sites/blueberry-hill_header_big.webp",
+          "width": "2580",
+          "height": "1460",
+          "caption": "Blueberry Hill Dive Site – Colorful Canyon Reef in Koh Chang"
+        },
         "description": "Blueberry Hill is a scenic shallow reef in Koh Chang, offering canyons, corals and a vibrant marine ecosystem. Great for beginners.",
         "address": {
           "@type": "PostalAddress",
@@ -298,31 +319,6 @@
       }
     </script>
 
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/blueberry-hill_header_small.webp"
-      imagesrcset="/img/dive-sites/blueberry-hill_header_small.webp 600w, /img/dive-sites/blueberry-hill_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -333,7 +329,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -378,7 +374,6 @@
             alt="Blueberry Hill Dive Site – Coral Reef Pinnacles near Koh Chang"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -397,15 +392,17 @@
 
       <div class="dive-site-box">
         <!-- Submenu: Optional Navigation -->
-      <nav class="posts-submenu">
-        <a href="/en/posts/diving-how-to-guides-koh-chang/">How to... guides</a>
-        <a href="/en/day-trips/">Day Trips</a>
-        <a href="/en/courses/">Courses</a>
-        <a href="/en/equipment/">Equipment</a>
-        <a href="/en/day-trips/insurance/">Insurance</a>
-        <a href="/en/faqs/">FAQ's</a>
-      </nav>
-      
+        <nav class="posts-submenu">
+          <a href="/en/posts/diving-how-to-guides-koh-chang/"
+            >How to... guides</a
+          >
+          <a href="/en/day-trips/">Day Trips</a>
+          <a href="/en/courses/">Courses</a>
+          <a href="/en/equipment/">Equipment</a>
+          <a href="/en/day-trips/insurance/">Insurance</a>
+          <a href="/en/faqs/">FAQ's</a>
+        </nav>
+
         <h2
           style="
             text-align: center;
@@ -653,42 +650,95 @@
 
         <hr />
 
-        <h2 style="margin-top: 50px; font-size: 32px; background: linear-gradient(to right, #0077b6, #c0c0c0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">Similar Dive Sites</h2>
-        <p>Explore more intermediate to advanced reef dives around Koh Chang. These sites offer similar depths and challenge levels for experienced divers.</p>
+        <h2
+          style="
+            margin-top: 50px;
+            font-size: 32px;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          "
+        >
+          Similar Dive Sites
+        </h2>
+        <p>
+          Explore more intermediate to advanced reef dives around Koh Chang.
+          These sites offer similar depths and challenge levels for experienced
+          divers.
+        </p>
 
         <div class="row">
           <a href="/en/dive-sites/koh-rang-pinnacle/" class="three columns">
-            <img src="/img/dive-sites/koh-rang-pinacle_header_small.webp" alt="Koh Rang Pinnacle" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🏔️ Koh Rang Pinnacle</h3><p style="min-height: 60px">Dramatic underwater pinnacle with strong currents and big fish. Advanced dive! (Max depth: 28m)</p></div>
+            <img
+              src="/img/dive-sites/koh-rang-pinacle_header_small.webp"
+              alt="Koh Rang Pinnacle"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🏔️ Koh Rang Pinnacle</h3>
+              <p style="min-height: 60px">
+                Dramatic underwater pinnacle with strong currents and big fish.
+                Advanced dive! (Max depth: 28m)
+              </p>
+            </div>
           </a>
           <a href="/en/dive-sites/secret-reef/" class="three columns">
-            <img src="/img/dive-sites/secret-reef_header_small.webp" alt="Secret Reef" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🪸 Secret Reef</h3><p style="min-height: 60px">Hidden gem with vibrant coral formations and excellent biodiversity. (Max depth: 18m)</p></div>
+            <img
+              src="/img/dive-sites/secret-reef_header_small.webp"
+              alt="Secret Reef"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🪸 Secret Reef</h3>
+              <p style="min-height: 60px">
+                Hidden gem with vibrant coral formations and excellent
+                biodiversity. (Max depth: 18m)
+              </p>
+            </div>
           </a>
           <a href="/en/dive-sites/hin-raab-south/" class="three columns">
-            <img src="/img/dive-sites/hin-raab-south_header_small.webp" alt="Hin Raab South" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🌊 Hin Raab South</h3><p style="min-height: 60px">Exciting drift dive with coral walls and diverse marine life. (Max depth: 25m)</p></div>
+            <img
+              src="/img/dive-sites/hin-raab-south_header_small.webp"
+              alt="Hin Raab South"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🌊 Hin Raab South</h3>
+              <p style="min-height: 60px">
+                Exciting drift dive with coral walls and diverse marine life.
+                (Max depth: 25m)
+              </p>
+            </div>
           </a>
           <a href="/en/dive-sites/" class="three columns">
-            <img src="/img/dive-sites/dive-site-map_small.webp" alt="View all sites" width="600" height="400" loading="lazy" />
-            <div class="excerpt"><h3>🗺️ View All Sites</h3><p style="min-height: 60px">Explore all 13 dive sites around Koh Chang.</p></div>
+            <img
+              src="/img/dive-sites/dive-site-map_small.webp"
+              alt="View all sites"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🗺️ View All Sites</h3>
+              <p style="min-height: 60px">
+                Explore all 13 dive sites around Koh Chang.
+              </p>
+            </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -696,7 +746,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -709,29 +760,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Dive Sites",
-                  "item": "https://changdiving.com/en/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Blueberry Hill",
-                  "item": "https://changdiving.com/en/dive-sites/blueberry-hill/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Dive Sites",
+            "item": "https://changdiving.com/en/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Blueberry Hill",
+            "item": "https://changdiving.com/en/dive-sites/blueberry-hill/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

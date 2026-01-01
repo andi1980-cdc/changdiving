@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -92,9 +99,12 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       Tauchpreise – Plane dein Tauchabenteuer auf Koh Chang | Chang Diving
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -113,16 +123,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -146,18 +148,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -173,6 +174,23 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/prices/prices_header_big.webp"
+        imagesrcset="/img/prices/prices_header_big.webp 600w, /img/prices/prices_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -192,32 +210,7 @@
         }
       }
     </script>
-
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/prices/prices_header_big.webp"
-      imagesrcset="/img/prices/prices_header_big.webp 600w, /img/prices/prices_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -270,8 +263,8 @@
             title="Scuba Diving Prices Koh Chang – Courses, Day Trips & Packages"
             width="2580"
             height="1460"
-            
             loading="eager"
+            fetchpriority="high"
           />
         </picture>
 
@@ -295,16 +288,21 @@
 
       <section class="grid-container">
         <p>
-          Wir wissen, wie wertvoll Ihre Urlaubszeit ist. Deshalb bemühen wir uns kontinuierlich,
-          unser <strong>Online-Buchungssystem</strong> zu vereinfachen und zu verbessern,
-          damit Sie schnell und einfach Ihre <strong>Tauchabenteuer</strong> planen können.
+          Wir wissen, wie wertvoll Ihre Urlaubszeit ist. Deshalb bemühen wir uns
+          kontinuierlich, unser <strong>Online-Buchungssystem</strong> zu
+          vereinfachen und zu verbessern, damit Sie schnell und einfach Ihre
+          <strong>Tauchabenteuer</strong> planen können.
         </p>
 
         <p>
           Auf dieser Seite finden Sie einen
-          <strong>vollständigen Überblick über unsere Tauchpreise auf Koh Chang</strong> –
-          von <strong>Fun Dives</strong> bis zu <strong>Tauchkursen</strong> und
-          <strong>Spezialkursen</strong>. Unser Shop funktioniert ähnlich wie
+          <strong
+            >vollständigen Überblick über unsere Tauchpreise auf Koh
+            Chang</strong
+          >
+          – von <strong>Fun Dives</strong> bis zu
+          <strong>Tauchkursen</strong> und <strong>Spezialkursen</strong>. Unser
+          Shop funktioniert ähnlich wie
           <strong>eBay, Amazon oder Lazada</strong>:
         </p>
 
@@ -315,11 +313,12 @@
           <li>
             ✅ Klicken Sie auf den <strong>Produktnamen</strong> oder
             <strong>"Mehr Infos"</strong>, um
-            <strong>Details und Verfügbarkeit</strong> zu sehen und direkt zu buchen.
+            <strong>Details und Verfügbarkeit</strong> zu sehen und direkt zu
+            buchen.
           </li>
           <li>
-            ✅ <strong>Sparen Sie Zeit</strong> und buchen Sie Ihr Tauchabenteuer
-            bequem online!
+            ✅ <strong>Sparen Sie Zeit</strong> und buchen Sie Ihr
+            Tauchabenteuer bequem online!
           </li>
         </ul>
 
@@ -340,7 +339,8 @@
                 <a
                   href="/de/day-trips/"
                   target="_blank"
-                   rel="noopener noreferrer">Tagesausflüge</a
+                  rel="noopener noreferrer"
+                  >Tagesausflüge</a
                 >
               </td>
               <td>Tagesausflüge & Fun Dive Pakete für zertifizierte Taucher</td>
@@ -349,7 +349,8 @@
                 <a
                   href="/de/day-trips/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Buchung</a
+                  rel="noopener noreferrer"
+                  >Details & Buchung</a
                 >
               </td>
             </tr>
@@ -358,7 +359,8 @@
                 <a
                   href="/de/courses/beginner-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Anfängerkurse</a
+                  rel="noopener noreferrer"
+                  >Anfängerkurse</a
                 >
               </td>
               <td>Perfekt für Anfänger – Zertifizierung erhalten</td>
@@ -367,7 +369,8 @@
                 <a
                   href="/de/courses/beginner-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Buchung</a
+                  rel="noopener noreferrer"
+                  >Details & Buchung</a
                 >
               </td>
             </tr>
@@ -376,7 +379,8 @@
                 <a
                   href="/de/courses/advanced-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Fortgeschrittenenkurse</a
+                  rel="noopener noreferrer"
+                  >Fortgeschrittenenkurse</a
                 >
               </td>
               <td>Verbessern Sie Ihre Fähigkeiten mit weiterer Ausbildung</td>
@@ -385,7 +389,8 @@
                 <a
                   href="/de/courses/advanced-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Buchung</a
+                  rel="noopener noreferrer"
+                  >Details & Buchung</a
                 >
               </td>
             </tr>
@@ -394,7 +399,8 @@
                 <a
                   href="/de/courses/professional-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Professionelle Kurse</a
+                  rel="noopener noreferrer"
+                  >Professionelle Kurse</a
                 >
               </td>
               <td>Werden Sie Divemaster oder Instruktor</td>
@@ -403,7 +409,8 @@
                 <a
                   href="/de/courses/professional-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Buchung</a
+                  rel="noopener noreferrer"
+                  >Details & Buchung</a
                 >
               </td>
             </tr>
@@ -412,7 +419,8 @@
                 <a
                   href="/de/courses/speciality/"
                   target="_blank"
-                   rel="noopener noreferrer">Spezialkurse</a
+                  rel="noopener noreferrer"
+                  >Spezialkurse</a
                 >
               </td>
               <td>Wracktauchen, Tieftauchen, Nitrox & mehr</td>
@@ -421,7 +429,8 @@
                 <a
                   href="/de/courses/speciality/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Buchung</a
+                  rel="noopener noreferrer"
+                  >Details & Buchung</a
                 >
               </td>
             </tr>
@@ -430,18 +439,21 @@
                 <a
                   href="/de/courses/technical-diving-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Technische Tauchkurse</a
+                  rel="noopener noreferrer"
+                  >Technische Tauchkurse</a
                 >
               </td>
               <td>
-                Fortgeschrittenes technisches Tauchen, Tieftauchen & spezialisierte TDI-Kurse
+                Fortgeschrittenes technisches Tauchen, Tieftauchen &
+                spezialisierte TDI-Kurse
               </td>
               <td><strong>11,990 THB</strong></td>
               <td>
                 <a
                   href="/de/courses/technical-diving-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">Details & Buchung</a
+                  rel="noopener noreferrer"
+                  >Details & Buchung</a
                 >
               </td>
             </tr>
@@ -452,25 +464,28 @@
 
         <h2>Plane dein Tauchabenteuer auf Koh Chang im Voraus!</h2>
         <p>
-          Wir empfehlen, dein <strong>Tauchen auf Koh Chang</strong> im
-          Voraus zu buchen, um deinen Platz zu sichern und das Beste aus deinem Urlaub zu machen. Erfahre
-          mehr in unserem Artikel:
+          Wir empfehlen, dein <strong>Tauchen auf Koh Chang</strong> im Voraus
+          zu buchen, um deinen Platz zu sichern und das Beste aus deinem Urlaub
+          zu machen. Erfahre mehr in unserem Artikel:
         </p>
         <p>
-                          <a href="/de/posts/straight-talk/book-in-advance/" target="_blank"
-             rel="noopener noreferrer">? Warum es wichtig ist, dein Tauchabenteuer auf Koh Chang im
-            Voraus zu buchen</a
+          <a
+            href="/de/posts/straight-talk/book-in-advance/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >? Warum es wichtig ist, dein Tauchabenteuer auf Koh Chang im Voraus
+            zu buchen</a
           >
         </p>
 
         <p>
           Interessierst du dich für <strong>Tauchen auf Koh Chang</strong>,
-          <strong>Meereslebewesen</strong> oder <strong>Tauchausrüstung</strong>?
-          Schau dir unseren Blog an:
+          <strong>Meereslebewesen</strong> oder
+          <strong>Tauchausrüstung</strong>? Schau dir unseren Blog an:
         </p>
         <p>
-          <a href="/de/posts/" target="_blank"
-             rel="noopener noreferrer">? Entdecke unsere Blog-Beiträge über das Tauchen auf Koh Chang</a
+          <a href="/de/posts/" target="_blank" rel="noopener noreferrer"
+            >? Entdecke unsere Blog-Beiträge über das Tauchen auf Koh Chang</a
           >
         </p>
 
@@ -478,16 +493,20 @@
 
         <h2>Wichtige Buchungsinformationen ?</h2>
         <p>
-          Um sicherzustellen, dass dein Taucherlebnis reibungslos verläuft, haben wir alle
-          wichtigen Informationen über Buchung, Abholung, Ausrüstung und
-          Zahlung in einem praktischen Leitfaden zusammengefasst.
+          Um sicherzustellen, dass dein Taucherlebnis reibungslos verläuft,
+          haben wir alle wichtigen Informationen über Buchung, Abholung,
+          Ausrüstung und Zahlung in einem praktischen Leitfaden zusammengefasst.
         </p>
         <p>
-          ? <strong>Lade hier unsere Buchungsinformationen als PDF herunter:</strong>
+          ?
+          <strong
+            >Lade hier unsere Buchungsinformationen als PDF herunter:</strong
+          >
           <a
             href="/docs/Booking-Information.pdf"
             target="_blank"
-           rel="noopener noreferrer">
+            rel="noopener noreferrer"
+          >
             ➡️ Buchungsinformationen (PDF)
           </a>
         </p>
@@ -497,18 +516,15 @@
         </p>
         <p>
           ❓ Hast du noch Fragen?
-          <a href="/de/faqs/" target="_blank"
-             rel="noopener noreferrer">Schau dir hier unseren FAQ-Bereich an ?</a
+          <a href="/de/faqs/" target="_blank" rel="noopener noreferrer"
+            >Schau dir hier unseren FAQ-Bereich an ?</a
           >
         </p>
       </section>
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-    />
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" />
     <script src="/js/cookieconsent.min.js"></script>
 
     <!-- WhatsApp Button -->
@@ -517,7 +533,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -530,23 +547,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Preise",
-                  "item": "https://changdiving.com/de/prices/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Preise",
+            "item": "https://changdiving.com/de/prices/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

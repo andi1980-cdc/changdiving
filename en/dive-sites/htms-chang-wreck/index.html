@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTMS Chang Wreck – Thailand's Largest Shipwreck</title>
@@ -93,11 +100,17 @@
       property="og:url"
       content="https://changdiving.com/en/dive-sites/htms-chang-wreck/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp"
+    />
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="HTMS Chang Wreck – Thailand's Largest Shipwreck" />
+    <meta
+      property="og:image:alt"
+      content="HTMS Chang Wreck – Thailand's Largest Shipwreck"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -116,16 +129,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -149,18 +154,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -176,18 +180,35 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/dive-sites/htms-chang-wreck-header_small.webp"
+        imagesrcset="/img/dive-sites/htms-chang-wreck-header_small.webp 600w, /img/dive-sites/htms-chang-wreck-header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Place",
         "name": "HTMS Chang Wreck – Koh Chang",
         "image": {
-            "@type": "ImageObject",
-            "url": "https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp",
-            "width": "2580",
-            "height": "1460",
-            "caption": "HTMS Chang Wreck – Thailand's Largest Shipwreck"
-          },
+          "@type": "ImageObject",
+          "url": "https://changdiving.com/img/dive-sites/htms-chang-wreck-header_big.webp",
+          "width": "2580",
+          "height": "1460",
+          "caption": "HTMS Chang Wreck – Thailand's Largest Shipwreck"
+        },
         "description": "The HTMS Chang is Thailand's largest wreck dive site, home to batfish, barracudas, and lionfish. Perfect for advanced divers.",
         "address": {
           "@type": "PostalAddress",
@@ -299,31 +320,6 @@
       }
     </script>
 
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/dive-sites/htms-chang-wreck-header_small.webp"
-      imagesrcset="/img/dive-sites/htms-chang-wreck-header_small.webp 600w, /img/dive-sites/htms-chang-wreck-header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    
-    
-
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -334,7 +330,7 @@
         line-height: 1.1;
       }
     </style>
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero">
@@ -377,7 +373,6 @@
             alt="HTMS Chang Wreck – Thailand's Largest Shipwreck Dive Site"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -396,15 +391,17 @@
 
       <div class="dive-site-box">
         <!-- Submenu: Optional Navigation -->
-      <nav class="posts-submenu">
-        <a href="/en/posts/diving-how-to-guides-koh-chang/">How to... guides</a>
-        <a href="/en/day-trips/">Day Trips</a>
-        <a href="/en/courses/">Courses</a>
-        <a href="/en/equipment/">Equipment</a>
-        <a href="/en/day-trips/insurance/">Insurance</a>
-        <a href="/en/faqs/">FAQ's</a>
-      </nav>
-      
+        <nav class="posts-submenu">
+          <a href="/en/posts/diving-how-to-guides-koh-chang/"
+            >How to... guides</a
+          >
+          <a href="/en/day-trips/">Day Trips</a>
+          <a href="/en/courses/">Courses</a>
+          <a href="/en/equipment/">Equipment</a>
+          <a href="/en/day-trips/insurance/">Insurance</a>
+          <a href="/en/faqs/">FAQ's</a>
+        </nav>
+
         <h2
           style="
             text-align: center;
@@ -419,23 +416,58 @@
         </h2>
 
         <p>
-          Picture this: You're descending through crystal-clear tropical waters off the coast of Koh Chang, Thailand, when suddenly a massive shadow emerges from the depths. As you get closer, the outline becomes clear – you're about to explore <strong>HTMS Chang</strong>, Thailand's largest and most spectacular shipwreck. At 100 meters long, this isn't just any wreck; it's a bucket-list dive that combines history, adventure, and some of the most incredible marine life encounters you'll ever experience.
+          Picture this: You're descending through crystal-clear tropical waters
+          off the coast of Koh Chang, Thailand, when suddenly a massive shadow
+          emerges from the depths. As you get closer, the outline becomes clear
+          – you're about to explore <strong>HTMS Chang</strong>, Thailand's
+          largest and most spectacular shipwreck. At 100 meters long, this isn't
+          just any wreck; it's a bucket-list dive that combines history,
+          adventure, and some of the most incredible marine life encounters
+          you'll ever experience.
         </p>
-        
+
         <p>
-          The story of HTMS Chang reads like something from an adventure novel. Originally launched as the <strong>USS Lincoln County (LST-898)</strong>, this landing ship tank saw action in World War II and the Korean War before being sold to the Royal Thai Navy in 1962. For decades, it served Thailand's navy, but its greatest adventure was yet to come. On November 22, 2012, the ship was intentionally sunk near Koh Chang to create an artificial reef – and what a reef it became!
+          The story of HTMS Chang reads like something from an adventure novel.
+          Originally launched as the
+          <strong>USS Lincoln County (LST-898)</strong>, this landing ship tank
+          saw action in World War II and the Korean War before being sold to the
+          Royal Thai Navy in 1962. For decades, it served Thailand's navy, but
+          its greatest adventure was yet to come. On November 22, 2012, the ship
+          was intentionally sunk near Koh Chang to create an artificial reef –
+          and what a reef it became!
         </p>
-        
+
         <p>
-          Today, HTMS Chang is more than just a wreck dive; it's a thriving underwater metropolis. The structure sits perfectly upright on a sandy bottom at 30 meters, creating an underwater playground that's home to everything from tiny nudibranchs to massive barracuda schools. The wreck's decks, cargo holds, and passageways are now covered in colorful soft corals, sponges, and anemones, creating a vibrant contrast against the steel structure. It's like diving into a living, breathing underwater city where history meets marine biology in the most spectacular way.
+          Today, HTMS Chang is more than just a wreck dive; it's a thriving
+          underwater metropolis. The structure sits perfectly upright on a sandy
+          bottom at 30 meters, creating an underwater playground that's home to
+          everything from tiny nudibranchs to massive barracuda schools. The
+          wreck's decks, cargo holds, and passageways are now covered in
+          colorful soft corals, sponges, and anemones, creating a vibrant
+          contrast against the steel structure. It's like diving into a living,
+          breathing underwater city where history meets marine biology in the
+          most spectacular way.
         </p>
-        
+
         <p>
-          What makes HTMS Chang truly special isn't just its size or history – it's the experience. Whether you're a wreck diving enthusiast, an advanced diver looking for your next challenge, or someone who simply wants to see what all the fuss is about, this dive delivers. The wreck is accessible enough for Advanced Open Water divers yet complex enough to keep even the most experienced wreck divers coming back for more. And let's be honest – there's something undeniably cool about swimming through a ship that once sailed the world's oceans, now transformed into a sanctuary for marine life.
+          What makes HTMS Chang truly special isn't just its size or history –
+          it's the experience. Whether you're a wreck diving enthusiast, an
+          advanced diver looking for your next challenge, or someone who simply
+          wants to see what all the fuss is about, this dive delivers. The wreck
+          is accessible enough for Advanced Open Water divers yet complex enough
+          to keep even the most experienced wreck divers coming back for more.
+          And let's be honest – there's something undeniably cool about swimming
+          through a ship that once sailed the world's oceans, now transformed
+          into a sanctuary for marine life.
         </p>
-        
+
         <p>
-          So, are you ready to dive into history? HTMS Chang isn't just Thailand's largest shipwreck – it's an underwater adventure that combines the thrill of wreck diving with the beauty of Koh Chang's marine ecosystem. Book your dive with Chang Diving Center and discover why this wreck has become one of Southeast Asia's most sought-after dive sites. Trust us, your Instagram feed will thank you!
+          So, are you ready to dive into history? HTMS Chang isn't just
+          Thailand's largest shipwreck – it's an underwater adventure that
+          combines the thrill of wreck diving with the beauty of Koh Chang's
+          marine ecosystem. Book your dive with Chang Diving Center and discover
+          why this wreck has become one of Southeast Asia's most sought-after
+          dive sites. Trust us, your Instagram feed will thank you!
         </p>
 
         <div style="text-align: center; margin: 30px auto; max-width: 800px">
@@ -569,9 +601,7 @@
           Are you ready to explore Thailand's most iconic shipwreck? Book a
           <a href="/en/day-trips/fun-dives/">fun dive</a>
           or
-          <a href="/en/courses/deep-wreck-nitrox/"
-            >wreck diving course</a
-          >
+          <a href="/en/courses/deep-wreck-nitrox/">wreck diving course</a>
           with Chang Diving Center today!
         </p>
 
@@ -630,7 +660,7 @@
         >
         possibility: No
         <hr />
-        
+
         <h2
           style="
             text-align: center;
@@ -644,96 +674,220 @@
         >
           Dive Briefing Example for Dive Professionals – HTMS Chang Wreck
         </h2>
-        
-        <p style="text-align: center; font-size: 1.1em; color: #555; margin-bottom: 30px;">
-          This is a comprehensive dive briefing template/example for dive professionals. Use this as a reference guide to structure your own briefings. Customize the placeholders (marked with brackets) with your specific information, guide names, and current conditions. This ensures a safe, organized, and professional dive briefing experience.
+
+        <p
+          style="
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+          "
+        >
+          This is a comprehensive dive briefing template/example for dive
+          professionals. Use this as a reference guide to structure your own
+          briefings. Customize the placeholders (marked with brackets) with your
+          specific information, guide names, and current conditions. This
+          ensures a safe, organized, and professional dive briefing experience.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           1. Dive Site Name & Introduction
         </h3>
         <p>
-          <strong>Hello everyone and welcome to HTMS Chang!</strong> HTMS Chang is Thailand's largest and most iconic shipwreck dive site. At 100 meters long, this former US Navy landing ship (originally USS Lincoln County LST-898) was intentionally sunk in 2012 to create an artificial reef. It's now one of the most spectacular wreck dives in Southeast Asia.
+          <strong>Hello everyone and welcome to HTMS Chang!</strong> HTMS Chang
+          is Thailand's largest and most iconic shipwreck dive site. At 100
+          meters long, this former US Navy landing ship (originally USS Lincoln
+          County LST-898) was intentionally sunk in 2012 to create an artificial
+          reef. It's now one of the most spectacular wreck dives in Southeast
+          Asia.
         </p>
         <p>
-          My name is [Your Name] and I will be your dive guide today. I've been diving this wreck for [X] years and I'm excited to share this incredible site with you!
+          My name is [Your Name] and I will be your dive guide today. I've been
+          diving this wreck for [X] years and I'm excited to share this
+          incredible site with you!
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           2. Site Description & Dive Route
         </h3>
         <p>
-          We have excellent diving conditions today at HTMS Chang. The visibility is typically 15-25 meters, and we have calm surface conditions with minimal current.
+          We have excellent diving conditions today at HTMS Chang. The
+          visibility is typically 15-25 meters, and we have calm surface
+          conditions with minimal current.
         </p>
         <ul>
-          <li><strong>Maximum Depth:</strong> 30 meters (bottom of the wreck)</li>
-          <li><strong>Average Depth:</strong> 23-27 meters (main deck level)</li>
-          <li><strong>Dive Route:</strong> We'll descend along the mooring line to the bow at 23 meters, then swim along the port side, explore the cargo holds, and make our way to the stern. The wreck is completely intact and offers multiple penetration points for certified wreck divers.</li>
-          <li><strong>Weather Conditions:</strong> [Current conditions - e.g., "Low tide, wave height 0.5 meters, light surface current"]</li>
+          <li>
+            <strong>Maximum Depth:</strong> 30 meters (bottom of the wreck)
+          </li>
+          <li>
+            <strong>Average Depth:</strong> 23-27 meters (main deck level)
+          </li>
+          <li>
+            <strong>Dive Route:</strong> We'll descend along the mooring line to
+            the bow at 23 meters, then swim along the port side, explore the
+            cargo holds, and make our way to the stern. The wreck is completely
+            intact and offers multiple penetration points for certified wreck
+            divers.
+          </li>
+          <li>
+            <strong>Weather Conditions:</strong> [Current conditions - e.g.,
+            "Low tide, wave height 0.5 meters, light surface current"]
+          </li>
         </ul>
         <p>
-          The wreck sits upright on a sandy bottom, making navigation easy. The structure is covered in colorful soft corals, sponges, and anemones, creating a vibrant underwater city teeming with marine life.
+          The wreck sits upright on a sandy bottom, making navigation easy. The
+          structure is covered in colorful soft corals, sponges, and anemones,
+          creating a vibrant underwater city teeming with marine life.
         </p>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">What You Can See at HTMS Chang</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          What You Can See at HTMS Chang
+        </h4>
         <p>
-          HTMS Chang is a thriving artificial reef that attracts a diverse range of marine life. During your dive, you can expect to encounter:
+          HTMS Chang is a thriving artificial reef that attracts a diverse range
+          of marine life. During your dive, you can expect to encounter:
         </p>
         <ul>
-          <li><strong>Large Pelagic Fish:</strong> Schools of barracudas often patrol the wreck, along with giant groupers that have made the structure their home</li>
-          <li><strong>Reef Fish:</strong> Colorful batfish, angelfish, parrotfish, and butterflyfish are abundant around the coral-covered structure</li>
-          <li><strong>Wreck Specialists:</strong> Lionfish, moray eels, and scorpionfish are commonly found hiding in the wreck's nooks and crannies</li>
-          <li><strong>Occasional Visitors:</strong> Green sea turtles, eagle rays, and even whale sharks have been spotted around the wreck (especially during certain seasons)</li>
-          <li><strong>Macro Life:</strong> Keep an eye out for nudibranchs, seahorses, and other small creatures on the coral-covered surfaces</li>
+          <li>
+            <strong>Large Pelagic Fish:</strong> Schools of barracudas often
+            patrol the wreck, along with giant groupers that have made the
+            structure their home
+          </li>
+          <li>
+            <strong>Reef Fish:</strong> Colorful batfish, angelfish, parrotfish,
+            and butterflyfish are abundant around the coral-covered structure
+          </li>
+          <li>
+            <strong>Wreck Specialists:</strong> Lionfish, moray eels, and
+            scorpionfish are commonly found hiding in the wreck's nooks and
+            crannies
+          </li>
+          <li>
+            <strong>Occasional Visitors:</strong> Green sea turtles, eagle rays,
+            and even whale sharks have been spotted around the wreck (especially
+            during certain seasons)
+          </li>
+          <li>
+            <strong>Macro Life:</strong> Keep an eye out for nudibranchs,
+            seahorses, and other small creatures on the coral-covered surfaces
+          </li>
         </ul>
         <p>
-          For a complete guide to the marine life you might encounter while diving in Koh Chang, check out our <a href="/en/posts/marine-life-koh-chang/" target="_blank" rel="noopener noreferrer">Marine Life Guide</a>. This comprehensive resource covers species identification, behavior, and the best spots to find different marine creatures.
+          For a complete guide to the marine life you might encounter while
+          diving in Koh Chang, check out our
+          <a
+            href="/en/posts/marine-life-koh-chang/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Marine Life Guide</a
+          >. This comprehensive resource covers species identification,
+          behavior, and the best spots to find different marine creatures.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           3. Your Guide's Role & Positioning
         </h3>
         <p>
-          I will be leading this dive and wearing <strong>[Color] and [Color] fins</strong> with a <strong>[Description of equipment/identifying feature]</strong>. You can easily identify me by [specific visual identifier - e.g., "my bright yellow BCD with the Chang Diving logo"].
+          I will be leading this dive and wearing
+          <strong>[Color] and [Color] fins</strong> with a
+          <strong>[Description of equipment/identifying feature]</strong>. You
+          can easily identify me by [specific visual identifier - e.g., "my
+          bright yellow BCD with the Chang Diving logo"].
         </p>
         <p>
-          [If applicable] Our Divemaster [Name] will be positioned at the back of the group, keeping an eye on everyone. [Name] will be wearing <strong>[Color] fins</strong> and will use [signal device - e.g., "this tank banger"] to get your attention if needed.
+          [If applicable] Our Divemaster [Name] will be positioned at the back
+          of the group, keeping an eye on everyone. [Name] will be wearing
+          <strong>[Color] fins</strong> and will use [signal device - e.g.,
+          "this tank banger"] to get your attention if needed.
         </p>
         <p>
-          <strong>Important:</strong> Stay close to the group and maintain visual contact with your buddy and the guide at all times. If you need to communicate, use standard hand signals or get my attention by tapping your tank.
+          <strong>Important:</strong> Stay close to the group and maintain
+          visual contact with your buddy and the guide at all times. If you need
+          to communicate, use standard hand signals or get my attention by
+          tapping your tank.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           4. Entry & Exit Techniques
         </h3>
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Boat Entry (Giant Stride)</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Boat Entry (Giant Stride)
+        </h4>
         <p>
-          We'll be entering from the side of the dive boat using a <strong>giant stride entry</strong>. Here's what to remember:
+          We'll be entering from the side of the dive boat using a
+          <strong>giant stride entry</strong>. Here's what to remember:
         </p>
         <ul>
-          <li><strong>Pre-dive Safety Check:</strong> Complete your BIG WHALES REALLY ARE FUN check before entering</li>
-          <li><strong>BCD Inflation:</strong> Fully inflate your BCD before entry</li>
+          <li>
+            <strong>Pre-dive Safety Check:</strong> Complete your BIG WHALES
+            REALLY ARE FUN check before entering
+          </li>
+          <li>
+            <strong>BCD Inflation:</strong> Fully inflate your BCD before entry
+          </li>
           <li><strong>Regulator:</strong> Keep your regulator in your mouth</li>
           <li><strong>Mask:</strong> Ensure your mask is properly fitted</li>
-          <li><strong>Entry:</strong> Step forward with one leg, then the other, keeping your legs together</li>
-          <li><strong>After Entry:</strong> Clear the area immediately, signal OK, and swim to the mooring line</li>
+          <li>
+            <strong>Entry:</strong> Step forward with one leg, then the other,
+            keeping your legs together
+          </li>
+          <li>
+            <strong>After Entry:</strong> Clear the area immediately, signal OK,
+            and swim to the mooring line
+          </li>
         </ul>
-        
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Boat Exit (Ladder)</h4>
-        <p>
-          After completing your safety stop and surfacing:
-        </p>
+
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Boat Exit (Ladder)
+        </h4>
+        <p>After completing your safety stop and surfacing:</p>
         <ul>
           <li>Swim back to the ladder on the side of the boat</li>
-          <li>Stand on the ladder and remove your fins (hand them to the crew)</li>
+          <li>
+            Stand on the ladder and remove your fins (hand them to the crew)
+          </li>
           <li>Climb up the ladder with your regulator still in your mouth</li>
-          <li><strong>CRITICAL:</strong> Never position yourself directly under another diver climbing the ladder</li>
+          <li>
+            <strong>CRITICAL:</strong> Never position yourself directly under
+            another diver climbing the ladder
+          </li>
           <li>Once on deck, move away from the entry/exit area</li>
         </ul>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Dinghy Entry (Backroll)</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Dinghy Entry (Backroll)
+        </h4>
         <p>
-          If we're using a dinghy, we'll enter with a <strong>backroll entry</strong>:
+          If we're using a dinghy, we'll enter with a
+          <strong>backroll entry</strong>:
         </p>
         <ul>
           <li>Sit on the edge of the dinghy with your back to the water</li>
@@ -743,170 +897,455 @@
           <li>Clear the area and signal OK</li>
         </ul>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           5. Dive Procedures & Turn-Around Points
         </h3>
         <p>
           To ensure we have plenty of air for a safe return and safety stop:
         </p>
         <ul>
-          <li><strong>Turn-Around Point:</strong> We will turn the dive around when you reach <strong>130 bars</strong> (or 1900 PSI). This gives us more than enough air reserve to safely return to the entry point and complete our safety stop.</li>
-          <li><strong>Air Monitoring:</strong> Check your air gauge frequently throughout the dive. Don't wait until you're low on air to signal - communicate early!</li>
-          <li><strong>Safety Stop:</strong> At 5 meters depth, we'll conduct a <strong>rolling safety stop</strong> for 3 minutes. This means we'll slowly swim in a circle while maintaining 5 meters depth, rather than holding onto a line.</li>
-          <li><strong>No-Decompression Limits:</strong> For this depth (23-30 meters), your no-decompression limit is approximately 20 minutes. We'll keep the dive well within these limits.</li>
+          <li>
+            <strong>Turn-Around Point:</strong> We will turn the dive around
+            when you reach <strong>130 bars</strong> (or 1900 PSI). This gives
+            us more than enough air reserve to safely return to the entry point
+            and complete our safety stop.
+          </li>
+          <li>
+            <strong>Air Monitoring:</strong> Check your air gauge frequently
+            throughout the dive. Don't wait until you're low on air to signal -
+            communicate early!
+          </li>
+          <li>
+            <strong>Safety Stop:</strong> At 5 meters depth, we'll conduct a
+            <strong>rolling safety stop</strong> for 3 minutes. This means we'll
+            slowly swim in a circle while maintaining 5 meters depth, rather
+            than holding onto a line.
+          </li>
+          <li>
+            <strong>No-Decompression Limits:</strong> For this depth (23-30
+            meters), your no-decompression limit is approximately 20 minutes.
+            We'll keep the dive well within these limits.
+          </li>
         </ul>
         <p>
-          <strong>Remember:</strong> The most important rule in diving is to never hold your breath. Breathe normally and continuously throughout the dive.
+          <strong>Remember:</strong> The most important rule in diving is to
+          never hold your breath. Breathe normally and continuously throughout
+          the dive.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           6. Emergency Procedures
         </h3>
         <p>
-          While we don't expect any problems, it's important that everyone knows what to do in case of an emergency:
+          While we don't expect any problems, it's important that everyone knows
+          what to do in case of an emergency:
         </p>
-        
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Buddy Separation</h4>
+
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Buddy Separation
+        </h4>
         <ul>
-          <li>If you get separated from your buddy, search for <strong>1 minute</strong> while staying at the same depth</li>
-          <li>If you cannot find your buddy, make a <strong>controlled safety ascent</strong> to the surface</li>
+          <li>
+            If you get separated from your buddy, search for
+            <strong>1 minute</strong> while staying at the same depth
+          </li>
+          <li>
+            If you cannot find your buddy, make a
+            <strong>controlled safety ascent</strong> to the surface
+          </li>
           <li>Wait on the surface - we will reunite there</li>
           <li><strong>DO NOT</strong> continue the dive alone</li>
         </ul>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Out of Air / Low on Air</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Out of Air / Low on Air
+        </h4>
         <ul>
-          <li><strong>Low on Air:</strong> Signal immediately - we'll end the dive and ascend together</li>
-          <li><strong>Out of Air:</strong> Signal "out of air" and use your buddy's alternate air source or make a controlled emergency swimming ascent (CESA)</li>
-          <li>Always signal problems early - don't wait until it's an emergency!</li>
+          <li>
+            <strong>Low on Air:</strong> Signal immediately - we'll end the dive
+            and ascend together
+          </li>
+          <li>
+            <strong>Out of Air:</strong> Signal "out of air" and use your
+            buddy's alternate air source or make a controlled emergency swimming
+            ascent (CESA)
+          </li>
+          <li>
+            Always signal problems early - don't wait until it's an emergency!
+          </li>
         </ul>
 
-        <h4 style="font-size: 20px; color: #555; margin-top: 20px;">Emergency Contacts & Equipment</h4>
+        <h4 style="font-size: 20px; color: #555; margin-top: 20px">
+          Emergency Contacts & Equipment
+        </h4>
         <ul>
           <li><strong>Police:</strong> 191</li>
           <li><strong>Tourist Police:</strong> 1155</li>
           <li><strong>Emergency Medical Services:</strong> 1669</li>
-          <li><strong>DAN International:</strong> <a href="https://www.diversalertnetwork.org/contact/" target="_blank" rel="noopener noreferrer">+1-919-684-9111</a> (24/7 emergency hotline for diving emergencies)</li>
-          <li><strong>Recompression Chamber:</strong> Koh Chang Hospital, Phone: 039 521-657 or 039 586-131</li>
-          <li><strong>Suspicion of DCS:</strong> Refer to our <a href="/docs/EN_DCS_Field_Evaluation_Slate.pdf" target="_blank" rel="noopener noreferrer">DCS Field Evaluation Slate (PDF)</a> for assessment procedures</li>
-          <li><strong>Emergency Oxygen:</strong> Located in the transport box on the right of the captain's seat in the captain's cabin</li>
-          <li><strong>First Aid Kit:</strong> Located in the transport box on the right of the captain's seat in the captain's cabin</li>
-          <li><strong>Emergency Action Plan:</strong> For detailed emergency procedures, please refer to our <a href="/en/posts/straight-talk/emergency-plan/" target="_blank" rel="noopener noreferrer">Emergency Plan Guide</a></li>
+          <li>
+            <strong>DAN International:</strong>
+            <a
+              href="https://www.diversalertnetwork.org/contact/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >+1-919-684-9111</a
+            >
+            (24/7 emergency hotline for diving emergencies)
+          </li>
+          <li>
+            <strong>Recompression Chamber:</strong> Koh Chang Hospital, Phone:
+            039 521-657 or 039 586-131
+          </li>
+          <li>
+            <strong>Suspicion of DCS:</strong> Refer to our
+            <a
+              href="/docs/EN_DCS_Field_Evaluation_Slate.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >DCS Field Evaluation Slate (PDF)</a
+            >
+            for assessment procedures
+          </li>
+          <li>
+            <strong>Emergency Oxygen:</strong> Located in the transport box on
+            the right of the captain's seat in the captain's cabin
+          </li>
+          <li>
+            <strong>First Aid Kit:</strong> Located in the transport box on the
+            right of the captain's seat in the captain's cabin
+          </li>
+          <li>
+            <strong>Emergency Action Plan:</strong> For detailed emergency
+            procedures, please refer to our
+            <a
+              href="/en/posts/straight-talk/emergency-plan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Emergency Plan Guide</a
+            >
+          </li>
         </ul>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           7. Hand Signal Review
         </h3>
         <p>
-          Hand signals can vary between countries and certification agencies, so let's make sure we're all on the same page. Here are the essential signals we'll use today:
+          Hand signals can vary between countries and certification agencies, so
+          let's make sure we're all on the same page. Here are the essential
+          signals we'll use today:
         </p>
         <ul>
-          <li><strong>OK:</strong> [Description/visual] - Used to ask "Are you OK?" and respond "I'm OK"</li>
-          <li><strong>Problem:</strong> [Description/visual] - Wave hand side to side to indicate a problem</li>
-          <li><strong>Up:</strong> [Description/visual] - Thumb up means "I want to go up"</li>
-          <li><strong>Down:</strong> [Description/visual] - Thumb down means "I want to go down"</li>
-          <li><strong>Air Pressure:</strong> [Description/visual] - Show numbers with fingers (e.g., "I have 120 bars")</li>
-          <li><strong>Low on Air:</strong> [Description/visual] - Hand across throat</li>
-          <li><strong>Out of Air:</strong> [Description/visual] - Hand across throat, then point to regulator</li>
-          <li><strong>Safety Stop:</strong> [Description/visual] - Hand horizontal, palm down, at 5 meters</li>
-          <li><strong>Stop/Hold:</strong> [Description/visual] - Hand up, palm forward</li>
-          <li><strong>Look/Point:</strong> [Description/visual] - Point to something interesting</li>
+          <li>
+            <strong>OK:</strong> [Description/visual] - Used to ask "Are you
+            OK?" and respond "I'm OK"
+          </li>
+          <li>
+            <strong>Problem:</strong> [Description/visual] - Wave hand side to
+            side to indicate a problem
+          </li>
+          <li>
+            <strong>Up:</strong> [Description/visual] - Thumb up means "I want
+            to go up"
+          </li>
+          <li>
+            <strong>Down:</strong> [Description/visual] - Thumb down means "I
+            want to go down"
+          </li>
+          <li>
+            <strong>Air Pressure:</strong> [Description/visual] - Show numbers
+            with fingers (e.g., "I have 120 bars")
+          </li>
+          <li>
+            <strong>Low on Air:</strong> [Description/visual] - Hand across
+            throat
+          </li>
+          <li>
+            <strong>Out of Air:</strong> [Description/visual] - Hand across
+            throat, then point to regulator
+          </li>
+          <li>
+            <strong>Safety Stop:</strong> [Description/visual] - Hand
+            horizontal, palm down, at 5 meters
+          </li>
+          <li>
+            <strong>Stop/Hold:</strong> [Description/visual] - Hand up, palm
+            forward
+          </li>
+          <li>
+            <strong>Look/Point:</strong> [Description/visual] - Point to
+            something interesting
+          </li>
         </ul>
         <p>
-          <strong>Practice Question:</strong> Can you show me how you would communicate that you have 120 bars of air pressure remaining?
+          <strong>Practice Question:</strong> Can you show me how you would
+          communicate that you have 120 bars of air pressure remaining?
         </p>
         <p>
           <a
             href="/docs/Handsignals01.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            style="display: inline-block; margin-top: 10px; padding: 10px 20px; background: #0077b6; color: white; text-decoration: none; border-radius: 5px;"
+            style="
+              display: inline-block;
+              margin-top: 10px;
+              padding: 10px 20px;
+              background: #0077b6;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+            "
             >📋 Download Complete Hand Signals Guide (PDF)</a
           >
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           8. Roster & Buddy Check (Pairing)
         </h3>
-        <p>
-          Let's make sure everyone is present and properly paired up:
-        </p>
+        <p>Let's make sure everyone is present and properly paired up:</p>
         <ul>
-          <li><strong>Roster Check:</strong> [Go through names] - Is everyone here?</li>
-          <li><strong>Buddy Pairs:</strong> 
+          <li>
+            <strong>Roster Check:</strong> [Go through names] - Is everyone
+            here?
+          </li>
+          <li>
+            <strong>Buddy Pairs:</strong>
             <ul>
               <li>[Name] and [Name] - you'll be buddies</li>
               <li>[Name] and [Name] - you'll be buddies</li>
-              <li>[Name] - you'll be my buddy today (for less experienced divers)</li>
+              <li>
+                [Name] - you'll be my buddy today (for less experienced divers)
+              </li>
             </ul>
           </li>
-          <li><strong>Buddy Check:</strong> Before entering the water, do a final check with your buddy - make sure all equipment is secure and working properly</li>
+          <li>
+            <strong>Buddy Check:</strong> Before entering the water, do a final
+            check with your buddy - make sure all equipment is secure and
+            working properly
+          </li>
         </ul>
         <p>
-          <strong>Note:</strong> Buddy pairs are typically matched by experience level and certification. If you'd like to dive with a specific person, please let me know now.
+          <strong>Note:</strong> Buddy pairs are typically matched by experience
+          level and certification. If you'd like to dive with a specific person,
+          please let me know now.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           9. Environmental Awareness & Marine Hazards
         </h3>
         <p>
-          HTMS Chang is a protected artificial reef, and we need to respect the marine environment:
+          HTMS Chang is a protected artificial reef, and we need to respect the
+          marine environment:
         </p>
         <ul>
-          <li><strong>General Rule:</strong> Look but don't touch. Avoid contact with all marine life, including corals, sponges, and fish</li>
-          <li><strong>Marine Life to Be Aware Of:</strong>
+          <li>
+            <strong>General Rule:</strong> Look but don't touch. Avoid contact
+            with all marine life, including corals, sponges, and fish
+          </li>
+          <li>
+            <strong>Marine Life to Be Aware Of:</strong>
             <ul>
-              <li><strong>Lionfish:</strong> Beautiful but venomous - keep a safe distance (at least 2 meters)</li>
-              <li><strong>Moray Eels:</strong> Usually shy, but can be territorial - don't reach into holes or crevices</li>
-              <li><strong>Fire Coral:</strong> Can cause skin irritation - avoid contact</li>
-              <li><strong>Sea Urchins:</strong> Sharp spines - watch your hands and knees</li>
-              <li><strong>Barracudas:</strong> Large but generally harmless - maintain respectful distance</li>
+              <li>
+                <strong>Lionfish:</strong> Beautiful but venomous - keep a safe
+                distance (at least 2 meters)
+              </li>
+              <li>
+                <strong>Moray Eels:</strong> Usually shy, but can be territorial
+                - don't reach into holes or crevices
+              </li>
+              <li>
+                <strong>Fire Coral:</strong> Can cause skin irritation - avoid
+                contact
+              </li>
+              <li>
+                <strong>Sea Urchins:</strong> Sharp spines - watch your hands
+                and knees
+              </li>
+              <li>
+                <strong>Barracudas:</strong> Large but generally harmless -
+                maintain respectful distance
+              </li>
             </ul>
           </li>
-          <li><strong>Buoyancy Control:</strong> Maintain good buoyancy to avoid damaging the reef or stirring up sediment</li>
-          <li><strong>Photography:</strong> If taking photos, be careful not to touch anything. Use a camera tray or handle</li>
-          <li><strong>Conservation:</strong> Take only photos, leave only bubbles. Never remove anything from the wreck or reef</li>
+          <li>
+            <strong>Buoyancy Control:</strong> Maintain good buoyancy to avoid
+            damaging the reef or stirring up sediment
+          </li>
+          <li>
+            <strong>Photography:</strong> If taking photos, be careful not to
+            touch anything. Use a camera tray or handle
+          </li>
+          <li>
+            <strong>Conservation:</strong> Take only photos, leave only bubbles.
+            Never remove anything from the wreck or reef
+          </li>
         </ul>
         <p>
-          <strong>Remember:</strong> We're guests in their home. Let's be respectful visitors and leave the site exactly as we found it.
+          <strong>Remember:</strong> We're guests in their home. Let's be
+          respectful visitors and leave the site exactly as we found it.
         </p>
 
-        <h3 style="font-size: 24px; color: #0077b6; margin-top: 30px; margin-bottom: 15px;">
+        <h3
+          style="
+            font-size: 24px;
+            color: #0077b6;
+            margin-top: 30px;
+            margin-bottom: 15px;
+          "
+        >
           10. Pre-Dive Safety Check
         </h3>
         <p>
-          Before every dive, we use the acronym <strong>"BIG WHALES REALLY ARE FUN"</strong> to ensure nothing is forgotten. For a detailed guide on why safety checks are important and how to perform them correctly, check out our <a href="/en/posts/scuba-knowledge/safety-check/" target="_blank" rel="noopener noreferrer">Safety Check Guide</a>:
+          Before every dive, we use the acronym
+          <strong>"BIG WHALES REALLY ARE FUN"</strong> to ensure nothing is
+          forgotten. For a detailed guide on why safety checks are important and
+          how to perform them correctly, check out our
+          <a
+            href="/en/posts/scuba-knowledge/safety-check/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Safety Check Guide</a
+          >:
         </p>
-        <ul style="list-style: none; padding-left: 0;">
-          <li style="margin-bottom: 10px;"><strong>B</strong> - <strong>BCD:</strong> Check that your BCD inflates and deflates properly. Test the power inflator and dump valves.</li>
-          <li style="margin-bottom: 10px;"><strong>I</strong> - <strong>Inflation:</strong> Ensure your BCD is properly fitted and all straps are secure.</li>
-          <li style="margin-bottom: 10px;"><strong>G</strong> - <strong>Gauges:</strong> Check your SPG (Submersible Pressure Gauge), depth gauge, and computer. Ensure they're working and readable.</li>
-          <li style="margin-bottom: 10px;"><strong>W</strong> - <strong>Weights:</strong> Verify your weight belt or integrated weights are secure and properly positioned.</li>
-          <li style="margin-bottom: 10px;"><strong>H</strong> - <strong>Hose:</strong> Check all hoses for kinks or damage. Ensure your regulator hoses are properly routed.</li>
-          <li style="margin-bottom: 10px;"><strong>A</strong> - <strong>Air:</strong> Turn on your air, check your tank pressure, and take 2-3 breaths from your regulator.</li>
-          <li style="margin-bottom: 10px;"><strong>L</strong> - <strong>Releases:</strong> Test all quick releases on your BCD, weight system, and any other equipment.</li>
-          <li style="margin-bottom: 10px;"><strong>E</strong> - <strong>Everything:</strong> Double-check that everything is in place and working.</li>
-          <li style="margin-bottom: 10px;"><strong>S</strong> - <strong>Snaps:</strong> Ensure all snaps and buckles are secure.</li>
-          <li style="margin-bottom: 10px;"><strong>R</strong> - <strong>Releases:</strong> (Second check) Verify all releases are functioning.</li>
-          <li style="margin-bottom: 10px;"><strong>E</strong> - <strong>Everything:</strong> Final check - is everything ready?</li>
-          <li style="margin-bottom: 10px;"><strong>A</strong> - <strong>Air:</strong> Final air check - regulator working, tank pressure good.</li>
-          <li style="margin-bottom: 10px;"><strong>L</strong> - <strong>Look:</strong> Look around - is your buddy ready? Is the entry area clear?</li>
-          <li style="margin-bottom: 10px;"><strong>L</strong> - <strong>Listen:</strong> Listen for final instructions from your guide.</li>
-          <li style="margin-bottom: 10px;"><strong>Y</strong> - <strong>You:</strong> Are YOU ready? Take a deep breath, relax, and enjoy the dive!</li>
-          <li style="margin-bottom: 10px;"><strong>A</strong> - <strong>Again:</strong> One more quick check - everything secure?</li>
-          <li style="margin-bottom: 10px;"><strong>R</strong> - <strong>Ready:</strong> Are you ready to dive?</li>
-          <li style="margin-bottom: 10px;"><strong>E</strong> - <strong>Everything:</strong> Final everything check.</li>
-          <li style="margin-bottom: 10px;"><strong>F</strong> - <strong>Fun:</strong> Remember - diving is FUN! Relax and enjoy!</li>
-          <li style="margin-bottom: 10px;"><strong>U</strong> - <strong>Underwater:</strong> Ready to go underwater?</li>
-          <li style="margin-bottom: 10px;"><strong>N</strong> - <strong>Now:</strong> Let's dive NOW!</li>
+        <ul style="list-style: none; padding-left: 0">
+          <li style="margin-bottom: 10px">
+            <strong>B</strong> - <strong>BCD:</strong> Check that your BCD
+            inflates and deflates properly. Test the power inflator and dump
+            valves.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>I</strong> - <strong>Inflation:</strong> Ensure your BCD is
+            properly fitted and all straps are secure.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>G</strong> - <strong>Gauges:</strong> Check your SPG
+            (Submersible Pressure Gauge), depth gauge, and computer. Ensure
+            they're working and readable.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>W</strong> - <strong>Weights:</strong> Verify your weight
+            belt or integrated weights are secure and properly positioned.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>H</strong> - <strong>Hose:</strong> Check all hoses for
+            kinks or damage. Ensure your regulator hoses are properly routed.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>A</strong> - <strong>Air:</strong> Turn on your air, check
+            your tank pressure, and take 2-3 breaths from your regulator.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>L</strong> - <strong>Releases:</strong> Test all quick
+            releases on your BCD, weight system, and any other equipment.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>E</strong> - <strong>Everything:</strong> Double-check that
+            everything is in place and working.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>S</strong> - <strong>Snaps:</strong> Ensure all snaps and
+            buckles are secure.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>R</strong> - <strong>Releases:</strong> (Second check)
+            Verify all releases are functioning.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>E</strong> - <strong>Everything:</strong> Final check - is
+            everything ready?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>A</strong> - <strong>Air:</strong> Final air check -
+            regulator working, tank pressure good.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>L</strong> - <strong>Look:</strong> Look around - is your
+            buddy ready? Is the entry area clear?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>L</strong> - <strong>Listen:</strong> Listen for final
+            instructions from your guide.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>Y</strong> - <strong>You:</strong> Are YOU ready? Take a
+            deep breath, relax, and enjoy the dive!
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>A</strong> - <strong>Again:</strong> One more quick check -
+            everything secure?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>R</strong> - <strong>Ready:</strong> Are you ready to dive?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>E</strong> - <strong>Everything:</strong> Final everything
+            check.
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>F</strong> - <strong>Fun:</strong> Remember - diving is FUN!
+            Relax and enjoy!
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>U</strong> - <strong>Underwater:</strong> Ready to go
+            underwater?
+          </li>
+          <li style="margin-bottom: 10px">
+            <strong>N</strong> - <strong>Now:</strong> Let's dive NOW!
+          </li>
         </ul>
-        <p style="margin-top: 20px;">
-          <strong>Pro Tip:</strong> Complete this check with your buddy. It's a great way to catch any issues before entering the water and helps build confidence.
+        <p style="margin-top: 20px">
+          <strong>Pro Tip:</strong> Complete this check with your buddy. It's a
+          great way to catch any issues before entering the water and helps
+          build confidence.
         </p>
 
-        <div style="background: #e8f4f8; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #0077b6;">
-          <h4 style="margin-top: 0; color: #0077b6;">📋 Quick Briefing Checklist</h4>
-          <ul style="margin-bottom: 0;">
+        <div
+          style="
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #0077b6;
+          "
+        >
+          <h4 style="margin-top: 0; color: #0077b6">
+            📋 Quick Briefing Checklist
+          </h4>
+          <ul style="margin-bottom: 0">
             <li>✅ Site name and conditions understood</li>
             <li>✅ Dive route and depths clear</li>
             <li>✅ Guide identification confirmed</li>
@@ -920,14 +1359,39 @@
           </ul>
         </div>
 
-        <p style="text-align: center; font-size: 1.1em; margin-top: 40px; padding: 20px; background: #f0f8ff; border-radius: 8px;">
-          <strong>Questions?</strong> If you have any questions or concerns, please ask now - I'm here to help! Remember, there are no stupid questions when it comes to dive safety. Let's have a safe and amazing dive! 🌊🤿
+        <p
+          style="
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 40px;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 8px;
+          "
+        >
+          <strong>Questions?</strong> If you have any questions or concerns,
+          please ask now - I'm here to help! Remember, there are no stupid
+          questions when it comes to dive safety. Let's have a safe and amazing
+          dive! 🌊🤿
         </p>
 
-        <div style="background: #fff9e6; padding: 20px; border-radius: 8px; margin: 30px 0; border-left: 4px solid #ffa500;">
-          <h4 style="margin-top: 0; color: #ff8c00;">📝 After Your Dive: Log Your Experience</h4>
+        <div
+          style="
+            background: #fff9e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 4px solid #ffa500;
+          "
+        >
+          <h4 style="margin-top: 0; color: #ff8c00">
+            📝 After Your Dive: Log Your Experience
+          </h4>
           <p>
-            Don't forget to log your dive! Your dive logbook is an important record of your diving experience and is required for many advanced courses. Whether you use a digital app or a traditional logbook, make sure to record:
+            Don't forget to log your dive! Your dive logbook is an important
+            record of your diving experience and is required for many advanced
+            courses. Whether you use a digital app or a traditional logbook,
+            make sure to record:
           </p>
           <ul>
             <li>Date and location</li>
@@ -937,15 +1401,26 @@
             <li>Your buddy and guide</li>
             <li>Highlights (marine life spotted, conditions, etc.)</li>
           </ul>
-          <p style="margin-bottom: 0;">
-            For more information on why dive logbooks are important and what to include, check out our <a href="/en/posts/scuba-knowledge/dive-logbook/" target="_blank" rel="noopener noreferrer">Dive Logbook Guide</a>. You can find the dive site stamp and get your logbook signed by your guide at the coffee station on the boat.
+          <p style="margin-bottom: 0">
+            For more information on why dive logbooks are important and what to
+            include, check out our
+            <a
+              href="/en/posts/scuba-knowledge/dive-logbook/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Dive Logbook Guide</a
+            >. You can find the dive site stamp and get your logbook signed by
+            your guide at the coffee station on the boat.
           </p>
         </div>
 
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc" />
-        <h3 style="color: #333; margin-top: 30px;">What other divers discovered</h3>
-        <p style="font-size: 14px; margin-bottom: 20px;">
-          Real reviews and experiences from our guests – see what others found on their diving adventures with us!
+        <h3 style="color: #333; margin-top: 30px">
+          What other divers discovered
+        </h3>
+        <p style="font-size: 14px; margin-bottom: 20px">
+          Real reviews and experiences from our guests – see what others found
+          on their diving adventures with us!
         </p>
         <div style="margin-top: 20px">
           <script
@@ -959,18 +1434,22 @@
         <hr />
 
         <!-- Related Dive Sites Section -->
-        <h2 style="
+        <h2
+          style="
             margin-top: 50px;
             font-size: 32px;
             background: linear-gradient(to right, #0077b6, #c0c0c0);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
-          ">
+          "
+        >
           More Wreck Dives
         </h2>
         <p>
-          Explore more wreck diving adventures around Koh Chang. These historic wrecks offer fascinating underwater exploration and abundant marine life.
+          Explore more wreck diving adventures around Koh Chang. These historic
+          wrecks offer fascinating underwater exploration and abundant marine
+          life.
         </p>
 
         <div class="row">
@@ -985,7 +1464,9 @@
             <div class="excerpt">
               <h3>🚢 T11 Wreck</h3>
               <p style="min-height: 60px">
-                Explore the T11 shipwreck with its intact structure and abundant marine life. Perfect for wreck diving enthusiasts! (Max depth: 20m)
+                Explore the T11 shipwreck with its intact structure and abundant
+                marine life. Perfect for wreck diving enthusiasts! (Max depth:
+                20m)
               </p>
             </div>
           </a>
@@ -1001,12 +1482,17 @@
             <div class="excerpt">
               <h3>⚓ Koho Maru 5</h3>
               <p style="min-height: 60px">
-                Dive the historic Japanese cargo ship from WWII. An atmospheric wreck with fascinating history and marine encrustation. (Max depth: 43m)
+                Dive the historic Japanese cargo ship from WWII. An atmospheric
+                wreck with fascinating history and marine encrustation. (Max
+                depth: 43m)
               </p>
             </div>
           </a>
 
-          <a href="/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/" class="three columns">
+          <a
+            href="/en/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/"
+            class="three columns"
+          >
             <img
               src="/img/dive-sites/phutthayotfa-chulalok-fregatte_small.webp"
               alt="Phutthayotfa Chulalok Wreck dive site near Koh Chang"
@@ -1017,7 +1503,9 @@
             <div class="excerpt">
               <h3>🛳️ Phutthayotfa Wreck</h3>
               <p style="min-height: 60px">
-                Discover this Thai Navy vessel wreck with impressive structure and thriving coral growth. Great for underwater photographers. (Max depth: 40m)
+                Discover this Thai Navy vessel wreck with impressive structure
+                and thriving coral growth. Great for underwater photographers.
+                (Max depth: 40m)
               </p>
             </div>
           </a>
@@ -1033,26 +1521,18 @@
             <div class="excerpt">
               <h3>🗺️ View All Sites</h3>
               <p style="min-height: 60px">
-                Explore all 13 dive sites around Koh Chang. From shallow reefs to deep wrecks - find your perfect dive adventure.
+                Explore all 13 dive sites around Koh Chang. From shallow reefs
+                to deep wrecks - find your perfect dive adventure.
               </p>
             </div>
           </a>
         </div>
-
       </div>
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -1060,7 +1540,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -1078,29 +1559,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Dive Sites",
-                  "item": "https://changdiving.com/en/dive-sites/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Htms Chang Wreck",
-                  "item": "https://changdiving.com/en/dive-sites/htms-chang-wreck/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Dive Sites",
+            "item": "https://changdiving.com/en/dive-sites/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Htms Chang Wreck",
+            "item": "https://changdiving.com/en/dive-sites/htms-chang-wreck/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

@@ -2,14 +2,21 @@
 <html lang="de">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -88,13 +95,19 @@
       property="og:url"
       content="https://changdiving.com/de/privacy-policy/"
     />
-    <meta property="og:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       Datenschutzerklärung – Ihre Daten bei Chang Diving Center, Koh Chang
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -106,20 +119,15 @@
       name="twitter:description"
       content="Einzelheiten zur Verwendung, zu Ihren Rechten und zum Schutz personenbezogener Daten durch das Chang Diving Center. Lesen Sie unsere vollständige Datenschutzerklärung."
     />
-    <meta name="twitter:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      name="twitter:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -143,18 +151,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -170,6 +177,13 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -189,226 +203,209 @@
         }
       }
     </script>
-
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="/style.css" media="all" />
-    <noscript><link rel="stylesheet" href="/style.css" /></noscript>
   </head>
   <body>
     <main>
       <div class="changdiving-box">
         <div class="lang-switch">
-            <button class="menu-toggle">☰ Menue</button>
-            <a href="/en/privacy-policy/">🇬🇧</a>
-            <a href="/de/privacy-policy/">🇩🇪</a>
-            <a href="/th/privacy-policy/">🇹🇭</a>
+          <button class="menu-toggle">☰ Menue</button>
+          <a href="/en/privacy-policy/">🇬🇧</a>
+          <a href="/de/privacy-policy/">🇩🇪</a>
+          <a href="/th/privacy-policy/">🇹🇭</a>
 
-            <div class="dropdown-menu">
-              <a href="/de/courses/">Courses</a>
-              <a href="/de/day-trips/">Day Trips</a>
-              <a href="/de/prices/">Prices</a>
-              <a href="/de/about/">About us</a>
-              <a href="/de/equipment/">Equipment</a>
-              <a href="/de/weather/">Weather</a>
-              <a href="/de/dive-sites/">Dive Sites</a>
-              <a href="/de/posts/">Posts</a>
-              <a href="/de/faqs/">Faq's</a>
-              <a href="/de/contact/">Contact</a>
-            </div>
+          <div class="dropdown-menu">
+            <a href="/de/courses/">Courses</a>
+            <a href="/de/day-trips/">Day Trips</a>
+            <a href="/de/prices/">Prices</a>
+            <a href="/de/about/">About us</a>
+            <a href="/de/equipment/">Equipment</a>
+            <a href="/de/weather/">Weather</a>
+            <a href="/de/dive-sites/">Dive Sites</a>
+            <a href="/de/posts/">Posts</a>
+            <a href="/de/faqs/">Faq's</a>
+            <a href="/de/contact/">Contact</a>
           </div>
+        </div>
 
         <nav id="breadcrumb" class="breadcrumb"></nav>
         <hr />
         <h1>Datenschutzerklärung</h1>
-          Chang Diving Center Co., Ltd. („uns“, „wir“ oder „unser“) betreibt die
-          Website changdiving.com (den „Dienst“). Diese Seite informiert Sie
-          über unsere Richtlinien bezüglich der Erhebung, Nutzung und
-          Offenlegung personenbezogener Daten bei der Nutzung unseres Dienstes
-          sowie über Ihre Wahlmöglichkeiten im Zusammenhang mit diesen Daten.
-          Wir verwenden Ihre Daten, um den Dienst bereitzustellen und zu
-          verbessern. Durch die Nutzung des Dienstes stimmen Sie der Erhebung
-          und Nutzung von Informationen gemäß dieser Richtlinie zu. Sofern in
-          dieser Datenschutzerklärung nicht anders definiert, haben Begriffe die
-          gleiche Bedeutung wie in unseren Allgemeinen Geschäftsbedingungen,
-          abrufbar auf changdiving.com.
+        Chang Diving Center Co., Ltd. („uns“, „wir“ oder „unser“) betreibt die
+        Website changdiving.com (den „Dienst“). Diese Seite informiert Sie über
+        unsere Richtlinien bezüglich der Erhebung, Nutzung und Offenlegung
+        personenbezogener Daten bei der Nutzung unseres Dienstes sowie über Ihre
+        Wahlmöglichkeiten im Zusammenhang mit diesen Daten. Wir verwenden Ihre
+        Daten, um den Dienst bereitzustellen und zu verbessern. Durch die
+        Nutzung des Dienstes stimmen Sie der Erhebung und Nutzung von
+        Informationen gemäß dieser Richtlinie zu. Sofern in dieser
+        Datenschutzerklärung nicht anders definiert, haben Begriffe die gleiche
+        Bedeutung wie in unseren Allgemeinen Geschäftsbedingungen, abrufbar auf
+        changdiving.com.
 
-          <h1>Erfassung und Nutzung von Informationen</h1>
-          Wir erfassen verschiedene Arten von Informationen für unterschiedliche
-          Zwecke, um unseren Dienst bereitzustellen und zu verbessern.
+        <h1>Erfassung und Nutzung von Informationen</h1>
+        Wir erfassen verschiedene Arten von Informationen für unterschiedliche
+        Zwecke, um unseren Dienst bereitzustellen und zu verbessern.
 
-          <h3>Erfasste Datentypen</h3>
-          <h4>Personenbezogene Daten</h4>
-          Während der Nutzung unseres Dienstes bitten wir Sie möglicherweise,
-          uns bestimmte personenbezogene Daten zur Verfügung zu stellen, die zur
-          Kontaktaufnahme oder Identifikation verwendet werden können
-          („Personenbezogene Daten“). Dazu können unter anderem gehören:
-          <ul>
-            <li>E-Mail-Adresse</li>
-            <li>Vor- und Nachname</li>
-            <li>Telefonnummer</li>
-            <li>Anschrift, Bundesland, Provinz, Postleitzahl, Stadt</li>
-            <li>Cookies und Nutzungsdaten</li>
-          </ul>
+        <h3>Erfasste Datentypen</h3>
+        <h4>Personenbezogene Daten</h4>
+        Während der Nutzung unseres Dienstes bitten wir Sie möglicherweise, uns
+        bestimmte personenbezogene Daten zur Verfügung zu stellen, die zur
+        Kontaktaufnahme oder Identifikation verwendet werden können
+        („Personenbezogene Daten“). Dazu können unter anderem gehören:
+        <ul>
+          <li>E-Mail-Adresse</li>
+          <li>Vor- und Nachname</li>
+          <li>Telefonnummer</li>
+          <li>Anschrift, Bundesland, Provinz, Postleitzahl, Stadt</li>
+          <li>Cookies und Nutzungsdaten</li>
+        </ul>
 
-          <h4>Nutzungsdaten</h4>
-          Wir können auch Informationen darüber erfassen, wie der Dienst
-          aufgerufen und verwendet wird („Nutzungsdaten“). Diese Daten können
-          Informationen wie die IP-Adresse Ihres Computers, Browsertyp,
-          Browserversion, die von Ihnen besuchten Seiten unseres Dienstes,
-          Uhrzeit und Datum Ihres Besuchs, auf den Seiten verbrachte Zeit,
-          eindeutige Gerätekennungen und andere Diagnosedaten enthalten.
+        <h4>Nutzungsdaten</h4>
+        Wir können auch Informationen darüber erfassen, wie der Dienst
+        aufgerufen und verwendet wird („Nutzungsdaten“). Diese Daten können
+        Informationen wie die IP-Adresse Ihres Computers, Browsertyp,
+        Browserversion, die von Ihnen besuchten Seiten unseres Dienstes, Uhrzeit
+        und Datum Ihres Besuchs, auf den Seiten verbrachte Zeit, eindeutige
+        Gerätekennungen und andere Diagnosedaten enthalten.
 
-          <h4>Tracking- &amp; Cookie-Daten</h4>
-          Wir verwenden Cookies und ähnliche Tracking-Technologien, um
-          Aktivitäten auf unserem Dienst zu verfolgen und bestimmte
-          Informationen zu speichern. Cookies sind Dateien mit einer kleinen
-          Datenmenge, die eine anonyme eindeutige Kennung enthalten können.
-          Cookies werden an Ihren Browser gesendet und auf Ihrem Gerät
-          gespeichert. Weitere Tracking-Technologien wie Beacons, Tags und
-          Skripte werden zur Sammlung und Analyse von Informationen sowie zur
-          Verbesserung unseres Dienstes verwendet. Sie können Ihren Browser
-          anweisen, alle Cookies abzulehnen oder anzugeben, wenn ein Cookie
-          gesendet wird. Wenn Sie jedoch keine Cookies akzeptieren, können Sie
-          möglicherweise einige Teile unseres Dienstes nicht nutzen. Beispiele
-          für von uns verwendete Cookies:
-          <ul>
-            <li>
-              <strong>Sitzungs-Cookies:</strong> Wir verwenden diese, um unseren
-              Dienst zu betreiben.
-            </li>
-            <li>
-              <strong>Präferenz-Cookies:</strong> Diese speichern Ihre
-              Einstellungen und Präferenzen.
-            </li>
-            <li>
-              <strong>Sicherheits-Cookies:</strong> Diese dienen
-              Sicherheitszwecken.
-            </li>
-          </ul>
+        <h4>Tracking- &amp; Cookie-Daten</h4>
+        Wir verwenden Cookies und ähnliche Tracking-Technologien, um Aktivitäten
+        auf unserem Dienst zu verfolgen und bestimmte Informationen zu
+        speichern. Cookies sind Dateien mit einer kleinen Datenmenge, die eine
+        anonyme eindeutige Kennung enthalten können. Cookies werden an Ihren
+        Browser gesendet und auf Ihrem Gerät gespeichert. Weitere
+        Tracking-Technologien wie Beacons, Tags und Skripte werden zur Sammlung
+        und Analyse von Informationen sowie zur Verbesserung unseres Dienstes
+        verwendet. Sie können Ihren Browser anweisen, alle Cookies abzulehnen
+        oder anzugeben, wenn ein Cookie gesendet wird. Wenn Sie jedoch keine
+        Cookies akzeptieren, können Sie möglicherweise einige Teile unseres
+        Dienstes nicht nutzen. Beispiele für von uns verwendete Cookies:
+        <ul>
+          <li>
+            <strong>Sitzungs-Cookies:</strong> Wir verwenden diese, um unseren
+            Dienst zu betreiben.
+          </li>
+          <li>
+            <strong>Präferenz-Cookies:</strong> Diese speichern Ihre
+            Einstellungen und Präferenzen.
+          </li>
+          <li>
+            <strong>Sicherheits-Cookies:</strong> Diese dienen
+            Sicherheitszwecken.
+          </li>
+        </ul>
 
-          <h1>Nutzung der Daten</h1>
-          Chang Diving Center Co., Ltd. verwendet die gesammelten Daten für
-          folgende Zwecke:
-          <ul>
-            <li>Zur Bereitstellung und Wartung des Dienstes</li>
-            <li>Zur Benachrichtigung über Änderungen am Dienst</li>
-            <li>
-              Um Ihnen die Teilnahme an interaktiven Funktionen zu ermöglichen
-            </li>
-            <li>Zur Kundenbetreuung und -unterstützung</li>
-            <li>Zur Analyse und Verbesserung unseres Dienstes</li>
-            <li>Zur Überwachung der Dienstnutzung</li>
-            <li>Zur Erkennung, Vermeidung und Behebung technischer Probleme</li>
-          </ul>
+        <h1>Nutzung der Daten</h1>
+        Chang Diving Center Co., Ltd. verwendet die gesammelten Daten für
+        folgende Zwecke:
+        <ul>
+          <li>Zur Bereitstellung und Wartung des Dienstes</li>
+          <li>Zur Benachrichtigung über Änderungen am Dienst</li>
+          <li>
+            Um Ihnen die Teilnahme an interaktiven Funktionen zu ermöglichen
+          </li>
+          <li>Zur Kundenbetreuung und -unterstützung</li>
+          <li>Zur Analyse und Verbesserung unseres Dienstes</li>
+          <li>Zur Überwachung der Dienstnutzung</li>
+          <li>Zur Erkennung, Vermeidung und Behebung technischer Probleme</li>
+        </ul>
 
-          <h1>Datenübertragung</h1>
-          Ihre Informationen, einschließlich personenbezogener Daten, können auf
-          Computer außerhalb Ihres Bundeslandes, Ihrer Provinz, Ihres Landes
-          oder einer anderen staatlichen Gerichtsbarkeit übertragen und dort
-          gespeichert werden, wo Datenschutzgesetze von denen Ihrer
-          Gerichtsbarkeit abweichen können. Wenn Sie sich außerhalb Thailands
-          befinden und uns Informationen zur Verfügung stellen, beachten Sie
-          bitte, dass wir die Daten, einschließlich personenbezogener Daten,
-          nach Thailand übertragen und dort verarbeiten. Ihre Zustimmung zu
-          dieser Datenschutzrichtlinie und die Übermittlung solcher
-          Informationen bedeutet Ihre Zustimmung zu dieser Übertragung. Chang
-          Diving Center Co., Ltd. unternimmt alle zumutbaren Schritte, um
-          sicherzustellen, dass Ihre Daten sicher und in Übereinstimmung mit
-          dieser Datenschutzrichtlinie behandelt werden. Eine Übertragung Ihrer
-          personenbezogenen Daten an eine Organisation oder ein Land findet nur
-          dann statt, wenn angemessene Kontrollen vorhanden sind, einschließlich
-          der Sicherheit Ihrer Daten und anderer persönlicher Informationen.
+        <h1>Datenübertragung</h1>
+        Ihre Informationen, einschließlich personenbezogener Daten, können auf
+        Computer außerhalb Ihres Bundeslandes, Ihrer Provinz, Ihres Landes oder
+        einer anderen staatlichen Gerichtsbarkeit übertragen und dort
+        gespeichert werden, wo Datenschutzgesetze von denen Ihrer
+        Gerichtsbarkeit abweichen können. Wenn Sie sich außerhalb Thailands
+        befinden und uns Informationen zur Verfügung stellen, beachten Sie
+        bitte, dass wir die Daten, einschließlich personenbezogener Daten, nach
+        Thailand übertragen und dort verarbeiten. Ihre Zustimmung zu dieser
+        Datenschutzrichtlinie und die Übermittlung solcher Informationen
+        bedeutet Ihre Zustimmung zu dieser Übertragung. Chang Diving Center Co.,
+        Ltd. unternimmt alle zumutbaren Schritte, um sicherzustellen, dass Ihre
+        Daten sicher und in Übereinstimmung mit dieser Datenschutzrichtlinie
+        behandelt werden. Eine Übertragung Ihrer personenbezogenen Daten an eine
+        Organisation oder ein Land findet nur dann statt, wenn angemessene
+        Kontrollen vorhanden sind, einschließlich der Sicherheit Ihrer Daten und
+        anderer persönlicher Informationen.
 
-          <h1>Offenlegung von Daten</h1>
-          <h3>Gesetzliche Anforderungen</h3>
-          Chang Diving Center Co., Ltd. kann Ihre personenbezogenen Daten im
-          guten Glauben offenlegen, dass eine solche Maßnahme erforderlich ist,
-          um:
-          <ul>
-            <li>einer gesetzlichen Verpflichtung nachzukommen,</li>
-            <li>
-              die Rechte oder das Eigentum von Chang Diving Center Co., Ltd. zu
-              schützen und zu verteidigen,
-            </li>
-            <li>
-              mögliches Fehlverhalten im Zusammenhang mit dem Service zu
-              verhindern oder zu untersuchen,
-            </li>
-            <li>
-              die persönliche Sicherheit von Nutzern des Dienstes oder der
-              Öffentlichkeit zu schützen,
-            </li>
-            <li>sich gegen rechtliche Haftung zu verteidigen.</li>
-          </ul>
+        <h1>Offenlegung von Daten</h1>
+        <h3>Gesetzliche Anforderungen</h3>
+        Chang Diving Center Co., Ltd. kann Ihre personenbezogenen Daten im guten
+        Glauben offenlegen, dass eine solche Maßnahme erforderlich ist, um:
+        <ul>
+          <li>einer gesetzlichen Verpflichtung nachzukommen,</li>
+          <li>
+            die Rechte oder das Eigentum von Chang Diving Center Co., Ltd. zu
+            schützen und zu verteidigen,
+          </li>
+          <li>
+            mögliches Fehlverhalten im Zusammenhang mit dem Service zu
+            verhindern oder zu untersuchen,
+          </li>
+          <li>
+            die persönliche Sicherheit von Nutzern des Dienstes oder der
+            Öffentlichkeit zu schützen,
+          </li>
+          <li>sich gegen rechtliche Haftung zu verteidigen.</li>
+        </ul>
 
-          <h1>Datensicherheit</h1>
-          Die Sicherheit Ihrer Daten ist uns wichtig, aber bitte beachten Sie,
-          dass keine Methode der Übertragung über das Internet oder der
-          elektronischen Speicherung 100% sicher ist. Obwohl wir bestrebt sind,
-          wirtschaftlich akzeptable Mittel zum Schutz Ihrer personenbezogenen
-          Daten einzusetzen, können wir deren absolute Sicherheit nicht
-          garantieren.
+        <h1>Datensicherheit</h1>
+        Die Sicherheit Ihrer Daten ist uns wichtig, aber bitte beachten Sie,
+        dass keine Methode der Übertragung über das Internet oder der
+        elektronischen Speicherung 100% sicher ist. Obwohl wir bestrebt sind,
+        wirtschaftlich akzeptable Mittel zum Schutz Ihrer personenbezogenen
+        Daten einzusetzen, können wir deren absolute Sicherheit nicht
+        garantieren.
 
-          <h1>Dienstleister</h1>
-          Wir können Drittunternehmen und Einzelpersonen beauftragen, um unseren
-          Service zu erleichtern ("Dienstleister"), den Service in unserem
-          Auftrag bereitzustellen, Service-bezogene Dienstleistungen
-          durchzuführen oder uns bei der Analyse der Nutzung unseres Service zu
-          unterstützen. Diese Dritten haben nur Zugriff auf Ihre
-          personenbezogenen Daten, um diese Aufgaben in unserem Namen
-          auszuführen, und sind verpflichtet, sie nicht für andere Zwecke
-          weiterzugeben oder zu verwenden.
+        <h1>Dienstleister</h1>
+        Wir können Drittunternehmen und Einzelpersonen beauftragen, um unseren
+        Service zu erleichtern ("Dienstleister"), den Service in unserem Auftrag
+        bereitzustellen, Service-bezogene Dienstleistungen durchzuführen oder
+        uns bei der Analyse der Nutzung unseres Service zu unterstützen. Diese
+        Dritten haben nur Zugriff auf Ihre personenbezogenen Daten, um diese
+        Aufgaben in unserem Namen auszuführen, und sind verpflichtet, sie nicht
+        für andere Zwecke weiterzugeben oder zu verwenden.
 
-          <h1>Links zu anderen Websites</h1>
-          Unser Service kann Links zu anderen Websites enthalten, die nicht von
-          uns betrieben werden. Wenn Sie auf einen Link eines Drittanbieters
-          klicken, werden Sie auf die Website dieses Drittanbieters
-          weitergeleitet. Wir empfehlen Ihnen dringend, die
-          Datenschutzrichtlinie jeder Website, die Sie besuchen, zu überprüfen.
-          Wir haben keine Kontrolle über und übernehmen keine Verantwortung für
-          die Inhalte, Datenschutzrichtlinien oder -praktiken von Websites oder
-          Diensten Dritter.
+        <h1>Links zu anderen Websites</h1>
+        Unser Service kann Links zu anderen Websites enthalten, die nicht von
+        uns betrieben werden. Wenn Sie auf einen Link eines Drittanbieters
+        klicken, werden Sie auf die Website dieses Drittanbieters
+        weitergeleitet. Wir empfehlen Ihnen dringend, die Datenschutzrichtlinie
+        jeder Website, die Sie besuchen, zu überprüfen. Wir haben keine
+        Kontrolle über und übernehmen keine Verantwortung für die Inhalte,
+        Datenschutzrichtlinien oder -praktiken von Websites oder Diensten
+        Dritter.
 
-          <h1>Datenschutz für Kinder</h1>
-          Unser Service richtet sich nicht an Personen unter 18 Jahren
-          ("Kinder"). Wir sammeln wissentlich keine personenbezogenen Daten von
-          Personen unter 18 Jahren. Wenn Sie ein Elternteil oder
-          Erziehungsberechtigter sind und wissen, dass Ihr Kind uns
-          personenbezogene Daten zur Verfügung gestellt hat, kontaktieren Sie
-          uns bitte. Wenn uns bekannt wird, dass wir personenbezogene Daten von
-          Kindern ohne Zustimmung der Eltern gesammelt haben, unternehmen wir
-          Schritte, um diese Daten von unseren Servern zu löschen.
+        <h1>Datenschutz für Kinder</h1>
+        Unser Service richtet sich nicht an Personen unter 18 Jahren ("Kinder").
+        Wir sammeln wissentlich keine personenbezogenen Daten von Personen unter
+        18 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und
+        wissen, dass Ihr Kind uns personenbezogene Daten zur Verfügung gestellt
+        hat, kontaktieren Sie uns bitte. Wenn uns bekannt wird, dass wir
+        personenbezogene Daten von Kindern ohne Zustimmung der Eltern gesammelt
+        haben, unternehmen wir Schritte, um diese Daten von unseren Servern zu
+        löschen.
 
-          <h1>Änderungen dieser Datenschutzrichtlinie</h1>
-          Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit
-          aktualisieren. Wir werden Sie über Änderungen informieren, indem wir
-          die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen. Wir
-          informieren Sie per E-Mail und/oder durch einen gut sichtbaren Hinweis
-          in unserem Service, bevor die Änderung in Kraft tritt, und
-          aktualisieren das "Gültigkeitsdatum" oben in dieser
-          Datenschutzrichtlinie. Wir empfehlen Ihnen, diese
-          Datenschutzrichtlinie regelmäßig auf Änderungen zu überprüfen.
-          Änderungen an dieser Datenschutzrichtlinie treten in Kraft, sobald sie
-          auf dieser Seite veröffentlicht werden.
+        <h1>Änderungen dieser Datenschutzrichtlinie</h1>
+        Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren.
+        Wir werden Sie über Änderungen informieren, indem wir die neue
+        Datenschutzrichtlinie auf dieser Seite veröffentlichen. Wir informieren
+        Sie per E-Mail und/oder durch einen gut sichtbaren Hinweis in unserem
+        Service, bevor die Änderung in Kraft tritt, und aktualisieren das
+        "Gültigkeitsdatum" oben in dieser Datenschutzrichtlinie. Wir empfehlen
+        Ihnen, diese Datenschutzrichtlinie regelmäßig auf Änderungen zu
+        überprüfen. Änderungen an dieser Datenschutzrichtlinie treten in Kraft,
+        sobald sie auf dieser Seite veröffentlicht werden.
 
-          <h1>Kontakt</h1>
-          Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren
-          Sie uns bitte:
-          <ul>
-            <li>Per E-Mail: info@changdiving.com</li>
-            <li>
-              Besuchen Sie diese Seite auf unserer Website:
-              
-            </li>
-          </ul>
-        </div>
-      </main>
+        <h1>Kontakt</h1>
+        Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie
+        uns bitte:
+        <ul>
+          <li>Per E-Mail: info@changdiving.com</li>
+          <li>Besuchen Sie diese Seite auf unserer Website:</li>
+        </ul>
+      </div>
+    </main>
 
     <!-- Cookie Consent Banner DE -->
     <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
@@ -419,7 +416,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -437,23 +435,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Startseite",
-                  "item": "https://changdiving.com/de/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Privacy Policy",
-                  "item": "https://changdiving.com/de/privacy-policy/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://changdiving.com/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy",
+            "item": "https://changdiving.com/de/privacy-policy/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

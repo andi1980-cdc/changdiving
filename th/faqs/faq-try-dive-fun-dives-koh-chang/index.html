@@ -2,14 +2,21 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-        <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       ดำน้ำลองครั้งแรก & ฟันไดฟ์ – คำถามที่พบบ่อยสำหรับผู้เริ่มต้นและนักดำน้ำ |
@@ -102,10 +109,13 @@
     <meta property="og:image:width" content="2580" />
     <meta property="og:image:height" content="1460" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       ดำน้ำลองครั้งแรก & ฟันไดฟ์ – คำถามที่พบบ่อยสำหรับผู้เริ่มต้นและนักดำน้ำ |
       เกาะช้าง
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -124,16 +134,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -157,18 +159,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -184,6 +185,26 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts with Preload -->
+    <!-- Preload critical resources -->
+
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/faq/faq-try-fun-dives_small.webp"
+        imagesrcset="/img/faq/faq-try-fun-dives_small.webp 600w, /img/faq/faq-try-fun-dives_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -245,36 +266,7 @@
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <!-- Local Fonts with Preload -->
-    <!-- Preload critical resources -->
-    
-    
-    
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/faq/faq-try-fun-dives_small.webp"
-      imagesrcset="/img/faq/faq-try-fun-dives_small.webp 600w, /img/faq/faq-try-fun-dives_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- ส่วนหัวหน้า -->
@@ -327,7 +319,6 @@
             alt="คำถามที่พบบ่อยเกี่ยวกับ Try Dive และ Fun Dive – สำหรับมือใหม่ ความปลอดภัย ดำน้ำเดี่ยว CMAS และคอร์สทบทวน"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -443,7 +434,10 @@
                 >Fun Dive ➜</a
               >
               |
-              <a href="/th/day-trips/scuba-review/" target="_blank" rel="noopener"
+              <a
+                href="/th/day-trips/scuba-review/"
+                target="_blank"
+                rel="noopener"
                 >คอร์สทบทวน ➜</a
               >
             </p>
@@ -454,7 +448,10 @@
             <p>
               หากคุณไม่ได้ดำน้ำในช่วง
               <strong>12 เดือนที่ผ่านมา</strong> เราขอแนะนำให้เรียน
-              <a href="/th/day-trips/scuba-review/" target="_blank" rel="noopener"
+              <a
+                href="/th/day-trips/scuba-review/"
+                target="_blank"
+                rel="noopener"
                 >คอร์สทบทวน ➜</a
               >
               เพื่อความปลอดภัยและมั่นใจในการดำน้ำ คอร์สประกอบด้วยการทบทวนทฤษฎี
@@ -487,11 +484,17 @@
               <li><strong>วันที่ 2:</strong> ดำน้ำเรือ เรือหลวงช้าง</li>
             </ul>
             <p>
-              <a href="/th/day-trips/scuba-review/" target="_blank" rel="noopener"
+              <a
+                href="/th/day-trips/scuba-review/"
+                target="_blank"
+                rel="noopener"
                 >คอร์สทบทวน ➜</a
               >
               |
-              <a href="/th/posts/tips-and-tricks/deep-diving/" target="_blank" rel="noopener"
+              <a
+                href="/th/posts/tips-and-tricks/deep-diving/"
+                target="_blank"
+                rel="noopener"
                 >ความปลอดภัยในการดำน้ำลึก ➜</a
               >
             </p>
@@ -510,16 +513,8 @@
     </main>
 
     <!-- Cookie Consent Banner TH -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
     <a
@@ -527,7 +522,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -541,29 +537,29 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "หน้าแรก",
-                  "item": "https://changdiving.com/th/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "คำถามที่พบบ่อย",
-                  "item": "https://changdiving.com/th/faqs/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 3,
-                  "name": "Faq Try Dive Fun Dives Koh Chang",
-                  "item": "https://changdiving.com/th/faqs/faq-try-dive-fun-dives-koh-chang/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "หน้าแรก",
+            "item": "https://changdiving.com/th/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "คำถามที่พบบ่อย",
+            "item": "https://changdiving.com/th/faqs/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Faq Try Dive Fun Dives Koh Chang",
+            "item": "https://changdiving.com/th/faqs/faq-try-dive-fun-dives-koh-chang/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

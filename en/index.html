@@ -2,18 +2,27 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="3B62EB4E2CBC2BE9F36223BA830DBF03" />
-    <title>Scuba Diving Koh Chang | English • Deutsch • ไทย | Chang Diving</title>
+    <title>
+      Scuba Diving Koh Chang | English • Deutsch • ไทย | Chang Diving
+    </title>
     <meta
       name="description"
       content="Fun dives, courses, reef and wreck adventures since 2005 with certified SDI/TDI & PADI instructors. Book online today!"
@@ -72,11 +81,17 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://changdiving.com/en/" />
-    <meta property="og:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      property="og:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Scuba Diving Koh Chang Thailand - Chang Diving Center" />
+    <meta
+      property="og:image:alt"
+      content="Scuba Diving Koh Chang Thailand - Chang Diving Center"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -88,25 +103,16 @@
       name="twitter:description"
       content="Fun dives, courses, reef and wreck adventures since 2005 with certified SDI/TDI & PADI instructors. Book online today!"
     />
-    <meta name="twitter:image" content="https://changdiving.com/img/pages/mobile_header.webp" />
+    <meta
+      name="twitter:image"
+      content="https://changdiving.com/img/pages/mobile_header.webp"
+    />
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -130,14 +136,20 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Critical CSS and Font Loading -->
-    
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
     <link rel="stylesheet" href="/style.css" media="all" />
     <noscript>
       <link rel="stylesheet" href="/style.css" />
@@ -987,26 +999,37 @@
 
         <div class="lang-switch">
           <button class="menu-toggle">☰ Menu</button>
-          
+
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
             <form action="/en/search/" method="get" class="search-form-elegant">
-              <input 
-                type="text" 
-                name="q" 
-                placeholder="Search..." 
+              <input
+                type="text"
+                name="q"
+                placeholder="Search..."
                 aria-label="Search"
                 class="search-input-elegant"
               />
-              <button type="submit" class="search-btn-elegant" aria-label="Search">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <button
+                type="submit"
+                class="search-btn-elegant"
+                aria-label="Search"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
                   <circle cx="11" cy="11" r="8"></circle>
                   <path d="m21 21-4.35-4.35"></path>
                 </svg>
               </button>
             </form>
           </div>
-          
+
           <a href="/" title="Auto language landing page">🌐</a>
           <a href="/en/">🇬🇧</a>
           <a href="/de/">🇩🇪</a>
@@ -1057,9 +1080,18 @@
           <div class="safety-banner-content">
             <span class="safety-banner-icon">🛡️</span>
             <span class="safety-banner-text">
-              <strong>Travel Safety Update:</strong> Despite the border conflict between Thailand and Cambodia, travel to and stay on Koh Chang is safe. All tourist activities, including diving, are available without restrictions.
+              <strong>Travel Safety Update:</strong> Despite the border conflict
+              between Thailand and Cambodia, travel to and stay on Koh Chang is
+              safe. All tourist activities, including diving, are available
+              without restrictions.
             </span>
-            <button class="safety-banner-close" aria-label="Close banner" onclick="closeSafetyBanner()">×</button>
+            <button
+              class="safety-banner-close"
+              aria-label="Close banner"
+              onclick="closeSafetyBanner()"
+            >
+              ×
+            </button>
           </div>
         </div>
         <style>
@@ -1068,11 +1100,15 @@
             top: 60px;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, rgba(255, 243, 205, 0.85) 0%, rgba(255, 230, 156, 0.85) 100%);
+            background: linear-gradient(
+              135deg,
+              rgba(255, 243, 205, 0.85) 0%,
+              rgba(255, 230, 156, 0.85) 100%
+            );
             border-bottom: 3px solid rgba(255, 193, 7, 0.7);
             padding: 12px 20px;
             z-index: 3;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
           }
           @media (min-width: 768px) {
             .safety-banner {
@@ -1139,9 +1175,9 @@
         </style>
         <script>
           function closeSafetyBanner() {
-            const banner = document.getElementById('safety-banner');
+            const banner = document.getElementById("safety-banner");
             if (banner) {
-              banner.style.display = 'none';
+              banner.style.display = "none";
             }
           }
         </script>
@@ -1181,8 +1217,7 @@
         </p>
         <p>
           Our experienced <strong>SDI, TDI and PADI instructors</strong> offer a
-          full range of
-          <a href="/en/courses/">scuba diving courses</a> – from
+          full range of <a href="/en/courses/">scuba diving courses</a> – from
           <strong>Open Water Diver certification</strong> up to professional
           training. Learn in small groups, explore vibrant coral reefs, and
           build skills with safe, personalized guidance.
@@ -1214,7 +1249,14 @@
                 Try dives, fun dives & snorkeling around Koh Chang – safe, fun &
                 fully guided day trips with expert dive staff.
               </p>
-              <p style="text-align: center; margin: 10px 0; font-weight: bold; color: #0077b6;">
+              <p
+                style="
+                  text-align: center;
+                  margin: 10px 0;
+                  font-weight: bold;
+                  color: #0077b6;
+                "
+              >
                 💸 Starting from 999 THB
               </p>
             </div>
@@ -1233,7 +1275,14 @@
                 Learn scuba diving step by step – from beginner to pro. Join a
                 course in Koh Chang and get certified with confidence.
               </p>
-              <p style="text-align: center; margin: 10px 0; font-weight: bold; color: #0077b6;">
+              <p
+                style="
+                  text-align: center;
+                  margin: 10px 0;
+                  font-weight: bold;
+                  color: #0077b6;
+                "
+              >
                 💸 Starting from 3,950 THB
               </p>
             </div>
@@ -1252,8 +1301,19 @@
                 Explore coral reefs, fish schools & vibrant dive sites in Koh
                 Chang – perfect for all levels, easily reached by boat.
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   More Info
                 </span>
               </div>
@@ -1273,8 +1333,19 @@
                 Dive HTMS Chang – Thailand's biggest wreck site. Ideal for fun,
                 deep, wreck & advanced training dives in clear water.
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   More Info
                 </span>
               </div>
@@ -1322,8 +1393,19 @@
                 Shop high-quality dive gear tested by pros – ideal for training,
                 travel & recreation. Fast shipping.
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   More Info
                 </span>
               </div>
@@ -1343,8 +1425,19 @@
                 Watch underwater footage, wreck dives & reef highlights from Koh
                 Chang. Get inspired.
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   More Info
                 </span>
               </div>
@@ -1364,8 +1457,19 @@
                 Read expert dive tips, trip planning ideas & how-to articles –
                 written by instructors, tested in real conditions.
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   More Info
                 </span>
               </div>
@@ -1385,8 +1489,19 @@
                 Meet Koh Chang's underwater creatures – fish portraits, wreck
                 dwellers & reef highlights.
               </p>
-                                                        <div style="text-align: center; margin: 10px 0;">
-                <span style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white; padding: 6px 16px; border-radius: 4px; font-size: 0.85em; font-weight: 500; display: inline-block; cursor: pointer;">
+              <div style="text-align: center; margin: 10px 0">
+                <span
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                    padding: 6px 16px;
+                    border-radius: 4px;
+                    font-size: 0.85em;
+                    font-weight: 500;
+                    display: inline-block;
+                    cursor: pointer;
+                  "
+                >
                   More Info
                 </span>
               </div>
@@ -1433,7 +1548,8 @@
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -1451,17 +1567,17 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

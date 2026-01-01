@@ -2,14 +2,21 @@
 <html lang="th">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VYNMSTFN5M');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ราคาดำน้ำ – วางแผนทริปดำน้ำของคุณที่เกาะช้าง | ช้างไดร์วิ่ง</title>
@@ -90,7 +97,10 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="ราคาดำน้ำ – วางแผนทริปดำน้ำของคุณที่เกาะช้าง | ช้างไดร์วิ่ง" />
+    <meta
+      property="og:image:alt"
+      content="ราคาดำน้ำ – วางแผนทริปดำน้ำของคุณที่เกาะช้าง | ช้างไดร์วิ่ง"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -109,16 +119,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -142,18 +144,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://cdn.trustindex.io" />
@@ -169,6 +170,23 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
+    <!-- Local Fonts -->
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link rel="preload" href="/style.css" as="style" />
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript
+      ><link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/prices/prices_header_big.webp"
+        imagesrcset="/img/prices/prices_header_big.webp 600w, /img/prices/prices_header_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -188,32 +206,7 @@
         }
       }
     </script>
-
-    <!-- Google Fonts: Roboto -->
-    
-        <!-- Google Fonts - Noto Sans Thai -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      href="/style.css"
-      media="all"
-      
-    />
-    <noscript><link rel="stylesheet" href="/style.css" />    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/prices/prices_header_big.webp"
-      imagesrcset="/img/prices/prices_header_big.webp 600w, /img/prices/prices_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
-
-</noscript>
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -266,8 +259,8 @@
             title="ราคาดำน้ำ เกาะช้าง – คอร์ส ทริป และแพ็กเกจ"
             width="2580"
             height="1460"
-            
             loading="eager"
+            fetchpriority="high"
           />
         </picture>
 
@@ -332,15 +325,21 @@
           <tbody>
             <tr>
               <td>
-                <a href="/th/day-trips/" target="_blank"
-                   rel="noopener noreferrer">ทริปดำน้ำ</a
+                <a
+                  href="/th/day-trips/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >ทริปดำน้ำ</a
                 >
               </td>
               <td>ทัวร์ 1 วัน และแพ็กเกจ fun dive สำหรับผู้มีใบรับรอง</td>
               <td><strong>999 บาท</strong></td>
               <td>
-                <a href="/th/day-trips/" target="_blank"
-                   rel="noopener noreferrer">รายละเอียด & การจอง</a
+                <a
+                  href="/th/day-trips/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >รายละเอียด & การจอง</a
                 >
               </td>
             </tr>
@@ -349,7 +348,8 @@
                 <a
                   href="/th/courses/beginner-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">คอร์สสำหรับผู้เริ่มต้น</a
+                  rel="noopener noreferrer"
+                  >คอร์สสำหรับผู้เริ่มต้น</a
                 >
               </td>
               <td>เหมาะสำหรับผู้ที่ไม่เคยดำน้ำ – รับใบรับรองได้</td>
@@ -358,7 +358,8 @@
                 <a
                   href="/th/courses/beginner-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">รายละเอียด & การจอง</a
+                  rel="noopener noreferrer"
+                  >รายละเอียด & การจอง</a
                 >
               </td>
             </tr>
@@ -367,7 +368,8 @@
                 <a
                   href="/th/courses/advanced-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">คอร์สขั้นสูง</a
+                  rel="noopener noreferrer"
+                  >คอร์สขั้นสูง</a
                 >
               </td>
               <td>พัฒนาทักษะดำน้ำเพิ่มเติมด้วยการฝึกขั้นสูง</td>
@@ -376,7 +378,8 @@
                 <a
                   href="/th/courses/advanced-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">รายละเอียด & การจอง</a
+                  rel="noopener noreferrer"
+                  >รายละเอียด & การจอง</a
                 >
               </td>
             </tr>
@@ -385,7 +388,8 @@
                 <a
                   href="/th/courses/professional-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">คอร์สระดับมืออาชีพ</a
+                  rel="noopener noreferrer"
+                  >คอร์สระดับมืออาชีพ</a
                 >
               </td>
               <td>ฝึกเป็น Dive Master หรือ Instructor</td>
@@ -394,21 +398,28 @@
                 <a
                   href="/th/courses/professional-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">รายละเอียด & การจอง</a
+                  rel="noopener noreferrer"
+                  >รายละเอียด & การจอง</a
                 >
               </td>
             </tr>
             <tr>
               <td>
-                <a href="/th/courses/speciality/" target="_blank"
-                   rel="noopener noreferrer">คอร์สพิเศษ</a
+                <a
+                  href="/th/courses/speciality/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >คอร์สพิเศษ</a
                 >
               </td>
               <td>ดำน้ำซากเรือ ดำน้ำลึก ไนทรอกซ์ และอื่น ๆ</td>
               <td><strong>7,990 บาท</strong></td>
               <td>
-                <a href="/th/courses/speciality/" target="_blank"
-                   rel="noopener noreferrer">รายละเอียด & การจอง</a
+                <a
+                  href="/th/courses/speciality/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >รายละเอียด & การจอง</a
                 >
               </td>
             </tr>
@@ -417,7 +428,8 @@
                 <a
                   href="/th/courses/technical-diving-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">คอร์สดำน้ำเทคนิค</a
+                  rel="noopener noreferrer"
+                  >คอร์สดำน้ำเทคนิค</a
                 >
               </td>
               <td>การดำน้ำเทคนิคขั้นสูง การดำน้ำลึก และคอร์ส TDI พิเศษ</td>
@@ -426,7 +438,8 @@
                 <a
                   href="/th/courses/technical-diving-courses/"
                   target="_blank"
-                   rel="noopener noreferrer">รายละเอียด & การจอง</a
+                  rel="noopener noreferrer"
+                  >รายละเอียด & การจอง</a
                 >
               </td>
             </tr>
@@ -441,8 +454,11 @@
           อ่านเพิ่มเติมได้ที่บทความของเรา:
         </p>
         <p>
-          <a href="/th/posts/straight-talk/book-in-advance/" target="_blank"
-             rel="noopener noreferrer">? ทำไมควรจองดำน้ำล่วงหน้าที่เกาะช้าง</a
+          <a
+            href="/th/posts/straight-talk/book-in-advance/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >? ทำไมควรจองดำน้ำล่วงหน้าที่เกาะช้าง</a
           >
         </p>
 
@@ -452,8 +468,8 @@
           <strong>อุปกรณ์ดำน้ำ</strong> อยู่ใช่ไหม? ไปที่บล็อกของเราได้เลย:
         </p>
         <p>
-          <a href="/th/posts/" target="_blank"
-             rel="noopener noreferrer">? อ่านบทความดำน้ำของเราที่เกาะช้าง</a
+          <a href="/th/posts/" target="_blank" rel="noopener noreferrer"
+            >? อ่านบทความดำน้ำของเราที่เกาะช้าง</a
           >
         </p>
 
@@ -467,7 +483,11 @@
         </p>
         <p>
           <strong>ดาวน์โหลดไฟล์ PDF ข้อมูลการจองได้ที่นี่:</strong>
-          <a href="/docs/Booking-Information.pdf" target="_blank" rel="noopener noreferrer">
+          <a
+            href="/docs/Booking-Information.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ➡️ ข้อมูลการจอง (PDF)
           </a>
         </p>
@@ -477,31 +497,24 @@
         </p>
         <p>
           ยังมีคำถามอยู่ใช่ไหม?
-          <a href="/th/faqs/" target="_blank"
-             rel="noopener noreferrer">ดูคำถามที่พบบ่อยของเราได้ที่นี่ ?</a
+          <a href="/th/faqs/" target="_blank" rel="noopener noreferrer"
+            >ดูคำถามที่พบบ่อยของเราได้ที่นี่ ?</a
           >
         </p>
       </section>
     </main>
 
     <!-- Cookie Consent Banner TH -->
-    <link
-      rel="stylesheet"
-      href="/css/cookieconsent.min.css"
-      media="all"
-      
-    />
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         srcset="
@@ -519,23 +532,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "หน้าแรก",
-                  "item": "https://changdiving.com/th/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Prices",
-                  "item": "https://changdiving.com/th/prices/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "หน้าแรก",
+            "item": "https://changdiving.com/th/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Prices",
+            "item": "https://changdiving.com/th/prices/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>

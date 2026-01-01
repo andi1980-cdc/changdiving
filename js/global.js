@@ -18,107 +18,314 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mapping für Breadcrumb-Labels und URLs
     const segmentMapping = {
       // Store/Category Mappings - diese werden übersprungen
-      "store": { label: "", skip: true },
-      "category": { label: "", skip: true },
-      "product": { label: "", skip: true },
-      
+      store: { label: "", skip: true },
+      category: { label: "", skip: true },
+      product: { label: "", skip: true },
+
       // Course Mappings
-      "courses": { label: "Courses", url: "/" + lang + "/courses/" },
-      "open-water-diver": { label: "Open Water Diver", url: "/" + lang + "/courses/open-water-diver/" },
-      "advanced": { label: "Advanced", url: "/" + lang + "/courses/advanced/" },
-      "rescue-diver": { label: "Rescue Diver", url: "/" + lang + "/courses/rescue-diver/" },
-      "divemaster": { label: "Divemaster", url: "/" + lang + "/courses/divemaster/" },
+      courses: { label: "Courses", url: "/" + lang + "/courses/" },
+      "open-water-diver": {
+        label: "Open Water Diver",
+        url: "/" + lang + "/courses/open-water-diver/",
+      },
+      advanced: { label: "Advanced", url: "/" + lang + "/courses/advanced/" },
+      "rescue-diver": {
+        label: "Rescue Diver",
+        url: "/" + lang + "/courses/rescue-diver/",
+      },
+      divemaster: {
+        label: "Divemaster",
+        url: "/" + lang + "/courses/divemaster/",
+      },
       "sdi-idc": { label: "IDC", url: "/" + lang + "/courses/sdi-idc/" },
       "sdi-ie": { label: "IE", url: "/" + lang + "/courses/sdi-ie/" },
-      "open-advanced-package": { label: "OW & Advanced Package", url: "/" + lang + "/courses/open-advanced-package/" },
-      "open-to-divemaster": { label: "Open to Divemaster", url: "/" + lang + "/courses/open-to-divemaster/" },
-      "tech-package": { label: "Tech Package", url: "/" + lang + "/courses/tech-package/" },
-      "deep-wreck-nitrox": { label: "Deep Wreck Nitrox", url: "/" + lang + "/courses/deep-wreck-nitrox/" },
-      "nitrox-diver": { label: "Nitrox Diver", url: "/" + lang + "/courses/nitrox-diver/" },
-      "advanced-nitrox": { label: "Advanced Nitrox", url: "/" + lang + "/courses/advanced-nitrox/" },
-      "deco-procedures": { label: "Deco Procedures", url: "/" + lang + "/courses/deco-procedures/" },
-      "first-aid": { label: "First Aid", url: "/" + lang + "/courses/first-aid/" },
-      "efr-instructor": { label: "EFR Instructor", url: "/" + lang + "/courses/efr-instructor/" },
-      "instructor-crossover": { label: "Instructor Crossover", url: "/" + lang + "/courses/instructor-crossover/" },
-      "solo-diver": { label: "Solo Diver", url: "/" + lang + "/courses/solo-diver/" },
-      "search-recovery": { label: "Search & Recovery", url: "/" + lang + "/courses/search-recovery/" },
-      "intro-to-tech": { label: "Intro to Tech", url: "/" + lang + "/courses/intro-to-tech/" },
-      "night": { label: "Night Diver", url: "/" + lang + "/courses/night/" },
-      "sidemount": { label: "Sidemount", url: "/" + lang + "/courses/sidemount/" },
-      "master-scuba-diver": { label: "Master Scuba Diver", url: "/" + lang + "/courses/master-scuba-diver/" },
-      "wreck-diver": { label: "Wreck Diver", url: "/" + lang + "/courses/wreck-diver/" },
-      "advanced-wreck": { label: "Advanced Wreck", url: "/" + lang + "/courses/advanced-wreck/" },
-      "deep-diver": { label: "Deep Diver", url: "/" + lang + "/courses/deep-diver/" },
-      "navigation": { label: "Navigation", url: "/" + lang + "/courses/navigation/" },
-      "advanced-courses": { label: "Advanced Courses", url: "/" + lang + "/courses/advanced-courses/" },
-      "beginner-courses": { label: "Beginner Courses", url: "/" + lang + "/courses/beginner-courses/" },
-      "professional-courses": { label: "Professional Courses", url: "/" + lang + "/courses/professional-courses/" },
-      "speciality": { label: "Speciality", url: "/" + lang + "/courses/speciality/" },
-      "technical-diving-courses": { label: "Technical Diving Courses", url: "/" + lang + "/courses/tech-package/" },
-      "technical": { label: "Technical Diving", url: "/" + lang + "/courses/tech-package/" },
-      "diving-courses": { label: "Diving Courses", url: "/" + lang + "/courses/" },
-      "scuba-courses": { label: "Scuba Courses", url: "/" + lang + "/courses/" },
-      
+      "open-advanced-package": {
+        label: "OW & Advanced Package",
+        url: "/" + lang + "/courses/open-advanced-package/",
+      },
+      "open-to-divemaster": {
+        label: "Open to Divemaster",
+        url: "/" + lang + "/courses/open-to-divemaster/",
+      },
+      "tech-package": {
+        label: "Tech Package",
+        url: "/" + lang + "/courses/tech-package/",
+      },
+      "deep-wreck-nitrox": {
+        label: "Deep Wreck Nitrox",
+        url: "/" + lang + "/courses/deep-wreck-nitrox/",
+      },
+      "nitrox-diver": {
+        label: "Nitrox Diver",
+        url: "/" + lang + "/courses/nitrox-diver/",
+      },
+      "advanced-nitrox": {
+        label: "Advanced Nitrox",
+        url: "/" + lang + "/courses/advanced-nitrox/",
+      },
+      "deco-procedures": {
+        label: "Deco Procedures",
+        url: "/" + lang + "/courses/deco-procedures/",
+      },
+      "first-aid": {
+        label: "First Aid",
+        url: "/" + lang + "/courses/first-aid/",
+      },
+      "efr-instructor": {
+        label: "EFR Instructor",
+        url: "/" + lang + "/courses/efr-instructor/",
+      },
+      "instructor-crossover": {
+        label: "Instructor Crossover",
+        url: "/" + lang + "/courses/instructor-crossover/",
+      },
+      "solo-diver": {
+        label: "Solo Diver",
+        url: "/" + lang + "/courses/solo-diver/",
+      },
+      "search-recovery": {
+        label: "Search & Recovery",
+        url: "/" + lang + "/courses/search-recovery/",
+      },
+      "intro-to-tech": {
+        label: "Intro to Tech",
+        url: "/" + lang + "/courses/intro-to-tech/",
+      },
+      night: { label: "Night Diver", url: "/" + lang + "/courses/night/" },
+      sidemount: {
+        label: "Sidemount",
+        url: "/" + lang + "/courses/sidemount/",
+      },
+      "master-scuba-diver": {
+        label: "Master Scuba Diver",
+        url: "/" + lang + "/courses/master-scuba-diver/",
+      },
+      "wreck-diver": {
+        label: "Wreck Diver",
+        url: "/" + lang + "/courses/wreck-diver/",
+      },
+      "advanced-wreck": {
+        label: "Advanced Wreck",
+        url: "/" + lang + "/courses/advanced-wreck/",
+      },
+      "deep-diver": {
+        label: "Deep Diver",
+        url: "/" + lang + "/courses/deep-diver/",
+      },
+      navigation: {
+        label: "Navigation",
+        url: "/" + lang + "/courses/navigation/",
+      },
+      "advanced-courses": {
+        label: "Advanced Courses",
+        url: "/" + lang + "/courses/advanced-courses/",
+      },
+      "beginner-courses": {
+        label: "Beginner Courses",
+        url: "/" + lang + "/courses/beginner-courses/",
+      },
+      "professional-courses": {
+        label: "Professional Courses",
+        url: "/" + lang + "/courses/professional-courses/",
+      },
+      speciality: {
+        label: "Speciality",
+        url: "/" + lang + "/courses/speciality/",
+      },
+      "technical-diving-courses": {
+        label: "Technical Diving Courses",
+        url: "/" + lang + "/courses/tech-package/",
+      },
+      technical: {
+        label: "Technical Diving",
+        url: "/" + lang + "/courses/tech-package/",
+      },
+      "diving-courses": {
+        label: "Diving Courses",
+        url: "/" + lang + "/courses/",
+      },
+      "scuba-courses": {
+        label: "Scuba Courses",
+        url: "/" + lang + "/courses/",
+      },
+
       // Day-Trips Mappings
       "day-trips": { label: "Day Trips", url: "/" + lang + "/day-trips/" },
-      "fun-dives": { label: "Fun Dives", url: "/" + lang + "/day-trips/fun-dives/" },
-      "try-dive": { label: "Try Dive", url: "/" + lang + "/day-trips/try-dive/" },
-      "scuba-review": { label: "Scuba Review", url: "/" + lang + "/day-trips/scuba-review/" },
-      "snorkeling": { label: "Snorkeling", url: "/" + lang + "/day-trips/snorkeling/" },
-      "insurance": { label: "Insurance", url: "/" + lang + "/day-trips/insurance/" },
-      "rent-gopro": { label: "GoPro Rental", url: "/" + lang + "/day-trips/rent-gopro/" },
-      
+      "fun-dives": {
+        label: "Fun Dives",
+        url: "/" + lang + "/day-trips/fun-dives/",
+      },
+      "try-dive": {
+        label: "Try Dive",
+        url: "/" + lang + "/day-trips/try-dive/",
+      },
+      "scuba-review": {
+        label: "Scuba Review",
+        url: "/" + lang + "/day-trips/scuba-review/",
+      },
+      snorkeling: {
+        label: "Snorkeling",
+        url: "/" + lang + "/day-trips/snorkeling/",
+      },
+      insurance: {
+        label: "Insurance",
+        url: "/" + lang + "/day-trips/insurance/",
+      },
+      "rent-gopro": {
+        label: "GoPro Rental",
+        url: "/" + lang + "/day-trips/rent-gopro/",
+      },
+
       // Equipment Mappings
-      "equipment": { label: "Equipment", url: "/" + lang + "/equipment/" },
-      "used-scuba-gear": { label: "Used Scuba Gear", url: "/" + lang + "/equipment/used-scuba-gear/" },
-      
+      equipment: { label: "Equipment", url: "/" + lang + "/equipment/" },
+      "used-scuba-gear": {
+        label: "Used Scuba Gear",
+        url: "/" + lang + "/equipment/used-scuba-gear/",
+      },
+
       // Other Mappings
-      "posts": { label: "Posts", url: "/" + lang + "/posts/" },
-      "diving-how-to-guides-koh-chang": { label: "How to Guides", url: "/" + lang + "/posts/diving-how-to-guides-koh-chang/" },
-      "koh-chang-diving-travel-guides": { label: "Travel Guides", url: "/" + lang + "/posts/koh-chang-diving-travel-guides/" },
-      "marine-life-koh-chang": { label: "Marine Life", url: "/" + lang + "/posts/marine-life-koh-chang/" },
-      "scuba-knowledge": { label: "Scuba Knowledge", url: "/" + lang + "/posts/scuba-knowledge/" },
-      "straight-talk": { label: "Straight Talk", url: "/" + lang + "/posts/straight-talk/" },
-      "tips-and-tricks": { label: "Tips & Tricks", url: "/" + lang + "/posts/tips-and-tricks/" },
+      posts: { label: "Posts", url: "/" + lang + "/posts/" },
+      "diving-how-to-guides-koh-chang": {
+        label: "How to Guides",
+        url: "/" + lang + "/posts/diving-how-to-guides-koh-chang/",
+      },
+      "koh-chang-diving-travel-guides": {
+        label: "Travel Guides",
+        url: "/" + lang + "/posts/koh-chang-diving-travel-guides/",
+      },
+      "marine-life-koh-chang": {
+        label: "Marine Life",
+        url: "/" + lang + "/posts/marine-life-koh-chang/",
+      },
+      "scuba-knowledge": {
+        label: "Scuba Knowledge",
+        url: "/" + lang + "/posts/scuba-knowledge/",
+      },
+      "straight-talk": {
+        label: "Straight Talk",
+        url: "/" + lang + "/posts/straight-talk/",
+      },
+      "tips-and-tricks": {
+        label: "Tips & Tricks",
+        url: "/" + lang + "/posts/tips-and-tricks/",
+      },
       "dive-sites": { label: "Dive Sites", url: "/" + lang + "/dive-sites/" },
-      "blueberry-hill": { label: "Blueberry Hill", url: "/" + lang + "/dive-sites/blueberry-hill/" },
-      "hin-luk-bat": { label: "Hin Luk Bat", url: "/" + lang + "/dive-sites/hin-luk-bat/" },
-      "hin-pray-nam": { label: "Hin Pray Nam", url: "/" + lang + "/dive-sites/hin-pray-nam/" },
-      "hin-raab-north": { label: "Hin Raab North", url: "/" + lang + "/dive-sites/hin-raab-north/" },
-      "hin-raab-south": { label: "Hin Raab South", url: "/" + lang + "/dive-sites/hin-raab-south/" },
-      "hin-rua-tek": { label: "Hin Rua Tek", url: "/" + lang + "/dive-sites/hin-rua-tek/" },
-      "hin-sam-sao": { label: "Hin Sam Sao", url: "/" + lang + "/dive-sites/hin-sam-sao/" },
-      "htms-chang-wreck": { label: "HTMS Chang Wreck", url: "/" + lang + "/dive-sites/htms-chang-wreck/" },
-      "koh-rang-pinnacle": { label: "Koh Rang Pinnacle", url: "/" + lang + "/dive-sites/koh-rang-pinnacle/" },
-      "koho-maru-5": { label: "Koho Maru 5", url: "/" + lang + "/dive-sites/koho-maru-5/" },
-      "phutthayotfa-chulalok-wreck-koh-chang": { label: "Phutthayotfa Chulalok Wreck", url: "/" + lang + "/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/" },
-      "secret-reef": { label: "Secret Reef", url: "/" + lang + "/dive-sites/secret-reef/" },
-      "t11-wreck": { label: "T11 Wreck", url: "/" + lang + "/dive-sites/t11-wreck/" },
-      "dive-site-map-koh-chang": { label: "Dive Site Map", url: "/" + lang + "/dive-sites/dive-site-map-koh-chang/" },
-      "faqs": { label: "FAQs", url: "/" + lang + "/faqs/" },
-      "faq-diving-health-safety-thailand": { label: "Health & Safety", url: "/" + lang + "/faqs/faq-diving-health-safety-thailand/" },
-      "faq-equipment-logistics-koh-chang": { label: "Equipment & Logistics", url: "/" + lang + "/faqs/faq-equipment-logistics-koh-chang/" },
-      "faq-booking-payment-scuba-koh-chang": { label: "Booking & Payment", url: "/" + lang + "/faqs/faq-booking-payment-scuba-koh-chang/" },
-      "faq-diving-koh-chang": { label: "Diving", url: "/" + lang + "/faqs/faq-diving-koh-chang/" },
-      "faq-general-questions-koh-chang": { label: "General Questions", url: "/" + lang + "/faqs/faq-general-questions-koh-chang/" },
-      "faq-try-dive-fun-dives-koh-chang": { label: "Try Dive & Fun Dives", url: "/" + lang + "/faqs/faq-try-dive-fun-dives-koh-chang/" },
-      "faq-getting-here-accommodation": { label: "Getting Here & Accommodation", url: "/" + lang + "/faqs/faq-getting-here-accommodation/" },
-      "faq-dive-courses-koh-chang": { label: "Dive Courses", url: "/" + lang + "/faqs/faq-dive-courses-koh-chang/" },
-      "about": { label: "About", url: "/" + lang + "/about/" },
-      "contact": { label: "Contact", url: "/" + lang + "/contact/" },
-      "prices": { label: "Prices", url: "/" + lang + "/prices/" },
-      "privacy-policy": { label: "Privacy Policy", url: "/" + lang + "/privacy-policy/" },
-      "refund-policy": { label: "Refund Policy", url: "/" + lang + "/refund-policy/" },
-      "terms-and-conditions": { label: "Terms & Conditions", url: "/" + lang + "/terms-and-conditions/" },
-      "videos": { label: "Videos", url: "/" + lang + "/videos/" },
-      "weather": { label: "Weather", url: "/" + lang + "/weather/" },
+      "blueberry-hill": {
+        label: "Blueberry Hill",
+        url: "/" + lang + "/dive-sites/blueberry-hill/",
+      },
+      "hin-luk-bat": {
+        label: "Hin Luk Bat",
+        url: "/" + lang + "/dive-sites/hin-luk-bat/",
+      },
+      "hin-pray-nam": {
+        label: "Hin Pray Nam",
+        url: "/" + lang + "/dive-sites/hin-pray-nam/",
+      },
+      "hin-raab-north": {
+        label: "Hin Raab North",
+        url: "/" + lang + "/dive-sites/hin-raab-north/",
+      },
+      "hin-raab-south": {
+        label: "Hin Raab South",
+        url: "/" + lang + "/dive-sites/hin-raab-south/",
+      },
+      "hin-rua-tek": {
+        label: "Hin Rua Tek",
+        url: "/" + lang + "/dive-sites/hin-rua-tek/",
+      },
+      "hin-sam-sao": {
+        label: "Hin Sam Sao",
+        url: "/" + lang + "/dive-sites/hin-sam-sao/",
+      },
+      "htms-chang-wreck": {
+        label: "HTMS Chang Wreck",
+        url: "/" + lang + "/dive-sites/htms-chang-wreck/",
+      },
+      "koh-rang-pinnacle": {
+        label: "Koh Rang Pinnacle",
+        url: "/" + lang + "/dive-sites/koh-rang-pinnacle/",
+      },
+      "koho-maru-5": {
+        label: "Koho Maru 5",
+        url: "/" + lang + "/dive-sites/koho-maru-5/",
+      },
+      "phutthayotfa-chulalok-wreck-koh-chang": {
+        label: "Phutthayotfa Chulalok Wreck",
+        url: "/" + lang + "/dive-sites/phutthayotfa-chulalok-wreck-koh-chang/",
+      },
+      "secret-reef": {
+        label: "Secret Reef",
+        url: "/" + lang + "/dive-sites/secret-reef/",
+      },
+      "t11-wreck": {
+        label: "T11 Wreck",
+        url: "/" + lang + "/dive-sites/t11-wreck/",
+      },
+      "dive-site-map-koh-chang": {
+        label: "Dive Site Map",
+        url: "/" + lang + "/dive-sites/dive-site-map-koh-chang/",
+      },
+      faqs: { label: "FAQs", url: "/" + lang + "/faqs/" },
+      "faq-diving-health-safety-thailand": {
+        label: "Health & Safety",
+        url: "/" + lang + "/faqs/faq-diving-health-safety-thailand/",
+      },
+      "faq-equipment-logistics-koh-chang": {
+        label: "Equipment & Logistics",
+        url: "/" + lang + "/faqs/faq-equipment-logistics-koh-chang/",
+      },
+      "faq-booking-payment-scuba-koh-chang": {
+        label: "Booking & Payment",
+        url: "/" + lang + "/faqs/faq-booking-payment-scuba-koh-chang/",
+      },
+      "faq-diving-koh-chang": {
+        label: "Diving",
+        url: "/" + lang + "/faqs/faq-diving-koh-chang/",
+      },
+      "faq-general-questions-koh-chang": {
+        label: "General Questions",
+        url: "/" + lang + "/faqs/faq-general-questions-koh-chang/",
+      },
+      "faq-try-dive-fun-dives-koh-chang": {
+        label: "Try Dive & Fun Dives",
+        url: "/" + lang + "/faqs/faq-try-dive-fun-dives-koh-chang/",
+      },
+      "faq-getting-here-accommodation": {
+        label: "Getting Here & Accommodation",
+        url: "/" + lang + "/faqs/faq-getting-here-accommodation/",
+      },
+      "faq-dive-courses-koh-chang": {
+        label: "Dive Courses",
+        url: "/" + lang + "/faqs/faq-dive-courses-koh-chang/",
+      },
+      about: { label: "About", url: "/" + lang + "/about/" },
+      contact: { label: "Contact", url: "/" + lang + "/contact/" },
+      prices: { label: "Prices", url: "/" + lang + "/prices/" },
+      "privacy-policy": {
+        label: "Privacy Policy",
+        url: "/" + lang + "/privacy-policy/",
+      },
+      "refund-policy": {
+        label: "Refund Policy",
+        url: "/" + lang + "/refund-policy/",
+      },
+      "terms-and-conditions": {
+        label: "Terms & Conditions",
+        url: "/" + lang + "/terms-and-conditions/",
+      },
+      videos: { label: "Videos", url: "/" + lang + "/videos/" },
+      weather: { label: "Weather", url: "/" + lang + "/weather/" },
     };
 
     let html = `<a href="${baseHref}">🏠 ${homeLabel}</a>`;
     let cumulative = "";
 
     // Prüfe ob alte URL-Struktur verwendet wird und leite um
-    const hasOldStructure = path.includes("store") || path.includes("category") || path.includes("product");
+    const hasOldStructure =
+      path.includes("store") ||
+      path.includes("category") ||
+      path.includes("product");
     if (hasOldStructure) {
       // Erstelle neue URL basierend auf dem letzten Segment
       const lastSegment = path[path.length - 1];
@@ -135,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       cumulative += "/" + segment;
       const isLastSegment = index === path.length - 1;
-      
+
       // Prüfe Mapping
       const mapping = segmentMapping[segment];
       if (mapping) {
@@ -473,143 +680,166 @@ function closeLightbox() {
 
 // Global function - DIRECT CONTAINER APPROACH (no more nested containers!)
 function loadYouTubeVideo(element, videoId, title) {
-  console.log('[YouTube Lite] 🎬 Direct container approach for:', videoId);
-  
+  console.log("[YouTube Lite] 🎬 Direct container approach for:", videoId);
+
   if (!element || !videoId) {
-    console.error('[YouTube Lite] ❌ Missing element or videoId');
+    console.error("[YouTube Lite] ❌ Missing element or videoId");
     return;
   }
-  
+
   // The element IS the video container now (no more nested searching!)
   const videoContainer = element;
-  
-  if (videoContainer.classList.contains('lyt-activated')) {
-    console.log('[YouTube Lite] ⚠️ Video already loaded');
+
+  if (videoContainer.classList.contains("lyt-activated")) {
+    console.log("[YouTube Lite] ⚠️ Video already loaded");
     return;
   }
-  
-  console.log('[YouTube Lite] 🚀 Starting direct replacement...');
-  
+
+  console.log("[YouTube Lite] 🚀 Starting direct replacement...");
+
   // Create iframe
-  const iframe = document.createElement('iframe');
+  const iframe = document.createElement("iframe");
   iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-  iframe.title = title || 'YouTube Video';
-  iframe.frameBorder = '0';
+  iframe.title = title || "YouTube Video";
+  iframe.frameBorder = "0";
   iframe.allowFullscreen = true;
-  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-  
+  iframe.allow =
+    "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+
   // Direct replacement - no background image interference
-  videoContainer.innerHTML = '';
-  videoContainer.style.backgroundImage = 'none';
+  videoContainer.innerHTML = "";
+  videoContainer.style.backgroundImage = "none";
   videoContainer.appendChild(iframe);
-  videoContainer.classList.add('lyt-activated');
-  
-  console.log('[YouTube Lite] ✅ Direct replacement completed - no more nested containers!');
+  videoContainer.classList.add("lyt-activated");
+
+  console.log(
+    "[YouTube Lite] ✅ Direct replacement completed - no more nested containers!",
+  );
 }
 function initYouTubeLite() {
-  console.log('[YouTube Lite] Initializing...');
-  
+  console.log("[YouTube Lite] Initializing...");
+
   // Find all youtube-lite-embed elements
-  const youtubeLiteElements = document.querySelectorAll('.youtube-lite-embed');
-  
-  console.log('[YouTube Lite] Found', youtubeLiteElements.length, 'video elements');
-  
+  const youtubeLiteElements = document.querySelectorAll(".youtube-lite-embed");
+
+  console.log(
+    "[YouTube Lite] Found",
+    youtubeLiteElements.length,
+    "video elements",
+  );
+
   youtubeLiteElements.forEach((element, index) => {
-    const videoId = element.getAttribute('data-videoid');
-    const title = element.getAttribute('data-title') || 'YouTube Video';
-    
-    console.log(`[YouTube Lite] Processing video ${index + 1}:`, videoId, title);
-    
+    const videoId = element.getAttribute("data-videoid");
+    const title = element.getAttribute("data-title") || "YouTube Video";
+
+    console.log(
+      `[YouTube Lite] Processing video ${index + 1}:`,
+      videoId,
+      title,
+    );
+
     if (!videoId) {
-      console.warn('[YouTube Lite] No video ID found for element', element);
+      console.warn("[YouTube Lite] No video ID found for element", element);
       return;
     }
-    
+
     // Set background image (YouTube thumbnail)
     const thumbnailUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
     element.style.backgroundImage = `url("${thumbnailUrl}")`;
-    element.style.backgroundSize = 'cover';
-    element.style.backgroundPosition = 'center';
-    
+    element.style.backgroundSize = "cover";
+    element.style.backgroundPosition = "center";
+
     // Add fallback background color and text if thumbnail fails to load
-    element.style.backgroundColor = '#000';
-    element.style.color = '#fff';
-    element.style.display = 'flex';
-    element.style.alignItems = 'center';
-    element.style.justifyContent = 'center';
-    
-    console.log(`[YouTube Lite] Set thumbnail for video ${index + 1}:`, thumbnailUrl);
-    
+    element.style.backgroundColor = "#000";
+    element.style.color = "#fff";
+    element.style.display = "flex";
+    element.style.alignItems = "center";
+    element.style.justifyContent = "center";
+
+    console.log(
+      `[YouTube Lite] Set thumbnail for video ${index + 1}:`,
+      thumbnailUrl,
+    );
+
     // Remove any existing click handlers
     element.replaceWith(element.cloneNode(true));
-    const newElement = document.querySelectorAll('.youtube-lite-embed')[index];
-    
+    const newElement = document.querySelectorAll(".youtube-lite-embed")[index];
+
     // Add click handler to the element AND the play button
     function handleVideoClick(e) {
       e.preventDefault();
       e.stopPropagation();
-      
-      console.log(`[YouTube Lite] Click detected on video ${index + 1}:`, videoId);
-      
-      if (newElement.classList.contains('lyt-activated')) {
+
+      console.log(
+        `[YouTube Lite] Click detected on video ${index + 1}:`,
+        videoId,
+      );
+
+      if (newElement.classList.contains("lyt-activated")) {
         console.log(`[YouTube Lite] Video ${index + 1} already activated`);
         return;
       }
-      
+
       console.log(`[YouTube Lite] Loading video ${index + 1}:`, videoId);
-      
+
       // Clear existing content
-      newElement.innerHTML = '';
-      
-      const iframe = document.createElement('iframe');
-      iframe.width = '100%';
-      iframe.height = '100%';
+      newElement.innerHTML = "";
+
+      const iframe = document.createElement("iframe");
+      iframe.width = "100%";
+      iframe.height = "100%";
       iframe.title = title;
-      iframe.frameBorder = '0';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.frameBorder = "0";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       iframe.allowFullscreen = true;
       iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-      iframe.style.position = 'absolute';
-      iframe.style.top = '0';
-      iframe.style.left = '0';
-      iframe.style.width = '100%';
-      iframe.style.height = '100%';
-      iframe.style.border = 'none';
-      iframe.style.zIndex = '10';
-      
+      iframe.style.position = "absolute";
+      iframe.style.top = "0";
+      iframe.style.left = "0";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
+      iframe.style.border = "none";
+      iframe.style.zIndex = "10";
+
       newElement.appendChild(iframe);
-      newElement.classList.add('lyt-activated');
-      
+      newElement.classList.add("lyt-activated");
+
       console.log(`[YouTube Lite] Successfully loaded video ${index + 1}`);
     }
-    
+
     // Add click handler to container
-    newElement.addEventListener('click', handleVideoClick);
-    
+    newElement.addEventListener("click", handleVideoClick);
+
     // Add click handler to play button
-    const playButton = newElement.querySelector('.lty-playbtn');
+    const playButton = newElement.querySelector(".lty-playbtn");
     if (playButton) {
-      playButton.addEventListener('click', handleVideoClick);
-      console.log(`[YouTube Lite] Added click handler to play button ${index + 1}`);
+      playButton.addEventListener("click", handleVideoClick);
+      console.log(
+        `[YouTube Lite] Added click handler to play button ${index + 1}`,
+      );
     }
   });
 }
 
 // Initialize on DOM load
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('[YouTube Lite] DOM loaded, initializing...');
-  console.log('[YouTube Lite] loadYouTubeVideo function available:', typeof loadYouTubeVideo === 'function');
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("[YouTube Lite] DOM loaded, initializing...");
+  console.log(
+    "[YouTube Lite] loadYouTubeVideo function available:",
+    typeof loadYouTubeVideo === "function",
+  );
   initYouTubeLite();
 });
 
 // Also initialize after delays to catch any dynamic content
 setTimeout(() => {
-  console.log('[YouTube Lite] Secondary initialization after 500ms...');
+  console.log("[YouTube Lite] Secondary initialization after 500ms...");
   initYouTubeLite();
 }, 500);
 
 setTimeout(() => {
-  console.log('[YouTube Lite] Tertiary initialization after 1000ms...');
+  console.log("[YouTube Lite] Tertiary initialization after 1000ms...");
   initYouTubeLite();
 }, 1000);
 
@@ -617,25 +847,25 @@ setTimeout(() => {
 window.loadYouTubeVideo = loadYouTubeVideo;
 
 // Test function for console debugging
-window.testYouTubeLoad = function() {
-  console.log('[YouTube Test] 🧪 Testing YouTube loading...');
-  const testElement = document.querySelector('.youtube-lite-embed');
+window.testYouTubeLoad = function () {
+  console.log("[YouTube Test] 🧪 Testing YouTube loading...");
+  const testElement = document.querySelector(".youtube-lite-embed");
   if (testElement) {
-    console.log('[YouTube Test] 📍 Found test element:', testElement);
-    loadYouTubeVideo(testElement, 'gnjOODLvkqo', 'Test Video');
+    console.log("[YouTube Test] 📍 Found test element:", testElement);
+    loadYouTubeVideo(testElement, "gnjOODLvkqo", "Test Video");
   } else {
-    console.error('[YouTube Test] ❌ No test element found');
+    console.error("[YouTube Test] ❌ No test element found");
   }
 };
 
 // Click test function
-window.testClick = function() {
-  console.log('[YouTube Test] 🖱️ Simulating click...');
-  const element = document.querySelector('.youtube-lite-embed');
+window.testClick = function () {
+  console.log("[YouTube Test] 🖱️ Simulating click...");
+  const element = document.querySelector(".youtube-lite-embed");
   if (element) {
     element.click();
   } else {
-    console.error('[YouTube Test] ❌ No element to click');
+    console.error("[YouTube Test] ❌ No element to click");
   }
 };
 
@@ -643,20 +873,26 @@ window.testClick = function() {
 // ---------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   // Add loading="lazy" to all images in .three.columns containers (tiles)
-  const tileImages = document.querySelectorAll('.three.columns img');
-  tileImages.forEach(function(img) {
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
+  const tileImages = document.querySelectorAll(".three.columns img");
+  tileImages.forEach(function (img) {
+    if (!img.hasAttribute("loading")) {
+      img.setAttribute("loading", "lazy");
     }
   });
 
   // Add loading="lazy" to all images in .row containers that don't have it
-  const rowImages = document.querySelectorAll('.row img');
-  rowImages.forEach(function(img) {
-    if (!img.hasAttribute('loading') && !img.closest('.hero')) {
-      img.setAttribute('loading', 'lazy');
+  const rowImages = document.querySelectorAll(".row img");
+  rowImages.forEach(function (img) {
+    if (!img.hasAttribute("loading") && !img.closest(".hero")) {
+      img.setAttribute("loading", "lazy");
     }
   });
 
-  console.log('[PERF] Lazy loading added to', tileImages.length, 'tile images and', rowImages.length, 'row images');
+  console.log(
+    "[PERF] Lazy loading added to",
+    tileImages.length,
+    "tile images and",
+    rowImages.length,
+    "row images",
+  );
 });
