@@ -121,9 +121,15 @@ function shouldExcludeHtmlFile(filePath) {
       return true;
     }
     
-    // Check for JavaScript redirects
-    const redirectRegex = /window\.location\.(replace|href)\s*=|location\.replace\s*\(/i;
+    // Check for JavaScript redirects (but exclude mailto: links)
+    const redirectRegex = /window\.location\.(replace|href)\s*=\s*["'](?!mailto:)(https?:|\.|\/)/i;
     if (redirectRegex.test(content)) {
+      console.log(`  🔄 Excluding (redirect): ${filePath}`);
+      return true;
+    }
+    // Also check for location.replace with http/https (but not mailto)
+    const locationReplaceRegex = /location\.replace\s*\(\s*["'](?!mailto:)(https?:|\.|\/)/i;
+    if (locationReplaceRegex.test(content)) {
       console.log(`  🔄 Excluding (redirect): ${filePath}`);
       return true;
     }
