@@ -1,0 +1,1320 @@
+{
+  "summary": {
+    "total_images": 1091,
+    "unique_images": 271,
+    "categories": {
+      "CUSTOM_500x492": 44,
+      "THUMBNAIL": 892,
+      "CUSTOM_723x91": 3,
+      "STANDARD_600x400": 112,
+      "CUSTOM_800x495": 12,
+      "HERO_2580x1460": 4,
+      "CUSTOM_1200x628": 3,
+      "CUSTOM_1024x1024": 12,
+      "CUSTOM_800x600": 6,
+      "CUSTOM_1600x200": 3
+    }
+  },
+  "images": [
+    {
+      "html_file": "./410/index.html",
+      "src": "img/logos/logo_cdc.webp",
+      "dimensions": [
+        500,
+        492
+      ],
+      "category": "CUSTOM_500x492",
+      "recommended_size": [
+        500,
+        492
+      ]
+    },
+    {
+      "html_file": "./de/index.html",
+      "src": "img/logos/logo_cdc.webp",
+      "dimensions": [
+        500,
+        492
+      ],
+      "category": "CUSTOM_500x492",
+      "recommended_size": [
+        500,
+        492
+      ]
+    },
+    {
+      "html_file": "./de/prices/index.html",
+      "src": "img/logos/logo_cdc.webp",
+      "dimensions": [
+        500,
+        492
+      ],
+      "category": "CUSTOM_500x492",
+      "recommended_size": [
+        500,
+        492
+      ]
+    },
+    {
+      "html_file": "./de/posts/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-open-advanced/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-rescue-diver/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-specialty-courses/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/diving-how-to-guides-koh-chang/how-to-advanced-course/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/about-underwater-photography/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/reel-guideline/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/diving-activities/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/which-course/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/open-water-duration/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/deep-diving/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/tips-and-tricks/deep-diving/index.html",
+      "src": "img/posts/dan-shortterm-digitalbanner.jpg.webp",
+      "dimensions": [
+        723,
+        91
+      ],
+      "category": "CUSTOM_723x91",
+      "recommended_size": [
+        723,
+        91
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/dive-boat_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/padi-vs-sdi-tdi_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/diving-emergency_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/why-you-should-book-your-diving-adventure-in-koh-chang-in-advance_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/ocean-climate_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/diving-social-media_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/index.html",
+      "src": "img/posts/the-path-to-becoming-a-dive-professional_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/book-in-advance/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/ocean-climate/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/dive-smart-bonus/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/sustainable-diving/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/sustainable-diving/index.html",
+      "src": "img/posts/pirm-udom-sub-side.png.webp",
+      "dimensions": [
+        800,
+        495
+      ],
+      "category": "CUSTOM_800x495",
+      "recommended_size": [
+        800,
+        495
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/sustainable-diving/index.html",
+      "src": "img/posts/pirm-udom-sub-front.png.webp",
+      "dimensions": [
+        800,
+        495
+      ],
+      "category": "CUSTOM_800x495",
+      "recommended_size": [
+        800,
+        495
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/sustainable-diving/index.html",
+      "src": "img/posts/pirm-udom-sub-back.png.webp",
+      "dimensions": [
+        800,
+        495
+      ],
+      "category": "CUSTOM_800x495",
+      "recommended_size": [
+        800,
+        495
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/sustainable-diving/index.html",
+      "src": "img/posts/boat-overview-top.png.webp",
+      "dimensions": [
+        800,
+        495
+      ],
+      "category": "CUSTOM_800x495",
+      "recommended_size": [
+        800,
+        495
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/dive-professional-training/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/emergency-plan/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/diving-social-media/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/padi-vs-sdi-tdi/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/straight-talk/diving-myths/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/koh-chang-diving-travel-guides/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/koh-chang-diving-travel-guides/index.html",
+      "src": "img/posts/gulf-vs-andemann_big.webp",
+      "dimensions": [
+        2580,
+        1460
+      ],
+      "category": "HERO_2580x1460",
+      "recommended_size": [
+        2580,
+        1460
+      ]
+    },
+    {
+      "html_file": "./de/posts/koh-chang-diving-travel-guides/beginner-guide/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/koh-chang-diving-travel-guides/travel-guide/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-nudibranch/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-blacktip-reef-shark/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-green-sea-turtle/index.html",
+      "src": "img/posts/see_turtle_htms_chang.webp",
+      "dimensions": [
+        1200,
+        628
+      ],
+      "category": "CUSTOM_1200x628",
+      "recommended_size": [
+        1200,
+        628
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-titan-triggerfish/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-batfish/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life-barracuda/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/logos/logo_cdc_white.webp",
+      "dimensions": [
+        100,
+        100
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        100,
+        100
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/dugong-dugon.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/chinese-white-dolphin.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/irrawaddy-dolphin.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/spinner-dolphin.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/whale-shark_small.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/grey-reef-shark.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/blacktip-reef-shark.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/tawny-nurse-shark.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/eagle-ray.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/blue-spottet-maskray.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/giant-travally.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/golden-travally.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/batfish-in-koh-chang_small.webp",
+      "dimensions": [
+        600,
+        400
+      ],
+      "category": "STANDARD_600x400",
+      "recommended_size": [
+        600,
+        400
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/great-baracuda.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/yellow-tail-baracuda.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/chevron-barracuda.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/keeltail-needlefish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/redbelly-yellowtail-fusilier.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/coral-rabbitfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/clarks-anemonefish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/fire-clownfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/skunk-clownfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/scissortail-sergeant.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/domino-damselfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/sapphire-damsel.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/black-bar-chromis.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/stocky-anthias.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/purple-anthis.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/yellow-striped-cardinalfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/pajama-cardinalfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/blackfin-squirrelfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/doubletooth-soldierfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/threespot-squirrelfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/crown-squirrelfish.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/triplrtail-wrasse.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/african-coris.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/sling-jaw-wrasse.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/pastel-ringwrasse.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/emperor-red-snapper.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/mangrove-red-snapper.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/sailfin-snapper.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/bluestripe-snapper.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    },
+    {
+      "html_file": "./de/posts/marine-life-koh-chang/marine-life/index.html",
+      "src": "img/posts/harlequin-sweetlips.jpg",
+      "dimensions": [
+        200,
+        200
+      ],
+      "category": "THUMBNAIL",
+      "recommended_size": [
+        200,
+        200
+      ]
+    }
+  ]
+}
