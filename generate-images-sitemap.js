@@ -34,6 +34,44 @@ function isHtmlFile(filePath) {
   return config.htmlExtensions.includes(ext);
 }
 
+/**
+ * Check if HTML file should be excluded from sitemap
+ * Same logic as generate-sitemap.js
+ */
+function shouldExcludeHtmlFile(filePath, htmlContent) {
+  // Check for noindex meta tag
+  const noindexRegex =
+    /<meta[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex[^"']*["'][^>]*>/i;
+  if (noindexRegex.test(htmlContent)) {
+    return true;
+  }
+
+  // Check for JavaScript redirects (but exclude mailto: links)
+  const redirectRegex =
+    /window\.location\.(replace|href)\s*=\s*["'](?!mailto:)(https?:|\.|\/)/i;
+  if (redirectRegex.test(htmlContent)) {
+    return true;
+  }
+
+  // Check for 404/410 pages (by path or title)
+  if (filePath.includes("/404/") || filePath.includes("/410/")) {
+    return true;
+  }
+
+  // Check for explicit 404 page title
+  const title404Regex = /<title[^>]*>.*404.*<\/title>/i;
+  if (title404Regex.test(htmlContent)) {
+    return true;
+  }
+
+  // Exclude search pages
+  if (filePath.includes("/search/")) {
+    return true;
+  }
+
+  return false;
+}
+
 function extractImagesFromHtml(htmlContent, pageUrl) {
   const images = [];
   
@@ -109,6 +147,12 @@ function scanForHtmlPages(dir, pages = []) {
       // Read HTML content
       try {
         const htmlContent = fs.readFileSync(fullPath, 'utf-8');
+        
+        // Check if page should be excluded (noindex, redirects, 404, search)
+        if (shouldExcludeHtmlFile(fullPath, htmlContent)) {
+          continue;
+        }
+        
         const images = extractImagesFromHtml(htmlContent, pageUrl);
         
         // Only add pages that have images

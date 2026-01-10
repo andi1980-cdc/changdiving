@@ -136,11 +136,16 @@ function shouldExcludeHtmlFile(filePath) {
     }
 
     // Check for 404 pages (by path or title)
-    if (
-      filePath.includes("/404/") ||
-      (content.includes("404") && content.includes("not found"))
-    ) {
-      console.log(`  🚫 Excluding (404 page): ${filePath}`);
+    // Only exclude if it's actually in a 404 directory or has explicit 404 title
+    if (filePath.includes("/404/") || filePath.includes("/410/")) {
+      console.log(`  🚫 Excluding (404/410 page): ${filePath}`);
+      return true;
+    }
+    
+    // Check for explicit 404 page title (not just "not found" text in content)
+    const title404Regex = /<title[^>]*>.*404.*<\/title>/i;
+    if (title404Regex.test(content)) {
+      console.log(`  🚫 Excluding (404 in title): ${filePath}`);
       return true;
     }
 
