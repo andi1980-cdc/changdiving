@@ -2,7 +2,8 @@
 
 /**
  * Images Sitemap Generator for Chang Diving Center
- * Scans all image files and generates XML sitemap for images
+ * Scans HTML files and extracts images, grouping them by page
+ * Follows Google's Image Sitemap guidelines
  */
 
 const fs = require("fs");
@@ -12,15 +13,14 @@ const path = require("path");
 const config = {
   baseUrl: "https://changdiving.com",
   outputFile: "sitemap-images.xml",
-  imageExtensions: [".jpg", ".jpeg", ".png", ".webp", ".gif"],
+  htmlExtensions: [".html"],
   excludePatterns: [
     "node_modules",
     ".git",
     "docs",
     "js",
     "fonts",
-    "style.css",
-    "robots.txt",
+    "css",
     "_redirects.txt",
   ],
 };
@@ -29,68 +29,150 @@ function shouldExclude(filePath) {
   return config.excludePatterns.some((pattern) => filePath.includes(pattern));
 }
 
-function isImageFile(filePath) {
+function isHtmlFile(filePath) {
   const ext = path.extname(filePath).toLowerCase();
-  return config.imageExtensions.includes(ext);
+  return config.htmlExtensions.includes(ext);
 }
 
-function scanForImages(dir, images = []) {
+function extractImagesFromHtml(htmlContent, pageUrl) {
+  const images = [];
+  
+  // Match all img tags
+  const imgRegex = /<img[^>]+>/gi;
+  const imgTags = htmlContent.match(imgRegex) || [];
+  
+  for (const imgTag of imgTags) {
+    // Extract src attribute
+    const srcMatch = imgTag.match(/src=["']([^"']+)["']/i);
+    if (!srcMatch) continue;
+    
+    let imageSrc = srcMatch[1];
+    
+    // Skip external images, data URIs, and placeholders
+    if (imageSrc.startsWith('http') || 
+        imageSrc.startsWith('data:') || 
+        imageSrc.startsWith('//')) {
+      continue;
+    }
+    
+    // Convert relative paths to absolute URLs
+    if (imageSrc.startsWith('/')) {
+      imageSrc = `${config.baseUrl}${imageSrc}`;
+    } else {
+      // Handle relative paths
+      const pageDir = path.dirname(pageUrl.replace(config.baseUrl, ''));
+      const absolutePath = path.join(pageDir, imageSrc).replace(/\\/g, '/');
+      imageSrc = `${config.baseUrl}${absolutePath}`;
+    }
+    
+    // Extract alt text for title
+    const altMatch = imgTag.match(/alt=["']([^"']+)["']/i);
+    const altText = altMatch ? altMatch[1] : '';
+    
+    // Extract title attribute if present
+    const titleMatch = imgTag.match(/title=["']([^"']+)["']/i);
+    const titleText = titleMatch ? titleMatch[1] : '';
+    
+    images.push({
+      loc: imageSrc,
+      title: titleText || altText || generateImageTitle(imageSrc),
+      caption: altText || generateImageCaption(imageSrc),
+    });
+  }
+  
+  return images;
+}
+
+function scanForHtmlPages(dir, pages = []) {
   const items = fs.readdirSync(dir);
 
   for (const item of items) {
     const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-
+    
     if (shouldExclude(fullPath)) {
       continue;
     }
+    
+    const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
-      scanForImages(fullPath, images);
-    } else if (isImageFile(fullPath)) {
+      scanForHtmlPages(fullPath, pages);
+    } else if (isHtmlFile(fullPath)) {
       // Convert file path to URL
       const relativePath = path.relative(".", fullPath);
       const urlPath = relativePath.replace(/\\/g, "/");
-      const imageUrl = `${config.baseUrl}/${urlPath}`;
-
-      // Get file stats for lastmod
-      const stats = fs.statSync(fullPath);
-      const lastmod = stats.mtime.toISOString().split("T")[0];
-
-      images.push({
-        url: imageUrl,
-        lastmod,
-      });
+      let pageUrl = `${config.baseUrl}/${urlPath}`;
+      
+      // Clean up URL
+      pageUrl = pageUrl.replace('/index.html', '/');
+      
+      // Read HTML content
+      try {
+        const htmlContent = fs.readFileSync(fullPath, 'utf-8');
+        const images = extractImagesFromHtml(htmlContent, pageUrl);
+        
+        // Only add pages that have images
+        if (images.length > 0) {
+          pages.push({
+            url: pageUrl,
+            images: images,
+            lastmod: stat.mtime.toISOString().split("T")[0],
+          });
+        }
+      } catch (error) {
+        console.warn(`⚠️  Could not read ${fullPath}: ${error.message}`);
+      }
     }
   }
 
-  return images;
+  return pages;
 }
 
-function generateImagesSitemap(images) {
+function generateImagesSitemap(pages) {
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 `;
 
-  // Sort images by URL
-  images.sort((a, b) => a.url.localeCompare(b.url));
+  // Sort pages by URL
+  pages.sort((a, b) => a.url.localeCompare(b.url));
 
-  for (const imageData of images) {
+  for (const page of pages) {
     xml += `  <url>
-    <loc>${imageData.url}</loc>
-    <lastmod>${imageData.lastmod}</lastmod>
-    <image:image>
-      <image:loc>${imageData.url}</image:loc>
-      <image:title>${generateImageTitle(imageData.url)}</image:title>
-      <image:caption>${generateImageCaption(imageData.url)}</image:caption>
-    </image:image>
-  </url>
+    <loc>${escapeXml(page.url)}</loc>
+    <lastmod>${page.lastmod}</lastmod>
+`;
+    
+    // Add all images for this page
+    for (const image of page.images) {
+      xml += `    <image:image>
+      <image:loc>${escapeXml(image.loc)}</image:loc>
+      <image:title>${escapeXml(image.title)}</image:title>
+`;
+      if (image.caption) {
+        xml += `      <image:caption>${escapeXml(image.caption)}</image:caption>
+`;
+      }
+      xml += `    </image:image>
+`;
+    }
+    
+    xml += `  </url>
 `;
   }
 
   xml += "</urlset>";
   return xml;
+}
+
+function escapeXml(text) {
+  if (!text) return '';
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
 }
 
 function generateImageTitle(imageUrl) {
@@ -108,16 +190,16 @@ function generateImageTitle(imageUrl) {
 
   // Add context based on folder
   if (folder === "courses") {
-    return `${readableName} - Scuba Diving Course Koh Chang`;
+    return `${readableName} - Scuba Diving Course`;
   } else if (folder === "dive-sites") {
-    return `${readableName} - Koh Chang Dive Site`;
+    return `${readableName} - Dive Site`;
   } else if (folder === "posts") {
-    return `${readableName} - Diving Blog Koh Chang`;
+    return `${readableName} - Diving Blog`;
   } else if (folder === "home") {
-    return `${readableName} - Chang Diving Center`;
+    return `${readableName} - Chang Diving`;
   }
 
-  return `${readableName} - Chang Diving Koh Chang`;
+  return readableName;
 }
 
 function generateImageCaption(imageUrl) {
@@ -126,30 +208,35 @@ function generateImageCaption(imageUrl) {
   const folder = urlParts[urlParts.length - 2];
 
   if (folder === "courses") {
-    return "Professional scuba diving courses and training in Koh Chang, Thailand";
+    return "Scuba diving courses and training in Koh Chang";
   } else if (folder === "dive-sites") {
-    return "Beautiful coral reefs and marine life at Koh Chang dive sites";
+    return "Dive sites and marine life in Koh Chang";
   } else if (folder === "posts") {
-    return "Diving tips, guides and underwater photography from Koh Chang";
-  } else if (folder === "home") {
-    return "Chang Diving Center - Your trusted scuba diving partner in Koh Chang";
+    return "Diving guides and tips from Koh Chang";
   }
 
-  return "Scuba diving adventures and underwater exploration in Koh Chang, Thailand";
+  return "Chang Diving Center - Koh Chang, Thailand";
 }
 
-function generateImageStats(images) {
-  const stats = {
-    total: images.length,
-    byExtension: {},
-  };
-
-  for (const image of images) {
-    const ext = path.extname(image.url).toLowerCase();
-    stats.byExtension[ext] = (stats.byExtension[ext] || 0) + 1;
+function generateStats(pages) {
+  let totalImages = 0;
+  const imageFormats = {};
+  
+  for (const page of pages) {
+    totalImages += page.images.length;
+    
+    for (const image of page.images) {
+      const ext = path.extname(image.loc).toLowerCase();
+      imageFormats[ext] = (imageFormats[ext] || 0) + 1;
+    }
   }
-
-  return stats;
+  
+  return {
+    totalPages: pages.length,
+    totalImages: totalImages,
+    avgImagesPerPage: (totalImages / pages.length).toFixed(2),
+    imageFormats: imageFormats,
+  };
 }
 
 // Main execution
@@ -157,34 +244,42 @@ console.log("🖼️  Chang Diving Center Images Sitemap Generator");
 console.log("===============================================");
 
 try {
-  console.log("📁 Scanning directories for image files...");
-  const images = scanForImages(".");
+  console.log("📁 Scanning HTML files for images...");
+  const pages = scanForHtmlPages(".");
 
-  console.log("\n📊 Image Statistics:");
-  const stats = generateImageStats(images);
-  console.log(`   Total images: ${stats.total}`);
-
-  for (const [ext, count] of Object.entries(stats.byExtension)) {
+  console.log("\n📊 Statistics:");
+  const stats = generateStats(pages);
+  console.log(`   Pages with images: ${stats.totalPages}`);
+  console.log(`   Total images: ${stats.totalImages}`);
+  console.log(`   Average images per page: ${stats.avgImagesPerPage}`);
+  
+  console.log("\n📷 Image formats:");
+  for (const [ext, count] of Object.entries(stats.imageFormats)) {
     console.log(`   ${ext}: ${count} images`);
   }
 
   console.log("\n📝 Generating images sitemap...");
-  const sitemapXml = generateImagesSitemap(images);
+  const sitemapXml = generateImagesSitemap(pages);
 
   fs.writeFileSync(config.outputFile, sitemapXml);
   console.log(`✅ Images sitemap generated: ${config.outputFile}`);
-  console.log(`🖼️  Total images: ${images.length}`);
-  console.log(`📍 Base URL: ${config.baseUrl}`);
 
   // Show file size
-  const stats_file = fs.statSync(config.outputFile);
-  const fileSize = (stats_file.size / 1024).toFixed(2);
+  const fileStats = fs.statSync(config.outputFile);
+  const fileSize = (fileStats.size / 1024).toFixed(2);
   console.log(`📊 File size: ${fileSize} KB`);
 
   console.log("\n✨ Features:");
-  console.log("   • Includes all image formats (jpg, jpeg, png, webp, gif)");
-  console.log("   • Proper XML namespace for images");
-  console.log("   • Last modified dates from file system");
+  console.log("   • Images grouped by HTML page (Google best practice)");
+  console.log("   • Includes image titles and captions from alt text");
+  console.log("   • Proper XML escaping for special characters");
+  console.log("   • Follows Google Image Sitemap guidelines");
+  
+  console.log("\n📌 Next steps:");
+  console.log("   1. Test sitemap: https://www.xml-sitemaps.com/validate-xml-sitemap.html");
+  console.log("   2. Submit to Google Search Console");
+  console.log("   3. Check robots.txt includes sitemap-images.xml");
+  
 } catch (error) {
   console.error("❌ Error generating images sitemap:", error);
   process.exit(1);
