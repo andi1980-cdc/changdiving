@@ -2447,3 +2447,144 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
     padding: 1rem;
   }
 }
+
+/* ============================================
+   INTERNAL LINKING - CLUSTER BOXES
+   ============================================ */
+
+.info-card,
+.cluster-box {
+  margin: 2.5em 0;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.info-card:hover,
+.cluster-box:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Safety Cluster - Red theme */
+.safety-cluster {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 182, 0.05),
+    rgba(207, 216, 220, 0.05)
+  );
+  border-left: 5px solid #e74c3c;
+}
+
+.safety-cluster h3 {
+  color: #e74c3c;
+}
+
+/* Equipment Cluster - Blue theme */
+.equipment-cluster {
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.05),
+    rgba(149, 165, 166, 0.05)
+  );
+  border-left: 5px solid #3498db;
+}
+
+.equipment-cluster h3 {
+  color: #3498db;
+}
+
+/* Advanced Cluster - Purple theme */
+.advanced-cluster {
+  background: linear-gradient(
+    135deg,
+    rgba(142, 68, 173, 0.05),
+    rgba(155, 89, 182, 0.05)
+  );
+  border-left: 5px solid #8e44ad;
+}
+
+.advanced-cluster h3 {
+  color: #8e44ad;
+}
+
+/* Dive Site Links - Green theme */
+.dive-site-links {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 182, 0.08),
+    rgba(46, 204, 113, 0.08)
+  );
+  border-left: 5px solid #27ae60;
+}
+
+.dive-site-links h3 {
+  color: #27ae60;
+}
+
+/* Typography for cluster boxes */
+.info-card h3,
+.cluster-box h3 {
+  font-size: 22px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.info-card ul,
+.cluster-box ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+}
+
+.info-card ul li,
+.cluster-box ul li {
+  margin-bottom: 0.5em;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.info-card ul li:before,
+.cluster-box ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #0077b6;
+  font-weight: bold;
+}
+
+.info-card a,
+.cluster-box a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.info-card a:hover,
+.cluster-box a:hover {
+  color: #005a8d;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info-card,
+  .cluster-box {
+    padding: 18px;
+    margin: 2em 0;
+  }
+
+  .info-card h3,
+  .cluster-box h3 {
+    font-size: 20px;
+  }
+
+  .info-card ul,
+  .cluster-box ul {
+    line-height: 1.8;
+  }
+}
