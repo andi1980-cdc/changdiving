@@ -7,8 +7,15 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-VYNMSTFN5M"
     ></script>
     <script>
-      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){gtag("js",new Date());gtag("config","G-VYNMSTFN5M");})();
-      </script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Water & Advanced Package – Get Certified and Go Deep!</title>
@@ -161,14 +168,23 @@
     <link rel="preconnect" href="https://cdn.trustindex.io" />
 
     <!-- Structured Data JSON-LD -->
-        <!-- Local Fonts -->
+    <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
     <link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="preload" href="/style.css" as="style" />
-    
+    <link rel="stylesheet" href="/style.css" media="all" />
+    <noscript>
+      <link rel="stylesheet" href="/style.css" />
+      <!-- Critical Image Preload -->
+      <link
+        rel="preload"
+        as="image"
+        href="/img/products/owd-aowd/owd-aowd_small.webp"
+        imagesrcset="/img/products/owd-aowd/owd-aowd_small.webp 600w, /img/products/owd-aowd/owd-aowd_big.webp 1200w"
+        imagesizes="100vw"
+      />
+    </noscript>
 
-    <!-- Open Advanced Package Preload -->
-    <!-- Global CSS -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -269,18 +285,17 @@
         ]
       }
     </script>
-    <link
-      
+    <!-- Critical CSS and Font Loading -->
 
-    <!-- Critical CSS and Font Loading --> />
-    <!-- Critical Image Preload -->
-    <link
-      rel="preload"
-      as="image"
-      href="/img/products/owd-aowd/owd-aowd_small.webp"
-      imagesrcset="/img/products/owd-aowd/owd-aowd_small.webp 600w, /img/products/owd-aowd/owd-aowd_big.webp 1200w"
-      imagesizes="100vw"
-    />
+    <!-- Performance Optimizations -->
+    <link rel="dns-prefetch" href="//www.youtube.com" />
+    <link rel="dns-prefetch" href="//cdn.trustindex.io" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.facebook.com" />
+    <link rel="dns-prefetch" href="//connect.facebook.net" />
+
+    <!-- JavaScript Preload -->
+    <link rel="preload" href="/js/global.js" as="script" />
   </head>
   <body>
     <header>
@@ -324,7 +339,8 @@
             width="600"
             height="400"
             loading="eager"
-           fetchpriority="high"/>
+            fetchpriority="high"
+          />
         </picture>
 
         <div class="hero-text">
@@ -816,6 +832,14 @@
               target="_blank"
               rel="noopener noreferrer"
               >Accident_Incident_Report</a
+            >
+          </li>
+          <li>
+            <a
+              href="/docs/Continuing%20Education%20Administrative%20Document.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Continuing Education Admin Doc (PDF)</a
             >
           </li>
         </ul>
