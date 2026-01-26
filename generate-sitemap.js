@@ -8,6 +8,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 // Configuration
 const config = {
@@ -59,6 +60,38 @@ const changefreqMap = {
 
 function shouldExclude(filePath) {
   return config.excludePatterns.some((pattern) => filePath.includes(pattern));
+}
+
+/**
+ * Get the last modified date of a file using Git history
+ * Falls back to file system mtime if Git is unavailable
+ * @param {string} filePath - Path to the file
+ * @returns {string} - ISO date string (YYYY-MM-DD)
+ */
+function getFileLastModified(filePath) {
+  try {
+    // Try to get last commit date from git
+    const gitDate = execSync(`git log -1 --format=%aI -- "${filePath}"`, {
+      encoding: "utf-8",
+      stdio: ["pipe", "pipe", "ignore"],
+    }).trim();
+
+    if (gitDate) {
+      const isoDate = gitDate.split("T")[0];
+      return isoDate;
+    }
+  } catch (error) {
+    // Git not available or file not tracked, fall back to mtime
+  }
+
+  // Fallback to file modification time
+  try {
+    const stat = fs.statSync(filePath);
+    return stat.mtime.toISOString().split("T")[0];
+  } catch (error) {
+    // If all else fails, use current date
+    return new Date().toISOString().split("T")[0];
+  }
 }
 
 function getPriority(urlPath) {
@@ -141,7 +174,7 @@ function shouldExcludeHtmlFile(filePath) {
       console.log(`  🚫 Excluding (404/410 page): ${filePath}`);
       return true;
     }
-    
+
     // Check for explicit 404 page title (not just "not found" text in content)
     const title404Regex = /<title[^>]*>.*404.*<\/title>/i;
     if (title404Regex.test(content)) {
@@ -207,8 +240,8 @@ function scanDirectory(dir, urls = []) {
       const priority = getPriority(urlPath);
       const changefreq = getChangeFreq(urlPath);
 
-      // Always use file modification time for accurate lastmod dates
-      const lastmod = stat.mtime.toISOString().split("T")[0];
+      // Use Git commit date for accurate lastmod, fallback to file mtime
+      const lastmod = getFileLastModified(filePath);
 
       urls.push({
         url: fullUrl,

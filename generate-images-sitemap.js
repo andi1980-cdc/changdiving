@@ -8,6 +8,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execSync } = require("child_process");
 
 // Configuration
 const config = {
@@ -27,6 +28,38 @@ const config = {
 
 function shouldExclude(filePath) {
   return config.excludePatterns.some((pattern) => filePath.includes(pattern));
+}
+
+/**
+ * Get the last modified date of a file using Git history
+ * Falls back to file system mtime if Git is unavailable
+ * @param {string} filePath - Path to the file
+ * @returns {string} - ISO date string (YYYY-MM-DD)
+ */
+function getFileLastModified(filePath) {
+  try {
+    // Try to get last commit date from git
+    const gitDate = execSync(`git log -1 --format=%aI -- "${filePath}"`, {
+      encoding: "utf-8",
+      stdio: ["pipe", "pipe", "ignore"],
+    }).trim();
+
+    if (gitDate) {
+      const isoDate = gitDate.split("T")[0];
+      return isoDate;
+    }
+  } catch (error) {
+    // Git not available or file not tracked, fall back to mtime
+  }
+
+  // Fallback to file modification time
+  try {
+    const stat = fs.statSync(filePath);
+    return stat.mtime.toISOString().split("T")[0];
+  } catch (error) {
+    // If all else fails, use current date
+    return new Date().toISOString().split("T")[0];
+  }
 }
 
 function isHtmlFile(filePath) {
@@ -74,50 +107,52 @@ function shouldExcludeHtmlFile(filePath, htmlContent) {
 
 function extractImagesFromHtml(htmlContent, pageUrl) {
   const images = [];
-  
+
   // Match all img tags
   const imgRegex = /<img[^>]+>/gi;
   const imgTags = htmlContent.match(imgRegex) || [];
-  
+
   for (const imgTag of imgTags) {
     // Extract src attribute
     const srcMatch = imgTag.match(/src=["']([^"']+)["']/i);
     if (!srcMatch) continue;
-    
+
     let imageSrc = srcMatch[1];
-    
+
     // Skip external images, data URIs, and placeholders
-    if (imageSrc.startsWith('http') || 
-        imageSrc.startsWith('data:') || 
-        imageSrc.startsWith('//')) {
+    if (
+      imageSrc.startsWith("http") ||
+      imageSrc.startsWith("data:") ||
+      imageSrc.startsWith("//")
+    ) {
       continue;
     }
-    
+
     // Convert relative paths to absolute URLs
-    if (imageSrc.startsWith('/')) {
+    if (imageSrc.startsWith("/")) {
       imageSrc = `${config.baseUrl}${imageSrc}`;
     } else {
       // Handle relative paths
-      const pageDir = path.dirname(pageUrl.replace(config.baseUrl, ''));
-      const absolutePath = path.join(pageDir, imageSrc).replace(/\\/g, '/');
+      const pageDir = path.dirname(pageUrl.replace(config.baseUrl, ""));
+      const absolutePath = path.join(pageDir, imageSrc).replace(/\\/g, "/");
       imageSrc = `${config.baseUrl}${absolutePath}`;
     }
-    
+
     // Extract alt text for title
     const altMatch = imgTag.match(/alt=["']([^"']+)["']/i);
-    const altText = altMatch ? altMatch[1] : '';
-    
+    const altText = altMatch ? altMatch[1] : "";
+
     // Extract title attribute if present
     const titleMatch = imgTag.match(/title=["']([^"']+)["']/i);
-    const titleText = titleMatch ? titleMatch[1] : '';
-    
+    const titleText = titleMatch ? titleMatch[1] : "";
+
     images.push({
       loc: imageSrc,
       title: titleText || altText || generateImageTitle(imageSrc),
       caption: altText || generateImageCaption(imageSrc),
     });
   }
-  
+
   return images;
 }
 
@@ -126,11 +161,11 @@ function scanForHtmlPages(dir, pages = []) {
 
   for (const item of items) {
     const fullPath = path.join(dir, item);
-    
+
     if (shouldExclude(fullPath)) {
       continue;
     }
-    
+
     const stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
@@ -140,27 +175,27 @@ function scanForHtmlPages(dir, pages = []) {
       const relativePath = path.relative(".", fullPath);
       const urlPath = relativePath.replace(/\\/g, "/");
       let pageUrl = `${config.baseUrl}/${urlPath}`;
-      
+
       // Clean up URL
-      pageUrl = pageUrl.replace('/index.html', '/');
-      
+      pageUrl = pageUrl.replace("/index.html", "/");
+
       // Read HTML content
       try {
-        const htmlContent = fs.readFileSync(fullPath, 'utf-8');
-        
+        const htmlContent = fs.readFileSync(fullPath, "utf-8");
+
         // Check if page should be excluded (noindex, redirects, 404, search)
         if (shouldExcludeHtmlFile(fullPath, htmlContent)) {
           continue;
         }
-        
+
         const images = extractImagesFromHtml(htmlContent, pageUrl);
-        
+
         // Only add pages that have images
         if (images.length > 0) {
           pages.push({
             url: pageUrl,
             images: images,
-            lastmod: stat.mtime.toISOString().split("T")[0],
+            lastmod: getFileLastModified(fullPath),
           });
         }
       } catch (error) {
@@ -186,7 +221,7 @@ function generateImagesSitemap(pages) {
     <loc>${escapeXml(page.url)}</loc>
     <lastmod>${page.lastmod}</lastmod>
 `;
-    
+
     // Add all images for this page
     for (const image of page.images) {
       xml += `    <image:image>
@@ -200,7 +235,7 @@ function generateImagesSitemap(pages) {
       xml += `    </image:image>
 `;
     }
-    
+
     xml += `  </url>
 `;
   }
@@ -210,13 +245,13 @@ function generateImagesSitemap(pages) {
 }
 
 function escapeXml(text) {
-  if (!text) return '';
+  if (!text) return "";
   return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
 }
 
 function generateImageTitle(imageUrl) {
@@ -265,16 +300,16 @@ function generateImageCaption(imageUrl) {
 function generateStats(pages) {
   let totalImages = 0;
   const imageFormats = {};
-  
+
   for (const page of pages) {
     totalImages += page.images.length;
-    
+
     for (const image of page.images) {
       const ext = path.extname(image.loc).toLowerCase();
       imageFormats[ext] = (imageFormats[ext] || 0) + 1;
     }
   }
-  
+
   return {
     totalPages: pages.length,
     totalImages: totalImages,
@@ -296,7 +331,7 @@ try {
   console.log(`   Pages with images: ${stats.totalPages}`);
   console.log(`   Total images: ${stats.totalImages}`);
   console.log(`   Average images per page: ${stats.avgImagesPerPage}`);
-  
+
   console.log("\n📷 Image formats:");
   for (const [ext, count] of Object.entries(stats.imageFormats)) {
     console.log(`   ${ext}: ${count} images`);
@@ -318,12 +353,13 @@ try {
   console.log("   • Includes image titles and captions from alt text");
   console.log("   • Proper XML escaping for special characters");
   console.log("   • Follows Google Image Sitemap guidelines");
-  
+
   console.log("\n📌 Next steps:");
-  console.log("   1. Test sitemap: https://www.xml-sitemaps.com/validate-xml-sitemap.html");
+  console.log(
+    "   1. Test sitemap: https://www.xml-sitemaps.com/validate-xml-sitemap.html",
+  );
   console.log("   2. Submit to Google Search Console");
   console.log("   3. Check robots.txt includes sitemap-images.xml");
-  
 } catch (error) {
   console.error("❌ Error generating images sitemap:", error);
   process.exit(1);
