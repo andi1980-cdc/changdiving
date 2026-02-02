@@ -1092,6 +1092,53 @@
               result.textContent = "Werte eingeben für MOD-Berechnung";
             }
           }
+
+          function calculateBestMix_de() {
+            const depth = parseFloat(
+              document.getElementById("bestmixDepth_de").value,
+            );
+            const maxPPO2 = parseFloat(
+              document.getElementById("bestmixMaxPPO2_de").value,
+            );
+            const result = document.getElementById("bestmixResult_de");
+
+            if (depth >= 0 && maxPPO2) {
+              const ata = depth / 10 + 1;
+              const bestO2 = (maxPPO2 / ata) * 100;
+
+              let recommendedMix = Math.round(bestO2);
+              let mixName = `EAN${recommendedMix}`;
+
+              if (bestO2 >= 31 && bestO2 <= 33) {
+                recommendedMix = 32;
+                mixName = "EAN32 (N32)";
+              } else if (bestO2 >= 35 && bestO2 <= 37) {
+                recommendedMix = 36;
+                mixName = "EAN36 (N36)";
+              } else if (bestO2 >= 39 && bestO2 <= 41) {
+                recommendedMix = 40;
+                mixName = "EAN40";
+              } else if (bestO2 <= 21) {
+                recommendedMix = 21;
+                mixName = "Luft (21%)";
+              }
+
+              result.innerHTML = `✅ Beste Mischung: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% für ${depth}m bei ${maxPPO2} bar PPO₂</small>`;
+
+              if (recommendedMix > 40) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">💡 Erfordert erweiterte Nitrox-Zertifizierung (>40% O₂)</small>';
+              } else if (recommendedMix <= 21) {
+                result.innerHTML +=
+                  '<br><small style="color: #3498db">💡 Normale Luft ist für diese Tiefe ausreichend</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">✓ Standard Freizeit-Nitrox-Mischung</small>';
+              }
+            } else {
+              result.textContent = "Tiefe eingeben für beste Nitrox-Mischung";
+            }
+          }
         </script>
 
         <hr />
@@ -1318,46 +1365,6 @@
           }
         ]
       }
-
-          function calculateBestMix_de() {
-            const depth = parseFloat(document.getElementById("bestmixDepth_de").value);
-            const maxPPO2 = parseFloat(document.getElementById("bestmixMaxPPO2_de").value);
-            const result = document.getElementById("bestmixResult_de");
-
-            if (depth >= 0 && maxPPO2) {
-              const ata = depth / 10 + 1;
-              const bestO2 = (maxPPO2 / ata) * 100;
-
-              let recommendedMix = Math.round(bestO2);
-              let mixName = `EAN${recommendedMix}`;
-
-              if (bestO2 >= 31 && bestO2 <= 33) {
-                recommendedMix = 32;
-                mixName = "EAN32 (N32)";
-              } else if (bestO2 >= 35 && bestO2 <= 37) {
-                recommendedMix = 36;
-                mixName = "EAN36 (N36)";
-              } else if (bestO2 >= 39 && bestO2 <= 41) {
-                recommendedMix = 40;
-                mixName = "EAN40";
-              } else if (bestO2 <= 21) {
-                recommendedMix = 21;
-                mixName = "Luft (21%)";
-              }
-
-              result.innerHTML = `✅ Beste Mischung: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% für ${depth}m bei ${maxPPO2} bar PPO₂</small>`;
-
-              if (recommendedMix > 40) {
-                result.innerHTML += '<br><small style="color: #f39c12">💡 Erfordert erweiterte Nitrox-Zertifizierung (>40% O₂)</small>';
-              } else if (recommendedMix <= 21) {
-                result.innerHTML += '<br><small style="color: #3498db">💡 Normale Luft ist für diese Tiefe ausreichend</small>';
-              } else {
-                result.innerHTML += '<br><small style="color: #27ae60">✓ Standard Freizeit-Nitrox-Mischung</small>';
-              }
-            } else {
-              result.textContent = "Tiefe eingeben für beste Nitrox-Mischung";
-            }
-          }
     </script>
   </body>
 </html>

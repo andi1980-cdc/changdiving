@@ -1088,6 +1088,53 @@
               result.textContent = "ใส่ค่าเพื่อคำนวณ MOD";
             }
           }
+
+          function calculateBestMix_th() {
+            const depth = parseFloat(
+              document.getElementById("bestmixDepth_th").value,
+            );
+            const maxPPO2 = parseFloat(
+              document.getElementById("bestmixMaxPPO2_th").value,
+            );
+            const result = document.getElementById("bestmixResult_th");
+
+            if (depth >= 0 && maxPPO2) {
+              const ata = depth / 10 + 1;
+              const bestO2 = (maxPPO2 / ata) * 100;
+
+              let recommendedMix = Math.round(bestO2);
+              let mixName = `EAN${recommendedMix}`;
+
+              if (bestO2 >= 31 && bestO2 <= 33) {
+                recommendedMix = 32;
+                mixName = "EAN32 (N32)";
+              } else if (bestO2 >= 35 && bestO2 <= 37) {
+                recommendedMix = 36;
+                mixName = "EAN36 (N36)";
+              } else if (bestO2 >= 39 && bestO2 <= 41) {
+                recommendedMix = 40;
+                mixName = "EAN40";
+              } else if (bestO2 <= 21) {
+                recommendedMix = 21;
+                mixName = "อากาศ (21%)";
+              }
+
+              result.innerHTML = `✅ ผสมที่ดีที่สุด: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">O₂ ที่เหมาะสม: ${bestO2.toFixed(1)}% สำหรับ ${depth}ม. ที่ ${maxPPO2} บาร์ PPO₂</small>`;
+
+              if (recommendedMix > 40) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">💡 ต้องมีใบรับรอง Nitrox ขั้นสูง (>40% O₂)</small>';
+              } else if (recommendedMix <= 21) {
+                result.innerHTML +=
+                  '<br><small style="color: #3498db">💡 อากาศปกติเพียงพอสำหรับความลึกนี้</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">✓ ผสม Nitrox มาตรฐานสำหรับนันทนาการ</small>';
+              }
+            } else {
+              result.textContent = "ใส่ความลึกเพื่อหาผสม Nitrox ที่ดีที่สุด";
+            }
+          }
         </script>
 
         <hr />
@@ -1314,46 +1361,6 @@
           }
         ]
       }
-
-          function calculateBestMix_th() {
-            const depth = parseFloat(document.getElementById("bestmixDepth_th").value);
-            const maxPPO2 = parseFloat(document.getElementById("bestmixMaxPPO2_th").value);
-            const result = document.getElementById("bestmixResult_th");
-
-            if (depth >= 0 && maxPPO2) {
-              const ata = depth / 10 + 1;
-              const bestO2 = (maxPPO2 / ata) * 100;
-
-              let recommendedMix = Math.round(bestO2);
-              let mixName = `EAN${recommendedMix}`;
-
-              if (bestO2 >= 31 && bestO2 <= 33) {
-                recommendedMix = 32;
-                mixName = "EAN32 (N32)";
-              } else if (bestO2 >= 35 && bestO2 <= 37) {
-                recommendedMix = 36;
-                mixName = "EAN36 (N36)";
-              } else if (bestO2 >= 39 && bestO2 <= 41) {
-                recommendedMix = 40;
-                mixName = "EAN40";
-              } else if (bestO2 <= 21) {
-                recommendedMix = 21;
-                mixName = "อากาศ (21%)";
-              }
-
-              result.innerHTML = `✅ ผสมที่ดีที่สุด: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">O₂ ที่เหมาะสม: ${bestO2.toFixed(1)}% สำหรับ ${depth}ม. ที่ ${maxPPO2} บาร์ PPO₂</small>`;
-
-              if (recommendedMix > 40) {
-                result.innerHTML += '<br><small style="color: #f39c12">💡 ต้องมีใบรับรอง Nitrox ขั้นสูง (>40% O₂)</small>';
-              } else if (recommendedMix <= 21) {
-                result.innerHTML += '<br><small style="color: #3498db">💡 อากาศปกติเพียงพอสำหรับความลึกนี้</small>';
-              } else {
-                result.innerHTML += '<br><small style="color: #27ae60">✓ ผสม Nitrox มาตรฐานสำหรับนันทนาการ</small>';
-              }
-            } else {
-              result.textContent = "ใส่ความลึกเพื่อหาผสม Nitrox ที่ดีที่สุด";
-            }
-          }
     </script>
   </body>
 </html>
