@@ -580,6 +580,533 @@
         To Calculate the Partial pressure of Oxygene: Gas*ATA= for example N32 =
         0,32 bar*4 bar = 1,28 bar Po2
 
+        <h2>Calculate the Maximum Operating Depth (MOD)</h2>
+
+        To Calculate the MOD: (Max PPO₂ / O₂ Fraction) − 10 = for example N32 =
+        1.4 bar / 0.32 − 10 = 33.7 m MOD
+
+        <hr />
+
+        <h2>🧮 Interactive Dive Calculator</h2>
+
+        <p>
+          Quick and easy dive calculations - just enter your values and get
+          instant results!
+        </p>
+
+        <div
+          style="
+            background: #fff3cd;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+          "
+        >
+          <p style="margin: 0; color: #856404">
+            <strong>⚠️ Important Safety Notice:</strong> This calculator is for
+            <strong>educational purposes only</strong>. All calculations are
+            provided <strong>without warranty or guarantee</strong>. Always use
+            a certified dive computer for actual dive planning. Only use gas
+            mixes for which you are
+            <strong>properly trained and certified</strong>. Consult with a
+            certified diving instructor before planning any dive.
+          </p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(0, 119, 182, 0.05),
+              rgba(207, 216, 220, 0.05)
+            );
+            border: 2px solid #0077b6;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <!-- SAC Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              📊 SAC Rate Calculator
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Gas Used (bar):</label
+                >
+                <input
+                  type="number"
+                  id="sacBar"
+                  placeholder="e.g., 100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Depth (meters):</label
+                >
+                <input
+                  type="number"
+                  id="sacDepth"
+                  placeholder="e.g., 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Time (minutes):</label
+                >
+                <input
+                  type="number"
+                  id="sacTime"
+                  placeholder="e.g., 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Tank Size (liters):</label
+                >
+                <input
+                  type="number"
+                  id="sacTank"
+                  value="12"
+                  placeholder="e.g., 12"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC()"
+                />
+              </div>
+            </div>
+            <div
+              id="sacResult"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Enter values to calculate SAC rate
+            </div>
+          </div>
+
+          <!-- PO2 Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              🌬️ PO₂ Calculator
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ Mix (%):</label
+                >
+                <input
+                  type="number"
+                  id="po2Oxygen"
+                  placeholder="e.g., 32"
+                  min="21"
+                  max="100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculatePO2()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Planned Depth (meters):</label
+                >
+                <input
+                  type="number"
+                  id="po2Depth"
+                  placeholder="e.g., 40"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculatePO2()"
+                />
+              </div>
+            </div>
+            <div
+              id="po2Result"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Enter values to calculate PO₂
+            </div>
+          </div>
+
+          <!-- MOD Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              📏 MOD Calculator
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ Mix (%):</label
+                >
+                <input
+                  type="number"
+                  id="modOxygen"
+                  placeholder="e.g., 32"
+                  min="21"
+                  max="100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateMOD()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Max PPO₂ (bar):</label
+                >
+                <input
+                  type="number"
+                  step="0.1"
+                  id="modMaxPPO2"
+                  value="1.4"
+                  placeholder="e.g., 1.4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateMOD()"
+                />
+              </div>
+            </div>
+            <div
+              id="modResult"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Enter values to calculate MOD
+            </div>
+          </div>
+
+          <!-- Best Mix Calculator -->
+          <div>
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              ⚗️ Best Mix Calculator
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Planned Depth (meters):</label
+                >
+                <input
+                  type="number"
+                  id="bestmixDepth"
+                  placeholder="e.g., 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateBestMix()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Max PPO₂ (bar):</label
+                >
+                <input
+                  type="number"
+                  step="0.1"
+                  id="bestmixMaxPPO2"
+                  value="1.4"
+                  placeholder="e.g., 1.4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateBestMix()"
+                />
+              </div>
+            </div>
+            <div
+              id="bestmixResult"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Enter depth to find best Nitrox mix
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function calculateSAC() {
+            const bar = parseFloat(document.getElementById("sacBar").value);
+            const depth = parseFloat(document.getElementById("sacDepth").value);
+            const time = parseFloat(document.getElementById("sacTime").value);
+            const tank = parseFloat(document.getElementById("sacTank").value);
+            const result = document.getElementById("sacResult");
+
+            if (bar && depth >= 0 && time && tank) {
+              // Calculate ATA from depth: (depth / 10) + 1
+              const ata = depth / 10 + 1;
+              // Calculate liters consumed: bar * tank size
+              const liters = bar * tank;
+              // Calculate SAC: liters / (time * ata)
+              const sac = liters / (time * ata);
+
+              result.innerHTML = `✅ SAC Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">Gas consumed: ${liters}L at ${ata.toFixed(1)} ATA</small>`;
+
+              if (sac > 25) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">⚠️ High SAC - consider improving breathing efficiency</small>';
+              } else if (sac < 15) {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">🌟 Excellent SAC rate!</small>';
+              }
+            } else {
+              result.textContent = "Enter all values to calculate SAC rate";
+            }
+          }
+
+          function calculatePO2() {
+            const oxygen = parseFloat(
+              document.getElementById("po2Oxygen").value,
+            );
+            const depth = parseFloat(document.getElementById("po2Depth").value);
+            const result = document.getElementById("po2Result");
+
+            if (oxygen && depth >= 0) {
+              // Calculate ATA from depth: (depth / 10) + 1
+              const ata = depth / 10 + 1;
+              // Calculate PO2: (O2% / 100) * ATA
+              const po2 = (oxygen / 100) * ata;
+
+              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} bar</span><br><small style="color: #666">at ${depth}m depth (${ata.toFixed(1)} ATA)</small>`;
+
+              if (po2 > 1.6) {
+                result.innerHTML +=
+                  '<br><small style="color: #e74c3c">⚠️ DANGER: PO₂ too high! Risk of oxygen toxicity</small>';
+              } else if (po2 > 1.4) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">⚠️ Caution: Above recreational limit (1.4 bar)</small>';
+              } else if (po2 < 0.16) {
+                result.innerHTML +=
+                  '<br><small style="color: #e74c3c">⚠️ DANGER: PO₂ too low! Hypoxia risk</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">✓ Safe PO₂ level</small>';
+              }
+            } else {
+              result.textContent = "Enter values to calculate PO₂";
+            }
+          }
+
+          function calculateMOD() {
+            const oxygen = parseFloat(
+              document.getElementById("modOxygen").value,
+            );
+            const maxPPO2 = parseFloat(
+              document.getElementById("modMaxPPO2").value,
+            );
+            const result = document.getElementById("modResult");
+
+            if (oxygen && maxPPO2) {
+              // Correct formula: ((Max PPO2 / (O2/100)) - 1) * 10
+              const mod = (maxPPO2 / (oxygen / 100) - 1) * 10;
+
+              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${mod.toFixed(1)} meters</span><br><small style="color: #666">Max safe depth for ${oxygen}% O₂ at ${maxPPO2} bar PPO₂</small>`;
+
+              if (mod < 18) {
+                result.innerHTML +=
+                  '<br><small style="color: #3498db">💡 Shallow dive - great for beginners</small>';
+              } else if (mod > 40) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">💡 Deep dive - advanced certification required</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">💡 Standard recreational depth range</small>';
+              }
+            } else {
+              result.textContent = "Enter values to calculate MOD";
+            }
+          }
+
+          function calculateBestMix() {
+            const depth = parseFloat(
+              document.getElementById("bestmixDepth").value,
+            );
+            const maxPPO2 = parseFloat(
+              document.getElementById("bestmixMaxPPO2").value,
+            );
+            const result = document.getElementById("bestmixResult");
+
+            if (depth >= 0 && maxPPO2) {
+              const ata = depth / 10 + 1;
+              const bestO2 = (maxPPO2 / ata) * 100;
+
+              // Round to nearest common Nitrox mix
+              let recommendedMix = Math.round(bestO2);
+              let mixName = `EAN${recommendedMix}`;
+
+              // Suggest standard mixes if close
+              if (bestO2 >= 31 && bestO2 <= 33) {
+                recommendedMix = 32;
+                mixName = "EAN32 (N32)";
+              } else if (bestO2 >= 35 && bestO2 <= 37) {
+                recommendedMix = 36;
+                mixName = "EAN36 (N36)";
+              } else if (bestO2 >= 39 && bestO2 <= 41) {
+                recommendedMix = 40;
+                mixName = "EAN40";
+              } else if (bestO2 <= 21) {
+                recommendedMix = 21;
+                mixName = "Air (21%)";
+              }
+
+              result.innerHTML = `✅ Best Mix: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% for ${depth}m at ${maxPPO2} bar PPO₂</small>`;
+
+              if (recommendedMix > 40) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">💡 Requires advanced Nitrox certification (>40% O₂)</small>';
+              } else if (recommendedMix <= 21) {
+                result.innerHTML +=
+                  '<br><small style="color: #3498db">💡 Regular air is sufficient for this depth</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">✓ Standard recreational Nitrox mix</small>';
+              }
+            } else {
+              result.textContent = "Enter depth to find best Nitrox mix";
+            }
+          }
+        </script>
+
         <hr />
         <h2>Join us today!</h2>
 

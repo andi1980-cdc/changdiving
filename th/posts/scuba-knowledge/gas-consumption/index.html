@@ -614,6 +614,482 @@
           >
         </p>
 
+        <h2>การคำนวณความลึกสูงสุดในการทำงาน (MOD)</h2>
+
+        การคำนวณ MOD: (PPO₂ สูงสุด / สัดส่วนของ O₂) − 10 = ตัวอย่าง: N32 = 1.4
+        บาร์ / 0.32 − 10 = 33.7 ม. MOD
+
+        <h2>🧮 เครื่องคำนวณการดำน้ำ</h2>
+
+        <p>คำนวณอย่างรวดเร็วและง่ายดาย - ใส่ค่าของคุณและรับผลลัพธ์ทันที!</p>
+
+        <div
+          style="
+            background: #fff3cd;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+          "
+        >
+          <p style="margin: 0; color: #856404">
+            <strong>⚠️ ประกาศความปลอดภัยที่สำคัญ:</strong>
+            เครื่องคำนวณนี้ใช้<strong>เพื่อการศึกษาเท่านั้น</strong>
+            การคำนวณทั้งหมด<strong>ไม่มีการรับประกัน</strong>
+            ใช้คอมพิวเตอร์ดำน้ำที่ได้รับการรับรองสำหรับการวางแผนการดำน้ำจริงเสมอ
+            ใช้เฉพาะผสมแก๊สที่คุณได้รับ<strong
+              >การฝึกอบรมและการรับรองอย่างถูกต้อง</strong
+            >
+            ปรึกษาครูฝึกดำน้ำที่ได้รับการรับรองก่อนวางแผนการดำน้ำใดๆ
+          </p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(0, 119, 182, 0.05),
+              rgba(207, 216, 220, 0.05)
+            );
+            border: 2px solid #0077b6;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <!-- SAC Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              📊 เครื่องคำนวณ SAC Rate
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ใช้แก๊ส (บาร์):</label
+                >
+                <input
+                  type="number"
+                  id="sacBar_th"
+                  placeholder="เช่น 100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_th()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความลึก (เมตร):</label
+                >
+                <input
+                  type="number"
+                  id="sacDepth_th"
+                  placeholder="เช่น 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_th()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >เวลา (นาที):</label
+                >
+                <input
+                  type="number"
+                  id="sacTime_th"
+                  placeholder="เช่น 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_th()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ขนาดถัง (ลิตร):</label
+                >
+                <input
+                  type="number"
+                  id="sacTank_th"
+                  value="12"
+                  placeholder="เช่น 12"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_th()"
+                />
+              </div>
+            </div>
+            <div
+              id="sacResult_th"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              ใส่ค่าเพื่อคำนวณ SAC rate
+            </div>
+          </div>
+
+          <!-- PO2 Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              🌬️ เครื่องคำนวณ PO₂
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ Mix (%):</label
+                >
+                <input
+                  type="number"
+                  id="po2Oxygen_th"
+                  placeholder="เช่น 32"
+                  min="21"
+                  max="100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculatePO2_th()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความลึกที่วางแผน (เมตร):</label
+                >
+                <input
+                  type="number"
+                  id="po2Depth_th"
+                  placeholder="เช่น 40"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculatePO2_th()"
+                />
+              </div>
+            </div>
+            <div
+              id="po2Result_th"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              ใส่ค่าเพื่อคำนวณ PO₂
+            </div>
+          </div>
+
+          <!-- MOD Calculator -->
+          <div>
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              📏 เครื่องคำนวณ MOD
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ Mix (%):</label
+                >
+                <input
+                  type="number"
+                  id="modOxygen_th"
+                  placeholder="เช่น 32"
+                  min="21"
+                  max="100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateMOD_th()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Max PPO₂ (บาร์):</label
+                >
+                <input
+                  type="number"
+                  step="0.1"
+                  id="modMaxPPO2_th"
+                  value="1.4"
+                  placeholder="เช่น 1.4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateMOD_th()"
+                />
+              </div>
+            </div>
+            <div
+              id="modResult_th"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              ใส่ค่าเพื่อคำนวณ MOD
+            </div>
+          </div>
+
+          <!-- Best Mix Calculator -->
+          <div>
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              ⚗️ เครื่องคำนวณ Best Mix
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความลึกที่วางแผน (เมตร):</label
+                >
+                <input
+                  type="number"
+                  id="bestmixDepth_th"
+                  placeholder="เช่น 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateBestMix_th()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Max PPO₂ (บาร์):</label
+                >
+                <input
+                  type="number"
+                  step="0.1"
+                  id="bestmixMaxPPO2_th"
+                  value="1.4"
+                  placeholder="เช่น 1.4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateBestMix_th()"
+                />
+              </div>
+            </div>
+            <div
+              id="bestmixResult_th"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              ใส่ความลึกเพื่อหาผสม Nitrox ที่ดีที่สุด
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function calculateSAC_th() {
+            const bar = parseFloat(document.getElementById("sacBar_th").value);
+            const depth = parseFloat(
+              document.getElementById("sacDepth_th").value,
+            );
+            const time = parseFloat(
+              document.getElementById("sacTime_th").value,
+            );
+            const tank = parseFloat(
+              document.getElementById("sacTank_th").value,
+            );
+            const result = document.getElementById("sacResult_th");
+
+            if (bar && depth >= 0 && time && tank) {
+              const ata = depth / 10 + 1;
+              const liters = bar * tank;
+              const sac = liters / (time * ata);
+
+              result.innerHTML = `✅ SAC Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">การใช้แก๊ส: ${liters}L ที่ ${ata.toFixed(1)} ATA</small>`;
+
+              if (sac > 25) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">⚠️ SAC สูง - ปรับปรุงการหายใจ</small>';
+              } else if (sac < 15) {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">🌟 SAC rate ยอดเยี่ยม!</small>';
+              }
+            } else {
+              result.textContent = "ใส่ค่าเพื่อคำนวณ SAC rate";
+            }
+          }
+
+          function calculatePO2_th() {
+            const oxygen = parseFloat(
+              document.getElementById("po2Oxygen_th").value,
+            );
+            const depth = parseFloat(
+              document.getElementById("po2Depth_th").value,
+            );
+            const result = document.getElementById("po2Result_th");
+
+            if (oxygen && depth >= 0) {
+              const ata = depth / 10 + 1;
+              const po2 = (oxygen / 100) * ata;
+
+              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} บาร์</span><br><small style="color: #666">ที่ความลึก ${depth}ม. (${ata.toFixed(1)} ATA)</small>`;
+
+              if (po2 > 1.6) {
+                result.innerHTML +=
+                  '<br><small style="color: #e74c3c">⚠️ อันตราย: PO₂ สูงเกินไป! ความเสี่ยงจากพิษออกซิเจน</small>';
+              } else if (po2 > 1.4) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">⚠️ ระวัง: เกินขีดจำกัดนันทนาการ (1.4 บาร์)</small>';
+              } else if (po2 < 0.16) {
+                result.innerHTML +=
+                  '<br><small style="color: #e74c3c">⚠️ อันตราย: PO₂ ต่ำเกินไป! ความเสี่ยงจากภาวะขาดออกซิเจน</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">✓ ระดับ PO₂ ปลอดภัย</small>';
+              }
+            } else {
+              result.textContent = "ใส่ค่าเพื่อคำนวณ PO₂";
+            }
+          }
+
+          function calculateMOD_th() {
+            const oxygen = parseFloat(
+              document.getElementById("modOxygen_th").value,
+            );
+            const maxPPO2 = parseFloat(
+              document.getElementById("modMaxPPO2_th").value,
+            );
+            const result = document.getElementById("modResult_th");
+
+            if (oxygen && maxPPO2) {
+              const mod = (maxPPO2 / (oxygen / 100) - 1) * 10;
+
+              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${mod.toFixed(1)} เมตร</span><br><small style="color: #666">ความลึกสูงสุดที่ปลอดภัยสำหรับ ${oxygen}% O₂ ที่ ${maxPPO2} บาร์ PPO₂</small>`;
+
+              if (mod < 18) {
+                result.innerHTML +=
+                  '<br><small style="color: #3498db">💡 การดำน้ำตื้น - เหมาะสำหรับผู้เริ่มต้น</small>';
+              } else if (mod > 40) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">💡 การดำน้ำลึก - ต้องมีใบรับรองขั้นสูง</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">💡 ช่วงความลึกมาตรฐานสำหรับนันทนาการ</small>';
+              }
+            } else {
+              result.textContent = "ใส่ค่าเพื่อคำนวณ MOD";
+            }
+          }
+        </script>
+
         <hr />
         <h2>มาเรียนดำน้ำกับเรา!</h2>
 
@@ -838,6 +1314,46 @@
           }
         ]
       }
+
+          function calculateBestMix_th() {
+            const depth = parseFloat(document.getElementById("bestmixDepth_th").value);
+            const maxPPO2 = parseFloat(document.getElementById("bestmixMaxPPO2_th").value);
+            const result = document.getElementById("bestmixResult_th");
+
+            if (depth >= 0 && maxPPO2) {
+              const ata = depth / 10 + 1;
+              const bestO2 = (maxPPO2 / ata) * 100;
+
+              let recommendedMix = Math.round(bestO2);
+              let mixName = `EAN${recommendedMix}`;
+
+              if (bestO2 >= 31 && bestO2 <= 33) {
+                recommendedMix = 32;
+                mixName = "EAN32 (N32)";
+              } else if (bestO2 >= 35 && bestO2 <= 37) {
+                recommendedMix = 36;
+                mixName = "EAN36 (N36)";
+              } else if (bestO2 >= 39 && bestO2 <= 41) {
+                recommendedMix = 40;
+                mixName = "EAN40";
+              } else if (bestO2 <= 21) {
+                recommendedMix = 21;
+                mixName = "อากาศ (21%)";
+              }
+
+              result.innerHTML = `✅ ผสมที่ดีที่สุด: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">O₂ ที่เหมาะสม: ${bestO2.toFixed(1)}% สำหรับ ${depth}ม. ที่ ${maxPPO2} บาร์ PPO₂</small>`;
+
+              if (recommendedMix > 40) {
+                result.innerHTML += '<br><small style="color: #f39c12">💡 ต้องมีใบรับรอง Nitrox ขั้นสูง (>40% O₂)</small>';
+              } else if (recommendedMix <= 21) {
+                result.innerHTML += '<br><small style="color: #3498db">💡 อากาศปกติเพียงพอสำหรับความลึกนี้</small>';
+              } else {
+                result.innerHTML += '<br><small style="color: #27ae60">✓ ผสม Nitrox มาตรฐานสำหรับนันทนาการ</small>';
+              }
+            } else {
+              result.textContent = "ใส่ความลึกเพื่อหาผสม Nitrox ที่ดีที่สุด";
+            }
+          }
     </script>
   </body>
 </html>

@@ -619,6 +619,481 @@
         Zur Berechnung des Sauerstoff-Partialdrucks: Sauerstoffanteil × ATA =
         Beispiel: N32 = 0,32 × 4 bar = 1,28 bar PO₂
 
+        <h2>Maximale Einsatztiefe (MOD) berechnen</h2>
+
+        Zur Berechnung der MOD: (Max PPO₂ / O₂-Anteil) − 10 = Beispiel: N32 =
+        1,4 bar / 0,32 − 10 = 33,7 m MOD
+
+        <h2>🧮 Interaktiver Tauchrechner</h2>
+
+        <p>
+          Schnelle und einfache Tauchberechnungen - gib deine Werte ein und
+          erhalte sofortige Ergebnisse!
+        </p>
+
+        <div
+          style="
+            background: #fff3cd;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+          "
+        >
+          <p style="margin: 0; color: #856404">
+            <strong>⚠️ Wichtiger Sicherheitshinweis:</strong> Dieser Rechner
+            dient <strong>nur zu Bildungszwecken</strong>. Alle Berechnungen
+            erfolgen <strong>ohne Gewähr</strong>. Verwende immer einen
+            zertifizierten Tauchcomputer für die tatsächliche Tauchplanung.
+            Verwende nur Gasmischungen, für die du
+            <strong>ausgebildet und zertifiziert</strong>
+            bist. Konsultiere vor jeder Tauchplanung einen zertifizierten
+            Tauchlehrer.
+          </p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(0, 119, 182, 0.05),
+              rgba(207, 216, 220, 0.05)
+            );
+            border: 2px solid #0077b6;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <!-- SAC Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              📊 SAC-Kalkulator
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Verbrauch (bar):</label
+                >
+                <input
+                  type="number"
+                  id="sacBar_de"
+                  placeholder="z.B. 100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_de()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Tiefe (Meter):</label
+                >
+                <input
+                  type="number"
+                  id="sacDepth_de"
+                  placeholder="z.B. 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_de()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Zeit (Minuten):</label
+                >
+                <input
+                  type="number"
+                  id="sacTime_de"
+                  placeholder="z.B. 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_de()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Tank-Größe (Liter):</label
+                >
+                <input
+                  type="number"
+                  id="sacTank_de"
+                  value="12"
+                  placeholder="z.B. 12"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateSAC_de()"
+                />
+              </div>
+            </div>
+            <div
+              id="sacResult_de"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Werte eingeben für SAC-Berechnung
+            </div>
+          </div>
+
+          <!-- PO2 Calculator -->
+          <div style="margin-bottom: 30px">
+            <h3 style="color: #0077b6; margin-bottom: 15px">🌬️ PO₂-Rechner</h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ Mix (%):</label
+                >
+                <input
+                  type="number"
+                  id="po2Oxygen_de"
+                  placeholder="z.B. 32"
+                  min="21"
+                  max="100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculatePO2_de()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Geplante Tiefe (Meter):</label
+                >
+                <input
+                  type="number"
+                  id="po2Depth_de"
+                  placeholder="z.B. 40"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculatePO2_de()"
+                />
+              </div>
+            </div>
+            <div
+              id="po2Result_de"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Werte eingeben für PO₂-Berechnung
+            </div>
+          </div>
+
+          <!-- MOD Calculator -->
+          <div>
+            <h3 style="color: #0077b6; margin-bottom: 15px">📏 MOD-Rechner</h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ Mix (%):</label
+                >
+                <input
+                  type="number"
+                  id="modOxygen_de"
+                  placeholder="z.B. 32"
+                  min="21"
+                  max="100"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateMOD_de()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Max PPO₂ (bar):</label
+                >
+                <input
+                  type="number"
+                  step="0.1"
+                  id="modMaxPPO2_de"
+                  value="1.4"
+                  placeholder="z.B. 1,4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateMOD_de()"
+                />
+              </div>
+            </div>
+            <div
+              id="modResult_de"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Werte eingeben für MOD-Berechnung
+            </div>
+          </div>
+
+          <!-- Best Mix Calculator -->
+          <div>
+            <h3 style="color: #0077b6; margin-bottom: 15px">
+              ⚗️ Best Mix Rechner
+            </h3>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 15px;
+                margin-bottom: 15px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Geplante Tiefe (Meter):</label
+                >
+                <input
+                  type="number"
+                  id="bestmixDepth_de"
+                  placeholder="z.B. 30"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateBestMix_de()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >Max PPO₂ (bar):</label
+                >
+                <input
+                  type="number"
+                  step="0.1"
+                  id="bestmixMaxPPO2_de"
+                  value="1.4"
+                  placeholder="z.B. 1,4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="calculateBestMix_de()"
+                />
+              </div>
+            </div>
+            <div
+              id="bestmixResult_de"
+              style="
+                padding: 15px;
+                background: white;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #0077b6;
+                text-align: center;
+                min-height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Tiefe eingeben für beste Nitrox-Mischung
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function calculateSAC_de() {
+            const bar = parseFloat(document.getElementById("sacBar_de").value);
+            const depth = parseFloat(
+              document.getElementById("sacDepth_de").value,
+            );
+            const time = parseFloat(
+              document.getElementById("sacTime_de").value,
+            );
+            const tank = parseFloat(
+              document.getElementById("sacTank_de").value,
+            );
+            const result = document.getElementById("sacResult_de");
+
+            if (bar && depth >= 0 && time && tank) {
+              const ata = depth / 10 + 1;
+              const liters = bar * tank;
+              const sac = liters / (time * ata);
+
+              result.innerHTML = `✅ SAC-Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">Gasverbrauch: ${liters}L bei ${ata.toFixed(1)} ATA</small>`;
+
+              if (sac > 25) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">⚠️ Hoher SAC - Atemtechnik verbessern</small>';
+              } else if (sac < 15) {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">🌟 Exzellente SAC-Rate!</small>';
+              }
+            } else {
+              result.textContent = "Werte eingeben für SAC-Berechnung";
+            }
+          }
+
+          function calculatePO2_de() {
+            const oxygen = parseFloat(
+              document.getElementById("po2Oxygen_de").value,
+            );
+            const depth = parseFloat(
+              document.getElementById("po2Depth_de").value,
+            );
+            const result = document.getElementById("po2Result_de");
+
+            if (oxygen && depth >= 0) {
+              const ata = depth / 10 + 1;
+              const po2 = (oxygen / 100) * ata;
+
+              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} bar</span><br><small style="color: #666">bei ${depth}m Tiefe (${ata.toFixed(1)} ATA)</small>`;
+
+              if (po2 > 1.6) {
+                result.innerHTML +=
+                  '<br><small style="color: #e74c3c">⚠️ GEFAHR: PO₂ zu hoch! Sauerstofftoxizität-Risiko</small>';
+              } else if (po2 > 1.4) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">⚠️ Vorsicht: Über Freizeittauch-Limit (1,4 bar)</small>';
+              } else if (po2 < 0.16) {
+                result.innerHTML +=
+                  '<br><small style="color: #e74c3c">⚠️ GEFAHR: PO₂ zu niedrig! Hypoxie-Risiko</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">✓ Sicherer PO₂-Wert</small>';
+              }
+            } else {
+              result.textContent = "Werte eingeben für PO₂-Berechnung";
+            }
+          }
+
+          function calculateMOD_de() {
+            const oxygen = parseFloat(
+              document.getElementById("modOxygen_de").value,
+            );
+            const maxPPO2 = parseFloat(
+              document.getElementById("modMaxPPO2_de").value,
+            );
+            const result = document.getElementById("modResult_de");
+
+            if (oxygen && maxPPO2) {
+              const mod = (maxPPO2 / (oxygen / 100) - 1) * 10;
+
+              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${mod.toFixed(1)} Meter</span><br><small style="color: #666">Max. sichere Tiefe für ${oxygen}% O₂ bei ${maxPPO2} bar PPO₂</small>`;
+
+              if (mod < 18) {
+                result.innerHTML +=
+                  '<br><small style="color: #3498db">💡 Flachwasser - ideal für Anfänger</small>';
+              } else if (mod > 40) {
+                result.innerHTML +=
+                  '<br><small style="color: #f39c12">💡 Tieftauchgang - erweiterte Zertifizierung erforderlich</small>';
+              } else {
+                result.innerHTML +=
+                  '<br><small style="color: #27ae60">💡 Standard Freizeittauch-Bereich</small>';
+              }
+            } else {
+              result.textContent = "Werte eingeben für MOD-Berechnung";
+            }
+          }
+        </script>
+
         <hr />
         <h2>Tauch mit uns!</h2>
 
@@ -843,6 +1318,46 @@
           }
         ]
       }
+
+          function calculateBestMix_de() {
+            const depth = parseFloat(document.getElementById("bestmixDepth_de").value);
+            const maxPPO2 = parseFloat(document.getElementById("bestmixMaxPPO2_de").value);
+            const result = document.getElementById("bestmixResult_de");
+
+            if (depth >= 0 && maxPPO2) {
+              const ata = depth / 10 + 1;
+              const bestO2 = (maxPPO2 / ata) * 100;
+
+              let recommendedMix = Math.round(bestO2);
+              let mixName = `EAN${recommendedMix}`;
+
+              if (bestO2 >= 31 && bestO2 <= 33) {
+                recommendedMix = 32;
+                mixName = "EAN32 (N32)";
+              } else if (bestO2 >= 35 && bestO2 <= 37) {
+                recommendedMix = 36;
+                mixName = "EAN36 (N36)";
+              } else if (bestO2 >= 39 && bestO2 <= 41) {
+                recommendedMix = 40;
+                mixName = "EAN40";
+              } else if (bestO2 <= 21) {
+                recommendedMix = 21;
+                mixName = "Luft (21%)";
+              }
+
+              result.innerHTML = `✅ Beste Mischung: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% für ${depth}m bei ${maxPPO2} bar PPO₂</small>`;
+
+              if (recommendedMix > 40) {
+                result.innerHTML += '<br><small style="color: #f39c12">💡 Erfordert erweiterte Nitrox-Zertifizierung (>40% O₂)</small>';
+              } else if (recommendedMix <= 21) {
+                result.innerHTML += '<br><small style="color: #3498db">💡 Normale Luft ist für diese Tiefe ausreichend</small>';
+              } else {
+                result.innerHTML += '<br><small style="color: #27ae60">✓ Standard Freizeit-Nitrox-Mischung</small>';
+              }
+            } else {
+              result.textContent = "Tiefe eingeben für beste Nitrox-Mischung";
+            }
+          }
     </script>
   </body>
 </html>
