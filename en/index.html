@@ -983,8 +983,6 @@
       rel="preload"
       as="image"
       href="/img/pages/mobile_header_small.webp"
-      imagesrcset="/img/pages/mobile_header_small.webp 600w, /img/pages/mobile_header.webp 1200w"
-      imagesizes="100vw"
     />
   </head>
   <body class="main-page">
@@ -1074,115 +1072,7 @@
             fetchpriority="high"
           />
         </picture>
-
-        <!-- Safety Banner -->
-        <div id="safety-banner" class="safety-banner">
-          <div class="safety-banner-content">
-            <span class="safety-banner-icon">🛡️</span>
-            <span class="safety-banner-text">
-              <strong>Travel Safety Update:</strong> Despite the border conflict
-              between Thailand and Cambodia, travel to and stay on Koh Chang is
-              safe. All tourist activities, including diving, are available
-              without restrictions.
-            </span>
-            <button
-              class="safety-banner-close"
-              aria-label="Close banner"
-              onclick="closeSafetyBanner()"
-            >
-              ×
-            </button>
-          </div>
-        </div>
-        <style>
-          .safety-banner {
-            position: absolute;
-            top: 60px;
-            left: 0;
-            right: 0;
-            background: linear-gradient(
-              135deg,
-              rgba(255, 243, 205, 0.85) 0%,
-              rgba(255, 230, 156, 0.85) 100%
-            );
-            border-bottom: 3px solid rgba(255, 193, 7, 0.7);
-            padding: 12px 20px;
-            z-index: 3;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-          }
-          @media (min-width: 768px) {
-            .safety-banner {
-              top: 70px;
-            }
-          }
-          .safety-banner-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            position: relative;
-          }
-          .safety-banner-icon {
-            font-size: 24px;
-            flex-shrink: 0;
-          }
-          .safety-banner-text {
-            flex: 1;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #856404;
-          }
-          .safety-banner-text strong {
-            color: #664d03;
-            font-weight: 700;
-          }
-          .safety-banner-close {
-            background: transparent;
-            border: none;
-            font-size: 28px;
-            color: #856404;
-            cursor: pointer;
-            padding: 0;
-            width: 30px;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: color 0.2s;
-            line-height: 1;
-          }
-          .safety-banner-close:hover {
-            color: #664d03;
-          }
-          @media (max-width: 767px) {
-            .safety-banner {
-              padding: 10px 15px;
-            }
-            .safety-banner-text {
-              font-size: 12px;
-            }
-            .safety-banner-icon {
-              font-size: 20px;
-            }
-            .safety-banner-close {
-              font-size: 24px;
-              width: 25px;
-              height: 25px;
-            }
-          }
-        </style>
-        <script>
-          function closeSafetyBanner() {
-            const banner = document.getElementById("safety-banner");
-            if (banner) {
-              banner.style.display = "none";
-            }
-          }
-        </script>
-
-        <div class="hero-text">
+<div class="hero-text">
           <h1>Scuba Diving Koh Chang Thailand - Diving Courses & Fun Dives</h1>
           <p>
             Scuba Diving in Koh Chang with Chang Diving | Fun Dives, Courses,
