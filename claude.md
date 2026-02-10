@@ -1,6 +1,7 @@
 # Chang Diving SEO Fixes - October 15, 2025
 
 ## Problem Statement
+
 Google Search Console showed 300+ pages indexed, but searching `site:changdiving.com` only returned 1 page (homepage). Bing showed 50+ pages indexed normally.
 
 ## Root Causes Identified
@@ -17,6 +18,7 @@ Google Search Console showed 300+ pages indexed, but searching `site:changdiving
 **File Modified:** `functions/[[path]].js`
 
 **Changes:**
+
 - Added server-side language detection at Cloudflare edge
 - Detection priority: Cookie → Accept-Language → Geo-location → Default (English)
 - Bots/crawlers see language selector page (no redirect)
@@ -24,6 +26,7 @@ Google Search Console showed 300+ pages indexed, but searching `site:changdiving
 - Sets 30-day cookie to remember preference
 
 **Impact:**
+
 - Eliminates JavaScript dependency
 - Search engines can properly crawl all content
 - Better performance (instant at edge)
@@ -33,11 +36,13 @@ Google Search Console showed 300+ pages indexed, but searching `site:changdiving
 **File Modified:** `index.html`
 
 **Changes:**
+
 - Removed entire JavaScript auto-redirect script
 - Updated user message (no longer mentions automatic redirect)
 - Page now serves as clean language selector for bots
 
 **Impact:**
+
 - No more potential for Google to see this as cloaking
 - Clear, static content for crawlers
 
@@ -46,6 +51,7 @@ Google Search Console showed 300+ pages indexed, but searching `site:changdiving
 **File Modified:** `functions/[[path]].js`
 
 **Changes Added to REDIRECTS_PREFIX:**
+
 ```javascript
 { from: "/en/product", to: "/en/courses/" },
 { from: "/de/product", to: "/de/courses/" },
@@ -62,9 +68,11 @@ Google Search Console showed 300+ pages indexed, but searching `site:changdiving
 ```
 
 **Removed from FORCE_GONE_PREFIX:**
+
 - All `/*/product`, `/*/category`, `/*/store`, `/*/tag` paths
 
 **Impact:**
+
 - Google sees "content moved" not "content deleted"
 - Preserves link equity from any backlinks
 - Removes negative quality signals
@@ -74,15 +82,18 @@ Google Search Console showed 300+ pages indexed, but searching `site:changdiving
 **File Modified:** `robots.txt`
 
 **Changes:**
+
 - Removed `Crawl-delay: 1` directive
 
 **Impact:**
+
 - Google ignores this anyway, but removing prevents confusion
 - May improve crawl efficiency
 
 ## Testing Commands
 
 ### Test Server-Side Language Detection
+
 ```bash
 # Test bot detection (should NOT redirect)
 curl -I -H "User-Agent: Googlebot" https://changdiving.com/
@@ -95,6 +106,7 @@ curl -I "https://changdiving.com/?noredirect"
 ```
 
 ### Test 301 Redirects (Previously 410)
+
 ```bash
 # Should return 301 redirect to /en/courses/
 curl -I https://changdiving.com/en/product/
@@ -154,6 +166,7 @@ curl -I https://changdiving.com/en/store/
 ## Summary
 
 The primary issue was sending mixed signals to Google:
+
 1. JavaScript redirects that might be seen as cloaking
 2. Many 410 responses suggesting content deletion
 3. Crawl-delay that Google ignores but shows in Search Console

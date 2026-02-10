@@ -1,4 +1,5 @@
 # 🗺️ Interne Verlinkung – Visuelle Struktur-Map
+
 ## Chang Diving Center Website
 
 **Datum:** 12. Januar 2026  
@@ -29,6 +30,7 @@ Homepage
 ```
 
 **Probleme:**
+
 - Artikel existieren isoliert
 - User finden verwandte Inhalte nicht
 - Schwache interne Link-Struktur
@@ -79,6 +81,7 @@ Homepage
 ```
 
 **Vorteile:**
+
 - Starke thematische Vernetzung
 - User Journey klar erkennbar
 - SEO Topic Authority aufgebaut
@@ -113,6 +116,7 @@ Homepage
 **Alle Artikel verlinken untereinander mit "Safety Essentials Box"**
 
 **Metrics:**
+
 - Aktuell: ~3-5 interne Links pro Artikel
 - Ziel: 10-12 interne Links pro Artikel
 - Expected: Session Duration +30%, Bounce Rate -20%
@@ -141,10 +145,12 @@ Homepage
 ```
 
 **Content Gaps identifiziert:**
+
 - 🆕 "Equipment Setup" Artikel fehlt
 - 🆕 "Maintenance Tips" Artikel fehlt
 
 **Action:**
+
 - Phase 3: Cluster Boxen hinzufügen
 - Phase 5: Fehlende Artikel erstellen
 
@@ -184,6 +190,7 @@ Homepage
 **Strongest Cluster** - Natural progression visible
 
 **Expected Impact:**
+
 - Long-tail keywords: "deep diving koh chang", "nitrox course thailand"
 - Rankings: +15-25 positions
 - Conversion: Blog → Course bookings +20%
@@ -224,6 +231,7 @@ Homepage
 **Target Audience:** Complete beginners
 
 **User Journey:**
+
 1. Land on "How to Open Water" → Read theory
 2. Click "Safety Check" → Learn pre-dive prep
 3. Click "Try Dive Guide" → Understand process
@@ -235,41 +243,41 @@ Homepage
 
 ### High-Value Links (PRIORITÄT: SEHR HOCH) 🔴🔴
 
-| Von Artikel | Zu Artikel | Grund | Status |
-|-------------|-----------|-------|---------|
-| **Safety Stop** | Using Dive Computer | Monitoring during stop | ⏳ TODO (DE, TH) |
-| **Using Dive Computer** | Safety Stop | Feature explanation | ⏳ TODO (DE, TH) |
-| **Gas Consumption** | Deep Diving | Depth = more air | ⏳ TODO (TH) |
-| **Deep Diving** | Gas Consumption | Planning essential | ⏳ TODO (DE, TH) |
-| **Dive Logbook** | Best Dive Computers | Digital logging | ⏳ TODO (DE, TH) |
-| **Safety Check** | Safety Stop | Pre → Post dive | ⏳ TODO (DE, TH) |
-| **Theory Review** | All specific topics | Deep dive links | 🆕 TODO (EN, DE, TH) |
+| Von Artikel             | Zu Artikel          | Grund                  | Status               |
+| ----------------------- | ------------------- | ---------------------- | -------------------- |
+| **Safety Stop**         | Using Dive Computer | Monitoring during stop | ⏳ TODO (DE, TH)     |
+| **Using Dive Computer** | Safety Stop         | Feature explanation    | ⏳ TODO (DE, TH)     |
+| **Gas Consumption**     | Deep Diving         | Depth = more air       | ⏳ TODO (TH)         |
+| **Deep Diving**         | Gas Consumption     | Planning essential     | ⏳ TODO (DE, TH)     |
+| **Dive Logbook**        | Best Dive Computers | Digital logging        | ⏳ TODO (DE, TH)     |
+| **Safety Check**        | Safety Stop         | Pre → Post dive        | ⏳ TODO (DE, TH)     |
+| **Theory Review**       | All specific topics | Deep dive links        | 🆕 TODO (EN, DE, TH) |
 
 ---
 
 ### Course → Article Links (PRIORITÄT: SEHR HOCH) 🔴🔴
 
-| Von Kurs | Zu Artikeln | Grund | Status |
-|----------|------------|-------|---------|
-| **Open Water** | Safety Check, Safety Stop, Computer | Core knowledge | 🆕 TODO |
-| **Advanced** | Deep Diving, Navigation, Night | Adventure dives prep | 🆕 TODO |
-| **Nitrox** | Nitrox Info, Gas Consumption | Theory prep | 🆕 TODO |
-| **Deep Diver** | Deep Diving, Gas Consumption | Essential reading | 🆕 TODO |
-| **Wreck Diver** | Wreck Diving, HTMS Chang | Koh Chang specific | 🆕 TODO |
-| **Rescue** | Safety Check, Emergency | Safety focus | 🆕 TODO |
-| **Divemaster** | Theory Review, Logbook, All | Professional resources | 🆕 TODO |
+| Von Kurs        | Zu Artikeln                         | Grund                  | Status  |
+| --------------- | ----------------------------------- | ---------------------- | ------- |
+| **Open Water**  | Safety Check, Safety Stop, Computer | Core knowledge         | 🆕 TODO |
+| **Advanced**    | Deep Diving, Navigation, Night      | Adventure dives prep   | 🆕 TODO |
+| **Nitrox**      | Nitrox Info, Gas Consumption        | Theory prep            | 🆕 TODO |
+| **Deep Diver**  | Deep Diving, Gas Consumption        | Essential reading      | 🆕 TODO |
+| **Wreck Diver** | Wreck Diving, HTMS Chang            | Koh Chang specific     | 🆕 TODO |
+| **Rescue**      | Safety Check, Emergency             | Safety focus           | 🆕 TODO |
+| **Divemaster**  | Theory Review, Logbook, All         | Professional resources | 🆕 TODO |
 
 ---
 
 ### Dive Site → Course/Article Links (PRIORITÄT: MITTEL) 🟠
 
-| Von Dive Site | Zu Kursen | Zu Artikeln | Status |
-|---------------|-----------|-------------|---------|
-| **HTMS Chang** | Wreck, Deep, Adv Wreck | Wreck Diving, Deep Diving | 🆕 TODO |
-| **Koho Maru** | Deep, Technical | Deep Diving, Gas Consumption | 🆕 TODO |
-| **Blueberry Hill** | Open Water, Try Dive | Safety Check, Beginner Guide | 🆕 TODO |
-| **Hin Pray Nam** | Open Water, Try Dive | Safety Basics | 🆕 TODO |
-| **Koh Rang** | Advanced, Deep | Deep Diving, Advanced Tips | 🆕 TODO |
+| Von Dive Site      | Zu Kursen              | Zu Artikeln                  | Status  |
+| ------------------ | ---------------------- | ---------------------------- | ------- |
+| **HTMS Chang**     | Wreck, Deep, Adv Wreck | Wreck Diving, Deep Diving    | 🆕 TODO |
+| **Koho Maru**      | Deep, Technical        | Deep Diving, Gas Consumption | 🆕 TODO |
+| **Blueberry Hill** | Open Water, Try Dive   | Safety Check, Beginner Guide | 🆕 TODO |
+| **Hin Pray Nam**   | Open Water, Try Dive   | Safety Basics                | 🆕 TODO |
+| **Koh Rang**       | Advanced, Deep         | Deep Diving, Advanced Tips   | 🆕 TODO |
 
 ---
 
@@ -282,7 +290,7 @@ Durchschnittliche interne Links pro Seite:
   Blog Posts:     4-6 Links  ⚠️ (zu wenig)
   Course Pages:   8-12 Links ⚠️ (ok, aber nicht optimiert)
   Dive Sites:     3-5 Links  ⚠️ (zu generisch)
-  
+
 Gesamt: ~800 interne Links (Website-weit)
 ```
 
@@ -293,11 +301,12 @@ Durchschnittliche interne Links pro Seite:
   Blog Posts:     12-15 Links ✅ (stark verbessert)
   Course Pages:   15-20 Links ✅ (exzellent)
   Dive Sites:     8-12 Links  ✅ (spezifisch)
-  
+
 Gesamt: ~1200+ interne Links ✅ (+50% increase)
 ```
 
 **Impact:**
+
 - Link Juice Distribution: +60%
 - Crawl Depth: Reduziert von 4-5 auf 2-3 Klicks
 - Topic Authority: Signifikant verbessert
@@ -321,6 +330,7 @@ CONVERSION: /en/courses/open-water-diver/ → BOOKING ✅
 ```
 
 **Verbesserung:**
+
 - Vorher: Direkter Absprung nach 1 Seite (Bounce)
 - Nachher: 3-4 Seiten, dann Conversion
 - Pages/Session: von 1.2 → 3.5
@@ -341,6 +351,7 @@ CONVERSION: /en/courses/deep-diver/ → BOOKING ✅
 ```
 
 **Verbesserung:**
+
 - Vorher: Liest Artikel, verlässt Seite (kein Kurs-Link)
 - Nachher: Natürliche Progression zum Kurs
 - Conversion Rate: +25%
@@ -360,6 +371,7 @@ CONVERSION: /en/courses/wreck-diver/ → BOOKING ✅
 ```
 
 **Verbesserung:**
+
 - Vorher: Liest Dive Site, bucht Fun Dive (niedrige Marge)
 - Nachher: Inspiriert für Kurs-Buchung (höhere Marge)
 - Average Order Value: +40%
@@ -427,6 +439,7 @@ Payback Period: ~1.5 months ✅
 ```
 
 **Conservative Estimate** - Actual results likely höher:
+
 - Nicht inkludiert: Verbesserte Rankings → mehr Traffic
 - Nicht inkludiert: Höhere Conversion Rate durch bessere UX
 - Nicht inkludiert: Repeat customers durch besseres Engagement
@@ -437,14 +450,14 @@ Payback Period: ~1.5 months ✅
 
 ### KPI Tracking (Monatlich):
 
-| Metric | Baseline (Jan 2026) | Target (Apr 2026) | Actual (Apr 2026) |
-|--------|---------------------|-------------------|-------------------|
-| Avg Session Duration | 2:45 | 3:45 (+36%) | ___ |
-| Bounce Rate | 58% | 45% (-22%) | ___% |
-| Pages per Session | 2.1 | 2.9 (+38%) | ___ |
-| Internal Link CTR | 8% | 15% (+87%) | ___% |
-| Blog → Course Conversion | 2.5% | 3.5% (+40%) | ___% |
-| Organic Traffic | 1,200/mo | 1,500/mo (+25%) | ___ |
+| Metric                   | Baseline (Jan 2026) | Target (Apr 2026) | Actual (Apr 2026) |
+| ------------------------ | ------------------- | ----------------- | ----------------- |
+| Avg Session Duration     | 2:45                | 3:45 (+36%)       | \_\_\_            |
+| Bounce Rate              | 58%                 | 45% (-22%)        | \_\_\_%           |
+| Pages per Session        | 2.1                 | 2.9 (+38%)        | \_\_\_            |
+| Internal Link CTR        | 8%                  | 15% (+87%)        | \_\_\_%           |
+| Blog → Course Conversion | 2.5%                | 3.5% (+40%)       | \_\_\_%           |
+| Organic Traffic          | 1,200/mo            | 1,500/mo (+25%)   | \_\_\_            |
 
 ---
 
@@ -503,4 +516,3 @@ Dive Sites [██████  ] 6/10  ✅ GOOD
 **Verantwortlich:** Development Team
 
 📊 Diese Map dient als visuelle Referenz für die Implementierung.
-

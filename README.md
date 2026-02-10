@@ -9,7 +9,7 @@ Chang Diving offers comprehensive scuba diving services in the beautiful waters 
 ## 🚀 Features
 
 - **Multilingual Support**: Available in English, German, and Thai
-- **Comprehensive Dive Information**: 
+- **Comprehensive Dive Information**:
   - Dive sites around Koh Chang
   - Course offerings (Open Water, Advanced, Rescue, Divemaster, etc.)
   - Marine life guides
@@ -27,7 +27,7 @@ Chang Diving offers comprehensive scuba diving services in the beautiful waters 
 
 ```
 ├── en/          # English version
-├── de/          # German version  
+├── de/          # German version
 ├── th/          # Thai version
 ├── img/         # Images and media
 ├── fonts/       # Web fonts
@@ -69,4 +69,4 @@ Koh Chang, Trat Province, Thailand
 
 ---
 
-*Experience the underwater world of Koh Chang with Chang Diving!*
+_Experience the underwater world of Koh Chang with Chang Diving!_

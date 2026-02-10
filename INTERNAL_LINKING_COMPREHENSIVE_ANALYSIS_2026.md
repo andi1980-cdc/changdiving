@@ -1,4 +1,5 @@
 # 🔗 Umfassende Interne Verlinkungsanalyse 2026
+
 ## Chang Diving Center Website
 
 **Datum:** 12. Januar 2026  
@@ -33,6 +34,7 @@
 ### 1. **Knowledge Base Artikel** (`/en/posts/scuba-knowledge/`)
 
 #### Status Quo:
+
 - **14 interne Links** im Theory Review Artikel gefunden
 - Hauptsächlich Navigation und Breadcrumbs
 - **Keine thematischen "Related Articles" Boxen**
@@ -41,6 +43,7 @@
 #### Konkrete Beispiele:
 
 **Theory Review** (`theory-review/index.html`):
+
 - 2073 Zeilen Content
 - Behandelt alle Tauchtheorie-Themen
 - **KEINE Links zu:**
@@ -51,11 +54,13 @@
   - Relevanten Kursen (Open Water, Advanced)
 
 **Best Dive Computers**:
+
 - ✅ Verlinkt zu "Using a Dive Computer" ✅
 - ❌ Fehlt: Link zu Dive Logbook
 - ❌ Fehlt: Equipment Cluster Box
 
 **Safety Check**:
+
 - ❌ Keine Links zu Safety Stop
 - ❌ Keine Links zu Using a Dive Computer
 - ❌ Keine Links zu Open Water Course
@@ -81,6 +86,7 @@
 ### 2. **Kurs-Seiten** (`/en/courses/`)
 
 #### Status Quo:
+
 - **Advanced Course**: 15 interne Links gefunden
 - **Deep Diver Course**: 11 interne Links gefunden
 - Hauptsächlich zu anderen Kursen
@@ -89,28 +95,35 @@
 #### Fehlende Verlinkungen:
 
 **Open Water Diver**:
+
 - ❌ Keine Links zu: Safety Check, Safety Stop, Using a Dive Computer, Dive Logbook
 - ❌ Kein "What to Read Before Your Course" Abschnitt
 
 **Advanced Open Water**:
+
 - ❌ Keine Links zu: Deep Diving (Artikel), Navigation (Artikel)
 - ❌ Keine "Preparation Resources"
 
 **Deep Diver**:
+
 - ❌ Keine Links zu: Deep Diving Tips, Gas Consumption, Safety Stop
 - ❌ Keine "Essential Knowledge" Box
 
 **Nitrox Diver**:
+
 - ❌ Keine Links zu: Nitrox Info Artikel, Gas Consumption
 
 **Wreck Diver**:
+
 - ❌ Keine Links zu: Wreck Diving Koh Chang Artikel
 - ❌ Keine Links zu spezifischen Wreck Sites (HTMS Chang, etc.)
 
 **Rescue Diver**:
+
 - ❌ Keine Links zu: Safety Check, Emergency Procedures
 
 **Divemaster**:
+
 - ❌ Keine Links zu: Dive Logbook, Theory Review
 - ❌ Keine "Professional Resources" Sammlung
 
@@ -124,34 +137,49 @@ Jede Kurs-Seite sollte **2-3 relevante Blog-Artikel** am Ende verlinken:
 
 ```html
 <!-- Am Ende jeder Kurs-Seite, vor dem Footer -->
-<div class="info-card" style="margin-top: 3em; background: linear-gradient(to right, rgba(0,119,182,0.05), rgba(207,216,220,0.05)); border-left: 4px solid #0077b6;">
-  <h3 style="color: #0077b6; font-size: 22px; margin-bottom: 1em;">📚 Recommended Reading Before Your Course</h3>
+<div
+  class="info-card"
+  style="margin-top: 3em; background: linear-gradient(to right, rgba(0,119,182,0.05), rgba(207,216,220,0.05)); border-left: 4px solid #0077b6;"
+>
+  <h3 style="color: #0077b6; font-size: 22px; margin-bottom: 1em;">
+    📚 Recommended Reading Before Your Course
+  </h3>
   <ul style="list-style: none; padding: 0; line-height: 1.8;">
-    <li>📖 <a href="/en/posts/..."><strong>Article Title</strong></a> – Short description why it's relevant</li>
-    <li>📖 <a href="/en/posts/..."><strong>Article Title</strong></a> – Short description why it's relevant</li>
-    <li>📖 <a href="/en/posts/..."><strong>Article Title</strong></a> – Short description why it's relevant</li>
+    <li>
+      📖 <a href="/en/posts/..."><strong>Article Title</strong></a> – Short
+      description why it's relevant
+    </li>
+    <li>
+      📖 <a href="/en/posts/..."><strong>Article Title</strong></a> – Short
+      description why it's relevant
+    </li>
+    <li>
+      📖 <a href="/en/posts/..."><strong>Article Title</strong></a> – Short
+      description why it's relevant
+    </li>
   </ul>
 </div>
 ```
 
 **Konkrete Zuordnungen:**
 
-| Kurs | Empfohlene Artikel |
-|------|-------------------|
-| **Open Water Diver** | Safety Check, Safety Stop, Using a Dive Computer |
-| **Advanced Open Water** | Deep Diving, Underwater Navigation, Night Diving |
-| **Nitrox Diver** | Nitrox Info, Gas Consumption, Deep Diving |
-| **Deep Diver** | Deep Diving Guide, Gas Consumption, Safety Stop |
-| **Wreck Diver** | Wreck Diving Koh Chang, HTMS Chang (Dive Site) |
-| **Navigation** | SMB Guide, Underwater Navigation |
-| **Rescue Diver** | Safety Check, Emergency Procedures |
-| **Divemaster** | Dive Logbook, Theory Review, alle Knowledge Base Artikel |
+| Kurs                    | Empfohlene Artikel                                       |
+| ----------------------- | -------------------------------------------------------- |
+| **Open Water Diver**    | Safety Check, Safety Stop, Using a Dive Computer         |
+| **Advanced Open Water** | Deep Diving, Underwater Navigation, Night Diving         |
+| **Nitrox Diver**        | Nitrox Info, Gas Consumption, Deep Diving                |
+| **Deep Diver**          | Deep Diving Guide, Gas Consumption, Safety Stop          |
+| **Wreck Diver**         | Wreck Diving Koh Chang, HTMS Chang (Dive Site)           |
+| **Navigation**          | SMB Guide, Underwater Navigation                         |
+| **Rescue Diver**        | Safety Check, Emergency Procedures                       |
+| **Divemaster**          | Dive Logbook, Theory Review, alle Knowledge Base Artikel |
 
 ---
 
 ### 3. **Dive Site Pages** (`/en/dive-sites/`)
 
 #### Status Quo:
+
 - **HTMS Chang**: 9 interne Links
 - **Blueberry Hill**: Links zu "Fun Dives" und "Courses" (generisch)
 - Alle Dive Sites haben ähnliche generische Links
@@ -160,16 +188,19 @@ Jede Kurs-Seite sollte **2-3 relevante Blog-Artikel** am Ende verlinken:
 #### Fehlende Verlinkungen:
 
 **HTMS Chang Wreck**:
+
 - ❌ Kein Link zu "Wreck Diving Koh Chang" Artikel
 - ❌ Kein Link zu "Wreck Diver Course"
 - ❌ Kein Link zu "Advanced Wreck Course"
 - ❌ Kein Link zu "Deep Diver Course"
 
 **Deep Sites (Koho Maru 5, Phutthayotfa)**:
+
 - ❌ Keine Links zu "Deep Diving" Artikel
 - ❌ Keine Links zu "Deep Diver Course"
 
 **Shallow Sites (Hin Pray Nam, Blueberry Hill)**:
+
 - ❌ Keine Links zu "Try Dive"
 - ❌ Keine Links zu "Open Water Course"
 
@@ -183,32 +214,44 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 
 ```html
 <!-- Am Ende jeder Dive Site Seite -->
-<div class="info-card" style="margin-top: 2em; background: rgba(0,119,182,0.05); padding: 20px; border-radius: 8px;">
+<div
+  class="info-card"
+  style="margin-top: 2em; background: rgba(0,119,182,0.05); padding: 20px; border-radius: 8px;"
+>
   <h3 style="color: #0077b6; margin-bottom: 1em;">🤿 Dive This Site</h3>
   <p><strong>Recommended for:</strong></p>
   <ul>
-    <li>🏊 <a href="/en/day-trips/fun-dives/">Fun Dives</a> – Join our daily trips</li>
-    <li>📖 <a href="/en/courses/wreck-diver/">Wreck Diver Course</a> – Master wreck diving techniques</li>
-    <li>💡 <a href="/en/posts/.../wreck-diving/">Wreck Diving Guide</a> – Preparation & safety tips</li>
+    <li>
+      🏊 <a href="/en/day-trips/fun-dives/">Fun Dives</a> – Join our daily trips
+    </li>
+    <li>
+      📖 <a href="/en/courses/wreck-diver/">Wreck Diver Course</a> – Master
+      wreck diving techniques
+    </li>
+    <li>
+      💡 <a href="/en/posts/.../wreck-diving/">Wreck Diving Guide</a> –
+      Preparation & safety tips
+    </li>
   </ul>
 </div>
 ```
 
 **Konkrete Zuordnungen:**
 
-| Dive Site | Empfohlene Kurse | Empfohlene Artikel |
-|-----------|-----------------|-------------------|
-| **HTMS Chang** | Wreck Diver, Advanced Wreck, Deep Diver | Wreck Diving Koh Chang, Deep Diving |
-| **Koho Maru 5** | Deep Diver, Technical Diving | Deep Diving, Wreck Diving |
-| **Blueberry Hill** | Open Water, Try Dive | Beginner's Guide |
-| **Hin Pray Nam** | Open Water, Try Dive | Safety Check |
-| **Koh Rang Pinnacle** | Advanced, Deep Diver | Deep Diving |
+| Dive Site             | Empfohlene Kurse                        | Empfohlene Artikel                  |
+| --------------------- | --------------------------------------- | ----------------------------------- |
+| **HTMS Chang**        | Wreck Diver, Advanced Wreck, Deep Diver | Wreck Diving Koh Chang, Deep Diving |
+| **Koho Maru 5**       | Deep Diver, Technical Diving            | Deep Diving, Wreck Diving           |
+| **Blueberry Hill**    | Open Water, Try Dive                    | Beginner's Guide                    |
+| **Hin Pray Nam**      | Open Water, Try Dive                    | Safety Check                        |
+| **Koh Rang Pinnacle** | Advanced, Deep Diver                    | Deep Diving                         |
 
 ---
 
 ### 4. **Topic Cluster Strategie**
 
 #### Aktueller Status:
+
 - Keine konsistenten Cluster erkennbar
 - Artikel existieren isoliert
 - Keine "Hub & Spoke" Struktur
@@ -218,9 +261,11 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ### 🔵 **CLUSTER 1: Safety Essentials**
 
 **Hub (Pillar Page):**
+
 - `/en/posts/scuba-knowledge/safety-essentials/` **(NEU ERSTELLEN)**
 
 **Spoke Pages:**
+
 - Safety Check (Pre-Dive)
 - Safety Stop (During/Post-Dive)
 - Using a Dive Computer (Monitoring)
@@ -228,14 +273,32 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 - Emergency Procedures
 
 **Alle miteinander verlinken:**
+
 ```html
 <div class="info-card safety-cluster">
   <h3>🛡️ Safety Essentials Series</h3>
   <ul>
-    <li>✅ <a href="/en/posts/scuba-knowledge/safety-check/">Pre-Dive Safety Check</a></li>
-    <li>⏱️ <a href="/en/posts/scuba-knowledge/safety-stop/">Safety Stop Procedures</a></li>
-    <li>💻 <a href="/en/posts/scuba-knowledge/using-a-divecomputer/">Using Your Dive Computer</a></li>
-    <li>⛽ <a href="/en/posts/scuba-knowledge/gas-consumption/">Gas Management</a></li>
+    <li>
+      ✅
+      <a href="/en/posts/scuba-knowledge/safety-check/"
+        >Pre-Dive Safety Check</a
+      >
+    </li>
+    <li>
+      ⏱️
+      <a href="/en/posts/scuba-knowledge/safety-stop/"
+        >Safety Stop Procedures</a
+      >
+    </li>
+    <li>
+      💻
+      <a href="/en/posts/scuba-knowledge/using-a-divecomputer/"
+        >Using Your Dive Computer</a
+      >
+    </li>
+    <li>
+      ⛽ <a href="/en/posts/scuba-knowledge/gas-consumption/">Gas Management</a>
+    </li>
   </ul>
 </div>
 ```
@@ -245,9 +308,11 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ### ⚙️ **CLUSTER 2: Equipment Mastery**
 
 **Hub (Pillar Page):**
+
 - `/en/posts/scuba-knowledge/best-dive-computers/` **(Bereits vorhanden, erweitern)**
 
 **Spoke Pages:**
+
 - Using a Dive Computer
 - Dive Logbook
 - SMB Guide
@@ -255,14 +320,30 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 - Maintenance Tips **(NEU)**
 
 **Cross-Linking:**
+
 ```html
 <div class="info-card equipment-cluster">
   <h3>⚙️ Equipment Guides</h3>
   <ul>
-    <li>💻 <a href="/en/posts/scuba-knowledge/best-dive-computers/">Best Dive Computers 2026</a></li>
-    <li>📖 <a href="/en/posts/scuba-knowledge/using-a-divecomputer/">How to Use Your Computer</a></li>
-    <li>📓 <a href="/en/posts/scuba-knowledge/dive-logbook/">Dive Logbook Guide</a></li>
-    <li>🎈 <a href="/en/posts/scuba-knowledge/smb-guide/">SMB Deployment</a></li>
+    <li>
+      💻
+      <a href="/en/posts/scuba-knowledge/best-dive-computers/"
+        >Best Dive Computers 2026</a
+      >
+    </li>
+    <li>
+      📖
+      <a href="/en/posts/scuba-knowledge/using-a-divecomputer/"
+        >How to Use Your Computer</a
+      >
+    </li>
+    <li>
+      📓
+      <a href="/en/posts/scuba-knowledge/dive-logbook/">Dive Logbook Guide</a>
+    </li>
+    <li>
+      🎈 <a href="/en/posts/scuba-knowledge/smb-guide/">SMB Deployment</a>
+    </li>
   </ul>
 </div>
 ```
@@ -272,15 +353,18 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ### 🌊 **CLUSTER 3: Advanced & Technical Diving**
 
 **Hub (Pillar Page):**
+
 - `/en/posts/tips-and-tricks/deep-diving/` **(Bereits vorhanden)**
 
 **Spoke Pages:**
+
 - Gas Consumption
 - Nitrox Info
 - Wreck Diving Koh Chang
 - Technical Diving Intro
 
 **Related Courses:**
+
 - Deep Diver
 - Nitrox Diver
 - Advanced Nitrox
@@ -288,13 +372,21 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 - Advanced Wreck
 
 **Cross-Linking:**
+
 ```html
 <div class="info-card advanced-cluster">
   <h3>🌊 Advanced Diving Series</h3>
   <ul>
-    <li>📊 <a href="/en/posts/tips-and-tricks/deep-diving/">Deep Diving Guide</a></li>
-    <li>⛽ <a href="/en/posts/scuba-knowledge/gas-consumption/">Gas Consumption</a></li>
-    <li>🌬️ <a href="/en/posts/scuba-knowledge/nitrox-info/">Nitrox Explained</a></li>
+    <li>
+      📊 <a href="/en/posts/tips-and-tricks/deep-diving/">Deep Diving Guide</a>
+    </li>
+    <li>
+      ⛽
+      <a href="/en/posts/scuba-knowledge/gas-consumption/">Gas Consumption</a>
+    </li>
+    <li>
+      🌬️ <a href="/en/posts/scuba-knowledge/nitrox-info/">Nitrox Explained</a>
+    </li>
     <li>⚓ <a href="/en/posts/.../wreck-diving/">Wreck Diving</a></li>
   </ul>
   <p style="margin-top: 1em; font-weight: bold;">
@@ -308,9 +400,11 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ### 🐠 **CLUSTER 4: Beginner's Journey**
 
 **Hub (Pillar Page):**
+
 - `/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/` **(Bereits vorhanden)**
 
 **Spoke Pages:**
+
 - Safety Check
 - Safety Stop
 - Using a Dive Computer
@@ -318,6 +412,7 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 - Buddy Skills
 
 **Related Courses:**
+
 - Try Dive
 - Open Water Diver
 - Scuba Review
@@ -329,6 +424,7 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ### Erwartete Verbesserungen nach Implementierung:
 
 #### SEO-Metriken:
+
 1. **Internal Link Equity Distribution** ↑ +40%
    - Aktuell: Viele Artikel haben <5 interne Links
    - Ziel: Jeder Artikel mindestens 8-12 relevante interne Links
@@ -351,6 +447,7 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
    - Expected improvement: +10-20 Positionen
 
 #### UX-Metriken:
+
 1. **User Navigation** – Einfacher, verwandte Inhalte zu finden
 2. **Educational Value** – User lernen mehr, fühlen sich besser vorbereitet
 3. **Conversion Rate** – Mehr Blog-Reader buchen Kurse (+15-25%)
@@ -361,11 +458,13 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ## 🚀 Implementierungs-Roadmap
 
 ### **PHASE 1: Quick Wins** (Geschätzte Zeit: 4-6 Stunden)
+
 **Priorität: SEHR HOCH** 🔴🔴
 
 #### Woche 1-2:
 
 **1. Safety-Artikel vernetzen** (alle Sprachen)
+
 - [ ] Safety Check → Safety Stop (EN, DE, TH)
 - [ ] Safety Stop → Using a Dive Computer (EN, DE, TH)
 - [ ] Using a Dive Computer → Safety Stop (EN, DE, TH)
@@ -374,6 +473,7 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 - [ ] Dive Logbook → Best Dive Computers (EN, DE, TH)
 
 **Erwarteter Impact:**
+
 - 6 Artikel × 3 Sprachen = 18 Seiten verbessert
 - +50-70 neue interne Links
 - ROI: HOCH (kritische Safety-Themen)
@@ -381,6 +481,7 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 ---
 
 ### **PHASE 2: Kurs-zu-Artikel Links** (Geschätzte Zeit: 6-8 Stunden)
+
 **Priorität: SEHR HOCH** 🔴🔴
 
 #### Woche 3-4:
@@ -388,6 +489,7 @@ Jede Dive Site Seite sollte **spezifische Kurs- und Artikel-Empfehlungen** haben
 **1. "Further Reading" Boxen zu allen Major Courses hinzufügen**
 
 Priority Courses:
+
 - [ ] Open Water Diver (3 Artikel)
 - [ ] Advanced Open Water (3 Artikel)
 - [ ] Nitrox Diver (3 Artikel)
@@ -397,6 +499,7 @@ Priority Courses:
 - [ ] Divemaster (5 Artikel)
 
 **Erwarteter Impact:**
+
 - 7 Kurse × 3 Sprachen = 21 Seiten verbessert
 - +60 neue interne Links
 - ROI: SEHR HOCH (Conversion-kritisch)
@@ -404,20 +507,24 @@ Priority Courses:
 ---
 
 ### **PHASE 3: Knowledge Base Cross-Linking** (Geschätzte Zeit: 8-10 Stunden)
+
 **Priorität: HOCH** 🔴
 
 #### Woche 5-6:
 
 **1. Topic Cluster Boxen implementieren**
+
 - [ ] Safety Essentials Box → auf allen 5 Safety-Artikeln
 - [ ] Equipment Guides Box → auf allen 4 Equipment-Artikeln
 - [ ] Advanced Diving Box → auf allen 4 Advanced-Artikeln
 
 **2. Theory Review erweitern**
+
 - [ ] Nach jedem Hauptabschnitt: 1-2 Deep-Dive Links
 - [ ] Am Ende: "📚 Deep Dive Topics" Box mit 8-10 Links
 
 **Erwarteter Impact:**
+
 - 15+ Artikel × 3 Sprachen = 45+ Seiten verbessert
 - +150 neue interne Links
 - ROI: SEHR HOCH (SEO-kritisch)
@@ -425,6 +532,7 @@ Priority Courses:
 ---
 
 ### **PHASE 4: Dive Site Optimization** (Geschätzte Zeit: 4-5 Stunden)
+
 **Priorität: MITTEL** 🟠
 
 #### Woche 7-8:
@@ -432,12 +540,14 @@ Priority Courses:
 **1. Spezifische Links zu jeder Dive Site hinzufügen**
 
 Priority Sites:
+
 - [ ] HTMS Chang → Wreck Courses & Articles
 - [ ] Koho Maru 5 → Deep Courses & Articles
 - [ ] Blueberry Hill → Beginner Courses
 - [ ] Koh Rang Pinnacle → Advanced Courses
 
 **Erwarteter Impact:**
+
 - 15 Dive Sites × 3 Sprachen = 45 Seiten verbessert
 - +90 neue interne Links
 - ROI: MITTEL (Nice-to-have)
@@ -445,16 +555,19 @@ Priority Sites:
 ---
 
 ### **PHASE 5: Content Creation** (Geschätzte Zeit: Ongoing)
+
 **Priorität: MITTEL** 🟡
 
 #### Woche 9+:
 
 **1. Fehlende Hub Pages erstellen**
+
 - [ ] Safety Essentials (Pillar Page)
 - [ ] Equipment Setup & Maintenance
 - [ ] Buddy Skills Guide
 
 **2. Bestehende Artikel erweitern**
+
 - [ ] Theory Review → Mehr externe und interne Ressourcen
 - [ ] Deep Diving → Erweiterte Techniken
 - [ ] Wreck Diving → Mehr Koh Chang spezifisch
@@ -467,12 +580,26 @@ Priority Sites:
 
 ```html
 <!-- Einfache Version -->
-<div class="info-card" style="margin: 2em 0; padding: 20px; background: rgba(0,119,182,0.05); border-left: 4px solid #0077b6; border-radius: 4px;">
-  <h3 style="color: #0077b6; font-size: 20px; margin-bottom: 1em;">📖 Related Articles</h3>
+<div
+  class="info-card"
+  style="margin: 2em 0; padding: 20px; background: rgba(0,119,182,0.05); border-left: 4px solid #0077b6; border-radius: 4px;"
+>
+  <h3 style="color: #0077b6; font-size: 20px; margin-bottom: 1em;">
+    📖 Related Articles
+  </h3>
   <ul style="list-style: none; padding: 0; line-height: 2;">
-    <li>📌 <a href="/en/posts/..." style="font-weight: 500;">Article Title</a> – Brief description</li>
-    <li>📌 <a href="/en/posts/..." style="font-weight: 500;">Article Title</a> – Brief description</li>
-    <li>📌 <a href="/en/posts/..." style="font-weight: 500;">Article Title</a> – Brief description</li>
+    <li>
+      📌 <a href="/en/posts/..." style="font-weight: 500;">Article Title</a> –
+      Brief description
+    </li>
+    <li>
+      📌 <a href="/en/posts/..." style="font-weight: 500;">Article Title</a> –
+      Brief description
+    </li>
+    <li>
+      📌 <a href="/en/posts/..." style="font-weight: 500;">Article Title</a> –
+      Brief description
+    </li>
   </ul>
 </div>
 ```
@@ -484,10 +611,14 @@ Priority Sites:
 .info-card.cluster-box {
   margin: 2.5em 0;
   padding: 24px;
-  background: linear-gradient(135deg, rgba(0,119,182,0.05) 0%, rgba(207,216,220,0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 182, 0.05) 0%,
+    rgba(207, 216, 220, 0.05) 100%
+  );
   border-left: 5px solid #0077b6;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .info-card.cluster-box h3 {
@@ -539,30 +670,32 @@ Priority Sites:
 ### Vorher-Nachher Messung:
 
 #### Baseline (Januar 2026):
-- [ ] Durchschnittliche Seitenaufrufe pro Session: ___
-- [ ] Bounce Rate: ___
-- [ ] Average Session Duration: ___
-- [ ] Pages per Session: ___
-- [ ] Internal Link Clicks (GA Event): ___
+
+- [ ] Durchschnittliche Seitenaufrufe pro Session: \_\_\_
+- [ ] Bounce Rate: \_\_\_
+- [ ] Average Session Duration: \_\_\_
+- [ ] Pages per Session: \_\_\_
+- [ ] Internal Link Clicks (GA Event): \_\_\_
 
 #### Nach 3 Monaten (April 2026):
-- [ ] Durchschnittliche Seitenaufrufe pro Session: ___ (+Δ%)
-- [ ] Bounce Rate: ___ (-Δ%)
-- [ ] Average Session Duration: ___ (+Δ%)
-- [ ] Pages per Session: ___ (+Δ%)
-- [ ] Internal Link Clicks: ___ (+Δ%)
+
+- [ ] Durchschnittliche Seitenaufrufe pro Session: \_\_\_ (+Δ%)
+- [ ] Bounce Rate: \_\_\_ (-Δ%)
+- [ ] Average Session Duration: \_\_\_ (+Δ%)
+- [ ] Pages per Session: \_\_\_ (+Δ%)
+- [ ] Internal Link Clicks: \_\_\_ (+Δ%)
 
 #### Google Analytics Events Setup:
 
 ```javascript
 // Track internal link clicks
-document.querySelectorAll('.info-card a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    gtag('event', 'internal_link_click', {
-      'link_url': this.href,
-      'link_text': this.textContent,
-      'source_page': window.location.pathname,
-      'link_category': 'related_articles'
+document.querySelectorAll(".info-card a").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    gtag("event", "internal_link_click", {
+      link_url: this.href,
+      link_text: this.textContent,
+      source_page: window.location.pathname,
+      link_category: "related_articles",
     });
   });
 });
@@ -575,12 +708,14 @@ document.querySelectorAll('.info-card a').forEach(link => {
 ### Anchor Text Optimierung:
 
 ❌ **Vermeide:**
+
 - "Click here"
 - "Learn more"
 - "Read this"
 - "Here"
 
 ✅ **Verwende:**
+
 - Descriptive Keywords
 - "Safety Stop Procedures"
 - "Deep Diving Guide for Beginners"
@@ -608,12 +743,14 @@ document.querySelectorAll('.info-card a').forEach(link => {
 ### Für Blog Posts (Knowledge Base):
 
 **Minimum Requirements:**
+
 - [ ] 1-2 contextual Links im Fließtext
 - [ ] 1 "Related Articles" Box (3-5 Links)
 - [ ] 1 CTA zu relevantem Kurs
 - [ ] Links zu mindestens 1 anderen Knowledge Base Artikel
 
 **Optional:**
+
 - Topic Cluster Box
 - Link zu Dive Site (wenn relevant)
 - Cross-language "This article in:" Links
@@ -621,12 +758,14 @@ document.querySelectorAll('.info-card a').forEach(link => {
 ### Für Kurs-Seiten:
 
 **Minimum Requirements:**
+
 - [ ] 2-3 Knowledge Base Artikel im "Further Reading"
 - [ ] 1-2 Related Courses
 - [ ] Link zu FAQ Section
 - [ ] Link zu Prices/Booking
 
 **Optional:**
+
 - "Student Success Stories" (Testimonials mit Links)
 - Equipment Recommendations (mit Links)
 - Dive Site Previews (wo trainiert wird)
@@ -634,12 +773,14 @@ document.querySelectorAll('.info-card a').forEach(link => {
 ### Für Dive Site Pages:
 
 **Minimum Requirements:**
+
 - [ ] 1-2 relevante Kurse (spezifisch!)
 - [ ] 1-2 relevante Artikel
 - [ ] Link zu "Day Trips" page
 - [ ] Link zu Marine Life (wenn applicable)
 
 **Optional:**
+
 - "Best time to dive here" → Weather page
 - "Nearby sites" → andere Dive Sites
 - "What to expect" → Try Dive oder Fun Dives
@@ -654,9 +795,11 @@ Aktuell: ❌ Keine Cross-Language Article Links
 Empfehlung: ✅ "This article is also available in:" am Anfang/Ende
 
 ```html
-<p style="background: #f0f8ff; padding: 10px; border-radius: 4px; font-size: 14px; margin: 1.5em 0;">
+<p
+  style="background: #f0f8ff; padding: 10px; border-radius: 4px; font-size: 14px; margin: 1.5em 0;"
+>
   🌐 <strong>This article is also available in:</strong>
-  <a href="/de/posts/...">Deutsch 🇩🇪</a> | 
+  <a href="/de/posts/...">Deutsch 🇩🇪</a> |
   <a href="/th/posts/...">ไทย 🇹🇭</a>
 </p>
 ```
@@ -710,6 +853,7 @@ Empfehlung: ✅ "This article is also available in:" am Anfang/Ende
 Nach vollständiger Implementierung (3-4 Monate):
 
 ### Quantitative Verbesserungen:
+
 - **+150-200 neue hochwertige interne Links** über die gesamte Website
 - **+25-35% Average Session Duration**
 - **-15-20% Bounce Rate**
@@ -717,12 +861,14 @@ Nach vollständiger Implementierung (3-4 Monate):
 - **+15-25% Conversion Rate** (Blog → Kurs Buchungen)
 
 ### Qualitative Verbesserungen:
+
 - **Bessere UX:** User finden relevante Inhalte einfacher
 - **Höhere Autorität:** Website wird als umfassende Ressource wahrgenommen
 - **Besseres SEO:** Topic Authority für "Koh Chang Diving" Cluster
 - **Mehr Engagement:** User bleiben länger, lesen mehr, buchen mehr
 
 ### SEO Rankings:
+
 - **Primary Keywords:** Stabil/Leicht verbessert
 - **Long-Tail Keywords:** +10-20 Positionen erwartet
 - **Topic Authority:** Signifikant verbessert für Cluster-Themen
@@ -732,6 +878,7 @@ Nach vollständiger Implementierung (3-4 Monate):
 ## 📞 Support & Questions
 
 Bei Fragen zur Implementierung:
+
 - Siehe: `INTERNAL_LINKING_TODO.md` für detaillierte Task-Liste
 - Siehe: `INTERNAL_LINKING_ANALYSIS.md` für ursprüngliche Analyse
 
@@ -741,5 +888,3 @@ Bei Fragen zur Implementierung:
 **Status:** Ready for Implementation ✅  
 **Geschätzter Aufwand gesamt:** 25-30 Stunden  
 **Erwarteter ROI:** SEHR HOCH 🚀
-
-

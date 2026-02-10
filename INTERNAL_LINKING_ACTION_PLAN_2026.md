@@ -1,4 +1,5 @@
 # 🎯 Interne Verlinkung – Priorisierter Aktionsplan 2026
+
 ## Chang Diving Center Website
 
 **Start:** 12. Januar 2026  
@@ -71,19 +72,42 @@ Diese Links haben bereits HTML-Vorlagen in `INTERNAL_LINKING_TODO.md` und sind *
 
 ```html
 <!-- Am Ende der Kurs-Beschreibung, vor den FAQ/Booking Buttons -->
-<div class="info-card" style="margin: 3em 0 2em 0; padding: 24px; background: linear-gradient(to right, rgba(0,119,182,0.05), rgba(207,216,220,0.05)); border-left: 5px solid #0077b6; border-radius: 8px;">
-  <h3 style="color: #0077b6; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;">
+<div
+  class="info-card"
+  style="margin: 3em 0 2em 0; padding: 24px; background: linear-gradient(to right, rgba(0,119,182,0.05), rgba(207,216,220,0.05)); border-left: 5px solid #0077b6; border-radius: 8px;"
+>
+  <h3
+    style="color: #0077b6; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;"
+  >
     📚 Recommended Reading Before Your Course
   </h3>
   <ul style="list-style: none; padding: 0; line-height: 2;">
     <li style="margin-bottom: 0.8em;">
-      📖 <a href="/en/posts/..." style="font-weight: 600; color: #0077b6; text-decoration: none;"><strong>Article Title</strong></a> – Why it matters for your course
+      📖
+      <a
+        href="/en/posts/..."
+        style="font-weight: 600; color: #0077b6; text-decoration: none;"
+        ><strong>Article Title</strong></a
+      >
+      – Why it matters for your course
     </li>
     <li style="margin-bottom: 0.8em;">
-      📖 <a href="/en/posts/..." style="font-weight: 600; color: #0077b6; text-decoration: none;"><strong>Article Title</strong></a> – What you'll learn
+      📖
+      <a
+        href="/en/posts/..."
+        style="font-weight: 600; color: #0077b6; text-decoration: none;"
+        ><strong>Article Title</strong></a
+      >
+      – What you'll learn
     </li>
     <li style="margin-bottom: 0.8em;">
-      📖 <a href="/en/posts/..." style="font-weight: 600; color: #0077b6; text-decoration: none;"><strong>Article Title</strong></a> – How to prepare
+      📖
+      <a
+        href="/en/posts/..."
+        style="font-weight: 600; color: #0077b6; text-decoration: none;"
+        ><strong>Article Title</strong></a
+      >
+      – How to prepare
     </li>
   </ul>
   <p style="margin-top: 1em; font-size: 14px; color: #666; font-style: italic;">
@@ -144,19 +168,59 @@ Diese Links haben bereits HTML-Vorlagen in `INTERNAL_LINKING_TODO.md` und sind *
 #### **Safety Essentials Cluster Box:**
 
 ```html
-<div class="info-card safety-cluster" style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(0,119,182,0.05), rgba(207,216,220,0.05)); border-left: 5px solid #e74c3c; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-  <h3 style="color: #e74c3c; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;">
+<div
+  class="info-card safety-cluster"
+  style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(0,119,182,0.05), rgba(207,216,220,0.05)); border-left: 5px solid #e74c3c; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"
+>
+  <h3
+    style="color: #e74c3c; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;"
+  >
     🛡️ Safety Essentials Series
   </h3>
-  <p style="margin-bottom: 1em; color: #555;">Master these safety topics for safer diving:</p>
+  <p style="margin-bottom: 1em; color: #555;">
+    Master these safety topics for safer diving:
+  </p>
   <ul style="list-style: none; padding: 0; line-height: 2;">
-    <li>✅ <a href="/en/posts/scuba-knowledge/safety-check/" style="color: #0077b6; font-weight: 500;">Pre-Dive Safety Check (BWRAF)</a></li>
-    <li>⏱️ <a href="/en/posts/scuba-knowledge/safety-stop/" style="color: #0077b6; font-weight: 500;">Safety Stop Procedures</a></li>
-    <li>💻 <a href="/en/posts/scuba-knowledge/using-a-divecomputer/" style="color: #0077b6; font-weight: 500;">Using Your Dive Computer</a></li>
-    <li>⛽ <a href="/en/posts/scuba-knowledge/gas-consumption/" style="color: #0077b6; font-weight: 500;">Gas Consumption & Management</a></li>
+    <li>
+      ✅
+      <a
+        href="/en/posts/scuba-knowledge/safety-check/"
+        style="color: #0077b6; font-weight: 500;"
+        >Pre-Dive Safety Check (BWRAF)</a
+      >
+    </li>
+    <li>
+      ⏱️
+      <a
+        href="/en/posts/scuba-knowledge/safety-stop/"
+        style="color: #0077b6; font-weight: 500;"
+        >Safety Stop Procedures</a
+      >
+    </li>
+    <li>
+      💻
+      <a
+        href="/en/posts/scuba-knowledge/using-a-divecomputer/"
+        style="color: #0077b6; font-weight: 500;"
+        >Using Your Dive Computer</a
+      >
+    </li>
+    <li>
+      ⛽
+      <a
+        href="/en/posts/scuba-knowledge/gas-consumption/"
+        style="color: #0077b6; font-weight: 500;"
+        >Gas Consumption & Management</a
+      >
+    </li>
   </ul>
-  <p style="margin-top: 1.5em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.1); font-weight: bold;">
-    🤿 <a href="/en/courses/open-water-diver/" style="color: #0077b6;">Learn these in our Open Water Course</a>
+  <p
+    style="margin-top: 1.5em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.1); font-weight: bold;"
+  >
+    🤿
+    <a href="/en/courses/open-water-diver/" style="color: #0077b6;"
+      >Learn these in our Open Water Course</a
+    >
   </p>
 </div>
 ```
@@ -164,19 +228,55 @@ Diese Links haben bereits HTML-Vorlagen in `INTERNAL_LINKING_TODO.md` und sind *
 #### **Equipment Mastery Cluster Box:**
 
 ```html
-<div class="info-card equipment-cluster" style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(52,152,219,0.05), rgba(149,165,166,0.05)); border-left: 5px solid #3498db; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-  <h3 style="color: #3498db; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;">
+<div
+  class="info-card equipment-cluster"
+  style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(52,152,219,0.05), rgba(149,165,166,0.05)); border-left: 5px solid #3498db; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"
+>
+  <h3
+    style="color: #3498db; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;"
+  >
     ⚙️ Equipment Guides
   </h3>
   <p style="margin-bottom: 1em; color: #555;">Master your diving equipment:</p>
   <ul style="list-style: none; padding: 0; line-height: 2;">
-    <li>💻 <a href="/en/posts/scuba-knowledge/best-dive-computers/" style="color: #0077b6; font-weight: 500;">Best Dive Computers 2026</a></li>
-    <li>📖 <a href="/en/posts/scuba-knowledge/using-a-divecomputer/" style="color: #0077b6; font-weight: 500;">How to Use Your Dive Computer</a></li>
-    <li>📓 <a href="/en/posts/scuba-knowledge/dive-logbook/" style="color: #0077b6; font-weight: 500;">Dive Logbook Guide</a></li>
-    <li>🎈 <a href="/en/posts/scuba-knowledge/smb-guide/" style="color: #0077b6; font-weight: 500;">SMB Deployment Guide</a></li>
+    <li>
+      💻
+      <a
+        href="/en/posts/scuba-knowledge/best-dive-computers/"
+        style="color: #0077b6; font-weight: 500;"
+        >Best Dive Computers 2026</a
+      >
+    </li>
+    <li>
+      📖
+      <a
+        href="/en/posts/scuba-knowledge/using-a-divecomputer/"
+        style="color: #0077b6; font-weight: 500;"
+        >How to Use Your Dive Computer</a
+      >
+    </li>
+    <li>
+      📓
+      <a
+        href="/en/posts/scuba-knowledge/dive-logbook/"
+        style="color: #0077b6; font-weight: 500;"
+        >Dive Logbook Guide</a
+      >
+    </li>
+    <li>
+      🎈
+      <a
+        href="/en/posts/scuba-knowledge/smb-guide/"
+        style="color: #0077b6; font-weight: 500;"
+        >SMB Deployment Guide</a
+      >
+    </li>
   </ul>
-  <p style="margin-top: 1.5em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.1); font-weight: bold;">
-    🛒 <a href="/en/equipment/" style="color: #0077b6;">Shop Diving Equipment</a>
+  <p
+    style="margin-top: 1.5em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.1); font-weight: bold;"
+  >
+    🛒
+    <a href="/en/equipment/" style="color: #0077b6;">Shop Diving Equipment</a>
   </p>
 </div>
 ```
@@ -184,19 +284,59 @@ Diese Links haben bereits HTML-Vorlagen in `INTERNAL_LINKING_TODO.md` und sind *
 #### **Advanced Diving Cluster Box:**
 
 ```html
-<div class="info-card advanced-cluster" style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(142,68,173,0.05), rgba(155,89,182,0.05)); border-left: 5px solid #8e44ad; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-  <h3 style="color: #8e44ad; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;">
+<div
+  class="info-card advanced-cluster"
+  style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(142,68,173,0.05), rgba(155,89,182,0.05)); border-left: 5px solid #8e44ad; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"
+>
+  <h3
+    style="color: #8e44ad; font-size: 22px; margin-bottom: 1em; display: flex; align-items: center; gap: 10px;"
+  >
     🌊 Advanced Diving Series
   </h3>
-  <p style="margin-bottom: 1em; color: #555;">Take your diving to the next level:</p>
+  <p style="margin-bottom: 1em; color: #555;">
+    Take your diving to the next level:
+  </p>
   <ul style="list-style: none; padding: 0; line-height: 2;">
-    <li>📊 <a href="/en/posts/tips-and-tricks/deep-diving/" style="color: #0077b6; font-weight: 500;">Deep Diving – Limits & Safety</a></li>
-    <li>⛽ <a href="/en/posts/scuba-knowledge/gas-consumption/" style="color: #0077b6; font-weight: 500;">Gas Consumption Planning</a></li>
-    <li>🌬️ <a href="/en/posts/scuba-knowledge/nitrox-info/" style="color: #0077b6; font-weight: 500;">Nitrox Explained</a></li>
-    <li>⚓ <a href="/en/posts/.../wreck-diving/" style="color: #0077b6; font-weight: 500;">Wreck Diving Koh Chang</a></li>
+    <li>
+      📊
+      <a
+        href="/en/posts/tips-and-tricks/deep-diving/"
+        style="color: #0077b6; font-weight: 500;"
+        >Deep Diving – Limits & Safety</a
+      >
+    </li>
+    <li>
+      ⛽
+      <a
+        href="/en/posts/scuba-knowledge/gas-consumption/"
+        style="color: #0077b6; font-weight: 500;"
+        >Gas Consumption Planning</a
+      >
+    </li>
+    <li>
+      🌬️
+      <a
+        href="/en/posts/scuba-knowledge/nitrox-info/"
+        style="color: #0077b6; font-weight: 500;"
+        >Nitrox Explained</a
+      >
+    </li>
+    <li>
+      ⚓
+      <a
+        href="/en/posts/.../wreck-diving/"
+        style="color: #0077b6; font-weight: 500;"
+        >Wreck Diving Koh Chang</a
+      >
+    </li>
   </ul>
-  <p style="margin-top: 1.5em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.1); font-weight: bold;">
-    🤿 <a href="/en/courses/deep-diver/" style="color: #0077b6;">Take the Deep Diver Course</a>
+  <p
+    style="margin-top: 1.5em; padding-top: 1em; border-top: 1px solid rgba(0,0,0,0.1); font-weight: bold;"
+  >
+    🤿
+    <a href="/en/courses/deep-diver/" style="color: #0077b6;"
+      >Take the Deep Diver Course</a
+    >
   </p>
 </div>
 ```
@@ -248,27 +388,61 @@ Diese Links haben bereits HTML-Vorlagen in `INTERNAL_LINKING_TODO.md` und sind *
 
 ```html
 <!-- Am Ende jeder Dive Site Seite, nach der Galerie/vor Footer -->
-<div class="info-card dive-site-links" style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(0,119,182,0.08), rgba(46,204,113,0.08)); border-left: 5px solid #27ae60; border-radius: 8px;">
-  <h3 style="color: #27ae60; font-size: 22px; margin-bottom: 1em;">🤿 Dive This Site With Us</h3>
-  
+<div
+  class="info-card dive-site-links"
+  style="margin: 2.5em 0; padding: 24px; background: linear-gradient(135deg, rgba(0,119,182,0.08), rgba(46,204,113,0.08)); border-left: 5px solid #27ae60; border-radius: 8px;"
+>
+  <h3 style="color: #27ae60; font-size: 22px; margin-bottom: 1em;">
+    🤿 Dive This Site With Us
+  </h3>
+
   <div style="margin-bottom: 1.5em;">
-    <h4 style="color: #0077b6; font-size: 18px; margin-bottom: 0.5em;">For Certified Divers:</h4>
+    <h4 style="color: #0077b6; font-size: 18px; margin-bottom: 0.5em;">
+      For Certified Divers:
+    </h4>
     <ul style="list-style: none; padding: 0; line-height: 1.8;">
-      <li>🏊 <a href="/en/day-trips/fun-dives/" style="color: #0077b6; font-weight: 500;">Join our Daily Fun Dive Trips</a></li>
+      <li>
+        🏊
+        <a
+          href="/en/day-trips/fun-dives/"
+          style="color: #0077b6; font-weight: 500;"
+          >Join our Daily Fun Dive Trips</a
+        >
+      </li>
     </ul>
   </div>
 
   <div style="margin-bottom: 1.5em;">
-    <h4 style="color: #0077b6; font-size: 18px; margin-bottom: 0.5em;">Want to Learn?</h4>
+    <h4 style="color: #0077b6; font-size: 18px; margin-bottom: 0.5em;">
+      Want to Learn?
+    </h4>
     <ul style="list-style: none; padding: 0; line-height: 1.8;">
-      <li>📚 <a href="/en/courses/SPECIFIC-COURSE/" style="color: #0077b6; font-weight: 500;">SPECIFIC COURSE NAME</a> – Best for this site</li>
+      <li>
+        📚
+        <a
+          href="/en/courses/SPECIFIC-COURSE/"
+          style="color: #0077b6; font-weight: 500;"
+          >SPECIFIC COURSE NAME</a
+        >
+        – Best for this site
+      </li>
     </ul>
   </div>
 
   <div>
-    <h4 style="color: #0077b6; font-size: 18px; margin-bottom: 0.5em;">Prepare Like a Pro:</h4>
+    <h4 style="color: #0077b6; font-size: 18px; margin-bottom: 0.5em;">
+      Prepare Like a Pro:
+    </h4>
     <ul style="list-style: none; padding: 0; line-height: 1.8;">
-      <li>💡 <a href="/en/posts/.../ARTICLE/" style="color: #0077b6; font-weight: 500;">ARTICLE TITLE</a> – Essential reading</li>
+      <li>
+        💡
+        <a
+          href="/en/posts/.../ARTICLE/"
+          style="color: #0077b6; font-weight: 500;"
+          >ARTICLE TITLE</a
+        >
+        – Essential reading
+      </li>
     </ul>
   </div>
 </div>
@@ -334,45 +508,45 @@ Diese Links haben bereits HTML-Vorlagen in `INTERNAL_LINKING_TODO.md` und sind *
 // Füge zu /js/global.js hinzu (oder erstelle separate tracking.js)
 
 // Track all internal link clicks in info-cards
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener("DOMContentLoaded", function () {
   // Track cluster box links
-  document.querySelectorAll('.info-card a, .cluster-box a').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'internal_link_click', {
-          'event_category': 'Internal Linking',
-          'event_label': this.getAttribute('href'),
-          'link_text': this.textContent.trim(),
-          'source_page': window.location.pathname,
-          'link_position': getClosestHeading(this)
-        });
-      }
+  document
+    .querySelectorAll(".info-card a, .cluster-box a")
+    .forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        if (typeof gtag !== "undefined") {
+          gtag("event", "internal_link_click", {
+            event_category: "Internal Linking",
+            event_label: this.getAttribute("href"),
+            link_text: this.textContent.trim(),
+            source_page: window.location.pathname,
+            link_position: getClosestHeading(this),
+          });
+        }
+      });
     });
-  });
-  
+
   // Helper function to get context
   function getClosestHeading(element) {
-    let parent = element.closest('.info-card, .cluster-box');
+    let parent = element.closest(".info-card, .cluster-box");
     if (parent) {
-      let heading = parent.querySelector('h3');
-      return heading ? heading.textContent.trim() : 'unknown';
+      let heading = parent.querySelector("h3");
+      return heading ? heading.textContent.trim() : "unknown";
     }
-    return 'content';
+    return "content";
   }
-  
 });
 
 // Track scroll depth (to measure engagement)
 let scrollTracked = false;
-window.addEventListener('scroll', function() {
-  if (!scrollTracked && (window.scrollY / document.body.scrollHeight) > 0.75) {
+window.addEventListener("scroll", function () {
+  if (!scrollTracked && window.scrollY / document.body.scrollHeight > 0.75) {
     scrollTracked = true;
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'scroll_depth', {
-        'event_category': 'Engagement',
-        'event_label': '75%',
-        'page_path': window.location.pathname
+    if (typeof gtag !== "undefined") {
+      gtag("event", "scroll_depth", {
+        event_category: "Engagement",
+        event_label: "75%",
+        page_path: window.location.pathname,
       });
     }
   }
@@ -392,6 +566,7 @@ Erstelle Spreadsheet mit:
 ```
 
 **Priority Pages für Tracking:**
+
 - Safety Stop
 - Using a Dive Computer
 - Deep Diving
@@ -427,7 +602,11 @@ Erstelle Spreadsheet mit:
 
 /* Safety Cluster - Red theme */
 .safety-cluster {
-  background: linear-gradient(135deg, rgba(0, 119, 182, 0.05), rgba(207, 216, 220, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 182, 0.05),
+    rgba(207, 216, 220, 0.05)
+  );
   border-left: 5px solid #e74c3c;
 }
 
@@ -437,7 +616,11 @@ Erstelle Spreadsheet mit:
 
 /* Equipment Cluster - Blue theme */
 .equipment-cluster {
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.05), rgba(149, 165, 166, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.05),
+    rgba(149, 165, 166, 0.05)
+  );
   border-left: 5px solid #3498db;
 }
 
@@ -447,7 +630,11 @@ Erstelle Spreadsheet mit:
 
 /* Advanced Cluster - Purple theme */
 .advanced-cluster {
-  background: linear-gradient(135deg, rgba(142, 68, 173, 0.05), rgba(155, 89, 182, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(142, 68, 173, 0.05),
+    rgba(155, 89, 182, 0.05)
+  );
   border-left: 5px solid #8e44ad;
 }
 
@@ -457,7 +644,11 @@ Erstelle Spreadsheet mit:
 
 /* Dive Site Links - Green theme */
 .dive-site-links {
-  background: linear-gradient(135deg, rgba(0, 119, 182, 0.08), rgba(46, 204, 113, 0.08));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 182, 0.08),
+    rgba(46, 204, 113, 0.08)
+  );
   border-left: 5px solid #27ae60;
 }
 
@@ -540,6 +731,7 @@ Erstelle Spreadsheet mit:
 ### Heute (in den nächsten 2 Stunden):
 
 1. **Setup:**
+
    ```bash
    # Baseline Metrics erfassen
    # Google Analytics öffnen → Verhalten → Site Content → Alle Seiten
@@ -587,11 +779,13 @@ Erstelle Spreadsheet mit:
 ## 📞 Support & Ressourcen
 
 ### Dokumente:
+
 - **Detaillierte Analyse:** `INTERNAL_LINKING_COMPREHENSIVE_ANALYSIS_2026.md`
 - **Original Analyse:** `INTERNAL_LINKING_ANALYSIS.md`
 - **TODO Liste:** `INTERNAL_LINKING_TODO.md`
 
 ### Bei Problemen:
+
 1. Prüfe HTML Syntax mit Linter
 2. Teste Links im Browser (404 checker)
 3. Vergleiche mit bestehenden erfolgreichen Implementierungen
@@ -602,21 +796,25 @@ Erstelle Spreadsheet mit:
 ## ✅ Erfolgs-Indikatoren
 
 ### Woche 1-2 (Phase 1):
+
 - ✅ 9 neue Links implementiert
 - ✅ GA Tracking aktiv
 - ✅ Baseline Metrics erfasst
 
 ### Woche 3-4 (Phase 2):
+
 - ✅ 21 Kurse mit "Further Reading"
 - ✅ +63 neue Links
 - ✅ Erste Traffic-Änderungen sichtbar
 
 ### Woche 5-6 (Phase 3):
+
 - ✅ Cluster Boxen auf 15 Artikeln
 - ✅ +120 neue Links
 - ✅ Session Duration ↑ +10-15%
 
 ### Woche 7-8 (Phase 4):
+
 - ✅ 24 Dive Sites optimiert
 - ✅ +60 neue Links
 - ✅ Pages/Session ↑ +20%
@@ -629,4 +827,3 @@ Erstelle Spreadsheet mit:
 **Verantwortlich:** Team Lead / Developer
 
 🚀 **Let's get linking!**
-

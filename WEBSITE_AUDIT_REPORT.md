@@ -1,4 +1,5 @@
 # Website Audit Report - Chang Diving Center
+
 **Date:** November 12, 2025  
 **Domain:** changdiving.com  
 **Auditor:** AI Code Review  
@@ -29,6 +30,7 @@ This comprehensive audit identified **12 critical issues**, **8 high-priority is
 **Impact:** This will cause a JavaScript syntax error, potentially breaking the entire routing function.
 
 **Fix:**
+
 ```javascript
 "/de/team",    // ✅ Add comma
 "/de/Verfasser",
@@ -50,6 +52,7 @@ This comprehensive audit identified **12 critical issues**, **8 high-priority is
 **Impact:** Google/Bing may reject this URL, causing indexing issues.
 
 **Fix:**
+
 ```xml
 <loc>https://changdiving.com/</loc>  <!-- ✅ Correct format -->
 ```
@@ -66,8 +69,12 @@ This comprehensive audit identified **12 critical issues**, **8 high-priority is
 **Impact:** Users can be vulnerable to man-in-the-middle attacks. Google recommends HSTS for all HTTPS sites.
 
 **Fix:** Add to `ensureSecurityHeaders()` function:
+
 ```javascript
-headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
+headers.set(
+  "Strict-Transport-Security",
+  "max-age=31536000; includeSubDomains; preload",
+);
 ```
 
 **Priority:** 🔴 **CRITICAL** - Security vulnerability
@@ -82,6 +89,7 @@ headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; p
 **Impact:** Meta tag can be ignored by some browsers. HTTP header is more reliable.
 
 **Fix:** Add to `ensureSecurityHeaders()`:
+
 ```javascript
 headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 ```
@@ -98,6 +106,7 @@ headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 **Impact:** Browser features may be accessible without explicit permission, potential security risk.
 
 **Fix:** Add to `ensureSecurityHeaders()`:
+
 ```javascript
 headers.set("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
 ```
@@ -112,8 +121,8 @@ headers.set("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
 **Issue:** Content Security Policy allows inline scripts and styles
 
 ```javascript
-"script-src 'self' 'unsafe-inline' ..."  // ❌ Security risk
-"style-src 'self' 'unsafe-inline' ..."   // ❌ Security risk
+"script-src 'self' 'unsafe-inline' ..."; // ❌ Security risk
+"style-src 'self' 'unsafe-inline' ..."; // ❌ Security risk
 ```
 
 **Impact:** Vulnerable to XSS attacks. Google recommends removing `unsafe-inline`.
@@ -132,6 +141,7 @@ headers.set("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
 **Issue:** URLs listed in both `REDIRECTS_PREFIX` (301) and `FORCE_GONE_PREFIX` (410)
 
 **Affected URLs:**
+
 - `/store`, `/en/store`, `/de/store`, `/th/store`
 - `/product`, `/en/product`, `/de/product`, `/th/product`
 
@@ -163,11 +173,12 @@ headers.set("Permissions-Policy", "geolocation=(), microphone=(), camera=()");
 **Impact:** If Cloudflare settings change, HTTP URLs may be accessible.
 
 **Recommendation:** Add explicit HTTP→HTTPS redirect:
+
 ```javascript
-if (url.protocol === 'http:') {
+if (url.protocol === "http:") {
   return new Response(null, {
     status: 301,
-    headers: { Location: url.href.replace('http:', 'https:') }
+    headers: { Location: url.href.replace("http:", "https:") },
   });
 }
 ```
@@ -184,6 +195,7 @@ if (url.protocol === 'http:') {
 **Impact:** Meta tag can be ignored. HTTP header is more reliable.
 
 **Fix:** Add to `ensureSecurityHeaders()`:
+
 ```javascript
 headers.set("X-Content-Type-Options", "nosniff");
 ```
@@ -211,6 +223,7 @@ headers.set("X-Content-Type-Options", "nosniff");
 
 **Location:** `robots.txt`  
 **Current:**
+
 ```
 User-agent: *
 Allow: /
@@ -219,6 +232,7 @@ Allow: /
 **Issue:** No disallow rules for admin/private paths (if any exist).
 
 **Recommendation:** Add disallow rules if needed:
+
 ```
 Disallow: /admin/
 Disallow: /private/
@@ -255,6 +269,7 @@ Disallow: /private/
 **Issue:** Hreflang tags may not always include self-reference.
 
 **Recommendation:** Ensure every page includes its own hreflang tag:
+
 ```html
 <link rel="alternate" hreflang="en" href="https://changdiving.com/en/" />
 <link rel="alternate" hreflang="de" href="https://changdiving.com/de/" />
@@ -274,8 +289,9 @@ Disallow: /private/
 **Issue:** CSP doesn't include reporting endpoint.
 
 **Recommendation:** Add CSP reporting:
+
 ```javascript
-"report-uri /csp-report-endpoint"
+"report-uri /csp-report-endpoint";
 ```
 
 **Priority:** 🟡 **MEDIUM** - Security monitoring
@@ -300,6 +316,7 @@ Disallow: /private/
 **Issue:** No `/.well-known/security.txt` file.
 
 **Recommendation:** Add security.txt for responsible disclosure:
+
 ```
 Contact: mailto:security@changdiving.com
 Expires: 2026-12-31T23:59:59.000Z
@@ -362,6 +379,7 @@ Preferred-Languages: en, de, th
 
 **Location:** `functions/[[path]].js` line 653  
 **Issue:** Domain hardcoded in redirect function:
+
 ```javascript
 return `https://changdiving.com${toNorm}`;
 ```
@@ -379,6 +397,7 @@ return `https://changdiving.com${toNorm}`;
 **Issue:** No explicit cache headers for images, CSS, JS files.
 
 **Recommendation:** Add cache headers:
+
 ```javascript
 if (isAsset(path)) {
   headers.set("Cache-Control", "public, max-age=31536000, immutable");
@@ -451,12 +470,14 @@ if (isAsset(path)) {
 ## 11. TESTING RECOMMENDATIONS
 
 ### **Security Testing:**
+
 - [ ] Test with securityheaders.com
 - [ ] Run OWASP ZAP scan
 - [ ] Test CSP violations
 - [ ] Verify HSTS preload eligibility
 
 ### **SEO Testing:**
+
 - [ ] Google Search Console: Check coverage report
 - [ ] Bing Webmaster Tools: Verify indexing
 - [ ] Test sitemap.xml with Google Search Console
@@ -464,6 +485,7 @@ if (isAsset(path)) {
 - [ ] Test mobile-friendliness
 
 ### **Performance Testing:**
+
 - [ ] Google PageSpeed Insights
 - [ ] Core Web Vitals measurement
 - [ ] Lighthouse audit
@@ -493,6 +515,7 @@ if (isAsset(path)) {
 The Chang Diving Center website demonstrates **good SEO fundamentals** with proper structured data, hreflang implementation, and meta tags. However, **critical security headers are missing**, and there are **syntax errors** that could break functionality.
 
 **Priority Focus Areas:**
+
 1. **Security Headers** (HSTS, Referrer-Policy, Permissions-Policy)
 2. **Code Syntax Errors** (missing comma)
 3. **Sitemap Fixes** (invalid URL)
@@ -504,4 +527,3 @@ With these fixes implemented, the website will meet modern security standards an
 
 **Report Generated:** November 12, 2025  
 **Next Review Recommended:** December 12, 2025
-
