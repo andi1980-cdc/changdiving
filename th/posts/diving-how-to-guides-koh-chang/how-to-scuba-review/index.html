@@ -31,11 +31,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -56,8 +56,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- hreflang Alternates -->
     <link
@@ -285,10 +285,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -513,7 +552,7 @@
         <p>
           <strong>✅ แนะนำ:</strong> ถ้าคุณไม่ได้ดำน้ำมานาน
           <strong>12 เดือนขึ้นไป</strong> เราแนะนำให้ทำ Scuba Review
-          ก่อนดำน้ำสนุกหรือเรียนคอร์สใหม่
+          ก่อนฟันไดฟ์หรือเรียนคอร์สใหม่
         </p>
         <hr />
 
@@ -532,7 +571,7 @@
         <ul>
           <li>บทเรียนทฤษฎีบนเรือ</li>
           <li>ไดฟ์ที่ 1: ฝึกทักษะและการควบคุมลอยตัว</li>
-          <li>ไดฟ์ที่ 2: เลือกได้ – ดำน้ำสนุกหรือฝึกต่อ</li>
+          <li>ไดฟ์ที่ 2: เลือกได้ – ฟันไดฟ์หรือฝึกต่อ</li>
           <li>✅ การฝึกความปลอดภัย ฉุกเฉิน และใช้อุปกรณ์</li>
         </ul>
         <p>
@@ -585,7 +624,7 @@
           <li>ดำน้ำเรือ 2 ไดฟ์พร้อมครูฝึก</li>
           <li>บทเรียนทฤษฎี & บริฟความปลอดภัย</li>
           <li>ฝึกทักษะ: การลอยตัว การรับมือเหตุฉุกเฉิน อุปกรณ์</li>
-          <li>ไดฟ์ที่ 2: เลือกได้ – ดำน้ำสนุกหรือฝึกต่อ</li>
+          <li>ไดฟ์ที่ 2: เลือกได้ – ฟันไดฟ์หรือฝึกต่อ</li>
           <li>อุปกรณ์ดำน้ำครบชุด (ฟรี ไม่มีค่าเช่า)</li>
           <li>
             นำอุปกรณ์มาเอง? รับส่วนลด 5% ที่
@@ -685,7 +724,7 @@
           <h3>นี่คือคอร์สที่ได้รับใบรับรองหรือไม่?</h3>
           <p>
             ไม่ใช่ค่ะ เป็นคอร์สรีเฟรชสำหรับผู้ที่มีใบรับรองแล้ว
-            ช่วยเตรียมความพร้อมสำหรับ Fun Dive หรือเรียนต่อ
+            ช่วยเตรียมความพร้อมสำหรับ ฟันไดฟ์ หรือเรียนต่อ
           </p>
         </div>
         <div class="faq-item">
@@ -714,7 +753,15 @@
       </div>
     </main>
     <!-- Cookie Consent Banner EN -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
     <script src="/js/cookieconsent.min.js" defer async></script>
     <!-- WhatsApp Button -->
     <a

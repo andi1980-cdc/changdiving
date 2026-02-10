@@ -27,11 +27,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -52,8 +52,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- hreflang Alternates -->
     <link
@@ -281,10 +281,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -339,7 +378,7 @@
           "isPartOf": {
             "@type": "WebSite",
             "@id": "https://changdiving.com/",
-            "name": "Chang Diving Center",
+            "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
             "url": "https://changdiving.com/"
           },
           "about": {
@@ -417,8 +456,8 @@
           "@context": "https://schema.org",
           "@type": "TouristTrip",
           "@id": "https://changdiving.com/th/day-trips/fun-dives/",
-          "name": "ดำน้ำสนุกพร้อมไกด์ที่เกาะช้าง – สำรวจโลกใต้ทะเลของไทย",
-          "description": "เข้าร่วมการดำน้ำสนุกพร้อมไกด์รายวันและค้นพบแหล่งดำน้ำที่ดีที่สุดรอบเกาะช้าง เหมาะสำหรับนักดำน้ำที่ได้รับใบอนุญาต กลุ่มเล็ก ซากเรือ แนวปะการัง ถังอากาศและน้ำหนักรวมอยู่ด้วย",
+          "name": "ฟันไดฟ์พร้อมไกด์ที่เกาะช้าง – สำรวจโลกใต้ทะเลของไทย",
+          "description": "เข้าร่วมฟันไดฟ์พร้อมไกด์รายวันและค้นพบแหล่งดำน้ำที่ดีที่สุดรอบเกาะช้าง เหมาะสำหรับนักดำน้ำที่ได้รับใบอนุญาต กลุ่มเล็ก ซากเรือ แนวปะการัง ถังอากาศและน้ำหนักรวมอยู่ด้วย",
           "image": [
             "https://changdiving.com/img/products/fun_dive/fun-dive-header_small.webp"
           ],
@@ -431,7 +470,7 @@
             "@type": "Place",
             "name": "เกาะช้าง ประเทศไทย"
           },
-          "touristType": "ดำน้ำสนุกพร้อมไกด์",
+          "touristType": "ฟันไดฟ์พร้อมไกด์",
           "offers": {
             "@type": "Offer",
             "price": 3290,
@@ -639,6 +678,7 @@
             text-align: center;
             font-size: 32px;
             background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
@@ -657,9 +697,9 @@
           <a href="/th/dive-sites/">แหล่งดำน้ำที่ดีที่สุดของเกาะช้าง</a> ใน
           <strong>อุทยานแห่งชาติหมู่เกาะช้าง</strong> กับทริปดำน้ำเต็มวันของเรา
           ไม่ว่าคุณจะเริ่มต้นด้วย
-          <a href="/th/day-trips/try-dive/">Try Dive</a>, ทบทักษะกับ
+          <a href="/th/day-trips/try-dive/">ลองดำน้ำ</a>, ทบทักษะกับ
           <a href="/th/day-trips/scuba-review/">Scuba Review</a> หรือสนุกกับ
-          <a href="/th/day-trips/fun-dives/">Fun Dives</a> ทีมครูผู้ฝึกสอน
+          <a href="/th/day-trips/fun-dives/">ฟันไดฟ์</a> ทีมครูผู้ฝึกสอน
           <strong>SDI, TDI และ PADI</strong> ของเราพร้อมดูแลให้ปลอดภัย สนุกสนาน
           และเต็มไปด้วยความทรงจำ
         </p>
@@ -702,7 +742,7 @@
         </p>
 
         <p style="font-weight: bold; color: #0077b6">
-          🌊 จองทริปดำน้ำที่เกาะช้างวันนี้ – ปลอดภัย ดำน้ำสนุก
+          🌊 จองทริปดำน้ำที่เกาะช้างวันนี้ – ปลอดภัย ฟันไดฟ์
           ร่องรอยปะการังสวยงาม และกลุ่มเล็กตั้งแต่ปี 2005!
         </p>
         <div class="row">
@@ -736,12 +776,12 @@
           <a href="/th/day-trips/fun-dives/" class="three columns">
             <img
               src="/img/daytrips/fun_dives/fun_dives_at_koh_chang.webp"
-              alt="ดำน้ำสนุกที่เกาะช้าง - การดำน้ำแบบมีไกด์พร้อมครูฝึกมืออาชีพ"
+              alt="ฟันไดฟ์ที่เกาะช้าง - การดำน้ำแบบมีไกด์พร้อมครูฝึกมืออาชีพ"
               width="600"
               height="400"
             />
             <div class="excerpt">
-              <h3>🐠 ดำน้ำสนุก</h3>
+              <h3>🐠 ฟันไดฟ์</h3>
               <p style="min-height: 60px">
                 ➡️ ดำน้ำพร้อมไกด์ที่เกาะช้าง – กลุ่มเล็ก แนวปะการัง ซากเรือ
                 จุดชมชีวิตทะเล & อุปกรณ์ดำน้ำคุณภาพสูง

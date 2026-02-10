@@ -31,11 +31,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -56,8 +56,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cdn.trustindex.io" crossorigin />
@@ -176,10 +176,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -248,7 +287,7 @@
     <!-- Open Graph for Social Media -->
     <meta
       property="og:title"
-      content="คำถามที่พบบ่อยเกี่ยวกับการดำน้ำ – ตอบทุกคำถามเกี่ยวกับเกาะช้าง | Chang Diving Center"
+      content="คำถามที่พบบ่อยเกี่ยวกับการดำน้ำ – ตอบทุกคำถามเกี่ยวกับเกาะช้าง | ช้างไดร์วิ่ง เซ็นเตอร์"
     />
     <meta
       property="og:description"
@@ -451,10 +490,10 @@
           },
           {
             "@type": "Question",
-            "name": "Try Dive คืออะไร?",
+            "name": "ลองดำน้ำ คืออะไร?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Try Dive คือประสบการณ์การดำน้ำสำหรับผู้เริ่มต้นที่ไม่เคยดำน้ำมาก่อน – ไม่ต้องมีใบรับรอง คุณจะได้รับการบรรยายสั้น ๆ และได้ลงดำน้ำกับครูผู้ฝึกสอนโดยตรง"
+              "text": "ลองดำน้ำ คือประสบการณ์การดำน้ำสำหรับผู้เริ่มต้นที่ไม่เคยดำน้ำมาก่อน – ไม่ต้องมีใบรับรอง คุณจะได้รับการบรรยายสั้น ๆ และได้ลงดำน้ำกับครูผู้ฝึกสอนโดยตรง"
             }
           },
           {
@@ -590,9 +629,9 @@
           <p class="mb-4">
             การวางแผนการดำน้ำที่เกาะช้างมักจะมาพร้อมกับหลายคำถาม – ตั้งแต่
             <a href="/th/courses/">คอร์สดำน้ำที่ได้รับการรับรอง</a>,
-            <a href="/th/day-trips/try-dive/">Try Dive</a>,
-            <a href="/th/day-trips/fun-dives/">Fun Dive</a>,
-            ไปจนถึงเรื่องอุปกรณ์ ความปลอดภัย และข้อมูลการเดินทาง
+            <a href="/th/day-trips/try-dive/">ลองดำน้ำ</a>,
+            <a href="/th/day-trips/fun-dives/">ฟันไดฟ์</a>, ไปจนถึงเรื่องอุปกรณ์
+            ความปลอดภัย และข้อมูลการเดินทาง
             ดังนั้นเราจึงได้รวบรวมคำตอบทั้งหมดไว้ใน
             <strong>หมวดคำถามที่พบบ่อย (FAQ)</strong> นี้
           </p>
@@ -912,7 +951,15 @@
     </main>
 
     <!-- Cookie Consent Banner EN -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
     <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a

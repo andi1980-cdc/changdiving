@@ -30,11 +30,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -55,8 +55,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- hreflang Alternates -->
     <link
@@ -284,10 +284,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -336,13 +375,13 @@
         "headline": "ระบบเพื่อนดำน้ำ – ความรับผิดชอบ ความปลอดภัย และการดำน้ำจริง",
         "alternativeHeadline": "คู่มือที่สมบูรณ์เกี่ยวกับขั้นตอนการดำน้ำกับเพื่อนและโพรโทคอลความปลอดภัย",
         "image": "https://changdiving.com/img/posts/buddy_system_big.webp",
-        "editor": "Chang Diving Center",
+        "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เกี่ยวกับการดำน้ำ",
         "keywords": "ระบบเพื่อนดำน้ำ, เพื่อนดำน้ำ, ความปลอดภัยในการดำน้ำ, การแยกจากเพื่อน, การตรวจเช็คเพื่อน, การดำน้ำเพื่อการพักผ่อน, ขั้นตอนการดำน้ำ, ดำน้ำเกาะช้าง, ไกด์ดำน้ำ, ทีมเพื่อนดำน้ำ",
         "wordcount": "1950",
         "publisher": {
           "@type": "Organization",
-          "name": "Chang Diving Center",
+          "name": "ช้างไดร์วิ่ง เซ็นเตอร์",
           "logo": {
             "@type": "ImageObject",
             "url": "https://changdiving.com/img/logos/logo_cdc_white.webp"
@@ -358,7 +397,7 @@
         "description": "คู่มือที่สมบูรณ์เกี่ยวกับระบบเพื่อนดำน้ำในการดำน้ำเพื่อการพักผ่อน เรียนรู้ขั้นตอนเพื่อนดำน้ำที่ถูกต้อง ขั้นตอนการแยก และความปลอดภัยในการดำน้ำที่เกาะช้าง",
         "author": {
           "@type": "Organization",
-          "name": "Chang Diving Center"
+          "name": "ช้างไดร์วิ่ง เซ็นเตอร์"
         }
       }
     </script>
@@ -780,7 +819,7 @@
             <p>
               ต้องการดำน้ำกับเราหรือไม่? ลองดู
               <a href="https://changdiving.com/th/day-trips/fun-dives/"
-                >Fun Dives</a
+                >ฟันไดฟ์</a
               >
               และ
               <a href="https://changdiving.com/th/prices/">ราคา</a>
@@ -837,7 +876,7 @@
               </li>
               <li>
                 <a href="https://changdiving.com/th/day-trips/fun-dives/"
-                  >Fun Dives เกาะช้าง</a
+                  >ฟันไดฟ์ เกาะช้าง</a
                 >
               </li>
             </ul>
@@ -846,7 +885,15 @@
       </div>
     </main>
     <!-- Cookie Consent Banner TH -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
     <script src="/js/cookieconsent.min.js" defer async></script>
     <!-- WhatsApp Button -->
     <a

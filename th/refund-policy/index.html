@@ -24,11 +24,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -49,8 +49,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- hreflang Alternates -->
     <link
@@ -278,10 +278,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -375,7 +414,7 @@
           กิจกรรมดำน้ำทั้งหมดของเราจะได้รับการวางแผนล่วงหน้าอย่างรอบคอบ
           แตกต่างจากศูนย์ดำน้ำขนาดใหญ่ที่รองรับนักดำน้ำจำนวนมาก Chang Diving
           Center จำกัดจำนวนผู้ดำน้ำบนเรือไว้สูงสุดเพียง 10 คน
-          โดยปกติจะถูกแบ่งออกเป็นกลุ่มเล็กที่สมดุล เช่น กลุ่มนักดำน้ำ Fun Dive
+          โดยปกติจะถูกแบ่งออกเป็นกลุ่มเล็กที่สมดุล เช่น กลุ่มนักดำน้ำ ฟันไดฟ์
           และกลุ่มผู้เรียนหลักสูตร เพื่อให้มั่นใจถึงการดูแลอย่างใกล้ชิด
           ความปลอดภัย และจังหวะการดำน้ำที่ผ่อนคลาย
         </p>
@@ -396,7 +435,7 @@
             href="https://changdiving.com/th/posts/straight-talk/sustainable-diving/"
             target="_blank"
             rel="noopener"
-            >การดำน้ำอย่างยั่งยืนกับ Chang Diving Center</a
+            >การดำน้ำอย่างยั่งยืนกับ ช้างไดร์วิ่ง เซ็นเตอร์</a
           >.
         </p>
 
@@ -559,7 +598,15 @@
     </main>
 
     <!-- Cookie Consent Banner TH -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
     <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a

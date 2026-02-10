@@ -5,6 +5,11 @@
   font-weight: 400;
   src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
   font-display: swap;
+  /* Match webfont metrics closer to system fallback to reduce CLS. */
+  size-adjust: 99.75%;
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -13,6 +18,11 @@
   font-weight: 700;
   src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
   font-display: swap;
+  /* Keep bold metrics aligned with fallback as well. */
+  size-adjust: 99.75%;
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0%;
 }
 
 /* Noto Sans Thai Font Definitions - Prevent FOUT/FOIT and Layout Shifts */

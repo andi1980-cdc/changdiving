@@ -31,11 +31,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -56,8 +56,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- hreflang Alternates -->
     <link
@@ -282,10 +282,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -491,9 +530,9 @@
           ยินดีต้อนรับสู่ <strong>บล็อกของ Chang Diving</strong> –
           ประตูสู่โลกใต้ทะเลที่
           <a href="/th/dive-sites/">จุดดำน้ำรอบเกาะช้าง</a>. ไม่ว่าคุณจะฝันถึง
-          <a href="/th/day-trips/try-dive/">การลองดำน้ำ (Try Dive)</a>
+          <a href="/th/day-trips/try-dive/">การลองดำน้ำ</a>
           ครั้งแรกของคุณ, มองหาการ
-          <a href="/th/day-trips/fun-dives/">Fun Dive ที่น่าตื่นเต้น</a>
+          <a href="/th/day-trips/fun-dives/">ฟันไดฟ์ ที่น่าตื่นเต้น</a>
           หรือพร้อมที่จะเข้าร่วม
           <a href="/th/courses/">หลักสูตรดำน้ำ</a> –
           พื้นที่นี้ถูกสร้างขึ้นเพื่อสร้างแรงบันดาลใจ แนะนำ
@@ -502,7 +541,7 @@
 
         <p>
           ครูผู้สอนมืออาชีพของเรา <strong>SDI, TDI และ PADI</strong>
-          จัดหลักสูตรและ Fun Dives ตาม
+          จัดหลักสูตรและ ฟันไดฟ์ ตาม
           <a href="/th/dive-sites/">ซากเรือและแนวปะการังรอบเกาะช้าง</a>. ตั้งแต่
           <a href="/th/courses/open-water-diver/">หลักสูตร Open Water Diver</a>,
           <a href="/th/courses/advanced/">การฝึกดำน้ำขั้นสูง</a>
@@ -528,7 +567,7 @@
           เรามุ่งมั่นมากกว่าการขายการดำน้ำ –
           เราต้องการสร้างนักดำน้ำที่มีความมั่นใจ มีความรู้ และเคารพในท้องทะเล
           ดังนั้นเนื้อหาของเราจึงเชื่อมโยงโดยตรงกับ
-          <a href="/th/courses/">หลักสูตร Fun Dives และทริปดำน้ำ</a>
+          <a href="/th/courses/">หลักสูตร ฟันไดฟ์ และทริปดำน้ำ</a>
           เพื่อให้คุณรู้ว่าการผจญภัยครั้งต่อไปเริ่มต้นที่ไหน
         </p>
 
@@ -644,7 +683,15 @@
       </section>
     </main>
     <!-- Cookie Consent Banner EN -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
     <script src="/js/cookieconsent.min.js" defer async></script>
     <!-- WhatsApp Button -->
     <a

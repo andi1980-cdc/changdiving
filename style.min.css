@@ -4,12 +4,34 @@
   font-weight: 400;
   src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
   font-display: swap;
+  size-adjust: 99.75%;
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0%;
 }
 @font-face {
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
   src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
+  font-display: swap;
+  size-adjust: 99.75%;
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Noto Sans Thai";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/noto-sans-thai-400.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans Thai";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/noto-sans-thai-700.ttf") format("truetype");
   font-display: swap;
 }
 :root {
@@ -36,7 +58,22 @@
     0 8px 40px 0 rgba(224, 224, 224, 0.35);
   --box-shadow-black-silver:
     0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 8px 40px 0 rgba(192, 192, 192, 0.25);
-  --font-main: "Roboto", Arial, sans-serif;
+  --font-sans:
+    system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-main: var(--font-sans);
+}
+:lang(th) {
+  --font-sans:
+    "Noto Sans Thai", system-ui, ui-sans-serif, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+html[lang="th"] {
+  --font-sans:
+    "Noto Sans Thai", system-ui, ui-sans-serif, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
 }
 * {
   margin: 0;
@@ -56,8 +93,26 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: var(--font-main);
+  font-family: var(--font-sans);
   position: relative;
+}
+html[lang="th"] body,
+html[lang="th"] .grid-container,
+html[lang="th"] .breadcrumb,
+html[lang="th"] .specialty-table,
+html[lang="th"] .video-gallery {
+  font-family:
+    "Noto Sans Thai",
+    system-ui,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif !important;
 }
 @supports (-webkit-touch-callout: none) {
   body,
@@ -534,7 +589,7 @@ button:focus {
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
   color: #1a1a1a;
 }
@@ -624,7 +679,7 @@ button:focus {
   font-size: 0.9em;
   margin: 20px 0 20px 20px;
   color: #555;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-sans);
 }
 .breadcrumb a {
   color: #0077b6;
@@ -759,7 +814,7 @@ button:focus {
   width: 100%;
   border-collapse: collapse;
   margin: 30px 0;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-sans);
   font-size: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -809,12 +864,12 @@ button:focus {
   margin-top: 10px;
   font-size: 0.95em;
   color: #555;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-sans);
 }
 .video-gallery {
   padding: 40px 0;
   background: #fff;
-  font-family: Roboto, sans-serif;
+  font-family: var(--font-sans);
 }
 .video-gallery .container {
   max-width: 1200px;
@@ -912,6 +967,7 @@ button:focus {
   font-weight: 700;
   font-size: 1rem;
   margin-right: 10px;
+  font-family: var(--font-sans);
   cursor: pointer;
 }
 .dropdown-menu {

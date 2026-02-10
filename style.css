@@ -7,6 +7,10 @@
   font-weight: 400;
   src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
   font-display: swap;
+  size-adjust: 99.75%;
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -15,6 +19,10 @@
   font-weight: 700;
   src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
   font-display: swap;
+  size-adjust: 99.75%;
+  ascent-override: 92.49%;
+  descent-override: 24.34%;
+  line-gap-override: 0%;
 }
 
 /* Noto Sans Thai Font Definitions - Prevent FOUT/FOIT and Layout Shifts */
@@ -73,6 +81,12 @@
     BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,
     sans-serif;
 }
+html[lang="th"] {
+  --font-sans:
+    "Noto Sans Thai", system-ui, ui-sans-serif, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
 
 * {
   margin: 0;
@@ -97,6 +111,24 @@ body {
   overflow-x: hidden;
   font-family: var(--font-sans);
   position: relative;
+}
+html[lang="th"] body,
+html[lang="th"] .grid-container,
+html[lang="th"] .breadcrumb,
+html[lang="th"] .specialty-table,
+html[lang="th"] .video-gallery {
+  font-family:
+    "Noto Sans Thai",
+    system-ui,
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif !important;
 }
 
 /* Safari-spezifische Fixes */
@@ -1065,6 +1097,7 @@ button:focus,
   font-weight: bold;
   font-size: 1rem;
   margin-right: 10px;
+  font-family: var(--font-sans);
   cursor: pointer;
 }
 .dropdown-menu {

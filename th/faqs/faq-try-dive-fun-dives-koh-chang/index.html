@@ -33,11 +33,11 @@
       name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     />
-    <meta name="author" content="Chang Diving Center" />
+    <meta name="author" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
     <meta name="language" content="th" />
     <meta name="theme-color" content="#000000" />
     <meta name="msapplication-TileColor" content="#000000" />
-    <meta name="generator" content="Chang Diving Center Website" />
+    <meta name="generator" content="ช้างไดร์วิ่ง เซ็นเตอร์ Website" />
 
     <!-- Security & Performance -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -58,8 +58,8 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
-    <meta name="apple-mobile-web-app-title" content="Chang Diving Center" />
-    <meta name="application-name" content="Chang Diving Center" />
+    <meta name="apple-mobile-web-app-title" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
+    <meta name="application-name" content="ช้างไดร์วิ่ง เซ็นเตอร์" />
 
     <!-- hreflang Alternates -->
     <link
@@ -293,10 +293,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -346,15 +385,15 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Try Dive คืออะไร?",
+            "name": "ลองดำน้ำ คืออะไร?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Try Dive คือประสบการณ์การดำน้ำสำหรับผู้เริ่มต้นที่ไม่เคยดำน้ำมาก่อน – ไม่ต้องมีใบรับรอง คุณจะได้รับการบรรยายสั้น ๆ และได้ลงดำน้ำกับครูผู้ฝึกสอนโดยตรง"
+              "text": "ลองดำน้ำ คือประสบการณ์การดำน้ำสำหรับผู้เริ่มต้นที่ไม่เคยดำน้ำมาก่อน – ไม่ต้องมีใบรับรอง คุณจะได้รับการบรรยายสั้น ๆ และได้ลงดำน้ำกับครูผู้ฝึกสอนโดยตรง"
             }
           },
           {
             "@type": "Question",
-            "name": "Fun Dive รวมอะไรบ้าง?",
+            "name": "ฟันไดฟ์ รวมอะไรบ้าง?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "รวมอุปกรณ์ดำน้ำทั้งหมด, ไกด์ดำน้ำ, ทริปเรือ, ของว่าง, น้ำดื่ม – และความทรงจำสุดพิเศษ"
@@ -370,7 +409,7 @@
           },
           {
             "@type": "Question",
-            "name": "ฉันต้องเตรียมเอกสารอะไรบ้างสำหรับ Fun Dive?",
+            "name": "ฉันต้องเตรียมเอกสารอะไรบ้างสำหรับ ฟันไดฟ์?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "คุณต้องมี: 1) ใบรับรองการดำน้ำจากสถาบันที่ได้รับการยอมรับ, 2) สมุดบันทึกการดำน้ำ (โดยเฉพาะสำหรับเรือหลวงช้าง - Open Water Diver ต้องมีหลักฐาน 25 ไดฟ์รวมถึงการดำน้ำลึกกว่า 18 เมตร), 3) ใบรับรองแพทย์หากตอบ 'ใช่' ในแบบสอบถามทางการแพทย์"
@@ -457,7 +496,7 @@
           <img
             class="hero-header-img"
             src="/img/faq/faq-try-fun-dives_small.webp"
-            alt="คำถามที่พบบ่อยเกี่ยวกับ Try Dive และ Fun Dive – สำหรับมือใหม่ ความปลอดภัย ดำน้ำเดี่ยว CMAS และคอร์สทบทวน"
+            alt="คำถามที่พบบ่อยเกี่ยวกับ ลองดำน้ำ และ ฟันไดฟ์ – สำหรับมือใหม่ ความปลอดภัย ดำน้ำเดี่ยว CMAS และคอร์สทบทวน"
             width="600"
             height="400"
             fetchpriority="high"
@@ -465,9 +504,9 @@
         </picture>
 
         <div class="hero-text">
-          <h1>Try Dives & Fun Dives – คำถามที่พบบ่อย</h1>
+          <h1>ลองดำน้ำ & ฟันไดฟ์ – คำถามที่พบบ่อย</h1>
           <p>
-            คำตอบครบทุกเรื่อง – ตั้งแต่การลองดำน้ำครั้งแรกจนถึง Fun Dive
+            คำตอบครบทุกเรื่อง – ตั้งแต่การลองดำน้ำครั้งแรกจนถึง ฟันไดฟ์
             สำหรับนักดำน้ำที่มีใบรับรอง พร้อมข้อมูลความปลอดภัย ดำน้ำเดี่ยว กฎของ
             CMAS และการทบทวนการดำน้ำที่เกาะช้าง
           </p>
@@ -500,14 +539,14 @@
             padding-bottom: 0.08em;
           "
         >
-          Try Dives & Fun Dives – คำถามที่พบบ่อย
+          ลองดำน้ำ & ฟันไดฟ์ – คำถามที่พบบ่อย
         </h2>
 
         <dl class="faq-list">
-          <dt>Try Dive คืออะไร? 🤿</dt>
+          <dt>ลองดำน้ำ คืออะไร? 🤿</dt>
           <dd>
             <p>
-              Try Dive
+              ลองดำน้ำ
               คือประสบการณ์ดำน้ำที่เหมาะสำหรับมือใหม่ที่อยากลองดำน้ำครั้งแรก –
               ไม่ต้องมีใบรับรอง คุณจะได้รับคำแนะนำเบื้องต้น
               และดำน้ำพร้อมครูผู้ฝึกสอน
@@ -527,7 +566,7 @@
             </p>
           </dd>
 
-          <dt>Fun Dive รวมอะไรบ้าง? 🎯</dt>
+          <dt>ฟันไดฟ์ รวมอะไรบ้าง? 🎯</dt>
           <dd>
             <p>
               รวมอุปกรณ์ครบชุด, ไกด์ดำน้ำ, ทริปเรือ, ของว่าง, น้ำดื่ม –
@@ -556,7 +595,7 @@
             </p>
           </dd>
 
-          <dt>📋 ฉันต้องเตรียมเอกสารอะไรบ้างสำหรับ Fun Dive?</dt>
+          <dt>📋 ฉันต้องเตรียมเอกสารอะไรบ้างสำหรับ ฟันไดฟ์?</dt>
           <dd>
             <p>
               เพื่อความปลอดภัยและการดำน้ำที่ถูกต้องตามมาตรฐาน
@@ -630,7 +669,7 @@
           <dd>
             <p>
               ได้แน่นอน! เรารับรองใบรับรองจากทุกสถาบัน รวมถึง CMAS, SSI, RAID,
-              PADI, NAUI และอื่น ๆ นักดำน้ำ CMAS 1★ สามารถเข้าร่วม Fun Dives
+              PADI, NAUI และอื่น ๆ นักดำน้ำ CMAS 1★ สามารถเข้าร่วม ฟันไดฟ์
               หรือคอร์สฝึกอบรมได้ หากไม่ได้ดำน้ำนาน เราอาจแนะนำให้เรียนทบทวน
             </p>
 
@@ -642,7 +681,7 @@
 
             <p>
               <a href="/th/day-trips/fun-dives/" target="_blank" rel="noopener"
-                >Fun Dive ➜</a
+                >ฟันไดฟ์ ➜</a
               >
               |
               <a
@@ -725,7 +764,15 @@
     </main>
 
     <!-- Cookie Consent Banner TH -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" media="all" />
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
     <script src="/js/cookieconsent.min.js" defer></script>
 
     <!-- WhatsApp Button -->
@@ -767,7 +814,7 @@
           {
             "@type": "ListItem",
             "position": 3,
-            "name": "Faq Try Dive Fun Dives Koh Chang",
+            "name": "Faq ลองดำน้ำ ฟันไดฟ์ Koh Chang",
             "item": "https://changdiving.com/th/faqs/faq-try-dive-fun-dives-koh-chang/"
           }
         ]

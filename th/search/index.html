@@ -89,12 +89,12 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "url": "https://changdiving.com/th/search/",
-        "name": "ค้นหา - Chang Diving Center",
+        "name": "ค้นหา - ช้างไดร์วิ่ง เซ็นเตอร์",
         "description": "ค้นหาคอร์สดำน้ำ จุดดำน้ำ และข้อมูลการดำน้ำบนเกาะช้าง ประเทศไทย",
         "isPartOf": {
           "@type": "WebSite",
           "url": "https://changdiving.com/th/",
-          "name": "Chang Diving Center"
+          "name": "ช้างไดร์วิ่ง เซ็นเตอร์"
         }
       }
     </script>
@@ -471,10 +471,49 @@
         font-weight: 700;
         font-size: 1rem;
         margin-right: 10px;
+        font-family: var(--font-sans);
         cursor: pointer;
       }
       .dropdown-menu {
         display: none;
+      }
+      main {
+        display: block;
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px 20px;
+        line-height: 1.6;
+        color: #1a1a1a;
+      }
+      .grid-container h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        color: #0d47a1;
+        line-height: 1.18;
+        text-align: center;
+      }
+      .grid-container p {
+        font-size: 1.13rem;
+        line-height: 1.7;
+        color: #222;
+        margin: 0 0 1.3em;
+      }
+      @media (max-width: 700px) {
+        .grid-container h2 {
+          font-size: 1.4rem;
+          margin-top: 1.2em;
+          margin-bottom: 0.7em;
+        }
+        .grid-container p {
+          font-size: 1rem;
+          line-height: 1.6;
+          max-width: 99vw;
+        }
       }
       @media (max-width: 767px) {
         .hero-text h1,
@@ -640,7 +679,7 @@
           <ul>
             <li>"คอร์ส" หรือ "open water"</li>
             <li>"จุดดำน้ำ" หรือ "เรือจม"</li>
-            <li>"ทริปวันเดียว" หรือ "fun dive"</li>
+            <li>"ทริปวันเดียว" หรือ "ฟันไดฟ์"</li>
             <li>"อุปกรณ์" หรือ "equipment"</li>
           </ul>
         </div>
@@ -722,12 +761,7 @@
                   ];
                 } else if (urlPath.includes("/day-trips/")) {
                   category = "ทริปวันเดียว";
-                  keywords = [
-                    "ทริปวันเดียว",
-                    "fun dive",
-                    "ดำน้ำตื้น",
-                    "ผจญภัย",
-                  ];
+                  keywords = ["ทริปวันเดียว", "ฟันไดฟ์", "ดำน้ำตื้น", "ผจญภัย"];
                 } else if (urlPath.includes("/posts/")) {
                   category = "บทความ";
                   keywords = ["บทความ", "blog", "ข้อมูล", "คู่มือ", "ความรู้"];
@@ -767,7 +801,7 @@
                   keywords.push("ความปลอดภัย", "ปลอดภัย");
                 }
 
-                description = `${title} - ${category} บนเว็บไซต์ Chang Diving Center`;
+                description = `${title} - ${category} บนเว็บไซต์ ช้างไดร์วิ่ง เซ็นเตอร์`;
               }
 
               if (title) {
@@ -885,7 +919,7 @@
               <ul>
                 <li>"คอร์ส" หรือ "open water"</li>
                 <li>"จุดดำน้ำ" หรือ "เรือจม"</li>
-                <li>"ทริปวันเดียว" หรือ "fun dive"</li>
+                <li>"ทริปวันเดียว" หรือ "ฟันไดฟ์"</li>
                 <li>"อุปกรณ์" หรือ "equipment"</li>
               </ul>
             </div>
