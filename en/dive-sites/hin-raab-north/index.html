@@ -1382,7 +1382,7 @@
           <script
             defer
             async
-            src="https://cdn.trustindex.io/loader.js?10987fa47f9a902e6d96b4a1e44"
+            data-src="https://cdn.trustindex.io/loader.js?10987fa47f9a902e6d96b4a1e44"
             crossorigin="anonymous"
           ></script>
         </div>
@@ -1521,6 +1521,55 @@
           }
         ]
       }
+    </script>
+
+    <!-- Trustindex Lazy Loading -->
+    <script>
+      (function () {
+        "use strict";
+
+        if (!("IntersectionObserver" in window)) {
+          // Fallback: Load immediately on old browsers
+          document
+            .querySelectorAll('script[data-src*="trustindex.io"]')
+            .forEach(function (script) {
+              script.src = script.getAttribute("data-src");
+              script.removeAttribute("data-src");
+            });
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                const container = entry.target;
+                const script = container.querySelector(
+                  'script[data-src*="trustindex.io"]',
+                );
+
+                if (script) {
+                  // Restore src attribute to trigger loading
+                  script.src = script.getAttribute("data-src");
+                  script.removeAttribute("data-src");
+                }
+
+                observer.unobserve(container);
+              }
+            });
+          },
+          {
+            rootMargin: "200px", // Load 200px before becoming visible
+          },
+        );
+
+        // Observe all trustindex containers
+        document
+          .querySelectorAll(".trustindex-widget")
+          .forEach(function (widget) {
+            observer.observe(widget);
+          });
+      })();
     </script>
   </body>
 </html>
