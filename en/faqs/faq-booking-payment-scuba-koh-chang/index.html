@@ -664,11 +664,14 @@
           },
         );
 
-        // Observe all trustindex containers
+        // Find ALL trustindex scripts and observe their parent containers
         document
-          .querySelectorAll(".trustindex-widget")
-          .forEach(function (widget) {
-            observer.observe(widget);
+          .querySelectorAll('script[data-src*="trustindex.io"]')
+          .forEach(function (script) {
+            const container = script.parentElement;
+            if (container) {
+              observer.observe(container);
+            }
           });
       })();
     </script>
