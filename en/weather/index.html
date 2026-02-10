@@ -1,10 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-<script>
-      window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){gtag("js",new Date());gtag("config","G-VYNMSTFN5M");})();
-      </script>
-    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (function () {
+        gtag("js", new Date());
+        gtag("config", "G-VYNMSTFN5M");
+      })();
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -87,9 +94,12 @@
     <meta property="og:image:width" content="2560" />
     <meta property="og:image:height" content="1440" />
     <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="
+    <meta
+      property="og:image:alt"
+      content="
       Koh Chang Weather Forecast – Dive Conditions & Updates | Chang Diving
-    " />
+    "
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -108,16 +118,8 @@
 
     <!-- Favicon -->
     <!-- Favicon and Icons -->
-    <link
-      rel="icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="/favicon/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
     <link
       rel="icon"
       href="/favicon/favicon-96x96.png"
@@ -141,18 +143,17 @@
       sizes="180x180"
       href="https://changdiving.com/favicon/apple-touch-icon.png"
     />
-    <link rel="manifest" href="https://changdiving.com/favicon/site.webmanifest" />
+    <link
+      rel="manifest"
+      href="https://changdiving.com/favicon/site.webmanifest"
+    />
     <meta
       name="msapplication-TileImage"
       content="https://changdiving.com/favicon/web-app-manifest-192x192.png"
     />
 
     <!-- Fallback für alte Browser -->
-    <link
-      rel="shortcut icon"
-      href="/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Critical Preconnects Only (remove unused) -->
 
@@ -167,7 +168,7 @@
     <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
-        <!-- Local Fonts -->
+    <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
     <link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="preload" href="/style.css" as="style" />
@@ -176,7 +177,7 @@
       <link rel="stylesheet" href="/style.css" />
     </noscript>
 
-        <script type="application/ld+json">
+    <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -199,22 +200,29 @@
     <!-- CRITICAL: Inline CSS to prevent ANY layout shifts -->
     <style>
       /* CRITICAL: Box-sizing for all elements */
-      *, *::before, *::after {
+      *,
+      *::before,
+      *::after {
         box-sizing: border-box !important;
       }
-      body { 
+      body {
         line-height: 1.6 !important;
         margin: 0 !important;
         padding: 0 !important;
       }
-      h1, h2, h3, h4, h5, h6 { 
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-weight: 700 !important;
         line-height: 1.2 !important;
         margin: 1rem 0 !important;
       }
-      
+
       /* CRITICAL: Windguru container lockdown - ZERO layout shifts + REFLOW PREVENTION */
-      .windguru-container { 
+      .windguru-container {
         height: 350px !important;
         min-height: 350px !important;
         max-height: 350px !important;
@@ -233,7 +241,7 @@
         min-height: 300px !important;
         max-height: 300px !important;
       }
-      
+
       /* CRITICAL: Prevent ALL forced reflows */
       iframe[src*="windguru"] {
         width: 100% !important;
@@ -245,18 +253,24 @@
         transform: translateZ(0) !important;
         isolation: isolate !important;
       }
-      
+
       /* CRITICAL: Layout performance for all elements */
-      main, section, article, h1, h2, h3 {
+      main,
+      section,
+      article,
+      h1,
+      h2,
+      h3 {
         contain: layout !important;
         will-change: auto !important;
       }
-      
+
       /* CRITICAL: Exclude dropdown menu from contain rules */
-      .lang-switch, .dropdown-menu {
+      .lang-switch,
+      .dropdown-menu {
         contain: none !important;
       }
-      
+
       /* CRITICAL: Force all windguru content to stay within bounds */
       .windguru-container *,
       .windguru-container iframe,
@@ -268,7 +282,7 @@
         position: relative !important;
         contain: layout !important;
       }
-      
+
       /* CRITICAL: Lock down all dynamically created iframes */
       iframe[src*="windguru"] {
         width: 100% !important;
@@ -280,25 +294,27 @@
         display: block !important;
         contain: layout size !important;
       }
-      
-             /* CRITICAL: Cookie consent will be loaded async */
-       
-       /* CRITICAL: Prevent any content from breaking out */
-       main, section, article {
-         contain: layout !important;
-       }
-       
-       /* Mobile-only notice */
-       .mobile-only {
-         display: none;
-       }
-       @media (max-width: 767px) {
-         .mobile-only {
-           display: block !important;
-         }
-       }
+
+      /* CRITICAL: Cookie consent will be loaded async */
+
+      /* CRITICAL: Prevent any content from breaking out */
+      main,
+      section,
+      article {
+        contain: layout !important;
+      }
+
+      /* Mobile-only notice */
+      .mobile-only {
+        display: none;
+      }
+      @media (max-width: 767px) {
+        .mobile-only {
+          display: block !important;
+        }
+      }
     </style>
-    
+
     <!-- Critical CSS and Font Loading -->
     <!-- Critical Image Preload -->
     <link
@@ -308,18 +324,15 @@
       imagesrcset="/img/pages/header_weather_small.webp 600w, /img/pages/header_weather_big.webp 1200w"
       imagesizes="100vw"
     />
-
-</noscript>
-
-    </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
         <div class="hero-logo">
           <a href="/en/">
-            <img 
-              src="/img/logos/logo_cdc_white.webp" 
+            <img
+              src="/img/logos/logo_cdc_white.webp"
               alt="Chang Diving Logo"
               width="71"
               height="70"
@@ -364,7 +377,6 @@
             alt="Day Trips Koh Chang – Snorkeling & Diving"
             width="600"
             height="400"
-            
             fetchpriority="high"
           />
         </picture>
@@ -401,38 +413,70 @@
           Stay informed about wind conditions on Koh Chang. Use the Windguru
           widget below for real-time updates.
         </p>
-        <div style="display: block; margin: 15px 0; padding: 12px; background: #e3f2fd; border-left: 4px solid #1976d2; border-radius: 4px; font-size: 0.9em; color: #1565c0;" class="mobile-only">
-          <strong>📱 Mobile Tip:</strong> For the best view of the forecast table, please rotate your device to landscape mode (hold your phone sideways).
+        <div
+          style="
+            display: block;
+            margin: 15px 0;
+            padding: 12px;
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #1565c0;
+          "
+          class="mobile-only"
+        >
+          <strong>📱 Mobile Tip:</strong> For the best view of the forecast
+          table, please rotate your device to landscape mode (hold your phone
+          sideways).
         </div>
         <div class="windguru-container">
-          <div class="windguru-placeholder" style="
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1976d2;
-            font-weight: 500;
-            z-index: 1;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-radius: 8px;
-          ">Loading Wind Forecast...</div>
+          <div
+            class="windguru-placeholder"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #1976d2;
+              font-weight: 500;
+              z-index: 1;
+              background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+              border-radius: 8px;
+            "
+          >
+            Loading Wind Forecast...
+          </div>
           <script id="wg_fwdg_208446_100_1751105218770">
             (function (window, document) {
               var loader = function () {
                 // Hide placeholder when widget loads
-                setTimeout(function() {
-                  var placeholder = document.querySelector('.windguru-placeholder');
-                  if (placeholder) placeholder.style.display = 'none';
-                  
+                setTimeout(function () {
+                  var placeholder = document.querySelector(
+                    ".windguru-placeholder",
+                  );
+                  if (placeholder) placeholder.style.display = "none";
+
                   // Add accessibility titles to dynamically created iframes
-                  var windIframes = document.querySelectorAll('iframe[src*="windguru.cz"][src*="m=100"]');
-                  windIframes.forEach(function(iframe) {
-                    iframe.setAttribute('title', 'Wind Forecast Widget for Koh Chang - Interactive weather data');
-                    iframe.setAttribute('aria-label', 'Wind forecast showing wind speed, direction and weather conditions');
+                  var windIframes = document.querySelectorAll(
+                    'iframe[src*="windguru.cz"][src*="m=100"]',
+                  );
+                  windIframes.forEach(function (iframe) {
+                    iframe.setAttribute(
+                      "title",
+                      "Wind Forecast Widget for Koh Chang - Interactive weather data",
+                    );
+                    iframe.setAttribute(
+                      "aria-label",
+                      "Wind forecast showing wind speed, direction and weather conditions",
+                    );
                   });
                 }, 2000);
-                
+
                 var arg = [
                   "s=208446",
                   "m=100",
@@ -468,36 +512,55 @@
           heights, swell directions, and more below.
         </p>
         <div class="windguru-container">
-          <div class="windguru-placeholder" style="
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #388e3c;
-            font-weight: 500;
-            z-index: 1;
-            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
-            border-radius: 8px;
-          ">Loading Wave Forecast...</div>
+          <div
+            class="windguru-placeholder"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #388e3c;
+              font-weight: 500;
+              z-index: 1;
+              background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+              border-radius: 8px;
+            "
+          >
+            Loading Wave Forecast...
+          </div>
           <script id="wg_fwdg_208446_84_1751105407164">
             (function (window, document) {
               var loader = function () {
                 // Hide placeholder when widget loads
-                setTimeout(function() {
-                  var placeholders = document.querySelectorAll('.windguru-placeholder');
-                  placeholders.forEach(function(p) {
-                    if (p.textContent.includes('Wave')) p.style.display = 'none';
+                setTimeout(function () {
+                  var placeholders = document.querySelectorAll(
+                    ".windguru-placeholder",
+                  );
+                  placeholders.forEach(function (p) {
+                    if (p.textContent.includes("Wave"))
+                      p.style.display = "none";
                   });
-                  
+
                   // Add accessibility titles to dynamically created iframes
-                  var waveIframes = document.querySelectorAll('iframe[src*="windguru.cz"][src*="m=84"]');
-                  waveIframes.forEach(function(iframe) {
-                    iframe.setAttribute('title', 'Wave Forecast Widget for Koh Chang - Interactive wave and sea conditions');
-                    iframe.setAttribute('aria-label', 'Wave forecast showing wave height, period, direction and sea conditions');
+                  var waveIframes = document.querySelectorAll(
+                    'iframe[src*="windguru.cz"][src*="m=84"]',
+                  );
+                  waveIframes.forEach(function (iframe) {
+                    iframe.setAttribute(
+                      "title",
+                      "Wave Forecast Widget for Koh Chang - Interactive wave and sea conditions",
+                    );
+                    iframe.setAttribute(
+                      "aria-label",
+                      "Wave forecast showing wave height, period, direction and sea conditions",
+                    );
                   });
                 }, 2000);
-                
+
                 var arg = [
                   "s=208446",
                   "m=84",
@@ -581,19 +644,24 @@
     </main>
 
     <!-- Cookie Consent Banner EN - Restore full CSS -->
-    <link rel="preload" href="/css/cookieconsent.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="/css/cookieconsent.min.css"></noscript>
-    <script
-      src="/js/cookieconsent.min.js"
-      defer
-    ></script>
+    <link
+      rel="preload"
+      href="/css/cookieconsent.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="/css/cookieconsent.min.css"
+    /></noscript>
+    <script src="/js/cookieconsent.min.js" defer></script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
       target="_blank"
       aria-label="Chat on WhatsApp"
       class="whatsapp-btn"
-     rel="noopener noreferrer">
+      rel="noopener noreferrer"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -606,23 +674,23 @@
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-            {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://changdiving.com/en/"
-            },
-            {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "Weather",
-                  "item": "https://changdiving.com/en/weather/"
-            }
-      ]
-}
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://changdiving.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Weather",
+            "item": "https://changdiving.com/en/weather/"
+          }
+        ]
+      }
     </script>
   </body>
 </html>
