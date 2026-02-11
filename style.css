@@ -1261,6 +1261,7 @@ button:focus,
     position: fixed;
     top: calc(15px + env(safe-area-inset-top));
     right: 15px;
+    background: #ffffff;
     z-index: 2147483000;
   }
 
@@ -1283,6 +1284,9 @@ button:focus,
     padding:
       calc(55px + env(safe-area-inset-top)) 16px
       calc(12px + env(safe-area-inset-bottom));
+    background: #ffffff;
+    border: 0;
+    box-shadow: none;
     font-size: 0.9em;
     border-radius: 0;
     box-sizing: border-box;
