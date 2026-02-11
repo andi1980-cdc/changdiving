@@ -1008,6 +1008,29 @@ button:focus {
     font-size: 0.95em;
   }
 }
+@media (max-width: 768px) {
+  .main-page .lang-switch {
+    left: 12px;
+    right: 12px;
+    width: auto;
+    justify-content: center;
+  }
+  .main-page .lang-switch .search-btn-elegant,
+  .main-page .lang-switch a[href="/"] {
+    display: none;
+  }
+  .main-page .lang-switch .search-input-elegant {
+    flex: 1;
+    min-width: 80px;
+  }
+  .main-page .dropdown-menu {
+    top: 57px;
+    right: 12px;
+    left: auto;
+    width: max-content;
+    max-width: calc(100vw - 24px);
+  }
+}
 .changdiving-box iframe,
 .dive-site-box iframe,
 .faq-box iframe,

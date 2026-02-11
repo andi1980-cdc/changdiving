@@ -382,9 +382,12 @@ document.addEventListener("DOMContentLoaded", function () {
   toggles.forEach(function (toggle, i) {
     // Suche im Eltern-Container nach .dropdown-menu
     const parent = toggle.closest(".lang-switch") || toggle.parentElement;
-    const dropdown = parent.querySelector(".dropdown-menu");
+    let dropdown = parent.querySelector(".dropdown-menu");
     console.log(`[DEBUG] Button #${i + 1}:`, toggle);
     if (dropdown) {
+      // Dropdown in body verschieben: Hero hat overflow:hidden und schneidet das Menü ab.
+      // Außerhalb von Hero = position:fixed funktioniert, Menü wird nicht abgeschnitten.
+      document.body.appendChild(dropdown);
       console.log(
         `[DEBUG] Zugehöriges Dropdown für Button #${i + 1} gefunden:`,
         dropdown,

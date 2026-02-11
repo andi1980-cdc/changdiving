@@ -1258,6 +1258,31 @@ button:focus,
   }
 }
 
+/* Hauptseiten (en/de/th) mit Suchfunktion: Längliche Bar über volle Breite, zentriert, kein Overflow */
+@media (max-width: 768px) {
+  .main-page .lang-switch {
+    left: 12px;
+    right: 12px;
+    width: auto;
+    justify-content: center;
+  }
+  .main-page .lang-switch .search-btn-elegant,
+  .main-page .lang-switch a[href="/"] {
+    display: none;
+  }
+  .main-page .lang-switch .search-input-elegant {
+    flex: 1;
+    min-width: 80px;
+  }
+  .main-page .dropdown-menu {
+    top: 57px;
+    right: 12px;
+    left: auto;
+    width: max-content;
+    max-width: calc(100vw - 24px);
+  }
+}
+
 /* =====================
    Einheitlicher Bild- & Video-Style für alle Boxen
    ===================== */
