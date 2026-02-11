@@ -1248,44 +1248,59 @@ button:focus,
 @media (max-width: 768px) {
   html,
   body {
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     overflow-x: hidden;
+  }
+
+  .hero {
+    width: 100% !important;
   }
 
   .lang-switch {
-    z-index: 10000;
+    z-index: 2147483000;
   }
 
   .dropdown-menu {
-    position: fixed;
-    top: calc(55px + env(safe-area-inset-top));
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 100%;
-    padding: 8px 16px calc(12px + env(safe-area-inset-bottom));
+    position: fixed !important;
+    inset: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    padding:
+      calc(55px + env(safe-area-inset-top)) 16px
+      calc(12px + env(safe-area-inset-bottom));
     font-size: 0.9em;
     border-radius: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
-    z-index: 10001;
+    z-index: 2147483001 !important;
   }
 
   .dropdown-menu a {
-    padding: 6px 0;
+    padding: 8px 0;
     font-size: 0.95em;
+    overflow-wrap: anywhere;
+  }
+
+  .dropdown-menu.show {
+    display: flex;
   }
 
   html:has(.dropdown-menu.show),
   body:has(.dropdown-menu.show) {
-    overflow: hidden;
+    height: 100%;
+    overflow: hidden !important;
   }
 
   body:has(.dropdown-menu.show) .hero {
-    overflow: visible;
+    overflow: visible !important;
   }
 }
 
