@@ -1463,10 +1463,11 @@ button:focus,
   .tek-box {
     padding: 6vw 2vw;
     border-radius: 4vw;
-    max-width: 99vw;
+    width: calc(100% - 20px);
+    max-width: calc(100% - 20px);
     margin-bottom: 32px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .changdiving-box img,
