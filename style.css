@@ -120,6 +120,15 @@ body.menu-open {
   width: 100%;
   height: 100%;
 }
+
+/* Allow dropdown to show when menu is open - fix clipping issue */
+body.menu-open .hero {
+  overflow: visible;
+}
+
+body.menu-open header {
+  overflow: visible;
+}
 html[lang="th"] body,
 html[lang="th"] .grid-container,
 html[lang="th"] .breadcrumb,
@@ -1276,6 +1285,15 @@ button:focus,
   }
   .dropdown-menu a:last-child {
     border-bottom: none;
+  }
+  
+  /* Prevent hero from clipping dropdown on mobile */
+  .hero {
+    overflow: visible;
+  }
+  
+  header {
+    overflow: visible;
   }
 }
 
