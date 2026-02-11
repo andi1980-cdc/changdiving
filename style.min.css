@@ -997,15 +997,41 @@ button:focus {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
+  body,
+  html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .lang-switch {
+    z-index: 10000;
+  }
   .dropdown-menu {
-    top: 55px;
-    right: 15px;
-    padding: 8px 12px;
+    position: fixed;
+    top: calc(55px + env(safe-area-inset-top));
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 16px calc(12px + env(safe-area-inset-bottom));
     font-size: 0.9em;
+    border-radius: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    z-index: 10001;
   }
   .dropdown-menu a {
-    padding: 4px 0;
+    padding: 6px 0;
     font-size: 0.95em;
+  }
+  body:has(.dropdown-menu.show),
+  html:has(.dropdown-menu.show) {
+    overflow: hidden;
+  }
+  body:has(.dropdown-menu.show) .hero {
+    overflow: visible;
   }
 }
 .changdiving-box iframe,
