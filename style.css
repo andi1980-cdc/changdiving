@@ -122,12 +122,13 @@ body.menu-open {
 }
 
 /* Allow dropdown to show when menu is open - fix clipping issue */
+/* IMPORTANT: Must override inline critical CSS with !important */
 body.menu-open .hero {
-  overflow: visible;
+  overflow: visible !important;
 }
 
 body.menu-open header {
-  overflow: visible;
+  overflow: visible !important;
 }
 html[lang="th"] body,
 html[lang="th"] .grid-container,
@@ -1287,13 +1288,21 @@ button:focus,
     border-bottom: none;
   }
   
-  /* Prevent hero from clipping dropdown on mobile */
+  /* CRITICAL: Override inline critical CSS - prevent hero from clipping dropdown on mobile */
   .hero {
-    overflow: visible;
+    overflow: visible !important;
   }
   
   header {
-    overflow: visible;
+    overflow: visible !important;
+  }
+  
+  body header {
+    overflow: visible !important;
+  }
+  
+  body .hero {
+    overflow: visible !important;
   }
 }
 
