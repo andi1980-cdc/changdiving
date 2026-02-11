@@ -392,6 +392,14 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle.addEventListener("click", function (e) {
         e.stopPropagation();
         dropdown.classList.toggle("show");
+        
+        // Lock/unlock body scroll on mobile when menu opens/closes
+        if (dropdown.classList.contains("show")) {
+          document.body.classList.add("menu-open");
+        } else {
+          document.body.classList.remove("menu-open");
+        }
+        
         console.log(
           `[DEBUG] Button #${i + 1} geklickt. Dropdown sichtbar:`,
           dropdown.classList.contains("show"),
@@ -405,6 +413,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
           if (dropdown.classList.contains("show")) {
             dropdown.classList.remove("show");
+            document.body.classList.remove("menu-open");
             console.log(
               `[DEBUG] Dropdown für Button #${i + 1} durch Außenklick geschlossen.`,
             );
