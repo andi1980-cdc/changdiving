@@ -1120,9 +1120,9 @@ button:focus,
 }
 .dropdown-menu {
   display: none;
-  position: fixed;
-  top: 65px;
-  right: 20px;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border: 1px solid #ccc;
@@ -1134,6 +1134,7 @@ button:focus,
   max-height: calc(100vh - 85px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  min-width: 200px;
 }
 .dropdown-menu.show {
   display: flex;
@@ -1269,10 +1270,13 @@ button:focus,
 /* Mobile Dropdown-Menü Anpassungen */
 @media (max-width: 768px) {
   .dropdown-menu {
-    top: 50px;
-    right: 10px;
-    left: 10px;
+    /* Position relative to lang-switch, not viewport */
+    top: calc(100% + 5px);
+    right: 0;
+    left: auto;
     width: auto;
+    min-width: 250px;
+    max-width: calc(100vw - 20px);
     padding: 12px 16px;
     font-size: 0.9em;
     max-height: calc(100vh - 70px);
@@ -1303,6 +1307,32 @@ button:focus,
   
   body .hero {
     overflow: visible !important;
+  }
+  
+  /* Ensure lang-switch doesn't overflow on mobile with search field */
+  .lang-switch {
+    right: 10px;
+    left: auto;
+    max-width: calc(100vw - 20px);
+    flex-wrap: nowrap;
+    padding: 8px;
+  }
+  
+  /* For pages with search field, make sure it doesn't break layout */
+  .lang-switch .search-wrapper {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  
+  /* Adjust menu toggle button spacing */
+  .menu-toggle {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  /* Language links should not wrap */
+  .lang-switch > a {
+    flex-shrink: 0;
   }
 }
 
