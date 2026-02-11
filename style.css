@@ -1266,11 +1266,11 @@ button:focus,
   }
 
   body.main-page .lang-switch {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-    width: calc(100% - 20px);
-    max-width: 460px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-width: none;
+    transform: none;
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
@@ -1332,7 +1332,12 @@ button:focus,
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
-    z-index: 2147483001 !important;
+    z-index: 2147483647 !important;
+    isolation: isolate;
+  }
+
+  body.main-page .dropdown-menu {
+    padding-top: calc(130px + env(safe-area-inset-top));
   }
 
   .dropdown-menu a {

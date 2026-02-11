@@ -379,11 +379,24 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".menu-toggle");
   console.log("[DEBUG] Gefundene .menu-toggle Buttons:", toggles.length);
+  const menuBindings = [];
 
   function updateMenuOpenState() {
     const hasOpenDropdown = document.querySelector(".dropdown-menu.show") !== null;
     document.documentElement.classList.toggle("menu-open", hasOpenDropdown);
     document.body.classList.toggle("menu-open", hasOpenDropdown);
+  }
+
+  function closeAllDropdowns(exceptDropdown = null) {
+    menuBindings.forEach(({ toggle, dropdown }) => {
+      if (dropdown !== exceptDropdown) {
+        dropdown.classList.remove("show");
+      }
+      toggle.setAttribute(
+        "aria-expanded",
+        dropdown.classList.contains("show") ? "true" : "false",
+      );
+    });
   }
 
   toggles.forEach(function (toggle, i) {
@@ -396,13 +409,24 @@ document.addEventListener("DOMContentLoaded", function () {
         `[DEBUG] Zugehöriges Dropdown für Button #${i + 1} gefunden:`,
         dropdown,
       );
+
+      // Move dropdown to body to avoid page-specific stacking/overflow contexts.
+      if (dropdown.parentElement !== document.body) {
+        document.body.appendChild(dropdown);
+      }
+      if (!dropdown.id) {
+        dropdown.id = `mobile-dropdown-${i + 1}`;
+      }
+      toggle.setAttribute("aria-controls", dropdown.id);
+      toggle.setAttribute("aria-expanded", "false");
+      menuBindings.push({ toggle, dropdown });
+
       toggle.addEventListener("click", function (e) {
         e.stopPropagation();
         const willOpen = !dropdown.classList.contains("show");
-        document.querySelectorAll(".dropdown-menu.show").forEach((openMenu) => {
-          openMenu.classList.remove("show");
-        });
+        closeAllDropdowns(willOpen ? dropdown : null);
         dropdown.classList.toggle("show", willOpen);
+        toggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
         updateMenuOpenState();
         console.log(
           `[DEBUG] Button #${i + 1} geklickt. Dropdown sichtbar:`,
@@ -417,6 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
           if (dropdown.classList.contains("show")) {
             dropdown.classList.remove("show");
+            toggle.setAttribute("aria-expanded", "false");
             updateMenuOpenState();
             console.log(
               `[DEBUG] Dropdown für Button #${i + 1} durch Außenklick geschlossen.`,
@@ -431,9 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-      document.querySelectorAll(".dropdown-menu.show").forEach((openMenu) => {
-        openMenu.classList.remove("show");
-      });
+      closeAllDropdowns();
       updateMenuOpenState();
     }
   });
