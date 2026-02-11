@@ -1007,15 +1007,25 @@ button:focus {
     width: 100% !important;
   }
   .lang-switch {
+    position: fixed;
+    top: calc(15px + env(safe-area-inset-top));
+    right: 15px;
     z-index: 2147483000;
   }
   .dropdown-menu {
     position: fixed !important;
     inset: 0 !important;
     top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     height: 100dvh;
+    max-height: 100vh;
     max-height: 100dvh;
     margin: 0;
     padding:
@@ -1038,12 +1048,30 @@ button:focus {
   .dropdown-menu.show {
     display: flex;
   }
+  .course-submenu,
+  .daytrip-submenu,
+  .posts-submenu {
+    width: 100%;
+    max-width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
   body:has(.dropdown-menu.show),
   html:has(.dropdown-menu.show) {
     height: 100%;
     overflow: hidden !important;
   }
+  body.menu-open,
+  html.menu-open {
+    height: 100%;
+    overflow: hidden !important;
+  }
   body:has(.dropdown-menu.show) .hero {
+    overflow: visible !important;
+  }
+  body.menu-open .hero {
     overflow: visible !important;
   }
 }

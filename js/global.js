@@ -379,6 +379,13 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".menu-toggle");
   console.log("[DEBUG] Gefundene .menu-toggle Buttons:", toggles.length);
+
+  function updateMenuOpenState() {
+    const hasOpenDropdown = document.querySelector(".dropdown-menu.show") !== null;
+    document.documentElement.classList.toggle("menu-open", hasOpenDropdown);
+    document.body.classList.toggle("menu-open", hasOpenDropdown);
+  }
+
   toggles.forEach(function (toggle, i) {
     // Suche im Eltern-Container nach .dropdown-menu
     const parent = toggle.closest(".lang-switch") || toggle.parentElement;
@@ -391,7 +398,12 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       toggle.addEventListener("click", function (e) {
         e.stopPropagation();
-        dropdown.classList.toggle("show");
+        const willOpen = !dropdown.classList.contains("show");
+        document.querySelectorAll(".dropdown-menu.show").forEach((openMenu) => {
+          openMenu.classList.remove("show");
+        });
+        dropdown.classList.toggle("show", willOpen);
+        updateMenuOpenState();
         console.log(
           `[DEBUG] Button #${i + 1} geklickt. Dropdown sichtbar:`,
           dropdown.classList.contains("show"),
@@ -405,6 +417,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ) {
           if (dropdown.classList.contains("show")) {
             dropdown.classList.remove("show");
+            updateMenuOpenState();
             console.log(
               `[DEBUG] Dropdown für Button #${i + 1} durch Außenklick geschlossen.`,
             );
@@ -413,6 +426,15 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     } else {
       console.warn(`[DEBUG] Kein Dropdown für Button #${i + 1} gefunden!`);
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".dropdown-menu.show").forEach((openMenu) => {
+        openMenu.classList.remove("show");
+      });
+      updateMenuOpenState();
     }
   });
 });
