@@ -295,11 +295,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Wettervorhersage für Koh Chang – Tauchbedingungen & Updates | Chang Diving
+      Koh Chang Wetter für Taucher – Wind, Wellen & Tauchbedingungen | Chang
+      Diving
     </title>
     <meta
       name="description"
-      content="Aktuelle Wetterlage und Tauchbedingungen auf Koh Chang. Bleibe informiert für deinen nächsten Schnorchel- oder Tauchtrip mit Chang Diving Center."
+      content="Koh Chang Wetter für Taucher – Wind, Wellen, Sicht. Plane mit Windguru. Fun Dives, Kurse, Tauchplätze. Jetzt buchen!"
     />
     <link rel="canonical" href="https://changdiving.com/de/weather/" />
     <meta
@@ -357,13 +358,16 @@
     />
 
     <!-- Open Graph für Social Media -->
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="th_TH" />
     <meta
       property="og:title"
-      content="Koh Chang Wetter – Live-Vorhersage & Tauchbedingungen"
+      content="Koh Chang Wetter für Taucher – Wind, Wellen & Tauchbedingungen"
     />
     <meta
       property="og:description"
-      content="Live-Wetterinfos und Tauchbedingungen für Koh Chang. Plane deinen Schnorchel- oder Tauchtag mit dem Chang Diving Center."
+      content="Koh Chang Wetter für Taucher – Wind, Wellen, Sicht. Plane mit Windguru. Fun Dives, Kurse. Jetzt buchen!"
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://changdiving.com/de/weather/" />
@@ -377,7 +381,7 @@
     <meta
       property="og:image:alt"
       content="
-      Wettervorhersage für Koh Chang – Tauchbedingungen & Updates | Chang Diving
+      Koh Chang Wetter für Taucher – Wind, Wellen & Tauchbedingungen
     "
     />
 
@@ -385,11 +389,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Koh Chang Wetter – Tauchvorhersage & Meeresbedingungen"
+      content="Koh Chang Wetter für Taucher – Wind, Wellen & Tauchbedingungen"
     />
     <meta
       name="twitter:description"
-      content="Tagesaktuelle Wetterdaten für Koh Chang. Wind, Gezeiten und Sichtbedingungen vom Chang Diving Center."
+      content="Koh Chang Wetter für Taucher – Wind, Wellen, Sicht. Plane mit Windguru. Fun Dives, Kurse. Jetzt buchen!"
     />
     <meta
       name="twitter:image"
@@ -445,23 +449,60 @@
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Wettervorhersage für Koh Chang – Chang Diving Center",
-        "description": "Tägliche Wetterdaten und Tauchbedingungen für Koh Chang. Wind, Gezeiten und Meeresinfos für Schnorchler und Taucher.",
-        "url": "https://changdiving.com/de/weather/",
-        "inLanguage": "de",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Chang Diving Center",
-          "url": "https://changdiving.com/",
-          "logo": {
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://changdiving.com/de/weather/",
+          "name": "Koh Chang Wetter für Taucher – Wind, Wellen & Tauchbedingungen | Chang Diving",
+          "description": "Koh Chang Wetter für Taucher – Wind, Wellen, Sicht. Plane mit Windguru. Fun Dives, Kurse, Tauchplätze. Entdecke Koh Changs Unterwasserwelt.",
+          "url": "https://changdiving.com/de/weather/",
+          "inLanguage": "de",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://changdiving.com/",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/"
+          },
+          "about": {
+            "@type": "LocalBusiness",
+            "@id": "https://changdiving.com/"
+          },
+          "primaryImageOfPage": {
             "@type": "ImageObject",
-            "url": "https://changdiving.com/img/logos/logo_cdc.webp"
+            "url": "https://changdiving.com/img/pages/header_weather_big.webp"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Chang Diving Center",
+            "url": "https://changdiving.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://changdiving.com/img/logos/logo_cdc.webp"
+            }
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://changdiving.com/",
+          "name": "Chang Diving Center",
+          "description": "Tauchschule auf Koh Chang. Wetter-, Wind- und Wellenvorhersagen für Taucher. SDI/PADI-Kurse, Fun Dives, Try Dives, Schnorcheln. Koh Chang, Thailand.",
+          "url": "https://changdiving.com/",
+          "telephone": "+66 894-013-927",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Koh Chang",
+            "addressRegion": "Trat",
+            "addressCountry": "TH"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 12.06321,
+            "longitude": 102.28982
           }
         }
-      }
+      ]
     </script>
 
     <!-- Critical CSS and Font Loading -->
@@ -523,7 +564,7 @@
           <img
             class="hero-header-img"
             src="/img/pages/header_weather_small.webp"
-            alt="Tagesausflüge Koh Chang – Schnorcheln & Tauchen"
+            alt="Koh Chang Wetter – Tauchbedingungen und Meer"
             width="600"
             height="400"
             fetchpriority="high"
@@ -531,8 +572,8 @@
         </picture>
 
         <div class="hero-text">
-          <h1>Wettervorhersage für Koh Chang</h1>
-          <p>Du willst wissen, wie das Wetter auf Koh Chang wird?</p>
+          <h1>Koh Chang Wetter – Plane deine Tauchgänge</h1>
+          <p>Wind, Wellen & Sicht für Tauchen & Schnorcheln</p>
         </div>
       </div>
     </header>
@@ -549,12 +590,14 @@
 
       <section class="grid-container">
         <p>
-          Du willst wissen, wie das Wetter auf Koh Chang wird? Als tropische
-          Insel zeigt die Vorhersage oft Regen – doch meist handelt es sich nur
-          um kurze Schauer mit anschließendem Sonnenschein. Für Taucher sind die
-          Meeresbedingungen entscheidend. Unten findest du zuverlässige
-          Gezeitentabellen und Wettertools von Windguru zur Planung deiner
-          Tauchgänge.
+          <strong>Koh Chang Wetter für Taucher</strong> – planst du deinen
+          nächsten <a href="/de/day-trips/fun-dives/">Fun Dive</a> oder
+          <a href="/de/day-trips/try-dive/">Try Dive</a>? Wind, Wellen und Sicht
+          zählen mehr als Regen. Als tropische Insel zeigt die Vorhersage oft
+          Schauer – meist kurz, danach Sonne. Unten findest du Windguru Wind-
+          und Wellenvorhersagen zur Planung deiner Tauchgänge am
+          <a href="/de/dive-sites/htms-chang-wreck/">HTMS-Chang-Wrack</a> und
+          den <a href="/de/dive-sites/">Koh-Chang-Tauchplätzen</a>.
         </p>
         <hr />
 
@@ -767,29 +810,191 @@
         </p>
         <hr />
 
-        <h2>Wassertemperatur</h2>
+        <!-- Dive Deeper: Wetter & Tauchen – Plane deinen Koh-Chang-Trip -->
+        <h2
+          style="
+            margin-top: 50px;
+            font-size: 32px;
+            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+          "
+        >
+          Über die Vorhersage hinaus – Plane deinen Koh-Chang-Tauchgang
+        </h2>
         <p>
-          Das Wasser rund um Koh Chang bleibt das ganze Jahr angenehm warm –
-          zwischen 28 °C und 33 °C. Ideal für leichte Tauchanzüge oder
-          Rashguards!
+          Wenn du das Wetter für Koh Chang checkst, planst du nicht nur einen
+          Strandtag – du träumst von einem Unterwasserabenteuer. Wird die See
+          ruhig genug fürs Boot? Wie ist die Sicht? Wirst du am
+          <a href="/de/dive-sites/htms-chang-wreck/">HTMS-Chang-Wrack</a>
+          tauchen, an Koh Rangs Riffen vorbeidriften oder eine Schildkröte im
+          Blau entdecken? Diese Fragen beschäftigen jeden Taucher, der von Koh
+          Changs klarem Wasser träumt. Was wir in Jahren des Tauchens hier
+          gelernt haben: Koh Chang ist ganzjährig tauchbar. Entscheidend ist
+          nicht der Regen – tropische Schauer sind kurz, danach oft Sonne –,
+          sondern Wind und Wellen. Unsere Windguru-Vorhersagen oben geben dir
+          das echte Bild. Du hast also das Wetter gecheckt – und jetzt? Unten
+          findest du alles, um aus der Vorhersage einen unvergesslichen
+          Tauchgang zu machen: FAQs zur Insel und zu Tauchbedingungen,
+          Tauchplätze, Meeresleben, Reiseführer und Kurse. Ob Schnorchler oder
+          erfahrener Taucher – wir haben dich. Plane deinen Tauchgang – und
+          tauche deinen Plan.
         </p>
-        <hr />
 
-        <h2>Jahreszeiten</h2>
-        <p>
-          Die Hochsaison dauert von Oktober bis April mit ruhiger See und
-          schönem Wetter. Die Nebensaison (Mai bis September) bringt weniger
-          Besucher und günstigere Unterkünfte. Trotz gelegentlicher Regenschauer
-          sind die Tauchbedingungen – besonders im Juni – oft ausgezeichnet!
-        </p>
+        <div class="row">
+          <a
+            href="/de/faqs/faq-general-questions-koh-chang/"
+            class="three columns"
+          >
+            <img
+              src="/img/faq/faq-about-koh-chang_small.webp"
+              alt="Allgemeine Fragen zu Koh Chang – Insel, Wetter, beste Reisezeit"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🏝️ Infos über Koh Chang</h3>
+              <p style="min-height: 60px">
+                Insel-Infos, Wetter, beste Reisezeit – entdecke, was Koh Chang
+                zu bieten hat.
+              </p>
+            </div>
+          </a>
+
+          <a href="/de/faqs/faq-diving-koh-chang/" class="three columns">
+            <img
+              src="/img/faq/faq-diving-koh-chang_small.webp"
+              alt="Tauchen auf Koh Chang – Bedingungen, Wassertemperatur, Sicht"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🤿 Infos über Tauchen Koh Chang</h3>
+              <p style="min-height: 60px">
+                Wie ist es hier zu tauchen? Bedingungen, Sicht, Wassertemperatur
+                – erfahre, was dich erwartet.
+              </p>
+            </div>
+          </a>
+
+          <a href="/de/posts/marine-life-koh-chang/" class="three columns">
+            <img
+              src="/img/posts/marine-life-koh-chang_small2.webp"
+              alt="Meeresleben auf Koh Chang – Riff-Fische, Schildkröten, Nacktschnecken"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🐠 Koh Changs Meeresleben</h3>
+              <p style="min-height: 60px">
+                Was lebt unter der Oberfläche? Schildkröten, Riff-Fische,
+                vielleicht Walhaie – entdecke Koh Changs Unterwasserwelt.
+              </p>
+            </div>
+          </a>
+
+          <a href="/de/dive-sites/" class="three columns">
+            <img
+              src="/img/dive-sites/dive-site-map_small.webp"
+              alt="Tauchplätze rund um Koh Chang – Wracks, Riffe und Meeresleben"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🗺️ Tauchplätze rund um Koh Chang</h3>
+              <p style="min-height: 60px">
+                13 Spots zu erkunden – Wrack, Riffe, Pinnacles. Was gibt es rund
+                um Koh Chang?
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="/de/posts/koh-chang-diving-travel-guides/travel-guide/"
+            class="three columns"
+          >
+            <img
+              src="/img/posts/gulf-vs-andemann_small.webp"
+              alt="Koh Chang Reiseführer – wann reisen, Strände, Tipps"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>✈️ Koh Chang Guide</h3>
+              <p style="min-height: 60px">
+                Wann reisen, beste Strände, wo übernachten – dein Koh-Chang-
+                Reiseführer.
+              </p>
+            </div>
+          </a>
+
+          <a href="/de/posts/scuba-knowledge/" class="three columns">
+            <img
+              src="/img/posts/gas-consumption_small.webp"
+              alt="Scuba-Wissen – Skills, Wissenschaft und Sicherheit"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>📚 Scuba-Wissen</h3>
+              <p style="min-height: 60px">
+                Wie funktioniert Tauchen? Von den Basics bis zur Tauchplanung –
+                erweitere dein Wissen.
+              </p>
+            </div>
+          </a>
+
+          <a href="/de/day-trips/" class="three columns">
+            <img
+              src="/img/daytrips/daytrips_header_small.webp"
+              alt="Tagesausflüge – Schnorcheln und Tauchen von Koh Chang"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🚤 Scuba-Tagesausflüge</h3>
+              <p style="min-height: 60px">
+                Probier es einmal – entdecke, wie sich Schnorcheln oder Tauchen
+                anfühlt. Keine Vorkenntnisse nötig.
+              </p>
+            </div>
+          </a>
+
+          <a href="/de/courses/" class="three columns">
+            <img
+              src="/img/courses/header_course_small.webp"
+              alt="Tauchkurse – Open Water, Advanced, Spezialitäten"
+              width="600"
+              height="400"
+              loading="lazy"
+            />
+            <div class="excerpt">
+              <h3>🎓 Tauchkurse</h3>
+              <p style="min-height: 60px">
+                Neugierig, Tauchen zu lernen? Koh Chang ist ein toller Ort, um
+                deine Reise zu starten.
+              </p>
+            </div>
+          </a>
+        </div>
 
         <h2>Buche dein Tauchabenteuer</h2>
         <p>
-          Entdecke die Unterwasserwelt von Koh Chang mit dem
-          <a href="/de/about/">Chang Diving Center</a>. Wähle aus unseren
-          <a href="/de/day-trips/fun-dives/">Fun Dives</a>
-          oder
-          <a href="/de/courses/">Tauchkursen</a>!
+          Bedingungen passen? Entdecke die Unterwasserwelt von Koh Chang mit dem
+          <a href="/de/about/">Chang Diving Center</a>. Buche einen
+          <a href="/de/day-trips/try-dive/">Try Dive</a> als Einsteiger, mach
+          <a href="/de/day-trips/fun-dives/">Fun Dives</a> am
+          <a href="/de/dive-sites/htms-chang-wreck/">HTMS-Chang-Wrack</a> oder
+          starte einen <a href="/de/courses/">Tauchkurs</a>!
         </p>
       </section>
     </main>
