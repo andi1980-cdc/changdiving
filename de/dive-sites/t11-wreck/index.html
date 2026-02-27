@@ -862,6 +862,23 @@
           </li>
         </ul>
 
+        <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc" />
+        <h3 style="color: #333; margin-top: 30px">
+          Was andere Taucher entdeckt haben
+        </h3>
+        <p style="font-size: 14px; margin-bottom: 20px">
+          Echte Bewertungen und Erfahrungen unserer Gäste – sieh, was andere bei
+          ihren Tauchabenteuern mit uns gefunden haben!
+        </p>
+        <div style="margin-top: 20px">
+          <script
+            defer
+            async
+            data-src="https://cdn.trustindex.io/loader.js?10987fa47f9a902e6d96b4a1e44"
+            crossorigin="anonymous"
+          ></script>
+        </div>
+
         <hr />
 
         <!-- Related Dive Sites Section -->
@@ -1022,6 +1039,46 @@
           }
         ]
       }
+    </script>
+
+    <!-- Trustindex Lazy Loading -->
+    <script>
+      (function () {
+        "use strict";
+        if (!("IntersectionObserver" in window)) {
+          document
+            .querySelectorAll('script[data-src*="trustindex.io"]')
+            .forEach(function (script) {
+              script.src = script.getAttribute("data-src");
+              script.removeAttribute("data-src");
+            });
+          return;
+        }
+        const observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                const container = entry.target;
+                const script = container.querySelector(
+                  'script[data-src*="trustindex.io"]',
+                );
+                if (script) {
+                  script.src = script.getAttribute("data-src");
+                  script.removeAttribute("data-src");
+                }
+                observer.unobserve(container);
+              }
+            });
+          },
+          { rootMargin: "200px" },
+        );
+        document
+          .querySelectorAll('script[data-src*="trustindex.io"]')
+          .forEach(function (script) {
+            const container = script.parentElement;
+            if (container) observer.observe(container);
+          });
+      })();
     </script>
   </body>
 </html>
