@@ -525,54 +525,54 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Was ist die Master Scuba Diver Bewertung?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Die prestigeträchtigste nicht-professionelle Stufe im Freizeittauchen. Anerkennung von Ausbildung, protokollierten Tauchgängen und Engagement. Verfügbar über PADI (Rescue + 5 Specialties + 50 Tauchgänge) oder SDI (Rescue + 4 Specialties + 50 Tauchgänge)."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist die Master Scuba Diver Bewertung?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Die prestigeträchtigste nicht-professionelle Stufe im Freizeittauchen. Anerkennung von Ausbildung, protokollierten Tauchgängen und Engagement. Verfügbar über PADI (Rescue + 5 Specialties + 50 Tauchgänge) oder SDI (Rescue + 4 Specialties + 50 Tauchgänge)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wer kann Master Scuba Diver werden?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PADI: Rescue Diver + 5 PADI Specialties + 50 protokollierte Tauchgänge, 18+. SDI: Rescue Diver + 4 SDI Specialties + 50 protokollierte Tauchgänge, 18+. Agenturen dürfen nicht gemischt werden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was kostet das Master Scuba Diver Bundle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PADI MSD Bundle: 62.424 THB (15% Rabatt, 18–20 Tauchgänge). SDI MSD Bundle: 50.524 THB (15% Rabatt, 20–21 Tauchgänge). Anmeldegebühren nicht enthalten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist im Master Scuba Diver Programm inklusive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Persönliche MSD-Beratung, Logbuchprüfung, Specialty-Buchungsunterstützung, MSD-Antragsunterstützung, Anerkennungsmaterialien, gesamte Tauchausrüstung, Hotelabholung, Snacks, Obst, Softdrinks und Mittagessen an Bord."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo findet das Master Scuba Diver Training statt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An Tauchplätzen von Koh Chang inklusive des HTMS Chang Wracks. Beispiel-Specialties für die Preisberechnung: Deep, Wreck, Nitrox, Search & Recovery, Sidemount."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Wer kann Master Scuba Diver werden?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "PADI: Rescue Diver + 5 PADI Specialties + 50 protokollierte Tauchgänge, 18+. SDI: Rescue Diver + 4 SDI Specialties + 50 protokollierte Tauchgänge, 18+. Agenturen dürfen nicht gemischt werden."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was kostet das Master Scuba Diver Bundle?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "PADI MSD Bundle: 62.424 THB (15% Rabatt, 18–20 Tauchgänge). SDI MSD Bundle: 50.524 THB (15% Rabatt, 20–21 Tauchgänge). Anmeldegebühren nicht enthalten."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was ist im Master Scuba Diver Programm inklusive?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Persönliche MSD-Beratung, Logbuchprüfung, Specialty-Buchungsunterstützung, MSD-Antragsunterstützung, Anerkennungsmaterialien, gesamte Tauchausrüstung, Hotelabholung, Snacks, Obst, Softdrinks und Mittagessen an Bord."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wo findet das Master Scuba Diver Training statt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "An Tauchplätzen von Koh Chang inklusive des HTMS Chang Wracks. Beispiel-Specialties für die Preisberechnung: Deep, Wreck, Nitrox, Search & Recovery, Sidemount."
-      }
-    }
-    ]
-  }
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -1311,7 +1311,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -1326,7 +1326,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

@@ -641,22 +641,22 @@
                 // Hide placeholder when widget loads
                 setTimeout(function () {
                   var placeholder = document.querySelector(
-                    ".windguru-placeholder",
+                    ".windguru-placeholder"
                   );
                   if (placeholder) placeholder.style.display = "none";
 
                   // Add accessibility titles to dynamically created iframes
                   var windIframes = document.querySelectorAll(
-                    'iframe[src*="windguru.cz"][src*="m=100"]',
+                    'iframe[src*="windguru.cz"][src*="m=100"]'
                   );
                   windIframes.forEach(function (iframe) {
                     iframe.setAttribute(
                       "title",
-                      "วิดเจ็ตพยากรณ์ลมสำหรับเกาะช้าง - ข้อมูลสภาพอากาศแบบอินเทอร์แอคทิฟ",
+                      "วิดเจ็ตพยากรณ์ลมสำหรับเกาะช้าง - ข้อมูลสภาพอากาศแบบอินเทอร์แอคทิฟ"
                     );
                     iframe.setAttribute(
                       "aria-label",
-                      "พยากรณ์ลมแสดงความเร็วลม ทิศทาง และสภาพอากาศ",
+                      "พยากรณ์ลมแสดงความเร็วลม ทิศทาง และสภาพอากาศ"
                     );
                   });
                 }, 2000);
@@ -722,7 +722,7 @@
                 // Hide placeholder when widget loads
                 setTimeout(function () {
                   var placeholders = document.querySelectorAll(
-                    ".windguru-placeholder",
+                    ".windguru-placeholder"
                   );
                   placeholders.forEach(function (p) {
                     if (p.textContent.includes("คลื่น"))
@@ -731,16 +731,16 @@
 
                   // Add accessibility titles to dynamically created iframes
                   var waveIframes = document.querySelectorAll(
-                    'iframe[src*="windguru.cz"][src*="m=84"]',
+                    'iframe[src*="windguru.cz"][src*="m=84"]'
                   );
                   waveIframes.forEach(function (iframe) {
                     iframe.setAttribute(
                       "title",
-                      "วิดเจ็ตพยากรณ์คลื่นสำหรับเกาะช้าง - ข้อมูลสภาพทะเลและคลื่นแบบอินเทอร์แอคทิฟ",
+                      "วิดเจ็ตพยากรณ์คลื่นสำหรับเกาะช้าง - ข้อมูลสภาพทะเลและคลื่นแบบอินเทอร์แอคทิฟ"
                     );
                     iframe.setAttribute(
                       "aria-label",
-                      "พยากรณ์คลื่นแสดงความสูงคลื่น คาบคลื่น ทิศทาง และสภาพทะเล",
+                      "พยากรณ์คลื่นแสดงความสูงคลื่น คาบคลื่น ทิศทาง และสภาพทะเล"
                     );
                   });
                 }, 2000);

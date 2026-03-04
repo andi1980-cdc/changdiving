@@ -612,7 +612,6 @@
         "priceRange": "$$"
       }
     </script>
-
   </head>
   <body>
     <header>
@@ -791,7 +790,9 @@
         </ul>
         <p>
           Fragen zu Gesundheit oder Ablauf? Unsere
-          <a href="/de/faqs/faq-diving-health-safety-thailand/">Gesundheits- & Sicherheits-FAQ</a>
+          <a href="/de/faqs/faq-diving-health-safety-thailand/"
+            >Gesundheits- & Sicherheits-FAQ</a
+          >
           und
           <a href="/de/faqs/faq-try-dive-fun-dives-koh-chang/">Try-Dive-FAQ</a>
           haben die Antworten.
@@ -1189,7 +1190,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -1204,7 +1205,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

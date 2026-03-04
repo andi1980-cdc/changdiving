@@ -497,7 +497,6 @@
       }
     </script>
 
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -533,54 +532,54 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the SDI Instructor Examination (IE)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The final step after your IDC. A 2-day assessment testing teaching abilities, diving knowledge, and leadership under pressure. Upon passing you can teach the full range of SDI entry-level courses."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the SDI Instructor Examination (IE)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The final step after your IDC. A 2-day assessment testing teaching abilities, diving knowledge, and leadership under pressure. Upon passing you can teach the full range of SDI entry-level courses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who can take the SDI IE?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Completed SDI IDC training. Minimum 100 logged dives. Age 18+. Good health and strong water skills. Meet examiner day before at 4–5 PM for paperwork."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does the SDI IE cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "9,990 THB. Includes 2 full days of evaluation, theory & standards exams, pool + open water presentations, led by an independent SDI examiner. Teaching status after HQ approval."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in the SDI IE?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2 full days of evaluation, theory and standards exams, pool and open water teaching presentations, led by an independent SDI examiner. Teaching privileges after passing: Discover SCUBA, OWD, Advanced Adventure, Rescue, First Aid/CPR (if EFR Instructor), Divemaster. Specialties require separate Specialty Instructor ratings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the SDI IE take place?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "At Chang Diving on Koh Chang – pool, open water, and classroom. The HTMS Chang wreck is among the locations."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can take the SDI IE?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Completed SDI IDC training. Minimum 100 logged dives. Age 18+. Good health and strong water skills. Meet examiner day before at 4–5 PM for paperwork."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does the SDI IE cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "9,990 THB. Includes 2 full days of evaluation, theory & standards exams, pool + open water presentations, led by an independent SDI examiner. Teaching status after HQ approval."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is included in the SDI IE?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "2 full days of evaluation, theory and standards exams, pool and open water teaching presentations, led by an independent SDI examiner. Teaching privileges after passing: Discover SCUBA, OWD, Advanced Adventure, Rescue, First Aid/CPR (if EFR Instructor), Divemaster. Specialties require separate Specialty Instructor ratings."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where does the SDI IE take place?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "At Chang Diving on Koh Chang – pool, open water, and classroom. The HTMS Chang wreck is among the locations."
-      }
-    }
-    ]
-  }
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -979,7 +978,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -994,7 +993,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

@@ -525,54 +525,54 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Was ist der Divemaster Kurs und was werde ich lernen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Der Divemaster Kurs ist der erste Schritt in die professionelle Tauchwelt. In mindestens 2 Wochen entwickelst du Führungsqualitäten, lernst zertifizierte Taucher zu führen und Instructoren bei Kursen zu unterstützen. Das Programm kombiniert 20+ reale Ausbildungstauchgänge mit persönlichem Mentoring."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist der Divemaster Kurs und was werde ich lernen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Der Divemaster Kurs ist der erste Schritt in die professionelle Tauchwelt. In mindestens 2 Wochen entwickelst du Führungsqualitäten, lernst zertifizierte Taucher zu führen und Instructoren bei Kursen zu unterstützen. Das Programm kombiniert 20+ reale Ausbildungstauchgänge mit persönlichem Mentoring."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wer kann am Divemaster Kurs auf Koh Chang teilnehmen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rescue Diver Zertifizierung mit gültigem First Aid (nicht älter als 24 Monate) erforderlich. Mindestens 40 protokollierte Tauchgänge zum Kursstart, 60 zur Zertifizierung. Mindestalter 18 Jahre."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was kostet der Divemaster Kurs und wie lange dauert er?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SDI und PADI Divemaster: je 29.990 THB. Der Kurs dauert mindestens 2 Wochen mit flexiblem Zeitplan. Hinweis: Crewpack und Registrierungsgebühr sind nicht im Kurspreis enthalten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist im Divemaster Kurs inklusive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inklusive: vollständiger Divemaster-Lehrplan (Theorie und Praxis), 20+ Ausbildungstauchgänge in realen Bedingungen, Logbuchprüfung, Tauchplatzkartierung, Tieftauchgänge, Mitarbeit im täglichen Tauchbetrieb und 1-zu-1-Mentoring durch das mehrsprachige Profi-Team."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo findet das Divemaster Training statt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Das Divemaster Training findet im gesamten Mu Koh Chang Meeresschutzgebiet statt, einschließlich des HTMS Chang Wracks, Korallenriffen und vielfältigen Tauchplätzen – umfassende Praxiserfahrung an allen 13 Tauchplätzen von Koh Chang."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Wer kann am Divemaster Kurs auf Koh Chang teilnehmen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Rescue Diver Zertifizierung mit gültigem First Aid (nicht älter als 24 Monate) erforderlich. Mindestens 40 protokollierte Tauchgänge zum Kursstart, 60 zur Zertifizierung. Mindestalter 18 Jahre."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was kostet der Divemaster Kurs und wie lange dauert er?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "SDI und PADI Divemaster: je 29.990 THB. Der Kurs dauert mindestens 2 Wochen mit flexiblem Zeitplan. Hinweis: Crewpack und Registrierungsgebühr sind nicht im Kurspreis enthalten."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was ist im Divemaster Kurs inklusive?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Inklusive: vollständiger Divemaster-Lehrplan (Theorie und Praxis), 20+ Ausbildungstauchgänge in realen Bedingungen, Logbuchprüfung, Tauchplatzkartierung, Tieftauchgänge, Mitarbeit im täglichen Tauchbetrieb und 1-zu-1-Mentoring durch das mehrsprachige Profi-Team."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wo findet das Divemaster Training statt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Das Divemaster Training findet im gesamten Mu Koh Chang Meeresschutzgebiet statt, einschließlich des HTMS Chang Wracks, Korallenriffen und vielfältigen Tauchplätzen – umfassende Praxiserfahrung an allen 13 Tauchplätzen von Koh Chang."
-      }
-    }
-    ]
-  }
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -1041,7 +1041,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -1056,7 +1056,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

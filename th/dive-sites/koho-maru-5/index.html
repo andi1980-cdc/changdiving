@@ -527,7 +527,6 @@
       }
     </script>
 
-
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -827,9 +826,7 @@
         </ul>
 
         <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc" />
-        <h3 style="color: #333; margin-top: 30px">
-          นักดำน้ำคนอื่นค้นพบอะไร
-        </h3>
+        <h3 style="color: #333; margin-top: 30px">นักดำน้ำคนอื่นค้นพบอะไร</h3>
         <p style="font-size: 14px; margin-bottom: 20px">
           รีวิวจริงจากแขกของเรา – ดูว่าผู้อื่นพบอะไรในประสบการณ์ดำน้ำกับเรา!
         </p>
@@ -1013,7 +1010,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
                 if (script) {
                   script.src = script.getAttribute("data-src");
@@ -1023,7 +1020,7 @@
               }
             });
           },
-          { rootMargin: "200px" },
+          { rootMargin: "200px" }
         );
         document
           .querySelectorAll('script[data-src*="trustindex.io"]')

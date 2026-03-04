@@ -529,54 +529,54 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Was ist die SDI Instructor Examination (IE)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Der letzte Schritt nach dem IDC. Eine 2-tägige Prüfung von Unterrichtsfähigkeiten, Tauchwissen und Führung unter Druck. Nach Bestehen kannst du alle SDI Einstiegskurse unterrichten."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist die SDI Instructor Examination (IE)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Der letzte Schritt nach dem IDC. Eine 2-tägige Prüfung von Unterrichtsfähigkeiten, Tauchwissen und Führung unter Druck. Nach Bestehen kannst du alle SDI Einstiegskurse unterrichten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wer kann die SDI IE ablegen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Abgeschlossenes SDI IDC Training. Mindestens 100 protokollierte Tauchgänge. Alter 18+. Gute Gesundheit und starke Wassersicherheit. Treffen mit Prüfer am Vortag 16–17 Uhr für Unterlagen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was kostet die SDI IE?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "9.990 THB. Enthält 2 volle Prüfungstage, Theorie- und Standards-Prüfungen, Pool- und Freiwasser-Präsentationen, geleitet von einem unabhängigen SDI-Examiner. Unterrichtsstatus nach HQ-Genehmigung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist in der SDI IE inklusive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "2 volle Prüfungstage, Theorie- und Standards-Prüfungen, Pool- und Freiwasser-Präsentationen, geleitet von einem unabhängigen SDI-Examiner. Unterrichtsberechtigungen: Discover SCUBA, OWD, Advanced Adventure, Rescue, First Aid/CPR (wenn EFR Instructor), Divemaster. Specialties erfordern separate Specialty Instructor Ratings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo findet die SDI IE statt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bei Chang Diving auf Koh Chang – Pool, Freiwasser und Klassenraum. Das HTMS Chang Wrack gehört zu den Standorten."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Wer kann die SDI IE ablegen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Abgeschlossenes SDI IDC Training. Mindestens 100 protokollierte Tauchgänge. Alter 18+. Gute Gesundheit und starke Wassersicherheit. Treffen mit Prüfer am Vortag 16–17 Uhr für Unterlagen."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was kostet die SDI IE?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "9.990 THB. Enthält 2 volle Prüfungstage, Theorie- und Standards-Prüfungen, Pool- und Freiwasser-Präsentationen, geleitet von einem unabhängigen SDI-Examiner. Unterrichtsstatus nach HQ-Genehmigung."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was ist in der SDI IE inklusive?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "2 volle Prüfungstage, Theorie- und Standards-Prüfungen, Pool- und Freiwasser-Präsentationen, geleitet von einem unabhängigen SDI-Examiner. Unterrichtsberechtigungen: Discover SCUBA, OWD, Advanced Adventure, Rescue, First Aid/CPR (wenn EFR Instructor), Divemaster. Specialties erfordern separate Specialty Instructor Ratings."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wo findet die SDI IE statt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bei Chang Diving auf Koh Chang – Pool, Freiwasser und Klassenraum. Das HTMS Chang Wrack gehört zu den Standorten."
-      }
-    }
-    ]
-  }
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -969,7 +969,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -984,7 +984,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

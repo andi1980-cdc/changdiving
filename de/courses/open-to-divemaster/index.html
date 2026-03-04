@@ -528,54 +528,54 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Was ist das Open Water to Divemaster Praktikum?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Ein zweimonatiges bezahltes Praktikum von null Erfahrung bis Divemaster. Enthält OWD, AOWD, Rescue, First Aid und Divemaster mit 60 protokollierten Tauchgängen, täglichem Mentoring und echter Tauchcenter-Erfahrung auf Koh Chang."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist das Open Water to Divemaster Praktikum?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ein zweimonatiges bezahltes Praktikum von null Erfahrung bis Divemaster. Enthält OWD, AOWD, Rescue, First Aid und Divemaster mit 60 protokollierten Tauchgängen, täglichem Mentoring und echter Tauchcenter-Erfahrung auf Koh Chang."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wer kann am Open Water to Divemaster Praktikum teilnehmen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Keine Vorerfahrung erforderlich. Mindestalter 18, gute körperliche Fitness, Grundschwimmfähigkeit und Engagement für Teamarbeit. Starttermine Oktober bis März."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was kostet das Open Water to Divemaster Praktikum?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "64.900 THB (PADI oder SDI). Einzelkurse würden 111.050 THB (PADI) bzw. 109.550 THB (SDI) kosten. Crewpack und Anmeldegebühr nicht enthalten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist im Open Water to Divemaster Praktikum inklusive?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "OWD, AOWD, Rescue Diver, First Aid, Divemaster Kurs, 60 protokollierte Tauchgänge, Lernmaterialien, tägliche Briefings, Logbuchprüfung, Tauchplatzplanung, betreute Mitarbeit im Tauchcenter und an Bord sowie volles Mentoring durch mehrsprachige Instructoren."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo findet das Open Water to Divemaster Praktikum statt?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bei Chang Diving auf Koh Chang. Ausbildungstauchgänge an Tauchplätzen von Koh Chang inklusive des HTMS Chang Wracks im Mu Koh Chang Meeresschutzgebiet."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Wer kann am Open Water to Divemaster Praktikum teilnehmen?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Keine Vorerfahrung erforderlich. Mindestalter 18, gute körperliche Fitness, Grundschwimmfähigkeit und Engagement für Teamarbeit. Starttermine Oktober bis März."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was kostet das Open Water to Divemaster Praktikum?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "64.900 THB (PADI oder SDI). Einzelkurse würden 111.050 THB (PADI) bzw. 109.550 THB (SDI) kosten. Crewpack und Anmeldegebühr nicht enthalten."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Was ist im Open Water to Divemaster Praktikum inklusive?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "OWD, AOWD, Rescue Diver, First Aid, Divemaster Kurs, 60 protokollierte Tauchgänge, Lernmaterialien, tägliche Briefings, Logbuchprüfung, Tauchplatzplanung, betreute Mitarbeit im Tauchcenter und an Bord sowie volles Mentoring durch mehrsprachige Instructoren."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Wo findet das Open Water to Divemaster Praktikum statt?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Bei Chang Diving auf Koh Chang. Ausbildungstauchgänge an Tauchplätzen von Koh Chang inklusive des HTMS Chang Wracks im Mu Koh Chang Meeresschutzgebiet."
-      }
-    }
-    ]
-  }
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -1078,7 +1078,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -1093,7 +1093,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

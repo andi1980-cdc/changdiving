@@ -433,7 +433,6 @@
       }
     </script>
 
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -1051,7 +1050,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -1066,7 +1065,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

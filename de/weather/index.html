@@ -614,12 +614,34 @@
             box-shadow: 0 4px 15px rgba(0, 119, 182, 0.25);
           "
         >
-          <p style="font-size: 1.1em; font-weight: bold; margin: 0 0 10px; color: white;">
+          <p
+            style="
+              font-size: 1.1em;
+              font-weight: bold;
+              margin: 0 0 10px;
+              color: white;
+            "
+          >
             Wetter passt? Tauchgang buchen!
           </p>
-          <p style="margin: 0 0 14px; color: rgba(255,255,255,0.95); font-size: 0.95em">
-            <a href="/de/faqs/faq-diving-koh-chang/" style="color: white; text-decoration: underline;">Beste Tauchsaison</a> (Nov–Apr) •
-            <a href="/de/day-trips/fun-dives/" style="color: white; text-decoration: underline; font-weight: 600;">Fun Dives buchen</a>
+          <p
+            style="
+              margin: 0 0 14px;
+              color: rgba(255, 255, 255, 0.95);
+              font-size: 0.95em;
+            "
+          >
+            <a
+              href="/de/faqs/faq-diving-koh-chang/"
+              style="color: white; text-decoration: underline"
+              >Beste Tauchsaison</a
+            >
+            (Nov–Apr) •
+            <a
+              href="/de/day-trips/fun-dives/"
+              style="color: white; text-decoration: underline; font-weight: 600"
+              >Fun Dives buchen</a
+            >
           </p>
           <a
             href="/de/day-trips/fun-dives/"
@@ -686,22 +708,22 @@
                 // Hide placeholder when widget loads
                 setTimeout(function () {
                   var placeholder = document.querySelector(
-                    ".windguru-placeholder",
+                    ".windguru-placeholder"
                   );
                   if (placeholder) placeholder.style.display = "none";
 
                   // Add accessibility titles to dynamically created iframes
                   var windIframes = document.querySelectorAll(
-                    'iframe[src*="windguru.cz"][src*="m=100"]',
+                    'iframe[src*="windguru.cz"][src*="m=100"]'
                   );
                   windIframes.forEach(function (iframe) {
                     iframe.setAttribute(
                       "title",
-                      "Windvorhersage Widget für Koh Chang - Interaktive Wetterdaten",
+                      "Windvorhersage Widget für Koh Chang - Interaktive Wetterdaten"
                     );
                     iframe.setAttribute(
                       "aria-label",
-                      "Windvorhersage mit Windgeschwindigkeit, Richtung und Wetterbedingungen",
+                      "Windvorhersage mit Windgeschwindigkeit, Richtung und Wetterbedingungen"
                     );
                   });
                 }, 2000);
@@ -767,7 +789,7 @@
                 // Hide placeholder when widget loads
                 setTimeout(function () {
                   var placeholders = document.querySelectorAll(
-                    ".windguru-placeholder",
+                    ".windguru-placeholder"
                   );
                   placeholders.forEach(function (p) {
                     if (p.textContent.includes("Wellen"))
@@ -776,16 +798,16 @@
 
                   // Add accessibility titles to dynamically created iframes
                   var waveIframes = document.querySelectorAll(
-                    'iframe[src*="windguru.cz"][src*="m=84"]',
+                    'iframe[src*="windguru.cz"][src*="m=84"]'
                   );
                   waveIframes.forEach(function (iframe) {
                     iframe.setAttribute(
                       "title",
-                      "Wellenvorhersage Widget für Koh Chang - Interaktive Meeres- und Wellenbedingungen",
+                      "Wellenvorhersage Widget für Koh Chang - Interaktive Meeres- und Wellenbedingungen"
                     );
                     iframe.setAttribute(
                       "aria-label",
-                      "Wellenvorhersage mit Wellenhöhe, Periode, Richtung und Meereskonditionen",
+                      "Wellenvorhersage mit Wellenhöhe, Periode, Richtung und Meereskonditionen"
                     );
                   });
                 }, 2000);

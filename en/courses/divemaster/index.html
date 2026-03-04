@@ -527,54 +527,54 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
-      <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the Divemaster course and what will I learn?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The Divemaster course is the first step into professional diving. Over a minimum of 2 weeks, you'll develop leadership skills, learn to guide certified divers, and assist instructors during courses. The program combines 20+ real-world training dives with hands-on mentorship, preparing you for a career in diving worldwide."
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Divemaster course and what will I learn?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Divemaster course is the first step into professional diving. Over a minimum of 2 weeks, you'll develop leadership skills, learn to guide certified divers, and assist instructors during courses. The program combines 20+ real-world training dives with hands-on mentorship, preparing you for a career in diving worldwide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who can join the Divemaster course in Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Rescue Diver certification with valid First Aid (within last 24 months) is required. Minimum 40 logged dives to start the course, 60 to certify. Minimum age 18 years. Good fitness and comfort in the water are essential."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does the Divemaster course cost and how long does it take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SDI and PADI Divemaster: 29,990 THB each. The course takes a minimum of 2 weeks with a flexible schedule. Note: Crewpack and registration fee are not included in the course price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is included in the Divemaster course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Included: full Divemaster curriculum (theory and practical), 20+ training dives in real-world conditions, logbook review, dive site mapping, deep dives, assistance with daily dive shop operations, 1-on-1 multilingual mentorship, and certification upon completion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where will I train during the Divemaster course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divemaster training takes place throughout Mu Koh Chang National Marine Park, including the famous HTMS Chang wreck, coral reefs, and diverse dive sites – giving you comprehensive real-world experience across Koh Chang's 13 dive sites."
+            }
+          }
+        ]
       }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can join the Divemaster course in Koh Chang?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Rescue Diver certification with valid First Aid (within last 24 months) is required. Minimum 40 logged dives to start the course, 60 to certify. Minimum age 18 years. Good fitness and comfort in the water are essential."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much does the Divemaster course cost and how long does it take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "SDI and PADI Divemaster: 29,990 THB each. The course takes a minimum of 2 weeks with a flexible schedule. Note: Crewpack and registration fee are not included in the course price."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is included in the Divemaster course?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Included: full Divemaster curriculum (theory and practical), 20+ training dives in real-world conditions, logbook review, dive site mapping, deep dives, assistance with daily dive shop operations, 1-on-1 multilingual mentorship, and certification upon completion."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where will I train during the Divemaster course?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Divemaster training takes place throughout Mu Koh Chang National Marine Park, including the famous HTMS Chang wreck, coral reefs, and diverse dive sites – giving you comprehensive real-world experience across Koh Chang's 13 dive sites."
-      }
-    }
-    ]
-  }
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -1048,7 +1048,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
 
                 if (script) {
@@ -1063,7 +1063,7 @@
           },
           {
             rootMargin: "200px", // Load 200px before becoming visible
-          },
+          }
         );
 
         // Find ALL trustindex scripts and observe their parent containers

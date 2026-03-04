@@ -759,7 +759,6 @@
       }
     </script>
 
-
     <style>
       h1 {
         font-family: var(--font-sans);
@@ -1072,7 +1071,7 @@
             const mapEl = document.getElementById("kc-map");
             if (!btn || !mapEl) {
               console.error(
-                "[KC-MAP] Button oder Map-Container nicht gefunden – prüfe IDs kc-load-map / kc-map.",
+                "[KC-MAP] Button oder Map-Container nicht gefunden – prüfe IDs kc-load-map / kc-map."
               );
               return;
             }
@@ -1176,7 +1175,7 @@
               if (!SITES.length)
                 return L.latLngBounds(
                   L.latLng(11.75, 102.17),
-                  L.latLng(12.2, 102.5),
+                  L.latLng(12.2, 102.5)
                 );
               return L.latLngBounds(SITES.map((s) => L.latLng(s.c[0], s.c[1])));
             }
@@ -1206,7 +1205,7 @@
 
                 if (!window.L) {
                   console.error(
-                    "[KC-MAP] Leaflet L nicht verfügbar. CSP oder Netzwerkproblem?",
+                    "[KC-MAP] Leaflet L nicht verfügbar. CSP oder Netzwerkproblem?"
                   );
                   return;
                 }
@@ -1235,7 +1234,7 @@
                     detectRetina: false,
                     attribution:
                       '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-                  },
+                  }
                 ).addTo(map);
 
                 // Bounds & MaxBounds
@@ -1248,12 +1247,12 @@
                 const mb = L.latLngBounds(
                   L.latLng(
                     bounds.getSouth() - padLat,
-                    bounds.getWest() - padLng,
+                    bounds.getWest() - padLng
                   ),
                   L.latLng(
                     bounds.getNorth() + padLat,
-                    bounds.getEast() + padLng,
-                  ),
+                    bounds.getEast() + padLng
+                  )
                 );
                 map.setMaxBounds(mb);
                 map.options.minZoom = map.getZoom() - 1;
@@ -1274,7 +1273,7 @@
                   }).addTo(map);
                   m.bindPopup(
                     `<strong>${s.n}</strong>${s.u ? `<br><a href="${s.u}" target="_blank" rel="noopener">Mehr Infos</a>` : ""}`,
-                    { closeButton: true },
+                    { closeButton: true }
                   );
 
                   m.on("add", function () {
@@ -1422,7 +1421,7 @@
               if (entry.isIntersecting) {
                 const container = entry.target;
                 const script = container.querySelector(
-                  'script[data-src*="trustindex.io"]',
+                  'script[data-src*="trustindex.io"]'
                 );
                 if (script) {
                   script.src = script.getAttribute("data-src");
@@ -1432,7 +1431,7 @@
               }
             });
           },
-          { rootMargin: "200px" },
+          { rootMargin: "200px" }
         );
         document
           .querySelectorAll('script[data-src*="trustindex.io"]')
