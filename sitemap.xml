@@ -769,6 +769,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/de/posts/tips-and-tricks/self-inflating-bcd/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/de/posts/tips-and-tricks/water-in-regulator/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/de/posts/tips-and-tricks/which-course/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1579,6 +1591,18 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/en/posts/tips-and-tricks/self-inflating-bcd/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/en/posts/tips-and-tricks/water-in-regulator/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/en/posts/tips-and-tricks/which-course/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -2385,6 +2409,18 @@
   <url>
     <loc>https://changdiving.com/th/posts/tips-and-tricks/reel-guideline/</loc>
     <lastmod>2026-02-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/th/posts/tips-and-tricks/self-inflating-bcd/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/th/posts/tips-and-tricks/water-in-regulator/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
