@@ -127,7 +127,7 @@ style-src 'self' 'unsafe-inline' [trusted domains]
   "geo": { "latitude": 12.06321, "longitude": 102.28982 },
   "openingHours": "Mo-Su 08:00-18:00",
   "telephone": "+66 894-013-927",
-  "aggregateRating": { "ratingValue": "4.8", "reviewCount": 22 }
+  "aggregateRating": { "ratingValue": "4.8", "reviewCount": 171 }
 }
 ```
 
