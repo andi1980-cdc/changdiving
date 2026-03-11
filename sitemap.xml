@@ -13,18 +13,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://changdiving.com/de/404/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://changdiving.com/de/410/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://changdiving.com/de/about/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -805,12 +793,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://changdiving.com/de/search/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://changdiving.com/de/terms-and-conditions/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -830,18 +812,6 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://changdiving.com/en/404/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://changdiving.com/en/410/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -1627,12 +1597,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://changdiving.com/en/search/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://changdiving.com/en/terms-and-conditions/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -1652,18 +1616,6 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://changdiving.com/th/404/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://changdiving.com/th/410/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -2444,12 +2396,6 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/refund-policy/</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://changdiving.com/th/search/</loc>
     <lastmod>2026-02-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>

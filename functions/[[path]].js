@@ -1623,7 +1623,23 @@ export async function onRequest(context) {
 
   // --- 3) statische ausliefern lassen ---
   const res = await context.next();
-  if (res.status !== 404) return withDebug(res, "pages-pass");
+  if (res.status !== 404) {
+    // PDFs unter /docs/ nicht indexieren (Formulare, Manuals – kein SEO-Wert)
+    const isPdf =
+      normalizedPath.startsWith("/docs/") &&
+      normalizedPath.toLowerCase().endsWith(".pdf");
+    let finalRes = res;
+    if (isPdf && res.ok) {
+      const headers = new Headers(res.headers);
+      headers.set("X-Robots-Tag", "noindex");
+      finalRes = new Response(res.body, {
+        status: res.status,
+        statusText: res.statusText,
+        headers,
+      });
+    }
+    return withDebug(finalRes, "pages-pass");
+  }
 
   // --- 4) Global: alles außerhalb Sprachpfade & nicht-Assets -> 410 ---
   if (!isInLang(normalizedPath) && !isAsset(normalizedPath)) {
