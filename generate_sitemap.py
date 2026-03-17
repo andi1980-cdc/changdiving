@@ -4,6 +4,9 @@ Generate sitemap.xml with accurate lastmod dates from Git history.
 This script reads the last commit date for each HTML file and generates
 a sitemap with accurate modification dates.
 
+Excludes: 404/410 error pages, /search/ utility pages (SEO: do not index).
+Keeps: search-recovery, about-search-recovery (content pages).
+
 Usage:
     python3 generate_sitemap.py
 """
@@ -32,6 +35,9 @@ EXCLUDE_PATTERNS = [
     "img",
     "js",
     "css",
+    "/404/",   # Error pages - do not index (SEO)
+    "/410/",   # Gone pages - do not index (SEO)
+    "/search/",  # Search utility pages - noindex (not /search-recovery/)
 ]
 
 # Priority and changefreq rules
@@ -91,7 +97,7 @@ def should_exclude(path):
     """
     Check if a path should be excluded.
     """
-    path_str = str(path)
+    path_str = str(path).replace("\\", "/")
     for pattern in EXCLUDE_PATTERNS:
         if pattern in path_str:
             return True
