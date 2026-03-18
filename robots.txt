@@ -1,4 +1,8 @@
 User-agent: *
+# Legacy WordPress paths – nicht mehr vorhanden, Crawl-Budget sparen
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-admin/
 Allow: /
 
-Sitemap: https://changdiving.com/sitemap.xml 
+Sitemap: https://changdiving.com/sitemap.xml
