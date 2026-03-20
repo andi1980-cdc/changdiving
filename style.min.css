@@ -858,6 +858,7 @@ button:focus {
 .speciality-box h3[id],
 .changdiving-box #book-fun-dives,
 .changdiving-box #book-try-dive,
+.changdiving-box #book-open-water,
 .speciality-box #book-try-dive {
   scroll-margin-top: 1.25rem;
 }
