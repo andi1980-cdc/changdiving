@@ -864,6 +864,104 @@ button:focus,
   opacity: 0.85;
 }
 
+/* In-page anchor navigation (jump links below breadcrumb) */
+.page-jump-nav {
+  margin: 0 0 6px;
+  padding: 6px 8px 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.page-jump-nav__label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.page-jump-nav__links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* room below text so horizontal scrollbar does not overlap */
+  padding-bottom: 14px;
+  margin-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.22) transparent;
+}
+
+.page-jump-nav__links::-webkit-scrollbar {
+  height: 5px;
+}
+
+.page-jump-nav__links::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0 12px;
+}
+
+.page-jump-nav__links::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .page-jump-nav__links {
+    justify-content: flex-start;
+    padding-bottom: 18px;
+    margin-bottom: 6px;
+  }
+}
+
+.page-jump-nav__links a {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 2px 0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1a6a8a;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.page-jump-nav__links a + a::before {
+  content: "·";
+  display: inline-block;
+  margin: 0 0.55em;
+  color: #c5c5c5;
+  font-weight: 300;
+  font-size: 1.05em;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.page-jump-nav__links a:hover {
+  color: #0077b6;
+  border-bottom-color: rgba(0, 119, 182, 0.35);
+}
+
+.page-jump-nav__links a:focus-visible {
+  outline: 2px solid rgba(0, 119, 182, 0.35);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.changdiving-box h2[id],
+.changdiving-box #book-fun-dives {
+  scroll-margin-top: 1.25rem;
+}
+
 .scroll-note {
   background:
     linear-gradient(135deg, #f4f1e8 0%, #e8ddc7 50%, #f4f1e8 100%),
