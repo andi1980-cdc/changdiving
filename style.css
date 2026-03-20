@@ -919,9 +919,11 @@ button:focus,
   }
 }
 
-/* Higher specificity so .changdiving-box a / a:hover (underline + opacity) does not override */
+/* Higher specificity: box link defaults (underline + opacity) must not override jump nav */
 .changdiving-box .page-jump-nav__links a,
-.changdiving-box .page-jump-nav__links a:visited {
+.changdiving-box .page-jump-nav__links a:visited,
+.speciality-box .page-jump-nav__links a,
+.speciality-box .page-jump-nav__links a:visited {
   flex-shrink: 0;
   display: inline-block;
   padding: 2px 0;
@@ -949,21 +951,28 @@ button:focus,
   user-select: none;
 }
 
-.changdiving-box .page-jump-nav__links a:hover {
+.changdiving-box .page-jump-nav__links a:hover,
+.speciality-box .page-jump-nav__links a:hover {
   color: #0077b6;
   border-bottom-color: rgba(0, 119, 182, 0.35);
   text-decoration: none;
   opacity: 1;
 }
 
-.changdiving-box .page-jump-nav__links a:focus-visible {
+.changdiving-box .page-jump-nav__links a:focus-visible,
+.speciality-box .page-jump-nav__links a:focus-visible {
   outline: 2px solid rgba(0, 119, 182, 0.35);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 .changdiving-box h2[id],
-.changdiving-box #book-fun-dives {
+.changdiving-box h3[id],
+.speciality-box h2[id],
+.speciality-box h3[id],
+.changdiving-box #book-fun-dives,
+.changdiving-box #book-try-dive,
+.speciality-box #book-try-dive {
   scroll-margin-top: 1.25rem;
 }
 

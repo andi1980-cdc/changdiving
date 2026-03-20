@@ -687,6 +687,16 @@
 
       <div class="speciality-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav class="page-jump-nav" aria-label="Auf dieser Seite">
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#what-is-try-dive">Überblick</a>
+            <a href="#requirements">Anforderungen</a>
+            <a href="#whats-included">Enthalten</a>
+            <a href="#what-can-you-discover">Entdecken</a>
+            <a href="#try-dive-options">Preise &amp; buchen</a>
+          </div>
+        </nav>
         <hr />
 
         <h2 style="color: var(--accent-color)">
@@ -694,7 +704,9 @@
         </h2>
 
         <!-- Intro -->
-        <h2 style="color: var(--highlight-color)">Was ist Schnuppertauchen?</h2>
+        <h2 id="what-is-try-dive" style="color: var(--highlight-color)">
+          Was ist Schnuppertauchen?
+        </h2>
         <p>
           <strong>Schnuppertauchen auf Koh Chang</strong> ist deine perfekte
           Einführung ins Tauchen in Thailand – keine Vorkenntnisse oder
@@ -781,7 +793,7 @@
         <hr />
 
         <!-- Course Requirements -->
-        <h2>Anforderungen</h2>
+        <h2 id="requirements">Anforderungen</h2>
         <ul>
           <li><strong>Alter:</strong> 10 Jahre und älter</li>
           <li>
@@ -819,7 +831,7 @@
         <hr />
 
         <!-- What's Included -->
-        <h2 class="headline-green">Was ist enthalten?</h2>
+        <h2 class="headline-green" id="whats-included">Was ist enthalten?</h2>
         <ul>
           <li>1-tägiger Try Dive (Einführungstauchgang)</li>
           <li>2 Rifftauchgänge vom Boot</li>
@@ -911,7 +923,7 @@
         <hr />
 
         <!-- Discovery + Reviews -->
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="what-can-you-discover">
           <span class="no-gradient"></span> Was können Sie entdecken?
         </h2>
         <p>
@@ -953,7 +965,7 @@
         <hr />
 
         <!-- CTA for Try Dive -->
-        <h3 style="margin-top: 0">
+        <h3 id="try-dive-options" style="margin-top: 0">
           Bereit für Ihr erstes Unterwasser-Abenteuer?
         </h3>
         <p>
@@ -996,26 +1008,28 @@
           </div>
         </div>
 
-        <p>
-          <strong>Jetzt buchen und Ihr Unterwasser-Abenteuer beginnen!</strong>
-        </p>
-        <a
-          href="mailto:info@changdiving.com?subject=Buchungsanfrage%20%E2%80%93%20Try%20Dive&body=Hallo%20Chang%20Diving%20Team%2C%0A%0AIch%20m%C3%B6chte%20einen%20Try%20Dive%20buchen.%0A%0A%E2%9C%94%EF%B8%8F%20Gew%C3%BCnschtes%20Datum%3A%0ADatum%20der%20Tour%3A%20%0A%0A%E2%9C%94%EF%B8%8F%20Teilnehmer-Info%20(bitte%20pro%20Person)%3A%0AName%20(auf%20Englisch)%3A%20%0AGeburtsdatum%3A%20%0AVegetarisch%3A%20Ja%2FNein%0ANahrungsmittelallergien%3A%20%0A%0A%E2%9C%94%EF%B8%8F%20Kontakt%3A%0ATelefonnummer%3A%20%0AE-Mail%3A%20%0AHotelname%3A%20%0A%0A%E2%9C%94%EF%B8%8F%20Ausr%C3%BCstungsvorbereitung%3A%0AT-Shirt-Gr%C3%B6%C3%9Fe%20(EU)%3A%20%0ASchuhgr%C3%B6%C3%9Fe%20(EU)%3A%20%0A%0AVielen%20Dank!"
-          style="
-            display: inline-block;
-            background-color: #2196f3;
-            color: white;
-            padding: 14px 28px;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: bold;
-            border-radius: 8px;
-          "
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          📩 Jetzt buchen
-        </a>
+        <div id="book-try-dive">
+          <p>
+            <strong>Jetzt buchen und Ihr Unterwasser-Abenteuer beginnen!</strong>
+          </p>
+          <a
+            href="mailto:info@changdiving.com?subject=Buchungsanfrage%20%E2%80%93%20Try%20Dive&body=Hallo%20Chang%20Diving%20Team%2C%0A%0AIch%20m%C3%B6chte%20einen%20Try%20Dive%20buchen.%0A%0A%E2%9C%94%EF%B8%8F%20Gew%C3%BCnschtes%20Datum%3A%0ADatum%20der%20Tour%3A%20%0A%0A%E2%9C%94%EF%B8%8F%20Teilnehmer-Info%20(bitte%20pro%20Person)%3A%0AName%20(auf%20Englisch)%3A%20%0AGeburtsdatum%3A%20%0AVegetarisch%3A%20Ja%2FNein%0ANahrungsmittelallergien%3A%20%0A%0A%E2%9C%94%EF%B8%8F%20Kontakt%3A%0ATelefonnummer%3A%20%0AE-Mail%3A%20%0AHotelname%3A%20%0A%0A%E2%9C%94%EF%B8%8F%20Ausr%C3%BCstungsvorbereitung%3A%0AT-Shirt-Gr%C3%B6%C3%9Fe%20(EU)%3A%20%0ASchuhgr%C3%B6%C3%9Fe%20(EU)%3A%20%0A%0AVielen%20Dank!"
+            style="
+              display: inline-block;
+              background-color: #2196f3;
+              color: white;
+              padding: 14px 28px;
+              text-decoration: none;
+              font-size: 1.1em;
+              font-weight: bold;
+              border-radius: 8px;
+            "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            📩 Jetzt buchen
+          </a>
+        </div>
         <hr />
 
         <!-- Downloads -->
