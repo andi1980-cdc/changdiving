@@ -559,6 +559,93 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
+    <style>
+      /* In-page jump nav (fun dives) */
+      .page-jump-nav {
+        margin: 0 0 6px;
+        padding: 6px 8px 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .page-jump-nav__label {
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .page-jump-nav__links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 14px;
+        margin-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.22) transparent;
+      }
+      .page-jump-nav__links::-webkit-scrollbar {
+        height: 5px;
+      }
+      .page-jump-nav__links::-webkit-scrollbar-track {
+        background: transparent;
+        margin: 0 12px;
+      }
+      .page-jump-nav__links::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+      @media (max-width: 767px) {
+        .page-jump-nav__links {
+          justify-content: flex-start;
+          padding-bottom: 18px;
+          margin-bottom: 6px;
+        }
+      }
+      .page-jump-nav__links a {
+        flex-shrink: 0;
+        display: inline-block;
+        padding: 2px 0;
+        font-size: 0.82rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #1a6a8a;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .page-jump-nav__links a + a::before {
+        content: "·";
+        display: inline-block;
+        margin: 0 0.55em;
+        color: #c5c5c5;
+        font-weight: 300;
+        font-size: 1.05em;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+      .page-jump-nav__links a:hover {
+        color: #0077b6;
+        border-bottom-color: rgba(0, 119, 182, 0.35);
+      }
+      .page-jump-nav__links a:focus-visible {
+        outline: 2px solid rgba(0, 119, 182, 0.35);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+      .changdiving-box h2[id],
+      .changdiving-box #book-fun-dives {
+        scroll-margin-top: 1.25rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -634,6 +721,15 @@
 
       <div class="changdiving-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav class="page-jump-nav" aria-label="ในหน้านี้">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#who-can-join">ใครเข้าร่วมได้</a>
+            <a href="#whats-included">สิ่งที่รวม</a>
+            <a href="#what-can-you-discover">ค้นพบ</a>
+            <a href="#dive-packages">ราคาและจอง</a>
+          </div>
+        </nav>
         <hr style="margin: 40px 0" />
         <img
           class="lazy"
@@ -717,7 +813,9 @@
         <hr />
 
         <!-- Requirements -->
-        <h2 class="headline-black">ใครสามารถเข้าร่วมได้บ้าง?</h2>
+        <h2 class="headline-black" id="who-can-join">
+          ใครสามารถเข้าร่วมได้บ้าง?
+        </h2>
         <ul>
           <li>ผู้ถือใบรับรองดำน้ำ Open Water ขึ้นไป</li>
           <li>อายุต่ำสุด 10 ปี (ต้องมีบัตร Junior OW)</li>
@@ -733,7 +831,7 @@
         <hr />
 
         <!-- Inclusions -->
-        <h2 class="headline-green">สิ่งที่รวมแล้ว</h2>
+        <h2 class="headline-green" id="whats-included">สิ่งที่รวมแล้ว</h2>
         <ul>
           <li>ดำน้ำจากเรือแบบมีไกด์ 2 หรือ 3 ไดฟ์</li>
           <li>อุปกรณ์ดำน้ำครบชุด</li>
@@ -809,7 +907,7 @@
 
         <!-- Discovery + Reviews -->
 
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="what-can-you-discover">
           <span class="no-gradient"></span> คุณจะได้ค้นพบอะไรบ้าง?
         </h2>
         <p>
@@ -857,7 +955,7 @@
         <hr />
 
         <!-- ราคาทริปดำน้ำ -->
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="dive-packages">
           <span class="no-gradient">💰</span> แพ็กเกจดำน้ำ –
           วางแผนการผจญภัยของคุณ
         </h2>
@@ -1012,7 +1110,10 @@
         </div>
 
         <!-- ปุ่มจองทางอีเมล -->
-        <div style="text-align: center; margin: 30px 0">
+        <div
+          id="book-fun-dives"
+          style="text-align: center; margin: 30px 0"
+        >
           <a
             href="mailto:info@changdiving.com?subject=คำขอจอง%20–%20Fun%20Dives&body=สวัสดีทีมงานช้างไดร์วิ่ง,%0A%0Aฉันต้องการจองแพ็กเกจฟันไดฟ์.%0A%0A🔹 วันที่ต้องการ (กรุณาระบุวันที่ต้องการดำน้ำทั้งหมด อย่างน้อย 2 ไดฟ์ต่อวัน):%0Aวันที่ 1:%0Aวันที่ 2:%0Aวันที่ 3:%0Aวันที่ 4:%0Aวันที่ 5:%0A%0A🔹 ข้อมูลส่วนตัว:%0Aชื่อ:%0Aวันเกิด:%0Aระดับใบรับรอง:%0Aจำนวนไดฟ์ทั้งหมด:%0Aไดฟ์ล่าสุด:%0Aรูปบัตรรับรอง: (แนบไฟล์)%0A%0A🔹 การติดต่อ:%0Aเบอร์โทร:%0Aอีเมล:%0Aชื่อโรงแรม:%0A%0A🔹 ข้อกำหนดเรื่องอาหาร:%0Aมังสวิรัติ: ใช่/ไม่ใช่%0Aแพ้อาหาร:%0A%0A🔹 ขนาดอุปกรณ์:%0Aเสื้อยืดไซส์:%0Aรองเท้าไซส์:%0A%0A🔹 ข้อมูลการจอง:%0Aแพ็กเกจที่ต้องการ:%0Aอัปเกรดไนทร็อกซ์: ใช่/ไม่ใช่%0Aไดฟ์เพิ่มเติม: ใช่/ไม่ใช่%0Aขึ้นอยู่กับแผนเรือและจุดดำน้ำในวันนั้น — บางจุดไม่สามารถจัดไดฟ์ที่สามได้%0Aใช้อุปกรณ์ของตัวเอง: ใช่/ไม่ใช่ (เฉพาะถัง + ตะกั่ว = ส่วนลด 5%%)%0A%0Aขอบคุณ แล้วเจอกันใต้น้ำ!"
             style="

@@ -560,6 +560,93 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
+    <style>
+      /* In-page jump nav (fun dives) */
+      .page-jump-nav {
+        margin: 0 0 6px;
+        padding: 6px 8px 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .page-jump-nav__label {
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .page-jump-nav__links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 14px;
+        margin-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.22) transparent;
+      }
+      .page-jump-nav__links::-webkit-scrollbar {
+        height: 5px;
+      }
+      .page-jump-nav__links::-webkit-scrollbar-track {
+        background: transparent;
+        margin: 0 12px;
+      }
+      .page-jump-nav__links::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+      @media (max-width: 767px) {
+        .page-jump-nav__links {
+          justify-content: flex-start;
+          padding-bottom: 18px;
+          margin-bottom: 6px;
+        }
+      }
+      .page-jump-nav__links a {
+        flex-shrink: 0;
+        display: inline-block;
+        padding: 2px 0;
+        font-size: 0.82rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #1a6a8a;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .page-jump-nav__links a + a::before {
+        content: "·";
+        display: inline-block;
+        margin: 0 0.55em;
+        color: #c5c5c5;
+        font-weight: 300;
+        font-size: 1.05em;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+      .page-jump-nav__links a:hover {
+        color: #0077b6;
+        border-bottom-color: rgba(0, 119, 182, 0.35);
+      }
+      .page-jump-nav__links a:focus-visible {
+        outline: 2px solid rgba(0, 119, 182, 0.35);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+      .changdiving-box h2[id],
+      .changdiving-box #book-fun-dives {
+        scroll-margin-top: 1.25rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -636,6 +723,15 @@
 
       <div class="changdiving-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav class="page-jump-nav" aria-label="Auf dieser Seite">
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#who-can-join">Wer kann teilnehmen?</a>
+            <a href="#whats-included">Das ist inklusive</a>
+            <a href="#what-can-you-discover">Entdecken</a>
+            <a href="#dive-packages">Preise &amp; buchen</a>
+          </div>
+        </nav>
         <hr style="margin: 40px 0" />
         <img
           class="lazy"
@@ -717,7 +813,7 @@
         <hr />
 
         <!-- Requirements -->
-        <h2 class="headline-black">Wer kann teilnehmen?</h2>
+        <h2 class="headline-black" id="who-can-join">Wer kann teilnehmen?</h2>
         <ul>
           <li>Zertifizierte Open Water Diver oder höher</li>
           <li>Mindestalter: 10 Jahre (Junior OW erforderlich)</li>
@@ -733,7 +829,7 @@
         <hr />
 
         <!-- Inclusions -->
-        <h2 class="headline-green">Das ist inklusive</h2>
+        <h2 class="headline-green" id="whats-included">Das ist inklusive</h2>
         <ul>
           <li>2 oder 3 geführte Bootstauchgänge</li>
           <li>Komplette Tauchausrüstung</li>
@@ -814,7 +910,7 @@
 
         <!-- Discovery + Reviews -->
 
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="what-can-you-discover">
           <span class="no-gradient"></span> Was kannst du entdecken?
         </h2>
         <p>
@@ -861,7 +957,7 @@
         <hr />
 
         <!-- Tauchpakete Preise -->
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="dive-packages">
           <span class="no-gradient">💰</span> Tauchpakete – Plane dein Abenteuer
         </h2>
         <p>
@@ -1017,7 +1113,10 @@
         </div>
 
         <!-- Buchung per E-Mail -->
-        <div style="text-align: center; margin: 30px 0">
+        <div
+          id="book-fun-dives"
+          style="text-align: center; margin: 30px 0"
+        >
           <a
             href="mailto:info@changdiving.com?subject=Buchungsanfrage%20–%20Fun%20Dives&body=Hallo%20Chang%20Diving%20Team,%0A%0AIch%20möchte%20ein%20Fun%20Dive%20Paket%20buchen.%0A%0A🔹 Gewünschte Daten (bitte alle Daten auflisten, an denen du tauchen möchtest, mindestens 2 Tauchgänge pro Tag):%0ADatum 1:%0ADatum 2:%0ADatum 3:%0ADatum 4:%0ADatum 5:%0A%0A🔹 Persönliche Daten:%0AName:%0AGeburtsdatum:%0AZertifizierungslevel:%0AGesamtzahl%20Tauchgänge:%0ALetzter%20Tauchgang:%0AZertifikatsfoto%20(anbei)%0A%0A🔹 Kontakt:%0ATelefon:%0AE-Mail:%0AHotelname:%0A%0A🔹 Essenswünsche:%0AVegetarisch:%20Ja/Nein%0AAllergien:%0A%0A🔹 Ausrüstung:%0AT-Shirt-Größe:%0ASchuhgröße:%0A%0A🔹 Buchung:%0AGewünschtes%20Paket:%0ANitrox-Upgrade:%20Ja/Nein%0AExtra-Tauchgang:%20Ja/Nein%0A(Abh%C3%A4ngig%20vom%20Bootsplan%20und%20Tauchplatz%20am%20jeweiligen%20Tag%20%E2%80%94%20an%20manchen%20Spots%20ist%20ein%20dritter%20Tauchgang%20logistisch%20nicht%20m%C3%B6glich.)%0AEigene%20Ausr%C3%BCstung:%20Ja/Nein%20(Flasche%20+%20Blei%20=5%%20Rabatt)%0A%0ADanke%20und%20bis%20bald%20unter%20Wasser!"
             style="

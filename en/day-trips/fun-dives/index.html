@@ -589,6 +589,94 @@
 
     <!-- JavaScript Preload -->
     <link rel="preload" href="/js/global.js" as="script" />
+    <style>
+      /* In-page jump nav (fun dives) */
+      .page-jump-nav {
+        margin: 0 0 6px;
+        padding: 6px 8px 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      }
+      .page-jump-nav__label {
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .page-jump-nav__links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: baseline;
+        overflow-x: auto;
+        overflow-y: hidden;
+        /* Reserve space so the horizontal scrollbar does not overlap link text */
+        padding-bottom: 14px;
+        margin-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.22) transparent;
+      }
+      .page-jump-nav__links::-webkit-scrollbar {
+        height: 5px;
+      }
+      .page-jump-nav__links::-webkit-scrollbar-track {
+        background: transparent;
+        margin: 0 12px;
+      }
+      .page-jump-nav__links::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+      @media (max-width: 767px) {
+        .page-jump-nav__links {
+          justify-content: flex-start;
+          padding-bottom: 18px;
+          margin-bottom: 6px;
+        }
+      }
+      .page-jump-nav__links a {
+        flex-shrink: 0;
+        display: inline-block;
+        padding: 2px 0;
+        font-size: 0.82rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #1a6a8a;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        transition:
+          color 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .page-jump-nav__links a + a::before {
+        content: "·";
+        display: inline-block;
+        margin: 0 0.55em;
+        color: #c5c5c5;
+        font-weight: 300;
+        font-size: 1.05em;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+      }
+      .page-jump-nav__links a:hover {
+        color: #0077b6;
+        border-bottom-color: rgba(0, 119, 182, 0.35);
+      }
+      .page-jump-nav__links a:focus-visible {
+        outline: 2px solid rgba(0, 119, 182, 0.35);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+      .changdiving-box h2[id],
+      .changdiving-box #book-fun-dives {
+        scroll-margin-top: 1.25rem;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -663,6 +751,15 @@
 
       <div class="changdiving-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav class="page-jump-nav" aria-label="On this page">
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#who-can-join">Who can join?</a>
+            <a href="#whats-included">What's included</a>
+            <a href="#what-can-you-discover">Discover</a>
+            <a href="#dive-packages">Prices &amp; book</a>
+          </div>
+        </nav>
         <hr style="margin: 40px 0" />
         <img
           class="lazy"
@@ -740,7 +837,7 @@
         <hr />
 
         <!-- Requirements -->
-        <h2 class="headline-black">Who can join?</h2>
+        <h2 class="headline-black" id="who-can-join">Who can join?</h2>
         <ul>
           <li>Certified Open Water Divers or higher</li>
           <li>Minimum age: 10 years (Junior OW certification required)</li>
@@ -767,7 +864,7 @@
 
         <!-- Inclusions -->
 
-        <h2 class="headline-green">What's included</h2>
+        <h2 class="headline-green" id="whats-included">What's included</h2>
         <ul>
           <li>2 or 3 guided boat dives</li>
           <li>Full SCUBA equipment</li>
@@ -845,7 +942,7 @@
 
         <!-- Discovery + Reviews -->
 
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="what-can-you-discover">
           <span class="no-gradient"></span> What can you discover?
         </h2>
         <p>
@@ -892,7 +989,7 @@
         <hr />
 
         <!-- Dive Packages Pricing -->
-        <h2 class="headline-green">
+        <h2 class="headline-green" id="dive-packages">
           <span class="no-gradient">💰</span> Dive Packages – Plan Your
           Adventure
         </h2>
@@ -1051,7 +1148,10 @@
         </div>
 
         <!-- CTA Email Button -->
-        <div style="text-align: center; margin: 30px 0">
+        <div
+          id="book-fun-dives"
+          style="text-align: center; margin: 30px 0"
+        >
           <a
             href="mailto:info@changdiving.com?subject=Booking%20Request%20–%20Fun%20Dives&body=Hello%20Chang%20Diving%20Team,%0A%0AI'd%20like%20to%20book%20a%20fun%20dive%20package.%0A%0A🔹 Preferred Dates (please list all dates you want to dive, minimum 2 dives per day):%0ADate 1:%20%0ADate 2:%20%0ADate 3:%20%0ADate 4:%20%0ADate 5:%20%0A%0A🔹 Personal Details:%0AName:%20%0ADate%20of%20Birth:%20%0ACertification%20Level:%20%0ATotal%20Dives:%20%0ALast%20Dive%20Date:%20%0APhoto%20of%20Certification%20Card:%20(attached)%0A%0A🔹 Contact:%0APhone:%20%0AEmail:%20%0AHotel%20Name:%20%0A%0A🔹 Food Preferences:%0AVegetarian:%20Yes/No%0AFood%20Allergies:%20%0A%0A🔹 Equipment Requirements:%0AT-shirt%20Size:%20%0AShoe%20Size:%20%0A%0A🔹 Booking Info:%0ARequested%20Package:%20%0ANitrox%20Upgrade:%20Yes/No%0AExtra%20Dive:%20Yes/No%0ASubject%20to%20the%20boat%20plan%20and%20site%20on%20the%20day%20%E2%80%94%20at%20some%20dive%20sites%20a%20third%20dive%20is%20not%20logistically%20possible.%0AOwn%20Equipment:%20Yes/No%20(if%20yes,%20tank%20+%20weights%20only%20=5%%20discount)%0A%0AThank%20you%20and%20see%20you%20underwater!"
             style="
