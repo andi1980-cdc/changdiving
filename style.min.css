@@ -783,6 +783,19 @@ button:focus {
 .speciality-box .page-jump-nav__label {
   color: #5a6e52;
 }
+.posts-box .page-jump-nav {
+  margin: 0 0 2px;
+  padding: 2px 8px 4px;
+  border-bottom: 1px solid rgba(0, 119, 182, 0.09);
+}
+.posts-box .page-jump-nav__links {
+  display: block;
+  text-align: center;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-bottom: 8px;
+  margin-bottom: 2px;
+}
 .page-jump-nav__label {
   display: block;
   font-size: 0.68rem;
@@ -823,9 +836,16 @@ button:focus {
     padding-bottom: 18px;
     margin-bottom: 6px;
   }
+  .posts-box .page-jump-nav__links {
+    justify-content: unset;
+    padding-bottom: 10px;
+    margin-bottom: 4px;
+  }
 }
 .changdiving-box .page-jump-nav__links a,
 .changdiving-box .page-jump-nav__links a:visited,
+.posts-box .page-jump-nav__links a,
+.posts-box .page-jump-nav__links a:visited,
 .speciality-box .page-jump-nav__links a,
 .speciality-box .page-jump-nav__links a:visited {
   flex-shrink: 0;
@@ -842,6 +862,14 @@ button:focus {
     color 0.15s ease,
     border-color 0.15s ease;
 }
+.posts-box .page-jump-nav__links a,
+.posts-box .page-jump-nav__links a:visited {
+  display: inline;
+  padding: 0 0.04em;
+  font-size: 0.78rem;
+  font-weight: 400;
+  border-bottom-width: 1px;
+}
 .page-jump-nav__links a + a::before {
   content: "·";
   display: inline-block;
@@ -853,7 +881,13 @@ button:focus {
   pointer-events: none;
   user-select: none;
 }
+.posts-box .page-jump-nav__links a + a::before {
+  margin: 0 0.35em;
+  font-size: 0.95em;
+  color: #b8c5cc;
+}
 .changdiving-box .page-jump-nav__links a:hover,
+.posts-box .page-jump-nav__links a:hover,
 .speciality-box .page-jump-nav__links a:hover {
   color: #0077b6;
   border-bottom-color: rgba(0, 119, 182, 0.35);
@@ -861,6 +895,7 @@ button:focus {
   opacity: 1;
 }
 .changdiving-box .page-jump-nav__links a:focus-visible,
+.posts-box .page-jump-nav__links a:focus-visible,
 .speciality-box .page-jump-nav__links a:focus-visible {
   outline: 2px solid rgba(0, 119, 182, 0.35);
   outline-offset: 3px;
@@ -868,6 +903,8 @@ button:focus {
 }
 .changdiving-box h2[id],
 .changdiving-box h3[id],
+.posts-box h2[id],
+.posts-box h3[id],
 .speciality-box h2[id],
 .speciality-box h3[id],
 .changdiving-box #book-fun-dives,
