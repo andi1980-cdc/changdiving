@@ -653,9 +653,20 @@
           <a href="/th/">หน้าแรก</a> > <a href="/th/courses/">คอร์สเรียน</a> >
           <a href="/th/courses/nitrox-blender/">Nitrox Gas Blender</a>
         </nav>
+        <nav class="page-jump-nav" aria-label="ในหน้านี้">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#nb-intro">แนะนำ</a>
+            <a href="#nb-who">ใครเหมาะ</a>
+            <a href="#nb-prerequisites">คุณสมบัติ</a>
+            <a href="#nb-learn">สิ่งที่เรียน</a>
+            <a href="#nb-book">จอง</a>
+            <a href="#blender-calculators">เครื่องคำนวณ</a>
+          </div>
+        </nav>
         <hr />
 
-        <h2>คอร์ส Nitrox Gas Blender เกาะช้าง – การผสมแก๊สระดับมืออาชีพ</h2>
+        <h2 id="nb-intro">คอร์ส Nitrox Gas Blender เกาะช้าง – การผสมแก๊สระดับมืออาชีพ</h2>
 
         <p>
           <strong>คอร์ส Nitrox Gas Blender ที่เกาะช้าง</strong>
@@ -672,7 +683,7 @@
           ตามมาตรฐานสากล.
         </p>
 
-        <h2>ใครเหมาะกับคอร์ส Nitrox Gas Blender?</h2>
+        <h2 id="nb-who">ใครเหมาะกับคอร์ส Nitrox Gas Blender?</h2>
 
         <p>คอร์สนี้เหมาะสำหรับ:</p>
         <ul>
@@ -693,13 +704,13 @@
           ใช้อุปกรณ์ระดับมืออาชีพและขั้นตอนการทำงานจริง.
         </p>
 
-        <h2>คุณสมบัติและข้อกำหนดเบื้องต้น</h2>
+        <h2 id="nb-prerequisites">คุณสมบัติและข้อกำหนดเบื้องต้น</h2>
         <ul>
           <li>อายุขั้นต่ำ: 18 ปี</li>
           <li>สนใจงานศูนย์ดำน้ำ ความปลอดภัย และการจัดการแก๊สอย่างจริงจัง</li>
         </ul>
 
-        <h2>เนื้อหาที่คุณจะได้เรียน</h2>
+        <h2 id="nb-learn">เนื้อหาที่คุณจะได้เรียน</h2>
 
         <p>คอร์ส Nitrox Gas Blender ครอบคลุมทั้งภาคทฤษฎีและภาคปฏิบัติ เช่น:</p>
 
@@ -734,7 +745,7 @@
           >.
         </p>
 
-        <h2>การฝึกปฏิบัติ & เงื่อนไขการออกใบรับรอง</h2>
+        <h2 id="nb-practical">การฝึกปฏิบัติ & เงื่อนไขการออกใบรับรอง</h2>
 
         <p>ระหว่างคอร์สคุณจะ:</p>
 
@@ -757,7 +768,7 @@
           โดยไม่ต้องมีครูผู้สอนคอยกำกับใกล้ชิด.
         </p>
 
-        <h2>ทำไมต้องเรียนคอร์สนี้กับ ช้างไดร์วิ่ง เซ็นเตอร์?</h2>
+        <h2 id="nb-why-chang">ทำไมต้องเรียนคอร์สนี้กับ ช้างไดร์วิ่ง เซ็นเตอร์?</h2>
 
         <p>
           ที่ ช้างไดร์วิ่ง เซ็นเตอร์ คอร์สนี้สอนโดย
@@ -808,7 +819,7 @@
 
         <hr />
 
-        <h2>รูปแบบคอร์ส & ข้อกำหนด</h2>
+        <h2 id="nb-format">รูปแบบคอร์ส & ข้อกำหนด</h2>
         <ul>
           <li><strong>องค์กร:</strong> TDI หรือ PADI Nitrox Gas Blender</li>
           <li>
@@ -860,7 +871,7 @@
           />
         </div>
         <hr />
-        <h2 class="headline-green">
+        <h2 id="nb-discover" class="headline-green">
           <span class="no-gradient"></span> หลังจบคอร์ส Gas Blender
           คุณจะได้ค้นพบอะไรบ้าง?
         </h2>
@@ -908,7 +919,7 @@
         </div>
         <hr />
 
-        <h3 style="margin-top: 0">
+        <h3 id="nb-book" style="margin-top: 0">
           พร้อมจะผสมแก๊สไนตรอกซ์อย่างมืออาชีพแล้วหรือยัง?
         </h3>
         <p>
@@ -1026,6 +1037,624 @@
             ☝️ กลับหน้าก่อนหน้า
           </button>
         </div>
+
+        <hr style="margin: 40px 0 24px 0; border: none; border-top: 1px solid #ccc" />
+        <h2 id="blender-calculators">เครื่องคำนวณการผสมแบบโต้ตอบ</h2>
+
+        <p>
+          เครื่องมือนี้อิงสมมติฐานในตำรา: แก๊สเหมาะสมกับแบบจำลอง แก๊สที่ใช้เติมคือ<strong>อากาศ 21% O₂</strong>
+          ความดันในถังเป็น<strong>bar แอบโซลูต</strong> (บรรยากาศ + เกจ—ให้สอดคล้องกับที่เรียน)
+          โหมด Continuous Flow สมมติว่าแก๊สที่ไหลเข้าผสมกับแก๊สในถังอย่างสม่ำเสมอขณะเติม
+        </p>
+
+        <div
+          style="
+            background: #fff3cd;
+            border-left: 5px solid #f39c12;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+          "
+        >
+          <p style="margin: 0 0 10px 0; color: #856404">
+            <strong>⚠️ สำคัญ:</strong> สำหรับ<strong>การศึกษาและการฝึกในห้องเรียนเท่านั้น</strong>
+            ไม่มีการรับประกันผลลัพธ์ การเติมแก๊สจริงต้องมีผู้ผสมที่ได้รับการรับรอง
+            อุปกรณ์ที่สะอาดต่อออกซิเจน <strong>คอมเพรสเซอร์ที่ใช้กับออกซิเจนได้อย่างปลอดภัย</strong>
+            และอากาศหายใจที่เหมาะกับไนตรอกซ์/O₂ ขั้นตอนที่ถูกต้อง และ<strong>การวิเคราะห์ด้วยเครื่องวัด O₂</strong>
+            ปฏิบัติตามคู่มือขององค์กรและกฎหมายท้องถิ่น—ลำดับการเติมอาจแตกต่างกันไป
+          </p>
+          <p style="margin: 0; color: #856404; font-size: 14px">
+            <strong>ความเสี่ยง:</strong> การผสมไนตรอกซ์และออกซิเจนมี<strong>ความเสี่ยงไฟไหม้และระเบิด</strong>
+            หากทำผิดอาจ<strong>คุกคามชีวิตและทรัพย์สิน</strong> ผสมไนตรอกซ์ได้เมื่อเป็น<strong>Gas Blender ที่ได้รับการรับรอง</strong>
+            (หลังจบคอร์สนี้คุณ<strong>สามารถผสมได้อย่างอิสระ</strong>) ทุกครั้งที่เติมต้อง<strong>ใช้มาตรฐานความปลอดภัย</strong>
+            ของอุตสาหกรรมดำน้ำและ<strong>เคารพกฎหมายท้องถิ่น</strong>
+          </p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(0, 119, 182, 0.05),
+              rgba(207, 216, 220, 0.05)
+            );
+            border: 2px solid #0077b6;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div style="margin-bottom: 28px">
+            <h3 style="color: #0077b6; margin-bottom: 8px">
+              การผสมแบบ Partial pressure (O₂ ก่อน แล้วจึงอากาศ)
+            </h3>
+            <p
+              style="
+                margin: 0 0 12px 0;
+                font-size: 13px;
+                color: #856404;
+                padding: 10px 12px;
+                background: #fff8e6;
+                border-radius: 6px;
+                border-left: 4px solid #f39c12;
+              "
+            >
+              <strong>หมายเหตุ:</strong> อุปกรณ์ทุกชิ้นที่ใช้ต้อง<strong>สะอาดต่อออกซิเจน (oxygen-clean)</strong>
+              <strong>อากาศ</strong>ที่ใช้เติมต้อง<strong>เข้ากันได้กับออกซิเจน (oxygen-compatible)</strong>
+            </p>
+            <p style="margin: 0 0 12px 0; font-size: 14px; color: #555">
+              ถังเปล่า: ความดันที่ต้องถึงด้วย<strong>O₂ บริสุทธิ์</strong>ก่อนเติมอากาศจนถึงความดันสุดท้าย
+              ถังมียอดแก๊ส: ความดันหลังขั้น O₂ ก่อนเติมอากาศ
+            </p>
+            <label
+              style="display: block; margin-bottom: 8px; font-weight: 500"
+              >สถานะถัง:</label
+            >
+            <select
+              id="nb-pp-mode"
+              style="
+                max-width: 280px;
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #ddd;
+                border-radius: 6px;
+                font-size: 16px;
+                margin-bottom: 14px;
+              "
+              onchange="nbCalcPartialPressure()"
+            >
+              <option value="empty">ว่าง (0 bar — มองข้ามได้)</option>
+              <option value="residual">มียอดแก๊สในถัง</option>
+            </select>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+                margin-bottom: 12px;
+              "
+            >
+              <div id="nb-pp-wrap-p0" style="display: none">
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความดันปัจจุบัน (bar แอบโซลูต):</label
+                >
+                <input
+                  type="number"
+                  id="nb-pp-p0"
+                  min="0"
+                  step="0.1"
+                  placeholder="e.g. 50"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcPartialPressure()"
+                />
+              </div>
+              <div id="nb-pp-wrap-f0" style="display: none">
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ ปัจจุบัน (%):</label
+                >
+                <input
+                  type="number"
+                  id="nb-pp-f0"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  placeholder="e.g. 28"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcPartialPressure()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความดันเติมสุดท้าย (bar แอบโซลูต):</label
+                >
+                <input
+                  type="number"
+                  id="nb-pp-pend"
+                  min="0"
+                  step="0.1"
+                  placeholder="e.g. 200"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcPartialPressure()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >เป้าหมาย O₂ (%):</label
+                >
+                <input
+                  type="number"
+                  id="nb-pp-fend"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  placeholder="e.g. 32"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcPartialPressure()"
+                />
+              </div>
+            </div>
+            <div
+              id="nb-pp-result"
+              style="
+                padding: 14px;
+                background: #fff;
+                border-radius: 8px;
+                font-size: 15px;
+                color: #0077b6;
+                min-height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+              "
+            >
+              กรอกค่าเพื่อคำนวณขั้น O₂
+            </div>
+          </div>
+
+          <div style="margin-bottom: 28px">
+            <h3 style="color: #0077b6; margin-bottom: 12px">
+              การผสมแบบ Continuous flow (แก๊สเข้า)
+            </h3>
+            <p style="margin: 0 0 12px 0; font-size: 14px; color: #555">
+              สัดส่วน<strong>O₂ ในแก๊สเติมแบบต่อเนื่อง</strong>ที่ต้องการ เพื่อให้หลังเติมจากสถานะเริ่มถึงความดันสุดท้าย
+              แก๊สในถังตรงกับเป้าหมาย (แบบจำลองการผสมแบบง่าย)
+            </p>
+            <p
+              style="
+                margin: 0 0 14px 0;
+                font-size: 14px;
+                color: #555;
+                padding: 12px 14px;
+                background: rgba(0, 119, 182, 0.08);
+                border-radius: 8px;
+                border-left: 4px solid #0077b6;
+              "
+            >
+              <strong>หมายเหตุจากการใช้งานจริง:</strong> ระบบ Continuous Flow มักต้องตั้ง<strong>ค่า O₂ สูงกว่า</strong>
+              ตัวเลขทฤษฎีเล็กน้อย เนื่องจากท่อ ระยะผสม อัตราการเติม และจุดวัด
+              ที่สถานีของเรา เช่น การได้<strong>EAN32</strong> มักต้องตั้งประมาณ<strong>33.5% O₂</strong>
+              ที่เครื่องผสม—ไม่ใช่เพราะสูตรผิด แต่เพราะ<strong>ระบบติดตั้งทำงานแบบนั้น</strong>
+              <strong>วิเคราะห์ทุกถัง</strong>และปรับขั้นตอนให้เข้ากับ<strong>ระบบของคุณ</strong>
+            </p>
+            <label
+              style="display: block; margin-bottom: 8px; font-weight: 500"
+              >สถานะถัง:</label
+            >
+            <select
+              id="nb-cf-mode"
+              style="
+                max-width: 280px;
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #ddd;
+                border-radius: 6px;
+                font-size: 16px;
+                margin-bottom: 14px;
+              "
+              onchange="nbCalcContinuousFlow()"
+            >
+              <option value="empty">ว่าง (0 bar — มองข้ามได้)</option>
+              <option value="residual">มียอดแก๊สในถัง</option>
+            </select>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+                margin-bottom: 12px;
+              "
+            >
+              <div id="nb-cf-wrap-p0" style="display: none">
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความดันปัจจุบัน (bar แอบโซลูต):</label
+                >
+                <input
+                  type="number"
+                  id="nb-cf-p0"
+                  min="0"
+                  step="0.1"
+                  placeholder="e.g. 50"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcContinuousFlow()"
+                />
+              </div>
+              <div id="nb-cf-wrap-f0" style="display: none">
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ ปัจจุบัน (%):</label
+                >
+                <input
+                  type="number"
+                  id="nb-cf-f0"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  placeholder="e.g. 28"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcContinuousFlow()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >ความดันเติมสุดท้าย (bar แอบโซลูต):</label
+                >
+                <input
+                  type="number"
+                  id="nb-cf-pend"
+                  min="0"
+                  step="0.1"
+                  placeholder="e.g. 200"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcContinuousFlow()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >เป้าหมาย O₂ (%):</label
+                >
+                <input
+                  type="number"
+                  id="nb-cf-fend"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  placeholder="e.g. 32"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcContinuousFlow()"
+                />
+              </div>
+            </div>
+            <div
+              id="nb-cf-result"
+              style="
+                padding: 14px;
+                background: #fff;
+                border-radius: 8px;
+                font-size: 15px;
+                color: #0077b6;
+                min-height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+              "
+            >
+              กรอกค่าเพื่อหา O₂% ที่ต้องใช้ที่จุดเข้า
+            </div>
+          </div>
+
+          <div>
+            <h3 style="color: #0077b6; margin-bottom: 12px">
+              MOD (ความลึกใช้งานสูงสุด)
+            </h3>
+            <p style="margin: 0 0 12px 0; font-size: 14px; color: #555">
+              ความลึกที่ความดันรอบตัวถึง<strong>แรงดันบริสุทธิ์ของ O₂ สูงสุด</strong>ที่คุณกำหนด
+              (น้ำจืด / ประมาณเมตริกทั่วไป: 1 bar ต่อ 10 m)
+            </p>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+                gap: 12px;
+                margin-bottom: 12px;
+              "
+            >
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >O₂ ในมิกซ์ (%):</label
+                >
+                <input
+                  type="number"
+                  id="nb-mod-o2"
+                  min="1"
+                  max="100"
+                  step="0.1"
+                  placeholder="e.g. 32"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcMOD()"
+                />
+              </div>
+              <div>
+                <label
+                  style="display: block; margin-bottom: 5px; font-weight: 500"
+                  >PPO₂ สูงสุด (bar):</label
+                >
+                <input
+                  type="number"
+                  id="nb-mod-ppo2"
+                  value="1.4"
+                  min="0.16"
+                  max="1.6"
+                  step="0.05"
+                  placeholder="e.g. 1.4"
+                  style="
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 6px;
+                    font-size: 16px;
+                  "
+                  oninput="nbCalcMOD()"
+                />
+              </div>
+            </div>
+            <div
+              id="nb-mod-result"
+              style="
+                padding: 14px;
+                background: #fff;
+                border-radius: 8px;
+                font-size: 15px;
+                color: #0077b6;
+                min-height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+              "
+            >
+              กรอก O₂% และ PPO₂ สูงสุดสำหรับ MOD
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function nbShowPPResidual(show) {
+            const d = show ? "block" : "none";
+            document.getElementById("nb-pp-wrap-p0").style.display = d;
+            document.getElementById("nb-pp-wrap-f0").style.display = d;
+          }
+
+          function nbShowCFResidual(show) {
+            const d = show ? "block" : "none";
+            document.getElementById("nb-cf-wrap-p0").style.display = d;
+            document.getElementById("nb-cf-wrap-f0").style.display = d;
+          }
+
+          function nbCalcPartialPressure() {
+            const mode = document.getElementById("nb-pp-mode").value;
+            const pend = parseFloat(document.getElementById("nb-pp-pend").value);
+            const fend = parseFloat(document.getElementById("nb-pp-fend").value);
+            const el = document.getElementById("nb-pp-result");
+            nbShowPPResidual(mode === "residual");
+
+            if (
+              !Number.isFinite(pend) ||
+              pend <= 0 ||
+              !Number.isFinite(fend) ||
+              fend < 0 ||
+              fend > 100
+            ) {
+              el.textContent = "กรอกความดันสุดท้ายและเป้าหมาย O₂% ให้ถูกต้อง";
+              return;
+            }
+            const fendD = fend / 100;
+            if (fendD < 0.21) {
+              el.innerHTML =
+                "<span style='color:#c0392b'>เป้าหมายต่ำกว่า 21% O₂ ทำด้วย O₂ + อากาศอย่างเดียวไม่ได้ (อากาศมี 21% O₂)</span>";
+              return;
+            }
+
+            if (mode === "empty") {
+              const pO2 = (pend * (fendD - 0.21)) / 0.79;
+              if (pO2 < 0 || pO2 > pend) {
+                el.innerHTML =
+                  "<span style='color:#c0392b'>ตรวจสอบค่าที่กรอก — ความดันขั้น O₂ อยู่นอกช่วงที่ใช้ได้</span>";
+                return;
+              }
+              el.innerHTML =
+                "เติม<strong>O₂ บริสุทธิ์</strong>ถึง <strong>" +
+                pO2.toFixed(1) +
+                " bar abs</strong> แล้วเติม<strong>อากาศ</strong>ถึง <strong>" +
+                pend.toFixed(1) +
+                " bar abs</strong> → ~<strong>" +
+                fend.toFixed(1) +
+                "% O₂</strong>.";
+              return;
+            }
+
+            const p0 = parseFloat(document.getElementById("nb-pp-p0").value);
+            const f0 = parseFloat(document.getElementById("nb-pp-f0").value);
+            if (
+              !Number.isFinite(p0) ||
+              p0 <= 0 ||
+              !Number.isFinite(f0) ||
+              f0 < 0 ||
+              f0 > 100
+            ) {
+              el.textContent =
+                "กรอกความดันถังปัจจุบัน (bar แอบโซลูต) และ O₂% ปัจจุบัน";
+              return;
+            }
+            const f0D = f0 / 100;
+            const p1 = (pend * (fendD - 0.21) - p0 * (f0D - 1)) / 0.79;
+            if (p1 < p0 - 1e-6) {
+              el.innerHTML =
+                "<span style='color:#c0392b'>O₂ แล้วอากาศ: อาจต้องลดความดอก่อน (เช่น ระบาย) หรือใช้ขั้นตอนอื่น — ขั้น O₂ จะต่ำกว่าความดันปัจจุบัน</span>";
+              return;
+            }
+            if (p1 > pend + 1e-6) {
+              el.innerHTML =
+                "<span style='color:#c0392b'>ไม่สอดคล้อง: ขั้น O₂ เกินความดันสุดท้าย ตรวจสอบความดันและมิกซ์</span>";
+              return;
+            }
+            const delta = p1 - p0;
+            el.innerHTML =
+              "เติม<strong>O₂ บริสุทธิ์</strong>จาก <strong>" +
+              p0.toFixed(1) +
+              " → " +
+              p1.toFixed(1) +
+              " bar abs</strong> (+" +
+              delta.toFixed(1) +
+              " bar O₂) แล้วเติม<strong>อากาศ</strong>ถึง <strong>" +
+              pend.toFixed(1) +
+              " bar abs</strong> → ~<strong>" +
+              fend.toFixed(1) +
+              "% O₂</strong>.";
+          }
+
+          function nbCalcContinuousFlow() {
+            const mode = document.getElementById("nb-cf-mode").value;
+            const pend = parseFloat(document.getElementById("nb-cf-pend").value);
+            const fend = parseFloat(document.getElementById("nb-cf-fend").value);
+            const el = document.getElementById("nb-cf-result");
+            nbShowCFResidual(mode === "residual");
+
+            if (
+              !Number.isFinite(pend) ||
+              pend <= 0 ||
+              !Number.isFinite(fend) ||
+              fend < 0 ||
+              fend > 100
+            ) {
+              el.textContent = "กรอกความดันสุดท้ายและเป้าหมาย O₂% ให้ถูกต้อง";
+              return;
+            }
+            const fendD = fend / 100;
+
+            if (mode === "empty") {
+              el.innerHTML =
+                "ตั้งแก๊สเข้าต่อเนื่องที่ <strong>" +
+                fend.toFixed(1) +
+                "% O₂</strong> (เท่าเป้าหมาย) สำหรับแบบจำลองถังเปล่า";
+              return;
+            }
+
+            const p0 = parseFloat(document.getElementById("nb-cf-p0").value);
+            const f0 = parseFloat(document.getElementById("nb-cf-f0").value);
+            if (!Number.isFinite(p0) || p0 <= 0 || p0 >= pend) {
+              el.textContent =
+                "ความดันปัจจุบันต้องมากกว่า 0 และน้อยกว่าความดันสุดท้าย";
+              return;
+            }
+            if (!Number.isFinite(f0) || f0 < 0 || f0 > 100) {
+              el.textContent = "กรอก O₂% ในถังปัจจุบัน";
+              return;
+            }
+            const f0D = f0 / 100;
+            const denom = pend - p0;
+            const fin = (pend * fendD - p0 * f0D) / denom;
+            if (fin < 0 || fin > 1) {
+              el.innerHTML =
+                "<span style='color:#c0392b'>ไม่มี O₂% ที่จุดเข้า (0–100%) ที่ทำชุดค่านี้ได้ — ตรวจสอบความดันและมิกซ์</span>";
+              return;
+            }
+            el.innerHTML =
+              "ตั้งมิกซ์เข้าประมาณ <strong>" +
+              (fin * 100).toFixed(2) +
+              "% O₂</strong> ขณะเติมจาก <strong>" +
+              p0.toFixed(1) +
+              " → " +
+              pend.toFixed(1) +
+              " bar abs</strong> → ~<strong>" +
+              fend.toFixed(1) +
+              "% O₂</strong> ในถัง";
+          }
+
+          function nbCalcMOD() {
+            const o2 = parseFloat(document.getElementById("nb-mod-o2").value);
+            const ppo2 = parseFloat(document.getElementById("nb-mod-ppo2").value);
+            const el = document.getElementById("nb-mod-result");
+            if (!Number.isFinite(o2) || o2 <= 0 || !Number.isFinite(ppo2) || ppo2 <= 0) {
+              el.textContent = "กรอก O₂% และ PPO₂ สูงสุด";
+              return;
+            }
+            const mod = (ppo2 / (o2 / 100) - 1) * 10;
+            el.innerHTML =
+              "MOD ≈ <strong>" +
+              mod.toFixed(1) +
+              " m</strong> (ความลึกสูงสุดที่ <strong>" +
+              ppo2.toFixed(2) +
+              " bar</strong> PPO₂ กับ <strong>" +
+              o2.toFixed(1) +
+              "% O₂</strong>).";
+          }
+        </script>
+
       </div>
     </main>
 
