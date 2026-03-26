@@ -391,8 +391,8 @@ a[href^="/"] {
 .tek-box h3 {
   background: linear-gradient(135deg, #404040 0%, #808080 50%, #404040 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
   font-weight: 700;
@@ -1177,6 +1177,7 @@ button:focus,
   margin-bottom: 40px;
   background: linear-gradient(to right, #0077b6, #c0c0c0);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
