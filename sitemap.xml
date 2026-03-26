@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/courses/advanced-courses/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/courses/advanced/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/courses/deep-wreck-nitrox/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -140,7 +140,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/courses/open-advanced-package/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -152,7 +152,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/courses/open-water-diver/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -230,7 +230,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/day-trips/fun-dives/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -248,7 +248,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/day-trips/scuba-review/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -260,7 +260,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/day-trips/try-dive/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -272,31 +272,31 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/blueberry-hill/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/dive-site-map-koh-chang/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/hin-luk-bat/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/hin-pray-nam/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/hin-raab-north/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -314,19 +314,19 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/hin-sam-sao/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/htms-chang-wreck/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/dive-sites/koh-rang-pinnacle/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -458,7 +458,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -602,13 +602,19 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/posts/scuba-knowledge/gas-consumption/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/de/posts/scuba-knowledge/ndl-no-decompression-limits/</loc>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/posts/scuba-knowledge/nitrox-info/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -632,7 +638,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/de/posts/scuba-knowledge/theory-review/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -854,7 +860,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/courses/advanced/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -878,7 +884,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/courses/deep-wreck-nitrox/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -944,7 +950,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/courses/open-advanced-package/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -956,7 +962,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/courses/open-water-diver/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1034,7 +1040,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/day-trips/fun-dives/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1052,7 +1058,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/day-trips/scuba-review/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1064,7 +1070,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/day-trips/try-dive/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1076,31 +1082,31 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/blueberry-hill/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/dive-site-map-koh-chang/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/hin-luk-bat/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/hin-pray-nam/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/hin-raab-north/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1118,19 +1124,19 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/hin-sam-sao/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/htms-chang-wreck/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/dive-sites/koh-rang-pinnacle/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1262,7 +1268,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1406,13 +1412,19 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/posts/scuba-knowledge/gas-consumption/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/en/posts/scuba-knowledge/ndl-no-decompression-limits/</loc>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/posts/scuba-knowledge/nitrox-info/</loc>
-    <lastmod>2026-03-13</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1436,7 +1448,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/en/posts/scuba-knowledge/theory-review/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1640,7 +1652,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/courses/advanced-courses/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1658,7 +1670,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/courses/advanced/</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1682,7 +1694,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/courses/deep-wreck-nitrox/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1748,7 +1760,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/courses/open-advanced-package/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1760,7 +1772,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/courses/open-water-diver/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1838,7 +1850,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/day-trips/fun-dives/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1856,7 +1868,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/day-trips/scuba-review/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1868,7 +1880,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/day-trips/try-dive/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1880,31 +1892,31 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/blueberry-hill/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/dive-site-map-koh-chang/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/hin-luk-bat/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/hin-pray-nam/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/hin-raab-north/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1922,19 +1934,19 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/hin-sam-sao/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/htms-chang-wreck/</loc>
-    <lastmod>2026-03-16</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/dive-sites/koh-rang-pinnacle/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2066,7 +2078,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2210,13 +2222,19 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/posts/scuba-knowledge/gas-consumption/</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/th/posts/scuba-knowledge/ndl-no-decompression-limits/</loc>
+    <lastmod>2026-03-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/posts/scuba-knowledge/nitrox-info/</loc>
-    <lastmod>2026-02-10</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2240,7 +2258,7 @@
   </url>
   <url>
     <loc>https://changdiving.com/th/posts/scuba-knowledge/theory-review/</loc>
-    <lastmod>2026-02-16</lastmod>
+    <lastmod>2026-03-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

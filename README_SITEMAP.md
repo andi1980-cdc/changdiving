@@ -82,7 +82,7 @@ Scannt automatisch: `en/`, `de/`, `th/`
 🗺️  SITEMAP GENERATOR WITH GIT DATES
 ======================================================================
 🔍 Finding HTML files...
-   Found 394 HTML files
+   Found 406 HTML files
 
 📅 Getting Git modification dates...
    ✓ /en/courses/deep-diver/                            2026-01-27
@@ -90,7 +90,7 @@ Scannt automatisch: `en/`, `de/`, `th/`
    ✓ /en/courses/advanced/                              2026-01-26
    ✓ /en/courses/open-water-diver/                      2026-01-01
 
-✅ Generated sitemap.xml with 394 URLs
+✅ Generated sitemap.xml with 406 URLs
 ```
 
 ## Vorteile
