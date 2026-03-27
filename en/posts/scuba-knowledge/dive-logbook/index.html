@@ -404,7 +404,7 @@
             "name": "What should be recorded in a dive logbook?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You should log the date, location, depth, time, air consumption, dive buddy, dive site, marine life seen, and instructor signature."
+              "text": "You should log the date, location, depth, time, air consumption, optional SAC rate, lead weight in kg, optional gear notes (e.g. BCD size, wetsuit type and thickness), dive buddy, dive site, marine life seen, and instructor signature."
             }
           },
           {
@@ -425,7 +425,7 @@
           }
         ],
         "datePublished": "2025-06-15T00:00:00+07:00",
-        "dateModified": "2025-06-15T00:00:00+07:00",
+        "dateModified": "2026-03-26T12:00:00+07:00",
         "description": "Learn why a dive logbook matters, what to include, and how it helps with dive certifications and personal growth – from entry-level to pro.",
         "author": {
           "@type": "Organization",
@@ -603,6 +603,23 @@
               >How to calculate air consumption?</a
             >)
           </li>
+          <li>
+            <strong>SAC rate (optional):</strong> Surface air consumption in
+            L/min — worth logging to spot habits and track progress. You can
+            <a href="#dl-sac">estimate it from your logbook numbers</a> on this
+            page.
+          </li>
+          <li>
+            <strong>Weighting (lead):</strong> How much lead you used in
+            <strong>kg</strong> — makes it easier to dial in the right weight for
+            similar conditions, exposure suits, and tanks.
+          </li>
+          <li>
+            <strong>Equipment notes (optional):</strong> e.g. <strong>BCD
+            size</strong>, <strong>wetsuit</strong> shorty vs. long,
+            <strong>thickness</strong> (mm), boots — a useful extra when you rent
+            gear or travel and want to remember what fit and buoyancy felt right.
+          </li>
           <li><strong>Buddy and Instructor:</strong> Who did you dive with?</li>
           <li>
             <strong>Highlights:</strong>
@@ -625,6 +642,214 @@
             training dives.
           </li>
         </ul>
+
+        <hr />
+
+        <h2 id="dl-sac">SAC rate from your logbook numbers</h2>
+        <p>
+          Your logbook usually lists <strong>gas used</strong> (start/end
+          pressure), <strong>time</strong>, and often <strong>max depth</strong>.
+          To turn that into a <strong>SAC (surface air consumption)</strong> in
+          L/min, the formula uses <strong>average depth</strong> — not everyone
+          writes that down. If you only know max depth, you can estimate average
+          depth as <strong>about 60% of max depth</strong> for typical Koh Chang
+          reef dives (multi-level profiles). If your computer shows average
+          depth, enter it instead for a more accurate result.
+        </p>
+        <p>
+          <strong>Why calculate and log it?</strong> Working out your SAC and
+          writing it in your logbook (even just now and then) helps you notice
+          patterns—how depth, currents, workload, or a stressful day affect
+          your breathing—and see real <strong>progress</strong> when your
+          numbers improve over time.
+        </p>
+
+        <div
+          style="
+            background: #fff3cd;
+            border-left: 5px solid #f39c12;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 8px;
+          "
+        >
+          <p style="margin: 0; color: #856404; font-size: 14px">
+            <strong>⚠️ Note:</strong> This tool is for
+            <strong>learning and logbook math</strong> only. The 60% rule is a
+            <strong>rough estimate</strong> — actual average depth depends on
+            your profile. Always follow your dive computer and training.
+          </p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              135deg,
+              rgba(0, 119, 182, 0.05),
+              rgba(207, 216, 220, 0.05)
+            );
+            border: 2px solid #0077b6;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+          "
+        >
+          <h3 style="color: #0077b6; margin: 0 0 12px 0">
+            📊 SAC rate calculator (logbook)
+          </h3>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+              gap: 12px;
+              margin-bottom: 12px;
+            "
+          >
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Gas used (bar)</label
+              >
+              <input
+                type="number"
+                id="dlSacBar"
+                placeholder="e.g. 100"
+                min="0"
+                step="any"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                "
+                oninput="calculateDiveLogSAC()"
+              />
+            </div>
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Time (minutes)</label
+              >
+              <input
+                type="number"
+                id="dlSacTime"
+                placeholder="e.g. 45"
+                min="0"
+                step="any"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                "
+                oninput="calculateDiveLogSAC()"
+              />
+            </div>
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Tank size (L)</label
+              >
+              <input
+                type="number"
+                id="dlSacTank"
+                value="12"
+                placeholder="e.g. 12"
+                min="0"
+                step="any"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                "
+                oninput="calculateDiveLogSAC()"
+              />
+            </div>
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Max depth (m)</label
+              >
+              <input
+                type="number"
+                id="dlSacMaxDepth"
+                placeholder="e.g. 18"
+                min="0"
+                step="any"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                "
+                oninput="calculateDiveLogSAC()"
+              />
+            </div>
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Avg depth (m), optional</label
+              >
+              <input
+                type="number"
+                id="dlSacAvgDepth"
+                placeholder="from computer"
+                min="0"
+                step="any"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                "
+                oninput="calculateDiveLogSAC()"
+              />
+            </div>
+          </div>
+          <p style="margin: 0 0 12px 0; font-size: 13px; color: #555">
+            If <strong>average depth</strong> is empty, we use
+            <strong>60% × max depth</strong> (Koh Chang-style estimate). If you
+            enter average depth, we use that value.
+          </p>
+          <div
+            id="dlSacResult"
+            style="
+              padding: 14px;
+              background: #fff;
+              border-radius: 8px;
+              font-size: 17px;
+              font-weight: bold;
+              color: #0077b6;
+              text-align: center;
+              min-height: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+            "
+          >
+            Enter gas used, time, tank size, and depth.
+          </div>
+        </div>
+
+        <p>
+          Full gas planning tools (MOD, best mix, etc.):
+          <a href="/en/posts/scuba-knowledge/gas-consumption/"
+            >Gas consumption &amp; SAC on Koh Chang</a
+          >.
+        </p>
 
         <hr />
 
@@ -759,6 +984,50 @@
         </div>
       </div>
     </main>
+    <script>
+      function calculateDiveLogSAC() {
+        const bar = parseFloat(document.getElementById("dlSacBar").value);
+        const time = parseFloat(document.getElementById("dlSacTime").value);
+        const tank = parseFloat(document.getElementById("dlSacTank").value);
+        const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
+        const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
+        const result = document.getElementById("dlSacResult");
+
+        let depthM;
+        let depthNote;
+        if (!isNaN(avgIn) && avgIn > 0) {
+          depthM = avgIn;
+          depthNote = `Average depth <strong>${avgIn.toFixed(1)} m</strong> (from your entry).`;
+        } else if (!isNaN(maxD) && maxD > 0) {
+          depthM = maxD * 0.6;
+          depthNote = `Average depth estimated as <strong>60% of max</strong> → ${depthM.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
+        } else {
+          result.innerHTML =
+            "<span>Enter <strong>max depth</strong> (and optionally <strong>average depth</strong> from your computer).</span>";
+          return;
+        }
+
+        if (!bar || bar <= 0 || !time || time <= 0 || !tank || tank <= 0) {
+          result.innerHTML =
+            "<span>Enter <strong>gas used (bar)</strong>, <strong>time</strong>, and <strong>tank size</strong>.</span>";
+          return;
+        }
+
+        const ata = depthM / 10 + 1;
+        const liters = bar * tank;
+        const sac = liters / (time * ata);
+
+        let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>Gas: ${liters.toFixed(0)} L over ${time} min at ${ata.toFixed(2)} ATA</small>`;
+        if (sac > 25) {
+          html +=
+            '<br><small style="color: #f39c12; font-weight: normal">⚠️ High SAC — work on relaxed breathing</small>';
+        } else if (sac < 15) {
+          html +=
+            '<br><small style="color: #27ae60; font-weight: normal">🌟 Very efficient SAC</small>';
+        }
+        result.innerHTML = html;
+      }
+    </script>
     <!-- Cookie Consent Banner EN -->
     <link
       rel="preload"
