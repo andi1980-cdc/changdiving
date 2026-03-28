@@ -775,6 +775,226 @@
           </table>
         </div>
 
+        <div
+          id="deco-slate-row-calc"
+          style="
+            margin: 2em 0;
+            padding: 24px;
+            background: linear-gradient(
+              135deg,
+              rgba(0, 119, 182, 0.06),
+              rgba(192, 192, 192, 0.12)
+            );
+            border: 1px solid #0077b6;
+            border-radius: 10px;
+            font-family: var(--font-sans), 'Roboto', sans-serif;
+          "
+        >
+          <h3 style="margin: 0 0 8px 0; color: #004d80; font-size: 1.15rem">
+            แผนการดำน้ำ (slate) — คำนวณหนึ่งช่วง
+          </h3>
+          <p style="margin: 0 0 1em 0; color: #333; font-size: 15px; line-height: 1.55">
+            กรอก <strong>หนึ่ง</strong> ช่วง (ก้นทะเลหรือดีคอมสต็อป) คอลัมน์เดียวกับตารางด้านบน
+            เพื่อหา <strong>แรงดัน (ata)</strong> <strong>ปริมาณแก๊ส</strong>
+            <strong>PO₂</strong> และ <strong>CNS</strong> โดยประมาณ (แบบ NOAA) สำหรับช่วงนั้น
+            ใช้ซ้ำทีละบรรทัดเมื่อคัดลอกไปใส่แผนลงมือ — เช่น สามสถานการณ์:
+            <em>ตามแผน</em> <em>ลึกเกิน 5 ม. โดยไม่ตั้งใจ</em> และ
+            <em>แก๊สดีคอมสูญหาย</em> (คำนวณใหม่เมื่อความลึก เวลา หรือส่วนผสม            เปลี่ยน)
+          </p>
+          <p style="margin: 0 0 1em 0; font-size: 15px">
+            <a
+              href="/docs/dive_planning_slate.pdf"
+              download="dive_planning_slate.pdf"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35em;
+                padding: 10px 14px;
+                background: #0077b6;
+                color: #fff !important;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 119, 182, 0.35);
+              "
+              >⬇ ดาวน์โหลดแผน slate (PDF)</a
+            >
+            <span style="color: #555; margin-left: 0.5em"
+              >— แบบฟอร์มเปล่าสำหรับกรอกมือหรือพิมพ์</span
+            >
+          </p>
+          <p
+            style="
+              margin: 0 0 1em 0;
+              padding: 10px 12px;
+              background: #fff8e6;
+              border-left: 4px solid #f39c12;
+              border-radius: 4px;
+              font-size: 14px;
+              color: #665500;
+            "
+          >
+            <strong>ค่า CNS เป็นค่าประมาณ</strong> (โมเดล NOAA การเปิดโปงครั้งเดียว PO₂
+            คงที่) ไม่ทดแทนการฝึกอบรม ตาราง หรือคอมพิวเตอร์ดำน้ำ
+            เมื่อ PO₂ ต่ำกว่า 0.5 บาร์ ใช้ CNS = 0% ที่นี่
+          </p>
+          <div style="overflow-x: auto">
+            <table
+              style="
+                width: 100%;
+                min-width: 640px;
+                border-collapse: collapse;
+                background: #fff;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+              "
+            >
+              <thead>
+                <tr
+                  style="
+                    background: linear-gradient(to right, #0077b6, #c0c0c0);
+                    color: white;
+                  "
+                >
+                  <th style="padding: 10px 8px; text-align: left">ความลึก (ม.)</th>
+                  <th style="padding: 10px 8px; text-align: left">เวลา (นาที)</th>
+                  <th style="padding: 10px 8px; text-align: left">SAC (ลิตร/นาที)</th>
+                  <th style="padding: 10px 8px; text-align: left">แก๊ส</th>
+                  <th style="padding: 10px 8px; text-align: left">แรงดัน</th>
+                  <th style="padding: 10px 8px; text-align: left">ปริมาณ</th>
+                  <th style="padding: 10px 8px; text-align: left">PO₂</th>
+                  <th style="padding: 10px 8px; text-align: left">%CNS/นาที</th>
+                  <th style="padding: 10px 8px; text-align: left">%CNS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 10px 8px; border-bottom: 1px solid #eee">
+                    <input
+                      id="slateDepth"
+                      type="number"
+                      min="0"
+                      step="1"
+                      placeholder="30"
+                      style="
+                        width: 4.5rem;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                      "
+                      oninput="calculateDecoSlateRow()"
+                    />
+                  </td>
+                  <td style="padding: 10px 8px; border-bottom: 1px solid #eee">
+                    <input
+                      id="slateTime"
+                      type="number"
+                      min="0"
+                      step="1"
+                      placeholder="15"
+                      style="
+                        width: 4.5rem;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                      "
+                      oninput="calculateDecoSlateRow()"
+                    />
+                  </td>
+                  <td style="padding: 10px 8px; border-bottom: 1px solid #eee">
+                    <input
+                      id="slateSac"
+                      type="number"
+                      min="0"
+                      step="0.1"
+                      placeholder="20"
+                      style="
+                        width: 4.5rem;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                      "
+                      oninput="calculateDecoSlateRow()"
+                    />
+                  </td>
+                  <td style="padding: 10px 8px; border-bottom: 1px solid #eee">
+                    <input
+                      id="slateGas"
+                      type="text"
+                      placeholder="N32"
+                      style="
+                        width: 4.5rem;
+                        padding: 8px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                      "
+                      oninput="calculateDecoSlateRow()"
+                    />
+                  </td>
+                  <td
+                    id="slateOutConv"
+                    style="
+                      padding: 10px 8px;
+                      border-bottom: 1px solid #eee;
+                      font-weight: 600;
+                      color: #0077b6;
+                    "
+                  >
+                    —
+                  </td>
+                  <td
+                    id="slateOutVol"
+                    style="
+                      padding: 10px 8px;
+                      border-bottom: 1px solid #eee;
+                      font-weight: 600;
+                      color: #0077b6;
+                    "
+                  >
+                    —
+                  </td>
+                  <td
+                    id="slateOutPo2"
+                    style="
+                      padding: 10px 8px;
+                      border-bottom: 1px solid #eee;
+                      font-weight: 600;
+                      color: #0077b6;
+                    "
+                  >
+                    —
+                  </td>
+                  <td
+                    id="slateOutCnsMin"
+                    style="
+                      padding: 10px 8px;
+                      border-bottom: 1px solid #eee;
+                      font-weight: 600;
+                      color: #0077b6;
+                    "
+                  >
+                    —
+                  </td>
+                  <td
+                    id="slateOutCns"
+                    style="
+                      padding: 10px 8px;
+                      border-bottom: 1px solid #eee;
+                      font-weight: 600;
+                      color: #0077b6;
+                    "
+                  >
+                    —
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
         <h2 id="gc-formulas">การคำนวณความดันโดยรอบ (ATA)</h2>
 
         การคำนวณความดันรอบตัวเป็นส่วนหนึ่งของหลักสูตรดำน้ำเบื้องต้นทุกหลักสูตร
@@ -1335,6 +1555,114 @@
             } else {
               result.textContent = "ใส่ความลึกเพื่อหาผสม Nitrox ที่ดีที่สุด";
             }
+          }
+
+          function noaaCnsMaxMinutes(ppo2) {
+            if (ppo2 < 0.5) return Infinity;
+            const pts = [
+              [0.5, 720],
+              [0.6, 720],
+              [0.7, 570],
+              [0.8, 450],
+              [0.9, 360],
+              [1.0, 300],
+              [1.1, 240],
+              [1.2, 210],
+              [1.3, 180],
+              [1.4, 150],
+              [1.5, 120],
+              [1.6, 45],
+              [1.65, 35],
+              [1.7, 28],
+              [1.75, 22],
+              [1.8, 18],
+            ];
+            if (ppo2 >= pts[pts.length - 1][0]) {
+              const p0 = pts[pts.length - 2][0];
+              const t0 = pts[pts.length - 2][1];
+              const p1 = pts[pts.length - 1][0];
+              const t1 = pts[pts.length - 1][1];
+              const slope = (t1 - t0) / (p1 - p0);
+              const t = t1 + slope * (ppo2 - p1);
+              return Math.max(5, t);
+            }
+            for (let i = 0; i < pts.length - 1; i++) {
+              const [p0, t0] = pts[i];
+              const [p1, t1] = pts[i + 1];
+              if (ppo2 <= p1) {
+                const f = (ppo2 - p0) / (p1 - p0);
+                return t0 + f * (t1 - t0);
+              }
+            }
+            return pts[pts.length - 1][1];
+          }
+
+          function parseSlateO2Fraction(gasRaw) {
+            const raw = (gasRaw || "").trim();
+            if (!raw) return null;
+            const s = raw.toUpperCase().replace(/\s+/g, "");
+            if (s === "AIR") return 0.21;
+            let m = s.match(/^N(\d{1,3})$/);
+            if (m) {
+              const n = parseInt(m[1], 10);
+              if (n >= 0 && n <= 100) return n / 100;
+            }
+            m = s.match(/^EAN(\d{1,3})$/);
+            if (m) {
+              const n = parseInt(m[1], 10);
+              if (n >= 0 && n <= 100) return n / 100;
+            }
+            m = s.match(/^(\d{1,3})$/);
+            if (m) {
+              const n = parseInt(m[1], 10);
+              if (n >= 0 && n <= 100) return n / 100;
+            }
+            return null;
+          }
+
+          function calculateDecoSlateRow() {
+            const depthIn = parseFloat(document.getElementById("slateDepth").value);
+            const timeIn = parseFloat(document.getElementById("slateTime").value);
+            const sacIn = parseFloat(document.getElementById("slateSac").value);
+            const gasStr = document.getElementById("slateGas").value;
+            const elC = document.getElementById("slateOutConv");
+            const elV = document.getElementById("slateOutVol");
+            const elP = document.getElementById("slateOutPo2");
+            const elCm = document.getElementById("slateOutCnsMin");
+            const elCt = document.getElementById("slateOutCns");
+            const dash = "—";
+
+            const fo2 = parseSlateO2Fraction(gasStr);
+            const depthOk =
+              Number.isFinite(depthIn) && depthIn >= 0 && depthIn <= 120;
+            const timeOk =
+              Number.isFinite(timeIn) && timeIn >= 0 && timeIn <= 999;
+            const sacOk =
+              Number.isFinite(sacIn) && sacIn > 0 && sacIn < 200;
+            const gasOk = fo2 !== null && fo2 >= 0.1 && fo2 <= 1;
+
+            if (!depthOk || !timeOk || !sacOk || !gasOk) {
+              elC.textContent = elV.textContent = elP.textContent = dash;
+              elCm.textContent = elCt.textContent = dash;
+              return;
+            }
+
+            const ata = depthIn / 10 + 1;
+            const ppo2 = fo2 * ata;
+            const volume = sacIn * timeIn * ata;
+            const maxMin = noaaCnsMaxMinutes(ppo2);
+            const cnsPerMin =
+              ppo2 < 0.5 || !Number.isFinite(maxMin) || maxMin <= 0
+                ? 0
+                : 100 / maxMin;
+            const cnsSeg = cnsPerMin * timeIn;
+
+            elC.textContent = `${ata.toFixed(1)} บาร์`;
+            elV.textContent = `${Math.round(volume)} ลิตร`;
+            elP.textContent = `${ppo2.toFixed(2)} บาร์`;
+            elCm.textContent =
+              cnsPerMin > 0 ? `${cnsPerMin.toFixed(3)} %` : "0 %";
+            elCt.textContent = `${cnsSeg.toFixed(2)} %`;
           }
         </script>
 
