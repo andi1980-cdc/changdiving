@@ -583,8 +583,20 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/de/posts/scuba-knowledge/archimedes-principle-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/de/posts/scuba-knowledge/best-dive-computers/</loc>
     <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/de/posts/scuba-knowledge/boyles-law-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -595,14 +607,20 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/de/posts/scuba-knowledge/dalton-henry-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/de/posts/scuba-knowledge/dive-logbook/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/de/posts/scuba-knowledge/gas-consumption/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1393,8 +1411,20 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/en/posts/scuba-knowledge/archimedes-principle-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/en/posts/scuba-knowledge/best-dive-computers/</loc>
     <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/en/posts/scuba-knowledge/boyles-law-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1405,14 +1435,20 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/en/posts/scuba-knowledge/dalton-henry-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/en/posts/scuba-knowledge/dive-logbook/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/en/posts/scuba-knowledge/gas-consumption/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2203,8 +2239,20 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/th/posts/scuba-knowledge/archimedes-principle-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/th/posts/scuba-knowledge/best-dive-computers/</loc>
     <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://changdiving.com/th/posts/scuba-knowledge/boyles-law-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -2215,14 +2263,20 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://changdiving.com/th/posts/scuba-knowledge/dalton-henry-scuba-diving/</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://changdiving.com/th/posts/scuba-knowledge/dive-logbook/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://changdiving.com/th/posts/scuba-knowledge/gas-consumption/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
