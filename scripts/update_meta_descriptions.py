@@ -26,7 +26,7 @@ COURSE_DATA = {
     "advanced-nitrox": (14990, "2 days", "TDI Advanced Nitrox", "TDI Advanced Nitrox", "TDI Advanced Nitrox", "cert"),
     "deco-procedures": (24990, "3.5 days", "TDI Deco Procedures", "TDI Deco Procedures", "TDI Deco Procedures", "cert"),
     "intro-to-tech": (11990, "2 days", "TDI Intro to Tech", "TDI Intro to Tech", "TDI Intro to Tech", "cert"),
-    "tech-package": (74990, "7.5 days", "TDI Tech Package", "TDI Tech Paket", "TDI Tech แพ็กเกจ", "cert"),
+    "tech-package": (66990, "7.5 days", "TDI Tech Package", "TDI Tech Paket", "TDI Tech แพ็กเกจ", "cert"),
     "deep-wreck-nitrox": (19490, "2 days", "Deep Wreck Nitrox", "Deep Wreck Nitrox", "Deep Wreck Nitrox", "cert"),
     "advanced-wreck": (18870, "4.5 days", "TDI Advanced Wreck", "TDI Advanced Wreck", "TDI Advanced Wreck", "cert"),
     "master-scuba-diver": (50524, "7–12 days", "Master Scuba Diver", "Master Scuba Diver", "Master Scuba Diver", "cert"),

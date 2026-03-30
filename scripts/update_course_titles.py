@@ -25,7 +25,7 @@ COURSE_DATA = {
     "advanced-nitrox": (14990, "TDI Advanced Nitrox", "TDI Advanced Nitrox", "TDI Advanced Nitrox", "2-day tech certification", "2-Tage-Tech-Zertifizierung", "รับใบรับรองเทค 2 วัน"),
     "deco-procedures": (24990, "TDI Deco Procedures", "TDI Deco Procedures", "TDI Deco Procedures", "3.5-day tech certification", "3,5-Tage-Tech-Zertifizierung", "รับใบรับรองเทค 3.5 วัน"),
     "intro-to-tech": (11990, "TDI Intro to Tech", "TDI Intro to Tech", "TDI Intro to Tech", "2-day introduction", "2-Tage-Einführung", "แนะนำ 2 วัน"),
-    "tech-package": (74990, "TDI Tech Package", "TDI Tech Paket", "TDI Tech แพ็กเกจ", "7.5-day training", "7,5-Tage-Ausbildung", "ฝึก 7.5 วัน"),
+    "tech-package": (66990, "TDI Tech Package", "TDI Tech Paket", "TDI Tech แพ็กเกจ", "7.5-day training", "7,5-Tage-Ausbildung", "ฝึก 7.5 วัน"),
     "deep-wreck-nitrox": (19490, "Deep Wreck Nitrox", "Deep Wreck Nitrox", "Deep Wreck Nitrox", "2-day tech certification", "2-Tage-Tech-Zertifizierung", "รับใบรับรองเทค 2 วัน"),
     "advanced-wreck": (18870, "TDI Advanced Wreck", "TDI Advanced Wreck", "TDI Advanced Wreck", "4.5-day tech certification", "4,5-Tage-Tech-Zertifizierung", "รับใบรับรองเทค 4.5 วัน"),
     "master-scuba-diver": (50524, "Master Scuba Diver", "Master Scuba Diver", "Master Scuba Diver", "7–12 day package", "7–12-Tage-Paket", "แพ็กเกจ 7–12 วัน"),

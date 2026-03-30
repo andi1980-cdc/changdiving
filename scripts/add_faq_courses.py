@@ -158,7 +158,7 @@ FAQ_DATA = {
             },
             {
                 "q": "How much do technical diving courses cost in Koh Chang?",
-                "a": "TDI Intro to Tech: from 15,990 THB (3 days). TDI Advanced Nitrox: from 15,990 THB (3 days). Decompression Procedures: from 19,990 THB (5 days). Advanced Wreck: from 19,990 THB (5 days). Full Technical Diver Package: from 74,990 THB (14 days)."
+                "a": "TDI Intro to Tech: from 15,990 THB (3 days). TDI Advanced Nitrox: from 15,990 THB (3 days). Decompression Procedures: from 19,990 THB (5 days). Advanced Wreck: from 19,990 THB (5 days). Full Technical Diver Package: from 66,990 THB (14 days)."
             },
             {
                 "q": "What is included in technical diving courses at Chang Diving?",
@@ -180,7 +180,7 @@ FAQ_DATA = {
             },
             {
                 "q": "Was kosten technische Tauchkurse auf Koh Chang?",
-                "a": "TDI Intro to Tech: ab 15.990 THB (3 Tage). TDI Advanced Nitrox: ab 15.990 THB (3 Tage). Dekompressionsprozeduren: ab 19.990 THB (5 Tage). Advanced Wrack: ab 19.990 THB (5 Tage). Vollständiges Technisches Taucher Paket: ab 74.990 THB (14 Tage)."
+                "a": "TDI Intro to Tech: ab 15.990 THB (3 Tage). TDI Advanced Nitrox: ab 15.990 THB (3 Tage). Dekompressionsprozeduren: ab 19.990 THB (5 Tage). Advanced Wrack: ab 19.990 THB (5 Tage). Vollständiges Technisches Taucher Paket: ab 66.990 THB (14 Tage)."
             },
             {
                 "q": "Was ist in technischen Tauchkursen bei Chang Diving inklusive?",
@@ -202,7 +202,7 @@ FAQ_DATA = {
             },
             {
                 "q": "คอร์สดำน้ำเทคนิคที่เกาะช้างราคาเท่าไหร่?",
-                "a": "TDI Intro to Tech: เริ่มต้น 15,990 บาท (3 วัน) TDI Advanced Nitrox: เริ่มต้น 15,990 บาท (3 วัน) Decompression Procedures: เริ่มต้น 19,990 บาท (5 วัน) Advanced Wreck: เริ่มต้น 19,990 บาท (5 วัน) Technical Diver Package: เริ่มต้น 74,990 บาท (14 วัน)"
+                "a": "TDI Intro to Tech: เริ่มต้น 15,990 บาท (3 วัน) TDI Advanced Nitrox: เริ่มต้น 15,990 บาท (3 วัน) Decompression Procedures: เริ่มต้น 19,990 บาท (5 วัน) Advanced Wreck: เริ่มต้น 19,990 บาท (5 วัน) Technical Diver Package: เริ่มต้น 66,990 บาท (14 วัน)"
             },
             {
                 "q": "คอร์สดำน้ำเทคนิคที่ช้างไดร์วิ่งรวมอะไรบ้าง?",
