@@ -354,6 +354,10 @@
         font-weight: 700;
         color: #023e8a;
       }
+      #ambient-pressure-calc .pressure-calc__out {
+        white-space: pre-line;
+        line-height: 1.45;
+      }
       .pressure-calc .pressure-calc__hint {
         margin: 10px 0 0;
         padding: 0;
@@ -661,27 +665,44 @@
               <tr>
                 <th>ความลึก (น้ำทะเล แบบจำลองสอน)</th>
                 <th>ความดันสัมบูรณ์โดยประมาณ</th>
+                <th>ปริมาตรก๊าซสัมพัทธ์<sup>*</sup></th>
+                <th>ความหนาแน่นก๊าซสัมพัทธ์<sup>*</sup></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>0 m</td>
                 <td>1 bar</td>
+                <td>1 (อ้างอิง)</td>
+                <td>1×</td>
               </tr>
               <tr>
                 <td>10 m</td>
                 <td>2 bar</td>
+                <td>½ (50%)</td>
+                <td>2×</td>
               </tr>
               <tr>
                 <td>20 m</td>
                 <td>3 bar</td>
+                <td>⅓ (≈33%)</td>
+                <td>3×</td>
               </tr>
               <tr>
                 <td>30 m</td>
                 <td>4 bar</td>
+                <td>¼ (25%)</td>
+                <td>4×</td>
               </tr>
             </tbody>
           </table>
+          <p class="note">
+            <sup>*</sup>
+            สำหรับ<strong>ก๊าซปริมาณคงที่</strong>เมื่อ<strong>อุณหภูมิใกล้คงที่</strong>:
+            <strong>ความดัน × ปริมาตร ≈ ค่าคงที่</strong> (กฎของบอยล์)
+            ดังนั้นปริมาตรจะลดและความหนาแน่นจะเพิ่ม — สัดส่วนกับความดันสัมบูรณ์
+            เทียบกับผิวน้ำ
+          </p>
 
           <p>
             <strong>น้ำจืด</strong> มีความหนาแน่นน้อยกว่าเล็กน้อย
@@ -726,12 +747,15 @@
                 id="pressure-calc-result"
                 aria-live="polite"
               >
-                ใส่ความลึกเพื่อดูความดันสัมบูรณ์โดยประมาณ (บาร์)
+                ใส่ความลึกเพื่อดูความดันสัมบูรณ์ ปริมาตรและความหนาแน่นของก๊าซสัมพัทธ์
+                (เทียบผิวน้ำ ก๊าซปริมาณคงที่)
               </div>
               <p class="pressure-calc__hint">
                 ใช้แบบจำลองง่ายๆ เดียวกับตารางด้านบน:<br />
                 <strong>ความดันสัมบูรณ์ ≈ 1 bar + (ความลึก ÷ m ต่อ bar)</strong>
-                ค่าอาจต่างจากคู่มือหรือคอมพิวเตอร์เล็กน้อย
+                ปริมาตรและความหนาแน่นตาม
+                <strong>ความดัน × ปริมาตร ≈ ค่าคงที่</strong> (กฎของบอยล์)
+                ตามคำอธิบายใต้ตาราง ค่าอาจต่างจากคู่มือหรือคอมพิวเตอร์เล็กน้อย
               </p>
             </div>
           </div>
@@ -749,12 +773,21 @@
                 if (!mPerBar || mPerBar <= 0) return;
                 if (depthStr === "" || !isFinite(depth) || depth < 0) {
                   out.textContent =
-                    "ใส่ความลึกเพื่อดูความดันสัมบูรณ์โดยประมาณ (บาร์)";
+                    "ใส่ความลึกเพื่อดูความดันสัมบูรณ์ ปริมาตรและความหนาแน่นของก๊าซสัมพัทธ์ (เทียบผิวน้ำ ก๊าซปริมาณคงที่)";
                   return;
                 }
                 var ata = 1 + depth / mPerBar;
+                var relVol = 1 / ata;
                 out.textContent =
-                  "≈ " + ata.toFixed(2) + " บาร์สัมบูรณ์ (ata)";
+                  "≈ " +
+                  ata.toFixed(2) +
+                  " บาร์สัมบูรณ์ (ata)\n" +
+                  "ปริมาตรก๊าซสัมพัทธ์ (ผิวน้ำ = 1): ≈ " +
+                  relVol.toFixed(3) +
+                  "\n" +
+                  "ความหนาแน่นก๊าซสัมพัทธ์ (เทียบผิวน้ำ): ≈ " +
+                  ata.toFixed(2) +
+                  "×";
               }
 
               sel.addEventListener("change", update);

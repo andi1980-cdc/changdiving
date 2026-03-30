@@ -348,6 +348,10 @@
         font-weight: 700;
         color: #023e8a;
       }
+      #ambient-pressure-calc .pressure-calc__out {
+        white-space: pre-line;
+        line-height: 1.45;
+      }
       .pressure-calc .pressure-calc__hint {
         margin: 10px 0 0;
         padding: 0;
@@ -662,27 +666,44 @@
               <tr>
                 <th>Tiefe (Meerwasser, typisches Lehmodell)</th>
                 <th>ca. absoluter Druck</th>
+                <th>relatives Gasvolumen<sup>*</sup></th>
+                <th>relative Gasdichte<sup>*</sup></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>0 m</td>
                 <td>1 bar</td>
+                <td>1 (Referenz)</td>
+                <td>1×</td>
               </tr>
               <tr>
                 <td>10 m</td>
                 <td>2 bar</td>
+                <td>½ (50&nbsp;%)</td>
+                <td>2×</td>
               </tr>
               <tr>
                 <td>20 m</td>
                 <td>3 bar</td>
+                <td>⅓ (≈33&nbsp;%)</td>
+                <td>3×</td>
               </tr>
               <tr>
                 <td>30 m</td>
                 <td>4 bar</td>
+                <td>¼ (25&nbsp;%)</td>
+                <td>4×</td>
               </tr>
             </tbody>
           </table>
+          <p class="note">
+            <sup>*</sup> Bei <strong>fester Gasmenge</strong> und etwa
+            <strong>konstanter Temperatur</strong> gilt
+            <strong>Druck × Volumen ≈ konstant</strong> (Gesetz von Boyle), also
+            nimmt das Volumen ab und die Dichte zu — proportional zum
+            absoluten Druck, bezogen auf die Oberfläche.
+          </p>
 
           <p>
             <strong>Süßwasser</strong> ist etwas weniger dicht: Für genauere
@@ -728,12 +749,16 @@
                 id="pressure-calc-result"
                 aria-live="polite"
               >
-                Tiefe eingeben für ungefähren absoluten Druck (bar).
+                Tiefe eingeben für ungefähren absoluten Druck, relatives
+                Gasvolumen und relative Dichte (Oberfläche = 1; feste Gasmenge).
               </div>
               <p class="pressure-calc__hint">
                 Entspricht dem einfachen Modell oben:<br />
                 <strong>absoluter Druck ≈ 1 bar + (Tiefe ÷ m pro bar)</strong>.
-                Verbände und Computer können leicht abweichen.
+                Volumen und Dichte folgen
+                <strong>Druck × Volumen ≈ konstant</strong> (Boyle), wie in der
+                Fußnote der Tabelle. Verbände und Computer können leicht
+                abweichen.
               </p>
             </div>
           </div>
@@ -751,12 +776,21 @@
                 if (!mPerBar || mPerBar <= 0) return;
                 if (depthStr === "" || !isFinite(depth) || depth < 0) {
                   out.textContent =
-                    "Tiefe eingeben für ungefähren absoluten Druck (bar).";
+                    "Tiefe eingeben für ungefähren absoluten Druck, relatives Gasvolumen und relative Dichte (Oberfläche = 1; feste Gasmenge).";
                   return;
                 }
                 var ata = 1 + depth / mPerBar;
+                var relVol = 1 / ata;
                 out.textContent =
-                  "≈ " + ata.toFixed(2) + " bar absolut (ata)";
+                  "≈ " +
+                  ata.toFixed(2) +
+                  " bar absolut (ata)\n" +
+                  "Relatives Gasvolumen (Oberfläche = 1): ≈ " +
+                  relVol.toFixed(3) +
+                  "\n" +
+                  "Relative Gasdichte (vs Oberfläche): ≈ " +
+                  ata.toFixed(2) +
+                  "×";
               }
 
               sel.addEventListener("change", update);

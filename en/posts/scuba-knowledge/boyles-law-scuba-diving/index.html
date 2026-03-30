@@ -349,6 +349,10 @@
         font-weight: 700;
         color: #023e8a;
       }
+      #ambient-pressure-calc .pressure-calc__out {
+        white-space: pre-line;
+        line-height: 1.45;
+      }
       .pressure-calc .pressure-calc__hint {
         margin: 10px 0 0;
         padding: 0;
@@ -656,27 +660,44 @@
               <tr>
                 <th>Depth (sea water, typical teaching model)</th>
                 <th>Approx. absolute pressure</th>
+                <th>Relative gas volume<sup>*</sup></th>
+                <th>Relative gas density<sup>*</sup></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>0 m</td>
                 <td>1 bar</td>
+                <td>1 (reference)</td>
+                <td>1×</td>
               </tr>
               <tr>
                 <td>10 m</td>
                 <td>2 bar</td>
+                <td>½ (50%)</td>
+                <td>2×</td>
               </tr>
               <tr>
                 <td>20 m</td>
                 <td>3 bar</td>
+                <td>⅓ (≈33%)</td>
+                <td>3×</td>
               </tr>
               <tr>
                 <td>30 m</td>
                 <td>4 bar</td>
+                <td>¼ (25%)</td>
+                <td>4×</td>
               </tr>
             </tbody>
           </table>
+          <p class="note">
+            <sup>*</sup> For a <strong>fixed amount of gas</strong> at about
+            <strong>constant temperature</strong>:
+            <strong>pressure × volume ≈ constant</strong> (Boyle’s Law), so
+            volume falls and density rises in proportion to absolute pressure,
+            relative to the surface.
+          </p>
 
           <p>
             <strong>Fresh water</strong> is slightly less dense: for precision
@@ -722,11 +743,15 @@
                 id="pressure-calc-result"
                 aria-live="polite"
               >
-                Enter a depth to see approximate absolute pressure (bar).
+                Enter a depth for approximate absolute pressure, relative gas
+                volume and density (vs surface; fixed amount of gas).
               </div>
               <p class="pressure-calc__hint">
                 Uses the same simple classroom models as the table above:<br />
                 <strong>absolute pressure ≈ 1 bar + (depth ÷ m per bar)</strong>.
+                Volume and density follow
+                <strong>pressure × volume ≈ constant</strong> (Boyle’s Law),
+                same assumptions as the table footnote.
                 Your agency materials and dive computer may use slightly
                 different assumptions.
               </p>
@@ -746,14 +771,21 @@
                 if (!mPerBar || mPerBar <= 0) return;
                 if (depthStr === "" || !isFinite(depth) || depth < 0) {
                   out.textContent =
-                    "Enter a depth to see approximate absolute pressure (bar).";
+                    "Enter a depth for approximate absolute pressure, relative gas volume and density (vs surface; fixed amount of gas).";
                   return;
                 }
                 var ata = 1 + depth / mPerBar;
+                var relVol = 1 / ata;
                 out.textContent =
                   "≈ " +
                   ata.toFixed(2) +
-                  " bar absolute (ata)";
+                  " bar absolute (ata)\n" +
+                  "Relative gas volume (surface = 1): ≈ " +
+                  relVol.toFixed(3) +
+                  "\n" +
+                  "Relative gas density (vs surface): ≈ " +
+                  ata.toFixed(2) +
+                  "×";
               }
 
               sel.addEventListener("change", update);
