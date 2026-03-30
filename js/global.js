@@ -15,6 +15,65 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     const homeLabel = homeLabels[lang] || "Home";
 
+    // Course slug → category hub (insert "Home › Courses › [Hub] › Course")
+    const courseCategoryHub = {
+      "open-water-diver": "beginner-courses",
+      "open-advanced-package": "beginner-courses",
+      "open-to-divemaster": "beginner-courses",
+      advanced: "advanced-courses",
+      "first-aid": "advanced-courses",
+      "rescue-diver": "advanced-courses",
+      "master-scuba-diver": "advanced-courses",
+      divemaster: "professional-courses",
+      "efr-instructor": "professional-courses",
+      "sdi-idc": "professional-courses",
+      "sdi-ie": "professional-courses",
+      "instructor-crossover": "professional-courses",
+      "deep-wreck-nitrox": "speciality",
+      "nitrox-diver": "speciality",
+      "nitrox-blender": "speciality",
+      "deep-diver": "speciality",
+      "wreck-diver": "speciality",
+      navigation: "speciality",
+      "search-recovery": "speciality",
+      night: "speciality",
+      sidemount: "speciality",
+      "solo-diver": "speciality",
+      "intro-to-tech": "technical-diving-courses",
+      "advanced-nitrox": "technical-diving-courses",
+      "deco-procedures": "technical-diving-courses",
+      "advanced-wreck": "technical-diving-courses",
+      "tech-package": "technical-diving-courses",
+    };
+
+    const categoryHubLabels = {
+      "beginner-courses": {
+        en: "Beginner Courses",
+        de: "Anfängerkurse",
+        th: "คอร์สผู้เริ่มต้น",
+      },
+      "advanced-courses": {
+        en: "Advanced Courses",
+        de: "Fortgeschrittenenkurse",
+        th: "หลักสูตรขั้นสูง",
+      },
+      "professional-courses": {
+        en: "Professional Courses",
+        de: "Profi-Tauchkurse",
+        th: "หลักสูตรมืออาชีพ",
+      },
+      speciality: {
+        en: "Specialty Courses",
+        de: "Spezialkurse",
+        th: "หลักสูตรเฉพาะทาง",
+      },
+      "technical-diving-courses": {
+        en: "Technical Diving Courses",
+        de: "Technische Tauchkurse",
+        th: "หลักสูตรดำน้ำเทคนิค",
+      },
+    };
+
     // Mapping für Breadcrumb-Labels und URLs
     const segmentMapping = {
       // Store/Category Mappings - diese werden übersprungen
@@ -134,11 +193,11 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       "technical-diving-courses": {
         label: "Technical Diving Courses",
-        url: "/" + lang + "/courses/tech-package/",
+        url: "/" + lang + "/courses/technical-diving-courses/",
       },
       technical: {
-        label: "Technical Diving",
-        url: "/" + lang + "/courses/tech-package/",
+        label: "Technical Diving Courses",
+        url: "/" + lang + "/courses/technical-diving-courses/",
       },
       "diving-courses": {
         label: "Diving Courses",
@@ -342,6 +401,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       cumulative += "/" + segment;
       const isLastSegment = index === path.length - 1;
+
+      // Course page: insert category hub (e.g. … › Technical Diving Courses › Intro to Tech)
+      if (
+        isLastSegment &&
+        path[1] === "courses" &&
+        path.length === 3 &&
+        courseCategoryHub[segment]
+      ) {
+        const hubSlug = courseCategoryHub[segment];
+        const hubLangLabels = categoryHubLabels[hubSlug];
+        const hubLabel =
+          (hubLangLabels && hubLangLabels[lang]) ||
+          (hubLangLabels && hubLangLabels.en) ||
+          hubSlug;
+        const hubUrl = "/" + lang + "/courses/" + hubSlug + "/";
+        html += ` › <a href="${hubUrl}">${hubLabel}</a>`;
+
+        const mapping = segmentMapping[segment];
+        if (mapping && !mapping.skip) {
+          html += ` › ${mapping.label}`;
+        } else {
+          const label = decodeURIComponent(segment).replace(/-/g, " ");
+          html += ` › ${label}`;
+        }
+        return;
+      }
 
       // Prüfe Mapping
       const mapping = segmentMapping[segment];
