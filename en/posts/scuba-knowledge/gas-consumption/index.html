@@ -766,11 +766,270 @@
             font-family: var(--font-sans), 'Roboto', sans-serif;
           "
         >
+          <div
+            style="
+              margin-bottom: 1.1em;
+              padding: 14px 16px;
+              background: rgba(255, 255, 255, 0.75);
+              border: 1px solid rgba(0, 119, 182, 0.35);
+              border-radius: 8px;
+            "
+          >
+            <label
+              style="
+                display: block;
+                margin-bottom: 6px;
+                font-weight: 600;
+                color: #004d80;
+                font-size: 0.95rem;
+              "
+              >Units (slate + all calculators below)</label
+            >
+            <select
+              id="gcCalcUnits"
+              style="
+                max-width: 320px;
+                width: 100%;
+                padding: 8px 10px;
+                border: 2px solid #0077b6;
+                border-radius: 8px;
+                font-size: 15px;
+                background: #fff;
+                box-sizing: border-box;
+              "
+              onchange="setGcCalcUnitLabels(true); recalcAllGc();"
+            >
+              <option value="metric" selected>bar &amp; meters (metric)</option>
+              <option value="imperial">psi &amp; feet (imperial)</option>
+            </select>
+            <p style="margin: 8px 0 0 0; font-size: 13px; color: #444; line-height: 1.45">
+              <strong>Depth</strong> in the slate row and in PO₂ / MOD / best mix uses
+              this setting. SAC also uses it for pressure (bar/psi), depth, and tank
+              (L / cu ft). O₂ % and max PPO₂ stay in <strong>bar</strong>.
+            </p>
+          </div>
+          <div
+            id="gc-quick-converters"
+            style="
+              margin-bottom: 1.25em;
+              padding: 16px 18px;
+              background: rgba(255, 255, 255, 0.7);
+              border: 1px dashed rgba(0, 119, 182, 0.5);
+              border-radius: 10px;
+            "
+          >
+            <p
+              style="
+                margin: 0 0 6px 0;
+                font-weight: 600;
+                color: #004d80;
+                font-size: 1rem;
+              "
+            >
+              Quick unit converters
+            </p>
+            <p style="margin: 0 0 14px 0; font-size: 13px; color: #555; line-height: 1.45">
+              Type in either field — the other updates. Useful when coursework mixes metric
+              and imperial numbers.
+            </p>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                gap: 14px;
+              "
+            >
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  Depth
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Feet (ft)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcDepthFt"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 100"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncDepth('ft')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Meters (m)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcDepthM"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 30.5"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncDepth('m')"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  Pressure
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >PSI</label
+                    >
+                    <input
+                      type="number"
+                      id="qcPsi"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 3000"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncPressure('psi')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Bar</label
+                    >
+                    <input
+                      type="number"
+                      id="qcBar"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 200"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncPressure('bar')"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  Volume (actual cu ft)
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Cubic feet (ft³)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcCuFt"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 1"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncVolume('cuft')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Liters (L)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcLiters"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 28.3"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncVolume('L')"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p style="margin: 12px 0 0 0; font-size: 12px; color: #666; line-height: 1.4">
+              Volume uses 1 ft³ = 28.317 L (true cubic foot). Scuba tank “80 cu ft” labels
+              describe a <em>gas capacity</em> at rated pressure — not the same as liquid
+              ft³; use the SAC calculator above for tank pressure math.
+            </p>
+          </div>
           <h3 style="margin: 0 0 8px 0; color: #004d80; font-size: 1.15rem">
             Planning slate — one segment calculator
           </h3>
           <p style="margin: 0 0 1em 0; color: #333; font-size: 15px; line-height: 1.55">
-            Enter one stop or bottom segment (same columns as the table above) to get
+            Enter one stop or bottom segment (same columns as the table above;
+            <strong>depth</strong> is in <strong>meters or feet</strong> according to
+            the unit selector above) to get
             <strong>Conv. F. (ata)</strong>, <strong>Volume</strong>,
             <strong>PO₂</strong>, and approximate NOAA-style
             <strong>CNS</strong> for that segment. Use it for each line you copy to
@@ -832,7 +1091,9 @@
                     color: white;
                   "
                 >
-                  <th style="padding: 10px 8px; text-align: left">Depth (m)</th>
+                  <th style="padding: 10px 8px; text-align: left">
+                    Depth (<span id="gcSlateDepthUnitLabel">m</span>)
+                  </th>
                   <th style="padding: 10px 8px; text-align: left">Time (min)</th>
                   <th style="padding: 10px 8px; text-align: left">SAC (L/min)</th>
                   <th style="padding: 10px 8px; text-align: left">Gas</th>
@@ -1051,6 +1312,17 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           "
         >
+          <p
+            style="
+              margin: 0 0 20px 0;
+              font-size: 14px;
+              color: #444;
+              line-height: 1.5;
+            "
+          >
+            <strong>Units:</strong> Use the selector in the
+            <strong>planning slate</strong> section above (same for this block).
+          </p>
           <!-- SAC Calculator -->
           <div style="margin-bottom: 30px">
             <h3 style="color: #0077b6; margin-bottom: 15px">
@@ -1067,7 +1339,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Gas Used (bar):</label
+                  >Gas used (<span id="gcSacPressureUnit">bar</span>):</label
                 >
                 <input
                   type="number"
@@ -1086,7 +1358,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Depth (meters):</label
+                  >Depth (<span id="gcSacDepthUnit">meters</span>):</label
                 >
                 <input
                   type="number"
@@ -1124,7 +1396,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Tank Size (liters):</label
+                  >Tank size (<span id="gcSacTankUnit">liters</span>):</label
                 >
                 <input
                   type="number"
@@ -1199,7 +1471,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Planned Depth (meters):</label
+                  >Planned depth (<span id="gcPo2DepthUnit">meters</span>):</label
                 >
                 <input
                   type="number"
@@ -1328,7 +1600,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Planned Depth (meters):</label
+                  >Planned depth (<span id="gcBestDepthUnit">meters</span>):</label
                 >
                 <input
                   type="number"
@@ -1388,22 +1660,219 @@
         </div>
 
         <script>
-          function calculateSAC() {
-            const bar = parseFloat(document.getElementById("sacBar").value);
-            const depth = parseFloat(document.getElementById("sacDepth").value);
-            const time = parseFloat(document.getElementById("sacTime").value);
-            const tank = parseFloat(document.getElementById("sacTank").value);
-            const result = document.getElementById("sacResult");
+          let qcLockDepth = false;
+          let qcLockPressure = false;
+          let qcLockVolume = false;
 
-            if (bar && depth >= 0 && time && tank) {
-              // Calculate ATA from depth: (depth / 10) + 1
-              const ata = depth / 10 + 1;
-              // Calculate liters consumed: bar * tank size
-              const liters = bar * tank;
-              // Calculate SAC: liters / (time * ata)
+          function qcFormatNum(n, maxDec) {
+            if (!Number.isFinite(n)) return "";
+            let s = n.toFixed(maxDec);
+            if (s.includes(".")) {
+              s = s.replace(/(\.\d*?)0+$/, "$1").replace(/\.$/, "");
+            }
+            return s;
+          }
+
+          function qcSyncDepth(from) {
+            if (qcLockDepth) return;
+            const ftEl = document.getElementById("qcDepthFt");
+            const mEl = document.getElementById("qcDepthM");
+            if (!ftEl || !mEl) return;
+            qcLockDepth = true;
+            try {
+              const k = 0.3048;
+              if (from === "ft") {
+                const raw = ftEl.value.trim();
+                if (raw === "") {
+                  mEl.value = "";
+                  return;
+                }
+                const ft = parseFloat(raw);
+                mEl.value = Number.isFinite(ft) ? qcFormatNum(ft * k, 4) : "";
+              } else {
+                const raw = mEl.value.trim();
+                if (raw === "") {
+                  ftEl.value = "";
+                  return;
+                }
+                const m = parseFloat(raw);
+                ftEl.value = Number.isFinite(m) ? qcFormatNum(m / k, 4) : "";
+              }
+            } finally {
+              qcLockDepth = false;
+            }
+          }
+
+          function qcSyncPressure(from) {
+            if (qcLockPressure) return;
+            const psiEl = document.getElementById("qcPsi");
+            const barEl = document.getElementById("qcBar");
+            if (!psiEl || !barEl) return;
+            const k = 14.5037738;
+            qcLockPressure = true;
+            try {
+              if (from === "psi") {
+                const raw = psiEl.value.trim();
+                if (raw === "") {
+                  barEl.value = "";
+                  return;
+                }
+                const psi = parseFloat(raw);
+                barEl.value = Number.isFinite(psi) ? qcFormatNum(psi / k, 4) : "";
+              } else {
+                const raw = barEl.value.trim();
+                if (raw === "") {
+                  psiEl.value = "";
+                  return;
+                }
+                const bar = parseFloat(raw);
+                psiEl.value = Number.isFinite(bar) ? qcFormatNum(bar * k, 2) : "";
+              }
+            } finally {
+              qcLockPressure = false;
+            }
+          }
+
+          function qcSyncVolume(from) {
+            if (qcLockVolume) return;
+            const cfEl = document.getElementById("qcCuFt");
+            const lEl = document.getElementById("qcLiters");
+            if (!cfEl || !lEl) return;
+            const L_PER_CUFT = 28.316846592;
+            qcLockVolume = true;
+            try {
+              if (from === "cuft") {
+                const raw = cfEl.value.trim();
+                if (raw === "") {
+                  lEl.value = "";
+                  return;
+                }
+                const cf = parseFloat(raw);
+                lEl.value = Number.isFinite(cf) ? qcFormatNum(cf * L_PER_CUFT, 3) : "";
+              } else {
+                const raw = lEl.value.trim();
+                if (raw === "") {
+                  cfEl.value = "";
+                  return;
+                }
+                const L = parseFloat(raw);
+                cfEl.value = Number.isFinite(L) ? qcFormatNum(L / L_PER_CUFT, 4) : "";
+              }
+            } finally {
+              qcLockVolume = false;
+            }
+          }
+
+          const GC_LITERS_PER_CUFT = 11.1 / 80;
+          const GC_CUFT_PER_LITER = 80 / 11.1;
+
+          function gcGetImperial() {
+            const el = document.getElementById("gcCalcUnits");
+            return el && el.value === "imperial";
+          }
+
+          function gcDepthInputToMeters(raw, isImperial) {
+            if (!Number.isFinite(raw)) return NaN;
+            return isImperial ? raw * 0.3048 : raw;
+          }
+
+          function setGcCalcUnitLabels(convertTank = false) {
+            const unitSelect = document.getElementById("gcCalcUnits");
+            if (!unitSelect) return;
+            const units = unitSelect.value;
+            const prev = unitSelect.dataset.lastUnit || units;
+            const imp = units === "imperial";
+            const tankEl = document.getElementById("sacTank");
+
+            if (convertTank && prev !== units && tankEl) {
+              const tv = parseFloat(tankEl.value);
+              if (!isNaN(tv) && tv > 0) {
+                tankEl.value =
+                  units === "imperial"
+                    ? (tv * GC_CUFT_PER_LITER).toFixed(1).replace(/\.0$/, "")
+                    : (tv * GC_LITERS_PER_CUFT).toFixed(1).replace(/\.0$/, "");
+              } else {
+                tankEl.value = units === "imperial" ? "80" : "12";
+              }
+            }
+
+            document.getElementById("gcSacPressureUnit").textContent = imp
+              ? "psi"
+              : "bar";
+            document.getElementById("gcSacDepthUnit").textContent = imp
+              ? "feet"
+              : "meters";
+            document.getElementById("gcSacTankUnit").textContent = imp
+              ? "cu ft"
+              : "liters";
+            document.getElementById("gcPo2DepthUnit").textContent = imp
+              ? "feet"
+              : "meters";
+            document.getElementById("gcBestDepthUnit").textContent = imp
+              ? "feet"
+              : "meters";
+            const slateLbl = document.getElementById("gcSlateDepthUnitLabel");
+            if (slateLbl) slateLbl.textContent = imp ? "ft" : "m";
+
+            const sb = document.getElementById("sacBar");
+            const sd = document.getElementById("sacDepth");
+            const pd = document.getElementById("po2Depth");
+            const bd = document.getElementById("bestmixDepth");
+            const sl = document.getElementById("slateDepth");
+            if (sb) sb.placeholder = imp ? "e.g., 1450" : "e.g., 100";
+            if (sd) sd.placeholder = imp ? "e.g., 100" : "e.g., 30";
+            if (tankEl) tankEl.placeholder = imp ? "e.g., 80" : "e.g., 12";
+            if (pd) pd.placeholder = imp ? "e.g., 130" : "e.g., 40";
+            if (bd) bd.placeholder = imp ? "e.g., 100" : "e.g., 30";
+            if (sl) sl.placeholder = imp ? "100" : "30";
+
+            unitSelect.dataset.lastUnit = units;
+          }
+
+          function recalcAllGc() {
+            calculateSAC();
+            calculatePO2();
+            calculateMOD();
+            calculateBestMix();
+            calculateDecoSlateRow();
+          }
+
+          function calculateSAC() {
+            const isImperial = gcGetImperial();
+            const pressureInput = parseFloat(
+              document.getElementById("sacBar").value
+            );
+            const depthIn = parseFloat(document.getElementById("sacDepth").value);
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
+            const time = parseFloat(document.getElementById("sacTime").value);
+            const tankIn = parseFloat(document.getElementById("sacTank").value);
+            const result = document.getElementById("sacResult");
+            const pu = isImperial ? "psi" : "bar";
+            const du = isImperial ? "ft" : "m";
+            const tu = isImperial ? "cu ft" : "liters";
+
+            if (
+              Number.isFinite(pressureInput) &&
+              pressureInput > 0 &&
+              Number.isFinite(depthM) &&
+              depthM >= 0 &&
+              Number.isFinite(time) &&
+              time > 0 &&
+              Number.isFinite(tankIn) &&
+              tankIn > 0
+            ) {
+              const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
+              const tankL = isImperial ? tankIn * GC_LITERS_PER_CUFT : tankIn;
+              const ata = depthM / 10 + 1;
+              const liters = bar * tankL;
               const sac = liters / (time * ata);
 
-              result.innerHTML = `✅ SAC Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">Gas consumed: ${liters}L at ${ata.toFixed(1)} ATA</small>`;
+              let html = `✅ SAC Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">Gas consumed: ${liters.toFixed(0)} L at ${ata.toFixed(1)} ATA</small>`;
+              if (isImperial) {
+                html +=
+                  '<br><small style="color: #666">(psi, ft, cu ft converted to bar, m, L)</small>';
+              }
+              result.innerHTML = html;
 
               if (sac > 25) {
                 result.innerHTML +=
@@ -1413,24 +1882,27 @@
                   '<br><small style="color: #27ae60">🌟 Excellent SAC rate!</small>';
               }
             } else {
-              result.textContent = "Enter all values to calculate SAC rate";
+              result.textContent = `Enter gas used (${pu}), depth (${du}), time, and tank (${tu})`;
             }
           }
 
           function calculatePO2() {
+            const isImperial = gcGetImperial();
             const oxygen = parseFloat(
               document.getElementById("po2Oxygen").value
             );
-            const depth = parseFloat(document.getElementById("po2Depth").value);
+            const depthIn = parseFloat(document.getElementById("po2Depth").value);
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const result = document.getElementById("po2Result");
 
-            if (oxygen && depth >= 0) {
-              // Calculate ATA from depth: (depth / 10) + 1
-              const ata = depth / 10 + 1;
-              // Calculate PO2: (O2% / 100) * ATA
+            if (oxygen && Number.isFinite(depthIn) && depthIn >= 0) {
+              const ata = depthM / 10 + 1;
               const po2 = (oxygen / 100) * ata;
+              const depthDisp = isImperial
+                ? `${depthIn.toFixed(1)} ft`
+                : `${depthIn.toFixed(1)} m`;
 
-              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} bar</span><br><small style="color: #666">at ${depth}m depth (${ata.toFixed(1)} ATA)</small>`;
+              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} bar</span><br><small style="color: #666">at ${depthDisp} (${ata.toFixed(1)} ATA)</small>`;
 
               if (po2 > 1.6) {
                 result.innerHTML +=
@@ -1451,6 +1923,7 @@
           }
 
           function calculateMOD() {
+            const isImperial = gcGetImperial();
             const oxygen = parseFloat(
               document.getElementById("modOxygen").value
             );
@@ -1460,15 +1933,18 @@
             const result = document.getElementById("modResult");
 
             if (oxygen && maxPPO2) {
-              // Correct formula: ((Max PPO2 / (O2/100)) - 1) * 10
-              const mod = (maxPPO2 / (oxygen / 100) - 1) * 10;
+              const modM = (maxPPO2 / (oxygen / 100) - 1) * 10;
+              const modDisp = isImperial
+                ? (modM / 0.3048).toFixed(1)
+                : modM.toFixed(1);
+              const modUnit = isImperial ? "feet" : "meters";
 
-              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${mod.toFixed(1)} meters</span><br><small style="color: #666">Max safe depth for ${oxygen}% O₂ at ${maxPPO2} bar PPO₂</small>`;
+              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${modDisp} ${modUnit}</span><br><small style="color: #666">Max safe depth for ${oxygen}% O₂ at ${maxPPO2} bar PPO₂</small>`;
 
-              if (mod < 18) {
+              if (modM < 18) {
                 result.innerHTML +=
                   '<br><small style="color: #3498db">💡 Shallow dive - great for beginners</small>';
-              } else if (mod > 40) {
+              } else if (modM > 40) {
                 result.innerHTML +=
                   '<br><small style="color: #f39c12">💡 Deep dive - advanced certification required</small>';
               } else {
@@ -1481,23 +1957,26 @@
           }
 
           function calculateBestMix() {
-            const depth = parseFloat(
+            const isImperial = gcGetImperial();
+            const depthIn = parseFloat(
               document.getElementById("bestmixDepth").value
             );
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const maxPPO2 = parseFloat(
               document.getElementById("bestmixMaxPPO2").value
             );
             const result = document.getElementById("bestmixResult");
 
-            if (depth >= 0 && maxPPO2) {
-              const ata = depth / 10 + 1;
+            if (Number.isFinite(depthIn) && depthIn >= 0 && maxPPO2) {
+              const ata = depthM / 10 + 1;
               const bestO2 = (maxPPO2 / ata) * 100;
+              const depthDisp = isImperial
+                ? `${depthIn.toFixed(1)} ft`
+                : `${depthIn.toFixed(1)} m`;
 
-              // Round to nearest common Nitrox mix
               let recommendedMix = Math.round(bestO2);
               let mixName = `EAN${recommendedMix}`;
 
-              // Suggest standard mixes if close
               if (bestO2 >= 31 && bestO2 <= 33) {
                 recommendedMix = 32;
                 mixName = "EAN32 (N32)";
@@ -1512,7 +1991,7 @@
                 mixName = "Air (21%)";
               }
 
-              result.innerHTML = `✅ Best Mix: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% for ${depth}m at ${maxPPO2} bar PPO₂</small>`;
+              result.innerHTML = `✅ Best Mix: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% for ${depthDisp} at ${maxPPO2} bar PPO₂</small>`;
 
               if (recommendedMix > 40) {
                 result.innerHTML +=
@@ -1594,7 +2073,9 @@
           }
 
           function calculateDecoSlateRow() {
+            const isImperial = gcGetImperial();
             const depthIn = parseFloat(document.getElementById("slateDepth").value);
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const timeIn = parseFloat(document.getElementById("slateTime").value);
             const sacIn = parseFloat(document.getElementById("slateSac").value);
             const gasStr = document.getElementById("slateGas").value;
@@ -1607,7 +2088,10 @@
 
             const fo2 = parseSlateO2Fraction(gasStr);
             const depthOk =
-              Number.isFinite(depthIn) && depthIn >= 0 && depthIn <= 120;
+              Number.isFinite(depthIn) &&
+              depthIn >= 0 &&
+              Number.isFinite(depthM) &&
+              depthM <= 120;
             const timeOk =
               Number.isFinite(timeIn) && timeIn >= 0 && timeIn <= 999;
             const sacOk =
@@ -1620,7 +2104,7 @@
               return;
             }
 
-            const ata = depthIn / 10 + 1;
+            const ata = depthM / 10 + 1;
             const ppo2 = fo2 * ata;
             const volume = sacIn * timeIn * ata;
             const maxMin = noaaCnsMaxMinutes(ppo2);
@@ -1637,6 +2121,8 @@
               cnsPerMin > 0 ? `${cnsPerMin.toFixed(3)} %` : "0 %";
             elCt.textContent = `${cnsSeg.toFixed(2)} %`;
           }
+
+          setGcCalcUnitLabels();
         </script>
 
         <hr />

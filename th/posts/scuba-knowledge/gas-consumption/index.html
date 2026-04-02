@@ -790,16 +790,272 @@
             font-family: var(--font-sans), 'Roboto', sans-serif;
           "
         >
+          <div
+            style="
+              margin-bottom: 1.1em;
+              padding: 14px 16px;
+              background: rgba(255, 255, 255, 0.75);
+              border: 1px solid rgba(0, 119, 182, 0.35);
+              border-radius: 8px;
+            "
+          >
+            <label
+              style="
+                display: block;
+                margin-bottom: 6px;
+                font-weight: 600;
+                color: #004d80;
+                font-size: 0.95rem;
+              "
+              >หน่วย (slate + เครื่องคำนวณด้านล่างทั้งหมด)</label
+            >
+            <select
+              id="gcCalcUnits"
+              style="
+                max-width: 320px;
+                width: 100%;
+                padding: 8px 10px;
+                border: 2px solid #0077b6;
+                border-radius: 8px;
+                font-size: 15px;
+                background: #fff;
+                box-sizing: border-box;
+              "
+              onchange="setGcCalcUnitLabels_th(true); recalcAllGc_th();"
+            >
+              <option value="metric" selected>bar &amp; เมตร (เมตริก)</option>
+              <option value="imperial">psi &amp; ฟุต (อิมพีเรียล)</option>
+            </select>
+            <p style="margin: 8px 0 0 0; font-size: 13px; color: #444; line-height: 1.45">
+              <strong>ความลึก</strong> ในแถว slate และใน PO₂ / MOD / best mix ใช้การตั้งค่านี้
+              SAC ใช้เพิ่มสำหรับแรงดัน (bar/psi) ความลึก และถัง (ลิตร / cu ft) O₂ % และ max
+              PPO₂ ยังเป็น <strong>บาร์</strong>
+            </p>
+          </div>
+          <div
+            id="gc-quick-converters"
+            style="
+              margin-bottom: 1.25em;
+              padding: 16px 18px;
+              background: rgba(255, 255, 255, 0.7);
+              border: 1px dashed rgba(0, 119, 182, 0.5);
+              border-radius: 10px;
+            "
+          >
+            <p
+              style="
+                margin: 0 0 6px 0;
+                font-weight: 600;
+                color: #004d80;
+                font-size: 1rem;
+              "
+            >
+              แปลงหน่วยด่วน
+            </p>
+            <p style="margin: 0 0 14px 0; font-size: 13px; color: #555; line-height: 1.45">
+              พิมพ์ในกล่องใดกล่องหนึ่ง — อีกกล่องจะอัปเดต เหมาะเมื่อเอกสารเรียนสลับเมตริกกับอิมพีเรียล
+            </p>
+            <div
+              style="
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+                gap: 14px;
+              "
+            >
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  ความลึก
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >ฟุต (ft)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcDepthFt"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="เช่น 100"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncDepth('ft')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >เมตร (m)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcDepthM"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="เช่น 30.5"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncDepth('m')"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  แรงดัน
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >PSI</label
+                    >
+                    <input
+                      type="number"
+                      id="qcPsi"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="เช่น 3000"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncPressure('psi')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >บาร์ (bar)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcBar"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="เช่น 200"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncPressure('bar')"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  ปริมาตร (ft³ จริง)
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >ลูกบาศก์ฟุต (ft³)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcCuFt"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="เช่น 1"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncVolume('cuft')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >ลิตร (L)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcLiters"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="เช่น 28.3"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncVolume('L')"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p style="margin: 12px 0 0 0; font-size: 12px; color: #666; line-height: 1.4">
+              ปริมาตรใช้ 1 ft³ = 28.317 L (ปริมาตรทางเรขาคณิต) คำว่า “80 cu ft” บนถังหมายถึง
+              <em>ความจุแก๊ส</em> ตามแรงดันออกแบบ — ไม่ใช่ปริมาตรของเหลวใน ft³ สำหรับแรงดันและการใช้แก๊สให้ใช้เครื่องคำนวณ SAC ด้านล่าง
+            </p>
+          </div>
           <h3 style="margin: 0 0 8px 0; color: #004d80; font-size: 1.15rem">
             แผนการดำน้ำ (slate) — คำนวณหนึ่งช่วง
           </h3>
           <p style="margin: 0 0 1em 0; color: #333; font-size: 15px; line-height: 1.55">
             กรอก <strong>หนึ่ง</strong> ช่วง (ก้นทะเลหรือดีคอมสต็อป) คอลัมน์เดียวกับตารางด้านบน
+            (<strong>ความลึก</strong> เป็น <strong>เมตรหรือฟุต</strong> ตามตัวเลือกหน่วยด้านบน)
             เพื่อหา <strong>แรงดัน (ata)</strong> <strong>ปริมาณแก๊ส</strong>
             <strong>PO₂</strong> และ <strong>CNS</strong> โดยประมาณ (แบบ NOAA) สำหรับช่วงนั้น
             ใช้ซ้ำทีละบรรทัดเมื่อคัดลอกไปใส่แผนลงมือ — เช่น สามสถานการณ์:
             <em>ตามแผน</em> <em>ลึกเกิน 5 ม. โดยไม่ตั้งใจ</em> และ
-            <em>แก๊สดีคอมสูญหาย</em> (คำนวณใหม่เมื่อความลึก เวลา หรือส่วนผสม            เปลี่ยน)
+            <em>แก๊สดีคอมสูญหาย</em> (คำนวณใหม่เมื่อความลึก เวลา หรือส่วนผสมเปลี่ยน)
           </p>
           <p style="margin: 0 0 1em 0; font-size: 15px">
             <a
@@ -855,7 +1111,9 @@
                     color: white;
                   "
                 >
-                  <th style="padding: 10px 8px; text-align: left">ความลึก (ม.)</th>
+                  <th style="padding: 10px 8px; text-align: left">
+                    ความลึก (<span id="gcSlateDepthUnitLabel">ม.</span>)
+                  </th>
                   <th style="padding: 10px 8px; text-align: left">เวลา (นาที)</th>
                   <th style="padding: 10px 8px; text-align: left">SAC (ลิตร/นาที)</th>
                   <th style="padding: 10px 8px; text-align: left">แก๊ส</th>
@@ -1079,6 +1337,16 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           "
         >
+          <p
+            style="
+              margin: 0 0 20px 0;
+              font-size: 14px;
+              color: #444;
+              line-height: 1.5;
+            "
+          >
+            <strong>หน่วย:</strong> เลือกที่กล่อง <strong>แผน slate</strong> ด้านบน (ใช้กับบล็อกนี้ด้วย)
+          </p>
           <!-- SAC Calculator -->
           <div style="margin-bottom: 30px">
             <h3 style="color: #0077b6; margin-bottom: 15px">
@@ -1095,7 +1363,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ใช้แก๊ส (บาร์):</label
+                  >ใช้แก๊ส (<span id="gcSacPressureUnit">bar</span>):</label
                 >
                 <input
                   type="number"
@@ -1114,7 +1382,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ความลึก (เมตร):</label
+                  >ความลึก (<span id="gcSacDepthUnit">เมตร</span>):</label
                 >
                 <input
                   type="number"
@@ -1152,7 +1420,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ขนาดถัง (ลิตร):</label
+                  >ขนาดถัง (<span id="gcSacTankUnit">ลิตร</span>):</label
                 >
                 <input
                   type="number"
@@ -1227,7 +1495,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ความลึกที่วางแผน (เมตร):</label
+                  >ความลึกที่วางแผน (<span id="gcPo2DepthUnit">เมตร</span>):</label
                 >
                 <input
                   type="number"
@@ -1356,7 +1624,7 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ความลึกที่วางแผน (เมตร):</label
+                  >ความลึกที่วางแผน (<span id="gcBestDepthUnit">เมตร</span>):</label
                 >
                 <input
                   type="number"
@@ -1416,25 +1684,225 @@
         </div>
 
         <script>
+          let qcLockDepth = false;
+          let qcLockPressure = false;
+          let qcLockVolume = false;
+
+          function qcFormatNum(n, maxDec) {
+            if (!Number.isFinite(n)) return "";
+            let s = n.toFixed(maxDec);
+            if (s.includes(".")) {
+              s = s.replace(/(\.\d*?)0+$/, "$1").replace(/\.$/, "");
+            }
+            return s;
+          }
+
+          function qcSyncDepth(from) {
+            if (qcLockDepth) return;
+            const ftEl = document.getElementById("qcDepthFt");
+            const mEl = document.getElementById("qcDepthM");
+            if (!ftEl || !mEl) return;
+            qcLockDepth = true;
+            try {
+              const k = 0.3048;
+              if (from === "ft") {
+                const raw = ftEl.value.trim();
+                if (raw === "") {
+                  mEl.value = "";
+                  return;
+                }
+                const ft = parseFloat(raw);
+                mEl.value = Number.isFinite(ft) ? qcFormatNum(ft * k, 4) : "";
+              } else {
+                const raw = mEl.value.trim();
+                if (raw === "") {
+                  ftEl.value = "";
+                  return;
+                }
+                const m = parseFloat(raw);
+                ftEl.value = Number.isFinite(m) ? qcFormatNum(m / k, 4) : "";
+              }
+            } finally {
+              qcLockDepth = false;
+            }
+          }
+
+          function qcSyncPressure(from) {
+            if (qcLockPressure) return;
+            const psiEl = document.getElementById("qcPsi");
+            const barEl = document.getElementById("qcBar");
+            if (!psiEl || !barEl) return;
+            const k = 14.5037738;
+            qcLockPressure = true;
+            try {
+              if (from === "psi") {
+                const raw = psiEl.value.trim();
+                if (raw === "") {
+                  barEl.value = "";
+                  return;
+                }
+                const psi = parseFloat(raw);
+                barEl.value = Number.isFinite(psi) ? qcFormatNum(psi / k, 4) : "";
+              } else {
+                const raw = barEl.value.trim();
+                if (raw === "") {
+                  psiEl.value = "";
+                  return;
+                }
+                const bar = parseFloat(raw);
+                psiEl.value = Number.isFinite(bar) ? qcFormatNum(bar * k, 2) : "";
+              }
+            } finally {
+              qcLockPressure = false;
+            }
+          }
+
+          function qcSyncVolume(from) {
+            if (qcLockVolume) return;
+            const cfEl = document.getElementById("qcCuFt");
+            const lEl = document.getElementById("qcLiters");
+            if (!cfEl || !lEl) return;
+            const L_PER_CUFT = 28.316846592;
+            qcLockVolume = true;
+            try {
+              if (from === "cuft") {
+                const raw = cfEl.value.trim();
+                if (raw === "") {
+                  lEl.value = "";
+                  return;
+                }
+                const cf = parseFloat(raw);
+                lEl.value = Number.isFinite(cf) ? qcFormatNum(cf * L_PER_CUFT, 3) : "";
+              } else {
+                const raw = lEl.value.trim();
+                if (raw === "") {
+                  cfEl.value = "";
+                  return;
+                }
+                const L = parseFloat(raw);
+                cfEl.value = Number.isFinite(L) ? qcFormatNum(L / L_PER_CUFT, 4) : "";
+              }
+            } finally {
+              qcLockVolume = false;
+            }
+          }
+
+          const GC_LITERS_PER_CUFT = 11.1 / 80;
+          const GC_CUFT_PER_LITER = 80 / 11.1;
+
+          function gcGetImperial() {
+            const el = document.getElementById("gcCalcUnits");
+            return el && el.value === "imperial";
+          }
+
+          function gcDepthInputToMeters(raw, isImperial) {
+            if (!Number.isFinite(raw)) return NaN;
+            return isImperial ? raw * 0.3048 : raw;
+          }
+
+          function setGcCalcUnitLabels_th(convertTank = false) {
+            const unitSelect = document.getElementById("gcCalcUnits");
+            if (!unitSelect) return;
+            const units = unitSelect.value;
+            const prev = unitSelect.dataset.lastUnit || units;
+            const imp = units === "imperial";
+            const tankEl = document.getElementById("sacTank_th");
+
+            if (convertTank && prev !== units && tankEl) {
+              const tv = parseFloat(tankEl.value);
+              if (!isNaN(tv) && tv > 0) {
+                tankEl.value =
+                  units === "imperial"
+                    ? (tv * GC_CUFT_PER_LITER).toFixed(1).replace(/\.0$/, "")
+                    : (tv * GC_LITERS_PER_CUFT).toFixed(1).replace(/\.0$/, "");
+              } else {
+                tankEl.value = units === "imperial" ? "80" : "12";
+              }
+            }
+
+            document.getElementById("gcSacPressureUnit").textContent = imp
+              ? "psi"
+              : "bar";
+            document.getElementById("gcSacDepthUnit").textContent = imp
+              ? "ฟุต"
+              : "เมตร";
+            document.getElementById("gcSacTankUnit").textContent = imp
+              ? "cu ft"
+              : "ลิตร";
+            document.getElementById("gcPo2DepthUnit").textContent = imp
+              ? "ฟุต"
+              : "เมตร";
+            document.getElementById("gcBestDepthUnit").textContent = imp
+              ? "ฟุต"
+              : "เมตร";
+            const slateLbl = document.getElementById("gcSlateDepthUnitLabel");
+            if (slateLbl) slateLbl.textContent = imp ? "ft" : "ม.";
+
+            const sb = document.getElementById("sacBar_th");
+            const sd = document.getElementById("sacDepth_th");
+            const pd = document.getElementById("po2Depth_th");
+            const bd = document.getElementById("bestmixDepth_th");
+            const sl = document.getElementById("slateDepth");
+            if (sb) sb.placeholder = imp ? "เช่น 1450" : "เช่น 100";
+            if (sd) sd.placeholder = imp ? "เช่น 100" : "เช่น 30";
+            if (tankEl) tankEl.placeholder = imp ? "เช่น 80" : "เช่น 12";
+            if (pd) pd.placeholder = imp ? "เช่น 130" : "เช่น 40";
+            if (bd) bd.placeholder = imp ? "เช่น 100" : "เช่น 30";
+            if (sl) sl.placeholder = imp ? "100" : "30";
+
+            unitSelect.dataset.lastUnit = units;
+          }
+
+          function recalcAllGc_th() {
+            calculateSAC_th();
+            calculatePO2_th();
+            calculateMOD_th();
+            calculateBestMix_th();
+            calculateDecoSlateRow();
+          }
+
           function calculateSAC_th() {
-            const bar = parseFloat(document.getElementById("sacBar_th").value);
-            const depth = parseFloat(
+            const isImperial = gcGetImperial();
+            const pressureInput = parseFloat(
+              document.getElementById("sacBar_th").value
+            );
+            const depthIn = parseFloat(
               document.getElementById("sacDepth_th").value
             );
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const time = parseFloat(
               document.getElementById("sacTime_th").value
             );
-            const tank = parseFloat(
+            const tankIn = parseFloat(
               document.getElementById("sacTank_th").value
             );
             const result = document.getElementById("sacResult_th");
+            const pu = isImperial ? "psi" : "bar";
+            const du = isImperial ? "ft" : "ม.";
+            const tu = isImperial ? "cu ft" : "ลิตร";
 
-            if (bar && depth >= 0 && time && tank) {
-              const ata = depth / 10 + 1;
-              const liters = bar * tank;
+            if (
+              Number.isFinite(pressureInput) &&
+              pressureInput > 0 &&
+              Number.isFinite(depthM) &&
+              depthM >= 0 &&
+              Number.isFinite(time) &&
+              time > 0 &&
+              Number.isFinite(tankIn) &&
+              tankIn > 0
+            ) {
+              const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
+              const tankL = isImperial ? tankIn * GC_LITERS_PER_CUFT : tankIn;
+              const ata = depthM / 10 + 1;
+              const liters = bar * tankL;
               const sac = liters / (time * ata);
 
-              result.innerHTML = `✅ SAC Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">การใช้แก๊ส: ${liters}L ที่ ${ata.toFixed(1)} ATA</small>`;
+              let html = `✅ SAC Rate: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666">การใช้แก๊ส: ${liters.toFixed(0)} L ที่ ${ata.toFixed(1)} ATA</small>`;
+              if (isImperial) {
+                html +=
+                  '<br><small style="color: #666">(แปลง psi, ft, cu ft เป็น bar, m, L ภายใน)</small>';
+              }
+              result.innerHTML = html;
 
               if (sac > 25) {
                 result.innerHTML +=
@@ -1444,24 +1912,29 @@
                   '<br><small style="color: #27ae60">🌟 SAC rate ยอดเยี่ยม!</small>';
               }
             } else {
-              result.textContent = "ใส่ค่าเพื่อคำนวณ SAC rate";
+              result.textContent = `กรอกแก๊ส (${pu}) ความลึก (${du}) เวลา ถัง (${tu})`;
             }
           }
 
           function calculatePO2_th() {
+            const isImperial = gcGetImperial();
             const oxygen = parseFloat(
               document.getElementById("po2Oxygen_th").value
             );
-            const depth = parseFloat(
+            const depthIn = parseFloat(
               document.getElementById("po2Depth_th").value
             );
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const result = document.getElementById("po2Result_th");
 
-            if (oxygen && depth >= 0) {
-              const ata = depth / 10 + 1;
+            if (oxygen && Number.isFinite(depthIn) && depthIn >= 0) {
+              const ata = depthM / 10 + 1;
               const po2 = (oxygen / 100) * ata;
+              const depthDisp = isImperial
+                ? `${depthIn.toFixed(1)} ft`
+                : `${depthIn.toFixed(1)} ม.`;
 
-              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} บาร์</span><br><small style="color: #666">ที่ความลึก ${depth}ม. (${ata.toFixed(1)} ATA)</small>`;
+              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} บาร์</span><br><small style="color: #666">ที่ความลึก ${depthDisp} (${ata.toFixed(1)} ATA)</small>`;
 
               if (po2 > 1.6) {
                 result.innerHTML +=
@@ -1482,6 +1955,7 @@
           }
 
           function calculateMOD_th() {
+            const isImperial = gcGetImperial();
             const oxygen = parseFloat(
               document.getElementById("modOxygen_th").value
             );
@@ -1491,14 +1965,18 @@
             const result = document.getElementById("modResult_th");
 
             if (oxygen && maxPPO2) {
-              const mod = (maxPPO2 / (oxygen / 100) - 1) * 10;
+              const modM = (maxPPO2 / (oxygen / 100) - 1) * 10;
+              const modDisp = isImperial
+                ? (modM / 0.3048).toFixed(1)
+                : modM.toFixed(1);
+              const modUnit = isImperial ? "ฟุต" : "เมตร";
 
-              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${mod.toFixed(1)} เมตร</span><br><small style="color: #666">ความลึกสูงสุดที่ปลอดภัยสำหรับ ${oxygen}% O₂ ที่ ${maxPPO2} บาร์ PPO₂</small>`;
+              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${modDisp} ${modUnit}</span><br><small style="color: #666">ความลึกสูงสุดที่ปลอดภัยสำหรับ ${oxygen}% O₂ ที่ ${maxPPO2} บาร์ PPO₂</small>`;
 
-              if (mod < 18) {
+              if (modM < 18) {
                 result.innerHTML +=
                   '<br><small style="color: #3498db">💡 การดำน้ำตื้น - เหมาะสำหรับผู้เริ่มต้น</small>';
-              } else if (mod > 40) {
+              } else if (modM > 40) {
                 result.innerHTML +=
                   '<br><small style="color: #f39c12">💡 การดำน้ำลึก - ต้องมีใบรับรองขั้นสูง</small>';
               } else {
@@ -1511,17 +1989,22 @@
           }
 
           function calculateBestMix_th() {
-            const depth = parseFloat(
+            const isImperial = gcGetImperial();
+            const depthIn = parseFloat(
               document.getElementById("bestmixDepth_th").value
             );
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const maxPPO2 = parseFloat(
               document.getElementById("bestmixMaxPPO2_th").value
             );
             const result = document.getElementById("bestmixResult_th");
 
-            if (depth >= 0 && maxPPO2) {
-              const ata = depth / 10 + 1;
+            if (Number.isFinite(depthIn) && depthIn >= 0 && maxPPO2) {
+              const ata = depthM / 10 + 1;
               const bestO2 = (maxPPO2 / ata) * 100;
+              const depthDisp = isImperial
+                ? `${depthIn.toFixed(1)} ft`
+                : `${depthIn.toFixed(1)} ม.`;
 
               let recommendedMix = Math.round(bestO2);
               let mixName = `EAN${recommendedMix}`;
@@ -1540,7 +2023,7 @@
                 mixName = "อากาศ (21%)";
               }
 
-              result.innerHTML = `✅ ผสมที่ดีที่สุด: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">O₂ ที่เหมาะสม: ${bestO2.toFixed(1)}% สำหรับ ${depth}ม. ที่ ${maxPPO2} บาร์ PPO₂</small>`;
+              result.innerHTML = `✅ ผสมที่ดีที่สุด: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">O₂ ที่เหมาะสม: ${bestO2.toFixed(1)}% สำหรับ ${depthDisp} ที่ ${maxPPO2} บาร์ PPO₂</small>`;
 
               if (recommendedMix > 40) {
                 result.innerHTML +=
@@ -1621,7 +2104,9 @@
           }
 
           function calculateDecoSlateRow() {
+            const isImperial = gcGetImperial();
             const depthIn = parseFloat(document.getElementById("slateDepth").value);
+            const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const timeIn = parseFloat(document.getElementById("slateTime").value);
             const sacIn = parseFloat(document.getElementById("slateSac").value);
             const gasStr = document.getElementById("slateGas").value;
@@ -1634,7 +2119,10 @@
 
             const fo2 = parseSlateO2Fraction(gasStr);
             const depthOk =
-              Number.isFinite(depthIn) && depthIn >= 0 && depthIn <= 120;
+              Number.isFinite(depthIn) &&
+              depthIn >= 0 &&
+              Number.isFinite(depthM) &&
+              depthM <= 120;
             const timeOk =
               Number.isFinite(timeIn) && timeIn >= 0 && timeIn <= 999;
             const sacOk =
@@ -1647,7 +2135,7 @@
               return;
             }
 
-            const ata = depthIn / 10 + 1;
+            const ata = depthM / 10 + 1;
             const ppo2 = fo2 * ata;
             const volume = sacIn * timeIn * ata;
             const maxMin = noaaCnsMaxMinutes(ppo2);
@@ -1664,6 +2152,8 @@
               cnsPerMin > 0 ? `${cnsPerMin.toFixed(3)} %` : "0 %";
             elCt.textContent = `${cnsSeg.toFixed(2)} %`;
           }
+
+          setGcCalcUnitLabels_th();
         </script>
 
         <hr />
