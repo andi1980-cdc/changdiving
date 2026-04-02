@@ -782,7 +782,7 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >ขนาดถัง (L)</label
+                >ขนาดถัง (<span id="dlSacTankUnit">L</span>)</label
               >
               <input
                 type="number"
@@ -851,7 +851,8 @@
             ถ้าไม่กรอก <strong>ความลึกเฉลี่ย</strong> ระบบใช้
             <strong>60% × ความลึกสูงสุด</strong> (ประมาณการแบบเกาะช้าง)
             ถ้ากรอกความลึกเฉลี่ย จะใช้ค่านั้น และสามารถสลับหน่วย
-            <strong>bar/m</strong> กับ <strong>psi/ft</strong> ได้
+            <strong>bar/m</strong> กับ <strong>psi/ft</strong> ได้ (โหมด imperial
+            ให้กรอกขนาดถังเป็น <strong>cu ft</strong>)
           </p>
           <div
             id="dlSacResult"
@@ -1049,8 +1050,12 @@
     </main>
     <script>
       function setDiveLogUnitLabels() {
-        const units = document.getElementById("dlSacUnits").value;
+        const unitsEl = document.getElementById("dlSacUnits");
+        const units = unitsEl.value;
         const isImperial = units === "imperial";
+        const lastUnits = unitsEl.dataset.lastUnits || units;
+        const tankInput = document.getElementById("dlSacTank");
+        const tankValue = parseFloat(tankInput.value);
         document.getElementById("dlSacPressureUnit").textContent = isImperial
           ? "psi"
           : "bar";
@@ -1060,12 +1065,26 @@
         document.getElementById("dlSacAvgDepthUnit").textContent = isImperial
           ? "ft"
           : "m";
+        document.getElementById("dlSacTankUnit").textContent = isImperial
+          ? "cu ft"
+          : "L";
         document.getElementById("dlSacBar").placeholder = isImperial
           ? "เช่น 1450"
           : "เช่น 100";
         document.getElementById("dlSacMaxDepth").placeholder = isImperial
           ? "เช่น 60"
           : "เช่น 18";
+        tankInput.placeholder = isImperial ? "เช่น 80" : "เช่น 12";
+
+        if (!isNaN(tankValue) && tankValue > 0 && lastUnits !== units) {
+          tankInput.value =
+            lastUnits === "imperial"
+              ? (tankValue * 11.1 / 80).toFixed(1)
+              : (tankValue * 80 / 11.1).toFixed(1);
+        } else if (lastUnits !== units) {
+          tankInput.value = isImperial ? "80" : "12";
+        }
+        unitsEl.dataset.lastUnits = units;
       }
 
       function calculateDiveLogSAC() {
@@ -1073,11 +1092,12 @@
         const isImperial = units === "imperial";
         const pressureInput = parseFloat(document.getElementById("dlSacBar").value);
         const time = parseFloat(document.getElementById("dlSacTime").value);
-        const tank = parseFloat(document.getElementById("dlSacTank").value);
+        const tankInput = parseFloat(document.getElementById("dlSacTank").value);
         const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
         const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
         const result = document.getElementById("dlSacResult");
         const pressureUnit = isImperial ? "psi" : "bar";
+        const tankUnit = isImperial ? "cu ft" : "L";
 
         let depthM;
         let depthNote;
@@ -1103,23 +1123,24 @@
           pressureInput <= 0 ||
           !time ||
           time <= 0 ||
-          !tank ||
-          tank <= 0
+          !tankInput ||
+          tankInput <= 0
         ) {
           result.innerHTML =
-            `<span>กรอก <strong>แก๊ส (${pressureUnit})</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง</strong></span>`;
+            `<span>กรอก <strong>แก๊ส (${pressureUnit})</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง (${tankUnit})</strong></span>`;
           return;
         }
 
         const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
+        const tankLiters = isImperial ? tankInput * 11.1 / 80 : tankInput;
         const ata = depthM / 10 + 1;
-        const liters = bar * tank;
+        const liters = bar * tankLiters;
         const sac = liters / (time * ata);
 
         let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>แก๊ส ${liters.toFixed(0)} L ใน ${time} นาที ที่ ${ata.toFixed(2)} ATA</small>`;
         if (isImperial) {
           html +=
-            '<br><small style="color: #666; font-weight: normal">(ระบบแปลง psi/ft เป็น bar/m ภายใน)</small>';
+            '<br><small style="color: #666; font-weight: normal">(ระบบแปลง psi/ft และ cu ft เป็น bar/m/L ภายใน)</small>';
         }
         if (sac > 25) {
           html +=
