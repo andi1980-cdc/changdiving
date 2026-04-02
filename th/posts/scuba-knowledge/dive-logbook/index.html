@@ -705,6 +705,29 @@
           <h3 style="color: #0077b6; margin: 0 0 12px 0">
             📊 เครื่องคำนวณ SAC (จากล็อกบุ๊ก)
           </h3>
+          <div style="margin-bottom: 14px">
+            <label
+              for="dlSacUnits"
+              style="display: block; margin-bottom: 6px; font-weight: 600"
+              >หน่วย</label
+            >
+            <select
+              id="dlSacUnits"
+              style="
+                max-width: 320px;
+                width: 100%;
+                padding: 10px;
+                border: 2px solid #ddd;
+                border-radius: 6px;
+                font-size: 16px;
+                box-sizing: border-box;
+              "
+              onchange="dlSacUpdateUnits()"
+            >
+              <option value="metric">เมตริก (bar, ลิตร, เมตร)</option>
+              <option value="imperial">สหรัฐ (psi, cu ft, ฟุต)</option>
+            </select>
+          </div>
           <div
             style="
               display: grid;
@@ -715,6 +738,8 @@
           >
             <div>
               <label
+                id="dlSacLabelPressure"
+                for="dlSacBar"
                 style="display: block; margin-bottom: 4px; font-weight: 500"
                 >แก๊สที่ใช้ (bar)</label
               >
@@ -737,6 +762,7 @@
             </div>
             <div>
               <label
+                for="dlSacTime"
                 style="display: block; margin-bottom: 4px; font-weight: 500"
                 >เวลา (นาที)</label
               >
@@ -759,6 +785,8 @@
             </div>
             <div>
               <label
+                id="dlSacLabelTank"
+                for="dlSacTank"
                 style="display: block; margin-bottom: 4px; font-weight: 500"
                 >ขนาดถัง (L)</label
               >
@@ -780,8 +808,35 @@
                 oninput="calculateDiveLogSAC()"
               />
             </div>
+            <div id="dlSacRatedWrap" style="display: none">
+              <label
+                id="dlSacLabelRated"
+                for="dlSacRatedPsi"
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >แรงดันเติมมาตรฐาน (psi)</label
+              >
+              <input
+                type="number"
+                id="dlSacRatedPsi"
+                value="3000"
+                placeholder="เช่น 3000"
+                min="0"
+                step="any"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                "
+                oninput="calculateDiveLogSAC()"
+              />
+            </div>
             <div>
               <label
+                id="dlSacLabelMaxDepth"
+                for="dlSacMaxDepth"
                 style="display: block; margin-bottom: 4px; font-weight: 500"
                 >ความลึกสูงสุด (m)</label
               >
@@ -804,6 +859,8 @@
             </div>
             <div>
               <label
+                id="dlSacLabelAvgDepth"
+                for="dlSacAvgDepth"
                 style="display: block; margin-bottom: 4px; font-weight: 500"
                 >ความลึกเฉลี่ย (m) ไม่บังคับ</label
               >
@@ -825,7 +882,10 @@
               />
             </div>
           </div>
-          <p style="margin: 0 0 12px 0; font-size: 13px; color: #555">
+          <p
+            id="dlSacHint"
+            style="margin: 0 0 12px 0; font-size: 13px; color: #555"
+          >
             ถ้าไม่กรอก <strong>ความลึกเฉลี่ย</strong> ระบบใช้
             <strong>60% × ความลึกสูงสุด</strong> (ประมาณการแบบเกาะช้าง)
             ถ้ากรอกความลึกเฉลี่ย จะใช้ค่านั้น
@@ -1025,39 +1085,127 @@
       </div>
     </main>
     <script>
+      const DL_SAC_CUFT_PER_L = 28.316846592;
+
+      function dlSacUpdateUnits() {
+        const imp =
+          document.getElementById("dlSacUnits").value === "imperial";
+        document.getElementById("dlSacRatedWrap").style.display = imp
+          ? "block"
+          : "none";
+        document.getElementById("dlSacLabelPressure").textContent = imp
+          ? "แก๊สที่ใช้ (psi)"
+          : "แก๊สที่ใช้ (bar)";
+        document.getElementById("dlSacLabelTank").textContent = imp
+          ? "ขนาดถัง (cu ft @ แรงดันมาตรฐาน)"
+          : "ขนาดถัง (L)";
+        document.getElementById("dlSacLabelMaxDepth").textContent = imp
+          ? "ความลึกสูงสุด (ft)"
+          : "ความลึกสูงสุด (m)";
+        document.getElementById("dlSacLabelAvgDepth").textContent = imp
+          ? "ความลึกเฉลี่ย (ft) ไม่บังคับ"
+          : "ความลึกเฉลี่ย (m) ไม่บังคับ";
+        document.getElementById("dlSacBar").placeholder = imp
+          ? "เช่น 1500"
+          : "เช่น 100";
+        document.getElementById("dlSacTank").placeholder = imp
+          ? "เช่น 80"
+          : "เช่น 12";
+        document.getElementById("dlSacMaxDepth").placeholder = imp
+          ? "เช่น 60"
+          : "เช่น 18";
+        document.getElementById("dlSacHint").innerHTML = imp
+          ? "ถ้าไม่กรอก <strong>ความลึกเฉลี่ย</strong> ใช้ <strong>60% × ความลึกสูงสุด</strong> (ฟุต) ATA ตามน้ำเค็ม (ความลึก ft ÷ 33) <strong>แรงดันเติมมาตรฐาน</strong> มักเป็น 3000 psi บางถัง HP เหล็กใช้ 3442 psi"
+          : "ถ้าไม่กรอก <strong>ความลึกเฉลี่ย</strong> ระบบใช้ <strong>60% × ความลึกสูงสุด</strong> (ประมาณการแบบเกาะช้าง) ถ้ากรอกความลึกเฉลี่ย จะใช้ค่านั้น";
+        calculateDiveLogSAC();
+      }
+
       function calculateDiveLogSAC() {
-        const bar = parseFloat(document.getElementById("dlSacBar").value);
+        const imp =
+          document.getElementById("dlSacUnits").value === "imperial";
+        const pressure = parseFloat(
+          document.getElementById("dlSacBar").value
+        );
         const time = parseFloat(document.getElementById("dlSacTime").value);
         const tank = parseFloat(document.getElementById("dlSacTank").value);
-        const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
+        const maxD = parseFloat(
+          document.getElementById("dlSacMaxDepth").value
+        );
+        const avgIn = parseFloat(
+          document.getElementById("dlSacAvgDepth").value
+        );
+        const ratedPsi = parseFloat(
+          document.getElementById("dlSacRatedPsi").value
+        );
         const result = document.getElementById("dlSacResult");
 
-        let depthM;
+        let ata;
         let depthNote;
         if (!isNaN(avgIn) && avgIn > 0) {
-          depthM = avgIn;
-          depthNote = `ความลึกเฉลี่ย <strong>${avgIn.toFixed(1)} m</strong> (จากที่กรอก)`;
+          if (imp) {
+            ata = avgIn / 33 + 1;
+            depthNote = `ความลึกเฉลี่ย <strong>${avgIn.toFixed(1)} ft</strong> (จากที่กรอก)`;
+          } else {
+            ata = avgIn / 10 + 1;
+            depthNote = `ความลึกเฉลี่ย <strong>${avgIn.toFixed(1)} m</strong> (จากที่กรอก)`;
+          }
         } else if (!isNaN(maxD) && maxD > 0) {
-          depthM = maxD * 0.6;
-          depthNote = `ประมาณความลึกเฉลี่ย: <strong>60% ของความลึกสูงสุด</strong> → ${depthM.toFixed(1)} m (max ${maxD.toFixed(1)} m)`;
+          if (imp) {
+            const avgFt = maxD * 0.6;
+            ata = avgFt / 33 + 1;
+            depthNote = `ประมาณความลึกเฉลี่ย: <strong>60% ของความลึกสูงสุด</strong> → ${avgFt.toFixed(1)} ft (max ${maxD.toFixed(1)} ft)`;
+          } else {
+            const avgM = maxD * 0.6;
+            ata = avgM / 10 + 1;
+            depthNote = `ประมาณความลึกเฉลี่ย: <strong>60% ของความลึกสูงสุด</strong> → ${avgM.toFixed(1)} m (max ${maxD.toFixed(1)} m)`;
+          }
         } else {
-          result.innerHTML =
-            "<span>กรอก <strong>ความลึกสูงสุด</strong> (หรือ <strong>ความลึกเฉลี่ย</strong> จากคอมพิวเตอร์)</span>";
+          result.innerHTML = imp
+            ? "<span>กรอก <strong>ความลึกสูงสุด (ft)</strong> (หรือ <strong>ความลึกเฉลี่ย (ft)</strong> จากคอมพิวเตอร์)</span>"
+            : "<span>กรอก <strong>ความลึกสูงสุด</strong> (หรือ <strong>ความลึกเฉลี่ย</strong> จากคอมพิวเตอร์)</span>";
           return;
         }
 
-        if (!bar || bar <= 0 || !time || time <= 0 || !tank || tank <= 0) {
-          result.innerHTML =
-            "<span>กรอก <strong>แก๊ส (bar)</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง</strong></span>";
-          return;
+        let liters;
+        if (imp) {
+          if (
+            !pressure ||
+            pressure <= 0 ||
+            !time ||
+            time <= 0 ||
+            !tank ||
+            tank <= 0 ||
+            !ratedPsi ||
+            ratedPsi <= 0
+          ) {
+            result.innerHTML =
+              "<span>กรอก <strong>แก๊ส (psi)</strong> <strong>เวลา</strong> <strong>ถัง (cu ft)</strong> และ <strong>แรงดันเติม (psi)</strong></span>";
+            return;
+          }
+          const cuFt = (pressure / ratedPsi) * tank;
+          liters = cuFt * DL_SAC_CUFT_PER_L;
+        } else {
+          if (
+            !pressure ||
+            pressure <= 0 ||
+            !time ||
+            time <= 0 ||
+            !tank ||
+            tank <= 0
+          ) {
+            result.innerHTML =
+              "<span>กรอก <strong>แก๊ส (bar)</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง</strong></span>";
+            return;
+          }
+          liters = pressure * tank;
         }
 
-        const ata = depthM / 10 + 1;
-        const liters = bar * tank;
         const sac = liters / (time * ata);
+        const gasDetail = imp
+          ? `${(liters / DL_SAC_CUFT_PER_L).toFixed(1)} cu ft (≈ ${liters.toFixed(0)} L) ใน ${time} นาที ที่ ${ata.toFixed(2)} ATA`
+          : `แก๊ส ${liters.toFixed(0)} L ใน ${time} นาที ที่ ${ata.toFixed(2)} ATA`;
 
-        let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>แก๊ส ${liters.toFixed(0)} L ใน ${time} นาที ที่ ${ata.toFixed(2)} ATA</small>`;
+        let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>${gasDetail}</small>`;
         if (sac > 25) {
           html +=
             '<br><small style="color: #f39c12; font-weight: normal">⚠️ SAC สูง — ฝึกหายใจให้นุ่มนวล</small>';
