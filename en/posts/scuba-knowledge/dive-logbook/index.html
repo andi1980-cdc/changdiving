@@ -721,7 +721,29 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Gas used (bar)</label
+                >Units</label
+              >
+              <select
+                id="dlSacUnits"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                  background: #fff;
+                "
+                onchange="setDiveLogUnitLabels(); calculateDiveLogSAC();"
+              >
+                <option value="metric" selected>bar &amp; meters</option>
+                <option value="imperial">psi &amp; feet</option>
+              </select>
+            </div>
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Gas used (<span id="dlSacPressureUnit">bar</span>)</label
               >
               <input
                 type="number"
@@ -788,7 +810,7 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Max depth (m)</label
+                >Max depth (<span id="dlSacDepthUnit">m</span>)</label
               >
               <input
                 type="number"
@@ -810,7 +832,7 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Avg depth (m), optional</label
+                >Avg depth (<span id="dlSacAvgDepthUnit">m</span>), optional</label
               >
               <input
                 type="number"
@@ -833,7 +855,8 @@
           <p style="margin: 0 0 12px 0; font-size: 13px; color: #555">
             If <strong>average depth</strong> is empty, we use
             <strong>60% × max depth</strong> (Koh Chang-style estimate). If you
-            enter average depth, we use that value.
+            enter average depth, we use that value. You can switch between
+            <strong>bar/m</strong> and <strong>psi/ft</strong>.
           </p>
           <div
             id="dlSacResult"
@@ -1035,39 +1058,79 @@
       </div>
     </main>
     <script>
+      function setDiveLogUnitLabels() {
+        const units = document.getElementById("dlSacUnits").value;
+        const isImperial = units === "imperial";
+        document.getElementById("dlSacPressureUnit").textContent = isImperial
+          ? "psi"
+          : "bar";
+        document.getElementById("dlSacDepthUnit").textContent = isImperial
+          ? "ft"
+          : "m";
+        document.getElementById("dlSacAvgDepthUnit").textContent = isImperial
+          ? "ft"
+          : "m";
+        document.getElementById("dlSacBar").placeholder = isImperial
+          ? "e.g. 1450"
+          : "e.g. 100";
+        document.getElementById("dlSacMaxDepth").placeholder = isImperial
+          ? "e.g. 60"
+          : "e.g. 18";
+      }
+
       function calculateDiveLogSAC() {
-        const bar = parseFloat(document.getElementById("dlSacBar").value);
+        const units = document.getElementById("dlSacUnits").value;
+        const isImperial = units === "imperial";
+        const pressureInput = parseFloat(document.getElementById("dlSacBar").value);
         const time = parseFloat(document.getElementById("dlSacTime").value);
         const tank = parseFloat(document.getElementById("dlSacTank").value);
         const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
         const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
         const result = document.getElementById("dlSacResult");
+        const pressureUnit = isImperial ? "psi" : "bar";
 
         let depthM;
         let depthNote;
         if (!isNaN(avgIn) && avgIn > 0) {
-          depthM = avgIn;
-          depthNote = `Average depth <strong>${avgIn.toFixed(1)} m</strong> (from your entry).`;
+          depthM = isImperial ? avgIn * 0.3048 : avgIn;
+          depthNote = isImperial
+            ? `Average depth <strong>${avgIn.toFixed(1)} ft</strong> (from your entry).`
+            : `Average depth <strong>${avgIn.toFixed(1)} m</strong> (from your entry).`;
         } else if (!isNaN(maxD) && maxD > 0) {
-          depthM = maxD * 0.6;
-          depthNote = `Average depth estimated as <strong>60% of max</strong> → ${depthM.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
+          const estimatedAvg = maxD * 0.6;
+          depthM = isImperial ? estimatedAvg * 0.3048 : estimatedAvg;
+          depthNote = isImperial
+            ? `Average depth estimated as <strong>60% of max</strong> → ${estimatedAvg.toFixed(1)} ft (max ${maxD.toFixed(1)} ft).`
+            : `Average depth estimated as <strong>60% of max</strong> → ${estimatedAvg.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
         } else {
           result.innerHTML =
             "<span>Enter <strong>max depth</strong> (and optionally <strong>average depth</strong> from your computer).</span>";
           return;
         }
 
-        if (!bar || bar <= 0 || !time || time <= 0 || !tank || tank <= 0) {
+        if (
+          !pressureInput ||
+          pressureInput <= 0 ||
+          !time ||
+          time <= 0 ||
+          !tank ||
+          tank <= 0
+        ) {
           result.innerHTML =
-            "<span>Enter <strong>gas used (bar)</strong>, <strong>time</strong>, and <strong>tank size</strong>.</span>";
+            `<span>Enter <strong>gas used (${pressureUnit})</strong>, <strong>time</strong>, and <strong>tank size</strong>.</span>`;
           return;
         }
 
+        const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
         const ata = depthM / 10 + 1;
         const liters = bar * tank;
         const sac = liters / (time * ata);
 
         let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>Gas: ${liters.toFixed(0)} L over ${time} min at ${ata.toFixed(2)} ATA</small>`;
+        if (isImperial) {
+          html +=
+            '<br><small style="color: #666; font-weight: normal">(psi/ft converted internally to bar/m)</small>';
+        }
         if (sac > 25) {
           html +=
             '<br><small style="color: #f39c12; font-weight: normal">⚠️ High SAC — work on relaxed breathing</small>';
@@ -1077,6 +1140,7 @@
         }
         result.innerHTML = html;
       }
+      setDiveLogUnitLabels();
     </script>
     <!-- Cookie Consent Banner EN -->
     <link

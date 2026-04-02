@@ -734,7 +734,29 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Verbrauch (bar)</label
+                >Einheiten</label
+              >
+              <select
+                id="dlSacUnits"
+                style="
+                  width: 100%;
+                  padding: 10px;
+                  border: 2px solid #ddd;
+                  border-radius: 6px;
+                  font-size: 16px;
+                  box-sizing: border-box;
+                  background: #fff;
+                "
+                onchange="setDiveLogUnitLabels(); calculateDiveLogSAC();"
+              >
+                <option value="metric" selected>bar &amp; meter</option>
+                <option value="imperial">psi &amp; feet</option>
+              </select>
+            </div>
+            <div>
+              <label
+                style="display: block; margin-bottom: 4px; font-weight: 500"
+                >Verbrauch (<span id="dlSacPressureUnit">bar</span>)</label
               >
               <input
                 type="number"
@@ -801,7 +823,7 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Max. Tiefe (m)</label
+                >Max. Tiefe (<span id="dlSacDepthUnit">m</span>)</label
               >
               <input
                 type="number"
@@ -823,7 +845,7 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Mittlere Tiefe (m), optional</label
+                >Mittlere Tiefe (<span id="dlSacAvgDepthUnit">m</span>), optional</label
               >
               <input
                 type="number"
@@ -846,7 +868,8 @@
           <p style="margin: 0 0 12px 0; font-size: 13px; color: #555">
             Ist <strong>mittlere Tiefe</strong> leer, rechnen wir mit
             <strong>60&nbsp;% × max. Tiefe</strong> (Schätzung Koh Chang). Wenn
-            du eine mittlere Tiefe einträgst, wird diese verwendet.
+            du eine mittlere Tiefe einträgst, wird diese verwendet. Du kannst
+            zwischen <strong>bar/m</strong> und <strong>psi/ft</strong> wechseln.
           </p>
           <div
             id="dlSacResult"
@@ -1048,39 +1071,79 @@
       </div>
     </main>
     <script>
+      function setDiveLogUnitLabels() {
+        const units = document.getElementById("dlSacUnits").value;
+        const isImperial = units === "imperial";
+        document.getElementById("dlSacPressureUnit").textContent = isImperial
+          ? "psi"
+          : "bar";
+        document.getElementById("dlSacDepthUnit").textContent = isImperial
+          ? "ft"
+          : "m";
+        document.getElementById("dlSacAvgDepthUnit").textContent = isImperial
+          ? "ft"
+          : "m";
+        document.getElementById("dlSacBar").placeholder = isImperial
+          ? "z. B. 1450"
+          : "z. B. 100";
+        document.getElementById("dlSacMaxDepth").placeholder = isImperial
+          ? "z. B. 60"
+          : "z. B. 18";
+      }
+
       function calculateDiveLogSAC() {
-        const bar = parseFloat(document.getElementById("dlSacBar").value);
+        const units = document.getElementById("dlSacUnits").value;
+        const isImperial = units === "imperial";
+        const pressureInput = parseFloat(document.getElementById("dlSacBar").value);
         const time = parseFloat(document.getElementById("dlSacTime").value);
         const tank = parseFloat(document.getElementById("dlSacTank").value);
         const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
         const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
         const result = document.getElementById("dlSacResult");
+        const pressureUnit = isImperial ? "psi" : "bar";
 
         let depthM;
         let depthNote;
         if (!isNaN(avgIn) && avgIn > 0) {
-          depthM = avgIn;
-          depthNote = `Mittlere Tiefe <strong>${avgIn.toFixed(1)} m</strong> (Eingabe).`;
+          depthM = isImperial ? avgIn * 0.3048 : avgIn;
+          depthNote = isImperial
+            ? `Mittlere Tiefe <strong>${avgIn.toFixed(1)} ft</strong> (Eingabe).`
+            : `Mittlere Tiefe <strong>${avgIn.toFixed(1)} m</strong> (Eingabe).`;
         } else if (!isNaN(maxD) && maxD > 0) {
-          depthM = maxD * 0.6;
-          depthNote = `Mittlere Tiefe geschätzt: <strong>60&nbsp;% der max. Tiefe</strong> → ${depthM.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
+          const estimatedAvg = maxD * 0.6;
+          depthM = isImperial ? estimatedAvg * 0.3048 : estimatedAvg;
+          depthNote = isImperial
+            ? `Mittlere Tiefe geschätzt: <strong>60&nbsp;% der max. Tiefe</strong> → ${estimatedAvg.toFixed(1)} ft (max ${maxD.toFixed(1)} ft).`
+            : `Mittlere Tiefe geschätzt: <strong>60&nbsp;% der max. Tiefe</strong> → ${estimatedAvg.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
         } else {
           result.innerHTML =
             "<span><strong>Max. Tiefe</strong> eintragen (optional: <strong>mittlere Tiefe</strong> vom Computer).</span>";
           return;
         }
 
-        if (!bar || bar <= 0 || !time || time <= 0 || !tank || tank <= 0) {
+        if (
+          !pressureInput ||
+          pressureInput <= 0 ||
+          !time ||
+          time <= 0 ||
+          !tank ||
+          tank <= 0
+        ) {
           result.innerHTML =
-            "<span><strong>Verbrauch (bar)</strong>, <strong>Zeit</strong> und <strong>Tankgröße</strong> eintragen.</span>";
+            `<span><strong>Verbrauch (${pressureUnit})</strong>, <strong>Zeit</strong> und <strong>Tankgröße</strong> eintragen.</span>`;
           return;
         }
 
+        const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
         const ata = depthM / 10 + 1;
         const liters = bar * tank;
         const sac = liters / (time * ata);
 
         let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>Gas: ${liters.toFixed(0)} L in ${time} min bei ${ata.toFixed(2)} ATA</small>`;
+        if (isImperial) {
+          html +=
+            '<br><small style="color: #666; font-weight: normal">(psi/ft intern in bar/m umgerechnet)</small>';
+        }
         if (sac > 25) {
           html +=
             '<br><small style="color: #f39c12; font-weight: normal">⚠️ Hohe SAC — entspannt atmen üben</small>';
@@ -1090,6 +1153,7 @@
         }
         result.innerHTML = html;
       }
+      setDiveLogUnitLabels();
     </script>
     <!-- Cookie Consent Banner EN -->
     <link
