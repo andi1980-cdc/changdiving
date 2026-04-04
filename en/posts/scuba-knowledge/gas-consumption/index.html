@@ -829,8 +829,10 @@
               Quick unit converters
             </p>
             <p style="margin: 0 0 14px 0; font-size: 13px; color: #555; line-height: 1.45">
-              Type in either field — the other updates. Useful when coursework mixes metric
-              and imperial numbers.
+              Type in a field — linked fields update. Useful when coursework mixes metric
+              and imperial numbers. <strong>Body weight:</strong> many UK divers use
+              <strong>stone</strong>; US/UK also use <strong>pounds (lb)</strong> — both
+              convert to <strong>kg</strong> here.
             </p>
             <div
               style="
@@ -1015,6 +1017,90 @@
                     />
                   </div>
                 </div>
+              </div>
+              <div
+                style="
+                  padding: 12px 14px;
+                  background: #fff;
+                  border-radius: 8px;
+                  border: 1px solid #e8e8e8;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+                "
+              >
+                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                  Body weight
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Stone (st)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcStone"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 12.5"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncMass('stone')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Pounds (lb)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcLb"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 175"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncMass('lb')"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      >Kilograms (kg)</label
+                    >
+                    <input
+                      type="number"
+                      id="qcMassKg"
+                      inputmode="decimal"
+                      step="any"
+                      placeholder="e.g. 79.4"
+                      style="
+                        width: 100%;
+                        padding: 8px 10px;
+                        border: 1px solid #ccc;
+                        border-radius: 6px;
+                        font-size: 15px;
+                        box-sizing: border-box;
+                      "
+                      oninput="qcSyncMass('kg')"
+                    />
+                  </div>
+                </div>
+                <p style="margin: 10px 0 0 0; font-size: 11px; color: #777; line-height: 1.35">
+                  Decimal stone is OK (e.g. 11.286 ≈ 11 st 4 lb). 1 stone = 14 lb (avoirdupois).
+                </p>
               </div>
             </div>
             <p style="margin: 12px 0 0 0; font-size: 12px; color: #666; line-height: 1.4">
@@ -1231,6 +1317,19 @@
               </tbody>
             </table>
           </div>
+          <p style="margin: 1em 0 0 0; font-size: 15px; line-height: 1.55; color: #333">
+            For full multilevel and decompression schedules (not just this one-segment
+            classroom row), see
+            <a
+              href="https://www.hhssoftware.com/multideco/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >MultiDeco</a
+            >
+            — recommended decompression dive planning software (Bühlmann ZHL-16 with
+            gradient factors and VPM-B; desktop and mobile). Use only with appropriate
+            technical training.
+          </p>
         </div>
 
         <h2 id="gc-formulas">Calculate the surrounding pressure ATA</h2>
@@ -1663,6 +1762,7 @@
           let qcLockDepth = false;
           let qcLockPressure = false;
           let qcLockVolume = false;
+          let qcLockMass = false;
 
           function qcFormatNum(n, maxDec) {
             if (!Number.isFinite(n)) return "";
@@ -1760,6 +1860,74 @@
               }
             } finally {
               qcLockVolume = false;
+            }
+          }
+
+          const QC_KG_PER_LB = 0.45359237;
+          const QC_LB_PER_STONE = 14;
+
+          function qcSyncMass(from) {
+            if (qcLockMass) return;
+            const stEl = document.getElementById("qcStone");
+            const lbEl = document.getElementById("qcLb");
+            const kgEl = document.getElementById("qcMassKg");
+            if (!stEl || !lbEl || !kgEl) return;
+            qcLockMass = true;
+            try {
+              if (from === "stone") {
+                const raw = stEl.value.trim();
+                if (raw === "") {
+                  lbEl.value = "";
+                  kgEl.value = "";
+                  return;
+                }
+                const st = parseFloat(raw);
+                if (!Number.isFinite(st)) {
+                  lbEl.value = "";
+                  kgEl.value = "";
+                  return;
+                }
+                const lb = st * QC_LB_PER_STONE;
+                const kg = lb * QC_KG_PER_LB;
+                lbEl.value = qcFormatNum(lb, 4);
+                kgEl.value = qcFormatNum(kg, 3);
+              } else if (from === "lb") {
+                const raw = lbEl.value.trim();
+                if (raw === "") {
+                  stEl.value = "";
+                  kgEl.value = "";
+                  return;
+                }
+                const lb = parseFloat(raw);
+                if (!Number.isFinite(lb)) {
+                  stEl.value = "";
+                  kgEl.value = "";
+                  return;
+                }
+                const kg = lb * QC_KG_PER_LB;
+                const st = lb / QC_LB_PER_STONE;
+                kgEl.value = qcFormatNum(kg, 3);
+                stEl.value = qcFormatNum(st, 4);
+              } else {
+                const raw = kgEl.value.trim();
+                if (raw === "") {
+                  stEl.value = "";
+                  lbEl.value = "";
+                  return;
+                }
+                const kg = parseFloat(raw);
+                if (!Number.isFinite(kg)) {
+                  stEl.value = "";
+                  lbEl.value = "";
+                  return;
+                }
+                const lb = kg / QC_KG_PER_LB;
+                const st = lb / QC_LB_PER_STONE;
+                lbEl.value = qcFormatNum(lb, 3);
+                stEl.value = qcFormatNum(st, 4);
+              }
+            } finally {
+              qcLockMass = false;
             }
           }
 
