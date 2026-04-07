@@ -1332,26 +1332,55 @@
           </p>
         </div>
 
-        <h2 id="gc-formulas">Calculate the surrounding pressure ATA</h2>
+        <h2 id="gc-formulas">Calculate the surrounding pressure (ATA)</h2>
 
-        Calculate the surrounding pressure is part of every entry-level SCUBA
-        diving course. The surrounding pressure increase every 10 m Water for 1
-        bar + 1 bar Atmosphär
+        <p>
+          Ambient pressure at depth is covered in every entry-level course:
+          add <strong>1 bar</strong> atmosphere at the surface, then roughly
+          <strong>1 bar every 10 m</strong> of seawater —
+          <strong>ATA = (depth in m) ÷ 10 + 1</strong> (metric rule of thumb).
+        </p>
 
-        <h2>Calculate the Gas Volume</h2>
+        <h2>Calculate SAC rate (surface air consumption)</h2>
 
-        To Calculate the gas volume needed in depth: SAC*Time*ata= for example
-        20 L* 15 min. * 4 bar = 1200 L
+        <p>
+          <strong>SAC</strong> is your equivalent surface consumption in
+          <strong>litres per minute</strong>, derived from a steady segment at
+          one depth. Same idea as the
+          <a href="#gc-calculator">SAC calculator</a> on this page.
+        </p>
+        <p>
+          <strong>SAC (L/min) = (bar used × tank volume in L) ÷ (time in min × ATA)</strong>
+        </p>
+        <p>
+          Example: 30 bar used from an 11.1 L tank in 10 min at 10 m (ATA = 2):
+          (30 × 11.1) ÷ (10 × 2) = <strong>16.65 L/min</strong>.
+        </p>
 
-        <h2>Calculate the Po2</h2>
+        <h2>Calculate the gas volume used or needed</h2>
 
-        To Calculate the Partial pressure of Oxygene: Gas*ATA= for example N32 =
-        0,32 bar*4 bar = 1,28 bar Po2
+        <p>
+          Gas volume at depth (or to plan a segment) from SAC:
+          <strong>volume (L) = SAC × time (min) × ATA</strong>. Example:
+          20 L/min × 15 min × 4 ATA = <strong>1200 L</strong>.
+        </p>
 
-        <h2>Calculate the Maximum Operating Depth (MOD)</h2>
+        <h2>Calculate the PO₂</h2>
 
-        To Calculate the MOD: (Max PPO₂ / O₂ Fraction) − 10 = for example N32 =
-        1.4 bar / 0.32 − 10 = 33.7 m MOD
+        <p>
+          Partial pressure of oxygen:
+          <strong>PPO₂ = fraction of O₂ × ATA</strong>. Example Nitrox 32 at 30 m
+          (4 ATA): 0.32 × 4 = <strong>1.28 bar</strong> PO₂.
+        </p>
+
+        <h2>Calculate the maximum operating depth (MOD)</h2>
+
+        <p>
+          Metric MOD from a max PO₂ limit and oxygen fraction (both as absolute
+          pressure / fraction):<br />
+          <strong>MOD (m) = ((max PPO₂ ÷ FO₂) − 1) × 10</strong>. Example EAN32,
+          1.4 bar max: ((1.4 ÷ 0.32) − 1) × 10 ≈ <strong>33.8 m</strong>.
+        </p>
 
         <hr />
 
