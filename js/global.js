@@ -3,7 +3,23 @@
 document.addEventListener("DOMContentLoaded", function () {
   const breadcrumb = document.getElementById("breadcrumb");
   if (breadcrumb) {
-    const path = window.location.pathname.split("/").filter(Boolean);
+    const knownLangs = new Set(["en", "de", "th"]);
+    let path = window.location.pathname.split("/").filter(Boolean);
+    // Local preview / wrong mount: pathname is not /en/… — use canonical URL if present
+    if (!knownLangs.has(path[0])) {
+      const canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (canonicalLink && canonicalLink.href) {
+        try {
+          const canonicalPath = new URL(canonicalLink.href).pathname;
+          const seg = canonicalPath.split("/").filter(Boolean);
+          if (seg.length > 0 && knownLangs.has(seg[0])) {
+            path = seg;
+          }
+        } catch (_) {
+          /* ignore invalid canonical */
+        }
+      }
+    }
     const lang = path[0]; // z. B. "en", "de", "th"
     const baseHref = "/" + lang + "/";
 
