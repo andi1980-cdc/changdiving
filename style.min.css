@@ -1371,6 +1371,44 @@ button:focus {
   }
 }
 @media (max-width: 767px) {
+  .hero--fun-dives .hero-text {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 100vw;
+    padding: 0 12px !important;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+  .hero--fun-dives .hero-text h1 {
+    visibility: visible !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 8px !important;
+    overflow: visible !important;
+    color: #fff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+    font-size: clamp(1.05rem, 4vw, 1.75rem) !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase;
+    pointer-events: auto;
+  }
+  .hero--fun-dives .hero-text p {
+    visibility: hidden !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    border: 0 !important;
+  }
+}
+@media (max-width: 767px) {
   .hero-header-img {
     position: relative !important;
     width: 100% !important;
