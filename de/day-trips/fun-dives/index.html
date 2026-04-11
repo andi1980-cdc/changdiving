@@ -54,7 +54,7 @@
     <!-- Open Graph for Social Media -->
     <meta
       property="og:title"
-      content="Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB | Chang Diving"
+      content="Tauchen & Fun Dives auf Koh Chang – Korallenriffe, Wracks & Meeresleben | Chang Diving"
     />
     <meta
       property="og:description"
@@ -74,14 +74,14 @@
     <meta property="og:image:type" content="image/webp" />
     <meta
       property="og:image:alt"
-      content="Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB | Chang Diving"
+      content="Tauchen & Fun Dives auf Koh Chang – Korallenriffe, Wracks & Meeresleben | Chang Diving"
     />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB | Chang Diving"
+      content="Tauchen & Fun Dives auf Koh Chang – Korallenriffe, Wracks & Meeresleben | Chang Diving"
     />
     <meta
       name="twitter:description"
@@ -361,57 +361,24 @@
         }
       }
       @media (max-width: 767px) {
+        .hero-text h1,
+        .hero-text p {
+          visibility: hidden;
+          height: 0;
+          margin: 0;
+          padding: 0;
+        }
         .hero {
           height: auto;
           min-height: unset;
-          display: flex;
-          flex-direction: column;
         }
-        .hero picture {
-          position: relative;
-          top: auto;
-          left: auto;
-          width: 100%;
-          height: auto;
-          flex-shrink: 0;
-          z-index: 1;
-        }
+        .hero picture,
         .hero-header-img {
           position: relative;
-          top: auto;
-          left: auto;
           width: 100%;
           height: auto;
           aspect-ratio: 3 / 2;
           object-fit: cover;
-        }
-        .hero-text {
-          position: relative;
-          top: auto;
-          left: auto;
-          transform: none;
-          z-index: 2;
-          width: 100%;
-          padding: 1.25rem 1rem 1.5rem;
-          box-sizing: border-box;
-          background: #fff;
-          text-align: center;
-        }
-        .hero-text h1 {
-          color: #0077b6;
-          font-size: clamp(1.15rem, 4.5vw, 1.5rem);
-          line-height: 1.25;
-          text-transform: none;
-          margin: 0 0 0.65rem;
-        }
-        .hero-text p {
-          font-size: 0.98rem;
-          line-height: 1.5;
-          color: #333;
-          text-transform: none;
-          font-weight: 600;
-          margin: 0;
-          padding: 0 0.35rem;
         }
       }
     </style>
@@ -439,7 +406,7 @@
           "@context": "https://schema.org",
           "@type": "WebPage",
           "@id": "https://changdiving.com/de/day-trips/fun-dives/",
-          "name": "Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB | Chang Diving",
+          "name": "Tauchen & Fun Dives auf Koh Chang – Korallenriffe, Wracks & Meeresleben | Chang Diving",
           "description": "Tauchen auf Koh Chang? Unsere Fun Dives bringen zertifizierte Taucher zu 13 Tauchplätzen inkl. HTMS Chang Wrack, Koh Rang Riffe & Golf von Thailand. Jetzt Tauchausflug buchen!",
           "url": "https://changdiving.com/de/day-trips/fun-dives/",
           "inLanguage": "de",
@@ -488,7 +455,7 @@
           "@context": "https://schema.org",
           "@type": "Service",
           "@id": "https://changdiving.com/de/day-trips/fun-dives/#service",
-          "name": "Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB",
+          "name": "Fun Dives Koh Chang – Geführte Bootstauchgänge",
           "description": "Geführte Fun Dives für zertifizierte Taucher. 2-3 Bootstauchgänge pro Tag an 13+ Tauchplätzen inkl. HTMS Chang Wrack, Korallenriffe und Meeresleben. Kleine Gruppen, Vollausrüstung, Mittagessen inklusive.",
           "serviceType": "Scuba Diving",
           "provider": {
@@ -516,7 +483,7 @@
           "@context": "https://schema.org",
           "@type": "TouristTrip",
           "@id": "https://changdiving.com/de/day-trips/fun-dives/#trip",
-          "name": "Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB",
+          "name": "Tauchen Koh Chang – Geführte Bootstauchgänge Thailand",
           "description": "Tauchen Koh Chang – geführte Bootstauchgänge an 13+ Tauchplätzen in Thailand! 2-3 Tauchgänge/Tag, zertifizierte Taucher willkommen. Kleine Gruppen (max 5), mehrsprachige Guides, erkunde Mu Koh Chang Nationalpark. Buche deine Fun Dives heute!",
           "image": [
             "https://changdiving.com/img/products/fun_dive/fun-dive-header_small.webp"
@@ -635,7 +602,7 @@
           <img
             class="hero-header-img"
             src="/img/products/fun_dive/fun-dive-header_small.webp"
-            alt="Geführte Fun Dives Koh Chang – Bootstauchgänge ab 3.290 THB"
+            alt="Geführte Fun Dives – Erkunde die Unterwasserwelt von Koh Chang"
             width="600"
             height="400"
             loading="eager"
@@ -645,7 +612,7 @@
 
         <div class="hero-text">
           <h1>
-            Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB
+            Geführte Fun Dives – Erkunde die Unterwasserwelt von Koh Chang
           </h1>
           <p>
             Schon zertifiziert? Tauche entspannt mit unserem professionellen
@@ -689,7 +656,12 @@
           height="200"
         />
         <hr />
-        <!-- Introduction (Seitentitel ist H1 im Hero) -->
+        <!-- Title -->
+        <h2 class="headline-blue">
+          Geführte Fun Dives – Erkunde die Unterwasserwelt von Koh Chang
+        </h2>
+
+        <!-- Introduction -->
         <h2 class="headline-black">
           Tauchen auf Koh Chang, Thailand – Ihr Tor zum Golf von Thailand
         </h2>

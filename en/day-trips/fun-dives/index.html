@@ -54,7 +54,7 @@
     <!-- Open Graph for Social Media -->
     <meta
       property="og:title"
-      content="Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB | Chang Diving"
+      content="Scuba Diving & Fun Dives in Koh Chang – Coral Reefs, Wrecks & Marine Life | Chang Diving"
     />
     <meta
       property="og:description"
@@ -74,14 +74,14 @@
     <meta property="og:image:type" content="image/webp" />
     <meta
       property="og:image:alt"
-      content="Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB | Chang Diving"
+      content="Scuba Diving & Fun Dives in Koh Chang – Coral Reefs, Wrecks & Marine Life | Chang Diving"
     />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB | Chang Diving"
+      content="Scuba Diving & Fun Dives in Koh Chang – Coral Reefs, Wrecks & Marine Life | Chang Diving"
     />
     <meta
       name="twitter:description"
@@ -358,57 +358,24 @@
         }
       }
       @media (max-width: 767px) {
+        .hero-text h1,
+        .hero-text p {
+          visibility: hidden;
+          height: 0;
+          margin: 0;
+          padding: 0;
+        }
         .hero {
           height: auto;
           min-height: unset;
-          display: flex;
-          flex-direction: column;
         }
-        .hero picture {
-          position: relative;
-          top: auto;
-          left: auto;
-          width: 100%;
-          height: auto;
-          flex-shrink: 0;
-          z-index: 1;
-        }
+        .hero picture,
         .hero-header-img {
           position: relative;
-          top: auto;
-          left: auto;
           width: 100%;
           height: auto;
           aspect-ratio: 3 / 2;
           object-fit: cover;
-        }
-        .hero-text {
-          position: relative;
-          top: auto;
-          left: auto;
-          transform: none;
-          z-index: 2;
-          width: 100%;
-          padding: 1.25rem 1rem 1.5rem;
-          box-sizing: border-box;
-          background: #fff;
-          text-align: center;
-        }
-        .hero-text h1 {
-          color: #0077b6;
-          font-size: clamp(1.15rem, 4.5vw, 1.5rem);
-          line-height: 1.25;
-          text-transform: none;
-          margin: 0 0 0.65rem;
-        }
-        .hero-text p {
-          font-size: 0.98rem;
-          line-height: 1.5;
-          color: #333;
-          text-transform: none;
-          font-weight: 600;
-          margin: 0;
-          padding: 0 0.35rem;
         }
       }
     </style>
@@ -436,8 +403,8 @@
           "@context": "https://schema.org",
           "@type": "WebPage",
           "@id": "https://changdiving.com/en/day-trips/fun-dives/",
-          "name": "Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB | Chang Diving",
-          "description": "Certified diver? Book guided fun dives in Koh Chang from 3,290 THB. 13 dive sites incl. HTMS Chang wreck, Koh Rang reefs & Gulf of Thailand. Small groups max. 5 divers, hotel pickup. Since 2005.",
+          "name": "Scuba Diving & Fun Dives in Koh Chang – Coral Reefs, Wrecks & Marine Life | Chang Diving",
+          "description": "Scuba diving in Koh Chang? Our fun dives take you to 13 dive sites including HTMS Chang wreck, Koh Rang reefs & Gulf of Thailand marine life. Certified divers welcome. Book your boat dives online!",
           "url": "https://changdiving.com/en/day-trips/fun-dives/",
           "inLanguage": "en",
           "primaryImageOfPage": {
@@ -485,7 +452,7 @@
           "@context": "https://schema.org",
           "@type": "Service",
           "@id": "https://changdiving.com/en/day-trips/fun-dives/#service",
-          "name": "Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB",
+          "name": "Fun Dives Koh Chang – Guided Boat Dives",
           "description": "Guided fun dives for certified divers. 2-3 boat dives per day at 13+ dive sites including HTMS Chang wreck, coral reefs, and marine life. Small groups, full equipment, lunch included.",
           "serviceType": "Scuba Diving",
           "provider": {
@@ -513,7 +480,7 @@
           "@context": "https://schema.org",
           "@type": "TouristTrip",
           "@id": "https://changdiving.com/en/day-trips/fun-dives/#trip",
-          "name": "Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB",
+          "name": "Fun Diving Koh Chang – Guided Boat Dives Thailand",
           "description": "Fun diving Koh Chang – guided boat dives at 13+ dive sites in Thailand! 2-3 dives/day, certified divers welcome. Small groups (max 5), multilingual guides, explore Mu Koh Chang Marine Park. Book your fun dives today!",
           "image": [
             "https://changdiving.com/img/products/fun_dive/fun-dive-header_small.webp"
@@ -664,7 +631,7 @@
           <img
             class="hero-header-img"
             src="/img/products/fun_dive/fun-dive-header_small.webp"
-            alt="Guided fun dives Koh Chang – boat trips from 3,290 THB"
+            alt="Guided Fun Dives – Explore the Underwater World of Koh Chang"
             width="600"
             height="400"
             loading="eager"
@@ -673,7 +640,7 @@
         </picture>
 
         <div class="hero-text">
-          <h1>Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB</h1>
+          <h1>Guided Fun Dives – Explore the Underwater World of Koh Chang</h1>
           <p>
             Already certified? Join our guided fun dives and explore vibrant
             coral reefs, fascinating marine life and thrilling wrecks around Koh
@@ -716,7 +683,12 @@
           height="200"
         />
         <hr />
-        <!-- Introduction (page title is H1 in hero) -->
+        <!-- Title -->
+        <h2 class="headline-blue">
+          Guided Fun Dives – Explore the Underwater World of Koh Chang
+        </h2>
+
+        <!-- Introduction -->
         <h2 class="headline-black">
           Fun Diving in Koh Chang, Thailand – Your Gateway to the Gulf of
           Thailand
