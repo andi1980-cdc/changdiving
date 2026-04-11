@@ -1,0 +1,11 @@
+---
+description: Transactional hero H1, OG, JSON-LD, mobile hero modifier — follow HERO-TRANSACTIONAL-PATTERN.md
+globs: "**/index.html"
+alwaysApply: false
+---
+
+# Transactional hero (Rollout)
+
+When editing landing/product heroes for SEO/conversion, follow the full checklist in **`HERO-TRANSACTIONAL-PATTERN.md`** at the repository root (align title, h1, hero img alt, og/twitter, JSON-LD; use `hero--fun-dives` or `hero--transactional`; mirror CSS in `style.css` and `style.min.css`).
+
+Reference implementation: `en/day-trips/fun-dives/index.html` and commit `da0c50cd`.

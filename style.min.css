@@ -1371,7 +1371,8 @@ button:focus {
   }
 }
 @media (max-width: 767px) {
-  .hero--fun-dives .hero-text {
+  .hero--fun-dives .hero-text,
+  .hero--transactional .hero-text {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -1383,7 +1384,8 @@ button:focus {
     box-sizing: border-box;
     pointer-events: none;
   }
-  .hero--fun-dives .hero-text h1 {
+  .hero--fun-dives .hero-text h1,
+  .hero--transactional .hero-text h1 {
     visibility: visible !important;
     height: auto !important;
     margin: 0 !important;
@@ -1396,7 +1398,8 @@ button:focus {
     text-transform: uppercase;
     pointer-events: auto;
   }
-  .hero--fun-dives .hero-text p {
+  .hero--fun-dives .hero-text p,
+  .hero--transactional .hero-text p {
     visibility: hidden !important;
     position: absolute !important;
     width: 1px !important;
