@@ -50,6 +50,11 @@ Die Regeln hängen an **`.hero--fun-dives`** und **`.hero--transactional`** (gle
 
 Verhalten **≤767px**: H1 zentriert über dem Bild (weiß + Schatten), Teaser-`<p>` nur noch screenreader-tauglich versteckt (nicht beide Überschriften doppelt zeigen).
 
+## Kategorie-Hubs (z. B. `/courses/`)
+
+- **Nur Mobile-Hero:** `hero hero--transactional` + page-lokales `@media` entfernen, das **H1 und `<p>`** auf kleinen Screens versteckt. **H1/Meta/Preis** können unverändert bleiben, wenn die Headline schon suchintention trifft.
+- **Preis im Titel/H1** später optional, wenn ein **„ab …“**-Preis klar der Einstieg auf der Seite ist (z. B. günstigster Kurs sichtbar).
+
 ## Rollout auf das ganze Projekt
 
 1. **Pro Seite:** Checkliste oben abarbeiten; Hero-Klasse setzen; Preis/Ort nur wo faktisch korrekt.
