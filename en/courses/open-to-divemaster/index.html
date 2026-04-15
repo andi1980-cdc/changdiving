@@ -161,10 +161,6 @@
     <!-- Fallback for older browsers -->
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
-    <!-- Preconnect for External Resources -->
-    <!-- Structured Data JSON-LD -->
-    rel="stylesheet" />
-
     <!-- Critical CSS and Font Loading -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
@@ -364,27 +360,6 @@
           max-width: 99vw;
         }
       }
-      @media (max-width: 767px) {
-        .hero-text h1,
-        .hero-text p {
-          visibility: hidden;
-          height: 0;
-          margin: 0;
-          padding: 0;
-        }
-        .hero {
-          height: auto;
-          min-height: unset;
-        }
-        .hero picture,
-        .hero-header-img {
-          position: relative;
-          width: 100%;
-          height: auto;
-          aspect-ratio: 3 / 2;
-          object-fit: cover;
-        }
-      }
     </style>
     <link
       rel="preload"
@@ -409,7 +384,7 @@
         "@context": "https://schema.org",
         "@type": "Course",
         "@id": "https://changdiving.com/en/courses/open-to-divemaster/",
-        "name": "Open Water to Divemaster Koh Chang – Complete in ~60 days - from 64,900 THB | Chang Diving",
+        "name": "Open Water to Divemaster Koh Chang – Complete in ~60 days - from 64,900 THB",
         "description": "Open Water to Divemaster Koh Chang – from 64,900 THB. Get certified in ~60 days. Chang Diving – professional scuba training since 2005.",
         "provider": {
           "@type": "Organization",
@@ -584,7 +559,7 @@
   </head>
   <body>
     <header>
-      <div class="hero">
+      <div class="hero hero--transactional">
         <div class="hero-logo">
           <a href="/en/">
             <img src="/img/logos/logo_cdc_white.webp" alt="Chang Diving Logo" />
@@ -620,7 +595,7 @@
           <img
             class="hero-header-img"
             src="/img/products/ow-dm/owd-to-divemaster_small.webp"
-            alt="Open Water to Divemaster Package – Complete Pro Training"
+            alt="Open Water to Divemaster Koh Chang – Complete in ~60 days - from 64,900 THB"
             width="600"
             height="400"
             loading="eager"
@@ -629,7 +604,7 @@
         </picture>
 
         <div class="hero-text">
-          <h1>Open Water to Divemaster Package – Complete Pro Training</h1>
+          <h1>Open Water to Divemaster Koh Chang – Complete in ~60 days - from 64,900 THB</h1>
           <p>
             Complete training package from beginner to dive professional.
             Comprehensive course series leading to your Divemaster
