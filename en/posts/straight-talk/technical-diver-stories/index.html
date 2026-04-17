@@ -338,10 +338,17 @@
           margin: 0;
         }
       }
-      .straight-talk-student-card .avatar img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      /* Overrides global `.speciality-box img` (height:auto, margin, border-radius) so cover + position apply inside the circle */
+      .speciality-box .straight-talk-student-card .avatar img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        object-fit: cover !important;
+        object-position: center top !important;
       }
       .straight-talk-qa dl {
         margin: 0;
@@ -867,18 +874,21 @@
                 height="600"
                 loading="lazy"
                 decoding="async"
-                alt="Portrait of Yannic, technical diving student at Chang Diving Koh Chang"
+                alt="Portrait of Yannic S., technical diving student at Chang Diving Koh Chang"
               />
             </div>
             <div>
               <p>
-                <strong>[Student Name]</strong> · Recreational background:
-                [e.g. Rescue + 120 logged dives, mixed warm-water /
-                low-vis]. Short intro line for context.
+                <strong>Yannic S.</strong> · PADI Divemaster since 2023, with
+                Deep, Wreck, and Nitrox specialties; about 120 logged dives.
+                Diving since 2021—friends pulled him into the sport; since then
+                mostly warm-water diving, with some lower-visibility experience
+                mixed in.
               </p>
               <p>
-                [One-line teaser summarising their arc, e.g. “Came for wrecks,
-                stayed for the rigour of gas and team drills.”]
+                Came for wrecks and longer wreck profiles; stayed for the rigour
+                of gas planning, staged ascent work, and team drills that match
+                how Thailand’s sites actually behave.
               </p>
             </div>
           </div>
@@ -1004,12 +1014,12 @@
                 height="600"
                 loading="lazy"
                 decoding="async"
-                alt="Portrait of Nino, TDI technical student Koh Chang"
+                alt="Portrait of Nino W., TDI technical student Koh Chang"
               />
             </div>
             <div>
               <p>
-                <strong>[Student Name]</strong> · [Certification / experience
+                <strong>Nino W.</strong> · [Certification / experience
                 summary placeholder]
               </p>
               <p>
@@ -1135,12 +1145,12 @@
                 height="600"
                 loading="lazy"
                 decoding="async"
-                alt="Portrait of Dominic, advanced wreck and deco student"
+                alt="Portrait of Dominick S., advanced wreck and deco student"
               />
             </div>
             <div>
               <p>
-                <strong>[Student Name]</strong> · [Certification / experience
+                <strong>Dominick S.</strong> · [Certification / experience
                 summary placeholder]
               </p>
               <p>
