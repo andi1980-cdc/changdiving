@@ -309,14 +309,15 @@
       .straight-talk-article section h2 {
         scroll-margin-top: 1rem;
       }
+      /* Profile row: no grey card — spacing like rest of Straight Talk / boat-gallery */
       .straight-talk-student-card {
         display: grid;
         gap: 1rem;
         margin-top: 1.25rem;
-        padding: 1.25rem;
-        border: 1px solid #cfd8dc;
-        border-radius: 8px;
-        background: #f5f5f5;
+        padding: 1rem 0 1.25rem;
+        border: none;
+        border-radius: 0;
+        background: transparent;
       }
       @media (min-width: 560px) {
         .straight-talk-student-card {
@@ -337,6 +338,36 @@
         .straight-talk-student-card .avatar {
           margin: 0;
         }
+      }
+      /* TDI / course-page tone: dark strip + teal accent (matches TOC & context callouts) */
+      .straight-talk-student-bio {
+        background-color: #2b2b2b;
+        border: 1px solid #424242;
+        border-left: 4px solid #80cbc4;
+        border-radius: 6px;
+        padding: 14px 16px 16px;
+        color: #e0e0e0;
+        font-size: 1.02rem;
+        line-height: 1.55;
+      }
+      .straight-talk-student-bio p {
+        margin: 0 0 0.85em;
+      }
+      .straight-talk-student-bio p:last-child {
+        margin-bottom: 0;
+      }
+      .straight-talk-student-bio .student-bio-name {
+        margin: 0 0 0.5em;
+        color: #fff;
+        font-size: 1.06rem;
+        letter-spacing: 0.02em;
+      }
+      .straight-talk-student-bio .student-bio-teaser {
+        color: #b2dfdb;
+        font-size: 0.98rem;
+        border-top: 1px solid #424242;
+        padding-top: 0.75em;
+        margin-top: 0.35em;
       }
       /* Overrides global `.speciality-box img` (height:auto, margin, border-radius) so cover + position apply inside the circle */
       .speciality-box .straight-talk-student-card .avatar img {
@@ -368,10 +399,11 @@
         font-size: 1.1rem;
         margin: 1.25rem 0 0.5rem;
       }
+      /* Match project .boat-gallery-grid: image-led, no grey figure boxes */
       .straight-talk-story-gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
+        gap: 24px;
         margin-top: 1.5rem;
       }
       @media (max-width: 640px) {
@@ -381,21 +413,29 @@
       }
       .straight-talk-story-gallery figure {
         margin: 0;
-        border: 1px solid #cfd8dc;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #f5f5f5;
+        text-align: center;
+        border: none;
+        background: transparent;
       }
       .straight-talk-story-gallery img {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
       .straight-talk-story-gallery figcaption {
-        font-size: 0.85rem;
+        margin-top: 10px;
+        font-size: 0.95em;
         color: #555;
-        padding: 8px 10px;
-        line-height: 1.4;
+        line-height: 1.45;
+        padding: 0 4px;
+      }
+      .speciality-box .straight-talk-story-gallery img {
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        margin-left: auto;
+        margin-right: auto;
       }
       .straight-talk-faq-item {
         margin-bottom: 1.5rem;
@@ -877,15 +917,15 @@
                 alt="Portrait of Yannic S., technical diving student at Chang Diving Koh Chang"
               />
             </div>
-            <div>
+            <div class="straight-talk-student-bio">
+              <p class="student-bio-name"><strong>Yannic S.</strong></p>
               <p>
-                <strong>Yannic S.</strong> · PADI Divemaster since 2023, with
-                Deep, Wreck, and Nitrox specialties; about 120 logged dives.
-                Diving since 2021—friends pulled him into the sport; since then
-                mostly warm-water diving, with some lower-visibility experience
-                mixed in.
+                PADI Divemaster since 2023, with Deep, Wreck, and Nitrox
+                specialties; about 120 logged dives. Diving since 2021—friends
+                pulled him into the sport; since then mostly warm-water diving,
+                with some lower-visibility experience mixed in.
               </p>
-              <p>
+              <p class="student-bio-teaser">
                 Came for wrecks and longer wreck profiles; stayed for the rigour
                 of gas planning, staged ascent work, and team drills that match
                 how Thailand’s sites actually behave.
@@ -965,7 +1005,6 @@
             </dl>
           </div>
 
-          <!-- REPLACE IMAGE CAPTIONS / ALT — ensure model consent for publish -->
           <div
             class="straight-talk-story-gallery"
             role="group"
@@ -981,8 +1020,8 @@
                 alt="Technical diver at a staged decompression stop during training, Koh Chang"
               />
               <figcaption>
-                <!-- EDIT CAPTION -->
-                [Deco stop — tie training to real ceiling discipline.]
+                Staged decompression during training: holding the stop depth,
+                confirming gas, and treating the ceiling as procedure—not a guess.
               </figcaption>
             </figure>
             <figure>
@@ -995,8 +1034,8 @@
                 alt="Technical wreck diving at HTMS Chang, Koh Chang"
               />
               <figcaption>
-                <!-- EDIT CAPTION -->
-                [Overhead environment training on Thailand’s largest wreck.]
+                Advanced wreck work on HTMS Chang—overhead-class context in
+                open water, with line discipline and team roles you can repeat.
               </figcaption>
             </figure>
           </div>
@@ -1017,14 +1056,18 @@
                 alt="Portrait of Nino W., TDI technical student Koh Chang"
               />
             </div>
-            <div>
+            <div class="straight-talk-student-bio">
+              <p class="student-bio-name"><strong>Nino W.</strong></p>
               <p>
-                <strong>Nino W.</strong> · [Certification / experience
-                summary placeholder]
+                Strong recreational foundation with a lot of time behind the
+                camera—dives kept edging deeper and longer, which made the gap
+                between “good enough” NDL habits and what serious wreck days ask
+                for impossible to ignore.
               </p>
-              <p>
-                [One-line teaser: e.g. “Wanted decompression literacy before
-                booking bigger wreck trips abroad.”]
+              <p class="student-bio-teaser">
+                Pushed into technical training for decompression literacy and gas
+                plans he could brief cleanly—before stacking bigger wreck
+                itineraries abroad on hope and MOD arithmetic in his head.
               </p>
             </div>
           </div>
@@ -1112,8 +1155,8 @@
                 alt="Technical divers on HTMS Chang wreck, Koh Chang"
               />
               <figcaption>
-                <!-- EDIT CAPTION -->
-                [Second angle / segment on the wreck — line and team awareness.]
+                Another segment of the wreck: spacing, line contact, and
+                communication when the team—not the viz—sets the pace.
               </figcaption>
             </figure>
             <figure>
@@ -1126,8 +1169,8 @@
                 alt="Technical diving at HTMS Chang, Koh Chang"
               />
               <figcaption>
-                <!-- EDIT CAPTION -->
-                [Gas and stages in a real overhead-class setting.]
+                Stages and gas switches where depth and overhead stress trim,
+                timing, and clean run-time habits—not just equipment familiarity.
               </figcaption>
             </figure>
           </div>
@@ -1148,14 +1191,14 @@
                 alt="Portrait of Dominick S., advanced wreck and deco student"
               />
             </div>
-            <div>
+            <div class="straight-talk-student-bio">
+              <p class="student-bio-name"><strong>Dominick S.</strong></p>
               <p>
-                <strong>Dominick S.</strong> · [Certification / experience
-                summary placeholder]
+                [Certification / experience summary — edit when ready.]
               </p>
-              <p>
-                [One-line teaser: e.g. “Former military surface background;
-                wanted civilian tech standards without bravado.”]
+              <p class="student-bio-teaser">
+                [One-line arc — e.g. from strong recreational habits into
+                overhead-aware, team-first technical training.]
               </p>
             </div>
           </div>
@@ -1245,8 +1288,9 @@
                 alt="Advanced wreck diving on HTMS Chang, Koh Chang"
               />
               <figcaption>
-                <!-- EDIT CAPTION -->
-                [Further wreck segment — conservative penetration mindset.]
+                Further along the wreck: short segments, explicit turn criteria,
+                and a penetration mindset that stays conservative when conditions
+                shift.
               </figcaption>
             </figure>
             <figure>
@@ -1259,8 +1303,8 @@
                 alt="Technical diver during decompression procedures training, Koh Chang"
               />
               <figcaption>
-                <!-- EDIT CAPTION -->
-                [Second deco scene — stops as procedure, not guesswork.]
+                Another deco stop in the sequence—same confirmations, same depth
+                control, until the pattern is boring enough to trust under load.
               </figcaption>
             </figure>
           </div>
