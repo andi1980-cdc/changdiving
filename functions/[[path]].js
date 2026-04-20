@@ -1070,6 +1070,11 @@ const REDIRECTS_PREFIX_RAW = [
   { from: "/th/จุดดำน้ำ", to: "/th/dive-sites/" },
   { from: "/th/วิดีโอ", to: "/th/videos/" },
   { from: "/th/หมวดหมู่", to: "/th/posts/" },
+
+  // SEO: American spelling "specialty" in URL (was UK "speciality")
+  { from: "/en/courses/speciality", to: "/en/courses/specialty" },
+  { from: "/de/courses/speciality", to: "/de/courses/specialty" },
+  { from: "/th/courses/speciality", to: "/th/courses/specialty" },
 ];
 
 // In Maps/normalisierte Regeln umwandeln
