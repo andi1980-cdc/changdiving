@@ -4,7 +4,7 @@ Central reference for **Thai technical and cave diving terminology** on changdiv
 
 **How to use:** When translating or editing Thai HTML/content, **prefer these term pairs** and definitions. If a term is missing, **do not invent** a new Thai technical coinage without review—keep the English term in parentheses and add an entry in a follow-up.
 
-**Scope:** Technical diving, cave, equipment, gas, decompression, CCR, instruction (as tabulated). Not a full recreational-only list.
+**Scope:** Technical diving, cave, equipment, gas, decompression, CCR, instruction (as tabulated). **§18** covers changdiving.com–specific names and recurring translation/copy pitfalls (brands, Koh Chang, wrecks). Not a full recreational-only list.
 
 **Source note:** Pro glossary compiled for EN/TH professional alignment (internal).
 
@@ -198,7 +198,7 @@ Central reference for **Thai technical and cave diving terminology** on changdiv
 
 | English | ศัพท์ไทย | คำอธิบาย |
 |--------|--------|--------|
-| Guideline / Reel (Primary) | สายนำทาง + รีลหลัก | ลาก/คลายสายต่อเนื่อง ใช้รีลหรือสปูลตามมาตรฐานหลักสูตร กระชาก/แตะฐาน silt โดยไม่จำเป็นให้น้อยที่สุด |
+| Guideline / Reel (Primary) | สายนำทาง + รีลหลัก | ลาก/คลายสายต่อเนื่องด้วยรีลหรือสปูลตามมาตรฐานหลักสูตร; ลดการกระชากสายและแตะฐาน silt โดยไม่จำเป็น |
 | Jump / Gap | จุดสายกระโดด / ช่องต่อสาย | ทางแยก: มาร์กและต่อ/คลายตามที่ฝึก; ฝ่ายรอง/ทีมยืนยันตำแหน่งตาม SOP |
 | T-Junction (Y-Junction) | สามแยกสาย | กำหนดทิศ/มาร์กออก-กลับ; กฎเช่น กฎดึงสายขวา (line rule) ตามสไตล์/หน่วยงาน |
 | Cookie / Non-Directional | คุกกี้ / มาร์กไม่บอกทิศ | มาร์กบนสปูล/สาย บอก “มีน้ำ/ทีม/จุดอ้างอิง” ตามนโยบายหลักสูตร ไม่งงกับมาร์กทิศ |
@@ -269,3 +269,19 @@ Central reference for **Thai technical and cave diving terminology** on changdiv
 | Debriefing | สรุป/วิเคราะห์หลังดำ | อภิปรายไดฟ์, บันทึกเหตุ, มาตรการต่อ |
 | Instructor / IT / Examiner | ผู้ฝึก/ผู้ฝึกฝน/กรรมการ | บทบาทแต่ละระดับต่างกันตามสถาบัน/หน่วยงาน |
 | Student / Training Dive | นักฝึก/ไดฟ์ฝึก | อาจจำกัดพื้นที่, อุปกรณ์, การถ่าย—ตามนโยบายสนาม/หน่วย |
+
+## 18. ชื่อเว็บ/สถานที่ และคำที่มักสะกดหรือแปลผิด
+
+ใช้ส่วนนี้เวลาแปล EN→TH หรือเขียน meta/FAQ ใหม่: **กันชื่อยี่ห้อเพี้ยน, กันสลับ “ไดฟ์/ไดร์”, กันซากเรือ/เรือหลวงปนกัน**
+
+| English / source | ใช้แบบนี้ (ไทย) | หมายเหตุ / มักผิด |
+|--------|--------|--------|
+| Chang Diving (brand) | **ช้างไดฟ์วิ่ง** เซ็นเตอร์ (หรือคง *Chang Diving* ภาษาอังกฤษ) | พบทั้ง **ช้างไดฟ์วิ่ง** และ **ช้างไดร์วิ่ง** ใน meta/หัวข้อ—ควร**เลือกรูปแบบเดียว**แล้วใช้สม่ำเสมอทั้งไซต์ (search/replace) หลีก **ช้าง+ดำน้ำ** แบบยืดยาวหรือสะกด “diving” แปลก ๆ |
+| Koh Chang (island) | **เกาะช้าง** | หลีก “โคชาง”, “KohChang” ติดกันในข้อความไทย |
+| Mu Ko Chang National Park | **อุทยานแห่งชาติหมู่เกาะช้าง** | ใช้ชื่อเต็มในเนื้อหาแรก ๆ หรือที่เป็นทางการ |
+| HTMS Chang (wreck) | **เรือหลวงช้าง** | คำขึ้นต้น **HTMS** มักคงอักษรอังกฤษ; อธิบายเพิ่มได้: ซากเรือตำแหน่ง **เรือหลวงช้าง** ไม่ใช่ “เรือช้าง” อย่างเดียวถ้าไม่ชัด |
+| Shipwreck | **ซากเรือ** / **เรือจม** / **ดำน้ำซากเรือ** | บนเว็บใช้ **ซากเรือ** บ่อยใน H1/SEO; **เรือจม** เน้นความ “จม”; กันพิมพ์ **ซาก+เรื่องอื่น** ผิดบริบท |
+| Wreck (noun, dive type) | **ซากเรือ** (จุดดำน้ำ) / **ดำน้ำซากเรือ** (กิจกรรม) | แยกจาก “wreck” แปลเป็นคำอื่น (เช่น อุบัติเหตุ) ในบริบทดำน้ำ |
+| Gulf of Thailand (here) | **อ่าวไทย** / น่านน้ำเกาะช้าง | สอดคล้อง copy ฝั่งอ่าวไทย/เกาะช้าง (ไม่ต้อง “อ่าวสยาม” ในสายการตลาดนี้) |
+| Fun dive (day trip) | **ไดฟ์สนุก** / **Fun dive** ในวงเล็บ | กันว่าเป็น “funny dive” หรือ แปลเทียบคำมั่งคั่ง; ฝั่ง TH มัก **ไดฟ์สนุก** หรือคงคำอังกฤษ |
+| Try Dive / Discover Scuba | **ลองดำ** / คำตามแผ่นยี่ห้อ | กันยาวเกิน **ทดลอง...** แล้วหลงโครงสร้าง URL (ใช้ชื่อเดียวกับ en/th route) |
