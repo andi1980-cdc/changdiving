@@ -4,7 +4,7 @@ Central reference for **Thai technical and cave diving terminology** on changdiv
 
 **How to use:** When translating or editing Thai HTML/content, **prefer these term pairs** and definitions. If a term is missing, **do not invent** a new Thai technical coinage without review—keep the English term in parentheses and add an entry in a follow-up.
 
-**Scope:** Technical diving, cave, equipment, gas, decompression, CCR, instruction (as tabulated). **§18** covers changdiving.com–specific names and recurring translation/copy pitfalls (brands, Koh Chang, wrecks). Not a full recreational-only list.
+**Scope:** Technical diving, cave, equipment, gas, decompression, CCR, instruction (as tabulated). **§4a** expands **Sidemount (ถังข้าง)** for manual/phrase-level Thai. **§18** covers changdiving.com–specific names and recurring translation/copy pitfalls (brands, Koh Chang, wrecks). Not a full recreational-only list.
 
 **Source note:** Pro glossary compiled for EN/TH professional alignment (internal).
 
@@ -68,6 +68,7 @@ Central reference for **Thai technical and cave diving terminology** on changdiv
 | Yoke Connection | ข้อต่อโยค (A-clamp) | ระบบต่อเร็กแบบหนีบ ใช้กันแพร่หลายในการดำน้ำนันทนาการ แต่ทนแรงดันได้น้อยกว่า DIN |
 | Intermediate Pressure (IP) | แรงดันกลาง | แรงดันก๊าซหลังผ่านเฟิร์สสเตจ โดยทั่วไปอยู่ที่ 8–10 บาร์เหนือแรงดันรอบตัว ใช้จ่ายไปยังหัวจ่ายก๊าซและถุงลม |
 | Purge Button | ปุ่มเพิร์จ | ปุ่มบนหัวจ่ายก๊าซสำหรับกดให้ก๊าซไหลออกต่อเนื่อง ใช้ไล่น้ำออกจากหัวจ่ายหรือเช็คการทำงาน |
+| Freeflow | ฟรีโฟลว์ (เรกูเลเตอร์) | ก๊าซไหลออกหัวจ่ายค้างโดยไม่ตั้งใจหายใจ มักเกิดจากฝาแตก/แผ่นยางเสีย/ตัน—แก้หรือสลับไป **เร็กสำรอง**; อ้างอิงในข้อสอบ/ทฤษฎี |
 
 ## 4. การจัดชุด (ถังหลัง / ถังข้าง)
 
@@ -83,6 +84,26 @@ Central reference for **Thai technical and cave diving terminology** on changdiv
 | Top Clip / Bottom Clip | คลิปบน / คลิปล่าง | จุดยึดถังข้างสองจุด คลิปบนยึดกับบ่าหรือหัวถัง คลิปล่างยึดกับเพลตท้ายหรือสะโพก |
 | Trim (Tank Trim) | การจัดทรงถัง | มุมและตำแหน่งของถังในน้ำ ถังที่จัดทรงดีควรขนานกับลำตัว ไม่ห้อยหรือกางออก |
 | Bands | แบนด์รัดถัง | แถบโลหะหรือสแตนเลสที่รัดถังคู่เข้าด้วยกันผ่านแผ่นหลัง |
+
+## 4a. ถังข้าง (Sidemount) — ศัพท์และวลีเสริม
+
+อ้างอิงคู่มือ/หลักสูตรถังข้าง: รายการนี้**ขยาย**แถว **Sidemount | ถังข้าง** ด้านบน ไม่แทนที่
+
+| English / context | ศัพท์ไทย | คำอธิบาย |
+|--------|--------|--------|
+| Sidemount Diving (phrase) | การดำน้ำถังข้าง / การดำน้ำแบบถังข้าง | วลีเต็มในบทนำ/คู่มือ; ย่อ **ถังข้าง** ตรงกับ **Sidemount** ในตาราง §4 |
+| Twin Cylinders (in SM) | ถังดำน้ำสองใบ (ระบบถังข้าง) | สำรองซ้ำซ้อน ทรงตัวแนวนอน และ**บริหารก๊าซ** ตาม **กฎสามส่วน** (สอดคล้อง §8) |
+| Single-tank Sidemount (recreational) | ถังข้างใบเดียว (นันทนาการ) | มักเพิ่ม **เร็กสำรอง** ใช้**บันจี้**จัดสาย แล้วปรับ**ตะกั่วถ่วง**+**ลอยตัวกลาง** |
+| Neutral Buoyancy (in copy) | ลอยตัวกลาง / สมดุลการลอยตัวกลาง | คู่กับ**ทรงตัว**; รายละเอียดท่าแนวนอน → **ทริม (ท่าแนวนอน)** ใน §11 |
+| Weights / lead ballast | ตะกั่วถ่วง / น้ำหนักถ่วง | สมดุลหลังจูนอุปกรณ์ SM; ฝั่ง /th/ อาจเจอ “ตะกั่ว” หรือ “ตะกั่วถ่วง” |
+| Regulator & SPG focus (SM) | สลับชุดเร็ก / มอนิเตอร์ SPG สองฝั่ง | วินัยสูงกว่า backmount—เช็กแรงดันซ้าย-ขวาแยก; ผูกกับ **S-Drill** / **ดริลวาล์ว** |
+| Valve drill (SM) | ดริลวาล์ว | ฝึกเปิด-ปิด/กู้สมมติฐาน**วาล์วถัง**; ร่วม **Valves & Shut-Downs** ใน §13 |
+| Gas donation (SM) | แบ่งก๊าซ (ถังข้าง) | กรณี OOA—แบ่งตาม SOP/หลักสูตร ใช้คู่ **OOA Drill** ใน §13 |
+| Hose routing / tangles | จัดสายยาง / ลดการพันติด | สาย LP/น้ำหนัก/อินเฟลเตอร์—จัดเส้นทาง ลด **Entanglement** ใน §14 |
+| Prolonged surface float | พักลอยผิวน้ำ (นาน) | บางชุด/ระบบ SM ลอยนอนยาวบนผิวไม่สบาย—ขึ้นกับ BCD/แผ่นยึด/ตำแหน่งถัง |
+| Sidemount + CCR (diluent) | รีเบรเธอร์ + ถังข้าง (ดิลูอองต์) | โปรไฟล์แคบ เข้าถึง**ปอดเทียม**/วาล์ว/**bailout** ได้เร็ว; รูปแบบ **เชสเมาท์** แยกจากถังก๊าซ SM แบบ OC |
+| Rebreather (Thai loanword) | รีบรีทเธอร์ | อาจเจอในข้อความ/คู่มือ (ทับเสียง); รายการมาตรฐานใน **§16** ใช้ **รีเบรเธอร์** ให้สอดคล้อง |
+| Wreck (site, /th/ copy) | **เรือจม** (มาตรฐานไซต์) | คู่มือ EN ใช้ *wreck*; ฝั่ง /th/ เน้น **เรือจม** มากกว่า “ซากเรือ”—ดู **§18**; รายละเอียด silt/ทริม → **Silt-Out** §11 |
 
 ## 5. ถังเสริมและก๊าซสำรอง
 
