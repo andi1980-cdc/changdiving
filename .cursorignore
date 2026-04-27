@@ -1,18 +1,1 @@
-img/
-images/
-videos/
-fonts/
 
-*.jpg
-*.jpeg
-*.png
-*.webp
-*.mp4
-
-*.xml
-*.log
-*.zip
-
-node_modules/
-.git/
-.cache/# Add directories or file patterns to ignore during indexing (e.g. foo/ or *.csv)
