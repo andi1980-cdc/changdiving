@@ -1009,6 +1009,136 @@ const REDIRECTS_EXACT_RAW = [
     "/th/posts/scuba-knowledge/wreck-diving-koh-chang/",
   ],
   // weitere paare hier … ["/de/alt", "/de/neu/"],
+
+  // ── GSC 404-Fixes 2026-05-03 ──────────────────────────────────────────────
+
+  // Alte Sprachversionen (NL/SV/RU) → Englisch
+  ["/nl/", "/en/"],
+  ["/nl/index.html", "/en/"],
+  ["/nl/air-certif/", "/en/courses/"],
+  ["/sv/", "/en/"],
+  ["/ru", "/en/"],
+
+  // Kurs-Slug-Änderungen
+  ["/de/courses/advanced-nitrox-diver/", "/de/courses/advanced-nitrox/"],
+  ["/en/courses/advanced-nitrox-diver/", "/en/courses/advanced-nitrox/"],
+  ["/th/courses/advanced-nitrox-diver/", "/th/courses/advanced-nitrox/"],
+  ["/de/courses/advanced-open-water-diver/", "/de/courses/advanced/"],
+  ["/en/courses/advanced-open-water-diver/", "/en/courses/advanced/"],
+  ["/th/courses/advanced-open-water-diver/", "/th/courses/advanced/"],
+  ["/th/courses/advanced-open-water/", "/th/courses/advanced/"],
+
+  // SMB-Guide Slug-Änderung
+  [
+    "/de/posts/scuba-knowledge/surface-marker-buoy/",
+    "/de/posts/scuba-knowledge/smb-guide/",
+  ],
+  [
+    "/en/posts/scuba-knowledge/surface-marker-buoy/",
+    "/en/posts/scuba-knowledge/smb-guide/",
+  ],
+  [
+    "/th/posts/scuba-knowledge/surface-marker-buoy/",
+    "/th/posts/scuba-knowledge/smb-guide/",
+  ],
+
+  // DE Tipps-und-Tricks alte Slugs
+  [
+    "/de/posts/tipps-und-tricks/tieftauchen/",
+    "/de/posts/tips-and-tricks/deep-diving/",
+  ],
+  [
+    "/de/posts/tipps-und-tricks/open-water-dauer/",
+    "/de/posts/tips-and-tricks/open-water-duration/",
+  ],
+
+  // TH alte Thai-Slugs
+  ["/th/about/กระบวนการดำน้ำ/", "/th/about/"],
+  ["/th/ทำไมการจองดำน้ำในเกาะช/", "/th/posts/straight-talk/book-in-advance/"],
+  ["/th/ทีม/นาย-อันเดรียส-ไมเออร์/", "/th/about/"],
+  ["/th/นโยบายความเป็นส่วนตัว/", "/th/privacy-policy/"],
+
+  // Sitemap-Alias
+  ["/sitemap-index.xml", "/sitemap.xml"],
+
+  // URLs ohne Sprachpräfix → English (erhalten 301 statt globalem 410)
+  ["/privacy-policy/", "/en/privacy-policy/"],
+  ["/privacy", "/en/privacy-policy/"],
+  ["/terms-and-conditions/", "/en/terms-and-conditions/"],
+  ["/ocean-climate/", "/en/posts/straight-talk/ocean-climate/"],
+  ["/weather-forecast-in-koh-chang/", "/en/weather/"],
+  ["/best-dive-computers/", "/en/posts/scuba-knowledge/best-dive-computers/"],
+  [
+    "/marine-life-koh-chang-asian-pacific/",
+    "/en/posts/marine-life-koh-chang/marine-life/",
+  ],
+  [
+    "/walhaie-auf-koh-chang-eine-begegnung-der-besonderen-art/",
+    "/de/posts/marine-life-koh-chang/marine-life-whale-shark/",
+  ],
+  [
+    "/how-to-open-water-course/",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/",
+  ],
+  [
+    "/fun-diving-koh-chang-step-by-step-2025/",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-fun-dives/",
+  ],
+  [
+    "/how-a-try-dive-works-at-chang-diving-step-by-step-2025-koh-chang/",
+    "/en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/",
+  ],
+  ["/search-and-recovery-diving/", "/en/courses/search-recovery/"],
+  ["/reel-and-guideline-use/", "/en/posts/tips-and-tricks/reel-guideline/"],
+  [
+    "/emergency-plan-for-diving-accidents-on-koh-chang/",
+    "/en/posts/straight-talk/emergency-plan/",
+  ],
+  ["/required-paperwork-for-certified-divers/", "/en/courses/"],
+  [
+    "/diving-thailand-gulf-vs-andaman/",
+    "/en/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/",
+  ],
+  [
+    "/faqs/do-i-need-a-medical-statement-to-dive-in-thailand/",
+    "/en/faqs/faq-diving-health-safety-thailand/",
+  ],
+  [
+    "/faqs/when-is-the-best-time-for-diving-and-what-i-can-expect-at-koh-chang/",
+    "/en/faqs/faq-general-questions-koh-chang/",
+  ],
+  [
+    "/faqs/faq-booking-payment-scuba-koh-chang/",
+    "/en/faqs/faq-booking-payment-scuba-koh-chang/",
+  ],
+  [
+    "/faqs/faq-equipment-logistics-koh-chang/",
+    "/en/faqs/faq-equipment-logistics-koh-chang/",
+  ],
+  [
+    "/faqs/faq-try-dive-fun-dives-koh-chang/",
+    "/en/faqs/faq-try-dive-fun-dives-koh-chang/",
+  ],
+  [
+    "/posts/tips-and-tricks/about-underwater-photography/",
+    "/en/posts/tips-and-tricks/about-underwater-photography/",
+  ],
+  [
+    "/posts/tips-and-tricks/diving-activities/",
+    "/en/posts/tips-and-tricks/diving-activities/",
+  ],
+  [
+    "/posts/tips-and-tricks/open-water-duration/",
+    "/en/posts/tips-and-tricks/open-water-duration/",
+  ],
+  [
+    "/posts/tips-and-tricks/which-course/",
+    "/en/posts/tips-and-tricks/which-course/",
+  ],
+  [
+    "/posts/scuba-knowledge/wreck-diving-koh-chang/",
+    "/en/posts/scuba-knowledge/wreck-diving-koh-chang/",
+  ],
 ];
 
 // 2) PREFIX/WILDCARD 301 — als Objekte { from, to }
@@ -1075,6 +1205,19 @@ const REDIRECTS_PREFIX_RAW = [
   { from: "/en/courses/speciality", to: "/en/courses/specialty" },
   { from: "/de/courses/speciality", to: "/de/courses/specialty" },
   { from: "/th/courses/speciality", to: "/th/courses/specialty" },
+
+  // Alte Sprachversionen NL/SV → Englisch (Prefix-Catch-all)
+  { from: "/nl", to: "/en/" },
+  { from: "/sv", to: "/en/" },
+
+  // /videos/* ohne Sprachpräfix → /en/videos/
+  { from: "/videos", to: "/en/videos/" },
+
+  // /faqs/* ohne Sprachpräfix → /en/faqs/
+  { from: "/faqs", to: "/en/faqs/" },
+
+  // /posts/* ohne Sprachpräfix → /en/posts/
+  { from: "/posts", to: "/en/posts/" },
 ];
 
 // In Maps/normalisierte Regeln umwandeln
