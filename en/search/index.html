@@ -184,6 +184,13 @@
         overflow: hidden;
       }
 
+      mark {
+        background: #fff3cd;
+        color: inherit;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
       .result-item::before {
         content: "";
         position: absolute;
@@ -714,12 +721,35 @@
       });
 
       // Normalize: lowercase + strip apostrophes/hyphens for fuzzy matching
-      // e.g. "Dalton's" → "daltons", "dalton-henry" → "daltonhenry"
       function norm(str) {
-        return str
-          .toLowerCase()
-          .replace(/['''\-]/g, "");
+        return str.toLowerCase().replace(/['''\-]/g, "");
       }
+
+      // Escape HTML to safely insert user-derived text into innerHTML
+      function escHtml(str) {
+        return str
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      // Wrap matching words in <mark> for highlighting
+      function highlight(text, rawTerms) {
+        let result = escHtml(text);
+        const sorted = [...rawTerms]
+          .filter((t) => t.length >= 2)
+          .sort((a, b) => b.length - a.length);
+        for (const term of sorted) {
+          const esc = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          result = result.replace(
+            new RegExp(`(${esc})`, "gi"),
+            "<mark>$1</mark>"
+          );
+        }
+        return result;
+      }
+
+      const MAX_RESULTS = 15;
 
       function performSearch(query) {
         if (!query.trim()) {
@@ -728,22 +758,25 @@
           return;
         }
 
+        const rawTerms = query.trim().split(/\s+/);
         const searchTerms = norm(query)
           .split(/\s+/)
           .filter((term) => term.length >= 2);
 
         if (!searchTerms.length) return;
 
-        const results = searchData
+        const allMatches = searchData
           .map((item) => ({
             item,
             score: getRelevanceScore(item, searchTerms),
           }))
           .filter(({ score }) => score > 0)
-          .sort((a, b) => b.score - a.score)
-          .map(({ item }) => item);
+          .sort((a, b) => b.score - a.score);
 
-        displaySearchResults(results, query);
+        const total = allMatches.length;
+        const results = allMatches.slice(0, MAX_RESULTS).map(({ item }) => item);
+
+        displaySearchResults(results, query, rawTerms, total);
       }
 
       function getRelevanceScore(item, searchTerms) {
@@ -771,13 +804,13 @@
         return totalScore;
       }
 
-      function displaySearchResults(results, query) {
+      function displaySearchResults(results, query, rawTerms, total) {
         const resultsContainer = document.getElementById("searchResults");
 
         if (results.length === 0) {
           resultsContainer.innerHTML = `
             <div class="search-info">
-              <h3>🔍 No results found for "${query}"</h3>
+              <h3>🔍 No results found for "${escHtml(query)}"</h3>
               <p>Try different search terms or browse our categories:</p>
               <ul>
                 <li>"courses" or "open water"</li>
@@ -790,14 +823,19 @@
           return;
         }
 
-        let html = `<div class="search-info"><h3>🔍 ${results.length} results for "${query}"</h3></div>`;
+        const countLabel =
+          total > MAX_RESULTS
+            ? `Top ${results.length} of ${total} results`
+            : `${results.length} result${results.length !== 1 ? "s" : ""}`;
+
+        let html = `<div class="search-info"><h3>🔍 ${countLabel} for "${escHtml(query)}"</h3></div>`;
 
         results.forEach((item) => {
           html += `
             <div class="result-item">
-              <div class="result-category">${item.category}</div>
-              <h3><a href="${item.url}">${item.title}</a></h3>
-              <p class="result-description">${item.description}</p>
+              <div class="result-category">${escHtml(item.category)}</div>
+              <h3><a href="${escHtml(item.url)}">${highlight(item.title, rawTerms)}</a></h3>
+              <p class="result-description">${highlight(item.description || "", rawTerms)}</p>
             </div>
           `;
         });
