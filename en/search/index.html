@@ -713,6 +713,14 @@
         });
       });
 
+      // Normalize: lowercase + strip apostrophes/hyphens for fuzzy matching
+      // e.g. "Dalton's" → "daltons", "dalton-henry" → "daltonhenry"
+      function norm(str) {
+        return str
+          .toLowerCase()
+          .replace(/['''\-]/g, "");
+      }
+
       function performSearch(query) {
         if (!query.trim()) {
           document.getElementById("searchResults").innerHTML =
@@ -720,8 +728,7 @@
           return;
         }
 
-        const searchTerms = query
-          .toLowerCase()
+        const searchTerms = norm(query)
           .split(/\s+/)
           .filter((term) => term.length >= 2);
 
@@ -740,9 +747,9 @@
       }
 
       function getRelevanceScore(item, searchTerms) {
-        const title = item.title.toLowerCase();
-        const urlPath = item.url.toLowerCase();
-        const description = (item.description || "").toLowerCase();
+        const title = norm(item.title);
+        const urlPath = norm(item.url);
+        const description = norm(item.description || "");
 
         let totalScore = 0;
 
