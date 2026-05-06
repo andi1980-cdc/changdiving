@@ -126,7 +126,7 @@
       }
 
       .search-form-main input {
-        flex: 1;
+        width: 100%;
         padding: 1rem 1.5rem;
         border: 2px solid rgba(0, 119, 182, 0.2);
         border-radius: 8px;
@@ -358,6 +358,68 @@
         font-weight: 600;
         text-decoration: underline;
         cursor: pointer;
+      }
+
+
+      /* Autocomplete dropdown */
+      .ac-wrap {
+        flex: 1;
+        position: relative;
+      }
+
+      .ac-dropdown {
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        right: 0;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        border: 1px solid rgba(0, 119, 182, 0.15);
+        z-index: 1000;
+        overflow: hidden;
+      }
+
+      .ac-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.65rem 1rem;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        text-decoration: none;
+        color: inherit;
+        transition: background 0.15s;
+      }
+
+      .ac-item:last-child {
+        border-bottom: none;
+      }
+
+      .ac-item:hover,
+      .ac-item.ac-active {
+        background: rgba(0, 119, 182, 0.07);
+      }
+
+      .ac-cat {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        background: rgba(0, 119, 182, 0.1);
+        padding: 0.15rem 0.5rem;
+        border-radius: 10px;
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .ac-title {
+        font-size: 0.88rem;
+        color: #333;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       /* Mobile Responsive */
@@ -690,6 +752,7 @@
       <!-- Search Form -->
       <div class="search-container">
         <form id="searchForm" class="search-form-main">
+          <div class="ac-wrap">
           <input
             type="text"
             id="searchInput"
@@ -698,6 +761,8 @@
             value=""
             required
           />
+            <div id="ac-dropdown" class="ac-dropdown" hidden></div>
+          </div>
           <button type="submit">
             <svg
               width="18"
@@ -863,8 +928,18 @@
           if (urlPath.includes(term)) termScore += 8;
           if (description.includes(term)) termScore += 5;
 
-          // AND-Logik: trifft ein Begriff nirgends, Ergebnis wird verworfen
-          if (termScore === 0) return 0;
+          // AND-Logik: exakt → Fuzzy-Fallback → verwerfen
+          if (termScore === 0) {
+            if (
+              fuzzyTermMatch(title, term) ||
+              fuzzyTermMatch(urlPath, term) ||
+              fuzzyTermMatch(description, term)
+            ) {
+              termScore = 2;
+            } else {
+              return 0;
+            }
+          }
 
           totalScore += termScore;
         }
@@ -973,6 +1048,116 @@
 
         renderResultItems(results, rawTerms, query, results);
       }
+
+
+      // ── Levenshtein distance (for typo tolerance) ─────────────────
+      function levenshtein(a, b) {
+        if (Math.abs(a.length - b.length) > 3) return 99;
+        const m = a.length, n = b.length;
+        const dp = [];
+        for (let i = 0; i <= m; i++) {
+          dp[i] = [i];
+          for (let j = 1; j <= n; j++) dp[i][j] = i === 0 ? j : 0;
+        }
+        for (let i = 1; i <= m; i++)
+          for (let j = 1; j <= n; j++)
+            dp[i][j] =
+              a[i - 1] === b[j - 1]
+                ? dp[i - 1][j - 1]
+                : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+        return dp[m][n];
+      }
+
+      function fuzzyTermMatch(haystack, needle) {
+        if (needle.length < 4) return false;
+        const maxDist = needle.length >= 7 ? 2 : 1;
+        return haystack
+          .split(/\s+/)
+          .some(
+            (w) =>
+              Math.abs(w.length - needle.length) <= maxDist &&
+              levenshtein(w, needle) <= maxDist
+          );
+      }
+
+      // ── Autocomplete ───────────────────────────────────────────────
+      let acTimer = null;
+      let acActive = -1;
+
+      function acUpdate() {
+        const q = document.getElementById("searchInput").value.trim();
+        const drop = document.getElementById("ac-dropdown");
+        if (!q || q.length < 2 || !searchData.length) {
+          drop.hidden = true;
+          return;
+        }
+        const nq = norm(q);
+        const matches = searchData
+          .filter(
+            (item) =>
+              norm(item.title).includes(nq) || norm(item.url).includes(nq)
+          )
+          .slice(0, 6);
+        if (!matches.length) {
+          drop.hidden = true;
+          return;
+        }
+        const rawTerms = q.split(/\s+/);
+        drop.innerHTML = matches
+          .map(
+            (item) =>
+              `<a class="ac-item" href="${escHtml(item.url)}">` +
+              `<span class="ac-cat">${escHtml(item.category)}</span>` +
+              `<span class="ac-title">${highlight(item.title, rawTerms)}</span>` +
+              `</a>`
+          )
+          .join("");
+        acActive = -1;
+        drop.hidden = false;
+      }
+
+      function acClose() {
+        document.getElementById("ac-dropdown").hidden = true;
+        acActive = -1;
+      }
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", function () {
+          clearTimeout(acTimer);
+          acTimer = setTimeout(acUpdate, 200);
+        });
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("keydown", function (e) {
+          const drop = document.getElementById("ac-dropdown");
+          if (drop.hidden) return;
+          const items = drop.querySelectorAll(".ac-item");
+          if (e.key === "ArrowDown") {
+            e.preventDefault();
+            acActive = Math.min(acActive + 1, items.length - 1);
+          } else if (e.key === "ArrowUp") {
+            e.preventDefault();
+            acActive = Math.max(acActive - 1, -1);
+          } else if (e.key === "Escape") {
+            acClose();
+            return;
+          } else if (e.key === "Enter" && acActive >= 0) {
+            e.preventDefault();
+            items[acActive].click();
+            return;
+          }
+          items.forEach((el, i) =>
+            el.classList.toggle("ac-active", i === acActive)
+          );
+          if (acActive >= 0) items[acActive].scrollIntoView({ block: "nearest" });
+        });
+
+      document.addEventListener("click", function (e) {
+        const form = document.getElementById("searchForm");
+        if (form && !form.contains(e.target)) acClose();
+      });
 
       // Handle form submission
       document
