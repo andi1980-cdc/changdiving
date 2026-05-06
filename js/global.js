@@ -521,11 +521,49 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Trustindex consent-gated loader
+// ---------------------------------------------
+function _loadTrustindex() {
+  var scripts = document.querySelectorAll('script[data-src*="trustindex.io"]');
+  if (!scripts.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    scripts.forEach(function (script) {
+      script.src = script.getAttribute("data-src");
+      script.removeAttribute("data-src");
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var container = entry.target;
+          var script = container.querySelector(
+            'script[data-src*="trustindex.io"]'
+          );
+          if (script) {
+            script.src = script.getAttribute("data-src");
+            script.removeAttribute("data-src");
+          }
+          observer.unobserve(container);
+        }
+      });
+    },
+    { rootMargin: "200px" }
+  );
+
+  scripts.forEach(function (script) {
+    var container = script.parentElement;
+    if (container) observer.observe(container);
+  });
+}
+
 // Cookie Consent Banner Initialisierung (sprachabhängig)
 // ---------------------------------------------
 window.addEventListener("load", function () {
   if (window.cookieconsent) {
-    // Sprache aus URL erkennen
     var lang = (window.location.pathname.split("/")[1] || "en").toLowerCase();
     var content = {
       en: {
@@ -565,7 +603,12 @@ window.addEventListener("load", function () {
       content: c,
       onInitialise: function (status) {
         if (status === window.cookieconsent.status.allow) {
-          // Optional: activate analytics or other scripts
+          _loadTrustindex();
+        }
+      },
+      onStatusChange: function (status) {
+        if (status === "allow") {
+          _loadTrustindex();
         }
       },
     });
