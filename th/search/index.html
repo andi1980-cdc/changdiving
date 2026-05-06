@@ -683,15 +683,20 @@
       async function loadSearchIndex() {
         try {
           const response = await fetch("/search-index.json");
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const index = await response.json();
           searchData = index["th"] || [];
           console.log(`Loaded ${searchData.length} pages for th`);
         } catch (error) {
           console.error("Error loading search index:", error);
+          document.getElementById("searchResults").innerHTML =
+            '<div class="search-info"><h3>โหลดดัชนีการค้นหาไม่สำเร็จ</h3><p>กรุณาลองบน <a href="https://changdiving.com/th/search/">changdiving.com</a> หรือโหลดหน้าใหม่</p></div>';
         }
       }
 
       document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("searchResults").innerHTML =
+          '<div class="loading">กำลังโหลดดัชนีการค้นหา</div>';
         loadSearchIndex().then(() => {
           const urlParams = new URLSearchParams(window.location.search);
           const query = urlParams.get("q");
@@ -699,7 +704,11 @@
             document.getElementById("searchInput").value = query;
             performSearch(query);
           } else {
-            document.getElementById("searchInput").value = "";
+            document.getElementById("searchResults").innerHTML = `
+              <div class="search-info">
+                <h3>พร้อมค้นหา</h3>
+                <p>ใส่คำค้นหาด้านบนเพื่อค้นหาเนื้อหา</p>
+              </div>`;
           }
         });
       });

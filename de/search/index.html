@@ -686,15 +686,20 @@
       async function loadSearchIndex() {
         try {
           const response = await fetch("/search-index.json");
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const index = await response.json();
           searchData = index["de"] || [];
           console.log(`Loaded ${searchData.length} pages for de`);
         } catch (error) {
           console.error("Error loading search index:", error);
+          document.getElementById("searchResults").innerHTML =
+            '<div class="search-info"><h3>Suchindex konnte nicht geladen werden.</h3><p>Bitte versuche es auf <a href="https://changdiving.com/de/search/">changdiving.com</a> oder lade die Seite neu.</p></div>';
         }
       }
 
       document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("searchResults").innerHTML =
+          '<div class="loading">Suchindex wird geladen</div>';
         loadSearchIndex().then(() => {
           const urlParams = new URLSearchParams(window.location.search);
           const query = urlParams.get("q");
@@ -702,7 +707,11 @@
             document.getElementById("searchInput").value = query;
             performSearch(query);
           } else {
-            document.getElementById("searchInput").value = "";
+            document.getElementById("searchResults").innerHTML = `
+              <div class="search-info">
+                <h3>Bereit zur Suche</h3>
+                <p>Suchbegriff eingeben, um Inhalte zu finden.</p>
+              </div>`;
           }
         });
       });
