@@ -308,6 +308,55 @@
         }
       }
 
+      /* Category filter pills */
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .filter-btn {
+        background: white;
+        border: 1.5px solid rgba(0, 119, 182, 0.3);
+        color: var(--primary-blue);
+        padding: 0.35rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .filter-btn:hover {
+        background: rgba(0, 119, 182, 0.08);
+        border-color: var(--primary-blue);
+      }
+
+      .filter-btn.active {
+        background: var(--primary-blue);
+        border-color: var(--primary-blue);
+        color: white;
+      }
+
+      /* Did-you-mean suggestion */
+      .dym-box {
+        background: #f0f7ff;
+        border: 1px solid rgba(0, 119, 182, 0.25);
+        border-radius: 10px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.95rem;
+        color: #444;
+      }
+
+      .dym-box a {
+        color: var(--primary-blue);
+        font-weight: 600;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
       /* Mobile Responsive */
       @media (max-width: 768px) {
         .search-hero {
@@ -751,6 +800,12 @@
 
       const MAX_RESULTS = 15;
 
+      // State for active category filter
+      let activeCategory = "All";
+      let lastResults = [];
+      let lastRawTerms = [];
+      let lastQuery = "";
+
       function performSearch(query) {
         if (!query.trim()) {
           document.getElementById("searchResults").innerHTML =
@@ -771,12 +826,36 @@
             score: getRelevanceScore(item, searchTerms),
           }))
           .filter(({ score }) => score > 0)
-          .sort((a, b) => b.score - a.score);
+          .sort((a, b) => b.score - a.score)
+          .slice(0, MAX_RESULTS)
+          .map(({ item }) => item);
 
-        const total = allMatches.length;
-        const results = allMatches.slice(0, MAX_RESULTS).map(({ item }) => item);
+        // Did-you-mean: if 0 results AND multi-word query, try each term alone
+        let dymSuggestion = null;
+        if (allMatches.length === 0 && searchTerms.length > 1) {
+          for (const singleTerm of searchTerms) {
+            const fallback = searchData
+              .map((item) => ({
+                item,
+                score: getRelevanceScore(item, [singleTerm]),
+              }))
+              .filter(({ score }) => score > 0)
+              .slice(0, MAX_RESULTS)
+              .map(({ item }) => item);
+            if (fallback.length > 0) {
+              dymSuggestion = { term: singleTerm, results: fallback };
+              break;
+            }
+          }
+        }
 
-        displaySearchResults(results, query, rawTerms, total);
+        // Cache for category filter re-rendering
+        activeCategory = "All";
+        lastResults = allMatches;
+        lastRawTerms = rawTerms;
+        lastQuery = query;
+
+        displaySearchResults(allMatches, query, rawTerms, dymSuggestion);
       }
 
       function getRelevanceScore(item, searchTerms) {
@@ -804,11 +883,69 @@
         return totalScore;
       }
 
-      function displaySearchResults(results, query, rawTerms, total) {
+      function buildFilterBar(results) {
+        const cats = ["All"];
+        results.forEach((item) => {
+          if (!cats.includes(item.category)) cats.push(item.category);
+        });
+        if (cats.length <= 2) return ""; // no bar if only one category
+        return (
+          '<div class="filter-bar">' +
+          cats
+            .map(
+              (cat) =>
+                `<button class="filter-btn${cat === activeCategory ? " active" : ""}" onclick="filterByCategory('${escHtml(cat)}')">${escHtml(cat)}</button>`
+            )
+            .join("") +
+          "</div>"
+        );
+      }
+
+      function filterByCategory(cat) {
+        activeCategory = cat;
+        const filtered =
+          cat === "All"
+            ? lastResults
+            : lastResults.filter((item) => item.category === cat);
+        renderResultItems(filtered, lastRawTerms, lastQuery, lastResults);
+      }
+
+      function renderResultItems(results, rawTerms, query, allResults) {
+        const container = document.getElementById("searchResults");
+        const filtered = results;
+        const total = allResults.length;
+
+        const countLabel =
+          total > MAX_RESULTS
+            ? `Top ${total} results`
+            : `${total} result${total !== 1 ? "s" : ""}`;
+
+        let html =
+          `<div class="search-info"><h3>🔍 ${countLabel} for "${escHtml(query)}"</h3></div>` +
+          buildFilterBar(allResults);
+
+        if (filtered.length === 0) {
+          html += `<div class="search-info"><p>No results in this category. <a href="#" onclick="filterByCategory('All');return false;">Show all</a></p></div>`;
+        } else {
+          filtered.forEach((item) => {
+            html += `
+              <div class="result-item">
+                <div class="result-category">${escHtml(item.category)}</div>
+                <h3><a href="${escHtml(item.url)}">${highlight(item.title, rawTerms)}</a></h3>
+                <p class="result-description">${highlight(item.description || "", rawTerms)}</p>
+              </div>
+            `;
+          });
+        }
+
+        container.innerHTML = html;
+      }
+
+      function displaySearchResults(results, query, rawTerms, dymSuggestion) {
         const resultsContainer = document.getElementById("searchResults");
 
         if (results.length === 0) {
-          resultsContainer.innerHTML = `
+          let html = `
             <div class="search-info">
               <h3>🔍 No results found for "${escHtml(query)}"</h3>
               <p>Try different search terms or browse our categories:</p>
@@ -820,27 +957,31 @@
               </ul>
             </div>
           `;
+          if (dymSuggestion) {
+            html += `
+              <div class="dym-box">
+                No exact match — showing results for
+                <a href="#" onclick="document.getElementById('searchInput').value='${escHtml(dymSuggestion.term)}';performSearch('${escHtml(dymSuggestion.term)}');return false;">"${escHtml(dymSuggestion.term)}"</a> instead:
+              </div>
+            `;
+            lastResults = dymSuggestion.results;
+            lastRawTerms = dymSuggestion.term.split(/\s+/);
+            lastQuery = query;
+            dymSuggestion.results.forEach((item) => {
+              html += `
+                <div class="result-item">
+                  <div class="result-category">${escHtml(item.category)}</div>
+                  <h3><a href="${escHtml(item.url)}">${highlight(item.title, lastRawTerms)}</a></h3>
+                  <p class="result-description">${highlight(item.description || "", lastRawTerms)}</p>
+                </div>
+              `;
+            });
+          }
+          resultsContainer.innerHTML = html;
           return;
         }
 
-        const countLabel =
-          total > MAX_RESULTS
-            ? `Top ${results.length} of ${total} results`
-            : `${results.length} result${results.length !== 1 ? "s" : ""}`;
-
-        let html = `<div class="search-info"><h3>🔍 ${countLabel} for "${escHtml(query)}"</h3></div>`;
-
-        results.forEach((item) => {
-          html += `
-            <div class="result-item">
-              <div class="result-category">${escHtml(item.category)}</div>
-              <h3><a href="${escHtml(item.url)}">${highlight(item.title, rawTerms)}</a></h3>
-              <p class="result-description">${highlight(item.description || "", rawTerms)}</p>
-            </div>
-          `;
-        });
-
-        resultsContainer.innerHTML = html;
+        renderResultItems(results, rawTerms, query, results);
       }
 
       // Handle form submission
