@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <!-- Basic Meta Tags -->
+  <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -646,9 +647,18 @@
 
       <div class="speciality-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav class="page-jump-nav" aria-label="On this page">
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#course-overview">Intro</a>
+            <a href="#who-can-join">Who can join?</a>
+            <a href="#whats-included">What&#39;s included</a>
+            <a href="#solo-packages">Prices &amp; book</a>
+          </div>
+        </nav>
         <hr />
 
-        <h2 style="color: var(--accent-color)">
+        <h2 id="course-overview" style="color: var(--accent-color)">
           Solo Diver Course – Master Self-Reliant Diving
         </h2>
 
@@ -692,8 +702,9 @@
         </p>
         <p>
           Looking for other
-          <a href="/en/courses/specialty/">specialty diving courses in Koh Chang</a>?
-          The hub lists every recreational specialty; Solo is one path for
+          <a href="/en/courses/specialty/"
+            >specialty diving courses in Koh Chang</a
+          >? The hub lists every recreational specialty; Solo is one path for
           experienced divers.
         </p>
         <p>
@@ -794,7 +805,7 @@
         <hr />
 
         <!-- Course Requirements -->
-        <h2>Requirements</h2>
+        <h2 id="who-can-join">Requirements</h2>
         <ul>
           <li><strong>Agency:</strong> SDI</li>
           <li><strong>Minimum Age:</strong> 21 years</li>
@@ -824,7 +835,7 @@
         <hr />
 
         <!-- What's Included -->
-        <h2 class="headline-green">What's Included?</h2>
+        <h2 id="whats-included" class="headline-green">What's Included?</h2>
         <ul>
           <li>
             1-day Solo Diver Specialty course (SDI)—counts toward
@@ -965,7 +976,9 @@
         </div>
         <hr />
         <!-- CTA for Solo Diver Course -->
-        <h3 style="margin-top: 0">Take the Challenge – Dive Solo</h3>
+        <h3 id="solo-packages" style="margin-top: 0">
+          Take the Challenge – Dive Solo
+        </h3>
         <p>
           Solo diving means freedom, focus, and self-reliance. Perfect your
           photography, boost your safety, and discover your inner explorer. It's

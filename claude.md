@@ -180,7 +180,7 @@ Run after any of the following:
 ```bash
 cd /Users/andismac/Desktop/cdc_git
 python3 - <<'PYEOF'
-import os, re, json
+import os, re, json, html as html_mod
 
 SKIP_EXACT = {'/search/', '/404/', '/410/', '/privacy-policy/', '/refund-policy/', '/terms-and-conditions/'}
 SKIP_HUB_SEGMENTS = {
@@ -206,12 +206,12 @@ def extract_meta(content, name):
         r'<meta\b[^>]*\bcontent=["\']([^"\']*)["\'][^>]*\bname=["\']' + re.escape(name) + r'["\']',
     ]:
         m = re.search(pattern, content, re.IGNORECASE | re.DOTALL)
-        if m: return m.group(1).strip()
+        if m: return html_mod.unescape(m.group(1).strip())
     return ''
 
 def extract_title(content):
     m = re.search(r'<title[^>]*>(.*?)</title>', content, re.IGNORECASE | re.DOTALL)
-    return re.sub(r'\s+', ' ', m.group(1)).strip() if m else ''
+    return html_mod.unescape(re.sub(r'\s+', ' ', m.group(1)).strip()) if m else ''
 
 def get_priority(url_path):
     d = url_path.count('/')
@@ -246,7 +246,7 @@ for lang in ['en', 'de', 'th']:
             title = extract_title(content)
             description = extract_meta(content, 'description')
             if not title or not description: continue
-            title = re.sub(r'\s*[|\-–]\s*(Chang Diving.*|ช้างไดฟ์วิ่ง.*)$', '', title).strip()
+            title = re.sub(r'\s*[|–\-]\s*(Chang Diving.*|ช้างได[ฟร]์วิ่ง.*)$', '', title).strip()
             index[lang].append({'url': url_path, 'title': title, 'description': description,
                                  'category': get_category(url_path, lang), 'priority': get_priority(url_path)})
     index[lang].sort(key=lambda x: -x['priority'])

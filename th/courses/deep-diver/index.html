@@ -602,7 +602,7 @@
   <body>
     <header>
       <!-- Hero-Bereich -->
-      <div class="hero">
+      <div class="hero hero--transactional">
         <div class="hero-logo">
           <a href="/th/">
             <img
@@ -651,7 +651,7 @@
         </picture>
 
         <div class="hero-text">
-          <h1>คอร์ส Deep Diver – สำรวจความลึกใหม่อย่างปลอดภัย</h1>
+          <h1>Deep Diver Koh Chang – Specialty 1 วัน - เริ่ม 7,990 บาท</h1>
           <p>
             เชี่ยวชาญการดำน้ำลึกกับคอร์ส Deep Diver เฉพาะทางของเราที่เกาะช้าง
             เรียนรู้การดำน้ำอย่างปลอดภัยลึกถึง 40 เมตร
@@ -674,8 +674,17 @@
 
       <div class="speciality-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav class="page-jump-nav" aria-label="On this page">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#course-overview">บทนำ</a>
+            <a href="#who-can-join">ใครเข้าร่วมได้</a>
+            <a href="#whats-included">สิ่งที่รวม</a>
+            <a href="#deep-packages">ราคาและจอง</a>
+          </div>
+        </nav>
         <hr />
-        <h2 style="color: var(--accent-color)">
+        <h2 id="course-overview" style="color: var(--accent-color)">
           Deep Diver Course เกาะช้าง – ดำน้ำ 40 เมตร
         </h2>
 
@@ -856,7 +865,7 @@
         <hr />
 
         <!-- Requirements -->
-        <h2>ข้อกำหนด</h2>
+        <h2 id="who-can-join">ข้อกำหนด</h2>
         <ul>
           <li><strong>องค์กร:</strong> SDI (18+) หรือ PADI (18+)</li>
           <li>
@@ -871,7 +880,7 @@
         <hr />
 
         <!-- What's Included -->
-        <h2 class="headline-green">รวมอะไรบ้าง?</h2>
+        <h2 id="whats-included" class="headline-green">รวมอะไรบ้าง?</h2>
         <ul>
           <li>คอร์ส Deep Diver เฉพาะทาง 1 ถึง 2 วัน (SDI หรือ PADI)</li>
           <li>การดำน้ำลึก 2 ถึง 4 ไดฟ์จากเรือ</li>
@@ -1026,7 +1035,7 @@
         </div>
         <hr />
         <!-- CTA for Navigation Specialty Course -->
-        <h3 style="margin-top: 0">ดำลงไปสู่ความลึก</h3>
+        <h3 id="deep-packages" style="margin-top: 0">ดำลงไปสู่ความลึก</h3>
         <p>
           คอร์สนี้เหมาะสำหรับผู้คลื่นไคล้เรือจม นักดำน้ำเทคในอนาคต และ
           ทุกคนที่พร้อมขยายขีดจำกัดความลึก เรียนรู้ทักษะ สร้าง ความมั่นใจ
