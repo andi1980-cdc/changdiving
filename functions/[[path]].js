@@ -1058,8 +1058,7 @@ const REDIRECTS_EXACT_RAW = [
   ["/th/ทีม/นาย-อันเดรียส-ไมเออร์/", "/th/about/"],
   ["/th/นโยบายความเป็นส่วนตัว/", "/th/privacy-policy/"],
 
-  // Sitemap-Alias
-  ["/sitemap-index.xml", "/sitemap.xml"],
+  // sitemap-index.xml was removed; 410 is handled in FORCE_GONE_EXACT below
 
   // URLs ohne Sprachpräfix → English (erhalten 301 statt globalem 410)
   ["/privacy-policy/", "/en/privacy-policy/"],
@@ -1241,6 +1240,8 @@ const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW.map(({ from, to }) => ({
 // 3) EXAKTE 410 — als Set (Strings). Vollständig URL-encodiert eintragen.
 const FORCE_GONE_EXACT = new Set(
   [
+    // Sitemap-Index (removed, permanently gone)
+    "/sitemap-index.xml",
     // Beispiele:
     "/what-is-nitrox//1000",
     "/de/123test/",
