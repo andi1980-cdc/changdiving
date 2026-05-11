@@ -906,6 +906,7 @@
             <li>
               <a href="/en/dive-sites/koh-rang-pinnacle/">Koh Rang Pinnacle</a>
             </li>
+            <li><a href="/en/dive-sites/koho-maru-5/">Koho Maru 5 (PAK-1)</a></li>
           </ul>
         </section>
 
@@ -1138,12 +1139,19 @@
                 cls: "reef",
                 u: "/en/dive-sites/koh-rang-pinnacle/",
               },
+              {
+                n: "Koho Maru 5 (PAK-1)",
+                c: [12.0924, 101.6824],
+                e: "🛳️",
+                cls: "wreck",
+                u: "/en/dive-sites/koho-maru-5/",
+              },
             ];
 
             function buildBounds(L) {
               if (!SITES.length)
                 return L.latLngBounds(
-                  L.latLng(11.75, 102.17),
+                  L.latLng(11.75, 101.45),
                   L.latLng(12.2, 102.5)
                 );
               return L.latLngBounds(SITES.map((s) => L.latLng(s.c[0], s.c[1])));
@@ -1361,6 +1369,32 @@
             "position": 3,
             "name": "Dive Site Map Koh Chang",
             "item": "https://changdiving.com/en/dive-sites/dive-site-map-koh-chang/"
+          },
+          {
+            "@type": "Place",
+            "name": "Koho Maru 5 (PAK-1)",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 12.0924,
+              "longitude": 101.6824
+            },
+            "amenityFeature": [
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Depth",
+                "value": "25–42 m"
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Level",
+                "value": "Technical"
+              },
+              {
+                "@type": "LocationFeatureSpecification",
+                "name": "Access",
+                "value": "Boat only"
+              }
+            ]
           }
         ]
       }
