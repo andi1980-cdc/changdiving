@@ -577,17 +577,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB
-          </h1>
-          <p>
-            Schon zertifiziert? Tauche entspannt mit unserem professionellen
-            Team und entdecke lebendige Korallenriffe, faszinierendes
-            Meeresleben und spannende Wracks rund um Koh Chang.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -604,16 +593,29 @@
 
       <div class="changdiving-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
-        <nav class="page-jump-nav" aria-label="Auf dieser Seite">
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Fun Dives Koh Chang – Geführte Bootstauchgänge ab 3.290 THB
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Schon zertifiziert? Tauche entspannt mit unserem professionellen Team
+          und entdecke lebendige Korallenriffe, faszinierendes Meeresleben und
+          spannende Wracks rund um Koh Chang.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
-            <a href="#who-can-join">Wer kann teilnehmen?</a>
-            <a href="#whats-included">Das ist inklusive</a>
-            <a href="#what-can-you-discover">Entdecken</a>
+            <a href="#intro">Intro</a>
+            <a href="#who-can-join">Wer kann mit?</a>
+            <a href="#whats-included">Was ist inklusive</a>
             <a href="#dive-packages">Preise &amp; buchen</a>
           </div>
         </nav>
-        <hr style="margin: 40px 0" />
         <img
           class="lazy"
           src="/img/products/fun_dive/fun_dive_header.webp"
@@ -624,11 +626,8 @@
           height="200"
         />
         <hr />
-        <!-- Introduction (Seitentitel ist H1 im Hero) -->
-        <h2 class="headline-black">
-          Tauchen auf Koh Chang, Thailand – Ihr Tor zum Golf von Thailand
-        </h2>
-        <p>
+        <!-- Introduction -->
+        <p id="intro">
           Suchen Sie nach <strong>Tauchen auf Koh Chang</strong>? Unsere
           täglichen <strong>Fun Dives</strong> bringen zertifizierte Taucher zu
           <strong
