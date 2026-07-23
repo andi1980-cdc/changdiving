@@ -1,12 +1,27 @@
 # Page Header + Jump Menu Pattern
 
 Stand: Juli 2026  
-Referenzseite (Test): `en/day-trips/fun-dives/index.html`
+Referenz: `docs/PAGE-HEADER-JUMP-MENU-PATTERN.md`  
+Verwandt (älter, H1 *im* Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
-Dieses Muster beschreibt die Layout-Änderung: **H1 und Teaser unter dem Hero** (nicht als Overlay), plus **einheitliches Jump-Menü**. Später auf andere Day-Trip- und Kurs-Seiten anwenden.
+Für kaufnahe Seiten gilt **dieses** Dokument als aktueller Standard: **H1 + Teaser unter dem Hero** + **einheitliches Jump-Menü (4 Punkte)**.
 
-Verwandt, aber älter (H1 *im* Hero / Mobile-Overlay): `HERO-TRANSACTIONAL-PATTERN.md`  
-Für kaufnahe Seiten gilt **dieses** Dokument als aktueller Standard.
+---
+
+## Status: Day Trips (abgeschlossen)
+
+Alle **internen Produktseiten** unter `/day-trips/` sind in **EN / DE / TH** umgestellt:
+
+| Seite | Status | Book-/Packages-Anker | Jump-Labels |
+|-------|--------|----------------------|-------------|
+| `fun-dives` | ✅ | `#dive-packages` | Standard |
+| `try-dive` | ✅ | `#try-dive-options` | Standard |
+| `scuba-review` | ✅ | `#review-packages` | Standard |
+| `snorkeling` | ✅ | `#book-snorkeling` (neu) | Standard |
+| `insurance` | ✅ | `#book-insurance` | **Versicherung** (s.u.) |
+| `rent-gopro` | ✅ | `#book-gopro` | **GoPro** (s.u.) |
+
+Hub `/day-trips/` (Übersicht) ist **nicht** Teil dieses Musters.
 
 ---
 
@@ -16,7 +31,7 @@ Für kaufnahe Seiten gilt **dieses** Dokument als aktueller Standard.
 |--------|---------|
 | H1 + Teaser als Overlay auf dem Hero-Bild | Hero = nur Bild |
 | Extra `<h2>` unter Banner (oft redundant) | H1 ist die einzige Hauptüberschrift |
-| Jump-Menü unterschiedlich (Discover, 5 Links …) | Immer dieselben 4 Punkte |
+| Jump-Menü unterschiedlich (Discover, 5 Links …) | Immer 4 Punkte, gleiche Reihenfolge |
 
 **Vorteile:** besseres Hero-Bild, lesbarer Titel, konsistente Navigation, weniger doppelte Headlines.
 
@@ -32,24 +47,20 @@ Für kaufnahe Seiten gilt **dieses** Dokument als aktueller Standard.
     breadcrumb
     h1          (zentriert)
     p (Teaser)  (zentriert)
-    page-jump-nav
-    banner-img  (optional, wie bisher)
-    <hr />
-    intro-Absatz(e)  id="intro"
+    page-jump-nav   (border-bottom: 1px solid #ccc)
+    banner-img  (optional)
+    <hr />      (unter Banner ok; nicht zwischen Jump-Nav und Banner)
+    intro … id="intro"
     …
-    h2 id="who-can-join"
-    h2 id="whats-included"
-    …
-    h2 / Abschnitt Prices & book  (z. B. id="dive-packages")
+    Preise/Buchung (seiten-spezifischer Anker)
 ```
 
 ---
 
 ## 1. Hero: Text-Overlay entfernen
 
-**Entfernen** aus dem Hero:
-
 ```html
+<!-- ENTFERNEN -->
 <div class="hero-text">
   <h1>…</h1>
   <p>…</p>
@@ -57,56 +68,46 @@ Für kaufnahe Seiten gilt **dieses** Dokument als aktueller Standard.
 ```
 
 Hero enthält nur noch `<picture>` / Hero-Bild.  
-CSS für `.hero-text` darf im Page-`<style>` bleiben (schadet nicht) – optional später aufräumen.
+CSS für `.hero-text` im Page-`<style>` darf bleiben (optional später aufräumen).
 
 ---
 
-## 2. H1 + Teaser zwischen Breadcrumb und Jump-Menü
-
-Direkt nach `<nav id="breadcrumb" …>` einfügen:
+## 2. H1 + Teaser nach Breadcrumb
 
 ```html
-<h1 style="margin: 20px 0 8px; text-align: center">
-  Fun Dives Koh Chang – Guided Boat Dives from 3,290 THB
-</h1>
-<p style="margin: 0 0 24px; color: #555; text-align: center">
-  Already certified? Join our guided fun dives and explore vibrant
-  coral reefs, fascinating marine life and thrilling wrecks around Koh
-  Chang.
-</p>
+<h1 style="margin: 20px 0 8px; text-align: center">…</h1>
+<p style="margin: 0 0 24px; color: #555; text-align: center">…</p>
 ```
 
 **Regeln:**
 
-- H1 = gleiche Keywords wie `<title>`, **ohne** `| Chang Diving`
-- Teaser = kurzer Absatz (1–2 Sätze), der zuvor im Hero stand
-- Beide **zentriert** (`text-align: center`)
-- Hero-Bild-`alt` weiterhin wie H1 halten
+- H1 ≈ Keywords wie `<title>`, **ohne** `| Chang Diving`
+- Teaser = 1–2 Sätze (früher oft im Hero)
+- Beide **zentriert**
+- Hero-`alt` keyword-stark halten
 
 ---
 
 ## 3. Redundantes H2 entfernen
 
-Falls unter dem Banner-Bild ein zweites Headline-H2 steht, das den Seitentitel wiederholt (z. B. „Fun Diving in Koh Chang, Thailand – Your Gateway…“), **entfernen**.
-
-Der SEO-Einleitungstext (`Looking for fun dives…`) bleibt; nur die doppelte Headline fällt weg.
+Zweites Headline-H2, das den Seitentitel wiederholt (z. B. blaues `headline-blue`), **entfernen**. SEO-Fließtext darunter bleibt.
 
 ---
 
-## 4. Einheitliches Jump-Menü (4 Punkte)
+## 4. Jump-Menü – Standard (Touren / Kurse)
 
-**Immer diese Reihenfolge und Labels** (lokalisiert in DE/TH):
+| # | EN | DE | TH | Typischer Anker |
+|---|----|----|-----|-----------------|
+| 1 | Intro | Intro | **บทนำ** | `#intro` |
+| 2 | Who can join? | Wer kann mit? | ใครเข้าร่วมได้? | `#who-can-join` |
+| 3 | What's included | Was ist inklusive | สิ่งที่รวมอยู่ | `#whats-included` |
+| 4 | Prices & book | Preise & buchen | ราคาและจอง | siehe Tabelle oben |
 
-| # | EN Label | Anker | Ziel |
-|---|----------|--------|------|
-| 1 | Intro | `#intro` | Erster Intro-Absatz nach Banner/`<hr>` |
-| 2 | Who can join? | `#who-can-join` | Voraussetzungen |
-| 3 | What's included | `#whats-included` | Inklusivleistungen |
-| 4 | Prices & book | `#…-packages` / `#book-…` | Preis-/Buchungsbereich |
+Label „On this page“: EN `On this page` · DE `Auf dieser Seite` · TH `ในหน้านี้`
 
-**Nicht** in das Standard-Menü: Discover / What can you discover (Abschnitt darf auf der Seite bleiben, nur kein Jump-Link).
+**Nicht** im Standard-Menü: Discover / Entdecken (Abschnitt darf bleiben).
 
-### Markup (EN Beispiel)
+### Markup (EN)
 
 ```html
 <nav
@@ -124,36 +125,13 @@ Der SEO-Einleitungstext (`Looking for fun dives…`) bleibt; nur die doppelte He
 </nav>
 ```
 
-### Anker setzen
-
-```html
-<p id="intro">…</p>
-<!-- oder wrap um Intro-Block, wenn mehrere Absätze -->
-
-<h2 id="who-can-join" …>Who can join?</h2>
-<h2 id="whats-included" …>What's included</h2>
-<h2 id="dive-packages" …>…</h2>  <!-- Seiten-spezifische Packages-ID beibehalten -->
-```
-
-**Packages-ID:** pro Seite den bestehenden Anker nutzen (`#dive-packages`, `#try-dive-options`, `#owd-packages`, `#book-advanced`, …) – nur das **Label** „Prices & book“ vereinheitlichen.
-
-### DE / TH Labels (Vorschlag)
-
-| EN | DE | TH |
-|----|----|-----|
-| On this page | Auf dieser Seite | ในหน้านี้ |
-| Intro | Intro | Intro |
-| Who can join? | Wer kann mit? | ใครเข้าร่วมได้? |
-| What's included | Was ist inklusive | สิ่งที่รวมอยู่ |
-| Prices & book | Preise & buchen | ราคาและจอง |
-
 ---
 
-## 5. Linienfarbe angleichen
+## 5. Linienfarbe
 
-- Jump-Nav-Unterkante: `style="border-bottom: 1px solid #ccc"` (wie globales `hr`)
-- **Kein** zusätzliches `<hr>` *zwischen* Jump-Nav und Banner-Bild (sonst Doppel-Linie)
-- Ein `<hr />` *unter* dem Banner-Bild vor dem Intro ist ok
+- Jump-Nav: `border-bottom: 1px solid #ccc` (wie globales `hr`)
+- **Kein** `<hr>` zwischen Jump-Nav und Banner
+- `<hr />` unter dem Banner vor Intro ist ok
 
 ---
 
@@ -161,31 +139,82 @@ Der SEO-Einleitungstext (`Looking for fun dives…`) bleibt; nur die doppelte He
 
 1. [ ] `.hero-text` aus Hero entfernt  
 2. [ ] H1 + Teaser nach Breadcrumb, zentriert  
-3. [ ] Redundantes Intro-H2 entfernt (falls vorhanden)  
-4. [ ] Jump-Menü: Intro · Who can join? · What's included · Prices & book  
-5. [ ] `id="intro"` am Intro-Absatz  
+3. [ ] Redundantes Intro-/Titel-H2 entfernt (falls vorhanden)  
+4. [ ] Jump-Menü 4 Punkte (Standard **oder** Produkt-Ausnahme)  
+5. [ ] `id="intro"` gesetzt  
 6. [ ] Jump-Nav-Border `#ccc`, kein doppeltes `<hr>` über dem Banner  
-7. [ ] Packages-Anker stimmt mit „Book now“-Links (Preisliste etc.) überein  
-8. [ ] DE + TH spiegeln (Inhalt lokalisiert, Struktur gleich)  
+7. [ ] Packages-/Book-Anker stimmt (Preisliste „Book now“ ggf. nachziehen)  
+8. [ ] DE + TH spiegeln; TH Intro-Label = **บทนำ** (nicht „Intro“)  
+9. [ ] Bildpfade prüfen (`/img/products/…`, keine falschen Ordnernamen)
 
 ---
 
-## Rollout-Kandidaten (später)
+## Produkt-Ausnahmen (Labels)
 
-**Day Trips:**  
-`try-dive`, `scuba-review`, `snorkeling`, ggf. weitere unter `/day-trips/`
+### Insurance (`/day-trips/insurance/`)
 
-**Courses (ähnliche Struktur):**  
-`open-water-diver`, `advanced`, `scuba-diver`, Specialty-/Tech-Seiten mit Jump-Menü
+| EN | DE | TH |
+|----|----|-----|
+| Intro | Intro | บทนำ |
+| Benefits | Vorteile | ประโยชน์ |
+| Coverage | Deckung | ความคุ้มครอง |
+| Prices & book | Preise & buchen | ราคาและจอง |
 
-Nicht blind auf alle Hub-Seiten (`/courses/`, `/posts/`) anwenden – vor allem **buchbare Einzel-/Produktseiten**.
+Anker: `#intro`, `#who-can-join`, `#whats-included`, `#book-insurance`  
+(IDs technisch an Kurs-Schema angelehnt; sichtbare Labels versicherungsspezifisch.)
+
+### GoPro Rental (`/day-trips/rent-gopro/`)
+
+| EN | DE | TH |
+|----|----|-----|
+| Intro | Intro | บทนำ |
+| What's included | Inklusive | สิ่งที่รวมอยู่ |
+| What you'll see | Was du siehst | สิ่งที่คุณจะเห็น |
+| Prices & book | Preise & buchen | ราคาและจอง |
+
+Anker: `#intro`, `#whats-included`, `#what-youll-see`, `#book-gopro`
 
 ---
 
-## Referenz-Diff
+## Seiten-Notizen (Day Trips)
 
-Arbeitsstand (noch nicht gepusht zum Zeitpunkt der Doku): nur EN Fun Dives als Vorlage.
+| Seite | Besonderheiten |
+|-------|----------------|
+| **fun-dives** | Erste Referenz; Intro = erster SEO-Absatz nach Banner; `#dive-packages` |
+| **try-dive** | Kein Banner wie Fun Dives; `#intro` am Video-Block (EN/TH) bzw. am „Was ist Schnuppertauchen?“-H2 (DE); DE: `#requirements` → `#who-can-join` |
+| **scuba-review** | Banner + Video-Playlist behalten; `#course-overview` → `#intro`; TH: Bildpfade waren falsch (`สกูบา_review` → `scuba_review`) – **gefixt** |
+| **snorkeling** | Jump-Menü war neu; `#book-snorkeling` neu; TH-Banner auf `/img/products/snorkeling/snorkeling_2_small.webp` vereinheitlicht |
+| **insurance** | Hero war schon ohne Overlay; Labels siehe Ausnahme |
+| **rent-gopro** | Kurze Seite; Includes als eigenes H2; Labels siehe Ausnahme |
+
+---
+
+## Bekannte Fixes während des Rollouts
+
+1. **TH scuba-review:** alle Bild-URLs `/img/products/สกูบา_review/` → `/img/products/scuba_review/` (13 Stellen inkl. Meta/OG).  
+2. **TH snorkeling Banner:** `/img/daytrips/snorkeling/snorkeling2.webp` → `/img/products/snorkeling/snorkeling_2_small.webp`.  
+3. **TH Jump-Label:** immer **บทนำ**, nie englisches „Intro“.
+
+---
+
+## Nächster Rollout (offen)
+
+**Courses** (ähnliche Struktur):  
+`open-water-diver`, `advanced`, `scuba-diver`, Specialty-/Tech-Seiten mit Jump-Menü.
+
+Nicht blind auf Hubs (`/courses/`, `/posts/`, `/day-trips/` Übersicht) anwenden – vor allem **buchbare Einzel-/Produktseiten**.
+
+---
+
+## Prüfen lokal
 
 ```bash
-git diff -- en/day-trips/fun-dives/index.html
+# Alle Day-Trip-Produktseiten: Jump-Nav + intro-Anker vorhanden?
+for lang in en de th; do
+  for p in fun-dives try-dive scuba-review snorkeling insurance rent-gopro; do
+    f="$lang/day-trips/$p/index.html"
+    echo -n "$f: "
+    grep -c 'page-jump-nav' "$f"; grep -c 'id="intro"' "$f"
+  done
+done
 ```
