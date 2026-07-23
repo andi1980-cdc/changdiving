@@ -4,13 +4,18 @@ Stand: Juli 2026
 Referenz: `docs/PAGE-HEADER-JUMP-MENU-PATTERN.md`  
 Verwandt (älter, H1 *im* Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
-Für kaufnahe Seiten gilt **dieses** Dokument als aktueller Standard: **H1 + Teaser unter dem Hero** + **einheitliches Jump-Menü (4 Punkte)**.
+**Dieses** Dokument ist der aktuelle Standard:
+
+| Seitentyp | H1 + Teaser unter Hero | Jump-Menü |
+|-----------|------------------------|-----------|
+| **Produkt-/Buchungsseiten** | ja | ja (4 Punkte) |
+| **Kategorie-/Hub-Seiten** | ja | **nie** |
 
 ---
 
 ## Status: Day Trips (abgeschlossen)
 
-Alle **internen Produktseiten** unter `/day-trips/` sind in **EN / DE / TH** umgestellt:
+### Produktseiten (mit Jump-Menü)
 
 | Seite | Status | Book-/Packages-Anker | Jump-Labels |
 |-------|--------|----------------------|-------------|
@@ -21,7 +26,11 @@ Alle **internen Produktseiten** unter `/day-trips/` sind in **EN / DE / TH** umg
 | `insurance` | ✅ | `#book-insurance` | **Versicherung** (s.u.) |
 | `rent-gopro` | ✅ | `#book-gopro` | **GoPro** (s.u.) |
 
-Hub `/day-trips/` (Übersicht) ist **nicht** Teil dieses Musters.
+### Kategorie-Hub (ohne Jump-Menü)
+
+| Seite | Status |
+|-------|--------|
+| `/day-trips/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 
 ---
 
@@ -31,13 +40,33 @@ Hub `/day-trips/` (Übersicht) ist **nicht** Teil dieses Musters.
 |--------|---------|
 | H1 + Teaser als Overlay auf dem Hero-Bild | Hero = nur Bild |
 | Extra `<h2>` unter Banner (oft redundant) | H1 ist die einzige Hauptüberschrift |
-| Jump-Menü unterschiedlich (Discover, 5 Links …) | Immer 4 Punkte, gleiche Reihenfolge |
+| Jump-Menü unterschiedlich (Discover, 5 Links …) | Produktseiten: immer 4 Punkte; **Kategorien: keines** |
 
 **Vorteile:** besseres Hero-Bild, lesbarer Titel, konsistente Navigation, weniger doppelte Headlines.
 
 ---
 
-## Zielstruktur (Reihenfolge)
+## Kategorie-/Hub-Seiten (ohne Jump-Menü)
+
+Gleiche Header-Logik wie Produktseiten, **aber nie `page-jump-nav`**.
+
+Beispiele: `/day-trips/`, später `/courses/`, `/dive-sites/`, `/posts/`, Sub-Hubs …
+
+```
+<header> … hero picture (kein .hero-text) … </header>
+<main>
+  submenu (optional)
+  breadcrumb
+  h1          (zentriert)
+  p (Teaser)  (zentriert)
+  … Seiteninhalt (Karten, Intro-H2, Listen …)
+```
+
+**Regel:** Kategorie = Übersicht/Navigation → kein On-page-Jump. Jump-Menü nur auf buchbaren Einzel-/Produktseiten.
+
+---
+
+## Zielstruktur Produktseite (mit Jump-Menü)
 
 ```
 <header> … hero picture (kein .hero-text) … </header>
@@ -54,7 +83,6 @@ Hub `/day-trips/` (Übersicht) ist **nicht** Teil dieses Musters.
     …
     Preise/Buchung (seiten-spezifischer Anker)
 ```
-
 ---
 
 ## 1. Hero: Text-Overlay entfernen
@@ -135,7 +163,9 @@ Label „On this page“: EN `On this page` · DE `Auf dieser Seite` · TH `ใ�
 
 ---
 
-## Checkliste pro Seite
+## Checkliste
+
+### Produkt-/Buchungsseite
 
 1. [ ] `.hero-text` aus Hero entfernt  
 2. [ ] H1 + Teaser nach Breadcrumb, zentriert  
@@ -146,6 +176,16 @@ Label „On this page“: EN `On this page` · DE `Auf dieser Seite` · TH `ใ�
 7. [ ] Packages-/Book-Anker stimmt (Preisliste „Book now“ ggf. nachziehen)  
 8. [ ] DE + TH spiegeln; TH Intro-Label = **บทนำ** (nicht „Intro“)  
 9. [ ] Bildpfade prüfen (`/img/products/…`, keine falschen Ordnernamen)
+
+### Kategorie-/Hub-Seite
+
+1. [ ] `.hero-text` aus Hero entfernt  
+2. [ ] H1 + Teaser nach Breadcrumb, zentriert (SEO-Teaser, 1–2 Sätze)  
+3. [ ] **Kein** `page-jump-nav` / Jump-Menü  
+4. [ ] Section-H2s linksbündig (ggf. `style="text-align: left"` gegen `.grid-container h2`)  
+5. [ ] DE + TH spiegeln  
+
+> **Hart:** Auf Kategorie-Seiten **nie** ein Jump-Menü einbauen.
 
 ---
 
@@ -199,11 +239,11 @@ Anker: `#intro`, `#whats-included`, `#what-youll-see`, `#book-gopro`
 
 ## Nächster Rollout (offen)
 
-**Courses** (ähnliche Struktur):  
-`open-water-diver`, `advanced`, `scuba-diver`, Specialty-/Tech-Seiten mit Jump-Menü.
+**Courses – Produktseiten** (mit Jump-Menü):  
+`open-water-diver`, `advanced`, `scuba-diver`, Specialty-/Tech-Seiten.
 
-Nicht blind auf Hubs (`/courses/`, `/posts/`, `/day-trips/` Übersicht) anwenden – vor allem **buchbare Einzel-/Produktseiten**.
-
+**Kategorie-Hubs** (H1 + Teaser, **ohne** Jump-Menü):  
+`/courses/`, `/dive-sites/`, `/posts/`, Sub-Hubs – gleiches Header-Muster wie `/day-trips/`.
 ---
 
 ## Prüfen lokal
