@@ -72,9 +72,10 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 ### FAQ-Detailseiten (ohne Jump-Menü)
 
-| Seite                  | Status | Packages-Anker | Hinweis                                                                                              |
-| ---------------------- | ------ | -------------- | ---------------------------------------------------------------------------------------------------- |
-| `faq-diving-koh-chang` | ✅     | —              | H1+Teaser in `faq-box`; 10 Q&As; Fragen normal, Antworten blau/silber (`faq-list--boxed`); kein Jump |
+| Seite                               | Status | Packages-Anker | Hinweis                                                                                              |
+| ----------------------------------- | ------ | -------------- | ---------------------------------------------------------------------------------------------------- |
+| `faq-diving-koh-chang`              | ✅     | —              | H1+Teaser in `faq-box`; 10 Q&As; Fragen normal, Antworten blau/silber (`faq-list--boxed`); kein Jump |
+| `faq-diving-health-safety-thailand` | ✅     | —              | H1+Teaser in `faq-box health`; `faq-list--boxed`; kein Jump                                          |
 
 ### Preisliste (mit Jump-Menü – Ausnahme)
 

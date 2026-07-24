@@ -341,6 +341,39 @@
           object-fit: cover;
         }
       }
+
+      /* FAQ boxed answers – critical */
+      .faq-list--boxed {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .faq-list--boxed dt {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        cursor: default;
+        line-height: 1.45;
+      }
+      .faq-list--boxed dd {
+        margin: 0;
+        padding: 0.95rem 1.1rem;
+        border-bottom: none;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 119, 182, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 119, 182, 0.1) 0%,
+          rgba(192, 192, 192, 0.22) 100%
+        );
+        box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+        font-size: 0.92rem;
+        color: #222;
+        line-height: 1.55;
+      }
     </style>
     <link
       rel="preload"
@@ -451,6 +484,169 @@
 
     <!-- Preconnect to external domains -->
     <!-- Preload critical assets -->
+    <style id="cdc-medical-quiz-css">
+      /* Compact medical self-check (quiz look, tighter spacing) */
+      .faq-list--boxed > dd:has(.cdc-medical-quiz) {
+        padding: 0.75rem 0.9rem;
+      }
+      .faq-list--boxed > dd:has(.cdc-medical-quiz) > p {
+        margin-bottom: 0.65em;
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+      .cdc-medical-quiz .cdc-quiz__list {
+        list-style: decimal;
+        padding-left: 1.25rem;
+        margin: 0.5rem 0 0.75rem;
+      }
+      .cdc-medical-quiz .cdc-quiz__list > li {
+        margin-bottom: 0;
+        padding: 0.65rem 0;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      .cdc-medical-quiz .cdc-quiz__list > li:last-child {
+        border-bottom: none;
+        padding-bottom: 0.35rem;
+      }
+      .cdc-medical-quiz .cdc-quiz__list > li > p:first-of-type {
+        margin: 0 0 0.45rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.4;
+      }
+      .cdc-medical-quiz__hint {
+        font-size: 0.8rem;
+        color: #856404;
+        margin: 0 0 0.4rem;
+        line-height: 1.35;
+      }
+      .cdc-medical-quiz .cdc-quiz__buttons {
+        display: flex;
+        gap: 8px;
+        margin-top: 0.35rem;
+        flex-wrap: wrap;
+      }
+      .cdc-medical-quiz .cdc-quiz__button {
+        padding: 6px 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        border: 2px solid #0077b6;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: white;
+        color: #0077b6;
+        min-width: 72px;
+        line-height: 1.2;
+      }
+      .cdc-medical-quiz .cdc-quiz__button:hover {
+        background-color: #0077b6;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 6px rgba(0, 119, 182, 0.25);
+      }
+      .cdc-medical-quiz .cdc-quiz__button:active {
+        transform: translateY(0);
+      }
+      .cdc-medical-quiz .cdc-quiz__button.correct {
+        background-color: #28a745;
+        color: white;
+        border-color: #28a745;
+      }
+      .cdc-medical-quiz .cdc-quiz__button.incorrect {
+        background-color: #dc3545;
+        color: white;
+        border-color: #dc3545;
+      }
+      .cdc-medical-quiz .cdc-quiz__button.disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .cdc-medical-quiz .cdc-quiz__answer {
+        margin-top: 0.55rem;
+        padding: 0.65rem 0.75rem;
+        border-radius: 6px;
+        font-weight: bold;
+        display: none;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      .cdc-medical-quiz .cdc-quiz__answer.show {
+        display: block;
+      }
+      .cdc-medical-quiz .cdc-medical-followup.show {
+        display: block;
+        background-color: #fff3cd;
+        color: #856404;
+        border-left: 3px solid #e67e22;
+        font-weight: normal;
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list {
+        list-style: lower-alpha;
+        padding-left: 1.1rem;
+        margin: 0.45rem 0 0;
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list > li {
+        margin-bottom: 0;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list > li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list > li > p {
+        margin: 0 0 0.35rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #333;
+      }
+      .cdc-medical-quiz .cdc-medical-followup .cdc-quiz__buttons {
+        margin-top: 0.2rem;
+      }
+      .cdc-medical-quiz #cdc-medical-result {
+        margin-top: 0.75rem;
+      }
+      .cdc-medical-quiz #cdc-medical-result.show.correct-answer {
+        display: block;
+        background-color: #d4edda;
+        color: #155724;
+        border-left: 3px solid #28a745;
+      }
+      .cdc-medical-quiz #cdc-medical-result.show.incorrect-answer {
+        display: block;
+        background-color: #fff3cd;
+        color: #856404;
+        border-left: 3px solid #e67e22;
+      }
+      .cdc-medical-quiz > p {
+        margin: 0.65rem 0 0;
+      }
+      .cdc-medical-quiz__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      .cdc-medical-quiz__actions .cdc-quiz__button:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        pointer-events: none;
+        transform: none;
+        box-shadow: none;
+      }
+      #cdc-medical-email:not(:disabled) {
+        background-color: #0077b6;
+        color: #fff;
+      }
+      #cdc-medical-email:not(:disabled):hover {
+        background-color: #005f8f;
+        border-color: #005f8f;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -527,14 +723,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>สุขภาพ & ความปลอดภัย – คำถามที่พบบ่อย</h1>
-          <p>
-            เรียนรู้เกี่ยวกับใบรับรองแพทย์ ประกันดำน้ำ การมองเห็นใต้น้ำ
-            และแผนฉุกเฉินของเราในเกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -550,39 +738,1130 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="faq-box health">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           สุขภาพ & ความปลอดภัย – คำถามที่พบบ่อย
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เรียนรู้เกี่ยวกับใบรับรองแพทย์ ประกันดำน้ำ การมองเห็นใต้น้ำ
+          และแผนฉุกเฉินของเราในเกาะช้าง
+        </p>
 
-        <dl class="faq-list" role="list">
+        <hr />
+
+        <dl class="faq-list faq-list--boxed" role="list">
           <dt>
             <span aria-hidden="true">🏥</span>
             ฉันต้องมีใบรับรองแพทย์เพื่อดำน้ำหรือไม่?
           </dt>
           <dd>
-            โดยทั่วไปคุณแค่ต้องกรอกแบบฟอร์มสุขภาพ
-            ใบรับรองแพทย์จำเป็นเฉพาะกรณีที่มีปัญหาสุขภาพบางประการเท่านั้น
-            <a
-              href="/docs/Liability-Release-new-v1.3.pdf"
-              target="_blank"
-              class="faq-link"
-              rel="noopener noreferrer"
-            >
-              <span aria-hidden="true">📄</span> ดูแบบฟอร์มสุขภาพ
-            </a>
+            <p>
+              โดยทั่วไปคุณแค่ต้องกรอกแบบฟอร์มสุขภาพ
+              ใบรับรองแพทย์จำเป็นเฉพาะกรณีที่มีปัญหาสุขภาพบางประการเท่านั้น
+            </p>
+            <p>
+              <a
+                href="/docs/Medical_Questionnaire.pdf"
+                target="_blank"
+                class="faq-link"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">📄</span> ดูแบบฟอร์มสุขภาพ
+              </a>
+            </p>
+          </dd>
+
+          <dt id="medical-self-check">
+            <span aria-hidden="true">📋</span> แบบคัดกรองสุขภาพนักดำน้ำ – ตอบ
+            ใช่ หรือ ไม่
+          </dt>
+          <dd>
+            <p>
+              กรุณาตอบแบบคัดกรองนี้อย่างตรงไปตรงมา (คำถามเดียวกับแบบฟอร์ม UHMS /
+              RSTC Medical Questionnaire อย่างเป็นทางการ) กด
+              <strong>ใช่</strong> หรือ <strong>ไม่</strong> หากตอบ
+              <strong>ใช่</strong> จะเปิดกล่องคำถามติดตาม
+              ข้อมูลเพื่อประกอบการตัดสินใจเท่านั้น — ไม่ใช่คำแนะนำทางการแพทย์
+              กรุณาลงนามใน
+              <a
+                href="/docs/Medical_Questionnaire.pdf"
+                target="_blank"
+                rel="noopener"
+                >PDF อย่างเป็นทางการ</a
+              >
+              กับเราก่อนดำน้ำ หากตั้งครรภ์หรือกำลังพยายามมีบุตร ห้ามดำน้ำ
+            </p>
+
+            <div class="cdc-medical-quiz">
+              <ol class="cdc-quiz__list" id="cdc-medical-list">
+                <li data-q="1" data-box="A">
+                  <p>
+                    ฉันเคยมีปัญหาเกี่ยวกับปอด การหายใจ หัวใจ และ/หรือเลือด
+                    ซึ่งกระทบสมรรถภาพทางกายหรือจิตใจตามปกติ
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง A – ปอด / หัวใจ / เลือด:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="A1">
+                        <p>
+                          เคยผ่าตัดทรวงอก/หัวใจ/ลิ้นหัวใจ มีอุปกรณ์ฝังในร่างกาย
+                          (เช่น สเตนต์ เครื่องกระตุ้นหัวใจ) ปอดแฟบ
+                          และ/หรือโรคปอดเรื้อรัง
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A2">
+                        <p>
+                          หอบหืด หายใจมีเสียงหวีด แพ้รุนแรง ไข้ละอองฟาง
+                          หรือทางเดินหายใจอุดตันใน 12 เดือนที่จำกัดการออกกำลัง
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A3">
+                        <p>
+                          ปัญหาหัวใจ เช่น แน่นหน้าอก เจ็บเมื่อออกแรง
+                          หัวใจล้มเหลว น้ำท่วมปอดจากการแช่น้ำ หัวใจวาย
+                          หรือโรคหลอดเลือดสมอง หรือกินยาโรคหัวใจ
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A4">
+                        <p>
+                          หลอดลมอักเสบซ้ำและยังไอใน 12 เดือนที่ผ่านมา
+                          หรือได้รับการวินิจฉัยว่าเป็นถุงลมโป่งพอง
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A5">
+                        <p>
+                          มีอาการกระทบปอด การหายใจ หัวใจ และ/หรือเลือดใน 30
+                          วันล่าสุดจนประสิทธิภาพกาย/ใจลดลง
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="2" data-box="B">
+                  <p>ฉันมีอายุเกิน 45 ปี</p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง B – อายุเกิน 45 ปี และ:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="B1">
+                        <p>ปัจจุบันสูบบุหรี่หรือรับนิโคตินด้วยวิธีอื่น</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="B2">
+                        <p>คอเลสเตอรอลสูง</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="B3">
+                        <p>ความดันโลหิตสูง</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="B4">
+                        <p>
+                          ญาติสายตรงเสียชีวิตกะทันหันหรือจากโรคหัวใจ/โรคหลอดเลือดสมองก่อนอายุ
+                          50 หรือมีประวัติครอบครัวโรคหัวใจก่อน 50
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="3">
+                  <p>
+                    ฉันออกแรงปานกลางได้ลำบาก (เช่น เดิน 1.6 กม. ใน 14 นาที
+                    หรือว่ายน้ำ 200 เมตรโดยไม่พัก) หรือใน 12
+                    เดือนที่ผ่านมาออกกำลังตามปกติไม่ได้เพราะสุขภาพ/ฟิตเนส
+                  </p>
+                  <p class="cdc-medical-quiz__hint">
+                    หากตอบ
+                    <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                </li>
+                <li data-q="4" data-box="C">
+                  <p>ฉันเคยมีปัญหาเกี่ยวกับตา หู หรือโพรงจมูก/ไซนัส</p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง C – ตา / หู / ไซนัส:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="C1">
+                        <p>ผ่าตัดไซนัสใน 6 เดือนที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="C2">
+                        <p>
+                          โรคหูหรือผ่าตัดหู สูญเสียการได้ยิน หรือปัญหาการทรงตัว
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="C3">
+                        <p>ไซนัสอักเสบซ้ำใน 12 เดือนที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="C4">
+                        <p>ผ่าตัดตาใน 3 เดือนที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="5">
+                  <p>
+                    ฉันเคยผ่าตัดใน 12 เดือนที่ผ่านมา
+                    หรือยังมีปัญหาต่อเนื่องจากผ่าตัดเก่า
+                  </p>
+                  <p class="cdc-medical-quiz__hint">
+                    หากตอบ
+                    <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                </li>
+                <li data-q="6" data-box="D">
+                  <p>
+                    ฉันเคยหมดสติ มีไมเกรน ชัก โรคหลอดเลือดสมอง
+                    ศีรษะบาดเจ็บรุนแรง หรือมีโรค/การบาดเจ็บทางประสาทเรื้อรัง
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง D – ระบบประสาท:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="D1">
+                        <p>ศีรษะบาดเจ็บจนหมดสติใน 5 ปีที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D2">
+                        <p>การบาดเจ็บหรือโรคทางประสาทที่ยังคงอยู่</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D3">
+                        <p>ไมเกรนซ้ำใน 12 เดือน หรือกินยาป้องกันไมเกรน</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D4">
+                        <p>
+                          เป็นลม/หมดสติ (ทั้งหมดหรือบางส่วน) ใน 5 ปีที่ผ่านมา
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D5">
+                        <p>ลมชักหรือชักกระตุก หรือกินยาป้องกัน</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="7" data-box="E">
+                  <p>
+                    ฉันกำลังรักษา (หรือเคยรักษาใน 5 ปีที่ผ่านมา) ปัญหาทางจิต
+                    บุคลิกภาพ แพนิค หรือการเสพติดยา/แอลกอฮอล์
+                    หรือได้รับการวินิจฉัยความบกพร่องทางการเรียนรู้/พัฒนาการ
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง E – จิตใจ / การเสพติด / การเรียนรู้:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="E1">
+                        <p>ปัญหาสุขภาพจิตที่ต้องรักษาทางการแพทย์/จิตเวช</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="E2">
+                        <p>
+                          ซึมเศร้าขั้นรุนแรง ความคิดฆ่าตัวตาย แพนิค
+                          หรือไบโพลาร์ที่ต้องยา/การรักษา
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="E3">
+                        <p>
+                          ได้รับการวินิจฉัยภาวะสุขภาพจิตหรือความบกพร่องทางการเรียนรู้ที่ต้องดูแลต่อเนื่อง
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="E4">
+                        <p>
+                          การเสพติดยาหรือแอลกอฮอล์ที่ต้องรักษาใน 5 ปีที่ผ่านมา
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="8" data-box="F">
+                  <p>ฉันเคยมีปัญหาหลัง ไส้เลื่อน แผลในกระเพาะ หรือเบาหวาน</p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง F – หลัง / ไส้เลื่อน / แผล / เบาหวาน:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="F1">
+                        <p>ปัญหาหลังซ้ำใน 6 เดือนที่จำกัดกิจกรรมประจำวัน</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F2">
+                        <p>ผ่าตัดหลังหรือกระดูกสันหลังใน 12 เดือนที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F3">
+                        <p>
+                          เบาหวาน (ยาหรือควบคุมอาหาร) หรือเบาหวานขณะตั้งครรภ์ใน
+                          12 เดือน
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F4">
+                        <p>
+                          ไส้เลื่อนที่ยังไม่ได้รับการแก้ไขและจำกัดความสามารถทางกาย
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F5">
+                        <p>
+                          แผลในกระเพาะที่ยังไม่รักษา หรือผ่าตัดแผลใน 6
+                          เดือนที่ผ่านมา
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="9" data-box="G">
+                  <p>
+                    ฉันเคยมีปัญหาเกี่ยวกับกระเพาะหรือลำไส้
+                    รวมถึงท้องเสียเมื่อเร็ว ๆ นี้
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>กล่อง G – กระเพาะ / ลำไส้:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      หากตอบ
+                      <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="G1">
+                        <p>
+                          ผ่าตัดเปิดทวารเทียมโดยไม่มีใบรับรองแพทย์ให้ว่ายน้ำ/ออกแรง
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G2">
+                        <p>ขาดน้ำจนต้องได้รับการรักษาใน 7 วันที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G3">
+                        <p>
+                          แผลในกระเพาะ/ลำไส้ที่ยังไม่รักษา หรือผ่าตัดแผลใน 6
+                          เดือน
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G4">
+                        <p>แสบร้อนกลางอกบ่อย กรดไหลย้อน หรือ GERD</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G5">
+                        <p>ลำไส้ใหญ่เป็นแผลหรือ Crohn ที่ยังควบคุมไม่ได้</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G6">
+                        <p>ผ่าตัดลดน้ำหนัก (bariatric) ใน 12 เดือนที่ผ่านมา</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            ใช่
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            ไม่
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="10">
+                  <p>
+                    ฉันกินยาตามใบสั่งแพทย์ (ยกเว้นยาคุมกำเนิด
+                    หรือยาป้องกันมาลาเรียที่ไม่ใช่ mefloquine / Lariam)
+                  </p>
+                  <p class="cdc-medical-quiz__hint">
+                    หากตอบ
+                    <strong>ใช่</strong> โดยทั่วไปจำเป็นต้องให้แพทย์ประเมิน
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      ใช่
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      ไม่
+                    </button>
+                  </div>
+                </li>
+              </ol>
+
+              <div id="cdc-medical-result" class="cdc-quiz__answer"></div>
+
+              <p class="cdc-medical-quiz__actions" style="margin-top: 10px">
+                <button
+                  type="button"
+                  class="cdc-quiz__button"
+                  id="cdc-medical-email"
+                  onclick="medicalEmailResults()"
+                  disabled
+                  title="กรุณาตอบคำถามให้ครบก่อน"
+                >
+                  📩 ส่งผลลัพธ์ทางอีเมล
+                </button>
+                <button
+                  type="button"
+                  class="cdc-quiz__button"
+                  onclick="medicalReset()"
+                >
+                  รีเซ็ตคำตอบ
+                </button>
+              </p>
+            </div>
           </dd>
 
           <dt>
@@ -590,17 +1869,21 @@
             สามารถดำน้ำโดยใส่แว่นตาหรือคอนแทคเลนส์ได้หรือไม่?
           </dt>
           <dd>
-            ได้เลย! คอนแทคเลนส์มักจะไม่มีปัญหา
-            และเรามีหน้ากากดำน้ำแบบเลนส์สายตาให้บริการ
-            <a
-              href="/th/contact/"
-              target="_blank"
-              class="faq-link"
-              rel="noopener noreferrer"
-            >
-              <span aria-hidden="true">💬</span>
-              สอบถามเกี่ยวกับหน้ากากแบบเลนส์สายตา
-            </a>
+            <p>
+              ได้เลย! คอนแทคเลนส์มักจะไม่มีปัญหา
+              และเรามีหน้ากากดำน้ำแบบเลนส์สายตาให้บริการ
+            </p>
+            <p>
+              <a
+                href="/th/contact/"
+                target="_blank"
+                class="faq-link"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">💬</span>
+                สอบถามเกี่ยวกับหน้ากากแบบเลนส์สายตา
+              </a>
+            </p>
           </dd>
 
           <dt>
@@ -608,16 +1891,20 @@
             จำเป็นต้องมีประกันการดำน้ำหรือไม่?
           </dt>
           <dd>
-            ขอแนะนำให้มีประกันการดำน้ำ
-            คุณสามารถซื้อแบบรายวันหรือรายปีได้ในราคาประหยัด
-            <a
-              href="/th/day-trips/insurance/"
-              target="_blank"
-              class="faq-link"
-              rel="noopener noreferrer"
-            >
-              <span aria-hidden="true">ℹ️</span> ดูตัวเลือกประกันการดำน้ำ
-            </a>
+            <p>
+              ขอแนะนำให้มีประกันการดำน้ำ
+              คุณสามารถซื้อแบบรายวันหรือรายปีได้ในราคาประหยัด
+            </p>
+            <p>
+              <a
+                href="/th/day-trips/insurance/"
+                target="_blank"
+                class="faq-link"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">ℹ️</span> ดูตัวเลือกประกันการดำน้ำ
+              </a>
+            </p>
           </dd>
 
           <dt>
@@ -625,20 +1912,23 @@
             แผนฉุกเฉินของช้างไดร์วิ่งเป็นอย่างไร?
           </dt>
           <dd>
-            ในกรณีเกิดอุบัติเหตุ เรามีแผนฉุกเฉินที่ชัดเจนและเป็นระบบ
-            ทีมงานผ่านการฝึกอบรม มีชุดปฐมพยาบาลและออกซิเจนบนเรือ
-            และสามารถเข้าถึงห้องปรับแรงดันที่ตราดได้โดยตรง
-            <a
-              href="/th/posts/straight-talk/emergency-plan/"
-              target="_blank"
-              class="faq-link"
-              rel="noopener noreferrer"
-            >
-              <span aria-hidden="true">🚑</span> ดูแผนฉุกเฉินของเรา
-            </a>
+            <p>
+              ในกรณีเกิดอุบัติเหตุ เรามีแผนฉุกเฉินที่ชัดเจนและเป็นระบบ
+              ทีมงานผ่านการฝึกอบรม มีชุดปฐมพยาบาลและออกซิเจนบนเรือ
+              และสามารถเข้าถึงห้องปรับแรงดันที่ตราดได้โดยตรง
+            </p>
+            <p>
+              <a
+                href="/th/posts/straight-talk/emergency-plan/"
+                target="_blank"
+                class="faq-link"
+                rel="noopener noreferrer"
+              >
+                <span aria-hidden="true">🚑</span> ดูแผนฉุกเฉินของเรา
+              </a>
+            </p>
           </dd>
         </dl>
-
         <div class="related-faqs">
           <h3>คำถามที่เกี่ยวข้อง</h3>
           <div class="faq-chips">
@@ -728,6 +2018,291 @@
             "item": "https://changdiving.com/th/faqs/faq-diving-health-safety-thailand/"
           }
         ]
+      }
+    </script>
+    <script>
+      var MEDICAL_I18N = {
+        emailTitleOn: "เปิดแอปอีเมลพร้อมผลลัพธ์ของคุณ",
+        emailTitleOff: "กรุณาตอบคำถามให้ครบก่อน",
+        keepGoing: "ไปต่อเลย…",
+        answeredOf: "ตอบแล้ว {a} จาก {t} คำถามหลัก",
+        almost: "เกือบครบแล้ว…",
+        almostBody: "กรุณาตอบคำถามติดตามที่เปิดขึ้นหลังจากตอบ ใช่ ด้วย",
+        docTitle: "แนะนำให้แพทย์ประเมิน",
+        docBody:
+          'จากคำตอบของคุณ ควรนำแบบสอบถามที่กรอกครบทุกหน้าไปพบแพทย์ก่อนดำน้ำหรือเริ่มคอร์ส <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">ดาวน์โหลด PDF<\/a> · <a href="/th/contact/">ติดต่อเรา<\/a><br /><br />คุณยังสามารถ <strong>ส่งผลลัพธ์ทางอีเมล<\/strong> ถึง Chang Diving ได้ด้านล่าง',
+        okTitle: "ตามแบบคัดกรองนี้ยังไม่จำเป็นต้องพบแพทย์",
+        okBody:
+          'คุณยังต้องกรอกและลงนามใน PDF อย่างเป็นทางการกับเราก่อนดำน้ำ <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">ดาวน์โหลด PDF<\/a><br /><br />ทางเลือก: <strong>ส่งผลลัพธ์ทางอีเมล<\/strong> ถึง Chang Diving ด้านล่าง',
+        mailAlert: "กรุณาตอบคำถามให้ครบก่อน",
+        mailSubjDoc: "Medical Self-Check results – physician recommended",
+        mailSubjOk: "Medical Self-Check results – screening clear",
+        summaryTitle: "Diver Medical Self-Check results",
+        pageUrl:
+          "https://changdiving.com/th/faqs/faq-diving-health-safety-thailand/#medical-self-check",
+        outcomeDoc: "Screening outcome: Physician evaluation recommended",
+        outcomeOk: "Screening outcome: No physician required by this screening",
+        nameLine: "Name / ชื่อ-นามสกุล (in English):",
+        datesLine: "Preferred course or dive dates:",
+        phoneLine: "Phone:",
+        answersHdr: "--- Answers ---",
+        note: "Note: This is an informational self-check only. I still need to complete/sign the official Medical Questionnaire PDF with Chang Diving.",
+        trunc:
+          "[Truncated – full list was long. Please also attach/sign the PDF.]",
+      };
+
+      function medicalGetMains() {
+        var root = document.getElementById("cdc-medical-list");
+        if (!root) return [];
+        var mains = [];
+        for (var m = 0; m < root.children.length; m++) {
+          if (root.children[m].hasAttribute("data-q")) {
+            mains.push(root.children[m]);
+          }
+        }
+        return mains;
+      }
+
+      function medicalAssess() {
+        var mains = medicalGetMains();
+        var answered = 0;
+        var incompleteBox = false;
+        var needsPhysician = false;
+
+        mains.forEach(function (li) {
+          var ans = li.getAttribute("data-answered");
+          if (ans === "yes" || ans === "no") answered++;
+          var q = li.getAttribute("data-q");
+          if ((q === "3" || q === "5" || q === "10") && ans === "yes") {
+            needsPhysician = true;
+          }
+          var box = li.querySelector(".cdc-medical-followup");
+          if (ans === "yes" && box) {
+            var subs = box.querySelectorAll("li[data-sub]");
+            var subAnswered = 0;
+            subs.forEach(function (s) {
+              var sa = s.getAttribute("data-answered");
+              if (sa === "yes" || sa === "no") subAnswered++;
+              if (sa === "yes") needsPhysician = true;
+            });
+            if (subAnswered < subs.length) incompleteBox = true;
+          }
+        });
+
+        var complete =
+          mains.length > 0 && answered === mains.length && !incompleteBox;
+
+        return {
+          mains: mains,
+          answered: answered,
+          incompleteBox: incompleteBox,
+          needsPhysician: needsPhysician,
+          complete: complete,
+        };
+      }
+
+      function medicalShortText(el) {
+        var p = el.querySelector("p");
+        if (!p) return "";
+        return (p.textContent || "").replace(/\s+/g, " ").trim();
+      }
+
+      function medicalBuildSummary() {
+        var assess = medicalAssess();
+        var lines = [];
+        lines.push(MEDICAL_I18N.summaryTitle);
+        lines.push("Page: " + MEDICAL_I18N.pageUrl);
+        lines.push("");
+        lines.push(
+          assess.needsPhysician
+            ? MEDICAL_I18N.outcomeDoc
+            : MEDICAL_I18N.outcomeOk
+        );
+        lines.push("");
+        lines.push(MEDICAL_I18N.nameLine);
+        lines.push(MEDICAL_I18N.datesLine);
+        lines.push(MEDICAL_I18N.phoneLine);
+        lines.push("");
+        lines.push(MEDICAL_I18N.answersHdr);
+
+        assess.mains.forEach(function (li) {
+          var q = li.getAttribute("data-q");
+          var ans = (li.getAttribute("data-answered") || "—").toUpperCase();
+          var text = medicalShortText(li);
+          if (text.length > 110) text = text.slice(0, 107) + "...";
+          lines.push("Q" + q + " [" + ans + "] " + text);
+          if (ans === "YES") {
+            var box = li.querySelector(".cdc-medical-followup");
+            if (box) {
+              box.querySelectorAll("li[data-sub]").forEach(function (s) {
+                var sa = (s.getAttribute("data-answered") || "—").toUpperCase();
+                var st = medicalShortText(s);
+                if (st.length > 90) st = st.slice(0, 87) + "...";
+                lines.push(
+                  "  - " + s.getAttribute("data-sub") + " [" + sa + "] " + st
+                );
+              });
+            }
+          }
+        });
+
+        lines.push("");
+        lines.push(MEDICAL_I18N.note);
+        return lines.join("\n");
+      }
+
+      function medicalSetEmailEnabled(enabled) {
+        var btn = document.getElementById("cdc-medical-email");
+        if (!btn) return;
+        btn.disabled = !enabled;
+        btn.title = enabled
+          ? MEDICAL_I18N.emailTitleOn
+          : MEDICAL_I18N.emailTitleOff;
+      }
+
+      function medicalPick(button, value) {
+        var li = button.closest("li");
+        if (!li) return;
+        var row = button.parentElement;
+        if (!row) return;
+        var buttons = row.querySelectorAll(".cdc-quiz__button");
+        buttons.forEach(function (btn) {
+          btn.classList.add("disabled");
+          btn.onclick = null;
+          btn.classList.remove("correct", "incorrect");
+        });
+        if (value === "yes") button.classList.add("incorrect");
+        else button.classList.add("correct");
+
+        li.setAttribute("data-answered", value);
+
+        var followup = null;
+        for (var i = 0; i < li.children.length; i++) {
+          if (li.children[i].classList.contains("cdc-medical-followup")) {
+            followup = li.children[i];
+            break;
+          }
+        }
+        if (followup) {
+          if (value === "yes") {
+            followup.classList.add("show");
+          } else {
+            followup.classList.remove("show");
+            followup.querySelectorAll("li[data-sub]").forEach(function (sub) {
+              sub.removeAttribute("data-answered");
+              sub.querySelectorAll(".cdc-quiz__button").forEach(function (btn) {
+                btn.classList.remove("disabled", "correct", "incorrect");
+                var ans = btn.getAttribute("data-answer");
+                btn.onclick = function () {
+                  medicalPick(btn, ans);
+                };
+              });
+            });
+          }
+        }
+        medicalUpdateResult();
+      }
+
+      function medicalUpdateResult() {
+        var result = document.getElementById("cdc-medical-result");
+        if (!result) return;
+        var assess = medicalAssess();
+        var mains = assess.mains;
+
+        result.classList.remove("show", "correct-answer", "incorrect-answer");
+        result.style.display = "none";
+        medicalSetEmailEnabled(false);
+
+        if (assess.answered === 0) return;
+
+        if (assess.answered < mains.length) {
+          result.innerHTML =
+            "<strong>" +
+            MEDICAL_I18N.keepGoing +
+            "</strong><br />" +
+            MEDICAL_I18N.answeredOf
+              .replace("{a}", String(assess.answered))
+              .replace("{t}", String(mains.length));
+          result.classList.add("show", "incorrect-answer");
+          result.style.display = "block";
+          return;
+        }
+        if (assess.incompleteBox) {
+          result.innerHTML =
+            "<strong>" +
+            MEDICAL_I18N.almost +
+            "</strong><br />" +
+            MEDICAL_I18N.almostBody;
+          result.classList.add("show", "incorrect-answer");
+          result.style.display = "block";
+          return;
+        }
+
+        medicalSetEmailEnabled(true);
+
+        if (assess.needsPhysician) {
+          result.innerHTML =
+            "<strong>" +
+            MEDICAL_I18N.docTitle +
+            "</strong><br />" +
+            MEDICAL_I18N.docBody;
+          result.classList.add("show", "incorrect-answer");
+        } else {
+          result.innerHTML =
+            "<strong>" +
+            MEDICAL_I18N.okTitle +
+            "</strong><br />" +
+            MEDICAL_I18N.okBody;
+          result.classList.add("show", "correct-answer");
+        }
+        result.style.display = "block";
+      }
+
+      function medicalEmailResults() {
+        var assess = medicalAssess();
+        if (!assess.complete) {
+          alert(MEDICAL_I18N.mailAlert);
+          return;
+        }
+        var subject = assess.needsPhysician
+          ? MEDICAL_I18N.mailSubjDoc
+          : MEDICAL_I18N.mailSubjOk;
+        var body = medicalBuildSummary();
+        if (body.length > 1800) {
+          body = body.slice(0, 1750) + "\n\n" + MEDICAL_I18N.trunc;
+        }
+        var href =
+          "mailto:info@changdiving.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+        window.location.href = href;
+      }
+
+      function medicalReset() {
+        var root = document.getElementById("cdc-medical-list");
+        if (!root) return;
+        root
+          .querySelectorAll("li[data-q], li[data-sub]")
+          .forEach(function (li) {
+            li.removeAttribute("data-answered");
+            li.querySelectorAll(".cdc-quiz__button").forEach(function (btn) {
+              btn.classList.remove("disabled", "correct", "incorrect");
+              var ans = btn.getAttribute("data-answer");
+              btn.onclick = function () {
+                medicalPick(btn, ans);
+              };
+            });
+            var box = li.querySelector(".cdc-medical-followup");
+            if (box) box.classList.remove("show");
+          });
+        var result = document.getElementById("cdc-medical-result");
+        if (result) {
+          result.classList.remove("show", "correct-answer", "incorrect-answer");
+          result.style.display = "none";
+          result.innerHTML = "";
+        }
+        medicalSetEmailEnabled(false);
       }
     </script>
   </body>

@@ -346,6 +346,39 @@
           object-fit: cover;
         }
       }
+
+      /* FAQ boxed answers – critical */
+      .faq-list--boxed {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .faq-list--boxed dt {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        cursor: default;
+        line-height: 1.45;
+      }
+      .faq-list--boxed dd {
+        margin: 0;
+        padding: 0.95rem 1.1rem;
+        border-bottom: none;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 119, 182, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 119, 182, 0.1) 0%,
+          rgba(192, 192, 192, 0.22) 100%
+        );
+        box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+        font-size: 0.92rem;
+        color: #222;
+        line-height: 1.55;
+      }
     </style>
     <link
       rel="preload"
@@ -446,6 +479,170 @@
 
     <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <style id="cdc-medical-quiz-css">
+      /* Compact medical self-check (quiz look, tighter spacing) */
+      .faq-list--boxed > dd:has(.cdc-medical-quiz) {
+        padding: 0.75rem 0.9rem;
+      }
+      .faq-list--boxed > dd:has(.cdc-medical-quiz) > p {
+        margin-bottom: 0.65em;
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+      .cdc-medical-quiz .cdc-quiz__list {
+        list-style: decimal;
+        padding-left: 1.25rem;
+        margin: 0.5rem 0 0.75rem;
+      }
+      .cdc-medical-quiz .cdc-quiz__list > li {
+        margin-bottom: 0;
+        padding: 0.65rem 0;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      .cdc-medical-quiz .cdc-quiz__list > li:last-child {
+        border-bottom: none;
+        padding-bottom: 0.35rem;
+      }
+      .cdc-medical-quiz .cdc-quiz__list > li > p:first-of-type {
+        margin: 0 0 0.45rem;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.4;
+      }
+      .cdc-medical-quiz__hint {
+        font-size: 0.8rem;
+        color: #856404;
+        margin: 0 0 0.4rem;
+        line-height: 1.35;
+      }
+      .cdc-medical-quiz .cdc-quiz__buttons {
+        display: flex;
+        gap: 8px;
+        margin-top: 0.35rem;
+        flex-wrap: wrap;
+      }
+      .cdc-medical-quiz .cdc-quiz__button {
+        padding: 6px 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        border: 2px solid #0077b6;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: white;
+        color: #0077b6;
+        min-width: 72px;
+        line-height: 1.2;
+      }
+      .cdc-medical-quiz .cdc-quiz__button:hover {
+        background-color: #0077b6;
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 6px rgba(0, 119, 182, 0.25);
+      }
+      .cdc-medical-quiz .cdc-quiz__button:active {
+        transform: translateY(0);
+      }
+      .cdc-medical-quiz .cdc-quiz__button.correct {
+        background-color: #28a745;
+        color: white;
+        border-color: #28a745;
+      }
+      .cdc-medical-quiz .cdc-quiz__button.incorrect {
+        background-color: #dc3545;
+        color: white;
+        border-color: #dc3545;
+      }
+      .cdc-medical-quiz .cdc-quiz__button.disabled {
+        opacity: 0.55;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .cdc-medical-quiz .cdc-quiz__answer {
+        margin-top: 0.55rem;
+        padding: 0.65rem 0.75rem;
+        border-radius: 6px;
+        font-weight: bold;
+        display: none;
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      .cdc-medical-quiz .cdc-quiz__answer.show {
+        display: block;
+      }
+      .cdc-medical-quiz .cdc-medical-followup.show {
+        display: block;
+        background-color: #fff3cd;
+        color: #856404;
+        border-left: 3px solid #e67e22;
+        font-weight: normal;
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list {
+        list-style: lower-alpha;
+        padding-left: 1.1rem;
+        margin: 0.45rem 0 0;
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list > li {
+        margin-bottom: 0;
+        padding: 0.45rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list > li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .cdc-medical-quiz .cdc-medical-followup__list > li > p {
+        margin: 0 0 0.35rem;
+        font-size: 0.88rem;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #333;
+      }
+      .cdc-medical-quiz .cdc-medical-followup .cdc-quiz__buttons {
+        margin-top: 0.2rem;
+      }
+      .cdc-medical-quiz #cdc-medical-result {
+        margin-top: 0.75rem;
+      }
+      .cdc-medical-quiz #cdc-medical-result.show.correct-answer {
+        display: block;
+        background-color: #d4edda;
+        color: #155724;
+        border-left: 3px solid #28a745;
+      }
+      .cdc-medical-quiz #cdc-medical-result.show.incorrect-answer {
+        display: block;
+        background-color: #fff3cd;
+        color: #856404;
+        border-left: 3px solid #e67e22;
+      }
+      .cdc-medical-quiz > p {
+        margin: 0.65rem 0 0;
+      }
+      .cdc-medical-quiz__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+      }
+      .cdc-medical-quiz__actions .cdc-quiz__button:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        pointer-events: none;
+        transform: none;
+        box-shadow: none;
+      }
+      #cdc-medical-email:not(:disabled) {
+        background-color: #0077b6;
+        color: #fff;
+      }
+      #cdc-medical-email:not(:disabled):hover {
+        background-color: #005f8f;
+        border-color: #005f8f;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -515,14 +712,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Health & Safety – Frequently Asked Questions</h1>
-          <p>
-            Learn everything about medical clearance, dive insurance, underwater
-            vision and our emergency response plans in Koh Chang.
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -542,23 +731,18 @@
       ></nav>
 
       <div class="faq-box health">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-          aria-label="FAQ Section Title"
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Health & Safety – Frequently Asked Questions
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Learn everything about medical clearance, dive insurance, underwater
+          vision and our emergency response plans in Koh Chang.
+        </p>
+
+        <hr />
 
         <dl
-          class="faq-list"
+          class="faq-list faq-list--boxed"
           role="list"
           aria-label="Frequently Asked Questions"
         >
@@ -567,17 +751,1171 @@
             to dive?
           </dt>
           <dd>
-            In most cases, you just need to fill out a medical questionnaire. A
-            doctor's certificate is only needed for specific conditions.
-            <a
-              href="/docs/Liability-Release-new-v1.3.pdf"
-              target="_blank"
-              rel="noopener"
-              class="faq-link"
-            >
-              <span aria-hidden="true">📄</span> ➜ View medical questionnaire
-              form
-            </a>
+            <p>
+              In most cases, you just need to fill out a medical questionnaire.
+              A doctor's certificate is only needed for specific conditions.
+            </p>
+            <p>
+              <a
+                href="/docs/Medical_Questionnaire.pdf"
+                target="_blank"
+                rel="noopener"
+                class="faq-link"
+              >
+                <span aria-hidden="true">📄</span> ➜ Open official Medical
+                Questionnaire (PDF)
+              </a>
+            </p>
+          </dd>
+
+          <dt id="medical-self-check">
+            <span aria-hidden="true">📋</span> Diver Medical Self-Check – answer
+            Yes or No
+          </dt>
+          <dd>
+            <p>
+              Complete this screening honestly (same questions as the official
+              UHMS / RSTC Medical Questionnaire). Click <strong>Yes</strong> or
+              <strong>No</strong>. A <strong>Yes</strong> opens the related
+              follow-up box. Informational only — not medical advice. Sign the
+              <a
+                href="/docs/Medical_Questionnaire.pdf"
+                target="_blank"
+                rel="noopener"
+                >official PDF</a
+              >
+              with us before diving. If pregnant or trying to become pregnant,
+              do not dive.
+            </p>
+
+            <div class="cdc-medical-quiz">
+              <ol class="cdc-quiz__list" id="cdc-medical-list">
+                <li data-q="1" data-box="A">
+                  <p>
+                    I have had problems with my lungs, breathing, heart and/or
+                    blood affecting my normal physical or mental performance.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box A – I have / have had:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="A1">
+                        <p>
+                          Chest surgery, heart surgery, heart valve surgery, an
+                          implantable medical device (e.g. stent, pacemaker,
+                          neurostimulator), pneumothorax, and/or chronic lung
+                          disease.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A2">
+                        <p>
+                          Asthma, wheezing, severe allergies, hay fever or
+                          congested airways within the last 12 months that
+                          limits my physical activity/exercise.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A3">
+                        <p>
+                          A problem or illness involving my heart such as:
+                          angina, chest pain on exertion, heart failure,
+                          immersion pulmonary edema, heart attack or stroke, OR
+                          I am taking medication for any heart condition.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A4">
+                        <p>
+                          Recurrent bronchitis and currently coughing within the
+                          past 12 months, OR I have been diagnosed with
+                          emphysema.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="A5">
+                        <p>
+                          Symptoms affecting my lungs, breathing, heart and/or
+                          blood in the last 30 days that impair my physical or
+                          mental performance.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="2" data-box="B">
+                  <p>I am over 45 years of age.</p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box B – I am over 45 years of age AND:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="B1">
+                        <p>
+                          I currently smoke or inhale nicotine by other means.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="B2">
+                        <p>I have a high cholesterol level.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="B3">
+                        <p>I have high blood pressure.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="B4">
+                        <p>
+                          I have had a close blood relative die suddenly or of
+                          cardiac disease or stroke before the age of 50, OR
+                          have a family history of heart disease before age 50.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="3">
+                  <p>
+                    I struggle to perform moderate exercise (for example, walk
+                    1.6 km / 1 mile in 14 minutes or swim 200 metres without
+                    resting), OR I have been unable to participate in normal
+                    physical activity due to fitness or health reasons within
+                    the past 12 months.
+                  </p>
+                  <p class="cdc-medical-quiz__hint">
+                    A <strong>Yes</strong> here usually means a physician’s
+                    evaluation is required.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                </li>
+                <li data-q="4" data-box="C">
+                  <p>
+                    I have had problems with my eyes, ears, or nasal
+                    passages/sinuses.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box C – I have / have had:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="C1">
+                        <p>Sinus surgery within the last 6 months.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="C2">
+                        <p>
+                          Ear disease or ear surgery, hearing loss, or problems
+                          with balance.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="C3">
+                        <p>Recurrent sinusitis within the past 12 months.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="C4">
+                        <p>Eye surgery within the past 3 months.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="5">
+                  <p>
+                    I have had surgery within the last 12 months, OR I have
+                    ongoing problems related to past surgery.
+                  </p>
+                  <p class="cdc-medical-quiz__hint">
+                    A <strong>Yes</strong> here usually means a physician’s
+                    evaluation is required.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                </li>
+                <li data-q="6" data-box="D">
+                  <p>
+                    I have lost consciousness, had migraine headaches, seizures,
+                    stroke, significant head injury, or suffer from persistent
+                    neurologic injury or disease.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box D – I have / have had:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="D1">
+                        <p>
+                          Head injury with loss of consciousness within the past
+                          5 years.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D2">
+                        <p>Persistent neurologic injury or disease.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D3">
+                        <p>
+                          Recurring migraine headaches within the past 12
+                          months, or take medications to prevent them.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D4">
+                        <p>
+                          Blackouts or fainting (full/partial loss of
+                          consciousness) within the last 5 years.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="D5">
+                        <p>
+                          Epilepsy, seizures, or convulsions, OR take
+                          medications to prevent them.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="7" data-box="E">
+                  <p>
+                    I am currently undergoing treatment (or have required
+                    treatment within the last five years) for psychological
+                    problems, personality disorder, panic attacks, or an
+                    addiction to drugs or alcohol; or I have been diagnosed with
+                    a learning or developmental disability.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box E – I have / have had:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="E1">
+                        <p>
+                          Behavioral health, mental or psychological problems
+                          requiring medical/psychiatric treatment.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="E2">
+                        <p>
+                          Major depression, suicidal ideation, panic attacks,
+                          uncontrolled bipolar disorder requiring
+                          medication/psychiatric treatment.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="E3">
+                        <p>
+                          Been diagnosed with a mental health condition or a
+                          learning/developmental disorder that requires ongoing
+                          care or special accommodation.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="E4">
+                        <p>
+                          An addiction to drugs or alcohol requiring treatment
+                          within the last 5 years.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="8" data-box="F">
+                  <p>I have had back problems, hernia, ulcers, or diabetes.</p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box F – I have / have had:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="F1">
+                        <p>
+                          Recurrent back problems in the last 6 months that
+                          limit my everyday activity.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F2">
+                        <p>Back or spinal surgery within the last 12 months.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F3">
+                        <p>
+                          Diabetes, either drug or diet controlled, OR
+                          gestational diabetes within the last 12 months.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F4">
+                        <p>
+                          An uncorrected hernia that limits my physical
+                          abilities.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="F5">
+                        <p>
+                          Active or untreated ulcers, problem wounds, or ulcer
+                          surgery within the last 6 months.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="9" data-box="G">
+                  <p>
+                    I have had stomach or intestine problems, including recent
+                    diarrhea.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                  <div class="cdc-quiz__answer cdc-medical-followup">
+                    <strong>Box G – I have had:</strong>
+                    <p class="cdc-medical-quiz__hint">
+                      A <strong>Yes</strong> here usually means a physician’s
+                      evaluation is required.
+                    </p>
+                    <ol class="cdc-medical-followup__list">
+                      <li data-sub="G1">
+                        <p>
+                          Ostomy surgery and I do not have medical clearance to
+                          swim or engage in physical activity.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G2">
+                        <p>
+                          Dehydration requiring medical intervention within the
+                          last 7 days.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G3">
+                        <p>
+                          Active or untreated stomach or intestinal ulcers or
+                          ulcer surgery within the last 6 months.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G4">
+                        <p>
+                          Frequent heartburn, regurgitation, or gastroesophageal
+                          reflux disease (GERD).
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G5">
+                        <p>
+                          Active or uncontrolled ulcerative colitis or Crohn’s
+                          disease.
+                        </p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                      <li data-sub="G6">
+                        <p>Bariatric surgery within the last 12 months.</p>
+                        <div class="cdc-quiz__buttons">
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="yes"
+                            onclick="medicalPick(this, 'yes')"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="cdc-quiz__button"
+                            data-answer="no"
+                            onclick="medicalPick(this, 'no')"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li data-q="10">
+                  <p>
+                    I am taking prescription medications (with the exception of
+                    birth control or anti-malarial drugs other than mefloquine /
+                    Lariam).
+                  </p>
+                  <p class="cdc-medical-quiz__hint">
+                    A <strong>Yes</strong> here usually means a physician’s
+                    evaluation is required.
+                  </p>
+                  <div class="cdc-quiz__buttons">
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="yes"
+                      onclick="medicalPick(this, 'yes')"
+                    >
+                      Yes
+                    </button>
+                    <button
+                      type="button"
+                      class="cdc-quiz__button"
+                      data-answer="no"
+                      onclick="medicalPick(this, 'no')"
+                    >
+                      No
+                    </button>
+                  </div>
+                </li>
+              </ol>
+
+              <div id="cdc-medical-result" class="cdc-quiz__answer"></div>
+
+              <p class="cdc-medical-quiz__actions" style="margin-top: 10px">
+                <button
+                  type="button"
+                  class="cdc-quiz__button"
+                  id="cdc-medical-email"
+                  onclick="medicalEmailResults()"
+                  disabled
+                  title="Complete all questions first"
+                >
+                  📩 Email my results
+                </button>
+                <button
+                  type="button"
+                  class="cdc-quiz__button"
+                  onclick="medicalReset()"
+                >
+                  Reset answers
+                </button>
+              </p>
+              <p
+                class="cdc-medical-quiz__hint"
+                id="cdc-medical-email-hint"
+                style="margin-top: 0.4rem"
+              >
+                After you finish the self-check, you can email your answers to
+                Chang Diving (opens your email app).
+              </p>
+            </div>
           </dd>
 
           <dt>
@@ -585,33 +1923,42 @@
             contact lenses?
           </dt>
           <dd>
-            Yes! Contact lenses are usually fine. We also offer masks with
-            prescription lenses.
-            <a
-              href="/en/contact/"
-              target="_blank"
-              rel="noopener"
-              class="faq-link"
-            >
-              <span aria-hidden="true">💬</span> ➜ Ask about prescription masks
-            </a>
+            <p>
+              Yes! Contact lenses are usually fine. We also offer masks with
+              prescription lenses.
+            </p>
+            <p>
+              <a
+                href="/en/contact/"
+                target="_blank"
+                rel="noopener"
+                class="faq-link"
+              >
+                <span aria-hidden="true">💬</span> ➜ Ask about prescription
+                masks
+              </a>
+            </p>
           </dd>
 
           <dt>
             <span aria-hidden="true">🛡️</span> Is diving insurance required?
           </dt>
           <dd>
-            Diving insurance is highly recommended. You can get day or annual
-            coverage at low cost.
-            <a
-              href="/en/day-trips/insurance/"
-              target="_blank"
-              rel="noopener"
-              class="faq-link"
-            >
-              <span aria-hidden="true">ℹ️</span> ➜ Learn about diving insurance
-              options
-            </a>
+            <p>
+              Diving insurance is highly recommended. You can get day or annual
+              coverage at low cost.
+            </p>
+            <p>
+              <a
+                href="/en/day-trips/insurance/"
+                target="_blank"
+                rel="noopener"
+                class="faq-link"
+              >
+                <span aria-hidden="true">ℹ️</span> ➜ Learn about diving
+                insurance options
+              </a>
+            </p>
           </dd>
 
           <dt>
@@ -619,19 +1966,23 @@
             Chang Diving?
           </dt>
           <dd>
-            In the rare event of a diving accident, we follow a clear and
-            structured emergency plan. Our staff is trained, we carry first aid
-            and oxygen onboard, and we have direct access to the decompression
-            chamber in Trat.
-            <a
-              href="/en/posts/straight-talk/emergency-plan/"
-              target="_blank"
-              rel="noopener"
-              class="faq-link"
-            >
-              <span aria-hidden="true">🚑</span> ➜ View our emergency response
-              plan
-            </a>
+            <p>
+              In the rare event of a diving accident, we follow a clear and
+              structured emergency plan. Our staff is trained, we carry first
+              aid and oxygen onboard, and we have direct access to the
+              decompression chamber in Trat.
+            </p>
+            <p>
+              <a
+                href="/en/posts/straight-talk/emergency-plan/"
+                target="_blank"
+                rel="noopener"
+                class="faq-link"
+              >
+                <span aria-hidden="true">🚑</span> ➜ View our emergency response
+                plan
+              </a>
+            </p>
           </dd>
         </dl>
 
@@ -726,6 +2077,266 @@
             "item": "https://changdiving.com/en/faqs/faq-diving-health-safety-thailand/"
           }
         ]
+      }
+    </script>
+
+    <script>
+      function medicalGetMains() {
+        var root = document.getElementById("cdc-medical-list");
+        if (!root) return [];
+        var mains = [];
+        for (var m = 0; m < root.children.length; m++) {
+          if (root.children[m].hasAttribute("data-q")) {
+            mains.push(root.children[m]);
+          }
+        }
+        return mains;
+      }
+
+      function medicalAssess() {
+        var mains = medicalGetMains();
+        var answered = 0;
+        var incompleteBox = false;
+        var needsPhysician = false;
+        var complete = false;
+
+        mains.forEach(function (li) {
+          var ans = li.getAttribute("data-answered");
+          if (ans === "yes" || ans === "no") answered++;
+          var q = li.getAttribute("data-q");
+          if ((q === "3" || q === "5" || q === "10") && ans === "yes") {
+            needsPhysician = true;
+          }
+          var box = li.querySelector(".cdc-medical-followup");
+          if (ans === "yes" && box) {
+            var subs = box.querySelectorAll("li[data-sub]");
+            var subAnswered = 0;
+            subs.forEach(function (s) {
+              var sa = s.getAttribute("data-answered");
+              if (sa === "yes" || sa === "no") subAnswered++;
+              if (sa === "yes") needsPhysician = true;
+            });
+            if (subAnswered < subs.length) incompleteBox = true;
+          }
+        });
+
+        complete =
+          mains.length > 0 &&
+          answered === mains.length &&
+          !incompleteBox;
+
+        return {
+          mains: mains,
+          answered: answered,
+          incompleteBox: incompleteBox,
+          needsPhysician: needsPhysician,
+          complete: complete,
+        };
+      }
+
+      function medicalShortText(el) {
+        var p = el.querySelector("p");
+        if (!p) return "";
+        return (p.textContent || "").replace(/\s+/g, " ").trim();
+      }
+
+      function medicalBuildSummary() {
+        var assess = medicalAssess();
+        var lines = [];
+        lines.push("Diver Medical Self-Check results");
+        lines.push("Page: https://changdiving.com/en/faqs/faq-diving-health-safety-thailand/#medical-self-check");
+        lines.push("");
+        lines.push(
+          "Screening outcome: " +
+            (assess.needsPhysician
+              ? "Physician evaluation recommended"
+              : "No physician required by this screening")
+        );
+        lines.push("");
+        lines.push("Name / ชื่อ-นามสกุล (in English):");
+        lines.push("Preferred course or dive dates:");
+        lines.push("Phone:");
+        lines.push("");
+        lines.push("--- Answers ---");
+
+        assess.mains.forEach(function (li) {
+          var q = li.getAttribute("data-q");
+          var ans = (li.getAttribute("data-answered") || "—").toUpperCase();
+          var text = medicalShortText(li);
+          if (text.length > 110) text = text.slice(0, 107) + "...";
+          lines.push("Q" + q + " [" + ans + "] " + text);
+          if (ans === "YES") {
+            var box = li.querySelector(".cdc-medical-followup");
+            if (box) {
+              box.querySelectorAll("li[data-sub]").forEach(function (s) {
+                var sa = (s.getAttribute("data-answered") || "—").toUpperCase();
+                var st = medicalShortText(s);
+                if (st.length > 90) st = st.slice(0, 87) + "...";
+                lines.push(
+                  "  - " +
+                    s.getAttribute("data-sub") +
+                    " [" +
+                    sa +
+                    "] " +
+                    st
+                );
+              });
+            }
+          }
+        });
+
+        lines.push("");
+        lines.push(
+          "Note: This is an informational self-check only. I still need to complete/sign the official Medical Questionnaire PDF with Chang Diving."
+        );
+        return lines.join("\n");
+      }
+
+      function medicalSetEmailEnabled(enabled) {
+        var btn = document.getElementById("cdc-medical-email");
+        if (!btn) return;
+        btn.disabled = !enabled;
+        btn.title = enabled
+          ? "Open your email app with your results"
+          : "Complete all questions first";
+      }
+
+      function medicalPick(button, value) {
+        var li = button.closest("li");
+        if (!li) return;
+        var row = button.parentElement;
+        if (!row) return;
+        var buttons = row.querySelectorAll(".cdc-quiz__button");
+        buttons.forEach(function (btn) {
+          btn.classList.add("disabled");
+          btn.onclick = null;
+          btn.classList.remove("correct", "incorrect");
+        });
+        if (value === "yes") button.classList.add("incorrect");
+        else button.classList.add("correct");
+
+        li.setAttribute("data-answered", value);
+
+        var followup = null;
+        for (var i = 0; i < li.children.length; i++) {
+          if (li.children[i].classList.contains("cdc-medical-followup")) {
+            followup = li.children[i];
+            break;
+          }
+        }
+        if (followup) {
+          if (value === "yes") {
+            followup.classList.add("show");
+          } else {
+            followup.classList.remove("show");
+            followup.querySelectorAll("li[data-sub]").forEach(function (sub) {
+              sub.removeAttribute("data-answered");
+              sub.querySelectorAll(".cdc-quiz__button").forEach(function (btn) {
+                btn.classList.remove("disabled", "correct", "incorrect");
+                var ans = btn.getAttribute("data-answer");
+                btn.onclick = function () {
+                  medicalPick(btn, ans);
+                };
+              });
+            });
+          }
+        }
+        medicalUpdateResult();
+      }
+
+      function medicalUpdateResult() {
+        var result = document.getElementById("cdc-medical-result");
+        if (!result) return;
+        var assess = medicalAssess();
+        var mains = assess.mains;
+
+        result.classList.remove("show", "correct-answer", "incorrect-answer");
+        result.style.display = "none";
+        medicalSetEmailEnabled(false);
+
+        if (assess.answered === 0) return;
+
+        if (assess.answered < mains.length) {
+          result.innerHTML =
+            "<strong>Keep going…</strong><br />Answered " +
+            assess.answered +
+            " of " +
+            mains.length +
+            " main questions.";
+          result.classList.add("show", "incorrect-answer");
+          result.style.display = "block";
+          return;
+        }
+        if (assess.incompleteBox) {
+          result.innerHTML =
+            "<strong>Almost there…</strong><br />Please also answer the follow-up questions that opened after a Yes.";
+          result.classList.add("show", "incorrect-answer");
+          result.style.display = "block";
+          return;
+        }
+
+        medicalSetEmailEnabled(true);
+
+        if (assess.needsPhysician) {
+          result.innerHTML =
+            '<strong>Physician evaluation recommended</strong><br />Based on your answers, take the completed questionnaire (all pages) to a physician before diving or starting a course. <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Download PDF</a> · <a href="/en/contact/">Contact us</a><br /><br />You can also <strong>Email my results</strong> to Chang Diving below.';
+          result.classList.add("show", "incorrect-answer");
+        } else {
+          result.innerHTML =
+            '<strong>No physician required by this screening</strong><br />You still need to complete and sign the official PDF with us before diving. <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Download PDF</a><br /><br />Optional: <strong>Email my results</strong> to Chang Diving below.';
+          result.classList.add("show", "correct-answer");
+        }
+        result.style.display = "block";
+      }
+
+      function medicalEmailResults() {
+        var assess = medicalAssess();
+        if (!assess.complete) {
+          alert("Please complete all questions first.");
+          return;
+        }
+        var subject =
+          "Medical Self-Check results – " +
+          (assess.needsPhysician
+            ? "physician recommended"
+            : "screening clear");
+        var body = medicalBuildSummary();
+        // Keep mailto bodies practical for common email clients
+        if (body.length > 1800) {
+          body = body.slice(0, 1750) + "\n\n[Truncated – full list was long. Please also attach/sign the PDF.]";
+        }
+        var href =
+          "mailto:info@changdiving.com?subject=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+        window.location.href = href;
+      }
+
+      function medicalReset() {
+        var root = document.getElementById("cdc-medical-list");
+        if (!root) return;
+        root
+          .querySelectorAll("li[data-q], li[data-sub]")
+          .forEach(function (li) {
+            li.removeAttribute("data-answered");
+            li.querySelectorAll(".cdc-quiz__button").forEach(function (btn) {
+              btn.classList.remove("disabled", "correct", "incorrect");
+              var ans = btn.getAttribute("data-answer");
+              btn.onclick = function () {
+                medicalPick(btn, ans);
+              };
+            });
+            var box = li.querySelector(".cdc-medical-followup");
+            if (box) box.classList.remove("show");
+          });
+        var result = document.getElementById("cdc-medical-result");
+        if (result) {
+          result.classList.remove("show", "correct-answer", "incorrect-answer");
+          result.style.display = "none";
+          result.innerHTML = "";
+        }
+        medicalSetEmailEnabled(false);
       }
     </script>
   </body>
