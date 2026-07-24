@@ -1816,6 +1816,79 @@ main:has(> .tek-box) > .posts-submenu a {
   padding: 0;
 }
 
+/* FAQ Q&A: normal-size questions, blue/silver answer boxes */
+.faq-list--boxed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.faq-list--boxed dt {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  cursor: default;
+  line-height: 1.45;
+}
+
+.faq-list--boxed dt:hover {
+  color: #1a1a1a;
+}
+
+.faq-list--boxed dt:first-of-type {
+  margin-top: 0;
+}
+
+.faq-list--boxed dd {
+  margin: 0;
+  padding: 0.95rem 1.1rem;
+  border-bottom: none;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 119, 182, 0.28);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 182, 0.1) 0%,
+    rgba(192, 192, 192, 0.22) 100%
+  );
+  box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+  font-size: 0.92rem;
+  color: #222;
+  line-height: 1.55;
+}
+
+.faq-list--boxed dd p {
+  margin-bottom: 0.7em;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.faq-list--boxed dd p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-list--boxed dd a {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.faq-list--boxed dd p:last-child a {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  color: var(--primary-blue);
+}
+
+.faq-list--boxed dd p:last-child a:hover {
+  background: none;
+  color: var(--secondary-blue);
+  border-bottom: 1px solid var(--secondary-blue);
+}
+
 .faq-list dt {
   font-size: 1.5em;
   font-weight: 700;
@@ -1922,6 +1995,17 @@ main:has(> .tek-box) > .posts-submenu a {
     display: block;
     margin: 0.5em 0;
     text-align: center;
+  }
+
+  .faq-list--boxed dd {
+    margin-bottom: 0;
+    padding: 0.9rem 1rem;
+  }
+
+  .faq-list--boxed dd p:last-child a {
+    display: inline;
+    margin: 0;
+    text-align: left;
   }
 }
 

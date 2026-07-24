@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>คำถามทั่วไปเกี่ยวกับการดำน้ำ – เกาะช้าง | ช้างไดร์วิ่ง</title>
     <meta
@@ -341,6 +342,39 @@
           object-fit: cover;
         }
       }
+
+      /* FAQ boxed answers – critical */
+      .faq-list--boxed {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .faq-list--boxed dt {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        cursor: default;
+        line-height: 1.45;
+      }
+      .faq-list--boxed dd {
+        margin: 0;
+        padding: 0.95rem 1.1rem;
+        border-bottom: none;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 119, 182, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 119, 182, 0.1) 0%,
+          rgba(192, 192, 192, 0.22) 100%
+        );
+        box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+        font-size: 0.92rem;
+        color: #222;
+        line-height: 1.55;
+      }
     </style>
     <link
       rel="preload"
@@ -368,42 +402,82 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "ทำไมเกาะช้างจึงเป็นจุดดำน้ำที่ยอดเยี่ยมในประเทศไทย?",
+            "name": "ดำน้ำและคอร์สดำน้ำที่เกาะช้างราคาเท่าไหร่?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "น้ำอุ่น ปะการังอุดมสมบูรณ์ และบรรยากาศผ่อนคลาย ทำให้เกาะช้างเหมาะกับนักดำน้ำทุกระดับ"
+              "text": "Fun Dives จาก 3,290 บาท, Try Dive จาก 4,890 บาท, Open Water จาก 14,490 บาท ดูราคาทั้งหมดที่หน้าราคา"
             }
           },
           {
             "@type": "Question",
-            "name": "ช่วงเวลาใดเหมาะสมที่สุดสำหรับดำน้ำที่เกาะช้าง?",
+            "name": "ต้องมีคุณสมบัติอะไรบ้างถึงจะเรียนดำน้ำได้?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "ฤดูกาลหลักคือเดือนตุลาคมถึงพฤษภาคม ทะเลสงบและมีทัศนวิสัยที่ดี"
+              "text": "ลองดำน้ำไม่ต้องมีประสบการณ์ Open Water ควรว่ายน้ำได้และสุขภาพดีพอ จูเนียร์มักเริ่มที่อายุ 10 ปีพร้อมความยินยอมผู้ปกครอง"
             }
           },
           {
             "@type": "Question",
-            "name": "อุณหภูมิและความใสของน้ำเป็นอย่างไร?",
+            "name": "ต้องมีใบรับรองแพทย์สำหรับการดำน้ำหรือไม่?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "อุณหภูมิประมาณ 28–30°C และความใสของน้ำระหว่าง 10–20 เมตร"
+              "text": "ส่วนใหญ่ใช้แบบสอบถามสุขภาพ ใบรับรองแพทย์เฉพาะกรณีสุขภาพบางอย่างหรือคำตอบใช่ในแบบฟอร์ม"
             }
           },
           {
             "@type": "Question",
-            "name": "มีจุดดำน้ำเรือจมหรือจุดดำน้ำพิเศษหรือไม่?",
+            "name": "ช้างไดฟ์วิ่งเซ็นเตอร์อยู่ที่ไหน?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "มีแน่นอน! เรือจม เรือหลวงช้าง เป็นจุดดำน้ำเรือจมที่ใหญ่ที่สุดในไทย พร้อมแนวปะการังที่งดงามอย่างหินลูกบาศก์"
+              "text": "ช้างไดฟ์วิ่ง เซ็นเตอร์ อยู่ที่ 21/52 หมู่ 4 หาดคลองพร้าว เกาะช้าง ตราด 23170"
             }
           },
           {
             "@type": "Question",
-            "name": "สามารถพบสัตว์ทะเลอะไรบ้างที่เกาะช้าง?",
+            "name": "เรือดำน้ำออกจากจุดไหน?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "อาจพบเต่าทะเล ปลาไหลมอเรย์ ม้าน้ำ ทากทะเล ปลากระเบน หรือแม้แต่วาฬฉลาม ความหลากหลายทางทะเลที่นี่น่าประทับใจมาก"
+              "text": "เรือออกจากหาดคลองพร้าวใกลไดฟ์เซ็นเตอร์ มีรับจากโรงแรมหรือนัด 08:00 / ชายหาด 08:15 แล้วขึ้นเรือเล็กไปเรือดำน้ำ"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ทำไมเกาะช้างถึงเป็นจุดหมายดำน้ำที่ดีในประเทศไทย?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "น้ำอุ่น ปะการังสวย และบรรยากาศผ่อนคลาย เหมาะกับนักดำน้ำทุกระดับ"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "ช่วงไหนเหมาะกับการดำน้ำที่เกาะช้างที่สุด?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ฤดูหลักตุลาคมถึงพฤษภาคม ดำน้ำได้ตลอดปี"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "อุณหภูมิน้ำและทัศนวิสัยเป็นอย่างไร?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "อุณหภูมิน้ำประมาณ 28–30°C ทัศนวิสัยราว 10–20 เมตรตามฤดูกาลและจุดดำน้ำ"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "มีเรือจมหรือจุดดำน้ำพิเศษที่เกาะช้างไหม?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "มี เรือหลวงช้างเป็นเรือจมใหญ่ที่สุดในไทย รวมถึงแนวปะการังอย่าง Hin Luk Bat"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "จะได้เห็นสิ่งมีชีวิตอะไรบ้างตอนดำน้ำที่เกาะช้าง?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "เต่าทะเล มอเรย์ ปลากระบอก ม้าน้ำ ทากทะเล ปลากระเบน และบางครั้งฉลามวาฬ"
             }
           }
         ]
@@ -518,14 +592,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>คำถามทั่วไปเกี่ยวกับการดำน้ำที่เกาะช้าง</h1>
-          <p>
-            ทุกสิ่งที่คุณควรรู้เกี่ยวกับฤดูกาลดำน้ำ สภาพทะเล สัตว์ทะเล
-            และจุดดำน้ำรอบเกาะช้าง ประเทศไทย
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -545,194 +611,198 @@
       ></nav>
 
       <div class="faq-box diving">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-          aria-label="FAQ Section Title"
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           คำถามทั่วไปเกี่ยวกับการดำน้ำที่เกาะช้าง
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ทุกสิ่งที่คุณควรรู้เกี่ยวกับฤดูกาลดำน้ำ สภาพทะเล สัตว์ทะเล
+          และจุดดำน้ำรอบเกาะช้าง ประเทศไทย
+        </p>
 
-        <dl class="faq-list" role="list" aria-label="คำถามที่พบบ่อย">
-          <dt>
-            <span aria-hidden="true">🏊‍♂️</span>
-            ทำไมเกาะช้างจึงเป็นจุดดำน้ำที่ยอดเยี่ยมในประเทศไทย?
-          </dt>
+        <hr />
+
+        <dl
+          class="faq-list faq-list--boxed"
+          role="list"
+          aria-label="คำถามที่พบบ่อย"
+        >
+          <dt>ดำน้ำและคอร์สดำน้ำที่เกาะช้างราคาเท่าไหร่?</dt>
           <dd>
             <p>
-              น้ำอุ่น ปะการังอุดมสมบูรณ์ และบรรยากาศผ่อนคลาย ทำให้เกาะช้าง
-              เหมาะกับนักดำน้ำทุกระดับ
+              ราคาขึ้นกับกิจกรรม:
+              <a href="/th/day-trips/fun-dives/">Fun Dives</a> เริ่มต้น
+              <strong>3,290 บาท</strong>,
+              <a href="/th/day-trips/try-dive/">ลองดำน้ำ (Try Dive)</a> เริ่มต้น
+              <strong>4,890 บาท</strong>, และคอร์ส
+              <a href="/th/courses/open-water-diver/">Open Water Diver</a>
+              เริ่มต้น
+              <strong>14,490 บาท</strong> ดูราคาปัจจุบันทั้งหมดของทริปวันเดียว
+              คอร์ส สเปเชียลตี้ และเทคได้ที่
+              <a href="/th/prices/">หน้าราคา</a>
+            </p>
+            <p>
+              เพิ่มเติม:
+              <a href="/th/faqs/faq-booking-payment-scuba-koh-chang/"
+                >การจองและการชำระเงิน</a
+              >
+              ·
+              <a href="/th/faqs/faq-dive-courses-koh-chang/">FAQ คอร์สดำน้ำ</a>
+            </p>
+          </dd>
+
+          <dt>ต้องมีคุณสมบัติอะไรบ้างถึงจะเรียนดำน้ำได้?</dt>
+          <dd>
+            <p>
+              สำหรับ
+              <a href="/th/day-trips/try-dive/">ลองดำน้ำ</a>
+              ไม่ต้องมีประสบการณ์มาก่อน สำหรับคอร์ส
+              <a href="/th/courses/open-water-diver/">Open Water</a>
+              ควรคุ้นเคยกับน้ำ ว่ายน้ำได้ และมีสุขภาพพอสำหรับการออกแรงเบา ๆ
+              อายุขั้นต่ำของโปรแกรมจูเนียร์มักอยู่ที่
+              <strong>10 ปี</strong> (พร้อมความยินยอมจากผู้ปกครอง)
+              เราฝึกเป็นกลุ่มเล็กกับ SDI, TDI และ PADI
+            </p>
+            <p>
+              เพิ่มเติม:
+              <a href="/th/faqs/faq-dive-courses-koh-chang/">FAQ คอร์ส</a>
+              ·
+              <a href="/th/courses/beginner-courses/">คอร์สสำหรับมือใหม่</a>
+            </p>
+          </dd>
+
+          <dt>ต้องมีใบรับรองแพทย์สำหรับการดำน้ำหรือไม่?</dt>
+          <dd>
+            <p>
+              ส่วนใหญ่กรอก
+              <strong>แบบสอบถามสุขภาพ</strong>
+              ก็เพียงพอ
+              ใบรับรองแพทย์จำเป็นเฉพาะเมื่อมีโรคประจำตัวบางอย่างหรือตอบ “ใช่”
+              ในคำถามสุขภาพ รายละเอียดอยู่ใน
+              <a href="/th/faqs/faq-diving-health-safety-thailand/"
+                >FAQ สุขภาพและความปลอดภัย</a
+              >
+            </p>
+          </dd>
+
+          <dt>เรือดำน้ำออกจากจุดไหน?</dt>
+          <dd>
+            <p>
+              ในฤดูหลักเรือออกจาก
+              <strong>หาดคลองพร้าว</strong>
+              ใกลไดฟ์เซ็นเตอร์ เราสามารถรับจากโรงแรม หรือนัดที่เซ็นเตอร์ประมาณ
+              <strong>08:00 น.</strong> / ที่ชายหาดประมาณ
+              <strong>08:15 น.</strong>
+              จากนั้นเรือเล็กพาไปยังเรือดำน้ำที่จอดอยู่นอกชายฝั่ง
+            </p>
+            <p>
+              <a
+                href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic"
+                target="_blank"
+                rel="noopener"
+                >➜ แผนที่จุดออกเรือ</a
+              >
+              ·
+              <a href="/th/faqs/faq-equipment-logistics-koh-chang/"
+                >ขั้นตอนวันดำน้ำ</a
+              >
+            </p>
+          </dd>
+
+          <dt>ทำไมเกาะช้างถึงเป็นจุดหมายดำน้ำที่ดีในประเทศไทย?</dt>
+          <dd>
+            <p>
+              น้ำอุ่น ปะการังที่ยังสวย และบรรยากาศสบาย ๆ
+              ทำให้เกาะช้างเหมาะกับนักดำน้ำทุกระดับ
+              ตั้งแต่ลองดำน้ำครั้งแรกไปจนถึงเรือจมและเทคนิค
             </p>
             <p>
               <a
                 href="/th/posts/koh-chang-diving-travel-guides/travel-guide/"
                 target="_blank"
                 rel="noopener"
-                >➜ ค้นพบการดำน้ำที่เกาะช้าง</a
+                >➜ คู่มือดำน้ำเกาะช้าง</a
               >
-            </p>
-
-            <p>
-              คำถามที่เกี่ยวข้อง:
-              <a
-                href="/th/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ ข้อมูลความปลอดภัย</a
-              >
-              |
-              <a
-                href="/th/faqs/faq-try-dive-fun-dives-koh-chang/"
-                rel="noopener"
-                >➜ ลองดำน้ำ</a
+              ·
+              <a href="/th/faqs/faq-try-dive-fun-dives-koh-chang/"
+                >ลองดำน้ำและฟันไดฟ์</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">📅</span>
-            ช่วงเวลาใดเหมาะสมที่สุดสำหรับดำน้ำที่เกาะช้าง?
-          </dt>
+          <dt>ช่วงไหนเหมาะกับการดำน้ำที่เกาะช้างที่สุด?</dt>
           <dd>
-            <p>ฤดูกาลหลักคือเดือนตุลาคมถึงพฤษภาคม ทะเลสงบและมีทัศนวิสัยที่ดี</p>
-
             <p>
-              คำถามที่เกี่ยวข้อง:
-              <a href="/th/faqs/faq-general-questions-koh-chang/" rel="noopener"
-                >➜ ข้อมูลสภาพอากาศ</a
-              >
-              |
-              <a
-                href="/th/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ แนวทางความปลอดภัย</a
+              ฤดูหลักคือ <strong>ตุลาคมถึงพฤษภาคม</strong>
+              ทะเลสงบกว่าและทัศนวิสัยมักดีกว่า ดำน้ำได้ตลอดปี
+              ช่วงฝนอาจมีเรือน้อยลงและเห็นมาโครมากขึ้น
+            </p>
+            <p>
+              <a href="/th/weather/">สภาพอากาศล่าสุด</a>
+              ·
+              <a href="/th/faqs/faq-general-questions-koh-chang/"
+                >FAQ ทั่วไปเกี่ยวกับเกาะช้าง</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🌡️</span>
-            อุณหภูมิและความใสของน้ำเป็นอย่างไร?
-          </dt>
+          <dt>อุณหภูมิน้ำและทัศนวิสัยเป็นอย่างไร?</dt>
           <dd>
             <p>
-              อุณหภูมิน้ำอยู่ระหว่าง 28°C ถึง 30°C และทัศนวิสัย ระหว่าง 10 ถึง
-              20 เมตร
+              อุณหภูมิน้ำประมาณ <strong>28–30°C</strong> ทัศนวิสัยมักอยู่ราว
+              <strong>10–20 เมตร</strong>
+              (ขึ้นกับฤดูกาลและจุดดำน้ำ)
             </p>
             <p>
               <a
                 href="/th/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"
                 target="_blank"
                 rel="noopener"
-                >➜ เปรียบเทียบสภาพการดำน้ำ</a
+                >➜ เปรียบเทียบสภาพดำน้ำ</a
               >
-            </p>
-
-            <p>
-              คำถามที่เกี่ยวข้อง:
-              <a
-                href="/th/faqs/faq-equipment-logistics-koh-chang/"
-                rel="noopener"
-                >➜ ความต้องการอุปกรณ์</a
-              >
-              |
-              <a
-                href="/th/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ สภาพการดำน้ำ</a
+              ·
+              <a href="/th/faqs/faq-equipment-logistics-koh-chang/"
+                >อุปกรณ์และสภาพน้ำ</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🚢</span>
-            มีจุดดำน้ำเรือจมหรือจุดดำน้ำพิเศษหรือไม่?
-          </dt>
+          <dt>มีเรือจมหรือจุดดำน้ำพิเศษที่เกาะช้างไหม?</dt>
           <dd>
             <p>
-              มีแน่นอน!
-              <a
-                href="/th/dive-sites/htms-chang-wreck/"
-                target="_blank"
-                rel="noopener"
-                >➜ เรือจม เรือหลวงช้าง</a
+              มี —
+              <a href="/th/dive-sites/htms-chang-wreck/"
+                >เรือหลวงช้าง (HTMS Chang)</a
               >
-              เป็นจุดดำน้ำเรือจมที่ใหญ่ที่สุดในไทย
-              พร้อมแนวปะการังที่งดงามอย่างหินลูกบาศก์
+              เป็นเรือจมขนาดใหญ่ที่สุดในไทย รวมถึงแนวปะการังและพินนาเคิลอย่าง
+              Hin Luk Bat ดู
+              <a href="/th/dive-sites/">จุดดำน้ำ</a> และ
+              <a href="/th/dive-sites/dive-site-map-koh-chang/"
+                >แผนที่จุดดำน้ำ</a
+              >
             </p>
             <p>
               <a
                 href="/th/posts/scuba-knowledge/wreck-diving-koh-chang/"
                 target="_blank"
                 rel="noopener"
-                >➜ เรียนรู้เกี่ยวกับการดำน้ำเรือจม</a
-              >
-              |
-              <a
-                href="/th/dive-sites/dive-site-map-koh-chang/"
-                target="_blank"
-                rel="noopener"
-                >➜ ดูแผนที่จุดดำน้ำ</a
-              >
-            </p>
-
-            <p>
-              คำถามที่เกี่ยวข้อง:
-              <a
-                href="/th/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ ความปลอดภัยเรือจม</a
-              >
-              |
-              <a
-                href="/th/faqs/faq-equipment-logistics-koh-chang/"
-                rel="noopener"
-                >➜ การวางแผนดำน้ำ</a
+                >➜ คู่มือดำน้ำเรือจม</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🐠</span>
-            สามารถพบสัตว์ทะเลอะไรบ้างที่เกาะช้าง?
-          </dt>
+          <dt>จะได้เห็นสิ่งมีชีวิตอะไรบ้างตอนดำน้ำที่เกาะช้าง?</dt>
           <dd>
             <p>
-              อาจพบ <span aria-hidden="true">🐢</span> เต่าทะเล ปลาไหลมอเรย์
-              ปลาปักเป้า ม้าน้ำ ทากทะเล ปลากระเบน หรือแม้แต่
-              <span aria-hidden="true">🐋</span> วาฬฉลาม ความหลากหลาย
-              ทางทะเลของเกาะช้างน่าทึ่งมาก!
+              อาจเจอเต่าทะเล ปลาไหลมอเรย์ ปลากระบอก ม้าน้ำ ทากทะเล ปลากระเบน
+              และบางครั้งฉลามวาฬ
+              ความหลากหลายทางชีวภาพรอบเกาะช้างดีมากทั้งมือใหม่และมืออาชีพ
             </p>
             <p>
               <a
                 href="/th/posts/marine-life-koh-chang/"
                 target="_blank"
                 rel="noopener"
-                >➜ สำรวจคู่มือสิ่งมีชีวิตใต้ทะเล</a
-              >
-            </p>
-
-            <p>
-              คำถามที่เกี่ยวข้อง:
-              <a
-                href="/th/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ ความปลอดภัยกับสัตว์ทะเล</a
-              >
-              |
-              <a
-                href="/th/faqs/faq-try-dive-fun-dives-koh-chang/"
-                rel="noopener"
-                >➜ จุดที่ดีที่สุดสำหรับการพบเห็น</a
+                >➜ คู่มือสิ่งมีชีวิตใต้ทะเล</a
               >
             </p>
           </dd>

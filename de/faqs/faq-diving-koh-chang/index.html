@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Allgemeine Fragen zum Tauchen – FAQ Koh Chang | Chang Diving</title>
     <meta
@@ -341,6 +342,39 @@
           object-fit: cover;
         }
       }
+
+      /* FAQ boxed answers – critical */
+      .faq-list--boxed {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .faq-list--boxed dt {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        cursor: default;
+        line-height: 1.45;
+      }
+      .faq-list--boxed dd {
+        margin: 0;
+        padding: 0.95rem 1.1rem;
+        border-bottom: none;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 119, 182, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 119, 182, 0.1) 0%,
+          rgba(192, 192, 192, 0.22) 100%
+        );
+        box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+        font-size: 0.92rem;
+        color: #222;
+        line-height: 1.55;
+      }
     </style>
     <link
       rel="preload"
@@ -368,10 +402,50 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "Was kostet Tauchen / Tauchkurse auf Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fun Dives ab 3.290 THB, Try Dive ab 4.890 THB, Open Water ab 14.490 THB. Alle Preise auf der Preisseite."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was sind die Voraussetzungen, um Tauchen zu lernen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Try Dive ohne Vorerfahrung. Open Water: Wassersicherheit, Schwimmfähigkeit, leichte Fitness. Junior oft ab 10 Jahren mit elterlicher Zustimmung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Brauche ich ein medizinisches Tauchgutachten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Meist reicht der medizinische Fragebogen. Ein ärztliches Gutachten nur bei bestimmten Bedingungen oder Ja-Antworten."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wo befindet sich Chang Diving Center?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chang Diving Center, 21/52 Moo 4, Klong Prao Beach, Koh Chang, Trat 23170, Thailand."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Von wo startet das Tauchboot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Abfahrt vom Klong Prao Beach nahe dem Dive Center. Pickup oder Treffpunkt 8:00 / Strand 8:15; Transferboot zum Tauchboot."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Warum ist Koh Chang ein tolles Tauchziel in Thailand?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Warmes Wasser, gesunde Riffe und eine entspannte Atmosphäre machen Koh Chang ideal für Taucher aller Erfahrungsstufen."
+              "text": "Warmes Wasser, gesunde Riffe und entspannte Atmosphäre – ideal für alle Erfahrungsstufen."
             }
           },
           {
@@ -379,15 +453,15 @@
             "name": "Wann ist die beste Zeit zum Tauchen auf Koh Chang?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Die Hauptsaison dauert von Oktober bis Mai mit ruhiger See und guter Sicht."
+              "text": "Hauptsaison Oktober bis Mai. Tauchen ganzjährig möglich."
             }
           },
           {
             "@type": "Question",
-            "name": "Wie sind die Wassertemperaturen und die Sichtweiten?",
+            "name": "Wie sind Wassertemperatur und Sichtweite?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Die Wassertemperaturen liegen bei 28–30 °C, die Sichtweiten zwischen 10 und 20 Metern."
+              "text": "Wassertemperatur typisch 28–30°C, Sicht oft 10–20 Meter je nach Saison und Spot."
             }
           },
           {
@@ -395,7 +469,7 @@
             "name": "Gibt es Wracks oder besondere Tauchplätze auf Koh Chang?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ja! Das Wrack der HTMS Chang ist das größte in Thailand. Zudem gibt es wunderschöne Riffe wie Hin Luk Bat."
+              "text": "Ja. Das HTMS-Chang-Wrack ist Thailands größtes Wrack, plus Riffe wie Hin Luk Bat."
             }
           },
           {
@@ -403,7 +477,7 @@
             "name": "Welche Meereslebewesen kann ich beim Tauchen sehen?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Mit etwas Glück siehst du Schildkröten, Muränen, Seepferdchen, Nacktschnecken, Rochen und sogar Walhaie. Die Artenvielfalt ist beeindruckend."
+              "text": "Schildkröten, Muränen, Kugelfische, Seepferdchen, Nacktschnecken, Stechrochen und gelegentlich Walhaie."
             }
           }
         ]
@@ -518,14 +592,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Allgemeine Fragen zum Tauchen in Koh Chang</h1>
-          <p>
-            Alles, was du über Saison, Bedingungen, Meereslebewesen und
-            Tauchplätze rund um Koh Chang wissen solltest.
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -545,195 +611,198 @@
       ></nav>
 
       <div class="faq-box diving">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-          aria-label="FAQ Section Title"
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Allgemeine Fragen zum Tauchen in Koh Chang
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Alles, was du über Saison, Bedingungen, Meereslebewesen und
+          Tauchplätze rund um Koh Chang wissen solltest.
+        </p>
 
-        <dl class="faq-list" role="list" aria-label="Häufig gestellte Fragen">
-          <dt>
-            <span aria-hidden="true">🏊‍♂️</span> Warum ist Koh Chang ein tolles
-            Tauchziel in Thailand?
-          </dt>
+        <hr />
+
+        <dl
+          class="faq-list faq-list--boxed"
+          role="list"
+          aria-label="Häufig gestellte Fragen"
+        >
+          <dt>Was kostet Tauchen / Tauchkurse auf Koh Chang?</dt>
+          <dd>
+            <p>
+              Die Preise hängen vom Angebot ab:
+              <a href="/de/day-trips/fun-dives/">Fun Dives</a> ab
+              <strong>3.290 THB</strong>,
+              <a href="/de/day-trips/try-dive/">Try Dive</a> ab
+              <strong>4.890 THB</strong>, und der
+              <a href="/de/courses/open-water-diver/">Open Water Diver</a>-Kurs
+              ab <strong>14.490 THB</strong>. Alle aktuellen Preise für
+              Tagestouren, Kurse, Spezialties und Tech findest du auf unserer
+              <a href="/de/prices/">Preisseite</a>.
+            </p>
+            <p>
+              Mehr dazu:
+              <a href="/de/faqs/faq-booking-payment-scuba-koh-chang/"
+                >Buchung &amp; Zahlung</a
+              >
+              ·
+              <a href="/de/faqs/faq-dive-courses-koh-chang/">Tauchkurse FAQ</a>
+            </p>
+          </dd>
+
+          <dt>Was sind die Voraussetzungen, um Tauchen zu lernen?</dt>
+          <dd>
+            <p>
+              Für einen <a href="/de/day-trips/try-dive/">Try Dive</a> brauchst
+              du keine Taucherfahrung. Für den
+              <a href="/de/courses/open-water-diver/">Open Water</a>-Kurs
+              solltest du dich im Wasser wohlfühlen, schwimmen können und leicht
+              körperlich belastbar sein. Das Mindestalter für Junior-Programme
+              liegt in der Regel bei <strong>10 Jahren</strong> (mit
+              Einverständnis der Eltern). Wir trainieren in kleinen Gruppen mit
+              SDI, TDI und PADI.
+            </p>
+            <p>
+              Mehr dazu:
+              <a href="/de/faqs/faq-dive-courses-koh-chang/">Kurs-FAQ</a>
+              ·
+              <a href="/de/courses/beginner-courses/">Anfängerkurse</a>
+            </p>
+          </dd>
+
+          <dt>Brauche ich ein medizinisches Tauchgutachten?</dt>
+          <dd>
+            <p>
+              In den meisten Fällen reicht ein
+              <strong>medizinischer Fragebogen</strong>. Ein ärztliches
+              Attest/Gutachten brauchst du nur bei bestimmten Vorerkrankungen
+              oder „Ja“-Antworten im Fragebogen. Details findest du in unserem
+              <a href="/de/faqs/faq-diving-health-safety-thailand/"
+                >Gesundheits- &amp; Sicherheits-FAQ</a
+              >.
+            </p>
+          </dd>
+
+          <dt>Von wo startet das Tauchboot?</dt>
+          <dd>
+            <p>
+              In der Hauptsaison startet das Boot vom
+              <strong>Klong Prao Beach</strong> – nur wenige Schritte vom Dive
+              Center. Hotel-Pickup ist möglich, oder Treffpunkt am Center gegen
+              <strong>8:00 Uhr</strong> / am Strand gegen
+              <strong>8:15 Uhr</strong>. Ein kleines Transferboot bringt dich
+              zum Tauchboot vor der Küste.
+            </p>
+            <p>
+              <a
+                href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic"
+                target="_blank"
+                rel="noopener"
+                >➜ Karte Boot-Abfahrt</a
+              >
+              ·
+              <a href="/de/faqs/faq-equipment-logistics-koh-chang/"
+                >Ablauf am Tauchtag</a
+              >
+            </p>
+          </dd>
+
+          <dt>Warum ist Koh Chang ein tolles Tauchziel in Thailand?</dt>
           <dd>
             <p>
               Warmes Wasser, gesunde Riffe und eine entspannte Atmosphäre machen
-              Koh Chang ideal für Taucher aller Erfahrungsstufen.
+              Koh Chang ideal für Taucher aller Levels – vom ersten Try Dive bis
+              zu Wrack- und Tech-Training.
             </p>
             <p>
               <a
                 href="/de/posts/koh-chang-diving-travel-guides/travel-guide/"
                 target="_blank"
                 rel="noopener"
-                >➜ Entdecke das Tauchen auf Koh Chang</a
+                >➜ Tauchen auf Koh Chang entdecken</a
               >
-            </p>
-
-            <p>
-              Verwandte FAQs:
-              <a
-                href="/de/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Sicherheitsinfos</a
-              >
-              |
-              <a
-                href="/de/faqs/faq-try-dive-fun-dives-koh-chang/"
-                rel="noopener"
-                >➜ Schnuppertauchen</a
+              ·
+              <a href="/de/faqs/faq-try-dive-fun-dives-koh-chang/"
+                >Try Dive &amp; Fun Dives</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">📅</span> Wann ist die beste Zeit zum
-            Tauchen auf Koh Chang?
-          </dt>
+          <dt>Wann ist die beste Zeit zum Tauchen auf Koh Chang?</dt>
           <dd>
             <p>
-              Die Hauptsaison dauert von Oktober bis Mai mit ruhiger See und
-              guter Sicht.
+              Die Hauptsaison geht von <strong>Oktober bis Mai</strong> mit
+              ruhigerem Meer und meist besserer Sicht. Tauchen ist ganzjährig
+              möglich; in der Regenzeit oft weniger Boote und mehr
+              Makro-Chancen.
             </p>
-
             <p>
-              Verwandte FAQs:
-              <a href="/de/faqs/faq-general-questions-koh-chang/" rel="noopener"
-                >➜ Wetterinfos</a
-              >
-              |
-              <a
-                href="/de/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Sicherheitsrichtlinien</a
+              <a href="/de/weather/">Aktuelles Wetter</a>
+              ·
+              <a href="/de/faqs/faq-general-questions-koh-chang/"
+                >Allgemeines Koh-Chang-FAQ</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🌡️</span> Wie sind die Wassertemperaturen
-            und die Sichtweiten?
-          </dt>
+          <dt>Wie sind Wassertemperatur und Sichtweite?</dt>
           <dd>
             <p>
-              Die Wassertemperaturen liegen zwischen 28°C und 30°C, die
-              Sichtweiten zwischen 10 und 20 Metern.
+              Die Wassertemperatur liegt meist bei
+              <strong>28–30°C</strong>, die Sicht häufig bei etwa
+              <strong>10–20 Metern</strong> (je nach Saison und Spot).
             </p>
             <p>
               <a
                 href="/de/posts/koh-chang-diving-travel-guides/thailand-diving-comparison/"
                 target="_blank"
                 rel="noopener"
-                >➜ Tauchbedingungen vergleichen</a
+                >➜ Bedingungen vergleichen</a
               >
-            </p>
-
-            <p>
-              Verwandte FAQs:
-              <a
-                href="/de/faqs/faq-equipment-logistics-koh-chang/"
-                rel="noopener"
-                >➜ Ausrüstungsanforderungen</a
-              >
-              |
-              <a
-                href="/de/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Tauchbedingungen</a
+              ·
+              <a href="/de/faqs/faq-equipment-logistics-koh-chang/"
+                >Ausrüstung &amp; Bedingungen</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🚢</span> Gibt es Wracks oder besondere
-            Tauchplätze auf Koh Chang?
-          </dt>
+          <dt>Gibt es Wracks oder besondere Tauchplätze auf Koh Chang?</dt>
           <dd>
             <p>
-              Ja! Das
-              <a
-                href="/de/dive-sites/htms-chang-wreck/"
-                target="_blank"
-                rel="noopener"
-                >➜ HTMS Chang Wrack</a
+              Ja – das
+              <a href="/de/dive-sites/htms-chang-wreck/"
+                >Wrack der HTMS Chang</a
               >
-              ist das größte in Thailand, plus wunderschöne Riffe wie Hin Luk
-              Bat.
+              ist Thailands größtes Wrack-Tauchziel, dazu Riffe und Pins wie Hin
+              Luk Bat. Übersicht unter
+              <a href="/de/dive-sites/">Tauchplätze</a> und
+              <a href="/de/dive-sites/dive-site-map-koh-chang/"
+                >Tauchplatz-Karte</a
+              >.
             </p>
             <p>
               <a
                 href="/de/posts/scuba-knowledge/wreck-diving-koh-chang/"
                 target="_blank"
                 rel="noopener"
-                >➜ Über Wracktauchen lernen</a
-              >
-              |
-              <a
-                href="/de/dive-sites/dive-site-map-koh-chang/"
-                target="_blank"
-                rel="noopener"
-                >➜ Tauchplatzkarte ansehen</a
-              >
-            </p>
-
-            <p>
-              Verwandte FAQs:
-              <a
-                href="/de/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Wracksicherheit</a
-              >
-              |
-              <a
-                href="/de/faqs/faq-equipment-logistics-koh-chang/"
-                rel="noopener"
-                >➜ Tauchplanung</a
+                >➜ Wracktauchen-Guide</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🐠</span> Welche Meereslebewesen kann ich
-            beim Tauchen sehen?
-          </dt>
+          <dt>Welche Meereslebewesen kann ich beim Tauchen sehen?</dt>
           <dd>
             <p>
-              Mit etwas Glück siehst du
-              <span aria-hidden="true">🐢</span> Schildkröten, Muränen,
-              Kugelfische, Seepferdchen, Nacktschnecken, Rochen und sogar
-              gelegentlich <span aria-hidden="true">🐋</span> Walhaie. Die
-              marine Artenvielfalt von Koh Chang ist beeindruckend!
+              Unter anderem Schildkröten, Muränen, Kugelfische, Seepferdchen,
+              Nacktschnecken, Stechrochen und gelegentlich Walhaie. Die
+              Artenvielfalt rund um Koh Chang ist großartig für Anfänger und
+              erfahrene Taucher.
             </p>
             <p>
               <a
                 href="/de/posts/marine-life-koh-chang/"
                 target="_blank"
                 rel="noopener"
-                >➜ Meereslebewesen-Guide erkunden</a
-              >
-            </p>
-
-            <p>
-              Verwandte FAQs:
-              <a
-                href="/de/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Sicherheit mit Meereslebewesen</a
-              >
-              |
-              <a
-                href="/de/faqs/faq-try-dive-fun-dives-koh-chang/"
-                rel="noopener"
-                >➜ Beste Plätze für Sichtungen</a
+                >➜ Meeresleben-Guide</a
               >
             </p>
           </dd>

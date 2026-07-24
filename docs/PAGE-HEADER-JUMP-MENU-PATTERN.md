@@ -68,6 +68,13 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 | `/courses/specialty/` (EN/DE/TH)                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/courses/technical-diving-courses/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/courses/` (EN/DE/TH)                          | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/faqs/` (EN/DE/TH)                             | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+
+### FAQ-Detailseiten (ohne Jump-Menü)
+
+| Seite                  | Status | Packages-Anker | Hinweis                                                                                              |
+| ---------------------- | ------ | -------------- | ---------------------------------------------------------------------------------------------------- |
+| `faq-diving-koh-chang` | ✅     | —              | H1+Teaser in `faq-box`; 10 Q&As; Fragen normal, Antworten blau/silber (`faq-list--boxed`); kein Jump |
 
 ### Preisliste (mit Jump-Menü – Ausnahme)
 

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General Diving Questions – Koh Chang Scuba FAQ | Chang Diving</title>
     <meta
@@ -341,6 +342,39 @@
           object-fit: cover;
         }
       }
+
+      /* FAQ boxed answers – critical */
+      .faq-list--boxed {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .faq-list--boxed dt {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        cursor: default;
+        line-height: 1.45;
+      }
+      .faq-list--boxed dd {
+        margin: 0;
+        padding: 0.95rem 1.1rem;
+        border-bottom: none;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 119, 182, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 119, 182, 0.1) 0%,
+          rgba(192, 192, 192, 0.22) 100%
+        );
+        box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+        font-size: 0.92rem;
+        color: #222;
+        line-height: 1.55;
+      }
     </style>
     <link
       rel="preload"
@@ -368,6 +402,46 @@
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "What does diving and dive courses cost on Koh Chang?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Fun Dives from 3,290 THB, Try Dive from 4,890 THB, Open Water from 14,490 THB. See the full prices page for day trips, courses, specialties and tech."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the prerequisites to learn diving?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Try Dive needs no experience. Open Water requires comfort in water, basic swimming ability and light fitness. Junior programmes usually from age 10 with parental consent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a medical dive certificate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually a medical questionnaire is enough. A doctor’s certificate is only required for specific conditions or “yes” answers on the form."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is Chang Diving Center located?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Chang Diving Center is at 21/52 Moo 4, Klong Prao Beach, Koh Chang, Trat 23170, Thailand."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the dive boat depart from?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The dive boat departs from Klong Prao Beach near the dive center. Hotel pickup or meet at 8:00 AM / beach 8:15 AM; a transfer boat takes you to the dive boat."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Why is Koh Chang a great diving destination in Thailand?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -379,7 +453,7 @@
             "name": "When is the best time to go diving in Koh Chang?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The main season runs from October to May with calm seas and good visibility."
+              "text": "Main season is October to May with calm seas and good visibility. Diving is possible year-round."
             }
           },
           {
@@ -387,7 +461,7 @@
             "name": "What are the water temperatures and visibility like?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Water temperatures are 28–30°C with visibility between 10 and 20 meters."
+              "text": "Water temperatures are typically 28–30°C with visibility around 10–20 meters depending on season and site."
             }
           },
           {
@@ -395,7 +469,7 @@
             "name": "Are there any wrecks or special dive sites in Koh Chang?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes! The HTMS Chang wreck is the largest in Thailand, and the area features stunning reefs like Hin Luk Bat."
+              "text": "Yes. The HTMS Chang wreck is Thailand’s largest wreck dive, plus reefs like Hin Luk Bat."
             }
           },
           {
@@ -403,7 +477,7 @@
             "name": "What marine life can I see while diving in Koh Chang?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You may see turtles, moray eels, seahorses, nudibranchs, stingrays and even whale sharks. Koh Chang's biodiversity is excellent."
+              "text": "Turtles, moray eels, pufferfish, seahorses, nudibranchs, stingrays and occasionally whale sharks."
             }
           }
         ]
@@ -514,14 +588,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>General Questions About Diving in Koh Chang</h1>
-          <p>
-            Everything you should know about diving season, conditions, marine
-            life and dive sites around Koh Chang, Thailand.
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -541,34 +607,108 @@
       ></nav>
 
       <div class="faq-box diving">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-          aria-label="FAQ Section Title"
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           General Questions About Diving in Koh Chang
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Everything you should know about diving season, conditions, marine
+          life and dive sites around Koh Chang, Thailand.
+        </p>
+
+        <hr />
 
         <dl
-          class="faq-list"
+          class="faq-list faq-list--boxed"
           role="list"
           aria-label="Frequently Asked Questions"
         >
-          <dt>
-            <span aria-hidden="true">🏊‍♂️</span> Why is Koh Chang a great diving
-            destination in Thailand?
-          </dt>
+          <dt>What does diving and dive courses cost on Koh Chang?</dt>
+          <dd>
+            <p>
+              Prices depend on the activity: guided
+              <a href="/en/day-trips/fun-dives/">Fun Dives</a> start from
+              <strong>3,290 THB</strong>, a
+              <a href="/en/day-trips/try-dive/">Try Dive</a> from
+              <strong>4,890 THB</strong>, and the
+              <a href="/en/courses/open-water-diver/">Open Water Diver</a>
+              course from <strong>14,490 THB</strong>. Full current rates for
+              day trips, courses, specialties and tech are on our
+              <a href="/en/prices/">prices page</a>.
+            </p>
+            <p>
+              Related:
+              <a href="/en/faqs/faq-booking-payment-scuba-koh-chang/"
+                >Booking &amp; payment</a
+              >
+              ·
+              <a href="/en/faqs/faq-dive-courses-koh-chang/"
+                >Dive courses FAQ</a
+              >
+            </p>
+          </dd>
+
+          <dt>What are the prerequisites to learn diving?</dt>
+          <dd>
+            <p>
+              For a <a href="/en/day-trips/try-dive/">Try Dive</a> you need no
+              prior diving experience. To start an
+              <a href="/en/courses/open-water-diver/">Open Water</a> course you
+              should be comfortable in the water, able to swim, and fit enough
+              for light physical activity. Minimum age is usually
+              <strong>10 years</strong> for junior programmes (with parental
+              consent). We train in small groups with SDI, TDI and PADI.
+            </p>
+            <p>
+              Related:
+              <a href="/en/faqs/faq-dive-courses-koh-chang/">Course FAQ</a>
+              ·
+              <a href="/en/courses/beginner-courses/">Beginner courses</a>
+            </p>
+          </dd>
+
+          <dt>Do I need a medical dive certificate?</dt>
+          <dd>
+            <p>
+              In most cases you only complete a
+              <strong>medical questionnaire</strong>. A doctor’s certificate is
+              needed only if you answer “yes” to certain health questions or
+              have specific conditions. Details and the form are in our
+              <a href="/en/faqs/faq-diving-health-safety-thailand/"
+                >health &amp; safety FAQ</a
+              >.
+            </p>
+          </dd>
+
+          <dt>Where does the dive boat depart from?</dt>
+          <dd>
+            <p>
+              In high season the boat departs from
+              <strong>Klong Prao Beach</strong>, just steps from the dive
+              center. We can pick you up from your hotel, or you meet us at the
+              center around <strong>8:00 AM</strong> / at the beach departure
+              point around <strong>8:15 AM</strong>. A small transfer boat takes
+              you out to our dive boat offshore.
+            </p>
+            <p>
+              <a
+                href="https://maps.app.goo.gl/rm4HGMsGvREGKbuXA?g_st=ic"
+                target="_blank"
+                rel="noopener"
+                >➜ Boat departure map</a
+              >
+              ·
+              <a href="/en/faqs/faq-equipment-logistics-koh-chang/"
+                >Dive-day logistics</a
+              >
+            </p>
+          </dd>
+
+          <dt>Why is Koh Chang a great diving destination in Thailand?</dt>
           <dd>
             <p>
               Warm water, healthy reefs and a relaxed atmosphere make Koh Chang
-              ideal for divers of all levels.
+              ideal for divers of all levels – from first Try Dive to wreck and
+              technical training.
             </p>
             <p>
               <a
@@ -577,56 +717,36 @@
                 rel="noopener"
                 >➜ Discover Koh Chang diving</a
               >
-            </p>
-
-            <p>
-              Related FAQs:
-              <a
-                href="/en/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Safety Info</a
-              >
-              |
-              <a
-                href="/en/faqs/faq-try-dive-fun-dives-koh-chang/"
-                rel="noopener"
-                >➜ Try Diving</a
+              ·
+              <a href="/en/faqs/faq-try-dive-fun-dives-koh-chang/"
+                >Try Dive &amp; Fun Dives</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">📅</span> When is the best time to go
-            diving in Koh Chang?
-          </dt>
+          <dt>When is the best time to go diving in Koh Chang?</dt>
           <dd>
             <p>
-              The main season runs from October to May with calm seas and good
-              visibility.
+              The main season runs from <strong>October to May</strong> with
+              calmer seas and typically better visibility. Diving is possible
+              year-round; rainy months can mean fewer boats and more macro
+              opportunities.
             </p>
-
             <p>
-              Related FAQs:
-              <a href="/en/faqs/faq-general-questions-koh-chang/" rel="noopener"
-                >➜ Weather Info</a
-              >
-              |
-              <a
-                href="/en/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Safety Guidelines</a
+              <a href="/en/weather/">Live weather</a>
+              ·
+              <a href="/en/faqs/faq-general-questions-koh-chang/"
+                >General Koh Chang FAQ</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🌡️</span> What are the water temperatures
-            and visibility like?
-          </dt>
+          <dt>What are the water temperatures and visibility like?</dt>
           <dd>
             <p>
-              Expect water temperatures between 28°C and 30°C, with visibility
-              ranging from 10 to 20 meters.
+              Expect water temperatures around <strong>28–30°C</strong>, with
+              visibility commonly from about <strong>10 to 20 meters</strong>
+              (conditions vary with season and site).
             </p>
             <p>
               <a
@@ -635,103 +755,47 @@
                 rel="noopener"
                 >➜ Compare diving conditions</a
               >
-            </p>
-
-            <p>
-              Related FAQs:
-              <a
-                href="/en/faqs/faq-equipment-logistics-koh-chang/"
-                rel="noopener"
-                >➜ Equipment Needs</a
-              >
-              |
-              <a
-                href="/en/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Diving Conditions</a
+              ·
+              <a href="/en/faqs/faq-equipment-logistics-koh-chang/"
+                >Equipment &amp; conditions</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🚢</span> Are there any wrecks or special
-            dive sites in Koh Chang?
-          </dt>
+          <dt>Are there any wrecks or special dive sites in Koh Chang?</dt>
           <dd>
             <p>
-              Yes! The
-              <a
-                href="/en/dive-sites/htms-chang-wreck/"
-                target="_blank"
-                rel="noopener"
-                >➜ HTMS Chang wreck</a
-              >
-              is the largest in Thailand, plus stunning reefs like Hin Luk Bat.
+              Yes – the
+              <a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang wreck</a>
+              is Thailand’s largest wreck dive, plus reefs and pinnacles such as
+              Hin Luk Bat. Browse our
+              <a href="/en/dive-sites/">dive sites</a> and
+              <a href="/en/dive-sites/dive-site-map-koh-chang/">site map</a>.
             </p>
             <p>
               <a
                 href="/en/posts/scuba-knowledge/wreck-diving-koh-chang/"
                 target="_blank"
                 rel="noopener"
-                >➜ Learn about wreck diving</a
-              >
-              |
-              <a
-                href="/en/dive-sites/dive-site-map-koh-chang/"
-                target="_blank"
-                rel="noopener"
-                >➜ View dive site map</a
-              >
-            </p>
-
-            <p>
-              Related FAQs:
-              <a
-                href="/en/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Wreck Safety</a
-              >
-              |
-              <a
-                href="/en/faqs/faq-equipment-logistics-koh-chang/"
-                rel="noopener"
-                >➜ Dive Planning</a
+                >➜ Wreck diving guide</a
               >
             </p>
           </dd>
 
-          <dt>
-            <span aria-hidden="true">🐠</span> What marine life can I see while
-            diving in Koh Chang?
-          </dt>
+          <dt>What marine life can I see while diving in Koh Chang?</dt>
           <dd>
             <p>
-              You might spot <span aria-hidden="true">🐢</span> turtles, moray
-              eels, pufferfish, seahorses, nudibranchs, stingrays and even the
-              occasional <span aria-hidden="true">🐋</span> whale shark. Koh
-              Chang's marine biodiversity is stunning!
+              You might spot turtles, moray eels, pufferfish, seahorses,
+              nudibranchs, stingrays and occasionally whale sharks. Koh Chang’s
+              marine biodiversity is excellent for both beginners and
+              experienced divers.
             </p>
             <p>
               <a
                 href="/en/posts/marine-life-koh-chang/"
                 target="_blank"
                 rel="noopener"
-                >➜ Explore marine life guide</a
-              >
-            </p>
-
-            <p>
-              Related FAQs:
-              <a
-                href="/en/faqs/faq-diving-health-safety-thailand/"
-                rel="noopener"
-                >➜ Marine Life Safety</a
-              >
-              |
-              <a
-                href="/en/faqs/faq-try-dive-fun-dives-koh-chang/"
-                rel="noopener"
-                >➜ Best Sites for Sightings</a
+                >➜ Marine life guide</a
               >
             </p>
           </dd>
