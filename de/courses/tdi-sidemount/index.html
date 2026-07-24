@@ -328,6 +328,45 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar + submenu (tek-box) – critical for cache/preload */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -368,6 +407,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
     </noscript>
@@ -645,16 +685,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>TDI Sidemount-Taucher-Kurs Koh Chang – 2 Tage, ab 14.990 THB</h1>
-          <p>
-            Buchen Sie Ihren TDI Sidemount-Kurs auf Koh Chang ab 14.990 THB. 4
-            Freiwassertauchgänge über 2 Tage – meistern Sie
-            Doppelflaschen-Gasmanagement, technischen Trimm und unabhängige
-            Redundanz mit TDI-zertifizierten Instructors.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -669,24 +699,33 @@
         <a href="/de/faqs/">FAQ</a>
       </nav>
 
-      <div class="speciality-box">
+      <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Sidemount-Taucher-Kurs Koh Chang – 2 Tage, ab 14.990 THB
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Buchen Sie Ihren TDI Sidemount-Kurs auf Koh Chang ab 14.990 THB. 4
+          Freiwassertauchgänge über 2 Tage – meistern Sie
+          Doppelflaschen-Gasmanagement, technischen Trimm und unabhängige
+          Redundanz mit TDI-zertifizierten Instructors.
+        </p>
+
         <nav class="page-jump-nav" aria-label="Auf dieser Seite">
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
-            <a href="#kursübersicht">Einleitung</a>
-            <a href="#wer-kann-teilnehmen">Wer kann teilnehmen?</a>
-            <a href="#was-ist-enthalten">Was ist enthalten</a>
-            <a href="#tdi-sidemount-pakete">Preise &amp; buchen</a>
+            <a href="#intro">Intro</a>
+            <a href="#who-can-join">Wer kann mit?</a>
+            <a href="#whats-included">Was ist inklusive</a>
+            <a href="#tdi-sidemount-packages">Preise &amp; buchen</a>
           </div>
         </nav>
-        <hr />
 
-        <h2 id="kursübersicht" style="color: var(--accent-color)">
+        <h2 id="intro" style="color: var(--accent-color)">
           TDI Sidemount-Taucher-Kurs Koh Chang – Technisches
           Doppelflaschen-Tauchen
         </h2>
-
         <!-- Intro -->
         <p>
           Der <strong>TDI Sidemount-Taucher-Kurs</strong> vermittelt
@@ -849,7 +888,7 @@
         <hr />
 
         <!-- Kursvoraussetzungen -->
-        <h2 id="wer-kann-teilnehmen">Voraussetzungen</h2>
+        <h2 id="who-can-join">Voraussetzungen</h2>
         <ul>
           <li><strong>Mindestalter:</strong> 18 Jahre</li>
           <li>
@@ -880,9 +919,7 @@
         <hr />
 
         <!-- Was ist enthalten -->
-        <h2 id="was-ist-enthalten" class="headline-green">
-          Was ist enthalten?
-        </h2>
+        <h2 id="whats-included" class="headline-green">Was ist enthalten?</h2>
         <ul>
           <li>2-tägiger TDI Sidemount Diver Kurs</li>
           <li>4 Freiwassertauchgänge vom Boot</li>
@@ -1021,9 +1058,9 @@
         </div>
         <hr />
         <!-- CTA für TDI Sidemount Kurs -->
-        <h3 id="tdi-sidemount-pakete" style="margin-top: 0">
+        <h2 id="tdi-sidemount-packages" style="margin-top: 0">
           Bereit für technisches Sidemount-Tauchen?
-        </h3>
+        </h2>
         <p>
           Der TDI Sidemount-Kurs ist für Taucher gedacht, die mehr wollen als
           nur eine Ausrüstungs-Konfiguration – er ist der Einstieg in
@@ -1131,7 +1168,12 @@
           href="mailto:info@changdiving.com?subject=Buchungsanfrage%20%E2%80%93%20TDI%20Sidemount%20Taucher%20Kurs&body=Hallo%20Chang%20Diving%20Team%2C%0A%0A%F0%9F%94%B9%20Bevorzugtes%20Startdatum%3A%0AKurs-Startdatum%3A%0A%0A%E2%9C%85%20Bitte%20w%C3%A4hlen%20%28zwei%20l%C3%B6schen%29%3A%0A%E2%80%A2%20TDI%20Sidemount%20Diver%20%E2%80%93%2014.990%20THB%20%284%20Tauchg%C3%A4nge%2C%202%20Tage%29%0A%E2%80%A2%20TDI%20Sidemount%20%2B%20TDI%20Advanced%20Nitrox%20%E2%80%93%2023.990%20THB%20%284%20Tauchg%C3%A4nge%2C%202%20TDI-Zertifizierungen%29%0A%E2%80%A2%20TDI%20Sidemount%20%2B%20SDI%20Solo%20Diver%20%E2%80%93%2021.990%20THB%20%284%20Tauchg%C3%A4nge%2C%202%20Zertifizierungen%29%0A%0A%F0%9F%91%8B%20Pers%C3%B6nliche%20Informationen%3A%0A%E2%80%A2%20Name%20%28auf%20Englisch%29%3A%0A%E2%80%A2%20Geburtsdatum%3A%0A%E2%80%A2%20Zertifizierungsstufe%3A%0A%E2%80%A2%20Foto%20des%20Tauchscheins%3A%0A%E2%80%A2%20Anzahl%20Tauchg%C3%A4nge%20gesamt%3A%0A%E2%80%A2%20Letzter%20Tauchgang%3A%0A%0A%F0%9F%A5%97%20Di%C3%A4t-Informationen%3A%0A%E2%80%A2%20Vegetarisch%20%28Ja%2FNein%29%3A%0A%E2%80%A2%20Lebensmittelallergien%3A%0A%0A%F0%9F%93%9E%20Kontaktdaten%3A%0A%E2%80%A2%20Telefonnummer%3A%0A%E2%80%A2%20E-Mail%3A%0A%E2%80%A2%20Hotelname%3A%0A%0AVielen%20Dank%21"
           style="
             display: inline-block;
-            background-color: #2196f3;
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             color: white;
             padding: 14px 28px;
             text-decoration: none;

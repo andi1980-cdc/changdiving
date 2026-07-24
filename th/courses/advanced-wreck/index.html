@@ -291,6 +291,45 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar + submenu (tek-box) – critical for cache/preload */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -331,6 +370,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
@@ -593,17 +633,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            TDI Advanced Wreck Diver – เชี่ยวชาญการดำน้ำสิ่งกีดขวางเหนือศีรษะ
-          </h1>
-          <p>
-            ฝึกการเข้าเรือจมแบบเต็มรูปแบบด้วยคอร์ส TDI Advanced Wreck Diver
-            เรียนรู้การใช้สายนำทาง การวางแผนแก๊ส ขั้นตอนฉุกเฉิน
-            และเทคนิคเรือจมขั้นสูง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -617,27 +646,30 @@
         <a href="/th/faqs/">คำถามที่พบบ่อย</a>
       </nav>
 
-      <div class="speciality-box">
+      <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
-        <nav class="page-jump-nav" aria-label="บนหน้านี้">
-          <span class="page-jump-nav__label">บนหน้านี้</span>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Advanced Wreck Diver – เชี่ยวชาญการดำน้ำสิ่งกีดขวางเหนือศีรษะ
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ฝึกการเข้าเรือจมแบบเต็มรูปแบบด้วยคอร์ส TDI Advanced Wreck Diver
+          เรียนรู้การใช้สายนำทาง การวางแผนแก๊ส ขั้นตอนฉุกเฉิน
+          และเทคนิคเรือจมขั้นสูง
+        </p>
+
+        <nav class="page-jump-nav" aria-label="ในหน้านี้">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
           <div class="page-jump-nav__links">
-            <a href="#course-overview">ภาพรวมคอร์ส</a>
-            <a href="#whats-included">รวมอะไรบ้าง</a>
-            <a href="#what-can-you-discover">ค้นพบ</a>
-            <a href="#advanced-wreck-packages">ราคา &amp; จอง</a>
+            <a href="#intro">บทนำ</a>
+            <a href="#who-can-join">ใครเข้าร่วมได้?</a>
+            <a href="#whats-included">สิ่งที่รวมอยู่</a>
+            <a href="#advanced-wreck-packages">ราคาและจอง</a>
           </div>
         </nav>
-        <hr />
-
-        <h2>
-          TDI Advanced Wreck Diver – เชี่ยวชาญการดำน้ำสิ่งกีดขวางเหนือศีรษะ
-        </h2>
 
         <!-- Course Overview -->
-        <h2 id="course-overview" style="color: var(--highlight-color)">
-          ภาพรวมคอร์ส
-        </h2>
+        <h2 id="intro" style="color: var(--highlight-color)">ภาพรวมคอร์ส</h2>
         <p>
           คอร์สนี้ออกแบบสำหรับนักดำน้ำที่ต้องการเข้าเรือจมอย่างปลอดภัยในสภาพแวดล้อมสิ่งกีดขวางเหนือศีรษะ
           คุณจะเรียนรู้การใช้สายนำทางอย่างถูกต้อง เทคนิคการขับเคลื่อน
@@ -686,7 +718,7 @@
         <hr />
 
         <!-- Note for Technical + Recreational Divers -->
-        <h2 style="color: var(--highlight-color)">
+        <h2 id="who-can-join" style="color: var(--highlight-color)">
           เพื่อการพักผ่อนหรือเทคนิค – คอร์สนี้เหมาะสำหรับคุณ
         </h2>
         <p>
@@ -982,9 +1014,9 @@
         <hr />
 
         <!-- CTA for Advanced Wreck Course -->
-        <h3 id="advanced-wreck-packages" style="margin-top: 0">
+        <h2 id="advanced-wreck-packages" style="margin-top: 0">
           พร้อมสำหรับโซนเรือจมแล้วหรือ?
-        </h3>
+        </h2>
         <p>
           คอร์สนี้ให้ทักษะและความมั่นใจในการเข้าเรือจมแบบเต็มรูปแบบ —
           ด้วยการตั้งค่าที่เหมาะกับสไตล์การดำน้ำของคุณ
@@ -1084,9 +1116,9 @@
             display: inline-block;
             background: linear-gradient(
               135deg,
-              #1a1a1a 0%,
-              #333333 50%,
-              #ff6b35 100%
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
             );
             color: white;
             padding: 14px 28px;

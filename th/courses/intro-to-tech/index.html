@@ -342,6 +342,47 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar (Adv-Wreck CTA gradient) – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -382,6 +423,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
@@ -630,14 +672,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>TDI Intro to Tech Course – เริ่มต้นการดำน้ำเทคนิค</h1>
-          <p>
-            เรียนรู้การตั้งค่า sidemount/twinset การควบคุมลอยตัว trim
-            และการวางแผนแก๊ส
-          </p>
-        </div>
       </div>
     </header>
 
@@ -654,18 +688,24 @@
 
       <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
-        <nav class="page-jump-nav" aria-label="บนหน้านี้">
-          <span class="page-jump-nav__label">บนหน้านี้</span>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Intro to Tech Course – เริ่มต้นการดำน้ำเทคนิค
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เรียนรู้การตั้งค่า sidemount/twinset การควบคุมลอยตัว trim
+          และการวางแผนแก๊ส
+        </p>
+
+        <nav class="page-jump-nav" aria-label="ในหน้านี้">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
           <div class="page-jump-nav__links">
-            <a href="#course-overview">ภาพรวมคอร์ส</a>
-            <a href="#whats-included">รวมอะไรบ้าง</a>
-            <a href="#what-can-you-discover">ค้นพบ</a>
-            <a href="#intro-to-tech-packages">ราคา &amp; จอง</a>
+            <a href="#intro">บทนำ</a>
+            <a href="#who-can-join">ใครเข้าร่วมได้?</a>
+            <a href="#whats-included">สิ่งที่รวมอยู่</a>
+            <a href="#intro-to-tech-packages">ราคาและจอง</a>
           </div>
         </nav>
-        <hr />
-
-        <h2>TDI Intro to Tech Course – เริ่มต้นการดำน้ำเทคนิค</h2>
 
         <!-- Video Section -->
         <div style="margin: 40px auto; max-width: 1200px; padding: 0 20px">
@@ -700,7 +740,7 @@
         <hr />
 
         <!-- Intro -->
-        <h2 id="course-overview">ภาพรวมคอร์ส</h2>
+        <h2 id="intro">ภาพรวมคอร์ส</h2>
         <p>
           คอร์สนี้แนะนำนักดำน้ำเพื่อการพักผ่อนเข้าสู่โลกของการดำน้ำเทคนิค
           คุณจะดำน้ำด้วยการกำหนดค่า sidemount หรือ twinset
@@ -725,7 +765,7 @@
         <hr />
 
         <!-- Requirements -->
-        <h2>ข้อกำหนด</h2>
+        <h2 id="who-can-join">ข้อกำหนด</h2>
         <ul>
           <li><strong>องค์กร:</strong> TDI Certification</li>
           <li>
@@ -876,9 +916,9 @@
         </div>
         <hr />
         <!-- CTA for Navigation Specialty Course -->
-        <h3 id="intro-to-tech-packages" style="margin-top: 0">
+        <h2 id="intro-to-tech-packages" style="margin-top: 0">
           พร้อมที่จะเป็นนักดำน้ำเทคนิคแล้วหรือยัง?
-        </h3>
+        </h2>
         <p>
           Intro to Tech เป็นจุดเริ่มต้นของคุณในระบบ TDI
           ปรับปรุงความแม่นยำการดำน้ำของคุณและเตรียมพร้อมสำหรับโปรแกรมเทคนิคขั้นสูง
@@ -922,7 +962,12 @@
           href="mailto:info@changdiving.com?subject=คำขอการจอง%20–%20TDI%20Intro%20to%20Tech%20Course&body=สวัสดีทีม%20Chang%20Diving%2C%0A%0Aฉันต้องการจอง%20TDI%20Intro%20to%20Tech%20Course%0A%0A👋%20ข้อมูลส่วนตัว%3A%0A•%20ชื่อ%20%2F%20Name%20(ภาษาอังกฤษ)%3A%0A•%20วันเกิด%20%2F%20Date%20of%20Birth%20(อายุขั้นต่ำ%2015)%3A%0A•%20ระดับการรับรองใบอนุญาต%20%2F%20Certification%20Level%20(ขั้นต่ำ%20Open%20Water)%3A%0A•%20รูปถ่ายบัตรการรับรองการดำน้ำ%20(จำเป็น)%3A%0A•%20จำนวนไดฟ์ทั้งหมด%20%2F%20Total%20Dives%20(ขั้นต่ำ%2025%20ครั้ง)%3A%0A•%20วันที่ดำน้ำล่าสุด%20%2F%20Last%20Dive%20Date%3A%0A%0A🤿%20ความชอบการกำหนดค่าการดำน้ำเทคนิค%3A%0A•%20Sidemount%20%2F%20ไซด์เมาท์%20(ใช่%2Fไม่ใช่)%3A%0A•%20Twinset%20%2F%20ทวินเซท%20(ใช่%2Fไม่ใช่)%3A%0A•%20ประสบการณ์เทคก่อนหน้า%20%2F%20Previous%20Tech%20Experience%3A%0A%0A🥗%20ข้อมูลอาหาร%3A%0A•%20มังสวิรัติ%20%2F%20Vegetarian%20(ใช่%2Fไม่ใช่)%3A%0A•%20แพ้อาหาร%20%2F%20Food%20Allergies%3A%0A%0A📞%20ข้อมูลการติดต่อ%3A%0A•%20หมายเลขโทรศัพท์%20%2F%20Phone%20Number%3A%0A•%20อีเมล%20%2F%20Email%3A%0A•%20ชื่อโรงแรม%20%2F%20Hotel%20Name%3A%0A%0A🔧%20ข้อกำหนดอุปกรณ์%3A%0A•%20BCD%20%2F%20บีซีดี%3A%0A•%20ชุดดำน้ำ%20%2F%20Wetsuit%3A%0A•%20หน้ากาก%20%2F%20Mask%3A%0A•%20ครีบ%20%2F%20Fins%3A%0A•%20เรกกูเลเตอร์%20%2F%20Regulator%3A%0A%0A📚%20หมายเหตุ%3A%0A•%20TDI%20eLearning%20ออนไลน์จะจัดให้%0A•%20สระว่ายน้ำในวันที่%201%0A•%203%20การดำน้ำในน้ำเปิด%20(ความลึกสูงสุด%2023%20เมตร)%0A%0Aขอบคุณ!"
           style="
             display: inline-block;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             color: white;
             padding: 14px 28px;
             text-decoration: none;

@@ -764,6 +764,9 @@ button:focus {
 .posts-submenu a:hover {
   opacity: 0.85;
 }
+main:has(> .tek-box) > .posts-submenu a {
+  background: linear-gradient(135deg, #3a3a3a 0%, #5a5a5a 45%, #ff8a5c 100%);
+}
 .page-jump-nav {
   margin: 0 0 6px;
   padding: 6px 8px 4px;
@@ -782,6 +785,23 @@ button:focus {
 }
 .speciality-box .page-jump-nav__label {
   color: #5a6e52;
+}
+.tek-box .page-jump-nav {
+  margin: -2px 0 10px;
+  padding: 10px 12px 8px;
+  background: linear-gradient(135deg, #3a3a3a 0%, #5a5a5a 45%, #ff8a5c 100%);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 138, 92, 0.5);
+  border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+}
+.tek-box .page-jump-nav__label {
+  color: rgba(255, 255, 255, 0.78);
+}
+.tek-box .page-jump-nav__links {
+  scrollbar-color: rgba(255, 255, 255, 0.35) transparent;
+}
+.tek-box .page-jump-nav__links::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
 }
 .posts-box .page-jump-nav {
   margin: 0 0 2px;
@@ -847,7 +867,9 @@ button:focus {
 .posts-box .page-jump-nav__links a,
 .posts-box .page-jump-nav__links a:visited,
 .speciality-box .page-jump-nav__links a,
-.speciality-box .page-jump-nav__links a:visited {
+.speciality-box .page-jump-nav__links a:visited,
+.tek-box .page-jump-nav__links a,
+.tek-box .page-jump-nav__links a:visited {
   flex-shrink: 0;
   display: inline-block;
   padding: 2px 0;
@@ -861,6 +883,10 @@ button:focus {
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
+}
+.tek-box .page-jump-nav__links a,
+.tek-box .page-jump-nav__links a:visited {
+  color: #fff;
 }
 .posts-box .page-jump-nav__links a,
 .posts-box .page-jump-nav__links a:visited {
@@ -886,11 +912,20 @@ button:focus {
   font-size: 0.95em;
   color: #b8c5cc;
 }
+.tek-box .page-jump-nav__links a + a::before {
+  color: rgba(255, 255, 255, 0.45);
+}
 .changdiving-box .page-jump-nav__links a:hover,
 .posts-box .page-jump-nav__links a:hover,
 .speciality-box .page-jump-nav__links a:hover {
   color: #0077b6;
   border-bottom-color: rgba(0, 119, 182, 0.35);
+  text-decoration: none;
+  opacity: 1;
+}
+.tek-box .page-jump-nav__links a:hover {
+  color: #ffd2c0;
+  border-bottom-color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
   opacity: 1;
 }
@@ -901,12 +936,19 @@ button:focus {
   outline-offset: 3px;
   border-radius: 2px;
 }
+.tek-box .page-jump-nav__links a:focus-visible {
+  outline: 2px solid rgba(255, 210, 192, 0.7);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 .changdiving-box h2[id],
 .changdiving-box h3[id],
 .posts-box h2[id],
 .posts-box h3[id],
 .speciality-box h2[id],
 .speciality-box h3[id],
+.tek-box h2[id],
+.tek-box h3[id],
 .changdiving-box #book-fun-dives,
 .changdiving-box #book-try-dive,
 .changdiving-box #book-open-water,

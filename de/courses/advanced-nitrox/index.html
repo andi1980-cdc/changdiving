@@ -341,6 +341,47 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar (Adv-Wreck CTA gradient) – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -381,6 +422,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
@@ -631,14 +673,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>TDI Advanced Nitrox Kurs – Maximieren Sie Ihre Tauchzeit</h1>
-          <p>
-            Meistern Sie den TDI Advanced Nitrox Kurs bei Chang Diving Koh
-            Chang. Lernen Sie EAN 21-100% Sauerstoff für erweiterte Grundzeit.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -655,20 +689,24 @@
 
       <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Advanced Nitrox Kurs – Maximieren Sie Ihre Tauchzeit
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Meistern Sie den TDI Advanced Nitrox Kurs bei Chang Diving Koh Chang.
+          Lernen Sie EAN 21-100% Sauerstoff für erweiterte Grundzeit.
+        </p>
+
         <nav class="page-jump-nav" aria-label="Auf dieser Seite">
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
-            <a href="#course-overview">Kursübersicht</a>
-            <a href="#whats-included">Was ist dabei</a>
-            <a href="#what-can-you-discover">Entdecken</a>
-            <a href="#advanced-nitrox-packages">Preise &amp; Buchen</a>
+            <a href="#intro">Intro</a>
+            <a href="#who-can-join">Wer kann mit?</a>
+            <a href="#whats-included">Was ist inklusive</a>
+            <a href="#advanced-nitrox-packages">Preise &amp; buchen</a>
           </div>
         </nav>
-        <hr />
-
-        <h2 style="color: var(--accent-color)">
-          TDI Advanced Nitrox Kurs – Maximieren Sie Ihre Tauchzeit
-        </h2>
 
         <!-- Video Section -->
         <div style="margin: 40px auto; max-width: 1200px; padding: 0 20px">
@@ -703,7 +741,7 @@
         <hr />
 
         <!-- Intro -->
-        <h2 id="course-overview" style="color: var(--highlight-color)">
+        <h2 id="intro" style="color: var(--highlight-color)">
           Warum Advanced Nitrox?
         </h2>
         <p>
@@ -741,7 +779,7 @@
         <hr />
 
         <!-- Kursanforderungen -->
-        <h2>Kursanforderungen</h2>
+        <h2 id="who-can-join">Kursanforderungen</h2>
         <ul>
           <li>
             <strong>Agentur:</strong> TDI (Technical Diving International)
@@ -920,9 +958,9 @@
         <hr />
 
         <!-- CTA für High-Performance Nitrox -->
-        <h3 id="advanced-nitrox-packages" style="margin-top: 0">
+        <h2 id="advanced-nitrox-packages" style="margin-top: 0">
           Bereit für High-Performance Nitrox?
-        </h3>
+        </h2>
         <p>
           Lernen Sie sicher mit hochprozentigen Sauerstoffmischungen zu tauchen
           und bereiten Sie sich auf zukünftige Dekompressionskurse vor. Der
@@ -987,7 +1025,12 @@
           href="mailto:info@changdiving.com?subject=Buchungsanfrage%20–%20TDI%20Advanced%20Nitrox%20Kurs&body=Hallo%20Chang%20Diving%20Team%2C%0A%0A🔹%20Gewünschtes%20Startdatum:%0AKursstart:%0AIch%20möchte%20den%20TDI%20Advanced%20Nitrox%20Kurs%20buchen.%0A%0A✅%20Bitte%20wählen%20(Nichtzutreffendes%20streichen)%3A%0A•%20Einzelkurs%3A%20TDI%20Advanced%20Nitrox%20(EAN%2021-100%25%20O2)%20-%2014.990%20THB%0A•%20Paket%3A%20TDI%20Decompression%20Procedures%20%2B%20TDI%20Advanced%20Nitrox%20-%2033.990%20THB%0A%0A🎁%20Gruppenangebot%3A%20Zusätzliche%205%25%20Rabatt%2C%20wenn%20mindestens%202%20Personen%20den%20gleichen%20Kurs%20gemeinsam%20buchen.%0A%0A👋%20Persönliche%20Informationen%3A%0A•%20Name%20%2F%20ชื่อ-นามสกุล%20(auf%20Englisch)%3A%0A•%20Geburtsdatum%20%2F%20วันเกิด%3A%0A•%20Zertifizierungsgrad%20%2F%20ระดับ%3A%0A•%20Foto%20der%20Tauchzertifizierung%20(falls%20verfügbar)%3A%0A•%20Gesamte%20Tauchgänge%20%2F%20จำนวนไดฟ์%3A%0A•%20Letzter%20Tauchgang%20%2F%20ไดฟ์ล่าสุด%3A%0A%0A🥗%20Diätinformationen%3A%0A•%20Vegetarisch%20%2F%20กินเจ%20(Ja%2FNein)%3A%0A•%20Nahrungsmittelallergien%20%2F%20แพ้อาหาร%3A%0A%0A📞%20Kontaktinfo%3A%0A•%20Telefonnummer%20%2F%20เบอร์โทร%3A%0A•%20E-Mail%20%2F%20อีเมล์%3A%0A•%20Hotelname%20%2F%20ชื่อที่พัก%3A%0A%0A🔧%20Ausrüstungsanforderungen%3A%0A•%20BCD%20%2F%20บีซีดี%3A%0A•%20Neoprenanzug%20%2F%20เวทสูท%3A%0A•%20Maske%20%2F%20หน้ากาก%3A%0A•%20Flossen%20%2F%20ตีนกบ%3A%0A•%20Atemregler%20%2F%20เรกกูเลเตอร์%3A%0A%0AVielen%20Dank!"
           style="
             display: inline-block;
-            background-color: #2196f3;
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             color: white;
             padding: 14px 28px;
             text-decoration: none;

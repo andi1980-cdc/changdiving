@@ -342,6 +342,47 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar (Adv-Wreck CTA gradient) – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -382,6 +423,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
@@ -627,14 +669,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>TDI Intro to Tech Kurs – Einstieg ins technische Tauchen</h1>
-          <p>
-            Meistere Sidemount/Twinset-Konfiguration, Tarierung, Trimm und
-            Gasplanung
-          </p>
-        </div>
       </div>
     </header>
 
@@ -651,18 +685,24 @@
 
       <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Intro to Tech Kurs – Einstieg ins technische Tauchen
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Meistere Sidemount/Twinset-Konfiguration, Tarierung, Trimm und
+          Gasplanung
+        </p>
+
         <nav class="page-jump-nav" aria-label="Auf dieser Seite">
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
-            <a href="#course-overview">Kursübersicht</a>
-            <a href="#whats-included">Was ist dabei</a>
-            <a href="#what-can-you-discover">Entdecken</a>
-            <a href="#intro-to-tech-packages">Preise &amp; Buchen</a>
+            <a href="#intro">Intro</a>
+            <a href="#who-can-join">Wer kann mit?</a>
+            <a href="#whats-included">Was ist inklusive</a>
+            <a href="#intro-to-tech-packages">Preise &amp; buchen</a>
           </div>
         </nav>
-        <hr />
-
-        <h2>TDI Intro to Tech Kurs – Einstieg ins technische Tauchen</h2>
 
         <!-- Video Section -->
         <div style="margin: 40px auto; max-width: 1200px; padding: 0 20px">
@@ -697,7 +737,7 @@
         <hr />
 
         <!-- Intro -->
-        <h2 id="course-overview">Kursübersicht</h2>
+        <h2 id="intro">Kursübersicht</h2>
         <p>
           Dieser Kurs führt Sporttaucher in die Welt des technischen Tauchens
           ein. Du tauchst mit Sidemount- oder Twinset-Konfiguration, verbesserst
@@ -722,7 +762,7 @@
         <hr />
 
         <!-- Requirements -->
-        <h2>Voraussetzungen</h2>
+        <h2 id="who-can-join">Voraussetzungen</h2>
         <ul>
           <li><strong>Organisation:</strong> TDI Zertifizierung</li>
           <li>
@@ -879,9 +919,9 @@
         </div>
         <hr />
         <!-- CTA for Navigation Specialty Course -->
-        <h3 id="intro-to-tech-packages" style="margin-top: 0">
+        <h2 id="intro-to-tech-packages" style="margin-top: 0">
           Bereit, ein Tech-Taucher zu werden?
-        </h3>
+        </h2>
         <p>
           Intro to Tech ist dein Einstieg in das TDI-System. Verbessere deine
           Tauchpräzision und bereite dich auf fortgeschrittene technische
@@ -923,7 +963,12 @@
           href="mailto:info@changdiving.com?subject=Buchungsanfrage%20–%20TDI%20Intro%20to%20Tech%20Kurs&body=Hallo%20Chang%20Diving%20Team%2C%0A%0A🔹%20Gewünschtes%20Startdatum:%0AKursstart:%0AIch%20möchte%20den%20TDI%20Intro%20to%20Tech%20Kurs%20buchen.%0A%0A👋%20Persönliche%20Informationen%3A%0A•%20Name%20(auf%20Englisch)%3A%0A•%20Geburtsdatum%20(Mindestalter%2015)%3A%0A•%20Zertifizierungslevel%20(mindestens%20Open%20Water)%3A%0A•%20Foto%20des%20Tauchzertifikats%20(erforderlich)%3A%0A•%20Anzahl%20Tauchgänge%20(mindestens%2025)%3A%0A•%20Letzter%20Tauchgang%3A%0A%0A🤿%20Technische%20Tauchkonfiguration%20Präferenz%3A%0A•%20Sidemount%20(Ja%2FNein)%3A%0A•%20Twinset%20(Ja%2FNein)%3A%0A•%20Vorherige%20Tech-Erfahrung%3A%0A%0A🥗%20Ernährungsinformationen%3A%0A•%20Vegetarisch%20(Ja%2FNein)%3A%0A•%20Lebensmittelallergien%3A%0A%0A📞%20Kontaktdaten%3A%0A•%20Telefonnummer%3A%0A•%20E-Mail%3A%0A•%20Hotelname%3A%0A%0A🔧%20Ausrüstungsanforderungen%3A%0A•%20BCD%3A%0A•%20Neoprenanzug%3A%0A•%20Maske%3A%0A•%20Flossen%3A%0A•%20Atemregler%3A%0A%0A📚%20Hinweise%3A%0A•%20Online%20TDI%20eLearning%20wird%20bereitgestellt%0A•%20Pool-Session / begrenztes Freiwasser%20am%20Tag%201%0A•%203%20Freiwasser-Tauchgänge%20(max%20Tiefe%2023m)%0A%0AVielen%20Dank!"
           style="
             display: inline-block;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             color: white;
             padding: 14px 28px;
             text-decoration: none;

@@ -342,6 +342,45 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar + submenu (tek-box) – critical for cache/preload */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -382,6 +421,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
     </noscript>
@@ -643,18 +683,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            TDI Sidemount Diver Course Koh Chang – 2 Days, from 14,990 THB
-          </h1>
-          <p>
-            Book your TDI Sidemount Diver Course in Koh Chang from 14,990 THB. 4
-            open water dives over 2 days — master dual-cylinder gas management,
-            advanced trim, and technical redundancy with TDI-certified
-            instructors.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -669,23 +697,32 @@
         <a href="/en/faqs/">FAQ's</a>
       </nav>
 
-      <div class="speciality-box">
+      <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Sidemount Diver Course Koh Chang – 2 Days, from 14,990 THB
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Book your TDI Sidemount Diver Course in Koh Chang from 14,990 THB. 4
+          open water dives over 2 days — master dual-cylinder gas management,
+          advanced trim, and technical redundancy with TDI-certified
+          instructors.
+        </p>
+
         <nav class="page-jump-nav" aria-label="On this page">
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
-            <a href="#course-overview">Intro</a>
+            <a href="#intro">Intro</a>
             <a href="#who-can-join">Who can join?</a>
-            <a href="#whats-included">What&#39;s included</a>
+            <a href="#whats-included">What's included</a>
             <a href="#tdi-sidemount-packages">Prices &amp; book</a>
           </div>
         </nav>
-        <hr />
 
-        <h2 id="course-overview" style="color: var(--accent-color)">
+        <h2 id="intro" style="color: var(--accent-color)">
           TDI Sidemount Diver Course Koh Chang – Technical Dual-Cylinder Diving
         </h2>
-
         <!-- Intro -->
         <p>
           The <strong>TDI Sidemount Diver Course</strong> is designed to teach
@@ -1010,9 +1047,9 @@
         </div>
         <hr />
         <!-- CTA for TDI Sidemount Course -->
-        <h3 id="tdi-sidemount-packages" style="margin-top: 0">
+        <h2 id="tdi-sidemount-packages" style="margin-top: 0">
           Ready to Go Technical with Sidemount?
-        </h3>
+        </h2>
         <p>
           The TDI Sidemount course is for divers who want more than a gear setup
           — it&#39;s a gateway to independent cylinder management, wreck
@@ -1112,7 +1149,12 @@
           href="mailto:info@changdiving.com?subject=Booking%20Request%20%E2%80%93%20TDI%20Sidemount%20Diver%20Course&body=Hello%20Chang%20Diving%20Team%2C%0A%0A%F0%9F%94%B9%20Preferred%20Start%20Date%3A%0ACourse%20Start%20Date%3A%0A%0A%E2%9C%85%20Please%20choose%20%28delete%20two%29%3A%0A%E2%80%A2%20TDI%20Sidemount%20Diver%20%E2%80%93%2014%2C990%20THB%20%284%20dives%2C%202%20days%29%0A%E2%80%A2%20TDI%20Sidemount%20%2B%20TDI%20Advanced%20Nitrox%20%E2%80%93%2023%2C990%20THB%20%284%20dives%20combined%2C%202%20days%29%0A%E2%80%A2%20TDI%20Sidemount%20%2B%20SDI%20Solo%20Diver%20%E2%80%93%2021%2C990%20THB%20%284%20dives%2C%202%20certifications%29%0A%0A%F0%9F%91%8B%20Personal%20Information%3A%0A%E2%80%A2%20Name%20%28in%20English%29%3A%0A%E2%80%A2%20Date%20of%20Birth%3A%0A%E2%80%A2%20Certification%20Level%3A%0A%E2%80%A2%20Photo%20of%20Dive%20Certification%20Card%3A%0A%E2%80%A2%20Total%20Dives%3A%0A%E2%80%A2%20Last%20Dive%20Date%3A%0A%0A%F0%9F%A5%97%20Dietary%20Information%3A%0A%E2%80%A2%20Vegetarian%20%28Yes%2FNo%29%3A%0A%E2%80%A2%20Food%20Allergies%3A%0A%0A%F0%9F%93%9E%20Contact%20Info%3A%0A%E2%80%A2%20Phone%20Number%3A%0A%E2%80%A2%20Email%3A%0A%E2%80%A2%20Hotel%20Name%3A%0A%0AThank%20you%21"
           style="
             display: inline-block;
-            background-color: #2196f3;
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             color: white;
             padding: 14px 28px;
             text-decoration: none;

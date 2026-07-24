@@ -341,6 +341,45 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      /* Tech jump bar + submenu (tek-box) – critical for cache/preload */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -381,6 +420,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link rel="stylesheet" href="/style.min.css" />
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
@@ -653,15 +693,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>TDI Advanced Wreck Diver – Master Overhead Diving</h1>
-          <p>
-            Train in full wreck penetration diving with the TDI Advanced Wreck
-            Diver Course. Learn guideline use, gas planning, emergency
-            procedures and advanced wreck techniques.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -676,23 +707,30 @@
         <a href="/en/faqs/">FAQ's</a>
       </nav>
 
-      <div class="speciality-box">
+      <div class="tek-box">
         <nav id="breadcrumb" class="breadcrumb"></nav>
+
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          TDI Advanced Wreck Diver – Master Overhead Diving
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Train in full wreck penetration diving with the TDI Advanced Wreck
+          Diver Course. Learn guideline use, gas planning, emergency procedures
+          and advanced wreck techniques.
+        </p>
+
         <nav class="page-jump-nav" aria-label="On this page">
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
-            <a href="#course-overview">Course Overview</a>
+            <a href="#intro">Intro</a>
+            <a href="#who-can-join">Who can join?</a>
             <a href="#whats-included">What's included</a>
-            <a href="#what-can-you-discover">Discover</a>
             <a href="#advanced-wreck-packages">Prices &amp; book</a>
           </div>
         </nav>
-        <hr />
-
-        <h2>TDI Advanced Wreck Diver – Master Overhead Diving</h2>
 
         <!-- Course Intro -->
-        <h2 id="course-overview" style="color: var(--highlight-color)">
+        <h2 id="intro" style="color: var(--highlight-color)">
           Course Overview
         </h2>
         <p>
@@ -742,7 +780,7 @@
         <hr />
 
         <!-- Callout for Technical + Recreational Divers -->
-        <h2 style="color: var(--highlight-color)">
+        <h2 id="who-can-join" style="color: var(--highlight-color)">
           Recreational or Technical – This Course is for You
         </h2>
         <p>
@@ -1041,9 +1079,9 @@
         </div>
         <hr />
         <!-- CTA for Navigation Specialty Course -->
-        <h3 id="advanced-wreck-packages" style="margin-top: 0">
+        <h2 id="advanced-wreck-packages" style="margin-top: 0">
           Are You Ready for the Wreck Zone?
-        </h3>
+        </h2>
         <p>
           This course gives you the skills and confidence to perform full wreck
           penetration – with a setup that matches your dive style, whether
@@ -1151,9 +1189,9 @@
             display: inline-block;
             background: linear-gradient(
               135deg,
-              #1a1a1a 0%,
-              #333333 50%,
-              #ff6b35 100%
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
             );
             color: white;
             padding: 14px 28px;
