@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -485,14 +491,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ชีวิตใต้ทะเลเกาะช้าง – คุณจะพบอะไรขณะดำน้ำ?</h1>
-          <p>
-            สำรวจโลมา ฉลามวาฬ แนวปะการังหลากสี
-            และสัตว์น้ำหายากกับช้างไดร์วิ่งที่เกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,22 +507,25 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           ชีวิตใต้ทะเลเกาะช้าง – คุณจะพบอะไรขณะดำน้ำ?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ค้นพบโลมา ฉลามวาฬ แนวปะการังสีสันสดใส และสิ่งมีชีวิตหายากขณะดำน้ำกับ Chang Diving ที่เกาะช้าง
+        </p>
+
+        <nav class="page-jump-nav" aria-label="ในหน้านี้" style="border-bottom: 1px solid #ccc">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#marine-mammals">สัตว์เลี้ยงลูกด้วยนม</a>
+            <a href="#sharks-rays">ฉลามและกระเบน</a>
+            <a href="#coastal-jacks">ปลาชายฝั่ง & Jacks</a>
+            <a href="#reef-fishes">ปลาแนวปะการัง</a>
+            <a href="#reptiles">สัตว์เลื้อยคลาน</a>
+            <a href="#invertebrates">สัตว์ไม่มีกระดูกสันหลัง</a>
+            <a href="#corals-sponges">ปะการัง & ฟองน้ำ</a>
+          </div>
+        </nav>
 
         <p>
           สำรวจ
@@ -577,7 +578,10 @@
         </div>
 
         <hr />
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
+        <h2
+          id="marine-mammals"
+          style="text-align: center; font-size: 28px; color: #004d80"
+        >
           สัตว์เลี้ยงลูกด้วยนมในทะเลรอบเกาะช้าง
         </h2>
 
@@ -684,7 +688,7 @@
           </table>
         </div>
         <hr />
-        <h2>ฉลามและกระเบน</h2>
+        <h2 id="sharks-rays">ฉลามและกระเบน</h2>
         <p>
           ฉลามและกระเบนเป็นสัตว์ทะเลลึกลับที่มักถูกเข้าใจผิด
           พวกมันมีบทบาทสำคัญต่อสุขภาพของโลก ช่วยลดโลกร้อน
@@ -828,7 +832,7 @@
           </table>
         </div>
         <hr />
-        <h2>ปลาฉลามแจ็ค (Crevalle Jack)</h2>
+        <h2 id="coastal-jacks">ปลาฉลามแจ็ค (Crevalle Jack)</h2>
         <p>
           ปลาฉลามแจ็ค (Caranx hippos) หรือที่รู้จักในชื่อ แจ็คดำ เทรวาลลี่ดำ
           หรือแจ็คเหลือง เป็นปลาทะเลขนาดใหญ่ที่พบได้ทั่วไปในวงศ์ปลาจาระเม็ด
@@ -1047,7 +1051,7 @@
           </table>
         </div>
         <hr />
-        <h2>ปลาตามแนวปะการัง</h2>
+        <h2 id="reef-fishes">ปลาตามแนวปะการัง</h2>
         <p>
           ปลาตามแนวปะการังคือปลาที่อาศัยอยู่ในหรือใกล้กับแนวปะการัง
           ซึ่งเป็นระบบนิเวศที่ซับซ้อนและมีความหลากหลายทางชีวภาพสูง
@@ -3069,7 +3073,7 @@
           </table>
         </div>
         <hr />
-        <h2>สัตว์เลื้อยคลาน</h2>
+        <h2 id="reptiles">สัตว์เลื้อยคลาน</h2>
         <p>
           สัตว์เลื้อยคลานเป็นสัตว์มีกระดูกสันหลังสี่ขาในชั้น Reptilia รวมถึงเต่า
           จระเข้ งู ตัวเงินตัวทอง กิ้งก่า และสัตว์เลื้อยคลานที่สูญพันธุ์แล้ว
@@ -3166,7 +3170,7 @@
           </table>
         </div>
         <hr />
-        <h2>กุ้ง</h2>
+        <h2 id="invertebrates">กุ้ง</h2>
         <p>
           กุ้งมีบทบาทสำคัญในห่วงโซ่อาหาร
           และเป็นแหล่งอาหารที่สำคัญของสัตว์ขนาดใหญ่ เช่น ปลาและวาฬ
@@ -4099,7 +4103,7 @@
           </table>
         </div>
         <hr />
-        <h2>ปะการังแตกแขนง</h2>
+        <h2 id="corals-sponges">ปะการังแตกแขนง</h2>
         <p>
           ปะการังแข็งเป็นสัตว์ทะเลในชั้น Anthozoa ซึ่งไม่มีระยะเมดูซาในวงจรชีวิต
           ตัวแต่ละตัวเรียกว่าโพลิป ลำตัวเป็นทรงกระบอก

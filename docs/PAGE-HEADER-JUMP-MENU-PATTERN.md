@@ -6,12 +6,13 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 **Dieses** Dokument ist der aktuelle Standard:
 
-| Seitentyp                          | H1 + Teaser unter Hero | Jump-Menü                            |
-| ---------------------------------- | ---------------------- | ------------------------------------ |
-| **Produkt-/Buchungsseiten**        | ja                     | ja (4 Punkte)                        |
-| **Kategorie-/Hub-Seiten**          | ja                     | **nie**                              |
-| **Preisliste `/prices/`**          | ja                     | **ja (7 Punkte, Ausnahme)**          |
-| **Tech-Produktseiten (`tek-box`)** | ja                     | ja (4 Punkte, **Jump-Bar-Ausnahme**) |
+| Seitentyp                          | H1 + Teaser unter Hero | Jump-Menü                                      |
+| ---------------------------------- | ---------------------- | ---------------------------------------------- |
+| **Produkt-/Buchungsseiten**        | ja                     | ja (4 Punkte)                                  |
+| **Kategorie-/Hub-Seiten**          | ja                     | **nie**                                        |
+| **Blog-Posts (`posts-box`)**       | ja (wie Kurse)         | **ja, individuell** je nach Post-Thematik      |
+| **Preisliste `/prices/`**          | ja                     | **ja (7 Punkte, Ausnahme)**                    |
+| **Tech-Produktseiten (`tek-box`)** | ja                     | ja (4 Punkte, **Jump-Bar-Ausnahme**)           |
 
 ---
 
@@ -69,6 +70,23 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 | `/courses/technical-diving-courses/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/courses/` (EN/DE/TH)                          | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/faqs/` (EN/DE/TH)                             | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/` (EN/DE/TH)                            | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/marine-life-koh-chang/` (EN/DE/TH)      | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+
+### Blog-Posts (`posts-box`, mit Jump-Menü)
+
+| Seite                                                         | Status | Jump-Punkte | Hinweis                                                |
+| ------------------------------------------------------------- | ------ | ----------- | ------------------------------------------------------ |
+| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)          | ✅     | **7**       | Gruppen-Anker (nicht alle ~43 H2s); s. Posts-Abschnitt |
+| `posts/marine-life-koh-chang/marine-life-whale-shark` (EN/DE/TH) | ✅  | **7**       | Themenspezifisch; Inline `#ccc` + `critical-css`       |
+| `posts/marine-life-koh-chang/marine-life-green-sea-turtle` (EN/DE/TH) | ✅ | **5**       | Biology → Dive sites; Inline `#ccc` + `critical-css`   |
+| `posts/marine-life-koh-chang/marine-life-titan-triggerfish` (EN/DE/TH) | ✅ | **6**       | Biology → Gallery; Inline `#ccc` + `critical-css`      |
+| `posts/marine-life-koh-chang/marine-life-nudibranch` (EN/DE/TH) | ✅ | **9**       | What → Why look; Inline `#ccc` + `critical-css`        |
+| `posts/marine-life-koh-chang/marine-life-blacktip-reef-shark` (EN/DE/TH) | ✅ | **6**       | Traits → Conclusion; Inline `#ccc` + `critical-css`    |
+| `posts/marine-life-koh-chang/marine-life-batfish` (EN/DE/TH) | ✅ | **4**       | Appearance → Conclusion; Inline `#ccc` + `critical-css` |
+| `posts/marine-life-koh-chang/marine-life-barracuda` (EN/DE/TH) | ✅ | **4**       | Species → Conclusion; Inline `#ccc` + `critical-css`   |
+
+**Regel:** siehe [Posts (`posts-box`)](#posts-posts-box) weiter unten.
 
 ### FAQ-Detailseiten (ohne Jump-Menü)
 
@@ -101,7 +119,7 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 Gleiche Header-Logik wie Produktseiten, **aber nie `page-jump-nav`**.
 
-Beispiele: `/day-trips/`, `/courses/beginner-courses/`, später `/courses/`, `/dive-sites/`, `/posts/`, weitere Sub-Hubs …
+Beispiele: `/day-trips/`, `/courses/`, `/faqs/`, `/posts/`, später `/dive-sites/`, weitere Sub-Hubs …
 
 ```
 <header> … hero picture (kein .hero-text) … </header>
@@ -214,11 +232,12 @@ Label „On this page“: EN `On this page` · DE `Auf dieser Seite` · TH `ใ�
 
 ## 5. Linienfarbe / Jump-Bar-Look
 
-| Box               | Jump-Nav                                                                                         |
-| ----------------- | ------------------------------------------------------------------------------------------------ |
-| `changdiving-box` | Inline `border-bottom: 1px solid #ccc` (wie globales `hr`)                                       |
-| `speciality-box`  | CSS: leichte Grün/Gelb-Fläche (`.speciality-box .page-jump-nav`) – **kein** Inline-Border `#ccc` |
-| `tek-box`         | CSS: grauer→oranger Verlauf (s. Ausnahme unten) – **kein** Inline-Border `#ccc`                  |
+| Box               | Jump-Nav                                                                                                              |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `changdiving-box` | Inline `border-bottom: 1px solid #ccc` (wie globales `hr`)                                                            |
+| `posts-box`       | **Inline** `border-bottom: 1px solid #ccc` + gleiche Regel in Page-`critical-css` (async `style.min.css` sonst FOUC) |
+| `speciality-box`  | CSS: leichte Grün/Gelb-Fläche (`.speciality-box .page-jump-nav`) – **kein** Inline-Border `#ccc`                      |
+| `tek-box`         | CSS: grauer→oranger Verlauf (s. Ausnahme unten) – **kein** Inline-Border `#ccc`                                       |
 
 - **Kein** `<hr>` zwischen Jump-Nav und Banner
 - `<hr />` unter dem Banner vor Intro ist ok
@@ -251,6 +270,86 @@ Label „On this page“: EN `On this page` · DE `Auf dieser Seite` · TH `ใ�
 7. [ ] DE + TH spiegeln
 
 > **Hart:** Auf Kategorie-Seiten **nie** ein Jump-Menü einbauen. Nach Teaser immer `<hr />` (bei Jump-Seiten nicht – Border der Nav reicht). Reviews immer vor dem Guides-/FAQ-Block.
+
+### Blog-Post (`posts-box`)
+
+1. [ ] `.hero-text` aus Hero entfernt
+2. [ ] H1 + Teaser nach Breadcrumb, zentriert – **gleicher Markup-Stil wie Kurse**
+3. [ ] Redundantes Titel-H2 entfernt (falls vorhanden)
+4. [ ] Content in `<div class="posts-box">` (ggf. + `grid-container`)
+5. [ ] `page-jump-nav` **individuell** nach Post-Thematik (keine festen 4 Kurs-Labels)
+6. [ ] Jump-Bar-Linie sichtbar: Inline `style="border-bottom: 1px solid #ccc"` **und** Regel im Page-`critical-css`
+7. [ ] Anker-`id`s an den Ziel-H2s; bei sehr vielen H2s lieber **Gruppen** springen
+8. [ ] DE + TH spiegeln; TH Label = **ในหน้านี้**
+
+---
+
+## Posts (`posts-box`)
+
+Blog-Artikel / Guides unter `/posts/…` (nicht die Kategorie-Hubs).
+
+### Header (wie Kurse)
+
+```
+<header> … hero picture (kein .hero-text) … </header>
+<main>
+  posts-submenu
+  breadcrumb
+  <div class="posts-box">
+    h1          (zentriert, wie Kurse)
+    p (Teaser)  (zentriert, wie Kurse)
+    page-jump-nav   ← Linie = sichtbares „hr“ (#ccc)
+    Intro / Abschnitte …
+```
+
+Markup für H1 + Teaser (identisch zu Kurs-/Produktseiten):
+
+```html
+<h1 style="margin: 20px 0 8px; text-align: center">…</h1>
+<p style="margin: 0 0 24px; color: #555; text-align: center">…</p>
+```
+
+### Jump-Menü: individuell je Post
+
+- **Kein** Standard „Intro · Who can join? · What's included · Prices & book“
+- Labels und Anker richten sich nach der **Thematik / den Abschnitten** des Posts
+- Kurz halten (ca. 4–8 Punkte); bei langen Listen (z. B. Marine-Life-Guide) zu **Gruppen** zusammenfassen
+- Anker auf `h2[id]` / `h3[id]` (`scroll-margin` greift über `.posts-box h2[id]` in `style.css`)
+
+### HR unter dem Jump-Menü sichtbar machen
+
+`style.min.css` lädt oft **async** (preload + `onload`) → ohne Absicherung wirkt die Jump-Linie kurz und verschwindet/FOUC.
+
+**Pflicht bei Posts mit Jump-Nav:**
+
+1. Inline am `<nav>` (wie `changdiving-box` / Kurse):
+
+```html
+<nav
+  class="page-jump-nav"
+  aria-label="On this page"
+  style="border-bottom: 1px solid #ccc"
+>
+```
+
+2. Dieselbe Regel zusätzlich im Page-`<style id="critical-css">`:
+
+```css
+.posts-box .page-jump-nav {
+  margin: 0 0 2px;
+  padding: 2px 8px 4px;
+  border-bottom: 1px solid #ccc; /* wie globales hr */
+}
+```
+
+Farbe `#ccc` = normales `<hr>` (`style.css`). Kein extra `<hr />` direkt unter der Jump-Nav nötig – die Border ersetzt die Linie.
+
+### Abgrenzung: Post-Hubs vs. Posts
+
+| Typ                         | Beispiel                         | Jump-Menü      |
+| --------------------------- | -------------------------------- | -------------- |
+| Kategorie-Hub               | `/posts/`, `/posts/marine-life-koh-chang/` | **nie** – nur H1 + Teaser + `<hr />` |
+| Einzelner Blog-Post / Guide | `/posts/.../marine-life/`        | **ja**, themenspezifisch |
 
 ---
 
@@ -294,6 +393,20 @@ Lange Preistabelle (kein reiner Kategorie-Hub): Jump-Menü springt zu Inklusiv-K
 | 7   | Tec              | Tec                | เทค            | `#prices-tec`       |
 
 Anker sitzen am Info-Kasten bzw. an den Abschnitts-`<tr>` der Preistabelle.
+
+### Beispiel: Marine Life Guide (`posts/.../marine-life/`) – 7 Gruppen-Jumps
+
+Referenz für themenspezifisches Jump-Menü (Posts-Regeln oben). Lange Artengalerie (~43 H2s) → nur **Gruppen**, Anker am ersten H2. Jump-Linie: Inline `#ccc` + `critical-css`.
+
+| #   | EN                | DE                     | TH                           | Anker               |
+| --- | ----------------- | ---------------------- | ---------------------------- | ------------------- |
+| 1   | Marine Mammals    | Meeressäuger           | สัตว์เลี้ยงลูกด้วยนม         | `#marine-mammals`   |
+| 2   | Sharks & Rays     | Haie & Rochen          | ฉลามและกระเบน                | `#sharks-rays`      |
+| 3   | Coastal & Jacks   | Küstenfische & Jacks   | ปลาชายฝั่ง & Jacks           | `#coastal-jacks`    |
+| 4   | Reef Fishes       | Riffische              | ปลาแนวปะการัง                | `#reef-fishes`      |
+| 5   | Reptiles          | Reptilien              | สัตว์เลื้อยคลาน              | `#reptiles`         |
+| 6   | Invertebrates     | Wirbellose             | สัตว์ไม่มีกระดูกสันหลัง      | `#invertebrates`    |
+| 7   | Corals & Sponges  | Korallen & Schwämme    | ปะการัง & ฟองน้ำ             | `#corals-sponges`   |
 
 ### Technical Diving (`tek-box`) – Jump-Bar- & CTA-Ausnahme
 
@@ -361,11 +474,11 @@ Weitere Tech-Produkte (`advanced-nitrox`, `deco-procedures`, `advanced-wreck`, `
 
 ## Nächster Rollout (offen)
 
-**Courses – Produktseiten** (mit Jump-Menü):  
-Tech-Produkte in `tek-box` (s. Ausnahme): `advanced-nitrox`, `deco-procedures`, `advanced-wreck`, `tdi-sidemount`, `tech-package`, …
-
 **Kategorie-Hubs** (H1 + Teaser, **ohne** Jump-Menü):  
-`/courses/`, `/dive-sites/`, `/posts/`, Sub-Hubs – gleiches Header-Muster wie `/day-trips/`.
+`/dive-sites/`, weitere Post-Sub-Hubs (`scuba-knowledge/`, `tips-and-tricks/`, …) – gleiches Header-Muster wie `/posts/marine-life-koh-chang/`.
+
+**Blog-Posts** (`posts-box`, H1 + Teaser wie Kurse, Jump individuell, Jump-Linie `#ccc`):  
+weitere Artikel unter `/posts/…` nach dem Muster von `marine-life` / bestehenden Knowledge-Posts.
 
 ---
 

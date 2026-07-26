@@ -333,6 +333,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -494,14 +500,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ปลากระเบนไททันที่เกาะช้าง</h1>
-          <p>
-            สีสันจัดจ้าน กล้าหาญ และมักเข้าใจผิด –
-            เรียนรู้วิธีสังเกตพฤติกรรมของปลากระเบนไททันอย่างปลอดภัยขณะดำน้ำที่เกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -517,25 +515,31 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ปลากระเบนไททันที่เกาะช้าง – พฤติกรรม อันตราย และจุดดำน้ำที่ดีที่สุด
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ปลากระเบนไททันที่เกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          สีสันจัดจ้าน กล้าหาญ และมักเข้าใจผิด – เรียนรู้วิธีสังเกตพฤติกรรมของปลากระเบนไททันอย่างปลอดภัยขณะดำน้ำที่เกาะช้าง
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ttf-biology">ชีววิทยา</a>
+            <a href="#ttf-behavior">พฤติกรรม</a>
+            <a href="#ttf-diet">อาหาร</a>
+            <a href="#ttf-dive-sites">จุดดำน้ำ</a>
+            <a href="#ttf-conclusion">ควรกลัวหรือไม่?</a>
+            <a href="#ttf-gallery">แกลเลอรี่ภาพ</a>
+          </div>
+        </nav>
+
+<p>
           <strong>ปลากระเบนไททัน</strong> (Balistoides viridescens)
           เป็นปลาที่น่าสนใจและมักถูกเข้าใจผิดมากที่สุดชนิดหนึ่งในเขตร้อน
           แม้จะมีสีสันที่โดดเด่น แต่พวกมันก็มีพฤติกรรมปกป้องอาณาเขตอย่างแรงกล้า
@@ -548,7 +552,7 @@
 
         <hr />
 
-        <h2>1. ลักษณะและชีววิทยา</h2>
+        <h2 id="ttf-biology">1. ลักษณะและชีววิทยา</h2>
         <ul>
           <li><strong>ชื่อวิทยาศาสตร์:</strong> Balistoides viridescens</li>
           <li><strong>ขนาด:</strong> สูงสุด 75 ซม.</li>
@@ -562,7 +566,7 @@
 
         <hr />
 
-        <h2>2. พฤติกรรมและการดำรงชีวิต</h2>
+        <h2 id="ttf-behavior">2. พฤติกรรมและการดำรงชีวิต</h2>
         <p>
           ปลากระเบนไททันมีความเป็นเจ้าถิ่นสูง โดยเฉพาะช่วงวางไข่ ควรระวัง
           <strong>พื้นที่ป้องกันรูปกรวยกลับหัว</strong> ของมัน
@@ -576,7 +580,7 @@
 
         <hr />
 
-        <h2>3. อาหารและพฤติกรรมการกิน</h2>
+        <h2 id="ttf-diet">3. อาหารและพฤติกรรมการกิน</h2>
         <p>ปลาชนิดนี้กินได้หลากหลาย เช่น:</p>
         <ul>
           <li>ปะการัง</li>
@@ -587,7 +591,7 @@
 
         <hr />
 
-        <h2>4. จุดดำน้ำที่ดีที่สุดเพื่อพบปลากระเบนไททันในเกาะช้าง</h2>
+        <h2 id="ttf-dive-sites">4. จุดดำน้ำที่ดีที่สุดเพื่อพบปลากระเบนไททันในเกาะช้าง</h2>
         <p>
           พบได้ทั่วไปในเกาะช้าง แต่
           <strong>Hin Raab South</strong> คือจุดที่พบมากที่สุด
@@ -644,7 +648,7 @@
 
         <hr />
 
-        <h2>5. สรุป – ควรกลัวหรือไม่?</h2>
+        <h2 id="ttf-conclusion">5. สรุป – ควรกลัวหรือไม่?</h2>
         <p>
           ไม่จำเป็น! ปลากระเบนไททันเป็นส่วนสำคัญของระบบนิเวศ
           ถ้าเรารู้จักเคารพและระมัดระวัง ก็สามารถสังเกตพวกมันได้อย่างปลอดภัย
@@ -652,7 +656,7 @@
 
         <hr />
 
-        <h2>6. แกลเลอรี่ภาพ – ปลาไทรกเกอร์ฟิชไททันในเกาะช้าง</h2>
+        <h2 id="ttf-gallery">6. แกลเลอรี่ภาพ – ปลาไทรกเกอร์ฟิชไททันในเกาะช้าง</h2>
 
         <div
           style="

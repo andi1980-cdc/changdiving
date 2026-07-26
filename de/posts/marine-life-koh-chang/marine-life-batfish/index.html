@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -489,17 +495,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Fledermausfische auf Koh Chang – Der neugierige Begleiter unter
-            Wasser
-          </h1>
-          <p>
-            Begegne dem neugierigsten Riffbewohner Koh Changs – Fledermausfische
-            gleiten oft direkt neben dir durch den Tauchgang.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -515,22 +510,29 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Fledermausfische auf Koh Chang – Der neugierige Begleiter unter Wasser
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Begegne dem neugierigsten Riffbewohner Koh Changs – Fledermausfische gleiten oft direkt neben dir durch den Tauchgang.
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#bf-appearance">Aussehen & Verhalten</a>
+            <a href="#bf-where">Wo finden?</a>
+            <a href="#bf-why">Warum Taucher sie lieben</a>
+            <a href="#bf-conclusion">Fazit</a>
+          </div>
+        </nav>
+
+<p>
           Der Fledermausfisch (<em>Platax sp.</em>), auch bekannt als ปลาหูช้าง,
           zählt zu den faszinierendsten Fischarten auf Koh Chang. Sie sind
           bekannt für ihre Neugier und begleiten Taucher oft über längere Zeit.
@@ -541,7 +543,7 @@
 
         <hr />
 
-        <h2>1. Aussehen & Verhalten</h2>
+        <h2 id="bf-appearance">1. Aussehen & Verhalten</h2>
         <ul>
           <li>
             <strong>Größe:</strong> Erwachsene Tiere werden bis zu 60 cm groß.
@@ -561,7 +563,7 @@
 
         <hr />
 
-        <h2>2. Wo findet man Fledermausfische auf Koh Chang?</h2>
+        <h2 id="bf-where">2. Wo findet man Fledermausfische auf Koh Chang?</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table
@@ -603,7 +605,7 @@
 
         <hr />
 
-        <h2>3. Warum Taucher Fledermausfische lieben</h2>
+        <h2 id="bf-why">3. Warum Taucher Fledermausfische lieben</h2>
         <ul>
           <li>
             <strong>Begleiten Taucher:</strong> Schwimmen oft neugierig neben
@@ -621,7 +623,7 @@
 
         <hr />
 
-        <h2>Fazit</h2>
+        <h2 id="bf-conclusion">Fazit</h2>
         <p>
           Fledermausfische gehören zu den beeindruckendsten Arten für Taucher
           auf Koh Chang. Wenn du sie aus nächster Nähe erleben möchtest, buche

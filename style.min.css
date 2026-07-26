@@ -806,7 +806,7 @@ main:has(> .tek-box) > .posts-submenu a {
 .posts-box .page-jump-nav {
   margin: 0 0 2px;
   padding: 2px 8px 4px;
-  border-bottom: 1px solid rgba(0, 119, 182, 0.09);
+  border-bottom: 1px solid #ccc;
 }
 .posts-box .page-jump-nav__links {
   display: block;

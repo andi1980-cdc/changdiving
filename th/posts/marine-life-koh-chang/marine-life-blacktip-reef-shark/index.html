@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -496,14 +502,6 @@
           src="/img/posts/blacktip-reef-shark_big.webp"
           alt="ฉลามปลายดำว่ายน้ำใกล้แนวปะการังในน่านน้ำเขตร้อนของเกาะช้าง"
         />
-
-        <div class="hero-text">
-          <h1>ฉลามปลายดำในเกาะช้าง</h1>
-          <p>
-            ฉลามปลายดำเป็นสัตว์ขี้อายแต่สวยงาม เรียนรู้ถิ่นอาศัย พฤติกรรม
-            และวิธีอนุรักษ์พวกมันในเกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -519,25 +517,31 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ฉลามปลายดำแห่งเกาะช้าง – หายากแต่ทรงพลัง
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ฉลามปลายดำในเกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ฉลามปลายดำเป็นสัตว์ขี้อายแต่สวยงาม เรียนรู้ถิ่นอาศัย พฤติกรรม และวิธีอนุรักษ์พวกมันในเกาะช้าง
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#btrs-traits">ลักษณะ</a>
+            <a href="#btrs-behavior">พฤติกรรม</a>
+            <a href="#btrs-where">จุดพบ</a>
+            <a href="#btrs-rare">ทำไมพบน้อย?</a>
+            <a href="#btrs-conservation">การอนุรักษ์</a>
+            <a href="#btrs-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+<p>
           ฉลามปลายดำ (<em>Carcharhinus melanopterus</em>)
           เป็นหนึ่งในนักล่าที่สง่างามที่สุดของน่านน้ำเขตร้อน
           แม้จะพบเห็นได้ยากระหว่างดำน้ำที่
@@ -555,7 +559,7 @@
 
         <hr />
 
-        <h2>1. ลักษณะของฉลามปลายดำ</h2>
+        <h2 id="btrs-traits">1. ลักษณะของฉลามปลายดำ</h2>
         <ul>
           <li><strong>ขนาดตัวสูงสุด:</strong> 1.5 ถึง 2 เมตร</li>
           <li>
@@ -570,7 +574,7 @@
 
         <hr />
 
-        <h2>2. พฤติกรรม & วิถีชีวิต</h2>
+        <h2 id="btrs-behavior">2. พฤติกรรม & วิถีชีวิต</h2>
         <ul>
           <li><strong>ขี้อายมาก:</strong> จะว่ายหนีทันทีเมื่อสัมผัสได้ถึงคน</li>
           <li>
@@ -584,7 +588,7 @@
 
         <hr />
 
-        <h2>3. จุดที่สามารถพบฉลามปลายดำในเกาะช้าง</h2>
+        <h2 id="btrs-where">3. จุดที่สามารถพบฉลามปลายดำในเกาะช้าง</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table
@@ -630,7 +634,7 @@
 
         <hr />
 
-        <h2>4. ทำไมถึงพบฉลามปลายดำน้อย?</h2>
+        <h2 id="btrs-rare">4. ทำไมถึงพบฉลามปลายดำน้อย?</h2>
         <ul>
           <li>หลีกเลี่ยงเสียงจากนักดำน้ำและเรือ</li>
           <li>อาศัยอยู่ในโซนที่ตื้นและปลอดภัย</li>
@@ -639,7 +643,7 @@
 
         <hr />
 
-        <h2>5. ภัยคุกคาม & การอนุรักษ์</h2>
+        <h2 id="btrs-conservation">5. ภัยคุกคาม & การอนุรักษ์</h2>
         <ul>
           <li>
             <strong>ภัยคุกคาม:</strong>
@@ -656,7 +660,7 @@
 
         <hr />
 
-        <h2>6. สรุป – ไฮไลต์ของนักดำน้ำและนักดำน้ำตื้น</h2>
+        <h2 id="btrs-conclusion">6. สรุป – ไฮไลต์ของนักดำน้ำและนักดำน้ำตื้น</h2>
         <p>
           ฉลามปลายดำถือเป็นไฮไลต์ที่หายากแต่น่าตื่นเต้นสำหรับนักดำน้ำในเกาะช้าง
           หากคุณโชคดีพอที่จะพบมัน โปรดชื่นชมช่วงเวลานั้น –

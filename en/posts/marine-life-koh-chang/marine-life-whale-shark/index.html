@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -495,16 +501,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Whale Sharks in Koh Chang – When & Where to See These Gentle Giants
-          </h1>
-          <p>
-            Join Chang Diving to encounter whale sharks in Thailand’s tranquil
-            diving paradise – from wrecks to reefs, we’ll take you there!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -520,22 +516,32 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Whale Sharks in Koh Chang: An Experience Like No Other
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Whale Sharks in Koh Chang – When & Where to See These Gentle Giants
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Join Chang Diving to encounter whale sharks in Thailand’s tranquil diving paradise – from wrecks to reefs, we’ll take you there!
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#ws-special">What makes them special</a>
+            <a href="#ws-best-time">Best time</a>
+            <a href="#ws-dive-sites">Dive sites</a>
+            <a href="#ws-other-life">Other marine life</a>
+            <a href="#ws-why-us">Why Chang Diving</a>
+            <a href="#ws-sustainability">Sustainability</a>
+            <a href="#ws-plan">Plan your trip</a>
+          </div>
+        </nav>
+
+<p>
           Whale sharks are among the most fascinating marine creatures,
           captivating both divers and snorkelers. On Koh Chang, one of
           Thailand’s top diving destinations, you have the opportunity to
@@ -628,7 +634,7 @@
         </div>
         <hr />
 
-        <h2>What Makes Whale Sharks So Special?</h2>
+        <h2 id="ws-special">What Makes Whale Sharks So Special?</h2>
 
         <p>
           The whale shark (<em>Rhincodon typus</em>) is the largest fish in the
@@ -646,7 +652,7 @@
 
         <hr />
 
-        <h2>Best Time to See Whale Sharks in Koh Chang</h2>
+        <h2 id="ws-best-time">Best Time to See Whale Sharks in Koh Chang</h2>
 
         <p>
           The months from <strong>December to May</strong> offer the best
@@ -663,7 +669,7 @@
 
         <hr />
 
-        <h2>The Best Dive Sites for Whale Sharks in Koh Chang</h2>
+        <h2 id="ws-dive-sites">The Best Dive Sites for Whale Sharks in Koh Chang</h2>
 
         <p>
           While whale sharks do not have fixed habitats, they are often spotted
@@ -696,7 +702,7 @@
 
         <hr />
 
-        <h2>Other Marine Life Around Koh Chang</h2>
+        <h2 id="ws-other-life">Other Marine Life Around Koh Chang</h2>
 
         <p>
           In addition to whale sharks, Koh Chang is home to an incredible
@@ -710,7 +716,7 @@
 
         <hr />
 
-        <h2>Why Dive with Chang Diving for Whale Sharks?</h2>
+        <h2 id="ws-why-us">Why Dive with Chang Diving for Whale Sharks?</h2>
 
         <p>
           At <strong>Chang Diving Center</strong>, we offer the best conditions
@@ -745,7 +751,7 @@
 
         <hr />
 
-        <h2>Sustainability and Respect for Marine Life</h2>
+        <h2 id="ws-sustainability">Sustainability and Respect for Marine Life</h2>
 
         <p>
           Whale sharks are a protected species, and it is important to treat
@@ -756,7 +762,7 @@
 
         <hr />
 
-        <h2>Plan Your Adventure Now</h2>
+        <h2 id="ws-plan">Plan Your Adventure Now</h2>
 
         <p>
           Take the chance to see a whale shark up close and book your

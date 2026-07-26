@@ -339,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -502,11 +508,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Barrakudas Koh Chang – Gefährlich oder harmlos?</h1>
-          <p>Arten, Saison & beste Tauchplätze – von Chang Diving</p>
-        </div>
       </div>
     </header>
 
@@ -522,22 +523,29 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Barrakudas Koh Chang – Gefährlich oder harmlos?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Arten, Saison & beste Tauchplätze – von Chang Diving
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#bar-species">Arten</a>
+            <a href="#bar-behavior">Verhalten</a>
+            <a href="#bar-dive-sites">Tauchplätze</a>
+            <a href="#bar-conclusion">Fazit</a>
+          </div>
+        </nav>
+
+<p>
           Barrakudas sind schnelle, elegante Raubfische, die häufig in den
           tropischen Gewässern von
           <a href="/de/posts/koh-chang-diving-travel-guides/travel-guide/"
@@ -611,7 +619,7 @@
 
         <hr />
 
-        <h2>1. Die drei Barrakuda-Arten auf Koh Chang</h2>
+        <h2 id="bar-species">1. Die drei Barrakuda-Arten auf Koh Chang</h2>
 
         <h3>Großer Barrakuda (<em>Sphyraena barracuda</em>)</h3>
         <ul>
@@ -689,7 +697,7 @@
 
         <hr />
 
-        <h2>2. Verhalten & Jagdstrategie</h2>
+        <h2 id="bar-behavior">2. Verhalten & Jagdstrategie</h2>
         <p>
           Barrakudas sind geschickte Jäger, die sich auf Geschwindigkeit und
           rasiermesserscharfe Zähne verlassen. Oft verharren sie regungslos im
@@ -711,7 +719,7 @@
 
         <hr />
 
-        <h2>3. Die besten Tauchplätze, um Barrakudas auf Koh Chang zu sehen</h2>
+        <h2 id="bar-dive-sites">3. Die besten Tauchplätze, um Barrakudas auf Koh Chang zu sehen</h2>
         <p>
           Die besten Orte zur Barrakuda-Beobachtung auf Koh Chang hängen von der
           jeweiligen Art ab:
@@ -764,7 +772,7 @@
 
         <hr />
 
-        <h2>4. Fazit – Warum du Barrakudas auf Koh Chang sehen solltest</h2>
+        <h2 id="bar-conclusion">4. Fazit – Warum du Barrakudas auf Koh Chang sehen solltest</h2>
         <p>
           Barrakudas zählen zu den spektakulärsten Fischen auf Koh Chang. Ob in
           riesigen Schwärmen oder als beeindruckende Einzelgänger – ein Muss für

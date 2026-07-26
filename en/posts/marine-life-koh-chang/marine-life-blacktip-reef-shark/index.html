@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -496,15 +502,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Blacktip Reef Sharks in Koh Chang</h1>
-          <p>
-            Blacktip Reef Sharks are elusive yet breathtaking to encounter in
-            Koh Chang. Discover where they live, how they behave, and how to
-            protect them.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -520,22 +517,31 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Blacktip Reef Sharks in Koh Chang – Rare but Amazing Encounters
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Blacktip Reef Sharks in Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Blacktip Reef Sharks are elusive yet breathtaking to encounter in Koh Chang. Discover where they live, how they behave, and how to protect them.
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#btrs-traits">Characteristics</a>
+            <a href="#btrs-behavior">Behavior</a>
+            <a href="#btrs-where">Where to see them</a>
+            <a href="#btrs-rare">Why so rare?</a>
+            <a href="#btrs-conservation">Conservation</a>
+            <a href="#btrs-conclusion">Conclusion</a>
+          </div>
+        </nav>
+
+<p>
           Blacktip reef sharks (<em>Carcharhinus melanopterus</em>) are among
           the most elegant predators of tropical waters. They are rarely seen
           while diving in
@@ -552,7 +558,7 @@
 
         <hr />
 
-        <h2>1. Characteristics of Blacktip Reef Sharks</h2>
+        <h2 id="btrs-traits">1. Characteristics of Blacktip Reef Sharks</h2>
         <ul>
           <li><strong>Max Length:</strong> 1.5 to 2 meters</li>
           <li>
@@ -571,7 +577,7 @@
 
         <hr />
 
-        <h2>2. Behavior & Lifestyle</h2>
+        <h2 id="btrs-behavior">2. Behavior & Lifestyle</h2>
         <ul>
           <li>
             <strong>Very shy:</strong> Quickly disappears when they sense
@@ -593,7 +599,7 @@
 
         <hr />
 
-        <h2>3. Where to See Blacktip Reef Sharks in Koh Chang?</h2>
+        <h2 id="btrs-where">3. Where to See Blacktip Reef Sharks in Koh Chang?</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table
@@ -639,7 +645,7 @@
 
         <hr />
 
-        <h2>4. Why Are Blacktip Reef Sharks Rarely Seen?</h2>
+        <h2 id="btrs-rare">4. Why Are Blacktip Reef Sharks Rarely Seen?</h2>
         <ul>
           <li>They avoid the noise of divers and boats.</li>
           <li>Often remain in shallow, protected areas.</li>
@@ -648,7 +654,7 @@
 
         <hr />
 
-        <h2>5. Threats & Conservation</h2>
+        <h2 id="btrs-conservation">5. Threats & Conservation</h2>
         <ul>
           <li><strong>Threats:</strong> Overfishing & accidental bycatch.</li>
           <li>
@@ -663,7 +669,7 @@
 
         <hr />
 
-        <h2>6. Conclusion – A Highlight for Divers & Snorkelers</h2>
+        <h2 id="btrs-conclusion">6. Conclusion – A Highlight for Divers & Snorkelers</h2>
         <p>
           Blacktip reef sharks are a rare but thrilling highlight for divers and
           snorkelers in Koh Chang. If you're lucky enough to see one, enjoy the

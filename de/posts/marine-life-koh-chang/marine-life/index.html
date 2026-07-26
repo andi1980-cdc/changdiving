@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -489,16 +495,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Meeresleben auf Koh Chang – Was kannst du beim Tauchen entdecken?
-          </h1>
-          <p>
-            Entdecke Delfine, Walhaie, bunte Korallenriffe und seltene
-            Unterwasserarten beim Tauchen mit Chang Diving auf Koh Chang.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -515,19 +511,25 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Meeresleben auf Koh Chang – Was kannst du beim Tauchen entdecken?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Entdecke Delfine, Walhaie, bunte Korallenriffe und seltene Unterwasserarten beim Tauchen mit Chang Diving auf Koh Chang.
+        </p>
+
+        <nav class="page-jump-nav" aria-label="Auf dieser Seite" style="border-bottom: 1px solid #ccc">
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#marine-mammals">Meeressäuger</a>
+            <a href="#sharks-rays">Haie & Rochen</a>
+            <a href="#coastal-jacks">Küstenfische & Jacks</a>
+            <a href="#reef-fishes">Riffische</a>
+            <a href="#reptiles">Reptilien</a>
+            <a href="#invertebrates">Wirbellose</a>
+            <a href="#corals-sponges">Korallen & Schwämme</a>
+          </div>
+        </nav>
 
         <p>
           Entdecke die <a href="/de/dive-sites/">Tauchplätze von Koh Chang</a>,
@@ -581,7 +583,10 @@
         </div>
 
         <hr />
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
+        <h2
+          id="marine-mammals"
+          style="text-align: center; font-size: 28px; color: #004d80"
+        >
           Meeressäuger auf Koh Chang
         </h2>
 
@@ -688,7 +693,7 @@
           </table>
         </div>
         <hr />
-        <h2>Haie & Rochen</h2>
+        <h2 id="sharks-rays">Haie & Rochen</h2>
         <p>
           Haie und Rochen zählen zu den rätselhaftesten und am meisten
           missverstandenen Lebewesen der Ozeane. Sie sind entscheidend für die
@@ -836,7 +841,7 @@
           </table>
         </div>
         <hr />
-        <h2>Crevalle Jack (Caranx hippos)</h2>
+        <h2 id="coastal-jacks">Crevalle Jack (Caranx hippos)</h2>
         <p>
           Der Crevalle Jack (Caranx hippos), auch bekannt als Gemeiner Jack,
           Schwarzschwanz-Stachelmakrele, Couvalli Jack oder Gelber Cavalli, ist
@@ -1060,7 +1065,7 @@
           </table>
         </div>
         <hr />
-        <h2>Korallenriff-Fische</h2>
+        <h2 id="reef-fishes">Korallenriff-Fische</h2>
         <p>
           Korallenriff-Fische leben inmitten oder in enger Beziehung zu
           Korallenriffen. Diese bilden komplexe Ökosysteme mit enormer
@@ -3140,7 +3145,7 @@
           </table>
         </div>
         <hr />
-        <h2>Reptilien</h2>
+        <h2 id="reptiles">Reptilien</h2>
         <p>
           Reptilien sind vierbeinige Wirbeltiere der Klasse Reptilia. Dazu
           zählen heutige Schildkröten, Krokodile, Schlangen, Schleichen, Echsen,
@@ -3239,7 +3244,7 @@
           </table>
         </div>
         <hr />
-        <h2>Garnelen</h2>
+        <h2 id="invertebrates">Garnelen</h2>
         <p>
           Garnelen spielen eine wichtige Rolle in der Nahrungskette und sind
           eine bedeutende Nahrungsquelle für größere Tiere – von Fischen bis hin
@@ -4206,7 +4211,7 @@
           </table>
         </div>
         <hr />
-        <h2>Verzweigte Korallen</h2>
+        <h2 id="corals-sponges">Verzweigte Korallen</h2>
         <p>
           Steinkorallen gehören zur Klasse Anthozoa und besitzen – wie alle
           Mitglieder dieser Gruppe – kein Medusenstadium im Lebenszyklus. Die

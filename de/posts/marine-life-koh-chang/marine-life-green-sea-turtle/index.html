@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -498,15 +504,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Grüne Meeresschildkröten auf Koh Chang</h1>
-          <p>
-            Entdecke, wo du Schildkröten beim Tauchen auf Koh Chang findest –
-            erfahre mehr über ihr Verhalten, Lieblingsplätze und wie du sie
-            schützen kannst.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -522,23 +519,30 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Grüne Meeresschildkröten auf Koh Chang – Lebensweise, Ernährung &
-          Top-Tauchplätze
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Grüne Meeresschildkröten auf Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Entdecke, wo du Schildkröten beim Tauchen auf Koh Chang findest – erfahre mehr über ihr Verhalten, Lieblingsplätze und wie du sie schützen kannst.
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#gst-biology">Biologie</a>
+            <a href="#gst-habitat">Lebensraum</a>
+            <a href="#gst-diet">Ernährung</a>
+            <a href="#gst-conservation">Schutz</a>
+            <a href="#gst-dive-sites">Beste Tauchplätze</a>
+          </div>
+        </nav>
+
+<p>
           Die <strong>Grüne Meeresschildkröte</strong> (Chelonia mydas) ist
           eines der faszinierendsten Meereslebewesen, das regelmäßig in
           <a
@@ -577,7 +581,7 @@
 
         <hr />
 
-        <h2>1. Merkmale & Biologie</h2>
+        <h2 id="gst-biology">1. Merkmale & Biologie</h2>
         <ul>
           <li><strong>Wissenschaftlicher Name:</strong> Chelonia mydas</li>
           <li><strong>Größe:</strong> Bis zu 1,5 Meter Panzerlänge</li>
@@ -610,7 +614,7 @@
 
         <hr />
 
-        <h2>2. Lebensraum & Verhalten</h2>
+        <h2 id="gst-habitat">2. Lebensraum & Verhalten</h2>
         <p>
           Grüne Meeresschildkröten leben bevorzugt in
           <strong>Seegraswiesen und Korallenriffen</strong>. Man sieht sie
@@ -637,7 +641,7 @@
 
         <hr />
 
-        <h2>3. Ernährung & Fressverhalten</h2>
+        <h2 id="gst-diet">3. Ernährung & Fressverhalten</h2>
         <p>
           Grüne Meeresschildkröten sind
           <strong>überwiegend Pflanzenfresser</strong>. Sie ernähren sich von:
@@ -650,7 +654,7 @@
 
         <hr />
 
-        <h2>4. Bedrohungen & Schutz</h2>
+        <h2 id="gst-conservation">4. Bedrohungen & Schutz</h2>
         <p>Grüne Meeresschildkröten sind <strong>gefährdet</strong> durch:</p>
         <ul>
           <li>Plastikverschmutzung</li>
@@ -664,7 +668,7 @@
 
         <hr />
 
-        <h2>5. Beste Orte auf Koh Chang zur Schildkrötensichtung</h2>
+        <h2 id="gst-dive-sites">5. Beste Orte auf Koh Chang zur Schildkrötensichtung</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table

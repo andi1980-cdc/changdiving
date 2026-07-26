@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -495,17 +501,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Walhaie in Koh Chang – Wann & Wo man diese sanften Riesen sieht
-          </h1>
-          <p>
-            Begleite Chang Diving auf der Suche nach Walhaien im ruhigen
-            Tauchparadies Thailands – von Wracks bis zu Riffen führen wir dich
-            hin!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -521,22 +516,32 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Walhaie auf Koh Chang: Ein Erlebnis der besonderen Art
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Walhaie in Koh Chang – Wann & Wo man diese sanften Riesen sieht
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Begleite Chang Diving auf der Suche nach Walhaien im ruhigen Tauchparadies Thailands – von Wracks bis zu Riffen führen wir dich hin!
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ws-special">Was macht sie besonders?</a>
+            <a href="#ws-best-time">Beste Zeit</a>
+            <a href="#ws-dive-sites">Tauchplätze</a>
+            <a href="#ws-other-life">Weitere Meeresbewohner</a>
+            <a href="#ws-why-us">Warum Chang Diving</a>
+            <a href="#ws-sustainability">Nachhaltigkeit</a>
+            <a href="#ws-plan">Abenteuer planen</a>
+          </div>
+        </nav>
+
+<p>
           Walhaie gehören zu den faszinierendsten Meeresbewohnern und begeistern
           Taucher wie Schnorchler gleichermaßen. Auf Koh Chang, einem der besten
           Tauchziele Thailands, hast du die Chance, diesen sanften Riesen in
@@ -622,7 +627,7 @@
         </div>
 
         <hr />
-        <h2>Was macht Walhaie so besonders?</h2>
+        <h2 id="ws-special">Was macht Walhaie so besonders?</h2>
         <p>
           Der Walhai (<em>Rhincodon typus</em>) ist der größte Fisch der Welt
           und kann über 12 Meter lang werden. Trotz seiner Größe ist er völlig
@@ -636,7 +641,7 @@
         </p>
 
         <hr />
-        <h2>Beste Zeit für Walhaie auf Koh Chang</h2>
+        <h2 id="ws-best-time">Beste Zeit für Walhaie auf Koh Chang</h2>
         <p>
           Von <strong>Dezember bis Mai</strong> stehen die Chancen besonders
           gut, einen Walhai zu sehen. In dieser Zeit wandern sie auf der Suche
@@ -650,7 +655,7 @@
         </p>
 
         <hr />
-        <h2>Die besten Tauchplätze für Walhaie auf Koh Chang</h2>
+        <h2 id="ws-dive-sites">Die besten Tauchplätze für Walhaie auf Koh Chang</h2>
         <p>
           Auch wenn Walhaie keinen festen Lebensraum haben, werden sie an
           bestimmten Plätzen häufiger gesichtet:
@@ -679,7 +684,7 @@
         </p>
 
         <hr />
-        <h2>Weitere Meeresbewohner rund um Koh Chang</h2>
+        <h2 id="ws-other-life">Weitere Meeresbewohner rund um Koh Chang</h2>
         <p>
           Neben Walhaien beherbergt Koh Chang eine unglaubliche Artenvielfalt:
           bunte Rifffische, majestätische Zackenbarsche und riesige
@@ -690,7 +695,7 @@
         </p>
 
         <hr />
-        <h2>Warum mit Chang Diving nach Walhaien tauchen?</h2>
+        <h2 id="ws-why-us">Warum mit Chang Diving nach Walhaien tauchen?</h2>
         <p>
           Im <strong>Chang Diving Center</strong> bieten wir dir die besten
           Voraussetzungen:
@@ -721,7 +726,7 @@
         </p>
 
         <hr />
-        <h2>Nachhaltigkeit & Respekt für Meeresleben</h2>
+        <h2 id="ws-sustainability">Nachhaltigkeit & Respekt für Meeresleben</h2>
         <p>
           Walhaie sind geschützt – es ist wichtig, sie mit Respekt zu behandeln.
           Unsere Tauchguides sorgen für sichere, nachhaltige Begegnungen. Bitte
@@ -729,7 +734,7 @@
         </p>
 
         <hr />
-        <h2>Plane dein Abenteuer jetzt</h2>
+        <h2 id="ws-plan">Plane dein Abenteuer jetzt</h2>
         <p>
           Nutze die Chance, Walhaie hautnah zu erleben – buche noch heute deine
           <a href="/de/day-trips/fun-dives/">Fun Dives</a> auf Koh Chang! Lass

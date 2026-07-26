@@ -340,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -495,16 +501,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            บาราคูดาในเกาะช้าง – สายพันธุ์ พฤติกรรม และจุดดำน้ำที่ดีที่สุด
-          </h1>
-          <p>
-            บาราคูดาเป็นนักล่าที่ว่ายน้ำเร็วและสง่างาม
-            พบได้บ่อยในน่านน้ำเขตร้อนของเกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -520,25 +516,29 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ปลาบาราคูดาในเกาะช้าง – สายพันธุ์ พฤติกรรม และจุดดำน้ำยอดนิยม
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          บาราคูดาในเกาะช้าง – สายพันธุ์ พฤติกรรม และจุดดำน้ำที่ดีที่สุด
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          บาราคูดาเป็นนักล่าที่ว่ายน้ำเร็วและสง่างาม พบได้บ่อยในน่านน้ำเขตร้อนของเกาะช้าง
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#bar-species">สายพันธุ์</a>
+            <a href="#bar-behavior">พฤติกรรม</a>
+            <a href="#bar-dive-sites">จุดดำน้ำ</a>
+            <a href="#bar-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+<p>
           ปลาบาราคูดาเป็นนักล่าที่ว่ายน้ำได้รวดเร็วและสง่างาม
           พบได้บ่อยในน่านน้ำเขตร้อนของ
           <a
@@ -555,7 +555,7 @@
 
         <hr />
 
-        <h2>1. ปลาบาราคูดา 3 สายพันธุ์ในเกาะช้าง</h2>
+        <h2 id="bar-species">1. ปลาบาราคูดา 3 สายพันธุ์ในเกาะช้าง</h2>
 
         <h3>บาราคูดาใหญ่ (<em>Sphyraena barracuda</em>)</h3>
         <ul>
@@ -616,7 +616,7 @@
 
         <hr />
 
-        <h2>2. พฤติกรรม & กลยุทธ์การล่า</h2>
+        <h2 id="bar-behavior">2. พฤติกรรม & กลยุทธ์การล่า</h2>
         <p>
           บาราคูดาเป็นนักล่าที่ชำนาญ ใช้ความเร็วและฟันอันแหลมคมในการจับเหยื่อ
           มักอยู่นิ่งก่อนจะโจมตีแบบสายฟ้าแลบ
@@ -635,7 +635,7 @@
 
         <hr />
 
-        <h2>3. จุดดำน้ำที่ดีที่สุดสำหรับชมบาราคูดาในเกาะช้าง</h2>
+        <h2 id="bar-dive-sites">3. จุดดำน้ำที่ดีที่สุดสำหรับชมบาราคูดาในเกาะช้าง</h2>
         <p>จุดชมบาราคูดาที่ดีที่สุดขึ้นอยู่กับแต่ละสายพันธุ์:</p>
 
         <div style="overflow-x: auto; width: 100%">
@@ -683,7 +683,7 @@
 
         <hr />
 
-        <h2>4. สรุป – ทำไมคุณควรชมบาราคูดาในเกาะช้าง</h2>
+        <h2 id="bar-conclusion">4. สรุป – ทำไมคุณควรชมบาราคูดาในเกาะช้าง</h2>
         <p>
           ปลาบาราคูดาเป็นหนึ่งในปลาที่น่าตื่นตาตื่นใจที่สุดของเกาะช้าง
           ไม่ว่าจะเป็นฝูงขนาดใหญ่หรือผู้ล่าตัวเดี่ยว –

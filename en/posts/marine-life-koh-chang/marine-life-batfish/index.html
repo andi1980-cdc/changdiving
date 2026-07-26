@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -485,14 +491,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Batfish in Koh Chang – The Curious Diver’s Companion</h1>
-          <p>
-            Meet Koh Chang’s most curious reef companion – Batfish are a diver’s
-            delight, often gliding beside you throughout the dive.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -508,22 +506,29 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Batfish in Koh Chang – The Curious Diver’s Companion
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Meet Koh Chang’s most curious reef companion – Batfish are a diver’s delight, often gliding beside you throughout the dive.
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#bf-appearance">Appearance & behavior</a>
+            <a href="#bf-where">Where to find them</a>
+            <a href="#bf-why">Why divers love them</a>
+            <a href="#bf-conclusion">Conclusion</a>
+          </div>
+        </nav>
+
+<p>
           The Batfish (<em>Platax sp.</em>), also known as ปลาหูช้าง, is one of
           the most fascinating fish species found in Koh Chang. They are known
           for their curiosity and often accompany divers for long stretches.
@@ -534,7 +539,7 @@
 
         <hr />
 
-        <h2>1. Appearance & Behavior</h2>
+        <h2 id="bf-appearance">1. Appearance & Behavior</h2>
         <ul>
           <li><strong>Size:</strong> Adults grow up to 60 cm.</li>
           <li>
@@ -553,7 +558,7 @@
 
         <hr />
 
-        <h2>2. Where to Find Batfish in Koh Chang</h2>
+        <h2 id="bf-where">2. Where to Find Batfish in Koh Chang</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table
@@ -595,7 +600,7 @@
 
         <hr />
 
-        <h2>3. Why Divers Love Batfish</h2>
+        <h2 id="bf-why">3. Why Divers Love Batfish</h2>
         <ul>
           <li>
             <strong>Follow Divers:</strong> They often swim curiously alongside
@@ -613,7 +618,7 @@
 
         <hr />
 
-        <h2>Conclusion</h2>
+        <h2 id="bf-conclusion">Conclusion</h2>
         <p>
           Batfish are one of the most impressive species for divers in Koh
           Chang. If you want to experience them up close, book your

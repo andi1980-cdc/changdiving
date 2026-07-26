@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -494,14 +500,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>เต่าทะเลเขียวที่เกาะช้าง</h1>
-          <p>
-            ค้นหาจุดชมเต่าทะเลที่ดีที่สุดในเกาะช้าง เรียนรู้พฤติกรรม
-            แหล่งที่อยู่อาศัย และวิธีการอนุรักษ์พวกมัน
-          </p>
-        </div>
       </div>
     </header>
 
@@ -517,25 +515,30 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          เต่าทะเลเขียวที่เกาะช้าง – พฤติกรรม อาหาร และจุดดำน้ำยอดนิยม
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          เต่าทะเลเขียวที่เกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ค้นหาจุดชมเต่าทะเลที่ดีที่สุดในเกาะช้าง เรียนรู้พฤติกรรม แหล่งที่อยู่อาศัย และวิธีการอนุรักษ์พวกมัน
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#gst-biology">ชีววิทยา</a>
+            <a href="#gst-habitat">แหล่งอาศัย</a>
+            <a href="#gst-diet">อาหาร</a>
+            <a href="#gst-conservation">การอนุรักษ์</a>
+            <a href="#gst-dive-sites">จุดดำน้ำที่ดีที่สุด</a>
+          </div>
+        </nav>
+
+<p>
           <strong>เต่าทะเลเขียว</strong> (Chelonia mydas)
           เป็นสัตว์ทะเลที่น่าหลงใหล พบเห็นได้บ่อยใน
           <a
@@ -574,7 +577,7 @@
 
         <hr />
 
-        <h2>1. ลักษณะ & ชีววิทยา</h2>
+        <h2 id="gst-biology">1. ลักษณะ & ชีววิทยา</h2>
         <ul>
           <li><strong>ชื่อวิทยาศาสตร์:</strong> Chelonia mydas</li>
           <li><strong>ขนาด:</strong> ความยาวกระดองสูงสุด 1.5 เมตร</li>
@@ -606,7 +609,7 @@
 
         <hr />
 
-        <h2>2. แหล่งอาศัย & พฤติกรรม</h2>
+        <h2 id="gst-habitat">2. แหล่งอาศัย & พฤติกรรม</h2>
         <p>
           เต่าทะเลเขียวอาศัยอยู่ใน
           <strong>ทุ่งหญ้าทะเลและแนวปะการัง</strong> มักพบที่:
@@ -632,7 +635,7 @@
 
         <hr />
 
-        <h2>3. อาหาร & พฤติกรรมการกิน</h2>
+        <h2 id="gst-diet">3. อาหาร & พฤติกรรมการกิน</h2>
         <p>เต่าทะเลเขียวเป็นสัตว์กินพืชเป็นหลัก โดยกิน:</p>
         <ul>
           <li>หญ้าทะเล</li>
@@ -642,7 +645,7 @@
 
         <hr />
 
-        <h2>4. ภัยคุกคาม & การอนุรักษ์</h2>
+        <h2 id="gst-conservation">4. ภัยคุกคาม & การอนุรักษ์</h2>
         <p>เต่าทะเลเขียวถูกคุกคามจาก:</p>
         <ul>
           <li>ขยะพลาสติก</li>
@@ -653,7 +656,7 @@
 
         <hr />
 
-        <h2>5. จุดดำน้ำที่ดีที่สุดในเกาะช้างสำหรับพบเต่า</h2>
+        <h2 id="gst-dive-sites">5. จุดดำน้ำที่ดีที่สุดในเกาะช้างสำหรับพบเต่า</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table

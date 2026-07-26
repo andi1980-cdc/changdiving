@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -491,15 +497,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>นูดิเบรนช์ที่เกาะช้าง</h1>
-          <p>
-            เล็กแต่สวยสะดุดตา –
-            นูดิเบรนช์เป็นหนึ่งในไฮไลท์ของการถ่ายภาพมาโครที่เกาะช้าง
-            เรียนรู้วิธีค้นหาและเพลิดเพลินกับสิ่งมีชีวิตน่าทึ่งเหล่านี้
-          </p>
-        </div>
       </div>
     </header>
 
@@ -515,32 +512,34 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          นูดิเบรนช์ใน
-          <a
-            href="/th/posts/koh-chang-diving-travel-guides/travel-guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >เกาะช้าง</a
-          >
-          – อัญมณีสีสันใต้ท้องทะเล
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          นูดิเบรนช์ที่เกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เล็กแต่สวยสะดุดตา – นูดิเบรนช์เป็นหนึ่งในไฮไลท์ของการถ่ายภาพมาโครที่เกาะช้าง เรียนรู้วิธีค้นหาและเพลิดเพลินกับสิ่งมีชีวิตน่าทึ่งเหล่านี้
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#nudi-what">คืออะไร?</a>
+            <a href="#nudi-fascinating">ทำไมน่าสนใจ?</a>
+            <a href="#nudi-habitat">ถิ่นอาศัย</a>
+            <a href="#nudi-diet">อาหาร</a>
+            <a href="#nudi-predators">นักล่า</a>
+            <a href="#nudi-species">สายพันธุ์</a>
+            <a href="#nudi-where">จุดพบ</a>
+            <a href="#nudi-photo">ถ่ายภาพ</a>
+            <a href="#nudi-why">ทำไมน่าค้นหา?</a>
+          </div>
+        </nav>
+
+<p>
           นูดิเบรนช์คือตัวอ่อนทะเลที่มีสีสันสดใสและรูปร่างแปลกตา
           เกาะช้างเป็นแหล่งที่อยู่อาศัยของสายพันธุ์ที่หลากหลาย
           ในบทความนี้คุณจะได้เรียนรู้เกี่ยวกับพฤติกรรม ถิ่นอาศัย
@@ -549,7 +548,7 @@
 
         <hr />
 
-        <h2>1. นูดิเบรนช์คืออะไร?</h2>
+        <h2 id="nudi-what">1. นูดิเบรนช์คืออะไร?</h2>
         <ul>
           <li>หอยไม่มีเปลือก ตัวนิ่ม สีสันสดใส</li>
           <li>มีมากกว่า 3,000 สายพันธุ์ทั่วโลก ส่วนใหญ่อยู่ในทะเลเขตร้อน</li>
@@ -558,7 +557,7 @@
 
         <hr />
 
-        <h2>2. ทำไมนูดิเบรนช์ถึงน่าสนใจ?</h2>
+        <h2 id="nudi-fascinating">2. ทำไมนูดิเบรนช์ถึงน่าสนใจ?</h2>
         <ul>
           <li>ใช้สีสดเตือนนักล่าว่ามีพิษ</li>
           <li>บางชนิดสะสมพิษจากเหยื่อไว้ป้องกันตัว</li>
@@ -567,7 +566,7 @@
 
         <hr />
 
-        <h2>3. ถิ่นอาศัยและพฤติกรรม</h2>
+        <h2 id="nudi-habitat">3. ถิ่นอาศัยและพฤติกรรม</h2>
         <ul>
           <li>พบได้ตามแนวปะการัง ฟองน้ำ และพื้นทราย</li>
           <li>เคลื่อนไหวช้าโดยการบีบตัวแบบคลื่น</li>
@@ -576,7 +575,7 @@
 
         <hr />
 
-        <h2>4. นูดิเบรนช์กินอะไร?</h2>
+        <h2 id="nudi-diet">4. นูดิเบรนช์กินอะไร?</h2>
         <ul>
           <li>ฟองน้ำ ไฮดรอยด์ และสัตว์ไม่มีกระดูกสันหลังขนาดเล็ก</li>
           <li>บางชนิดกินสัตว์มีพิษแล้วเก็บพิษไว้ใช้เอง</li>
@@ -585,7 +584,7 @@
 
         <hr />
 
-        <h2>5. นักล่าของนูดิเบรนช์คือใคร?</h2>
+        <h2 id="nudi-predators">5. นักล่าของนูดิเบรนช์คือใคร?</h2>
         <ul>
           <li>ปลาที่กินสัตว์อื่น เช่น ปลาปักเป้า</li>
           <li>สัตว์จำพวกกุ้งปูที่มีกรามแข็งแรง</li>
@@ -594,7 +593,7 @@
 
         <hr />
 
-        <h2>6. สายพันธุ์นูดิเบรนช์ในเกาะช้าง</h2>
+        <h2 id="nudi-species">6. สายพันธุ์นูดิเบรนช์ในเกาะช้าง</h2>
         <ul>
           <li><strong>Pikachu</strong> – เหลืองลายดำ</li>
           <li><strong>Blue Dragon</strong> – น้ำเงิน-ม่วง มีเหงือกแปลกตา</li>
@@ -614,7 +613,7 @@
 
         <hr />
 
-        <h2>7. จุดดำน้ำที่พบนูดิเบรนช์ในเกาะช้าง</h2>
+        <h2 id="nudi-where">7. จุดดำน้ำที่พบนูดิเบรนช์ในเกาะช้าง</h2>
         <table class="specialty-table">
           <thead>
             <tr>
@@ -640,7 +639,7 @@
 
         <hr />
 
-        <h2>8. วิธีถ่ายภาพนูดิเบรนช์</h2>
+        <h2 id="nudi-photo">8. วิธีถ่ายภาพนูดิเบรนช์</h2>
         <ul>
           <li>ใช้<strong>เลนส์มาโคร</strong>เพื่อเก็บรายละเอียด</li>
           <li>หลีกเลี่ยงแฟลชแรงเพื่อไม่ให้สีเพี้ยน</li>
@@ -649,7 +648,7 @@
 
         <hr />
 
-        <h2>9. ทำไมน่าค้นหานูดิเบรนช์ที่เกาะช้าง?</h2>
+        <h2 id="nudi-why">9. ทำไมน่าค้นหานูดิเบรนช์ที่เกาะช้าง?</h2>
         <ul>
           <li>เหมาะสำหรับผู้รักการถ่ายภาพและชีวิตทะเล</li>
           <li>มีความหลากหลายของสีและลวดลายสูง</li>

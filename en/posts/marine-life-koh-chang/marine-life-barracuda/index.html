@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -491,14 +497,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Barracudas in Koh Chang – Species, Behavior & Best Dive Sites</h1>
-          <p>
-            Barracudas are fast, elegant predators frequently spotted in the
-            tropical waters of Koh Chang
-          </p>
-        </div>
       </div>
     </header>
 
@@ -514,22 +512,29 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Barracudas in Koh Chang – Species, Behavior & Best Dive Sites
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Barracudas are fast, elegant predators frequently spotted in the tropical waters of Koh Chang
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#bar-species">Species</a>
+            <a href="#bar-behavior">Behavior</a>
+            <a href="#bar-dive-sites">Dive sites</a>
+            <a href="#bar-conclusion">Conclusion</a>
+          </div>
+        </nav>
+
+<p>
           Barracudas are fast, elegant predators frequently spotted in the
           tropical waters of
           <a
@@ -544,7 +549,7 @@
 
         <hr />
 
-        <h2>1. The Three Barracuda Species in Koh Chang</h2>
+        <h2 id="bar-species">1. The Three Barracuda Species in Koh Chang</h2>
 
         <h3>Great Barracuda (<em>Sphyraena barracuda</em>)</h3>
         <ul>
@@ -621,7 +626,7 @@
 
         <hr />
 
-        <h2>2. Behavior & Hunting Strategy</h2>
+        <h2 id="bar-behavior">2. Behavior & Hunting Strategy</h2>
         <p>
           Barracudas are highly skilled predators that rely on their speed and
           razor-sharp teeth to catch prey. They often remain motionless in the
@@ -642,7 +647,7 @@
 
         <hr />
 
-        <h2>3. Best Dive Sites to See Barracudas in Koh Chang</h2>
+        <h2 id="bar-dive-sites">3. Best Dive Sites to See Barracudas in Koh Chang</h2>
         <p>
           The best dive sites in Koh Chang for Barracuda sightings depend on the
           species.
@@ -695,7 +700,7 @@
 
         <hr />
 
-        <h2>4. Conclusion – Why You Should See Barracudas in Koh Chang</h2>
+        <h2 id="bar-conclusion">4. Conclusion – Why You Should See Barracudas in Koh Chang</h2>
         <p>
           Barracudas are among the most spectacular fish you can see in Koh
           Chang. Whether in massive schools or as impressive solitary hunters,

@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -497,14 +503,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Riesendrückerfisch in Koh Chang</h1>
-          <p>
-            Bunt, mutig und missverstanden – erfahre, wie du Riesendrückerfische
-            beim Tauchen in Koh Chang sicher beobachten kannst.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -520,23 +518,31 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Riesendrückerfisch in Koh Chang – Verhalten, Gefahren & beste
-          Tauchplätze
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Riesendrückerfisch in Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Bunt, mutig und missverstanden – erfahre, wie du Riesendrückerfische beim Tauchen in Koh Chang sicher beobachten kannst.
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ttf-biology">Biologie</a>
+            <a href="#ttf-behavior">Verhalten</a>
+            <a href="#ttf-diet">Nahrung</a>
+            <a href="#ttf-dive-sites">Tauchplätze</a>
+            <a href="#ttf-conclusion">Muss man Angst haben?</a>
+            <a href="#ttf-gallery">Fotogalerie</a>
+          </div>
+        </nav>
+
+<p>
           Der <strong>Riesendrückerfisch</strong> (Balistoides viridescens)
           zählt zu den faszinierendsten und zugleich missverstandensten Fischen
           der Tropen. Taucher schätzen seine kräftigen Farben, doch sein
@@ -549,7 +555,7 @@
 
         <hr />
 
-        <h2>1. Merkmale & Biologie</h2>
+        <h2 id="ttf-biology">1. Merkmale & Biologie</h2>
         <ul>
           <li>
             <strong>Wissenschaftlicher Name:</strong> Balistoides viridescens
@@ -565,7 +571,7 @@
 
         <hr />
 
-        <h2>2. Verhalten & Lebensweise</h2>
+        <h2 id="ttf-behavior">2. Verhalten & Lebensweise</h2>
         <p>
           Der Riesendrückerfisch ist besonders während der Brutzeit sehr
           territorial. Taucher sollten seine
@@ -581,7 +587,7 @@
 
         <hr />
 
-        <h2>3. Nahrung & Fressverhalten</h2>
+        <h2 id="ttf-diet">3. Nahrung & Fressverhalten</h2>
         <p>
           Der Riesendrückerfisch frisst eine große Vielfalt an Meeresbewohnern,
           unter anderem:
@@ -595,7 +601,7 @@
 
         <hr />
 
-        <h2>4. Beste Tauchplätze für Riesendrückerfische in Koh Chang</h2>
+        <h2 id="ttf-dive-sites">4. Beste Tauchplätze für Riesendrückerfische in Koh Chang</h2>
         <p>
           Man findet sie fast überall rund um Koh Chang, doch
           <strong>der beliebteste Ort ist Hin Raab South</strong>.
@@ -654,7 +660,7 @@
 
         <hr />
 
-        <h2>5. Fazit – Muss man Angst haben?</h2>
+        <h2 id="ttf-conclusion">5. Fazit – Muss man Angst haben?</h2>
         <p>
           Nein! Der Riesendrückerfisch ist ein wichtiger Teil des Ökosystems.
           Mit Respekt und Vorsicht kann man ihn sicher beobachten.
@@ -662,7 +668,7 @@
 
         <hr />
 
-        <h2>6. Fotogalerie – Riesendrückerfisch auf Koh Chang</h2>
+        <h2 id="ttf-gallery">6. Fotogalerie – Riesendrückerfisch auf Koh Chang</h2>
 
         <div
           style="

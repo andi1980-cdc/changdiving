@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -494,14 +500,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Green Sea Turtles in Koh Chang</h1>
-          <p>
-            Discover where to find turtles while diving in Koh Chang – learn
-            their habits, favorite spots, and how to protect them.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -517,22 +515,30 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Green Sea Turtle in Koh Chang – Life, Diet & Best Dive Sites
-        </h2>
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Green Sea Turtles in Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Discover where to find turtles while diving in Koh Chang – learn their habits, favorite spots, and how to protect them.
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#gst-biology">Biology</a>
+            <a href="#gst-habitat">Habitat</a>
+            <a href="#gst-diet">Diet</a>
+            <a href="#gst-conservation">Conservation</a>
+            <a href="#gst-dive-sites">Best dive sites</a>
+          </div>
+        </nav>
+
+<p>
           The <strong>Green Sea Turtle</strong> (Chelonia mydas) is one of the
           most fascinating marine creatures frequently spotted in
           <a
@@ -570,7 +576,7 @@
 
         <hr />
 
-        <h2>1. Characteristics & Biology</h2>
+        <h2 id="gst-biology">1. Characteristics & Biology</h2>
         <ul>
           <li><strong>Scientific Name:</strong> Chelonia mydas</li>
           <li><strong>Size:</strong> Up to 1.5 meters in shell length</li>
@@ -602,7 +608,7 @@
         </figure>
 
         <hr />
-        <h2>2. Habitat & Behavior</h2>
+        <h2 id="gst-habitat">2. Habitat & Behavior</h2>
         <p>
           Green Sea Turtles thrive in
           <strong>seagrass beds and coral reefs</strong>. They are often spotted
@@ -629,7 +635,7 @@
 
         <hr />
 
-        <h2>3. Diet & Feeding Habits</h2>
+        <h2 id="gst-diet">3. Diet & Feeding Habits</h2>
         <p>
           Green Sea Turtles are <strong>primarily herbivores</strong>. Their
           diet includes:
@@ -642,7 +648,7 @@
 
         <hr />
 
-        <h2>4. Threats & Conservation</h2>
+        <h2 id="gst-conservation">4. Threats & Conservation</h2>
         <p>Green Sea Turtles are <strong>threatened</strong> due to:</p>
         <ul>
           <li>Plastic pollution</li>
@@ -653,7 +659,7 @@
 
         <hr />
 
-        <h2>5. Best Places in Koh Chang to Spot Turtles</h2>
+        <h2 id="gst-dive-sites">5. Best Places in Koh Chang to Spot Turtles</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table

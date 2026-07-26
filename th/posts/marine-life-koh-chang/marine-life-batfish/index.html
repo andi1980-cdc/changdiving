@@ -336,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -485,14 +491,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ปลาค้างคาวที่เกาะช้าง – เพื่อนนักดำน้ำผู้ขี้สงสัย</h1>
-          <p>
-            พบกับปลาค้างคาวเพื่อนร่วมแนวปะการังสุดน่ารักของเกาะช้าง
-            ที่มักว่ายน้ำเคียงข้างนักดำน้ำตลอดทริป
-          </p>
-        </div>
       </div>
     </header>
 
@@ -508,25 +506,29 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+            <div class="posts-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
           ปลาค้างคาวที่เกาะช้าง – เพื่อนนักดำน้ำผู้ขี้สงสัย
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          พบกับปลาค้างคาวเพื่อนร่วมแนวปะการังสุดน่ารักของเกาะช้าง ที่มักว่ายน้ำเคียงข้างนักดำน้ำตลอดทริป
+        </p>
 
-        <p>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#bf-appearance">ลักษณะและพฤติกรรม</a>
+            <a href="#bf-where">จุดพบ</a>
+            <a href="#bf-why">ทำไมนักดำน้ำชอบ</a>
+            <a href="#bf-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+<p>
           ปลาค้างคาว (<em>Platax sp.</em>) หรือที่รู้จักในชื่อ ปลาหูช้าง
           เป็นหนึ่งในปลาที่น่าหลงใหลที่สุดในเกาะช้าง ด้วยนิสัยขี้สงสัย
           มักจะว่ายน้ำอยู่กับนักดำน้ำเป็นเวลานาน โดยเฉพาะบริเวณเรือจมอย่าง
@@ -536,7 +538,7 @@
 
         <hr />
 
-        <h2>1. ลักษณะและพฤติกรรม</h2>
+        <h2 id="bf-appearance">1. ลักษณะและพฤติกรรม</h2>
         <ul>
           <li><strong>ขนาด:</strong> ตัวเต็มวัยยาวได้ถึง 60 ซม.</li>
           <li>
@@ -552,7 +554,7 @@
 
         <hr />
 
-        <h2>2. จุดดำน้ำที่พบปลาค้างคาวในเกาะช้าง</h2>
+        <h2 id="bf-where">2. จุดดำน้ำที่พบปลาค้างคาวในเกาะช้าง</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table
@@ -590,7 +592,7 @@
 
         <hr />
 
-        <h2>3. ทำไมนักดำน้ำถึงชอบปลาค้างคาว</h2>
+        <h2 id="bf-why">3. ทำไมนักดำน้ำถึงชอบปลาค้างคาว</h2>
         <ul>
           <li>
             <strong>ว่ายน้ำเคียงข้าง:</strong> มักว่ายตามนักดำน้ำด้วยความสนใจ
@@ -606,7 +608,7 @@
 
         <hr />
 
-        <h2>สรุป</h2>
+        <h2 id="bf-conclusion">สรุป</h2>
         <p>
           ปลาค้างคาวเป็นหนึ่งในปลาที่น่าประทับใจที่สุดสำหรับนักดำน้ำที่เกาะช้าง
           หากคุณอยากสัมผัสใกล้ชิด จอง

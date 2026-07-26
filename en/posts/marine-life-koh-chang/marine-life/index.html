@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -486,14 +492,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Marine Life Koh Chang – What Can You See While Diving?</h1>
-          <p>
-            Discover dolphins, whale sharks, colorful coral reefs and rare
-            underwater species while diving with Chang Diving in Koh Chang.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -510,19 +508,25 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Marine Life Koh Chang – What Can You See While Diving?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Discover dolphins, whale sharks, colorful coral reefs and rare underwater species while diving with Chang Diving in Koh Chang.
+        </p>
+
+        <nav class="page-jump-nav" aria-label="On this page" style="border-bottom: 1px solid #ccc">
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#marine-mammals">Marine Mammals</a>
+            <a href="#sharks-rays">Sharks & Rays</a>
+            <a href="#coastal-jacks">Coastal & Jacks</a>
+            <a href="#reef-fishes">Reef Fishes</a>
+            <a href="#reptiles">Reptiles</a>
+            <a href="#invertebrates">Invertebrates</a>
+            <a href="#corals-sponges">Corals & Sponges</a>
+          </div>
+        </nav>
 
         <p>
           Discover <a href="/en/dive-sites/">Koh Chang's dive sites</a>, vibrant
@@ -572,7 +576,10 @@
         </div>
 
         <hr />
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
+        <h2
+          id="marine-mammals"
+          style="text-align: center; font-size: 28px; color: #004d80"
+        >
           Marine Mammals in Koh Chang
         </h2>
 
@@ -679,7 +686,7 @@
           </table>
         </div>
         <hr />
-        <h2>Sharks & Rays</h2>
+        <h2 id="sharks-rays">Sharks & Rays</h2>
         <p>
           Sharks and rays are some of the most enigmatic and misunderstood
           creatures of the ocean. They are crucial for the health of our planet.
@@ -823,7 +830,7 @@
           </table>
         </div>
         <hr />
-        <h2>Crevalle jack</h2>
+        <h2 id="coastal-jacks">Crevalle jack</h2>
         <p>
           The crevalle jack (Caranx hippos), also known as the common jack,
           black-tailed trevally, couvalli jack, black cavalli, jack crevale, or
@@ -1042,7 +1049,7 @@
           </table>
         </div>
         <hr />
-        <h2>Coral Reef Fish's</h2>
+        <h2 id="reef-fishes">Coral Reef Fish's</h2>
         <p>
           Coral reef fish are fish which live amongst or in close relation to
           coral reefs. Coral reefs form complex ecosystems with tremendous
@@ -3173,7 +3180,7 @@
           </table>
         </div>
         <hr />
-        <h2>Reptiles</h2>
+        <h2 id="reptiles">Reptiles</h2>
         <p>
           Reptiles are tetrapod animals in the class Reptilia, comprising
           today's turtles, crocodilians, snakes, amphisbaenians, lizards,
@@ -3281,7 +3288,7 @@
           </table>
         </div>
         <hr />
-        <h2>Shrimps</h2>
+        <h2 id="invertebrates">Shrimps</h2>
         <p>
           Shrimps play important roles in the food chain and are an important
           food source for larger animals ranging from fish to whales. The
@@ -4336,7 +4343,7 @@
           </table>
         </div>
         <hr />
-        <h2>Branching Corals</h2>
+        <h2 id="corals-sponges">Branching Corals</h2>
         <p>
           Stony corals are members of the class Anthozoa and like other members
           of the group, do not have a medusa stage in their life cycle. The
