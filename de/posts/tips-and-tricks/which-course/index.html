@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcher Tauchkurs passt zu mir und warum?</title>
     <meta
@@ -333,6 +334,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -363,7 +370,6 @@
         "headline": "Welcher Tauchkurs ist der richtige für mich – und warum?",
         "alternativeHeadline": "Tauch-Ausbildungswege erklärt: Einsteiger, Fortgeschrittene & Technik",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/the-world-of-diving-find-the-right-course-for-you_big.webp",
@@ -371,7 +377,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchtipps & Tricks",
@@ -490,15 +495,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Welcher Tauchkurs passt zu mir und warum?</h1>
-          <p>
-            Vom ersten Atemzug unter Wasser bis hin zum technischen Tauchen –
-            finde den Kurs, der zu deinen Zielen, deiner Zeit und deinem
-            Erfahrungsstand passt.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -517,18 +513,35 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Welcher Tauchkurs passt zu mir und warum?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Vom ersten Atemzug unter Wasser bis hin zum technischen Tauchen –
+          finde den Kurs, der zu deinen Zielen, deiner Zeit und deinem
+          Erfahrungsstand passt.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          Welcher Tauchkurs ist der Richtige für mich – und warum?
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#wc-intro">Einstieg</a>
+            <a href="#wc-org">Organisation</a>
+            <a href="#wc-basics">Erster Schritt</a>
+            <a href="#wc-advanced">Advanced</a>
+            <a href="#wc-specialties">Spezialkurse</a>
+            <a href="#wc-rescue">Rescue</a>
+            <a href="#wc-tech">Tec</a>
+            <a href="#wc-conclusion">Fazit</a>
+          </div>
+        </nav>
+
+        <h2 id="wc-intro">
+          Ziele, Zeit und Erfahrung – so findest du den passenden Tauchweg
         </h2>
 
         <p>
@@ -541,7 +554,7 @@
 
         <hr />
 
-        <h2>Welche Tauchorganisation passt zu mir?</h2>
+        <h2 id="wc-org">Welche Tauchorganisation passt zu mir?</h2>
 
         <p>
           Grundsätzlich ist es egal, für welche Organisation du dich
@@ -607,7 +620,9 @@
 
         <hr />
 
-        <h2>1. Der Einstieg: Welcher Kurs ist der erste Schritt?</h2>
+        <h2 id="wc-basics">
+          1. Der Einstieg: Welcher Kurs ist der erste Schritt?
+        </h2>
 
         <p>Wenn du noch nie getaucht bist, gibt es folgende Optionen:</p>
 
@@ -643,7 +658,9 @@
 
         <hr />
 
-        <h2>2. Fortgeschrittene Kurse: Was kommt nach dem OWD?</h2>
+        <h2 id="wc-advanced">
+          2. Fortgeschrittene Kurse: Was kommt nach dem OWD?
+        </h2>
 
         <p>
           Mit OWD-Zertifikat kannst du deine Fähigkeiten vertiefen oder neue
@@ -665,7 +682,7 @@
 
         <hr />
 
-        <h2>3. Spezialkurse & Fortgeschrittenentraining</h2>
+        <h2 id="wc-specialties">3. Spezialkurse & Fortgeschrittenentraining</h2>
 
         <p>
           Bei <strong>Chang Diving</strong> bieten wir eine große Auswahl an
@@ -765,7 +782,9 @@
 
         <hr />
 
-        <h2>4. Rescue Diving & Sicherheit: Der nächste große Schritt</h2>
+        <h2 id="wc-rescue">
+          4. Rescue Diving & Sicherheit: Der nächste große Schritt
+        </h2>
 
         <p>
           Der <strong>Rescue Diver Kurs</strong> ist nicht nur für angehende
@@ -871,7 +890,9 @@
 
         <hr />
 
-        <h2>6. Technisches Tauchen (TDI) – Mehr Tiefe, mehr Wissen</h2>
+        <h2 id="wc-tech">
+          6. Technisches Tauchen (TDI) – Mehr Tiefe, mehr Wissen
+        </h2>
 
         <p>
           Technisches Tauchen (Tec Diving) eröffnet völlig neue Möglichkeiten
@@ -965,7 +986,7 @@
 
         <hr />
 
-        <h2>7. Fazit – Welcher Kurs passt zu dir?</h2>
+        <h2 id="wc-conclusion">7. Fazit – Welcher Kurs passt zu dir?</h2>
 
         <p>
           Egal ob du gerade erst beginnst oder bereits Erfahrung hast – es gibt

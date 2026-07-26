@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>การดำน้ำลึกคืออะไร? มีความเสี่ยงอะไรบ้าง?</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "การดำน้ำลึกคืออะไร และมีความเสี่ยงอย่างไร?",
         "alternativeHeadline": "ทำความเข้าใจการดำน้ำลึก: ความปลอดภัย ความเสี่ยง และลำดับการดำน้ำ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/deep-diving_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "เคล็ดลับ & เทคนิค",
@@ -488,15 +493,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>การดำน้ำลึกคืออะไร? มีความเสี่ยงอะไรบ้าง?</h1>
-          <p>
-            เรียนรู้การดำน้ำลึกตั้งแต่ 18 ถึงมากกว่า 40 เมตร
-            การวางแผนการดำน้ำอย่างปลอดภัย ทฤษฎีการลดแรงดัน
-            และลำดับการดำน้ำที่ถูกต้อง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -513,21 +509,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          การดำน้ำลึกคืออะไร? มีความเสี่ยงอะไรบ้าง?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เรียนรู้การดำน้ำลึกตั้งแต่ 18 ถึงมากกว่า 40 เมตร
+          การวางแผนการดำน้ำอย่างปลอดภัย ทฤษฎีการลดแรงดัน
+          และลำดับการดำน้ำที่ถูกต้อง
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          การดำน้ำลึก – คืออะไร และมีความเสี่ยงอย่างไร?
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#dd-intro">บทนำ</a>
+            <a href="#dd-rec-tech">ทั่วไป vs เทคนิค</a>
+            <a href="#dd-why">ทำไมลึก</a>
+            <a href="#dd-ndl">เวลาปลดแรงดัน</a>
+            <a href="#dd-cert">ใบรับรอง</a>
+            <a href="#dd-sequence">ลำดับการดำน้ำ</a>
+            <a href="#dd-final">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="dd-intro">
+          ขีดจำกัดความลึก ความเสี่ยง DCS และลำดับการดำน้ำที่ปลอดภัย
         </h2>
 
         <p>
@@ -542,7 +551,7 @@
 
         <hr />
 
-        <h2>1. การดำน้ำลึกสำหรับนักดำน้ำทั่วไปและเทคนิค</h2>
+        <h2 id="dd-rec-tech">1. การดำน้ำลึกสำหรับนักดำน้ำทั่วไปและเทคนิค</h2>
 
         <h3>นักดำน้ำเพื่อการพักผ่อน</h3>
         <p>
@@ -570,7 +579,7 @@
 
         <hr />
 
-        <h2>2. ทำไมต้องดำน้ำลึก? มีอะไรให้ชม?</h2>
+        <h2 id="dd-why">2. ทำไมต้องดำน้ำลึก? มีอะไรให้ชม?</h2>
 
         <p>
           หลายคนสงสัยว่าทำไมต้องดำน้ำลึก เมื่อแสงลดลงและสีจืดลง เหตุผลดีๆ
@@ -592,7 +601,7 @@
 
         <hr />
 
-        <h2>3. ทำไมการคำนวณเวลาปลดแรงดันจึงสำคัญ?</h2>
+        <h2 id="dd-ndl">3. ทำไมการคำนวณเวลาปลดแรงดันจึงสำคัญ?</h2>
 
         <h3>อดีต vs ปัจจุบัน</h3>
         <p>
@@ -610,7 +619,7 @@
 
         <hr />
 
-        <h2>4. ต้องมีใบรับรองอะไรถึงจะดำน้ำลึก 40 ม. ได้?</h2>
+        <h2 id="dd-cert">4. ต้องมีใบรับรองอะไรถึงจะดำน้ำลึก 40 ม. ได้?</h2>
 
         <p>
           โดยทั่วไป ใบรับรอง **Open Water Diver** ให้ดำน้ำได้ถึง **18 เมตร**
@@ -626,7 +635,7 @@
 
         <hr />
 
-        <h2>5. กฎสำคัญที่สุด: ลำดับการดำน้ำ</h2>
+        <h2 id="dd-sequence">5. กฎสำคัญที่สุด: ลำดับการดำน้ำ</h2>
 
         <p>
           <strong>จำไว้เสมอ:</strong><br /><strong
@@ -719,7 +728,7 @@
 
         <hr />
 
-        <h2>สรุป – ดำน้ำลึกอย่างปลอดภัย</h2>
+        <h2 id="dd-final">สรุป – ดำน้ำลึกอย่างปลอดภัย</h2>
 
         <p>
           การดำน้ำลึกเปิดโลกใหม่ แต่ก็มาพร้อมความเสี่ยง

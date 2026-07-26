@@ -334,6 +334,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -496,14 +502,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>การใช้รอกและสายเพื่อนำทางในการดำน้ำเรือจม</h1>
-          <p>
-            เรียนรู้เทคนิคการใช้รอกและเส้นนำทางสำหรับ Penetration Dive –
-            ไม่หลงทาง ไม่พันกัน และปลอดภัยในเรือจมเกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -520,22 +518,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          การใช้รอกและสายเพื่อนำทางในการดำน้ำเรือจม
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เรียนรู้เทคนิคการใช้รอกและเส้นนำทางสำหรับ Penetration Dive – ไม่หลงทาง
+          ไม่พันกัน และปลอดภัยในเรือจมเกาะช้าง
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          การใช้รอกและสายในการดำน้ำเรือจมอย่างปลอดภัย
-        </h2>
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#rg-intro">บทนำ</a>
+            <a href="#rg-gear">อุปกรณ์</a>
+            <a href="#rg-prep">เตรียมเส้น</a>
+            <a href="#rg-rules">กฎเส้น</a>
+            <a href="#line-markers">มาร์คเกอร์</a>
+            <a href="#rg-penetration">เจาะเรือจม</a>
+            <a href="#rg-sites">จุดฝึก</a>
+            <a href="#rg-video">วิดีโอ</a>
+          </div>
+        </nav>
+
+        <h2 id="rg-intro">อยู่บนเส้นทางในเรือจมด้วยเทคนิครอกที่สะอาด</h2>
 
         <p>
           ยินดีต้อนรับสู่คอร์ส
@@ -555,7 +564,7 @@
           และเทคนิคที่ถูกต้อง
         </p>
 
-        <h2>🧰 อุปกรณ์ที่จำเป็น</h2>
+        <h2 id="rg-gear">🧰 อุปกรณ์ที่จำเป็น</h2>
         <ul>
           <li>รอกหรือสปูล – สำหรับใช้หลักและสำรอง</li>
           <li>
@@ -564,7 +573,7 @@
           </li>
         </ul>
 
-        <h2>🛠️ การเตรียมเส้นนำทาง</h2>
+        <h2 id="rg-prep">🛠️ การเตรียมเส้นนำทาง</h2>
         <ul>
           <li>คลายเส้นทั้งหมดและตรวจสอบความเสียหายหรือการพันกัน</li>
           <li>ทำความสะอาดมาร์คเกอร์และติดชื่อย่อ พร้อมใช้งาน</li>
@@ -578,7 +587,7 @@
           </li>
         </ul>
 
-        <h2>📏 กฎทั่วไปในการจัดการเส้น</h2>
+        <h2 id="rg-rules">📏 กฎทั่วไปในการจัดการเส้น</h2>
         <ul>
           <li>
             ดำน้ำในพื้นที่เหนือศีรษะได้เฉพาะผู้ที่ได้รับการฝึกอบรมอย่างเหมาะสม
@@ -828,7 +837,7 @@
           <li>ลำดับการติดไม่ถูกต้อง</li>
         </ul>
 
-        <h2>🔗 ขั้นตอนการเจาะเรือจม</h2>
+        <h2 id="rg-penetration">🔗 ขั้นตอนการเจาะเรือจม</h2>
         <p>
           ผูกรอกไว้นอกเรือจมกับจุดยึดที่มั่นคง
           ใช้การผูกหลักและสำรองเสมอเพื่อความปลอดภัย วางเส้นให้สูงจากพื้นประมาณ
@@ -837,7 +846,7 @@
           ติดมาร์คเกอร์ที่จุดเลี้ยวและทางแยกทุกครั้ง
         </p>
 
-        <h2>📍 จุดดำน้ำแนะนำสำหรับฝึก</h2>
+        <h2 id="rg-sites">📍 จุดดำน้ำแนะนำสำหรับฝึก</h2>
         <ul>
           <li>
             <a
@@ -856,7 +865,7 @@
           </li>
         </ul>
 
-        <h2>🎥 วิดีโอแนะนำ: เทคนิคการใช้รอกและเส้นนำทาง</h2>
+        <h2 id="rg-video">🎥 วิดีโอแนะนำ: เทคนิคการใช้รอกและเส้นนำทาง</h2>
         <p>ชมวิดีโอของเราเพื่อดูตัวอย่างการใช้งานจริง:</p>
 
         <div

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deep Diving – Was ist das und welche Risiken gibt es?</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "Tieftauchen – Was ist das und welche Risiken gibt es?",
         "alternativeHeadline": "Tieftauchen verstehen: Sicherheit, Risiken & Tauchreihenfolge erklärt",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/deep-diving_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tipps & Tricks",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Tieftauchen – Was ist das und welche Risiken gibt es?</h1>
-          <p>
-            Erkunde Tieftauchen von 18 bis über 40 m, erfahre alles über sichere
-            Planung, Dekompressionstheorie und optimale Tauchreihenfolge.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,18 +506,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Tieftauchen – Was ist das und welche Risiken gibt es?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Erkunde Tieftauchen von 18 bis über 40 m, erfahre alles über sichere
+          Planung, Dekompressionstheorie und optimale Tauchreihenfolge.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#dd-intro">Einstieg</a>
+            <a href="#dd-rec-tech">Sport vs Tec</a>
+            <a href="#dd-why">Warum tief</a>
+            <a href="#dd-ndl">Deko-Grenzen</a>
+            <a href="#dd-cert">Zertifizierung</a>
+            <a href="#dd-sequence">Reihenfolge</a>
+            <a href="#dd-final">Fazit</a>
+          </div>
+        </nav>
+
+        <h2 id="dd-intro">
+          Tiefenlimits, DCS-Risiko und die Tauchreihenfolge, die dich schützt
         </h2>
 
         <p>
@@ -534,7 +546,7 @@
 
         <hr />
 
-        <h2>1. Tieftauchen für Sport- und Tec-Taucher</h2>
+        <h2 id="dd-rec-tech">1. Tieftauchen für Sport- und Tec-Taucher</h2>
 
         <h3>Für Sporttaucher</h3>
         <p>
@@ -559,7 +571,7 @@
 
         <hr />
 
-        <h2>2. Warum tief tauchen? Was gibt es dort zu sehen?</h2>
+        <h2 id="dd-why">2. Warum tief tauchen? Was gibt es dort zu sehen?</h2>
 
         <p>
           Viele fragen sich, warum man tief taucht, wenn Farben und Sicht
@@ -586,7 +598,7 @@
 
         <hr />
 
-        <h2>3. Warum sind Dekompressionsgrenzen wichtig?</h2>
+        <h2 id="dd-ndl">3. Warum sind Dekompressionsgrenzen wichtig?</h2>
 
         <h3>Früher vs. heute</h3>
         <p>
@@ -604,7 +616,7 @@
 
         <hr />
 
-        <h2>4. Welche Zertifizierung braucht man für 40 m?</h2>
+        <h2 id="dd-cert">4. Welche Zertifizierung braucht man für 40 m?</h2>
 
         <p>
           Mit dem **Open Water Diver** darfst du bis **18 m** tauchen. Für
@@ -618,7 +630,9 @@
 
         <hr />
 
-        <h2>5. Wichtigste Regel beim Tieftauchen: Tauchreihenfolge</h2>
+        <h2 id="dd-sequence">
+          5. Wichtigste Regel beim Tieftauchen: Tauchreihenfolge
+        </h2>
 
         <p>
           <strong>Merke:</strong><br />Der
@@ -707,7 +721,7 @@
 
         <hr />
 
-        <h2>Fazit – Tieftauchen sicher genießen!</h2>
+        <h2 id="dd-final">Fazit – Tieftauchen sicher genießen!</h2>
         <ul>
           <li>✅ **Richtige Ausbildung** (AOWD, Deep Diver)</li>
           <li>✅ **Tauchcomputer & Tabellen verstehen**</li>

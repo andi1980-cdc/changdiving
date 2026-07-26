@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Complete Guide for Beginner Divers – Everything You Need to Know Before
@@ -342,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "Complete Guide for Beginner Divers – Everything You Need to Know Before Your First Dive",
         "alternativeHeadline": "Beginner Scuba Diving Tips – How to Start Diving in Koh Chang",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/complete-guide-for-beginner-divers_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Diving Travel Guide",
@@ -500,17 +505,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Complete Guide for Beginner Divers – Everything You Need to Know
-            Before Your First Dive
-          </h1>
-          <p>
-            Have you always dreamed of exploring the underwater world but don’t
-            know where to start?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -527,20 +521,37 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Complete Guide for Beginner Divers – Everything You Need to Know
           Before Your First Dive
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Have you always dreamed of exploring the underwater world but don’t
+          know where to start?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#bg-intro">Intro</a>
+            <a href="#bg-experience">Experience?</a>
+            <a href="#bg-reqs">Requirements</a>
+            <a href="#bg-gear">Equipment</a>
+            <a href="#bg-first">First dive</a>
+            <a href="#bg-safety">Safety</a>
+            <a href="#bg-where">Where to learn</a>
+            <a href="#bg-conclusion">Conclusion</a>
+          </div>
+        </nav>
+
+        <h2 id="bg-intro">
+          Your first dive answers — experience, gear, safety, time, and cost
         </h2>
+
         <p>
           Have you always dreamed of exploring the underwater world but don’t
           know where to start? No worries – scuba diving is easier than you
@@ -550,7 +561,9 @@
 
         <hr />
 
-        <h2>1. Do I need experience to learn how to dive?</h2>
+        <h2 id="bg-experience">
+          1. Do I need experience to learn how to dive?
+        </h2>
         <p>
           No! Anyone can learn to dive. Most scuba courses, like the SDI or PADI
           <a href="/en/courses/open-water-diver/">Open Water Diver</a>, are
@@ -560,7 +573,7 @@
 
         <hr />
 
-        <h2>2. What are the requirements to start?</h2>
+        <h2 id="bg-reqs">2. What are the requirements to start?</h2>
         <ul>
           <li>
             <strong>Minimum age:</strong> 10 years old for the Open Water course
@@ -577,7 +590,7 @@
 
         <hr />
 
-        <h2>3. What equipment do I need?</h2>
+        <h2 id="bg-gear">3. What equipment do I need?</h2>
         <p>
           As a beginner, you don’t need your own equipment – everything will be
           provided in a dive course. The most important scuba gear includes:
@@ -601,7 +614,7 @@
 
         <hr />
 
-        <h2>4. What can I expect on my first dive?</h2>
+        <h2 id="bg-first">4. What can I expect on my first dive?</h2>
         <p>
           On your first dive, you will start with an instructor in shallow water
           or a swimming pool. You will learn:
@@ -619,7 +632,7 @@
 
         <hr />
 
-        <h2>5. Is scuba diving safe?</h2>
+        <h2 id="bg-safety">5. Is scuba diving safe?</h2>
         <p>
           Yes, scuba diving is a very safe sport when you follow the rules. In a
           <a href="/en/courses/">certified course</a>, you will learn all about
@@ -633,7 +646,7 @@
 
         <hr />
 
-        <h2>6. Where is the best place to learn how to dive?</h2>
+        <h2 id="bg-where">6. Where is the best place to learn how to dive?</h2>
         <p>
           If you want to learn to dive,
           <a href="/en/dive-sites/">Koh Chang</a> is the perfect place! Why?
@@ -701,7 +714,7 @@
 
         <hr />
 
-        <h2>Conclusion</h2>
+        <h2 id="bg-conclusion">Conclusion</h2>
         <p>
           Scuba diving is an incredible experience and much easier than you
           think. With the right course, you will feel safe and enjoy the

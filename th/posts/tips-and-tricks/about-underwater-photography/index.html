@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>เคล็ดลับถ่ายภาพใต้น้ำ – เก็บภาพดำน้ำสุดประทับใจ</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "เคล็ดลับถ่ายภาพใต้น้ำ – เก็บภาพใต้น้ำที่สมบูรณ์แบบระหว่างดำน้ำ",
         "alternativeHeadline": "ถ่ายภาพใต้น้ำอย่างมืออาชีพที่เกาะช้าง ด้วยอุปกรณ์และหลักสูตรที่เหมาะสม",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/digital-underwater-photography_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "เคล็ดลับการดำน้ำ",
@@ -493,14 +498,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>เคล็ดลับการถ่ายภาพใต้น้ำ – เก็บภาพใต้น้ำอย่างมือโปร</h1>
-          <p>
-            เรียนรู้เทคนิคถ่ายภาพใต้น้ำให้สวยสะดุดตาที่เกาะช้าง –
-            ตั้งแต่การเลือกกล้องไปจนถึงการแต่งภาพให้สมบูรณ์แบบ
-          </p>
-        </div>
       </div>
     </header>
 
@@ -517,21 +514,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          เคล็ดลับการถ่ายภาพใต้น้ำ – เก็บภาพใต้น้ำอย่างมือโปร
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เรียนรู้เทคนิคถ่ายภาพใต้น้ำให้สวยสะดุดตาที่เกาะช้าง –
+          ตั้งแต่การเลือกกล้องไปจนถึงการแต่งภาพให้สมบูรณ์แบบ
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          เคล็ดลับการถ่ายภาพใต้น้ำดิจิทัล – เก็บภาพใต้น้ำให้สวยสมบูรณ์แบบ
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#uwp-intro">บทนำ</a>
+            <a href="#uwp-camera">กล้อง</a>
+            <a href="#uwp-settings">การตั้งค่า</a>
+            <a href="#uwp-lighting">แสง</a>
+            <a href="#uwp-spots">จุดดำน้ำ</a>
+            <a href="#uwp-fish">ถ่ายปลา</a>
+            <a href="#uwp-mistakes">ข้อผิดพลาด</a>
+            <a href="#uwp-solo">Solo Diver</a>
+          </div>
+        </nav>
+
+        <h2 id="uwp-intro">
+          จากกล้องจนถึงแต่งภาพ — ถ่ายใต้น้ำที่เกาะช้างให้คมขึ้น
         </h2>
 
         <p>
@@ -543,7 +553,7 @@
 
         <hr />
 
-        <h2>1. เลือกกล้องที่เหมาะกับการถ่ายภาพใต้น้ำ</h2>
+        <h2 id="uwp-camera">1. เลือกกล้องที่เหมาะกับการถ่ายภาพใต้น้ำ</h2>
         <p>มีกล้องหลากหลายประเภทให้เลือกตามงบประมาณและเป้าหมายของคุณ:</p>
         <ul>
           <li>
@@ -572,7 +582,7 @@
 
         <hr />
 
-        <h2>2. การตั้งค่ากล้อง & เทคนิคเพื่อภาพที่ดีกว่า</h2>
+        <h2 id="uwp-settings">2. การตั้งค่ากล้อง & เทคนิคเพื่อภาพที่ดีกว่า</h2>
         <p>
           การถ่ายภาพใต้น้ำแตกต่างจากบนบกอย่างสิ้นเชิง สิ่งสำคัญที่ควรตั้งค่า:
         </p>
@@ -597,7 +607,7 @@
 
         <hr />
 
-        <h2>3. แสง – กุญแจสู่ภาพถ่ายใต้น้ำที่สวยงาม</h2>
+        <h2 id="uwp-lighting">3. แสง – กุญแจสู่ภาพถ่ายใต้น้ำที่สวยงาม</h2>
         <p>แสงจะลดลงอย่างรวดเร็วใต้น้ำ ดังนั้นแหล่งแสงภายนอกจึงสำคัญมาก:</p>
         <ul>
           <li>
@@ -614,7 +624,7 @@
 
         <hr />
 
-        <h2>4. จุดถ่ายภาพใต้น้ำที่ดีที่สุดในเกาะช้าง</h2>
+        <h2 id="uwp-spots">4. จุดถ่ายภาพใต้น้ำที่ดีที่สุดในเกาะช้าง</h2>
 
         <div style="overflow-x: auto; width: 100%; margin-bottom: 2em">
           <table
@@ -678,7 +688,7 @@
 
         <hr />
 
-        <h2>5. เทคนิคการถ่ายภาพปลา</h2>
+        <h2 id="uwp-fish">5. เทคนิคการถ่ายภาพปลา</h2>
         <ul>
           <li>
             <strong>เข้าใกล้จากด้านล่าง:</strong> หากเข้าใกล้จากด้านบน
@@ -696,7 +706,7 @@
 
         <hr />
 
-        <h2>6. ข้อผิดพลาดที่ควรหลีกเลี่ยง</h2>
+        <h2 id="uwp-mistakes">6. ข้อผิดพลาดที่ควรหลีกเลี่ยง</h2>
         <ul>
           <li>
             <strong>อยู่ไกลจากวัตถุเกินไป:</strong>
@@ -743,7 +753,9 @@
 
         <hr />
 
-        <h2>9. คอร์ส SDI Solo Diver – ทางเลือกที่เหมาะสำหรับช่างภาพใต้น้ำ</h2>
+        <h2 id="uwp-solo">
+          9. คอร์ส SDI Solo Diver – ทางเลือกที่เหมาะสำหรับช่างภาพใต้น้ำ
+        </h2>
         <p>
           การถ่ายภาพใต้น้ำต้องใช้ความอดทน
           บางครั้งต้องถ่ายหลายครั้งกว่าจะได้ภาพที่ลงตัว

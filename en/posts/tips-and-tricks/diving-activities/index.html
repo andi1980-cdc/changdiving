@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The 10 Most Popular Diving Activities on Koh Chang</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "The 10 Most Popular Diving Activities on Koh Chang",
         "alternativeHeadline": "Explore the Top Scuba Adventures with Chang Diving",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-activities_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tips & Tricks",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>The 10 Most Popular Diving Activities on Koh Chang</h1>
-          <p>
-            Explore Koh Chang's top diving activities – from fun dives and
-            beginner courses to deep, wreck, and Nitrox diving adventures!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,18 +506,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           The 10 Most Popular Diving Activities on Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Explore Koh Chang's top diving activities – from fun dives and
+          beginner courses to deep, wreck, and Nitrox diving adventures!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#da-intro">Intro</a>
+            <a href="#da-fun">Fun dives</a>
+            <a href="#da-try">Try Dive</a>
+            <a href="#da-owd">Open Water</a>
+            <a href="#da-aow">Advanced</a>
+            <a href="#da-rescue">Rescue</a>
+            <a href="#da-deep">Deep</a>
+            <a href="#da-wreck">Wreck</a>
+          </div>
+        </nav>
+
+        <h2 id="da-intro">
+          Ten ways to dive Koh Chang — from first bubbles to wreck and Nitrox
         </h2>
 
         <p>
@@ -535,18 +548,20 @@
           for both beginners and experienced divers.
         </p>
 
-        <h3>1. Fun Dives – The Perfect Dive for Certified Divers</h3>
+        <h3 id="da-fun">
+          1. Fun Dives – The Perfect Dive for Certified Divers
+        </h3>
         <p>
           Explore the most beautiful coral reefs and wrecks around Koh Chang!
           Our <a href="/en/day-trips/fun-dives/">fun dives</a> are ideal for
           certified divers.
         </p>
 
-        <h3>2. Try Dive – Diving for Beginners</h3>
+        <h3 id="da-try">2. Try Dive – Diving for Beginners</h3>
         <p>
           Never dived before? No problem! With our
-          <a href="/en/day-trips/try-dive/">Try Dive</a> program,
-          you can learn the basics of diving in just a few hours.
+          <a href="/en/day-trips/try-dive/">Try Dive</a> program, you can learn
+          the basics of diving in just a few hours.
         </p>
 
         <h3>3. Scuba Diver Course – Get Certified in 2 Days</h3>
@@ -558,7 +573,9 @@
           certification.
         </p>
 
-        <h3>4. Open Water Diver Course – Your Entry into the Diving World</h3>
+        <h3 id="da-owd">
+          4. Open Water Diver Course – Your Entry into the Diving World
+        </h3>
         <p>
           The <a href="/en/courses/open-water-diver/">Open Water Diver</a> is
           the first step to becoming a fully independent certified diver. Learn
@@ -566,7 +583,7 @@
           own.
         </p>
 
-        <h3>
+        <h3 id="da-aow">
           5. Advanced Open Water Diver Course – More Adventures Underwater
         </h3>
         <p>
@@ -577,7 +594,7 @@
           Search and Recovery.
         </p>
 
-        <h3>6. Rescue Diver Course – Safety First</h3>
+        <h3 id="da-rescue">6. Rescue Diver Course – Safety First</h3>
         <p>
           A must for ambitious divers: The
           <a href="/en/courses/rescue-diver/">Rescue Diver Course</a> prepares
@@ -591,7 +608,7 @@
           step in your professional diving career.
         </p>
 
-        <h3>8. Deep Diver – Diving into the Depths</h3>
+        <h3 id="da-deep">8. Deep Diver – Diving into the Depths</h3>
         <p>
           Learn to safely venture into deeper waters and discover the secrets of
           deep dive sites. The
@@ -606,7 +623,7 @@
           dives or coral reef explorations.
         </p>
 
-        <h3>10. Wreck Diver – Wreck Diving on Koh Chang</h3>
+        <h3 id="da-wreck">10. Wreck Diver – Wreck Diving on Koh Chang</h3>
         <p>
           The wreck of the HTMS Chang is one of Koh Chang's most popular dive
           sites. The

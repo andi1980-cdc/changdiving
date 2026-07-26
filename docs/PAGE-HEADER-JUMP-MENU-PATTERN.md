@@ -75,6 +75,8 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 | `/posts/scuba-knowledge/` (EN/DE/TH)                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/posts/diving-how-to-guides-koh-chang/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/posts/straight-talk/` (EN/DE/TH)                  | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/tips-and-tricks/` (EN/DE/TH)                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/koh-chang-diving-travel-guides/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 
 ### Blog-Posts (`posts-box`, mit Jump-Menü)
 
@@ -129,6 +131,17 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 | `posts/straight-talk/solo-diver` (EN/DE/TH)                                         | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
 | `posts/straight-talk/tech-diving-koh-chang` (EN/DE/TH)                              | ✅     | **12**      | Bestehendes Jump; H1+Teaser; **`tek-box`** (schwarz/orange wie Deco Procedures)    |
 | `posts/straight-talk/technical-diver-stories` (EN/DE/TH)                            | ✅     | **8**       | Jump + H1+Teaser; **`tek-box`** (schwarz/orange wie Deco Procedures); Titel-H2 weg |
+| `posts/tips-and-tricks/about-underwater-photography` (EN/DE/TH)                     | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/tips-and-tricks/deep-diving` (EN/DE/TH)                                      | ✅     | **7**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/tips-and-tricks/diving-activities` (EN/DE/TH)                                | ✅     | **8**       | Jump zu Kern-Aktivitäten (H3); H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt           |
+| `posts/tips-and-tricks/open-water-duration` (EN/DE/TH)                              | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/tips-and-tricks/reel-guideline` (EN/DE/TH)                                   | ✅     | **8**       | Neues Jump inkl. bestehendes `#line-markers`; H1+Teaser + `#ccc`                   |
+| `posts/tips-and-tricks/self-inflating-bcd` (EN/DE/TH)                               | ✅     | **7**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/tips-and-tricks/water-in-regulator` (EN/DE/TH)                               | ✅     | **7**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/tips-and-tricks/which-course` (EN/DE/TH)                                     | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/koh-chang-diving-travel-guides/beginner-guide` (EN/DE/TH)                    | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/koh-chang-diving-travel-guides/thailand-diving-comparison` (EN/DE/TH)        | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/koh-chang-diving-travel-guides/travel-guide` (EN/DE/TH)                      | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
 
 **Regel:** siehe [Posts (`posts-box`)](#posts-posts-box) weiter unten.
 
@@ -542,7 +555,7 @@ Weitere Tech-Produkte (`advanced-nitrox`, `deco-procedures`, `advanced-wreck`, `
 ## Nächster Rollout (offen)
 
 **Kategorie-Hubs** (H1 + Teaser, **ohne** Jump-Menü):  
-`/dive-sites/`, weitere Post-Sub-Hubs (`tips-and-tricks/`, `koh-chang-diving-travel-guides/`, …) – gleiches Header-Muster wie `/posts/marine-life-koh-chang/`.
+`/dive-sites/` – gleiches Header-Muster wie die Post-Hubs (H1 + Teaser, ohne Jump-Menü).
 
 **Blog-Posts** (`posts-box`, H1 + Teaser wie Kurse, Jump individuell, Jump-Linie `#ccc`):  
 weitere Artikel unter `/posts/…` nach dem Muster von `marine-life` / bestehenden Knowledge-Posts.

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Kompletter Guide für Tauchanfänger – Alles, was du vor deinem ersten
@@ -342,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "Kompletter Guide für Tauchanfänger – Alles, was du vor deinem ersten Tauchgang wissen musst",
         "alternativeHeadline": "Tipps für Tauchneulinge – So startest du mit dem Tauchen auf Koh Chang",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/complete-guide-for-beginner-divers_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchreise-Guide, Ausbildung",
@@ -500,17 +505,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Kompletter Leitfaden für Tauchanfänger – Alles, was du vor deinem
-            ersten Tauchgang wissen musst
-          </h1>
-          <p>
-            Du träumst davon, die Unterwasserwelt zu entdecken, weißt aber
-            nicht, wo du anfangen sollst?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -527,20 +521,38 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Kompletter Leitfaden für Tauchanfänger – Alles, was du vor deinem
+          ersten Tauchgang wissen musst
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Du träumst davon, die Unterwasserwelt zu entdecken, weißt aber nicht,
+          wo du anfangen sollst?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          Kompletter Guide für Tauchanfänger – Alles, was du vor deinem ersten
-          Tauchgang wissen musst
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#bg-intro">Einstieg</a>
+            <a href="#bg-experience">Erfahrung?</a>
+            <a href="#bg-reqs">Voraussetzungen</a>
+            <a href="#bg-gear">Ausrüstung</a>
+            <a href="#bg-first">Erster TG</a>
+            <a href="#bg-safety">Sicherheit</a>
+            <a href="#bg-where">Wo lernen</a>
+            <a href="#bg-conclusion">Fazit</a>
+          </div>
+        </nav>
+
+        <h2 id="bg-intro">
+          Antworten vor dem ersten Tauchgang – Erfahrung, Gear, Sicherheit,
+          Zeit, Kosten
         </h2>
+
         <p>
           Du träumst davon, die Unterwasserwelt zu entdecken, weißt aber nicht,
           wo du anfangen sollst? Keine Sorge – Tauchen ist einfacher als du
@@ -550,7 +562,9 @@
 
         <hr />
 
-        <h2>1. Brauche ich Erfahrung, um tauchen zu lernen?</h2>
+        <h2 id="bg-experience">
+          1. Brauche ich Erfahrung, um tauchen zu lernen?
+        </h2>
         <p>
           Nein! Jeder kann tauchen lernen. Die meisten Tauchkurse wie der SDI
           oder PADI
@@ -561,7 +575,7 @@
 
         <hr />
 
-        <h2>2. Was sind die Voraussetzungen?</h2>
+        <h2 id="bg-reqs">2. Was sind die Voraussetzungen?</h2>
         <ul>
           <li>
             <strong>Mindestalter:</strong> 10 Jahre für den Open Water Kurs
@@ -578,7 +592,7 @@
 
         <hr />
 
-        <h2>3. Welche Ausrüstung brauche ich?</h2>
+        <h2 id="bg-gear">3. Welche Ausrüstung brauche ich?</h2>
         <p>
           Als Anfänger brauchst du keine eigene Ausrüstung – im Kurs wird alles
           gestellt. Wichtige Teile sind:
@@ -605,7 +619,7 @@
 
         <hr />
 
-        <h2>4. Was erwartet mich beim ersten Tauchgang?</h2>
+        <h2 id="bg-first">4. Was erwartet mich beim ersten Tauchgang?</h2>
         <p>
           Dein erster Tauchgang findet mit einem Tauchlehrer im flachen Wasser
           oder Pool statt. Du lernst:
@@ -623,7 +637,7 @@
 
         <hr />
 
-        <h2>5. Ist Tauchen sicher?</h2>
+        <h2 id="bg-safety">5. Ist Tauchen sicher?</h2>
         <p>
           Ja, Tauchen ist sehr sicher, wenn man die Regeln befolgt. In einem
           <a href="/de/courses/">zertifizierten Kurs</a> lernst du alle
@@ -637,7 +651,7 @@
 
         <hr />
 
-        <h2>6. Wo ist der beste Ort zum Tauchen lernen?</h2>
+        <h2 id="bg-where">6. Wo ist der beste Ort zum Tauchen lernen?</h2>
         <p>
           Wenn du tauchen lernen willst, ist
           <a href="/de/dive-sites/">Koh Chang</a> ideal! Warum?
@@ -705,7 +719,7 @@
 
         <hr />
 
-        <h2>Fazit</h2>
+        <h2 id="bg-conclusion">Fazit</h2>
         <p>
           Tauchen ist ein unvergessliches Erlebnis – und viel einfacher als du
           denkst. Mit dem richtigen Kurs fühlst du dich sicher und genießt die

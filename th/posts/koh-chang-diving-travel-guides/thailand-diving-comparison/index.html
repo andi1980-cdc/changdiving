@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>เปรียบเทียบการดำน้ำ: อ่าวไทย vs. ทะเลอันดามัน</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "ดำน้ำในประเทศไทย: อ่าวไทย vs. ทะเลอันดามัน – ที่ไหนดีกว่า?",
         "alternativeHeadline": "เปรียบเทียบแหล่งดำน้ำชั้นนำของไทย – เกาะช้าง สิมิลัน เกาะเต่า และอื่นๆ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/gulf-vs-andemann_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ไกด์ท่องเที่ยวดำน้ำ",
@@ -494,14 +499,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ดำน้ำในประเทศไทย: อ่าวไทย vs. อันดามัน – ที่ไหนดีกว่ากัน?</h1>
-          <p>
-            ประเทศไทยเป็นหนึ่งในจุดหมายดำน้ำที่ดีที่สุดในโลก
-            แล้วทะเลฝั่งไหนเหมาะกับคุณ?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -518,22 +515,36 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ดำน้ำในประเทศไทย: อ่าวไทย vs. อันดามัน – ที่ไหนดีกว่ากัน?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ประเทศไทยเป็นหนึ่งในจุดหมายดำน้ำที่ดีที่สุดในโลก
+          แล้วทะเลฝั่งไหนเหมาะกับคุณ?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          ดำน้ำในประเทศไทย: อ่าวไทย vs ทะเลอันดามัน – ที่ไหนดีที่สุด?
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#tdc-intro">บทนำ</a>
+            <a href="#tdc-geo">ภูมิประเทศ</a>
+            <a href="#tdc-weather">สภาพอากาศ</a>
+            <a href="#tdc-life">สิ่งมีชีวิต</a>
+            <a href="#tdc-sites">จุดดำน้ำ</a>
+            <a href="#tdc-wrecks">เรือจม</a>
+            <a href="#tdc-who">ใครเลือกไหน</a>
+            <a href="#tdc-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="tdc-intro">
+          อ่าวไทย vs อันดามัน — สภาพอากาศ สิ่งมีชีวิต เรือจม และใครเหมาะฝั่งไหน
         </h2>
+
         <p>
           ประเทศไทยเป็นหนึ่งในจุดหมายปลายทางดำน้ำที่ดีที่สุดในโลก
           แล้วฝั่งไหนล่ะที่เหมาะกับคุณมากกว่า – อ่าวไทย หรือทะเลอันดามัน?
@@ -544,7 +555,7 @@
 
         <hr />
 
-        <h2>1. ที่ตั้งและภูมิประเทศ</h2>
+        <h2 id="tdc-geo">1. ที่ตั้งและภูมิประเทศ</h2>
         <ul>
           <li>
             <strong>อ่าวไทย:</strong> ตั้งอยู่ทางฝั่งตะวันออกของประเทศไทย
@@ -568,7 +579,7 @@
 
         <hr />
 
-        <h2>2. สภาพอากาศและสภาพน้ำ</h2>
+        <h2 id="tdc-weather">2. สภาพอากาศและสภาพน้ำ</h2>
         <ul>
           <li>
             <strong>อ่าวไทย:</strong> ฤดูดำน้ำที่ดีที่สุดสำหรับเกาะช้าง
@@ -593,7 +604,7 @@
 
         <hr />
 
-        <h2>3. สิ่งมีชีวิตทางทะเล</h2>
+        <h2 id="tdc-life">3. สิ่งมีชีวิตทางทะเล</h2>
         <ul>
           <li>
             <strong>อ่าวไทย:</strong>
@@ -615,7 +626,7 @@
 
         <hr />
 
-        <h2>4. จุดดำน้ำแนะนำ</h2>
+        <h2 id="tdc-sites">4. จุดดำน้ำแนะนำ</h2>
 
         <div style="overflow-x: auto; width: 100%">
           <table
@@ -677,7 +688,7 @@
 
         <hr />
 
-        <h2>5. ดำน้ำเรือจม – อ่าวไทยหรืออันดามัน?</h2>
+        <h2 id="tdc-wrecks">5. ดำน้ำเรือจม – อ่าวไทยหรืออันดามัน?</h2>
         <ul>
           <li>
             <strong>อ่าวไทย:</strong> สวรรค์ของการ <strong>ดำน้ำเรือจม</strong>!
@@ -694,7 +705,7 @@
 
         <hr />
 
-        <h2>6. ใครควรเลือกดำน้ำที่ไหน?</h2>
+        <h2 id="tdc-who">6. ใครควรเลือกดำน้ำที่ไหน?</h2>
         <ul>
           <li>
             <strong>อ่าวไทย:</strong> เหมาะกับ
@@ -711,7 +722,7 @@
 
         <hr />
 
-        <h2>7. สรุป – ควรเลือกดำน้ำที่ไหน?</h2>
+        <h2 id="tdc-conclusion">7. สรุป – ควรเลือกดำน้ำที่ไหน?</h2>
         <ul>
           <li>
             <strong>อ่าวไทย:</strong> เหมาะสำหรับ

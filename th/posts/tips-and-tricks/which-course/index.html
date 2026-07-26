@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>คอร์สดำน้ำแบบไหนที่เหมาะกับคุณและทำไม?</title>
     <meta
@@ -333,6 +334,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -363,7 +370,6 @@
         "headline": "หลักสูตรดำน้ำแบบไหนที่เหมาะกับฉัน – และเพราะอะไร?",
         "alternativeHeadline": "เส้นทางการฝึกดำน้ำ – สำหรับผู้เริ่มต้น ขั้นสูง และเทคนิค",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/the-world-of-diving-find-the-right-course-for-you_big.webp",
@@ -371,7 +377,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "เคล็ดลับการดำน้ำ",
@@ -490,14 +495,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>คอร์สดำน้ำแบบไหนที่เหมาะกับคุณและทำไม?</h1>
-          <p>
-            ตั้งแต่ลมหายใจแรกใต้น้ำไปจนถึงการดำน้ำระดับเทคนิค –
-            ค้นหาคอร์สที่ตรงกับเป้าหมาย เวลา และประสบการณ์ของคุณ
-          </p>
-        </div>
       </div>
     </header>
 
@@ -514,21 +511,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          คอร์สดำน้ำแบบไหนที่เหมาะกับคุณและทำไม?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ตั้งแต่ลมหายใจแรกใต้น้ำไปจนถึงการดำน้ำระดับเทคนิค –
+          ค้นหาคอร์สที่ตรงกับเป้าหมาย เวลา และประสบการณ์ของคุณ
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          คอร์สเรียนดำน้ำแบบไหนที่เหมาะกับฉัน – และทำไม?
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#wc-intro">บทนำ</a>
+            <a href="#wc-org">องค์กร</a>
+            <a href="#wc-basics">ขั้นแรก</a>
+            <a href="#wc-advanced">ขั้นสูง</a>
+            <a href="#wc-specialties">คอร์สพิเศษ</a>
+            <a href="#wc-rescue">กู้ภัย</a>
+            <a href="#wc-tech">เทคนิค</a>
+            <a href="#wc-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="wc-intro">
+          จับคู่เป้าหมาย เวลา และประสบการณ์กับเส้นทางดำน้ำที่ใช่
         </h2>
 
         <p>
@@ -540,7 +550,7 @@
 
         <hr />
 
-        <h2>ควรเลือกองค์กรดำน้ำใดดี?</h2>
+        <h2 id="wc-org">ควรเลือกองค์กรดำน้ำใดดี?</h2>
 
         <p>
           โดยทั่วไปแล้วคุณสามารถเลือกเรียนกับองค์กรใดก็ได้
@@ -599,7 +609,7 @@
 
         <hr />
 
-        <h2>1. ขั้นเริ่มต้น: คอร์สเรียนใดเหมาะกับมือใหม่?</h2>
+        <h2 id="wc-basics">1. ขั้นเริ่มต้น: คอร์สเรียนใดเหมาะกับมือใหม่?</h2>
 
         <p>หากคุณไม่เคยดำน้ำมาก่อน ตัวเลือกสำหรับเริ่มต้นมีดังนี้:</p>
 
@@ -633,7 +643,9 @@
 
         <hr />
 
-        <h2>2. ระดับถัดไป: หลังจากจบ OWD แล้วควรเรียนอะไรต่อ?</h2>
+        <h2 id="wc-advanced">
+          2. ระดับถัดไป: หลังจากจบ OWD แล้วควรเรียนอะไรต่อ?
+        </h2>
 
         <p>
           เมื่อคุณมีใบรับรอง OWD แล้ว คุณสามารถเพิ่มทักษะหรือลองสิ่งใหม่ ๆ
@@ -656,7 +668,7 @@
 
         <hr />
 
-        <h2>3. คอร์สพิเศษ & การฝึกขั้นสูง</h2>
+        <h2 id="wc-specialties">3. คอร์สพิเศษ & การฝึกขั้นสูง</h2>
 
         <p>
           ที่
@@ -751,7 +763,7 @@
 
         <hr />
 
-        <h2>4. การกู้ภัย & ความปลอดภัย: ก้าวต่อไปที่สำคัญ</h2>
+        <h2 id="wc-rescue">4. การกู้ภัย & ความปลอดภัย: ก้าวต่อไปที่สำคัญ</h2>
 
         <p>
           คอร์ส
@@ -861,7 +873,7 @@
 
         <hr />
 
-        <h2>6. เทคนิคลึก (TDI) – ลึกกว่า รู้มากขึ้น</h2>
+        <h2 id="wc-tech">6. เทคนิคลึก (TDI) – ลึกกว่า รู้มากขึ้น</h2>
 
         <p>
           การดำน้ำเทคนิค (Tec Diving)
@@ -940,7 +952,7 @@
 
         <hr />
 
-        <h2>7. สรุป – คอร์สไหนเหมาะกับคุณ?</h2>
+        <h2 id="wc-conclusion">7. สรุป – คอร์สไหนเหมาะกับคุณ?</h2>
 
         <p>
           ไม่ว่าคุณจะเริ่มต้น หรือมีประสบการณ์อยู่แล้ว –

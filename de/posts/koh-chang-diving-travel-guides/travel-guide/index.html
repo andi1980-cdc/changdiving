@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Koh Chang Reiseführer – Dein ultimativer Guide zur Paradiesinsel Thailands
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "Koh Chang Reiseführer – Strände, Tauchen, Essen & mehr",
         "alternativeHeadline": "Dein ultimativer Guide für Thailands Paradiesinsel",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/koh-chang-thailands-tropenparadies_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Reiseführer, Inselurlaub, Tauchen",
@@ -498,13 +503,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Koh Chang – Dein ultimativer Guide zur Paradiesinsel Thailands
-          </h1>
-          <p>Entdecke ein tropisches Paradies mit atemberaubender Natur!</p>
-        </div>
       </div>
     </header>
 
@@ -521,19 +519,35 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Koh Chang – Dein ultimativer Guide zur Paradiesinsel Thailands
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Entdecke ein tropisches Paradies mit atemberaubender Natur!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#tg-intro">Einstieg</a>
+            <a href="#tg-about">Über die Insel</a>
+            <a href="#tg-getting">Anreise</a>
+            <a href="#tg-when">Reisezeit</a>
+            <a href="#tg-west">Westküste</a>
+            <a href="#tg-activities">Aktivitäten</a>
+            <a href="#tg-diving">Tauchen</a>
+            <a href="#tg-tips">Aufenthaltstipps</a>
+          </div>
+        </nav>
+
+        <h2 id="tg-intro">
+          Strände, Anreise, Tauchen, Essen – so planst du Koh Chang
         </h2>
+
         <p>
           Koh Chang, Thailands zweitgrößte Insel, ist ein tropisches Paradies
           mit atemberaubender Natur, weißen Sandstränden und dichtem Dschungel.
@@ -544,7 +558,7 @@
 
         <hr />
 
-        <h2>1. Über Koh Chang</h2>
+        <h2 id="tg-about">1. Über Koh Chang</h2>
         <ul>
           <li>
             <strong>Thailands zweitgrößte Insel:</strong> Koh Chang gehört zur
@@ -564,7 +578,7 @@
 
         <hr />
 
-        <h2>2. Anreise nach Koh Chang</h2>
+        <h2 id="tg-getting">2. Anreise nach Koh Chang</h2>
         <ul>
           <li>
             <strong>Nächster Flughafen:</strong> Der nächstgelegene Flughafen
@@ -583,7 +597,7 @@
 
         <hr />
 
-        <h2>3. Beste Reisezeit für Koh Chang</h2>
+        <h2 id="tg-when">3. Beste Reisezeit für Koh Chang</h2>
         <ul>
           <li>
             <strong>Wann ist das Wetter am besten?</strong> Die Hauptsaison ist
@@ -600,7 +614,7 @@
 
         <hr />
 
-        <h2>4. Die schönsten Strände an Koh Changs Westküste</h2>
+        <h2 id="tg-west">4. Die schönsten Strände an Koh Changs Westküste</h2>
         <ul>
           <li>
             <strong>Klong Son:</strong> Ruhige, exklusive Gegend mit dem Siam
@@ -680,7 +694,7 @@
 
         <hr />
 
-        <h2>6. Top-Aktivitäten auf Koh Chang</h2>
+        <h2 id="tg-activities">6. Top-Aktivitäten auf Koh Chang</h2>
         <ul>
           <li>
             <strong>Tauchen & Schnorcheln:</strong> Entdecke atemberaubende
@@ -707,7 +721,7 @@
 
         <hr />
 
-        <h2>7. Warum Tauchen auf Koh Chang ein Muss ist</h2>
+        <h2 id="tg-diving">7. Warum Tauchen auf Koh Chang ein Muss ist</h2>
         <ul>
           <li>
             <strong>Top-Tauchplätze:</strong> Die
@@ -741,7 +755,7 @@
 
         <hr />
 
-        <h2>9. Tipps für deinen Aufenthalt auf Koh Chang</h2>
+        <h2 id="tg-tips">9. Tipps für deinen Aufenthalt auf Koh Chang</h2>
         <ul>
           <li>
             <strong>Geld & Bezahlung:</strong> Kreditkarten werden meist

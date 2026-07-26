@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Which Scuba Diving Course is Right for Me and Why?</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -364,7 +371,6 @@
         "headline": "Which Scuba Diving Course is Right for Me and Why?",
         "alternativeHeadline": "Scuba Diving Training Paths – Beginner, Advanced & Technical Explained",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/the-world-of-diving-find-the-right-course-for-you_big.webp",
@@ -372,7 +378,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Diving Tips & Tricks",
@@ -491,14 +496,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Which Scuba Diving Course is Right for Me and Why?</h1>
-          <p>
-            From your first breath underwater to advanced or technical diving –
-            find the course that fits your goals, time, and experience level.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -515,18 +512,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Which Scuba Diving Course is Right for Me and Why?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          From your first breath underwater to advanced or technical diving –
+          find the course that fits your goals, time, and experience level.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#wc-intro">Intro</a>
+            <a href="#wc-org">Organization</a>
+            <a href="#wc-basics">First step</a>
+            <a href="#wc-advanced">Advanced</a>
+            <a href="#wc-specialties">Specialties</a>
+            <a href="#wc-rescue">Rescue</a>
+            <a href="#wc-tech">Technical</a>
+            <a href="#wc-conclusion">Conclusion</a>
+          </div>
+        </nav>
+
+        <h2 id="wc-intro">
+          Match your goals, time, and experience to the right scuba path
         </h2>
 
         <p>
@@ -539,7 +552,7 @@
 
         <hr />
 
-        <h2>Which Diving Organization is Right for Me?</h2>
+        <h2 id="wc-org">Which Diving Organization is Right for Me?</h2>
 
         <p>
           In principle, it does not matter which diving organization you choose,
@@ -611,7 +624,9 @@
 
         <hr />
 
-        <h2>1. The Basics: Which Diving Course is the First Step?</h2>
+        <h2 id="wc-basics">
+          1. The Basics: Which Diving Course is the First Step?
+        </h2>
 
         <p>
           If you have never dived before, there are different ways to get
@@ -641,7 +656,9 @@
 
         <p><a href="/en/day-trips/try-dive/">Book your Try Dive now!</a></p>
         <p>
-          <a href="/en/courses/scuba-diver/">Sign up for the Scuba Diver Course!</a>
+          <a href="/en/courses/scuba-diver/"
+            >Sign up for the Scuba Diver Course!</a
+          >
         </p>
         <p>
           <a href="/en/courses/open-water-diver/"
@@ -651,7 +668,9 @@
 
         <hr />
 
-        <h2>2. Advanced Courses: What Comes After Open Water?</h2>
+        <h2 id="wc-advanced">
+          2. Advanced Courses: What Comes After Open Water?
+        </h2>
 
         <p>
           Once you have your Open Water Diver certification, you may want to
@@ -677,7 +696,7 @@
 
         <hr />
 
-        <h2>3. Specialties & Advanced Training</h2>
+        <h2 id="wc-specialties">3. Specialties & Advanced Training</h2>
 
         <p>
           At <strong>Chang Diving</strong>, we offer a wide range of specialty
@@ -776,7 +795,7 @@
 
         <hr />
 
-        <h2>4. Rescue Diving & Safety: The Next Big Step</h2>
+        <h2 id="wc-rescue">4. Rescue Diving & Safety: The Next Big Step</h2>
 
         <p>
           The <strong>Rescue Diver Course</strong> is not just for those aiming
@@ -898,7 +917,9 @@
 
         <hr />
 
-        <h2>6. Technical Diving (TDI) – More Depth, More Knowledge</h2>
+        <h2 id="wc-tech">
+          6. Technical Diving (TDI) – More Depth, More Knowledge
+        </h2>
 
         <p>
           Technical diving (Tec Diving) opens up completely new possibilities
@@ -991,7 +1012,9 @@
 
         <hr />
 
-        <h2>7. Conclusion – Which Course is Right for You?</h2>
+        <h2 id="wc-conclusion">
+          7. Conclusion – Which Course is Right for You?
+        </h2>
 
         <p>
           Whether you're just starting your diving journey or already have

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       คู่มือดำน้ำสำหรับผู้เริ่มต้น – ทุกสิ่งที่คุณควรรู้ก่อนดำน้ำครั้งแรก
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "คู่มือสำหรับนักดำน้ำมือใหม่ – ทุกสิ่งที่ควรรู้ก่อนดำน้ำครั้งแรก",
         "alternativeHeadline": "เคล็ดลับดำน้ำสำหรับมือใหม่ – เริ่มต้นดำน้ำที่เกาะช้างอย่างมั่นใจ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/complete-guide-for-beginner-divers_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "คู่มือดำน้ำ, ท่องเที่ยว, เรียนดำน้ำ",
@@ -498,16 +503,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            คู่มือสำหรับผู้เริ่มต้นดำน้ำ – ทุกสิ่งที่คุณควรรู้ก่อนดำน้ำครั้งแรก
-          </h1>
-          <p>
-            คุณใฝ่ฝันที่จะสำรวจโลกใต้น้ำมาโดยตลอด
-            แต่ไม่รู้จะเริ่มต้นอย่างไรใช่ไหม?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -524,22 +519,37 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           คู่มือสำหรับผู้เริ่มต้นดำน้ำ – ทุกสิ่งที่คุณควรรู้ก่อนดำน้ำครั้งแรก
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          คุณใฝ่ฝันที่จะสำรวจโลกใต้น้ำมาโดยตลอด
+          แต่ไม่รู้จะเริ่มต้นอย่างไรใช่ไหม?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#bg-intro">บทนำ</a>
+            <a href="#bg-experience">ต้องมีประสบการณ์?</a>
+            <a href="#bg-reqs">ข้อกำหนด</a>
+            <a href="#bg-gear">อุปกรณ์</a>
+            <a href="#bg-first">ครั้งแรก</a>
+            <a href="#bg-safety">ความปลอดภัย</a>
+            <a href="#bg-where">เรียนที่ไหน</a>
+            <a href="#bg-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="bg-intro">
+          คำตอบก่อนดำน้ำครั้งแรก — ประสบการณ์ อุปกรณ์ ความปลอดภัย เวลา
+          ค่าใช้จ่าย
         </h2>
+
         <p>
           คุณใฝ่ฝันที่จะสำรวจโลกใต้น้ำมาโดยตลอด
           แต่ไม่รู้จะเริ่มต้นอย่างไรใช่ไหม? ไม่ต้องกังวล –
@@ -550,7 +560,7 @@
 
         <hr />
 
-        <h2>1. ฉันต้องมีประสบการณ์ก่อนเรียนดำน้ำไหม?</h2>
+        <h2 id="bg-experience">1. ฉันต้องมีประสบการณ์ก่อนเรียนดำน้ำไหม?</h2>
         <p>
           ไม่จำเป็น! ทุกคนสามารถเรียนดำน้ำได้ หลักสูตรดำน้ำส่วนใหญ่ เช่น SDI
           หรือ PADI
@@ -561,7 +571,7 @@
 
         <hr />
 
-        <h2>2. ข้อกำหนดในการเริ่มเรียนมีอะไรบ้าง?</h2>
+        <h2 id="bg-reqs">2. ข้อกำหนดในการเริ่มเรียนมีอะไรบ้าง?</h2>
         <ul>
           <li><strong>อายุขั้นต่ำ:</strong> 10 ปี สำหรับหลักสูตร Open Water</li>
           <li>
@@ -576,7 +586,7 @@
 
         <hr />
 
-        <h2>3. ต้องใช้อุปกรณ์อะไรบ้าง?</h2>
+        <h2 id="bg-gear">3. ต้องใช้อุปกรณ์อะไรบ้าง?</h2>
         <p>
           ผู้เริ่มต้นไม่จำเป็นต้องมีอุปกรณ์เอง – ในหลักสูตรจะจัดเตรียมให้ทั้งหมด
           อุปกรณ์ที่สำคัญได้แก่:
@@ -596,7 +606,7 @@
 
         <hr />
 
-        <h2>4. ดำน้ำครั้งแรกจะเป็นอย่างไร?</h2>
+        <h2 id="bg-first">4. ดำน้ำครั้งแรกจะเป็นอย่างไร?</h2>
         <p>คุณจะเริ่มกับครูฝึกในสระหรือบริเวณน้ำตื้น โดยจะได้เรียนรู้:</p>
         <ul>
           <li>การใช้อุปกรณ์</li>
@@ -610,7 +620,7 @@
 
         <hr />
 
-        <h2>5. การดำน้ำปลอดภัยไหม?</h2>
+        <h2 id="bg-safety">5. การดำน้ำปลอดภัยไหม?</h2>
         <p>
           ปลอดภัยมาก หากคุณปฏิบัติตามกฎ ใน<a href="/th/courses/"
             >หลักสูตรที่ได้รับการรับรอง</a
@@ -625,7 +635,7 @@
 
         <hr />
 
-        <h2>6. เรียนดำน้ำที่ไหนดี?</h2>
+        <h2 id="bg-where">6. เรียนดำน้ำที่ไหนดี?</h2>
         <p>
           <a href="/th/dive-sites/">เกาะช้าง</a>
           เป็นสถานที่ที่เหมาะสำหรับผู้เริ่มต้นทำความรู้จักกับโลกใต้น้ำ เพราะว่า:
@@ -684,7 +694,7 @@
 
         <hr />
 
-        <h2>สรุป</h2>
+        <h2 id="bg-conclusion">สรุป</h2>
         <p>
           การดำน้ำเป็นประสบการณ์ที่น่าทึ่ง และง่ายกว่าที่คุณคิด!
           หากเรียนกับคอร์สที่เหมาะสม

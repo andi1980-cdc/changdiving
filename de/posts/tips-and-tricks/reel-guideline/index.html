@@ -334,6 +334,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -496,14 +502,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Reels und Leinen sicher beim Wracktauchen einsetzen</h1>
-          <p>
-            Erlerne Techniken für Penetration Dives: Bleib orientiert, vermeide
-            Verheddern und tauche sicher in Koh Changs Wracks ein.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -520,18 +518,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Reels und Leinen sicher beim Wracktauchen einsetzen
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Erlerne Techniken für Penetration Dives: Bleib orientiert, vermeide
+          Verheddern und tauche sicher in Koh Changs Wracks ein.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#rg-intro">Einstieg</a>
+            <a href="#rg-gear">Ausrüstung</a>
+            <a href="#rg-prep">Leine vorbereiten</a>
+            <a href="#rg-rules">Leinenregeln</a>
+            <a href="#line-markers">Marker</a>
+            <a href="#rg-penetration">Penetration</a>
+            <a href="#rg-sites">Übungsplätze</a>
+            <a href="#rg-video">Video</a>
+          </div>
+        </nav>
+
+        <h2 id="rg-intro">
+          Bleib im Wrack orientiert – mit sauberer Reel-Technik
         </h2>
 
         <p>
@@ -552,7 +566,7 @@
           Teamarbeit und guter Technik ab.
         </p>
 
-        <h2>🧰 Erforderliche Ausrüstung</h2>
+        <h2 id="rg-gear">🧰 Erforderliche Ausrüstung</h2>
         <ul>
           <li>Reels oder Spools – Haupt- und Backup-Leine</li>
           <li>
@@ -561,7 +575,7 @@
           </li>
         </ul>
 
-        <h2>🛠️ Leine vorbereiten</h2>
+        <h2 id="rg-prep">🛠️ Leine vorbereiten</h2>
         <ul>
           <li>
             Leine komplett abrollen und auf Beschädigungen oder Verwicklungen
@@ -586,7 +600,7 @@
           </li>
         </ul>
 
-        <h2>📏 Allgemeine Regeln zur Leinenführung</h2>
+        <h2 id="rg-rules">📏 Allgemeine Regeln zur Leinenführung</h2>
         <ul>
           <li>
             Nur mit entsprechender Ausbildung in Überkopfumgebungen tauchen.
@@ -848,7 +862,7 @@
           <li>Falsche Reihenfolge beim Setzen</li>
         </ul>
 
-        <h2>🔗 Vorgehensweise bei Penetration Dives</h2>
+        <h2 id="rg-penetration">🔗 Vorgehensweise bei Penetration Dives</h2>
         <p>
           Reel außen am Wrack an einem festen Punkt befestigen. Immer Primär-
           und Sekundär-Festpunkt setzen. Leine etwa 15 cm über dem Grund führen,
@@ -857,7 +871,7 @@
           anbringen.
         </p>
 
-        <h2>📍 Empfohlene Übungsplätze</h2>
+        <h2 id="rg-sites">📍 Empfohlene Übungsplätze</h2>
         <ul>
           <li>
             <a
@@ -876,7 +890,7 @@
           </li>
         </ul>
 
-        <h2>🎥 Video-Anleitung: Reel- & Leinen-Techniken</h2>
+        <h2 id="rg-video">🎥 Video-Anleitung: Reel- & Leinen-Techniken</h2>
         <p>
           Sieh dir unser Video an, um die richtige Handhabung live zu erleben:
         </p>

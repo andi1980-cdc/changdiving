@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Die 10 beliebtesten Tauchaktivitäten auf Koh Chang</title>
     <meta
@@ -333,6 +334,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -361,7 +368,6 @@
         "headline": "Die 10 beliebtesten Tauchaktivitäten auf Koh Chang",
         "alternativeHeadline": "Entdecke die besten Tauchabenteuer mit Chang Diving",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-activities_big.webp",
@@ -369,7 +375,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tipps & Tricks",
@@ -484,14 +489,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Die 10 beliebtesten Tauchaktivitäten auf Koh Chang</h1>
-          <p>
-            Erkunde die Top-Tauchaktivitäten auf Koh Chang – von Fun Dives und
-            Anfängerkursen bis hin zu Deep-, Wrack- und Nitrox-Abenteuern!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -508,18 +505,35 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Die 10 beliebtesten Tauchaktivitäten auf Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Erkunde die Top-Tauchaktivitäten auf Koh Chang – von Fun Dives und
+          Anfängerkursen bis hin zu Deep-, Wrack- und Nitrox-Abenteuern!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#da-intro">Einstieg</a>
+            <a href="#da-fun">Fun Dives</a>
+            <a href="#da-try">Try Dive</a>
+            <a href="#da-owd">Open Water</a>
+            <a href="#da-aow">Advanced</a>
+            <a href="#da-rescue">Rescue</a>
+            <a href="#da-deep">Deep</a>
+            <a href="#da-wreck">Wrack</a>
+          </div>
+        </nav>
+
+        <h2 id="da-intro">
+          Zehn Wege, Koh Chang zu tauchen – vom ersten Atemzug bis Wrack und
+          Nitrox
         </h2>
 
         <p>
@@ -534,37 +548,41 @@
           bieten für Anfänger und Fortgeschrittene das Passende.
         </p>
 
-        <h3>1. Fun Dives – Perfekt für zertifizierte Taucher</h3>
+        <h3 id="da-fun">1. Fun Dives – Perfekt für zertifizierte Taucher</h3>
         <p>
           Erkunde die schönsten Korallenriffe und Wracks rund um Koh Chang!
           Unsere <a href="/de/day-trips/fun-dives/">Fun Dives</a> sind ideal für
           brevetierte Taucher.
         </p>
 
-        <h3>2. Try Dive – Tauchen für Anfänger</h3>
+        <h3 id="da-try">2. Try Dive – Tauchen für Anfänger</h3>
         <p>
           Noch nie getaucht? Kein Problem! Mit unserem
-          <a href="/de/day-trips/try-dive/">Try Dive</a>-Programm
-          lernst du die Grundlagen in nur wenigen Stunden.
+          <a href="/de/day-trips/try-dive/">Try Dive</a>-Programm lernst du die
+          Grundlagen in nur wenigen Stunden.
         </p>
 
         <h3>3. Scuba Diver Kurs – Zertifizierung in 2 Tagen</h3>
         <p>
           Zu wenig Zeit für einen vollständigen Kurs? Mit dem
-          <a href="/de/courses/scuba-diver/">Scuba Diver Kurs</a> bist du in
-          nur 2 Tagen zertifiziert. Du kannst bis 12 m tief tauchen –
-          begleitet von einem Tauchprofi. Der perfekte Zwischenschritt vor der
-          vollen Open Water Zertifizierung.
+          <a href="/de/courses/scuba-diver/">Scuba Diver Kurs</a> bist du in nur
+          2 Tagen zertifiziert. Du kannst bis 12 m tief tauchen – begleitet von
+          einem Tauchprofi. Der perfekte Zwischenschritt vor der vollen Open
+          Water Zertifizierung.
         </p>
 
-        <h3>4. Open Water Diver Kurs – Dein Einstieg in die Tauchwelt</h3>
+        <h3 id="da-owd">
+          4. Open Water Diver Kurs – Dein Einstieg in die Tauchwelt
+        </h3>
         <p>
           Der <a href="/de/courses/open-water-diver/">Open Water Diver</a> ist
           der erste Schritt zum vollständig unabhängigen Taucher. Lerne alles,
           was du für sicheres, selbstständiges Tauchen brauchst.
         </p>
 
-        <h3>5. Advanced Open Water Diver – Mehr Abenteuer unter Wasser</h3>
+        <h3 id="da-aow">
+          5. Advanced Open Water Diver – Mehr Abenteuer unter Wasser
+        </h3>
         <p>
           Erweitere deine Taucherfahrung mit dem
           <a href="/de/courses/advanced/">Advanced Open Water Kurs</a>.
@@ -573,7 +591,9 @@
           Suchen & Bergen.
         </p>
 
-        <h3>6. Rescue Diver Kurs – Sicherheit an erster Stelle</h3>
+        <h3 id="da-rescue">
+          6. Rescue Diver Kurs – Sicherheit an erster Stelle
+        </h3>
         <p>
           Ein Muss für ambitionierte Taucher: Der
           <a href="/de/courses/rescue-diver/">Rescue Diver Kurs</a> bereitet
@@ -588,7 +608,7 @@
           erster Schritt in die professionelle Tauchkarriere.
         </p>
 
-        <h3>8. Deep Diver – In die Tiefe abtauchen</h3>
+        <h3 id="da-deep">8. Deep Diver – In die Tiefe abtauchen</h3>
         <p>
           Lerne, wie du sicher in größere Tiefen vordringst und entdecke die
           Geheimnisse tiefer Tauchplätze. Der
@@ -604,7 +624,7 @@
           oder Rifftouren.
         </p>
 
-        <h3>10. Wreck Diver – Wracktauchen auf Koh Chang</h3>
+        <h3 id="da-wreck">10. Wreck Diver – Wracktauchen auf Koh Chang</h3>
         <p>
           Das Wrack der HTMS Chang ist einer der beliebtesten Tauchplätze. Der
           <a href="/de/courses/wreck-diver/">Wracktaucher-Kurs</a> zeigt dir,

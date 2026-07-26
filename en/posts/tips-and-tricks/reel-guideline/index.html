@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -497,15 +503,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Using Reels and Guidelines for Safe Wreck Diving</h1>
-          <p>
-            Master reel and guideline techniques for penetration dives. Stay
-            oriented, avoid entanglement, and dive safely into Koh Chang’s
-            wrecks.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -522,18 +519,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Using Reels and Guidelines for Safe Wreck Diving
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Master reel and guideline techniques for penetration dives. Stay
+          oriented, avoid entanglement, and dive safely into Koh Chang’s wrecks.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#rg-intro">Intro</a>
+            <a href="#rg-gear">Equipment</a>
+            <a href="#rg-prep">Prepare line</a>
+            <a href="#rg-rules">Line rules</a>
+            <a href="#line-markers">Markers</a>
+            <a href="#rg-penetration">Penetration</a>
+            <a href="#rg-sites">Practice sites</a>
+            <a href="#rg-video">Video</a>
+          </div>
+        </nav>
+
+        <h2 id="rg-intro">
+          Stay oriented on wreck penetrations with clean reel technique
         </h2>
 
         <p>
@@ -554,7 +567,7 @@
           technique.
         </p>
 
-        <h2>🧰 Required Equipment</h2>
+        <h2 id="rg-gear">🧰 Required Equipment</h2>
         <ul>
           <li>Reels or Spools – Primary and backup</li>
           <li>
@@ -563,7 +576,7 @@
           </li>
         </ul>
 
-        <h2>🛠️ Preparing Your Line</h2>
+        <h2 id="rg-prep">🛠️ Preparing Your Line</h2>
         <ul>
           <li>
             Unwind and inspect the full length of your line for damage or
@@ -587,7 +600,7 @@
           </li>
         </ul>
 
-        <h2>📏 General Rules for Line Handling</h2>
+        <h2 id="rg-rules">📏 General Rules for Line Handling</h2>
         <ul>
           <li>
             Only dive in overhead environments with proper training and
@@ -856,7 +869,7 @@
           <li>Incorrect placement sequence</li>
         </ul>
 
-        <h2>🔗 Penetration Procedures</h2>
+        <h2 id="rg-penetration">🔗 Penetration Procedures</h2>
         <p>
           Secure your reel outside the wreck at a fixed and solid anchor point.
           Always use a primary and a secondary tie-off to ensure line integrity.
@@ -866,7 +879,7 @@
           mark the way out.
         </p>
 
-        <h2>📍 Recommended Dive Sites for Practice</h2>
+        <h2 id="rg-sites">📍 Recommended Dive Sites for Practice</h2>
         <ul>
           <li>
             <a
@@ -885,7 +898,7 @@
           </li>
         </ul>
 
-        <h2>🎥 Video Tutorial: Reel & Guideline Techniques</h2>
+        <h2 id="rg-video">🎥 Video Tutorial: Reel & Guideline Techniques</h2>
         <p>Watch our video guide to see proper line handling in action:</p>
 
         <div

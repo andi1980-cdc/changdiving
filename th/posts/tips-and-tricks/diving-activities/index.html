@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>10 กิจกรรมดำน้ำยอดนิยมบนเกาะช้าง</title>
     <meta
@@ -324,6 +325,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -352,7 +359,6 @@
         "headline": "10 กิจกรรมดำน้ำยอดนิยมบนเกาะช้าง",
         "alternativeHeadline": "สำรวจประสบการณ์ดำน้ำยอดฮิตกับช้างไดร์วิ่ง",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-activities_big.webp",
@@ -360,7 +366,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "เคล็ดลับ & เทคนิค",
@@ -475,14 +480,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>10 กิจกรรมดำน้ำยอดนิยมบนเกาะช้าง</h1>
-          <p>
-            สำรวจสุดยอดกิจกรรมดำน้ำของเกาะช้าง – ตั้งแต่ฟันไดฟ์ คอร์สเริ่มต้น
-            ไปจนถึงดำน้ำลึก ดำน้ำเรือจม และดำน้ำไนทร็อกซ์!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -499,21 +496,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           10 กิจกรรมดำน้ำยอดนิยมบนเกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          สำรวจสุดยอดกิจกรรมดำน้ำของเกาะช้าง – ตั้งแต่ฟันไดฟ์ คอร์สเริ่มต้น
+          ไปจนถึงดำน้ำลึก ดำน้ำเรือจม และดำน้ำไนทร็อกซ์!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#da-intro">บทนำ</a>
+            <a href="#da-fun">ฟันไดฟ์</a>
+            <a href="#da-try">Try Dive</a>
+            <a href="#da-owd">Open Water</a>
+            <a href="#da-aow">Advanced</a>
+            <a href="#da-rescue">Rescue</a>
+            <a href="#da-deep">Deep</a>
+            <a href="#da-wreck">เรือจม</a>
+          </div>
+        </nav>
+
+        <h2 id="da-intro">
+          สิบทางดำน้ำที่เกาะช้าง — จากฟองแรกถึงเรือจมและไนทร็อกซ์
         </h2>
 
         <p>
@@ -528,14 +538,14 @@
           เรามีกิจกรรมให้คุณเลือกมากมาย
         </p>
 
-        <h3>1. ฟันไดฟ์ – ฟันไดฟ์สำหรับผู้มีใบรับรอง</h3>
+        <h3 id="da-fun">1. ฟันไดฟ์ – ฟันไดฟ์สำหรับผู้มีใบรับรอง</h3>
         <p>
           สำรวจแนวปะการังและเรือจมที่สวยที่สุดรอบเกาะช้าง!
           <a href="/th/day-trips/fun-dives/">ฟันไดฟ์</a>
           ของเรานั้นเหมาะสำหรับนักดำน้ำที่ผ่านการรับรองแล้ว
         </p>
 
-        <h3>2. Try Dive – ดำน้ำสำหรับผู้เริ่มต้น</h3>
+        <h3 id="da-try">2. Try Dive – ดำน้ำสำหรับผู้เริ่มต้น</h3>
         <p>
           ไม่เคยดำน้ำมาก่อนใช่ไหม? ไม่เป็นไร! กับโปรแกรม
           <a href="/th/day-trips/try-dive/">Try Dive</a>
@@ -547,18 +557,20 @@
           ไม่มีเวลาเรียนคอร์สเต็มรูปแบบ? คอร์ส
           <a href="/th/courses/scuba-diver/">Scuba Diver</a>
           ช่วยให้คุณได้รับการรับรองในเพียง 2 วัน ดำน้ำได้ลึกถึง 12 ม.
-          โดยมีผู้เชี่ยวชาญร่วมด้วย – ก้าวที่สมบูรณ์แบบก่อนใบรับรอง Open
-          Water เต็มรูปแบบ
+          โดยมีผู้เชี่ยวชาญร่วมด้วย – ก้าวที่สมบูรณ์แบบก่อนใบรับรอง Open Water
+          เต็มรูปแบบ
         </p>
 
-        <h3>4. คอร์ส Open Water Diver – ก้าวแรกสู่โลกของการดำน้ำ</h3>
+        <h3 id="da-owd">
+          4. คอร์ส Open Water Diver – ก้าวแรกสู่โลกของการดำน้ำ
+        </h3>
         <p>
           <a href="/th/courses/open-water-diver/">Open Water Diver</a>
           คือก้าวแรกสู่การเป็นนักดำน้ำที่ได้รับการรับรองอย่างอิสระ
           เรียนรู้ทุกอย่างที่คุณต้องรู้เพื่อดำน้ำได้อย่างปลอดภัยด้วยตัวเอง
         </p>
 
-        <h3>5. Advanced Open Water Diver – ผจญภัยใต้น้ำมากขึ้น</h3>
+        <h3 id="da-aow">5. Advanced Open Water Diver – ผจญภัยใต้น้ำมากขึ้น</h3>
         <p>
           เพิ่มพูนประสบการณ์การดำน้ำของคุณด้วยคอร์ส
           <a href="/th/courses/advanced/">Advanced Open Water</a>
@@ -566,7 +578,7 @@
           ไนทร็อกซ์ เรือจม การควบคุมลอยตัว ดำน้ำจากเรือ หรือค้นหาและกู้คืน
         </p>
 
-        <h3>6. คอร์ส Rescue Diver – ความปลอดภัยต้องมาก่อน</h3>
+        <h3 id="da-rescue">6. คอร์ส Rescue Diver – ความปลอดภัยต้องมาก่อน</h3>
         <p>
           สำหรับนักดำน้ำที่มีความทะเยอทะยาน: คอร์ส
           <a href="/th/courses/rescue-diver/">Rescue Diver</a>
@@ -580,7 +592,7 @@
           คือก้าวแรกในอาชีพดำน้ำของคุณ
         </p>
 
-        <h3>8. Deep Diver – ดำน้ำลึก</h3>
+        <h3 id="da-deep">8. Deep Diver – ดำน้ำลึก</h3>
         <p>
           เรียนรู้การดำน้ำในระดับความลึกอย่างปลอดภัยและค้นพบความลับของจุดดำน้ำลึก
           คอร์ส
@@ -595,7 +607,7 @@
           เหมาะสำหรับการดำน้ำเรือจมหรือตามแนวปะการัง
         </p>
 
-        <h3>10. Wreck Diver – ดำน้ำเรือจมที่เกาะช้าง</h3>
+        <h3 id="da-wreck">10. Wreck Diver – ดำน้ำเรือจมที่เกาะช้าง</h3>
         <p>
           เรือจม เรือหลวงช้าง เป็นหนึ่งในจุดดำน้ำยอดนิยมของเกาะช้าง คอร์ส
           <a href="/th/courses/wreck-diver/">Wreck Diver</a>
