@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       ความปลอดภัยและมารยาทบนเรือดำน้ำที่เกาะช้าง –
@@ -263,14 +264,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            🛥️ ความปลอดภัยและมารยาทบนเรือดำน้ำที่เกาะช้าง –
-            กฎเพื่อป้องกันอุบัติเหตุและสูญเสียอุปกรณ์
-          </h1>
-          <p>กฎปฏิบัติสำหรับมือใหม่และนักดำน้ำที่มีประสบการณ์</p>
-        </div>
       </div>
     </header>
 
@@ -286,22 +279,30 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           🛥️ ความปลอดภัยและมารยาทบนเรือดำน้ำที่เกาะช้าง –
           กฎเพื่อป้องกันอุบัติเหตุและสูญเสียอุปกรณ์
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          กฎปฏิบัติสำหรับมือใหม่และนักดำน้ำที่มีประสบการณ์
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#dbs-intro">บทนำ</a>
+            <a href="#dbs-rules">กฎสำคัญ</a>
+            <a href="#dbs-why">ทำไมสำคัญ</a>
+            <a href="#dbs-book">พร้อมดำน้ำ</a>
+          </div>
+        </nav>
+
+        <h2 id="dbs-intro">
+          กฎเรือง่ายๆ ที่ช่วยป้องกันอุบัติเหตุและสูญเสียอุปกรณ์
         </h2>
 
         <p style="margin: 0; font-size: 1.05em; opacity: 0.9">
@@ -381,7 +382,7 @@
         </section>
 
         <section style="margin: 26px 0">
-          <h2 style="margin-bottom: 10px">✅ กฎสำคัญบนเรือดำน้ำของเรา</h2>
+          <h2 id="dbs-rules">✅ กฎสำคัญบนเรือดำน้ำของเรา</h2>
 
           <h3>1️⃣ นำเฉพาะสิ่งที่จำเป็นจริงๆ</h3>
           <p>
@@ -503,7 +504,7 @@
         </section>
 
         <section style="margin: 30px 0">
-          <h2 style="margin-bottom: 10px">ทำไมเรื่องนี้ถึงสำคัญ</h2>
+          <h2 id="dbs-why">ทำไมเรื่องนี้ถึงสำคัญ</h2>
           <p>
             ที่ช้างไดร์วิ่ง เซ็นเตอร์
             เราเน้นความปลอดภัยบนเรือดำน้ำของเราที่เกาะช้าง เรือของเรา
@@ -542,9 +543,7 @@
             border-radius: 10px;
           "
         >
-          <h2 style="margin: 0 0 10px 0; color: #0077b6">
-            พร้อมดำน้ำที่เกาะช้างแล้วหรือยัง?
-          </h2>
+          <h2 id="dbs-book">พร้อมดำน้ำที่เกาะช้างแล้วหรือยัง?</h2>
           <p style="margin: 0 0 12px 0">
             สำรวจทริปดำน้ำและคอร์สของเรา — กลุ่มเล็ก ไกด์มืออาชีพ
             และการจัดเรือที่ออกแบบมาเพื่อการดำน้ำที่ปลอดภัยและสะดวกสบาย
@@ -633,3 +632,5 @@
     </script>
   </body>
 </html>
+.posts-box .page-jump-nav { margin: 0 0 2px; padding: 2px 8px 4px;
+border-bottom: 1px solid #ccc; }

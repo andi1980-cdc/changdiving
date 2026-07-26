@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       PADI vs. SDI/TDI – Welches Tauchausbildungssystem passt zu dir?
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "PADI vs. SDI/TDI – Welches Ausbildungssystem passt zu dir?",
         "alternativeHeadline": "Tauchscheine im Vergleich – PADI, SDI und TDI einfach erklärt",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/padi-vs-sdi-tdi.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchausbildung",
@@ -489,16 +494,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            PADI vs. SDI/TDI – Welches Tauchausbildungssystem passt zu dir?
-          </h1>
-          <p>
-            Erfahre die Unterschiede zwischen PADI, SDI und TDI – und finde
-            heraus, welches Zertifikat zu deinen Tauchzielen passt.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -515,21 +510,29 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           PADI vs. SDI/TDI – Welches Tauchausbildungssystem passt zu dir?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Erfahre die Unterschiede zwischen PADI, SDI und TDI – und finde
+          heraus, welches Zertifikat zu deinen Tauchzielen passt.
+        </p>
 
-        <h2>Einleitung</h2>
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#pvs-intro">Einstieg</a>
+            <a href="#pvs-who">Wer sind sie?</a>
+            <a href="#pvs-compare">Vergleich</a>
+            <a href="#pvs-which">Welches System?</a>
+          </div>
+        </nav>
+
+        <h2 id="pvs-intro">Einleitung</h2>
         <p>
           Es gibt verschiedene Tauchorganisationen, jede mit eigener Philosophie
           und Spezialisierung. Bei Chang Diving bieten wir Kurse von
@@ -581,9 +584,7 @@
 
         <hr />
 
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
-          Wer sind PADI, SDI und TDI?
-        </h2>
+        <h2 id="pvs-who">Wer sind PADI, SDI und TDI?</h2>
 
         <div style="overflow-x: auto; width: 100%; margin-bottom: 2em">
           <table
@@ -705,9 +706,7 @@
 
         <hr />
 
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
-          Vergleichstabelle – PADI vs. SDI/TDI
-        </h2>
+        <h2 id="pvs-compare">Vergleichstabelle – PADI vs. SDI/TDI</h2>
 
         <div style="overflow-x: auto; width: 100%; margin-bottom: 2em">
           <table
@@ -771,7 +770,7 @@
 
         <hr />
 
-        <h2>Welches System passt zu dir?</h2>
+        <h2 id="pvs-which">Welches System passt zu dir?</h2>
         <ul>
           <li>
             <strong>Einsteiger oder Gelegenheitstaucher?</strong> → PADI oder

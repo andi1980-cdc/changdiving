@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       เรือจม เรือหลวงช้าง: การเข้าในโครงสร้าง ว่ายผ่าน แบบจำกัดและเต็ม | พูดตรงๆ
@@ -394,6 +395,48 @@
           border: 0 !important;
         }
       }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
     </style>
     <style>
       /* Wreck swim-through / penetration comparison — scoped to this article */
@@ -569,7 +612,10 @@
       }
     </script>
 
-    <link rel="preload" href="/img/posts/htms-chang-wreck-penetration_small.webp" />
+    <link
+      rel="preload"
+      href="/img/posts/htms-chang-wreck-penetration_small.webp"
+    />
   </head>
   <body>
     <header>
@@ -627,17 +673,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            เรือจม เรือหลวงช้าง: อธิบาย การเข้าในโครงสร้าง การว่ายผ่าน และ
-            สภาพ overhead (ปิดเหนือศีรษะ)
-          </h1>
-          <p>
-            จุดที่แสงหมด ทำไมขีดความลึกตามใบรับรองใช้กับ “ทั้ง” การเข้าไปในซาก
-            ไม่ใช่แค่ที่ทางเข้า — และ overhead (ปิดเหนือศีรษะ) “เต็ม” แปลว่าอะไร
-          </p>
-        </div>
       </div>
     </header>
 
@@ -652,7 +687,16 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="speciality-box posts-box">
+      <div class="tek-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          เรือจม เรือหลวงช้าง: อธิบาย การเข้าในโครงสร้าง การว่ายผ่าน และ สภาพ
+          overhead (ปิดเหนือศีรษะ)
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          จุดที่แสงหมด ทำไมขีดความลึกตามใบรับรองใช้กับ “ทั้ง” การเข้าไปในซาก
+          ไม่ใช่แค่ที่ทางเข้า — และ overhead (ปิดเหนือศีรษะ) “เต็ม” แปลว่าอะไร
+        </p>
+
         <nav class="page-jump-nav" aria-label="ในหน้านี้">
           <span class="page-jump-nav__label">ในหน้านี้</span>
           <div class="page-jump-nav__links">
@@ -684,8 +728,8 @@
         <p style="margin: 0 0 1.25em; line-height: 1.55">
           บทความนี้ไม่ได้แทนที่การฝึกอบรมอย่างเป็นทางการหรือมาตรฐานของสถาบัน
           มีจุดประสงค์เพื่อช่วยให้นักดำน้ำเข้าใจคำศัพท์ ข้อจำกัด
-          และการบริหารความเสี่ยงในการดำน้ำเรือจมและสภาพ overhead
-          (ปิดเหนือศีรษะ) มากขึ้น
+          และการบริหารความเสี่ยงในการดำน้ำเรือจมและสภาพ overhead (ปิดเหนือศีรษะ)
+          มากขึ้น
         </p>
 
         <section class="blog-section" id="main-content">
@@ -706,9 +750,8 @@
             จึงต้องแยกคำให้ชัด: ระหว่าง การว่ายผ่านแบบโล่ง การ<strong
               >เข้าในเรือจมแบบจำกัดในโซนแสง (light zone)</strong
             >
-            กับ <strong>การเข้าแบบเต็ม</strong> ที่ต้องมีฝึก
-            สภาพ overhead (ปิดเหนือศีรษะ) ขั้นสูง — สายนำทาง
-            ต้องวางตามมาตรฐานหลักสูตร
+            กับ <strong>การเข้าแบบเต็ม</strong> ที่ต้องมีฝึก สภาพ overhead
+            (ปิดเหนือศีรษะ) ขั้นสูง — สายนำทาง ต้องวางตามมาตรฐานหลักสูตร
           </p>
 
           <p>
@@ -735,8 +778,8 @@
             >
             ไม่เว้น—ในเรื่อง <strong>กรมธรรม์ ความรับผิด</strong> และ
             ในบางประเทศอาจถึง <strong>กฎอาญา</strong>
-            ดำในสภาพ overhead (ปิดเหนือศีรษะ) โดยไม่เตรียมกันเป็นโครงสร้าง เสี่ยงเกินมองข้าม
-            อีกปัญหาได้แก่
+            ดำในสภาพ overhead (ปิดเหนือศีรษะ) โดยไม่เตรียมกันเป็นโครงสร้าง
+            เสี่ยงเกินมองข้าม อีกปัญหาได้แก่
             <strong>อบรมแบบวันหยุดยาว ๆ ปีละกี่รอบ</strong>: อาจารย์กระดาษครบ
             แต่รันเรือจมไม่บ่อย ไมล์ฝึกจึงไม่พอกับ สนามหนัก คาบคอร์สนาน ๆ
             ไม่เท่ากับการอยู่กับ แบบเรือ เส้น แผน และอากาศจริง
@@ -750,14 +793,15 @@
           </p>
 
           <h3 id="swim-through">
-            1. การว่ายผ่าน (swim-through) — ยังไม่ใช่ overhead (ปิดเหนือศีรษะ) จริง
+            1. การว่ายผ่าน (swim-through) — ยังไม่ใช่ overhead (ปิดเหนือศีรษะ)
+            จริง
           </h3>
 
           <p>
             <strong>swim-through (การว่ายผ่าน)</strong> คือทางโล่งที่ ยัง
             <strong>ขึ้นไปยังผิวน้ำได้ตรง</strong> ตลอดเวลา ไม่มี
-            <strong>สภาพ overhead (ปิดเหนือศีรษะ)</strong> จริงจัง นำทางไม่ซับซ้อน
-            และไม่ต้องวาง สายนำทาง (guideline)
+            <strong>สภาพ overhead (ปิดเหนือศีรษะ)</strong> จริงจัง
+            นำทางไม่ซับซ้อน และไม่ต้องวาง สายนำทาง (guideline)
           </p>
 
           <ul>
@@ -841,8 +885,9 @@
             นักดำนันทนาการที่จะสำรวจ
             <a href="/th/dive-sites/htms-chang-wreck/">เรือจม เรือหลวงช้าง</a>
             แบบจริงจัง มักเหมาะกับการสร้างฐาน
-            <strong>Deep, Wreck &amp; Nitrox</strong> แบบรวมชุด มากกว่าไปทีละคอร์สแบบไม่ต่อเนื่อง
-            ถ้าต้องการทำความเข้าใจ ความลึกตามใบนันทนาการ บนเรือจม ก่อนเสริมสเปเชียลตี้
+            <strong>Deep, Wreck &amp; Nitrox</strong> แบบรวมชุด
+            มากกว่าไปทีละคอร์สแบบไม่ต่อเนื่อง ถ้าต้องการทำความเข้าใจ
+            ความลึกตามใบนันทนาการ บนเรือจม ก่อนเสริมสเปเชียลตี้
             <a href="/th/posts/tips-and-tricks/deep-diving/"
               >บทความเคล็ดลับดำลึก</a
             >
@@ -976,13 +1021,14 @@
           </div>
 
           <h3 id="full">
-            3. การเข้าในโครงสร้างแบบเต็ม — งานในสภาพ overhead (ปิดเหนือศีรษะ) ขั้นสูง
+            3. การเข้าในโครงสร้างแบบเต็ม — งานในสภาพ overhead (ปิดเหนือศีรษะ)
+            ขั้นสูง
           </h3>
 
           <p>
             <strong>การเข้าแบบเต็ม (full / beyond light)</strong>
-            คือลง ลึกออกนอก “โซนแสง” อาจมองไม่เห็นออก แสงหาย
-            ถือเป็นสภาพ overhead (ปิดเหนือศีรษะ) แท้
+            คือลง ลึกออกนอก “โซนแสง” อาจมองไม่เห็นออก แสงหาย ถือเป็นสภาพ
+            overhead (ปิดเหนือศีรษะ) แท้
           </p>
 
           <ul>
@@ -1167,8 +1213,8 @@
           </h3>
 
           <p>
-            ข้อผิดพลาดใหญ่คือใช้คำนุ่ม กับ สนาม หนัก ถ้าเป็นสภาพ overhead (ปิดเหนือศีรษะ)
-            ขึ้นไม่ตรง นั่นไม่ใช่แค่ swim-through อีกแล้ว
+            ข้อผิดพลาดใหญ่คือใช้คำนุ่ม กับ สนาม หนัก ถ้าเป็นสภาพ overhead
+            (ปิดเหนือศีรษะ) ขึ้นไม่ตรง นั่นไม่ใช่แค่ swim-through อีกแล้ว
           </p>
 
           <p>
@@ -1247,7 +1293,8 @@
 
           <p>
             หากคุณต้องการก้าวจากการ &ldquo;มองเข้าไปในเรือ&rdquo; ไปสู่การ
-            &ldquo;ดำน้ำเข้าไปอย่างปลอดภัย&rdquo; การฝึกอบรมอย่างถูกต้องคือขั้นตอนสำคัญ
+            &ldquo;ดำน้ำเข้าไปอย่างปลอดภัย&rdquo;
+            การฝึกอบรมอย่างถูกต้องคือขั้นตอนสำคัญ
           </p>
           <div
             style="
@@ -1264,7 +1311,8 @@
             ภาพเหล่านี้เป็นสำเนาแบบความละเอียดต่ำของแผนผังก่อสร้างต้นฉบับของ
             เรือหลวงช้าง จัดทำขึ้นเพื่อการอ้างอิงทั่วไปเท่านั้น
             แผนผังฉบับเต็มถูกใช้โดยทีมงานของเราสำหรับการวางแผนดำน้ำแบบมืออาชีพ
-            ในการดำน้ำแบบการเข้าในโครงสร้างแบบจำกัด (โซนแสง) และการเข้าในโครงสร้างแบบเต็ม เท่านั้น
+            ในการดำน้ำแบบการเข้าในโครงสร้างแบบจำกัด (โซนแสง)
+            และการเข้าในโครงสร้างแบบเต็ม เท่านั้น
             ห้ามใช้ภาพเหล่านี้สำหรับการนำทางใต้น้ำหรือการวางแผนเส้นทางภายในซาก
           </div>
 
@@ -1294,7 +1342,8 @@
               <figcaption
                 style="margin-top: 8px; font-size: 0.88em; opacity: 0.7"
               >
-                เรือจม เรือหลวงช้าง – การเข้าในโครงสร้างแบบจำกัด (โซนแสง) ระดับนันทนาการ · แผนผังก่อสร้างต้นฉบับ (ความละเอียดลดลง)
+                เรือจม เรือหลวงช้าง – การเข้าในโครงสร้างแบบจำกัด (โซนแสง)
+                ระดับนันทนาการ · แผนผังก่อสร้างต้นฉบับ (ความละเอียดลดลง)
                 (ความละเอียดลดลง)
               </figcaption>
             </figure>
@@ -1316,8 +1365,9 @@
               <figcaption
                 style="margin-top: 8px; font-size: 0.88em; opacity: 0.7"
               >
-                เรือจม เรือหลวงช้าง – การเข้าในโครงสร้างแบบเต็ม งานในสภาพ overhead (ปิดเหนือศีรษะ) ขั้นสูง · แผนผังก่อสร้างต้นฉบับ (ความละเอียดลดลง)
-                (ความละเอียดลดลง)
+                เรือจม เรือหลวงช้าง – การเข้าในโครงสร้างแบบเต็ม งานในสภาพ
+                overhead (ปิดเหนือศีรษะ) ขั้นสูง · แผนผังก่อสร้างต้นฉบับ
+                (ความละเอียดลดลง) (ความละเอียดลดลง)
               </figcaption>
             </figure>
           </div>
@@ -1339,10 +1389,6 @@
               margin-top: 2rem;
               margin-bottom: 0.5em;
               font-size: 32px;
-              background: linear-gradient(to right, #0077b6, #c0c0c0);
-              -webkit-background-clip: text;
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
               font-weight: bold;
             "
           >
@@ -1460,8 +1506,8 @@
               <div class="excerpt">
                 <h3>🪢 Advanced Wreck</h3>
                 <p style="min-height: 60px">
-                  TDI: งานเชือก โปรโตคอลทีม การแทรกซึมนอกโซนแสง
-                  ภายใต้ความลึก การวางแผนก๊าซ และขอบเขตการฝึกที่เหมาะสม
+                  TDI: งานเชือก โปรโตคอลทีม การแทรกซึมนอกโซนแสง ภายใต้ความลึก
+                  การวางแผนก๊าซ และขอบเขตการฝึกที่เหมาะสม
                 </p>
               </div>
             </a>

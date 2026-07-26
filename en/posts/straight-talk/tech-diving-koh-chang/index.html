@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Tech Diving Koh Chang – TDI Technical Training &amp; HTMS Chang Wreck |
@@ -322,6 +323,48 @@
           object-fit: cover;
         }
       }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
     </style>
     <link
       rel="preload"
@@ -444,18 +487,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Tech Diving Koh Chang – TDI Technical Training &amp; HTMS Chang
-            Wreck
-          </h1>
-          <p>
-            Straight Talk on Technical Diving Koh Chang Thailand: realistic
-            expectations, the HTMS Chang wreck, TDI courses &amp; who this is
-            for.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -470,7 +501,15 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="speciality-box posts-box">
+      <div class="tek-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Tech Diving Koh Chang – TDI Technical Training &amp; HTMS Chang Wreck
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Straight Talk on Technical Diving Koh Chang Thailand: realistic
+          expectations, the HTMS Chang wreck, TDI courses &amp; who this is for.
+        </p>
+
         <nav class="page-jump-nav" aria-label="On this page">
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
@@ -508,14 +547,14 @@
         <section id="reality">
           <h2>Reality check: why Koh Chang is not a “tec capital”</h2>
           <p>
-            If your mental image of technical diving is endless 100&nbsp;m walls,
-            mine exploration, or constant 80–100&nbsp;m exploration projects,
-            Koh Chang is not pretending to be that. The Gulf of Thailand side
-            around Koh Chang does not offer the same topography as some limestone /
-            oceanic tec meccas. Depth is often limited compared to those
-            marketing posters, and there are no vast cave systems for
-            multi-stage cave curricula. “Exploration-grade” mixed-gas projects are
-            not what this island sells.
+            If your mental image of technical diving is endless 100&nbsp;m
+            walls, mine exploration, or constant 80–100&nbsp;m exploration
+            projects, Koh Chang is not pretending to be that. The Gulf of
+            Thailand side around Koh Chang does not offer the same topography as
+            some limestone / oceanic tec meccas. Depth is often limited compared
+            to those marketing posters, and there are no vast cave systems for
+            multi-stage cave curricula. “Exploration-grade” mixed-gas projects
+            are not what this island sells.
           </p>
           <p>
             Saying that out loud is good for everyone: you get accurate
@@ -527,10 +566,13 @@
               No reputation as a 100&nbsp;m+ wall destination in the sense some
               tec hotspots have.
             </li>
-            <li>Training depth band is often moderate – match profiles to reality.</li>
+            <li>
+              Training depth band is often moderate – match profiles to reality.
+            </li>
             <li>Complex cave systems: not the local selling point.</li>
             <li>
-              “Extreme exploration” marketing: not what we build this article on.
+              “Extreme exploration” marketing: not what we build this article
+              on.
             </li>
           </ul>
         </section>
@@ -541,16 +583,16 @@
           <h2>The game changer: HTMS Chang</h2>
           <p>
             Here is the pivot: Thailand’s
-            <a href="/en/dive-sites/htms-chang-wreck/">largest accessible wreck</a>,
-            sitting in roughly the
-            <strong>30&nbsp;m</strong> range (main deck around 23&nbsp;m, maximum
-            on the wreck about 30&nbsp;m), is a serious training asset. Depth is
-            meaningful for staged decompression practice and gas planning without
-            pretending you are on a 90&nbsp;m trimix expedition. The structure is
-            large enough to rehearse wreck protocols: line handling,
-            team positioning, non-silly penetration discipline (only where your
-            certification and plan allow – we do not encourage reckless swim-
-            through ego dives).
+            <a href="/en/dive-sites/htms-chang-wreck/"
+              >largest accessible wreck</a
+            >, sitting in roughly the <strong>30&nbsp;m</strong> range (main
+            deck around 23&nbsp;m, maximum on the wreck about 30&nbsp;m), is a
+            serious training asset. Depth is meaningful for staged decompression
+            practice and gas planning without pretending you are on a 90&nbsp;m
+            trimix expedition. The structure is large enough to rehearse wreck
+            protocols: line handling, team positioning, non-silly penetration
+            discipline (only where your certification and plan allow – we do not
+            encourage reckless swim- through ego dives).
           </p>
 
           <div
@@ -623,10 +665,12 @@
             concrete blocks”.
           </p>
 
-          <h3 id="wreck-penetration">Wreck penetration and what “qualified” means</h3>
+          <h3 id="wreck-penetration">
+            Wreck penetration and what “qualified” means
+          </h3>
           <p>
-            On Koh Chang, technical diving training makes the strongest sense when
-            it is tied to <strong>serious wreck work</strong>—especially
+            On Koh Chang, technical diving training makes the strongest sense
+            when it is tied to <strong>serious wreck work</strong>—especially
             penetration line work and team protocols that match what HTMS Chang
             actually demands. Advanced Nitrox and Decompression Procedures are
             foundational layers, but they are not a substitute for
@@ -641,11 +685,14 @@
             “overhead” rating borrowed from an unrelated discipline).
           </p>
           <p>
-            <strong>Cave diving is not the same credential as wreck penetration.</strong>
-            A Full Cave Diver, for example, is not automatically qualified for full
-            wreck penetration: natural cave and human-made wreck environments differ
-            in hazards, line tactics, and emergency logic, and the training is not
-            interchangeable.
+            <strong
+              >Cave diving is not the same credential as wreck
+              penetration.</strong
+            >
+            A Full Cave Diver, for example, is not automatically qualified for
+            full wreck penetration: natural cave and human-made wreck
+            environments differ in hazards, line tactics, and emergency logic,
+            and the training is not interchangeable.
           </p>
         </section>
 
@@ -656,7 +703,8 @@
           <p>
             Our hub for this pathway is the
             <a href="/en/courses/technical-diving-courses/"
-              >technical diving courses overview</a>. Typical building blocks people stack over time (pick what matches
+              >technical diving courses overview</a
+            >. Typical building blocks people stack over time (pick what matches
             your logbook and goals – we help you sequence it safely):
           </p>
           <ul>
@@ -665,13 +713,15 @@
               gas planning for richer mixes and technical-style thinking.
             </li>
             <li>
-              <a href="/en/courses/deco-procedures/">TDI Decompression Procedures</a>
+              <a href="/en/courses/deco-procedures/"
+                >TDI Decompression Procedures</a
+              >
               – staged decompression skills that match modern practice.
             </li>
             <li>
               <a href="/en/courses/advanced-wreck/">TDI Advanced Wreck</a> –
-              serious wreck protocols; minimum experience requirements apply (see
-              below).
+              serious wreck protocols; minimum experience requirements apply
+              (see below).
             </li>
           </ul>
           <p>
@@ -707,7 +757,8 @@
               equivalent (course-specific rules apply).
             </li>
             <li>
-              <strong>Experience:</strong> often <strong>25 logged dives</strong>
+              <strong>Experience:</strong> often
+              <strong>25 logged dives</strong>
               as a common entry band for advanced technical entry – plus depth-
               appropriate comfort.
             </li>
@@ -727,67 +778,76 @@
         <hr />
 
         <section id="mindset">
-          <h2>Beyond recreational diving: mindset, teams, and “elite” done honestly</h2>
+          <h2>
+            Beyond recreational diving: mindset, teams, and “elite” done
+            honestly
+          </h2>
           <p>
             Technical diver training is <strong>not</strong> recreational diving
-            with more cylinders and a new plastic card. It is a different workload:
-            heavier academics, explicit failure planning, and skills that only make
-            sense when you <strong>already dive well</strong> – clean buoyancy,
-            staged thinking, and a logbook that shows you can execute normal dives
-            without drama. Participants are expected to show up with
-            <strong>solid baseline knowledge</strong>; the course extends it into
-            decompression theory, richer gas strategies, and structured
-            problem-solving – during class <em>and</em> in the habit of reading and
-            refreshing afterward.
+            with more cylinders and a new plastic card. It is a different
+            workload: heavier academics, explicit failure planning, and skills
+            that only make sense when you <strong>already dive well</strong> –
+            clean buoyancy, staged thinking, and a logbook that shows you can
+            execute normal dives without drama. Participants are expected to
+            show up with <strong>solid baseline knowledge</strong>; the course
+            extends it into decompression theory, richer gas strategies, and
+            structured problem-solving – during class <em>and</em> in the habit
+            of reading and refreshing afterward.
           </p>
           <p>
             Many people pursue technical pathways because they want to belong to
             the <strong>global community of serious sport divers</strong> who
             treat complexity with respect – not because they need a flex for
             social media. When we say “elite” here, we mean
-            <strong>training depth and professionalism</strong>: divers who engage
-            seriously with decompression models, redundancy, gas matching, and
-            rehearsal until the boring stuff is automatic. That is a different
-            ambition than collecting recreational specialties for a wall of
-            patches.
+            <strong>training depth and professionalism</strong>: divers who
+            engage seriously with decompression models, redundancy, gas
+            matching, and rehearsal until the boring stuff is automatic. That is
+            a different ambition than collecting recreational specialties for a
+            wall of patches.
           </p>
           <p>
             <strong>Certification is earned, not purchased.</strong> Technical
             courses are not like many beginner programs where showing up and
-            completing the schedule usually leads to a card. <strong>Course fees
-            and attendance do not guarantee certification.</strong> Instructors
-            sign off when you meet agency standards in performance
+            completing the schedule usually leads to a card.
+            <strong
+              >Course fees and attendance do not guarantee
+              certification.</strong
+            >
+            Instructors sign off when you meet agency standards in performance
             <em>and</em> judgment: beyond theory and core skills, that includes
-            <strong>team communication, situational awareness, discipline under
-            load,</strong> and consistent conduct in realistic training dives.
-            Most well-prepared divers reach the standard; if you are not there yet,
-            the professional answer may be more coaching dives, skill refresh, or
-            continuing another time – which protects you, your teammates, and the
-            meaning of the certification itself.
-            See also the
+            <strong
+              >team communication, situational awareness, discipline under
+              load,</strong
+            >
+            and consistent conduct in realistic training dives. Most
+            well-prepared divers reach the standard; if you are not there yet,
+            the professional answer may be more coaching dives, skill refresh,
+            or continuing another time – which protects you, your teammates, and
+            the meaning of the certification itself. See also the
             <a href="#faq-certification">FAQ on certification guarantees</a>.
           </p>
           <p>
             <strong>Important expectation:</strong> earning a technical
             certification does <strong>not</strong> mean you must forever run
             long, complex decompression dives on holiday. Plenty of well-trained
-            tech divers spend most of their time on <strong>simple recreational
-            profiles</strong>; the payoff is that they bring sharper gas awareness,
-            calmer execution, and stronger protocols to <em>every</em> dive –
-            including easy ones. A good tech graduate is often, above all,
+            tech divers spend most of their time on
+            <strong>simple recreational profiles</strong>; the payoff is that
+            they bring sharper gas awareness, calmer execution, and stronger
+            protocols to <em>every</em> dive – including easy ones. A good tech
+            graduate is often, above all,
             <strong>an exceptionally competent diver</strong> who spots small
-            failures early, supports a buddy under load, and stays methodical when
-            something goes wrong.
+            failures early, supports a buddy under load, and stays methodical
+            when something goes wrong.
           </p>
           <p>
             <strong>Technical diving is team-based.</strong> Briefings,
             positioning, gas matching, and emergency drills are built around the
             team – not lone wolves. That culture is why we say this plainly:
             <strong>technical diving is not for underwater cowboys</strong> – no
-            improvised “I’ll wing it” profiles, no silent heroics, no ignoring the
-            plan because the sea looks calm. If that sounds restrictive, good: the
-            restriction is what keeps people alive when the water stops
-            cooperating.
+            improvised “I’ll wing it” profiles, no silent heroics, no ignoring
+            the plan because the sea looks calm. If that sounds restrictive,
+            good: the restriction is what keeps people alive when the water
+            stops cooperating.
           </p>
         </section>
 
@@ -830,8 +890,7 @@
               <a href="#mindset">mindset</a> above).
             </li>
             <li>
-              Recreational divers moving deliberately toward technical
-              programs.
+              Recreational divers moving deliberately toward technical programs.
             </li>
             <li>
               Divers preparing for deeper or more complex environments elsewhere
@@ -855,8 +914,9 @@
             <a href="/en/courses/technical-diving-courses/"
               ><strong>a solid technical foundation</strong></a
             >
-            in a measured environment – including one of Thailand’s most significant
-            wrecks for training context – Koh Chang can be an excellent place to start.
+            in a measured environment – including one of Thailand’s most
+            significant wrecks for training context – Koh Chang can be an
+            excellent place to start.
           </p>
         </section>
 
@@ -877,10 +937,13 @@
               <a href="/en/courses/technical-diving-courses/"
                 >Technical diving courses</a
               >
-              – TDI pathways, packages, and how we structure training on Koh Chang.
+              – TDI pathways, packages, and how we structure training on Koh
+              Chang.
             </li>
             <li>
-              <a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang dive site</a>
+              <a href="/en/dive-sites/htms-chang-wreck/"
+                >HTMS Chang dive site</a
+              >
               – depth, orientation, what to expect.
             </li>
             <li>
@@ -892,8 +955,8 @@
               days for certified divers; good add-on after skills sessions.
             </li>
             <li>
-              <a href="/en/contact/">Contact</a> – dates, prerequisites, and honest
-              scheduling for tech training.
+              <a href="/en/contact/">Contact</a> – dates, prerequisites, and
+              honest scheduling for tech training.
             </li>
           </ul>
         </section>
@@ -909,8 +972,8 @@
             </summary>
             <p>
               It is excellent for <strong>structured technical training</strong>
-              and building procedures with realistic wreck context (notably
-              HTMS Chang), not for marketing yourself as an “extreme exploration
+              and building procedures with realistic wreck context (notably HTMS
+              Chang), not for marketing yourself as an “extreme exploration
               only” destination list.
             </p>
           </details>
@@ -920,9 +983,9 @@
               <strong>Can I start technical diving in Thailand?</strong>
             </summary>
             <p>
-              Yes – with the right prerequisites, a reputable center, and
-              honest sequencing. Thailand offers strong logistics; your limits
-              are always your certification, gas plan, environment, and team
+              Yes – with the right prerequisites, a reputable center, and honest
+              sequencing. Thailand offers strong logistics; your limits are
+              always your certification, gas plan, environment, and team
               protocols – not a postcard slogan.
             </p>
           </details>
@@ -933,9 +996,9 @@
             </summary>
             <p>
               The wreck is worked in a range suitable for advanced training:
-              roughly <strong>30&nbsp;m maximum depth on the wreck</strong>, main
-              deck around <strong>23&nbsp;m</strong> – used for advanced and
-              wreck-oriented courses (verify your certification and the
+              roughly <strong>30&nbsp;m maximum depth on the wreck</strong>,
+              main deck around <strong>23&nbsp;m</strong> – used for advanced
+              and wreck-oriented courses (verify your certification and the
               specific dive plan).
             </p>
           </details>
@@ -947,13 +1010,14 @@
             <p>
               At Chang Diving Center you can progress through the technical
               ladder described on our
-              <a href="/en/courses/technical-diving-courses/">technical diving courses</a>
+              <a href="/en/courses/technical-diving-courses/"
+                >technical diving courses</a
+              >
               page – including
               <a href="/en/courses/advanced-nitrox/">Advanced Nitrox</a>,
-              <a href="/en/courses/deco-procedures/">Decompression Procedures</a>,
-              and
-              <a href="/en/courses/advanced-wreck/">Advanced Wreck</a>, plus
-              package options such as the
+              <a href="/en/courses/deco-procedures/">Decompression Procedures</a
+              >, and <a href="/en/courses/advanced-wreck/">Advanced Wreck</a>,
+              plus package options such as the
               <a href="/en/courses/tech-package/">Technical Diver package</a>.
             </p>
           </details>
@@ -961,14 +1025,15 @@
           <details>
             <summary>
               <strong
-                >Does cave diving training qualify me for wreck penetration?</strong
+                >Does cave diving training qualify me for wreck
+                penetration?</strong
               >
             </summary>
             <p>
               Not automatically. Cave and wreck penetration address different
-              environments (natural vs. human-made structure) with different risk
-              profiles and protocol sets. Full wreck penetration training here maps
-              to
+              environments (natural vs. human-made structure) with different
+              risk profiles and protocol sets. Full wreck penetration training
+              here maps to
               <a href="/en/courses/advanced-wreck/">TDI Advanced Wreck</a> or an
               equivalent agency wreck program—not to cave diving alone.
             </p>
@@ -986,11 +1051,14 @@
               meet agency standards in performance <em>and</em> judgment. Course
               fees and attendance alone do <strong>not</strong> guarantee
               certification. Beyond theory and core skills, instructors look at
-              <strong>team communication, situational awareness, discipline,</strong>
-              and consistent conduct in realistic training. If you are not yet at
-              the standard, the professional answer may be additional coaching dives,
-              skill refresh, or continuing another time – which protects you, your
-              teammates, and what the certification is supposed to represent.
+              <strong
+                >team communication, situational awareness, discipline,</strong
+              >
+              and consistent conduct in realistic training. If you are not yet
+              at the standard, the professional answer may be additional
+              coaching dives, skill refresh, or continuing another time – which
+              protects you, your teammates, and what the certification is
+              supposed to represent.
             </p>
           </details>
 
@@ -1002,23 +1070,27 @@
               >
             </summary>
             <p>
-              No. Certification prepares you for dives that need those skills when
-              the plan calls for them; many trained technical divers still do
-              mostly <strong>simple no-stop or light profiles</strong> in daily
-              diving. The gain is deeper understanding, teamwork, and safer habits
-              on <em>every</em> dive – not an obligation to run complex deco on
-              every trip.
+              No. Certification prepares you for dives that need those skills
+              when the plan calls for them; many trained technical divers still
+              do mostly <strong>simple no-stop or light profiles</strong> in
+              daily diving. The gain is deeper understanding, teamwork, and
+              safer habits on <em>every</em> dive – not an obligation to run
+              complex deco on every trip.
             </p>
           </details>
 
           <details>
             <summary>
-              <strong>Is technical diving the same as recreational diving with more gear?</strong>
+              <strong
+                >Is technical diving the same as recreational diving with more
+                gear?</strong
+              >
             </summary>
             <p>
-              No. Agencies expect a <strong>strong recreational foundation</strong>
-              first. Technical programs add theory (e.g. decompression planning),
-              structured failure responses, and <strong>team-based</strong>
+              No. Agencies expect a
+              <strong>strong recreational foundation</strong> first. Technical
+              programs add theory (e.g. decompression planning), structured
+              failure responses, and <strong>team-based</strong>
               protocols. It is a different learning load and mindset – not a
               cosmetic gear upgrade.
             </p>
@@ -1032,21 +1104,21 @@
             margin: 34px 0 18px 0;
             padding: 18px;
             background: linear-gradient(
-              to right,
-              rgba(0, 119, 182, 0.06),
-              rgba(207, 216, 220, 0.06)
+              135deg,
+              rgba(58, 58, 58, 0.08) 0%,
+              rgba(255, 138, 92, 0.1) 100%
             );
-            border-left: 5px solid #0077b6;
+            border-left: 5px solid #ff8a5c;
             border-radius: 10px;
           "
         >
-          <h2 style="margin: 0 0 10px 0; color: #0077b6">
+          <h2 style="margin: 0 0 10px 0; color: #404040">
             Book tec training or ask for a schedule
           </h2>
           <p style="margin: 0 0 12px 0">
-            Email us with dates, certification, dive counts, and goals – we reply
-            with realistic sequencing (and we will say no if you are not ready
-            yet).
+            Email us with dates, certification, dive counts, and goals – we
+            reply with realistic sequencing (and we will say no if you are not
+            ready yet).
           </p>
 
           <div
@@ -1058,7 +1130,12 @@
               style="
                 display: inline-block;
                 padding: 12px 20px;
-                background: #0077b6;
+                background: linear-gradient(
+                  135deg,
+                  #3a3a3a 0%,
+                  #5a5a5a 45%,
+                  #ff8a5c 100%
+                );
                 color: #fff;
                 text-decoration: none;
                 border-radius: 6px;
@@ -1074,8 +1151,8 @@
                 display: inline-block;
                 padding: 12px 20px;
                 background: transparent;
-                color: #0077b6;
-                border: 2px solid #0077b6;
+                color: #404040;
+                border: 2px solid #ff8a5c;
                 text-decoration: none;
                 border-radius: 6px;
                 font-weight: 600;
@@ -1099,7 +1176,9 @@
             >Technical diver stories</a
           >
           &nbsp;•&nbsp;
-          <a href="/en/posts/straight-talk/solo-diver/">Solo diving on Koh Chang</a>
+          <a href="/en/posts/straight-talk/solo-diver/"
+            >Solo diving on Koh Chang</a
+          >
           &nbsp;•&nbsp;
           <a href="/en/posts/straight-talk/">All Straight Talk posts</a>
         </p>

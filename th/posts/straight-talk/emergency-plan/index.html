@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>แผนฉุกเฉินกรณีเกิดอุบัติเหตุจากการดำน้ำที่เกาะช้าง</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "แผนฉุกเฉินกรณีอุบัติเหตุทางการดำน้ำที่เกาะช้าง",
         "alternativeHeadline": "ควรทำอย่างไรเมื่อเกิดเหตุฉุกเฉินจากการดำน้ำที่เกาะช้าง",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-emergency_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความปลอดภัยในการดำน้ำ",
@@ -485,15 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>แผนฉุกเฉินกรณีเกิดอุบัติเหตุจากการดำน้ำที่เกาะช้าง</h1>
-          <p>
-            เตรียมตัวให้พร้อมและปลอดภัย:
-            เรียนรู้วิธีปฏิบัติหากเกิดเหตุฉุกเฉินในการดำน้ำ – ปฐมพยาบาล ออกซิเจน
-            โรงพยาบาล
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,21 +505,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          แผนฉุกเฉินกรณีเกิดอุบัติเหตุจากการดำน้ำที่เกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เตรียมตัวให้พร้อมและปลอดภัย:
+          เรียนรู้วิธีปฏิบัติหากเกิดเหตุฉุกเฉินในการดำน้ำ – ปฐมพยาบาล ออกซิเจน
+          โรงพยาบาล
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          แผนฉุกเฉินสำหรับอุบัติเหตุจากการดำน้ำที่เกาะช้าง
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ep-intro">บทนำ</a>
+            <a href="#ep-board">บนเรือ</a>
+            <a href="#ep-services">หน่วยฉุกเฉิน</a>
+            <a href="#ep-chamber">ห้องแรงดัน</a>
+            <a href="#ep-dan">DAN</a>
+            <a href="#ep-prevention">การป้องกัน</a>
+            <a href="#ep-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="ep-intro">
+          ต้องทำอะไรหากเกิดเหตุฉุกเฉินจากการดำน้ำที่เกาะช้าง
         </h2>
 
         <p>
@@ -532,7 +541,7 @@
           นี่คือแนวทางเมื่อเกิดเหตุฉุกเฉินจากการดำน้ำที่เกาะช้าง
         </p>
 
-        <h2>1. การดำเนินการเบื้องต้นบนเรือ</h2>
+        <h2 id="ep-board">1. การดำเนินการเบื้องต้นบนเรือ</h2>
         <p>
           เมื่อเกิดอุบัติเหตุ ต้องดำเนินการอย่างรวดเร็ว มีสติ และเป็นระบบ ใช้<a
             href="/docs/EN_DCS_Field_Evaluation_Slate.pdf"
@@ -584,7 +593,7 @@
           </li>
         </ul>
 
-        <h2>2. ติดต่อหน่วยฉุกเฉินท้องถิ่น</h2>
+        <h2 id="ep-services">2. ติดต่อหน่วยฉุกเฉินท้องถิ่น</h2>
         <ul>
           <li><strong>เบอร์ฉุกเฉิน:</strong> 1669 (บริการฉุกเฉินประเทศไทย)</li>
           <li>
@@ -596,7 +605,7 @@
           </li>
         </ul>
 
-        <h2>3. ส่งต่อไปยังห้องแรงดันที่ใกล้ที่สุด</h2>
+        <h2 id="ep-chamber">3. ส่งต่อไปยังห้องแรงดันที่ใกล้ที่สุด</h2>
         <ul>
           <li><strong>โรงพยาบาลตราด</strong> – เมืองตราด จังหวัดตราด</li>
           <li>
@@ -604,7 +613,7 @@
           </li>
         </ul>
 
-        <h2>4. ประกันระยะสั้นของ DAN</h2>
+        <h2 id="ep-dan">4. ประกันระยะสั้นของ DAN</h2>
         <p>
           ที่ศูนย์ของเรา คุณสามารถซื้อ<a
             href="/th/day-trips/insurance/"
@@ -614,7 +623,7 @@
           >จาก DAN – ปลอดภัยในราคาไม่แพง!
         </p>
 
-        <h2>5. การป้องกันคือหัวใจ</h2>
+        <h2 id="ep-prevention">5. การป้องกันคือหัวใจ</h2>
         <ul>
           <li>ปฏิบัติตามขีดจำกัดไม่หยุดพัก (no-decompression limit)</li>
           <li>ทำ safety stop ทุกครั้ง</li>
@@ -624,7 +633,7 @@
           </li>
         </ul>
 
-        <h2>สรุป</h2>
+        <h2 id="ep-conclusion">สรุป</h2>
         <p>
           แผนฉุกเฉินที่ชัดเจนช่วยชีวิตได้ แบ่งปันกับบัดดี้
           และเตรียมตัวให้พร้อมเพื่อความปลอดภัยในการดำน้ำ!

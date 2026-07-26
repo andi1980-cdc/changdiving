@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       เส้นทางสู่การเป็นมืออาชีพด้านการดำน้ำ – การฝึก ชีวิตประจำวัน และความจริง
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "เส้นทางสู่การเป็นมืออาชีพด้านการดำน้ำ – การฝึกอบรม ชีวิตประจำวัน และความเป็นจริง",
         "alternativeHeadline": "อยากเป็นมืออาชีพด้านการดำน้ำ? รู้จักข้อกำหนด อุปกรณ์ ไลฟ์สไตล์ และอาชีพในโลกใต้น้ำ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/the-path-to-becoming-a-dive-professional_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "Straight Talk",
@@ -496,17 +501,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            เส้นทางสู่การเป็นมืออาชีพด้านการดำน้ำ – การฝึก ชีวิตประจำวัน
-            และความจริง
-          </h1>
-          <p>
-            เรียนรู้ว่าต้องเตรียมอะไรบ้างเพื่อเป็นมือโปรดำน้ำ – การฝึก อุปกรณ์
-            งานประจำวัน ข้อดี-ข้อเสีย และวิธีเริ่มต้นอาชีพในประเทศไทย
-          </p>
-        </div>
       </div>
     </header>
 
@@ -523,22 +517,35 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           เส้นทางสู่การเป็นมืออาชีพด้านการดำน้ำ – การฝึก ชีวิตประจำวัน
           และความจริง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เรียนรู้ว่าต้องเตรียมอะไรบ้างเพื่อเป็นมือโปรดำน้ำ – การฝึก อุปกรณ์
+          งานประจำวัน ข้อดี-ข้อเสีย และวิธีเริ่มต้นอาชีพในประเทศไทย
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#dpt-intro">บทนำ</a>
+            <a href="#dpt-training">การฝึก</a>
+            <a href="#dpt-gear">อุปกรณ์</a>
+            <a href="#dpt-workday">วันทำงาน</a>
+            <a href="#dpt-salary">เงินเดือน</a>
+            <a href="#dpt-levels">เส้นทาง</a>
+            <a href="#dpt-worth">คุ้มไหม</a>
+            <a href="#dpt-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="dpt-intro">
+          การฝึก อุปกรณ์ เงิน และวันทำงานจริง — ไม่มีฟิลเตอร์โรแมนติก
         </h2>
 
         <p>
@@ -550,7 +557,7 @@
 
         <hr />
 
-        <h2>1. การฝึกอบรมดำน้ำระดับมืออาชีพ</h2>
+        <h2 id="dpt-training">1. การฝึกอบรมดำน้ำระดับมืออาชีพ</h2>
         <ul>
           <li>
             <strong>จากนักดำน้ำมือใหม่สู่มือโปร:</strong>
@@ -633,7 +640,7 @@
 
         <hr />
 
-        <h2>2. อุปกรณ์สำคัญสำหรับ Divemaster & Instructor</h2>
+        <h2 id="dpt-gear">2. อุปกรณ์สำคัญสำหรับ Divemaster & Instructor</h2>
         <ul>
           <li>
             <strong>อุปกรณ์พื้นฐาน (หน้ากาก, ท่อหายใจ):</strong>
@@ -664,7 +671,7 @@
 
         <hr />
 
-        <h2>3. วันทำงานทั่วไปของมือโปรดำน้ำ</h2>
+        <h2 id="dpt-workday">3. วันทำงานทั่วไปของมือโปรดำน้ำ</h2>
 
         <h3>เช้า:</h3>
         <ul>
@@ -694,7 +701,7 @@
 
         <hr />
 
-        <h2>4. เงินเดือน & ความจริงของอาชีพนี้</h2>
+        <h2 id="dpt-salary">4. เงินเดือน & ความจริงของอาชีพนี้</h2>
         <ul>
           <li><strong>Divemaster:</strong> รายได้น้อย พึ่งทิปเป็นหลัก</li>
           <li>
@@ -712,7 +719,7 @@
 
         <hr />
 
-        <h2>5. เส้นทางอาชีพ – ทำไมการเรียนรู้ไม่มีวันจบ</h2>
+        <h2 id="dpt-levels">5. เส้นทางอาชีพ – ทำไมการเรียนรู้ไม่มีวันจบ</h2>
         <p>การเป็น Instructor ไม่ใช่จุดสิ้นสุด – ยังมีอีกหลายระดับให้เติบโต:</p>
 
         <h3>ระดับหลักของอาชีพดำน้ำ</h3>
@@ -747,7 +754,7 @@
 
         <hr />
 
-        <h2>6. อาชีพนี้คุ้มค่าหรือไม่?</h2>
+        <h2 id="dpt-worth">6. อาชีพนี้คุ้มค่าหรือไม่?</h2>
         <ul>
           <li>
             <strong>✅ ข้อดี:</strong>
@@ -769,7 +776,7 @@
 
         <hr />
 
-        <h2>7. สรุป – อาชีพนี้เหมาะกับคุณหรือไม่?</h2>
+        <h2 id="dpt-conclusion">7. สรุป – อาชีพนี้เหมาะกับคุณหรือไม่?</h2>
         <p>
           การเป็นมือโปรดำน้ำเป็นงานที่เติมเต็มจิตใจ – แต่มันต้องอาศัยความหลงใหล,
           ความทุ่มเท และความยืดหยุ่น

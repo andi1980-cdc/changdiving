@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTMS Chang: Wrack-Penetration vs. Swim-through | Chang Diving</title>
     <meta
@@ -391,6 +392,48 @@
           border: 0 !important;
         }
       }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
     </style>
     <style>
       /* Wreck swim-through / penetration comparison — scoped to this article */
@@ -565,7 +608,10 @@
       }
     </script>
 
-    <link rel="preload" href="/img/posts/htms-chang-wreck-penetration_small.webp" />
+    <link
+      rel="preload"
+      href="/img/posts/htms-chang-wreck-penetration_small.webp"
+    />
   </head>
   <body>
     <header>
@@ -623,14 +669,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>HTMS Chang: Wrack-Penetration vs. Swim-through</h1>
-          <p>
-            Wo die Lichtzone endet, warum dein Tiefenlimit für die gesamte
-            Penetration gilt – und was „volles Overhead“ wirklich bedeutet.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -645,7 +683,15 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="speciality-box posts-box">
+      <div class="tek-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          HTMS Chang: Wrack-Penetration vs. Swim-through
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Wo die Lichtzone endet, warum dein Tiefenlimit für die gesamte
+          Penetration gilt – und was „volles Overhead“ wirklich bedeutet.
+        </p>
+
         <nav class="page-jump-nav" aria-label="Auf dieser Seite">
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
@@ -755,10 +801,10 @@
 
           <p>
             Ein <strong>Swim-through / Durchschwimmen</strong> ist eine offene
-            Durchfahrt, in der
-            du jederzeit <strong>senkrecht zur Oberfläche</strong> aufsteigen
-            könntest. Kein wirkliches Overhead, keine vertrackte Navigation,
-            keine Führungsleine nötig.
+            Durchfahrt, in der du jederzeit
+            <strong>senkrecht zur Oberfläche</strong> aufsteigen könntest. Kein
+            wirkliches Overhead, keine vertrackte Navigation, keine
+            Führungsleine nötig.
           </p>
 
           <ul>
@@ -771,9 +817,8 @@
 
           <p>
             Kurz: ein Swim-through / Durchschwimmen ist (noch) keine echte
-            Wrack-Penetration. Für
-            Freizeittaucher:innen in der Regel geeignet, wenn Sicht, Tiefe und
-            Betreuung passen.
+            Wrack-Penetration. Für Freizeittaucher:innen in der Regel geeignet,
+            wenn Sicht, Tiefe und Betreuung passen.
           </p>
 
           <h3 id="limited">
@@ -855,9 +900,9 @@
             <a href="/de/dive-sites/htms-chang-wreck/">HTMS Chang</a> wirklich
             erkunden willst, macht eine kombinierte Basis aus
             <strong>Deep, Wreck &amp; Nitrox</strong> meist mehr Sinn als
-            verstreute Einzel-Specialties. Wenn du zuerst verstehen willst,
-            wie sich Freizeit-Tiefe auf einem Wrack in der Praxis auswirkt,
-            fasst unser
+            verstreute Einzel-Specialties. Wenn du zuerst verstehen willst, wie
+            sich Freizeit-Tiefe auf einem Wrack in der Praxis auswirkt, fasst
+            unser
             <a href="/de/posts/tips-and-tricks/deep-diving/"
               >Deep-Diving-Leitfaden</a
             >
@@ -1045,11 +1090,10 @@
           </blockquote>
 
           <p>
-            TDI Advanced Wreck erweitert die Ausbildung für Penetration
-            jenseits der Lichtzone, bleibt aber abhängig von
-            Zertifizierungsstufe, Gasplanung, Ausrüstung und Kursstandard.
-            Dekompressionstauchgänge erfordern zusätzlich passende technische
-            Ausbildung.
+            TDI Advanced Wreck erweitert die Ausbildung für Penetration jenseits
+            der Lichtzone, bleibt aber abhängig von Zertifizierungsstufe,
+            Gasplanung, Ausrüstung und Kursstandard. Dekompressionstauchgänge
+            erfordern zusätzlich passende technische Ausbildung.
           </p>
 
           <ul>
@@ -1277,9 +1321,9 @@
 
           <p>
             Oft lernen Gäste die HTMS Chang zuerst auf einer
-            <a href="/de/day-trips/fun-dives/">Tagestour / Fun Dives</a> auf
-            Koh Chang kennen, nicht in einem Kurs: Außen am Rumpf, Stromung
-            und Tagesablauf spüren, und mit dem Team klären, wozu euer Brevet
+            <a href="/de/day-trips/fun-dives/">Tagestour / Fun Dives</a> auf Koh
+            Chang kennen, nicht in einem Kurs: Außen am Rumpf, Stromung und
+            Tagesablauf spüren, und mit dem Team klären, wozu euer Brevet
             reicht, bevor ihr Spezial- oder Tech-Ausbildung plant.
           </p>
 
@@ -1306,8 +1350,8 @@
             <strong>Hinweis zu den Plänen:</strong> Es handelt sich um
             absichtlich niedrig aufgelöste Reproduktionen der originalen
             Baupläne der HTMS Chang, die hier ausschließlich zur allgemeinen
-            Orientierung veröffentlicht werden. Die vollständigen Pläne
-            werden von unserem Team ausschließlich zur professionellen
+            Orientierung veröffentlicht werden. Die vollständigen Pläne werden
+            von unserem Team ausschließlich zur professionellen
             Tauchgangsplanung für Limited- und Full-Penetration-Tauchgänge
             verwendet. Diese Abbildungen sind nicht zur Unterwassernavigation
             oder Routenplanung im Wrack geeignet.
@@ -1339,8 +1383,8 @@
               <figcaption
                 style="margin-top: 8px; font-size: 0.88em; opacity: 0.7"
               >
-                HTMS Chang – Limited-Penetration-Zonen · originaler
-                Bauplan (reduzierte Auflösung)
+                HTMS Chang – Limited-Penetration-Zonen · originaler Bauplan
+                (reduzierte Auflösung)
               </figcaption>
             </figure>
             <figure style="margin: 0">
@@ -1361,8 +1405,8 @@
               <figcaption
                 style="margin-top: 8px; font-size: 0.88em; opacity: 0.7"
               >
-                HTMS Chang – Full-Penetration-Übersicht · originaler
-                Bauplan (reduzierte Auflösung)
+                HTMS Chang – Full-Penetration-Übersicht · originaler Bauplan
+                (reduzierte Auflösung)
               </figcaption>
             </figure>
           </div>
@@ -1384,10 +1428,6 @@
               margin-top: 2rem;
               margin-bottom: 0.5em;
               font-size: 32px;
-              background: linear-gradient(to right, #0077b6, #c0c0c0);
-              -webkit-background-clip: text;
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
               font-weight: bold;
             "
           >

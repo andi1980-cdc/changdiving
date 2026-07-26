@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       ดำน้ำเดี่ยวที่เกาะช้าง – อิสรภาพ ความรับผิดชอบ และคู่มือ SDI Solo Diver |
@@ -335,6 +336,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -435,13 +442,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            🤿 ดำน้ำเดี่ยวที่เกาะช้าง – อิสรภาพหรือความเสี่ยงที่ไม่จำเป็น?
-          </h1>
-          <p>ข้อดี-ข้อเสีย ข้อกำหนด อุปกรณ์ การวางแผนและความปลอดภัย</p>
-        </div>
       </div>
     </header>
 
@@ -457,18 +457,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           🤿 ดำน้ำเดี่ยวที่เกาะช้าง – อิสรภาพหรือความเสี่ยงที่ไม่จำเป็น?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ข้อดี-ข้อเสีย ข้อกำหนด อุปกรณ์ การวางแผนและความปลอดภัย
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#st-solo-intro">บทนำ</a>
+            <a href="#st-solo-why">ทำไมเดี่ยว</a>
+            <a href="#st-solo-pros">ข้อดี-ข้อเสีย</a>
+            <a href="#st-solo-mindset">แนวคิด</a>
+            <a href="#st-solo-reqs">ข้อกำหนด</a>
+            <a href="#st-solo-gear">อุปกรณ์</a>
+            <a href="#st-solo-faq">FAQ</a>
+            <a href="#st-solo-book">ฝึกอบรม</a>
+          </div>
+        </nav>
+
+        <h2 id="st-solo-intro">
+          อิสรภาพใต้น้ำมาพร้อมระบบสำรอง การวางแผน และการช่วยตัวเอง
         </h2>
 
         <p style="margin: 0; font-size: 1.05em; opacity: 0.9">
@@ -529,7 +544,7 @@
         </section>
 
         <section id="why" style="margin: 26px 0">
-          <h2>ทำไมต้องดำน้ำเดี่ยว?</h2>
+          <h2 id="st-solo-why">ทำไมต้องดำน้ำเดี่ยว?</h2>
           <p>
             การดำน้ำเดี่ยวไม่ใช่ "ต่อต้านบัดดี้"
             นักดำน้ำที่มีประสบการณ์หลายคนเลือกดำน้ำเดี่ยว เพราะพวกเขา:
@@ -547,7 +562,7 @@
         </section>
 
         <section id="pros-cons" style="margin: 26px 0">
-          <h2>ข้อดี-ข้อเสีย: บัดดี้ vs. เดี่ยว</h2>
+          <h2 id="st-solo-pros">ข้อดี-ข้อเสีย: บัดดี้ vs. เดี่ยว</h2>
 
           <h3>✅ ข้อดีของการดำน้ำเดี่ยว</h3>
           <ul>
@@ -578,7 +593,9 @@
         </section>
 
         <section id="mindset" style="margin: 26px 0">
-          <h2>แนวคิด Solo Diver: ช่วยตัวเอง ไม่ใช่อีโก้</h2>
+          <h2 id="st-solo-mindset">
+            แนวคิด Solo Diver: ช่วยตัวเอง ไม่ใช่อีโก้
+          </h2>
           <p>
             การดำน้ำเดี่ยวหมายถึง:
             <strong>พึ่งพาตนเอง วิพากษ์ตนเอง อนุรักษ์นิยม</strong> คุณต้องมี
@@ -593,7 +610,7 @@
         </section>
 
         <section id="requirements" style="margin: 26px 0">
-          <h2>ข้อกำหนด (มาตรฐาน SDI Solo Diver – ภาพรวม)</h2>
+          <h2 id="st-solo-reqs">ข้อกำหนด (มาตรฐาน SDI Solo Diver – ภาพรวม)</h2>
           <p>
             การดำน้ำเดี่ยวไม่ใช่แนวคิดสำหรับมือใหม่ สำหรับการฝึกอบรม Solo Diver
             อย่างจริงจังตาม SDI โดยทั่วไปต้องมี:
@@ -621,7 +638,7 @@
         </section>
 
         <section id="equipment" style="margin: 26px 0">
-          <h2>อุปกรณ์บังคับ: ระบบสำรองไม่ใช่ตัวเลือก</h2>
+          <h2 id="st-solo-gear">อุปกรณ์บังคับ: ระบบสำรองไม่ใช่ตัวเลือก</h2>
           <p>
             ความผิดพลาดที่ใหญ่ที่สุด: "ฉันมีอ็อกโตปัส" – ไม่
             สำหรับการดำน้ำเดี่ยว คุณต้องมี
@@ -747,7 +764,7 @@
         </section>
 
         <section id="faq" style="margin: 26px 0">
-          <h2>FAQ – คำถามที่พบบ่อยเกี่ยวกับการดำน้ำเดี่ยว</h2>
+          <h2 id="st-solo-faq">FAQ – คำถามที่พบบ่อยเกี่ยวกับการดำน้ำเดี่ยว</h2>
 
           <details>
             <summary>
@@ -814,9 +831,7 @@
             border-radius: 10px;
           "
         >
-          <h2 style="margin: 0 0 10px 0; color: #0077b6">
-            สนใจฝึกอบรม SDI Solo Diver ที่เกาะช้าง?
-          </h2>
+          <h2 id="st-solo-book">สนใจฝึกอบรม SDI Solo Diver ที่เกาะช้าง?</h2>
           <p style="margin: 0 0 12px 0">
             หากคุณต้องการเรียนรู้การดำน้ำเดี่ยวอย่างจริงจัง (ไม่ใช่แค่ "ลอง")
             พูดคุยกับเรา เราจะดูร่วมกันเกี่ยวกับประสบการณ์ เป้าหมาย setup

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Tauchboot-Sicherheit & Etikette auf Koh Chang – Regeln gegen Unfälle &
@@ -259,14 +260,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            🛥️ Tauchboot-Sicherheit &amp; Etikette auf Koh Chang – Regeln gegen
-            Unfälle &amp; Ausrüstungsverlust
-          </h1>
-          <p>Praktische Regeln für Anfänger und erfahrene Taucher.</p>
-        </div>
       </div>
     </header>
 
@@ -282,19 +275,30 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           🛥️ Tauchboot-Sicherheit &amp; Etikette auf Koh Chang – Regeln gegen
           Unfälle &amp; Ausrüstungsverlust
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Praktische Regeln für Anfänger und erfahrene Taucher.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#dbs-intro">Einstieg</a>
+            <a href="#dbs-rules">Top-Regeln</a>
+            <a href="#dbs-why">Warum wichtig</a>
+            <a href="#dbs-book">Bereit tauchen</a>
+          </div>
+        </nav>
+
+        <h2 id="dbs-intro">
+          Einfache Boot-Regeln gegen Unfälle und verlorene Ausrüstung
         </h2>
 
         <p style="margin: 0; font-size: 1.05em; opacity: 0.9">
@@ -376,7 +380,7 @@
         </section>
 
         <section style="margin: 26px 0">
-          <h2 style="margin-bottom: 10px">✅ Unsere Top-Tauchboot-Regeln</h2>
+          <h2 id="dbs-rules">✅ Unsere Top-Tauchboot-Regeln</h2>
 
           <h3>1️⃣ Nimm nur mit, was du wirklich brauchst</h3>
           <p>
@@ -511,7 +515,7 @@
         </section>
 
         <section style="margin: 30px 0">
-          <h2 style="margin-bottom: 10px">Warum das wichtig ist</h2>
+          <h2 id="dbs-why">Warum das wichtig ist</h2>
           <p>
             Bei Chang Diving Center legen wir Wert auf Sicherheit auf unserem
             Koh-Chang-Tauchboot. Unser Boot, die
@@ -550,9 +554,7 @@
             border-radius: 10px;
           "
         >
-          <h2 style="margin: 0 0 10px 0; color: #0077b6">
-            Bereit zum Tauchen auf Koh Chang?
-          </h2>
+          <h2 id="dbs-book">Bereit zum Tauchen auf Koh Chang?</h2>
           <p style="margin: 0 0 12px 0">
             Entdecke unsere Tagestouren und Kurse — kleine Gruppen,
             professionelle Guides und ein Bootssetup für sicheres, komfortables
@@ -642,3 +644,5 @@
     </script>
   </body>
 </html>
+.posts-box .page-jump-nav { margin: 0 0 2px; padding: 2px 8px 4px;
+border-bottom: 1px solid #ccc; }

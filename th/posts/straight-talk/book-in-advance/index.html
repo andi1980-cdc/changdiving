@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>เหตุผลที่ควรจองทริปดำน้ำที่เกาะช้างล่วงหน้า</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -364,7 +371,6 @@
         "headline": "ทำไมคุณควรจองทริปดำน้ำที่เกาะช้างล่วงหน้า",
         "alternativeHeadline": "ล็อกวันดำน้ำของคุณไว้ล่วงหน้า แล้วใช้วันหยุดแบบไม่ต้องเครียด",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/why-you-should-book-your-diving-adventure-in-koh-chang-in-advance_big.webp",
@@ -372,7 +378,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "คำแนะนำด้านการท่องเที่ยวและดำน้ำ",
@@ -492,14 +497,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ทำไมควรจองทริปดำน้ำที่เกาะช้างล่วงหน้า?</h1>
-          <p>
-            จองล่วงหน้าเพื่อความมั่นใจ ไม่เครียด
-            และรับประสบการณ์ดำน้ำเฉพาะตัวกับ ช้างไดฟ์วิ่ง!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -516,24 +513,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ทำไมคุณควรจองทริปดำน้ำที่เกาะช้างล่วงหน้า
-        </h2>
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ทำไมควรจองทริปดำน้ำที่เกาะช้างล่วงหน้า?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          จองล่วงหน้าเพื่อความมั่นใจ ไม่เครียด และรับประสบการณ์ดำน้ำเฉพาะตัวกับ
+          ช้างไดฟ์วิ่ง!
+        </p>
 
-        <h2>ข้อดีของการวางแผนล่วงหน้า</h2>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#bia-intro">บทนำ</a>
+            <a href="#bia-benefits">ข้อดี</a>
+            <a href="#bia-if-not">ถ้าไม่จอง</a>
+            <a href="#bia-small">ศูนย์เล็ก</a>
+            <a href="#bia-capacity">ความจุ</a>
+            <a href="#bia-tips">เคล็ดลับ</a>
+          </div>
+        </nav>
+
+        <h2 id="bia-intro">จองล่วงหน้า = น้อยเครียด ดำน้ำได้ดีขึ้น</h2>
+
+        <h2 id="bia-benefits">ข้อดีของการวางแผนล่วงหน้า</h2>
         <p>
           การดำน้ำถือเป็นหนึ่งในประสบการณ์ที่น่าตื่นเต้นที่สุดของวันหยุดที่เกาะช้าง
           โดยเฉพาะในช่วงฤดูท่องเที่ยว การหาที่ว่างแบบกะทันหันอาจเป็นเรื่องยาก
@@ -556,7 +562,7 @@
           </li>
         </ul>
 
-        <h2>ถ้าไม่จองล่วงหน้าจะเกิดอะไรขึ้น?</h2>
+        <h2 id="bia-if-not">ถ้าไม่จองล่วงหน้าจะเกิดอะไรขึ้น?</h2>
         <p>
           นักดำน้ำหลายคนมักประเมินความต้องการในช่วงฤดูท่องเที่ยวที่เกาะช้างต่ำเกินไป
           และบ่อยครั้งต้องผิดหวังเมื่อมาถึงแล้วพบว่าเราจองเต็มหมดแล้ว
@@ -583,7 +589,9 @@
           </li>
         </ul>
 
-        <h2>ทำไมศูนย์ดำน้ำเล็กๆ อย่างเราถึงเป็นตัวเลือกที่ดีที่สุด</h2>
+        <h2 id="bia-small">
+          ทำไมศูนย์ดำน้ำเล็กๆ อย่างเราถึงเป็นตัวเลือกที่ดีที่สุด
+        </h2>
         <p>
           ศูนย์ดำน้ำเล็กๆ ที่เกาะช้างอย่างเราให้ความสำคัญกับคุณภาพ ความปลอดภัย
           และการบริการแบบส่วนตัว
@@ -604,7 +612,7 @@
           </li>
         </ul>
 
-        <h2>ความจุของเรา: กลุ่มดำน้ำ & การวางแผนคอร์ส</h2>
+        <h2 id="bia-capacity">ความจุของเรา: กลุ่มดำน้ำ & การวางแผนคอร์ส</h2>
         <p>เรารับนักดำน้ำสูงสุด 10 คน แบ่งออกเป็น 2 กลุ่ม:</p>
         <ul>
           <li>
@@ -647,7 +655,7 @@
           การจองล่วงหน้าช่วยให้คุณได้เข้าร่วมคอร์สในวันที่คุณต้องการ
         </p>
 
-        <h2>เคล็ดลับสำหรับการวางแผนทริปดำน้ำอย่างสมบูรณ์แบบ</h2>
+        <h2 id="bia-tips">เคล็ดลับสำหรับการวางแผนทริปดำน้ำอย่างสมบูรณ์แบบ</h2>
         <ul>
           <li>
             <strong>จองล่วงหน้า:</strong> ทันทีที่คุณวางแผนวันหยุด ควรรีบจอง

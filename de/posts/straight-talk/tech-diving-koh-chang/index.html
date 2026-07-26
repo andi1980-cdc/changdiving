@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Tec-Tauchen Koh Chang – TDI-Training &amp; HTMS-Chang-Wrack | Chang Diving
@@ -321,6 +322,48 @@
           object-fit: cover;
         }
       }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
     </style>
     <link
       rel="preload"
@@ -443,17 +486,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Tec-Tauchen Koh Chang – TDI-Training &amp; HTMS-Chang-Wrack
-          </h1>
-          <p>
-            Klartext zu Technical Diving Koh Chang Thailand: realistische
-            Erwartungen, Wrack HTMS Chang, TDI-Kurse – und für wen dieser Text
-            ist.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -468,7 +500,16 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="speciality-box posts-box">
+      <div class="tek-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Tec-Tauchen Koh Chang – TDI-Training &amp; HTMS-Chang-Wrack
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Klartext zu Technical Diving Koh Chang Thailand: realistische
+          Erwartungen, Wrack HTMS Chang, TDI-Kurse – und für wen dieser Text
+          ist.
+        </p>
+
         <nav class="page-jump-nav" aria-label="Auf dieser Seite">
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
@@ -497,9 +538,9 @@
         >
           Koh Chang ist keine weltweite Top-Destination fürs Technical Diving –
           und genau das kann der klügste Ort sein, um deine Tec-Reise zu
-          <em>starten</em>. Das ist Klartext: kein Ego-Marketing, kein Märchen vom
-          „tiefsten / härtesten / extremsten“ – sondern wie Tec-Training hier
-          wirklich funktioniert und was HTMS Chang für echtes Wrack- und
+          <em>starten</em>. Das ist Klartext: kein Ego-Marketing, kein Märchen
+          vom „tiefsten / härtesten / extremsten“ – sondern wie Tec-Training
+          hier wirklich funktioniert und was HTMS Chang für echtes Wrack- und
           Stufen-Dekotraining liefert.
         </p>
 
@@ -507,13 +548,13 @@
           <h2>Realitätscheck: Warum Koh Chang keine „Tec-Hauptstadt“ ist</h2>
           <p>
             Wenn du dir Technical Diving als endlose 100&nbsp;m-Wände,
-            Minen-Erkundung oder Dauer-80–100&nbsp;m-Projekte vorstellst: Koh Chang
-            gibt sich nicht als solches aus. Im Golf von Thailand um Koh Chang
-            fehlt die Topographie mancher Kalkstein- oder Ozean-Tec-Spots. Die
-            Trainings-Tiefenbandbreite ist oft moderat – Profile an die Realität
-            anpassen. Große Höhlensysteme für mehrstufige Cave-Lehrgänge: nicht
-            das lokale Angebot. „Exploration-grade“-Mixed-Gas-Projekte verkauft
-            diese Insel nicht.
+            Minen-Erkundung oder Dauer-80–100&nbsp;m-Projekte vorstellst: Koh
+            Chang gibt sich nicht als solches aus. Im Golf von Thailand um Koh
+            Chang fehlt die Topographie mancher Kalkstein- oder Ozean-Tec-Spots.
+            Die Trainings-Tiefenbandbreite ist oft moderat – Profile an die
+            Realität anpassen. Große Höhlensysteme für mehrstufige
+            Cave-Lehrgänge: nicht das lokale Angebot.
+            „Exploration-grade“-Mixed-Gas-Projekte verkauft diese Insel nicht.
           </p>
           <p>
             Das laut auszusprechen hilft allen: klare Erwartungen statt
@@ -524,10 +565,13 @@
             <li>
               Kein Ruf als 100&nbsp;m+-Wall-Destination wie manche Tec-Hotspots.
             </li>
-            <li>Oft moderates Tiefenband – Profile zur Realität passend wählen.</li>
+            <li>
+              Oft moderates Tiefenband – Profile zur Realität passend wählen.
+            </li>
             <li>Komplexe Höhlen: kein lokales Kernargument.</li>
             <li>
-              „Extreme Exploration“-Marketing: darauf bauen wir diesen Text nicht.
+              „Extreme Exploration“-Marketing: darauf bauen wir diesen Text
+              nicht.
             </li>
           </ul>
         </section>
@@ -538,15 +582,16 @@
           <h2>Der Gamechanger: HTMS Chang</h2>
           <p>
             Der Drehpunkt: Thailands
-            <a href="/de/dive-sites/htms-chang-wreck/">größtes zugängliches Wrack</a>,
-              in etwa
-            <strong>30&nbsp;m</strong> Tiefenbereich (Hauptdeck ca. 23&nbsp;m,
-            Maximum am Wrack ca. 30&nbsp;m), ist ein echtes Trainingsasset. Die
-            Tiefe reicht für Stufen-Dekotraining und Gasplanung – ohne so zu tun,
-            als wärst du auf 90&nbsp;m Trimix unterwegs. Die Struktur ist groß
-            genug für Wrack-Protokolle: Leinenarbeit, Team-Positionierung,
-            seriöse Penetration-Disziplin (nur wo Zertifizierung und Plan es
-            erlauben – keine riskanten Ego-Swimthroughs).
+            <a href="/de/dive-sites/htms-chang-wreck/"
+              >größtes zugängliches Wrack</a
+            >, in etwa <strong>30&nbsp;m</strong> Tiefenbereich (Hauptdeck ca.
+            23&nbsp;m, Maximum am Wrack ca. 30&nbsp;m), ist ein echtes
+            Trainingsasset. Die Tiefe reicht für Stufen-Dekotraining und
+            Gasplanung – ohne so zu tun, als wärst du auf 90&nbsp;m Trimix
+            unterwegs. Die Struktur ist groß genug für Wrack-Protokolle:
+            Leinenarbeit, Team-Positionierung, seriöse Penetration-Disziplin
+            (nur wo Zertifizierung und Plan es erlauben – keine riskanten
+            Ego-Swimthroughs).
           </p>
 
           <div
@@ -577,8 +622,8 @@
                 decoding="async"
               />
               <figcaption>
-                Advanced Wreck: Leinenführung, Awareness und Protokolle, die sich
-                erst auf einem echten Wrack auszahlen.
+                Advanced Wreck: Leinenführung, Awareness und Protokolle, die
+                sich erst auf einem echten Wrack auszahlen.
               </figcaption>
             </figure>
             <figure>
@@ -613,33 +658,39 @@
 
           <p>
             Kurz: Du bekommst
-            <strong>echten Wrack-Kontext</strong> für Tec-Kursinhalte – Anfahren,
-            Lagebild, Aufgabenlast auf einem Wrack, das sich wie ein Wrack
-            verhält – nicht als Beton-Klumpen-Attrappe.
+            <strong>echten Wrack-Kontext</strong> für Tec-Kursinhalte –
+            Anfahren, Lagebild, Aufgabenlast auf einem Wrack, das sich wie ein
+            Wrack verhält – nicht als Beton-Klumpen-Attrappe.
           </p>
 
-          <h3 id="wreck-penetration">Wrack-Penetration: was „qualifiziert“ hier wirklich meint</h3>
+          <h3 id="wreck-penetration">
+            Wrack-Penetration: was „qualifiziert“ hier wirklich meint
+          </h3>
           <p>
-            Auf Koh Chang ergibt technisches Tauchen am stärksten Sinn im Zusammenhang mit
+            Auf Koh Chang ergibt technisches Tauchen am stärksten Sinn im
+            Zusammenhang mit
             <strong>seriöser Wrackarbeit</strong> – insbesondere Penetration
-            (Leinenführung, Teamprotokolle), wie HTMS Chang sie fordert. Advanced Nitrox
-            und Dekompressionsverfahren sind Grundlagen, ersetzen aber keine
-            wrackspezifische Overhead-Ausbildung.
+            (Leinenführung, Teamprotokolle), wie HTMS Chang sie fordert.
+            Advanced Nitrox und Dekompressionsverfahren sind Grundlagen,
+            ersetzen aber keine wrackspezifische Overhead-Ausbildung.
           </p>
           <p>
             Mit <strong>Wrack-Penetration</strong> im vollen Sinn meinen wir
             Ausbildung auf dem Niveau von
             <a href="/de/courses/advanced-wreck/">TDI Advanced Wreck Diver</a>
-            (oder ein <strong>vergleichbares Wrack-Penetrationsprogramm</strong> einer
+            (oder ein
+            <strong>vergleichbares Wrack-Penetrationsprogramm</strong> einer
             anderen Organisation – nicht „irgendein Overhead“ aus einer anderen
             Disziplin).
           </p>
           <p>
-            <strong>Höhlentauchen ist nicht dasselbe wie Wrack-Penetration.</strong>
-            Ein Full Cave Diver ist nicht automatisch für volle Wrack-Penetration
-            qualifiziert: Natürliche Höhle und künstliches Wrack unterscheiden sich in
-            Gefahren, Leinenführung und Notfalllogik; die Ausbildung ist nicht
-            austauschbar.
+            <strong
+              >Höhlentauchen ist nicht dasselbe wie Wrack-Penetration.</strong
+            >
+            Ein Full Cave Diver ist nicht automatisch für volle
+            Wrack-Penetration qualifiziert: Natürliche Höhle und künstliches
+            Wrack unterscheiden sich in Gefahren, Leinenführung und
+            Notfalllogik; die Ausbildung ist nicht austauschbar.
           </p>
         </section>
 
@@ -650,9 +701,9 @@
           <p>
             Zentrale Übersicht:
             <a href="/de/courses/technical-diving-courses/"
-              >Technical-Diving-Kurse</a>. Typische Bausteine werden über die
-            Zeit gestapelt (passend zu Logbuch und Zielen – wir helfen bei der
-            sicheren Reihenfolge):
+              >Technical-Diving-Kurse</a
+            >. Typische Bausteine werden über die Zeit gestapelt (passend zu
+            Logbuch und Zielen – wir helfen bei der sicheren Reihenfolge):
           </p>
           <ul>
             <li>
@@ -660,7 +711,9 @@
               Gasplanung für höhere Mixe und „tec-style“-Denken.
             </li>
             <li>
-              <a href="/de/courses/deco-procedures/">TDI Dekompressionsverfahren</a>
+              <a href="/de/courses/deco-procedures/"
+                >TDI Dekompressionsverfahren</a
+              >
               – Stufen-Dekotraining nach heutigem Standard.
             </li>
             <li>
@@ -670,12 +723,12 @@
           </ul>
           <p>
             Viele Gäste bündeln den Aufstieg in klaren Zeitplänen; siehe unser
-            <a href="/de/courses/tech-package/">Technical-Diver-Paket</a>, wenn du
-            einen stimmigen Mehrtages-Pfad statt Einzelbausteine willst. Für
+            <a href="/de/courses/tech-package/">Technical-Diver-Paket</a>, wenn
+            du einen stimmigen Mehrtages-Pfad statt Einzelbausteine willst. Für
             Sporttaucher noch ohne volle Tec-Leiter ist oft die Kombi
-            <a href="/de/courses/deep-wreck-nitrox/">Deep + Wreck + Nitrox</a> die
-            realistische Brücke zu tieferen, komplexeren Tauchprofilen rund um
-            Koh Chang.
+            <a href="/de/courses/deep-wreck-nitrox/">Deep + Wreck + Nitrox</a>
+            die realistische Brücke zu tieferen, komplexeren Tauchprofilen rund
+            um Koh Chang.
           </p>
           <p>
             <strong>Praxis bei uns:</strong> kleine Gruppen, bootsbasierte Tage
@@ -700,7 +753,8 @@
               gleichwertig (kursabhängig).
             </li>
             <li>
-              <strong>Erfahrung:</strong> oft <strong>25 protokollierte Tauchgänge</strong>
+              <strong>Erfahrung:</strong> oft
+              <strong>25 protokollierte Tauchgänge</strong>
               als typische Einstiegsschwelle für fortgeschrittenes Tec – plus
               angemessene Tiefenroutine.
             </li>
@@ -711,8 +765,8 @@
             </li>
             <li>
               <strong>Auftrieb &amp; Basics:</strong> sauberer Trim, ruhiger
-              Kick, Awareness – Pflicht, bevor Stages, Shut-Downs und Teamprotokolle
-              dazukommen.
+              Kick, Awareness – Pflicht, bevor Stages, Shut-Downs und
+              Teamprotokolle dazukommen.
             </li>
           </ul>
         </section>
@@ -720,21 +774,24 @@
         <hr />
 
         <section id="mindset">
-          <h2>Über Sporttauch-Kurse hinaus: Mindset, Team und „Elite“ ehrlich gemeint</h2>
+          <h2>
+            Über Sporttauch-Kurse hinaus: Mindset, Team und „Elite“ ehrlich
+            gemeint
+          </h2>
           <p>
-            Technical-Diver-Training ist <strong>nicht</strong> Sporttauchgang mit
-            mehr Flaschen und neuer Plastikkarte. Es ist eine andere Last: mehr
-            Theorie, klares Fehler-Management, Skills die erst Sinn ergeben, wenn du
-            <strong>schon sauber tauchst</strong> – Auftrieb, strukturiertes
-            Denken, Logbuch ohne Drama. Es wird
-            <strong>solides Basiswissen</strong> vorausgesetzt; der Kurs führt in
-            Dekotheorie, komplexere Gasstrategien und strukturiertes Problemlösen –
-            im Unterricht <em>und</em> im Nachlesen danach.
+            Technical-Diver-Training ist <strong>nicht</strong> Sporttauchgang
+            mit mehr Flaschen und neuer Plastikkarte. Es ist eine andere Last:
+            mehr Theorie, klares Fehler-Management, Skills die erst Sinn
+            ergeben, wenn du <strong>schon sauber tauchst</strong> – Auftrieb,
+            strukturiertes Denken, Logbuch ohne Drama. Es wird
+            <strong>solides Basiswissen</strong> vorausgesetzt; der Kurs führt
+            in Dekotheorie, komplexere Gasstrategien und strukturiertes
+            Problemlösen – im Unterricht <em>und</em> im Nachlesen danach.
           </p>
           <p>
-            Viele gehen den Tec-Weg, weil sie zur <strong>weltweiten Gemeinschaft
-            ernsthafter Sporttaucher</strong> gehören wollen – nicht für
-            Social-Media-Flex. „Elite“ meint hier
+            Viele gehen den Tec-Weg, weil sie zur
+            <strong>weltweiten Gemeinschaft ernsthafter Sporttaucher</strong>
+            gehören wollen – nicht für Social-Media-Flex. „Elite“ meint hier
             <strong>Ausbildungstiefe und Professionalität</strong>: Taucher, die
             sich mit Dekomodellen, Redundanz, Gasabgleich und Wiederholungen
             beschäftigen, bis Routine sitzt. Das ist eine andere Ambition als
@@ -742,41 +799,46 @@
           </p>
           <p>
             <strong>Zertifizierung wird verdient, nicht gekauft.</strong>
-            Tec-Kurse funktionieren nicht wie viele Einsteigerprogramme, bei denen
-            Teilnahme und Abarbeiten des Plans üblicherweise zur Karte führen.
-            <strong>Kursgebühr und Anwesenheit garantieren keine
-            Zertifizierung.</strong> Der Instructor unterschreibt, wenn du
-            Leistungs- <em>und</em> Urteilsstandards der Organisation erfüllst:
-            neben Theorie und Kernskills zählen
+            Tec-Kurse funktionieren nicht wie viele Einsteigerprogramme, bei
+            denen Teilnahme und Abarbeiten des Plans üblicherweise zur Karte
+            führen.
+            <strong
+              >Kursgebühr und Anwesenheit garantieren keine
+              Zertifizierung.</strong
+            >
+            Der Instructor unterschreibt, wenn du Leistungs-
+            <em>und</em> Urteilsstandards der Organisation erfüllst: neben
+            Theorie und Kernskills zählen
             <strong>Teamkommunikation, Awareness, Disziplin unter Last</strong>
-            und durchgängiges Verhalten in realistischem Training. Gut vorbereitete
-            Taucherinnen schaffen das in der Regel; wenn du noch nicht dort bist,
-            kann die professionelle Antwort mehr Coaching, Wiederholung oder ein
-            späterer Versuch sein – das schützt dich, dein Team und den Wert des
-            Zertifikats selbst.
-            Das <a href="#faq-certification">FAQ zur Zertifizierung</a> fasst das
+            und durchgängiges Verhalten in realistischem Training. Gut
+            vorbereitete Taucherinnen schaffen das in der Regel; wenn du noch
+            nicht dort bist, kann die professionelle Antwort mehr Coaching,
+            Wiederholung oder ein späterer Versuch sein – das schützt dich, dein
+            Team und den Wert des Zertifikats selbst. Das
+            <a href="#faq-certification">FAQ zur Zertifizierung</a> fasst das
             kurz zusammen.
           </p>
           <p>
             <strong>Wichtig:</strong> eine Tec-Zertifizierung heißt
             <strong>nicht</strong>, dass du im Urlaub nur noch lange
-            Dekompressions-Profile fahren musst. Viele gut ausgebildete Tec-Taucher
-            machen überwiegend <strong>einfache Sporttauch-Profile</strong>; der
-            Gewinn ist schärfere Gas-Awareness, ruhigere Ausführung, klarere
-            Protokolle auf <em>jedem</em> Tauchgang – auch auf leichten. Ein guter
-            Absolvent ist oft vor allem ein
-            <strong>außergewöhnlich kompetenter Taucher</strong> – erkennt kleine
-            Fehler früh, hilft dem Buddy unter Last, bleibt methodisch, wenn’s
-            schiefgeht.
+            Dekompressions-Profile fahren musst. Viele gut ausgebildete
+            Tec-Taucher machen überwiegend
+            <strong>einfache Sporttauch-Profile</strong>; der Gewinn ist
+            schärfere Gas-Awareness, ruhigere Ausführung, klarere Protokolle auf
+            <em>jedem</em> Tauchgang – auch auf leichten. Ein guter Absolvent
+            ist oft vor allem ein
+            <strong>außergewöhnlich kompetenter Taucher</strong> – erkennt
+            kleine Fehler früh, hilft dem Buddy unter Last, bleibt methodisch,
+            wenn’s schiefgeht.
           </p>
           <p>
             <strong>Technical Diving ist teambasiert.</strong> Briefings,
-            Positionen, Gasabgleich und Notfallübungen sind aufs Team ausgelegt –
-            nicht auf Einzelgänger. Deshalb sagen wir klar:
+            Positionen, Gasabgleich und Notfallübungen sind aufs Team ausgelegt
+            – nicht auf Einzelgänger. Deshalb sagen wir klar:
             <strong>Tec ist nichts für Unterwasser-Cowboys</strong> – keine
             improvisierten „mach-ich-schon“-Profile, keine stillen Helden, kein
-            Plan ignorieren, weil’s ruhig aussieht. Wenn das streng klingt: gut –
-            gerade das erhält Leben, wenn das Wasser nicht mehr spurt.
+            Plan ignorieren, weil’s ruhig aussieht. Wenn das streng klingt: gut
+            – gerade das erhält Leben, wenn das Wasser nicht mehr spurt.
           </p>
         </section>
 
@@ -788,9 +850,9 @@
             Weil Fundament wichtiger ist als Angebelei. Koh Chang bietet
             <strong>überschaubares Lernen</strong>: weniger „Tec-Zirkus“ als an
             manchen Welt-Hotspots, Raum zum Wiederholen, bis Skills sauber sind,
-            ehrliches Coaching passend zur Umgebung – inkl. regelmäßigem Wracktauch
-            auf dasselbe sinnvolle Wrack, damit Protokolle Gewohnheit werden, nicht
-            nur Urlaubs-Anekdote.
+            ehrliches Coaching passend zur Umgebung – inkl. regelmäßigem
+            Wracktauch auf dasselbe sinnvolle Wrack, damit Protokolle Gewohnheit
+            werden, nicht nur Urlaubs-Anekdote.
           </p>
           <ul>
             <li>Weniger Szene-Druck als an überbuchten Tec-Spots.</li>
@@ -798,12 +860,12 @@
               Bedingungen oft ideal für Wiederholung und Coaching statt Ego.
             </li>
             <li>
-              Persönliche Betreuung in kleinen Gruppen – du bist keine Nummer auf
-              der Bank.
+              Persönliche Betreuung in kleinen Gruppen – du bist keine Nummer
+              auf der Bank.
             </li>
             <li>
-              Passt zu Taucherinnen, die <strong>zuerst Kompetenz</strong>, zuletzt
-              Ego wollen.
+              Passt zu Taucherinnen, die <strong>zuerst Kompetenz</strong>,
+              zuletzt Ego wollen.
             </li>
           </ul>
         </section>
@@ -814,7 +876,8 @@
           <h2>Für wen ist das?</h2>
           <ul>
             <li>
-              Taucher, die <strong>teambasiertes, theorie-lastiges Training</strong>
+              Taucher, die
+              <strong>teambasiertes, theorie-lastiges Training</strong>
               wollen – keine Ego-Trips, keine „Cowboy“-Abkürzungen (siehe
               <a href="#mindset">Mindset</a> oben).
             </li>
@@ -837,13 +900,14 @@
         <section id="conclusion">
           <h2>Ehrliches Fazit</h2>
           <p>
-            Wer „extreme Tiefenexploration“ zur Identität machen will, ist mit Koh
-            Chang nicht auf der üblichen Traumliste. Wer dagegen ein
+            Wer „extreme Tiefenexploration“ zur Identität machen will, ist mit
+            Koh Chang nicht auf der üblichen Traumliste. Wer dagegen ein
             <a href="/de/courses/technical-diving-courses/"
               ><strong>solides technisches Fundament</strong></a
             >
             in einem überschaubaren Umfeld will – mit einem der wichtigsten
-            Trainingswracks Thailands im Kontext – kann hier ein sehr guter Start sein.
+            Trainingswracks Thailands im Kontext – kann hier ein sehr guter
+            Start sein.
           </p>
         </section>
 
@@ -853,11 +917,16 @@
           <h2>Weitere Seiten (interne Links)</h2>
           <ul>
             <li>
-              <a href="/de/courses/technical-diving-courses/">Technical Diving</a>
-              – TDI-Pfade, Pakete und wie wir das Training auf Koh Chang strukturieren.
+              <a href="/de/courses/technical-diving-courses/"
+                >Technical Diving</a
+              >
+              – TDI-Pfade, Pakete und wie wir das Training auf Koh Chang
+              strukturieren.
             </li>
             <li>
-              <a href="/de/dive-sites/htms-chang-wreck/">Tauchplatz HTMS Chang</a>
+              <a href="/de/dive-sites/htms-chang-wreck/"
+                >Tauchplatz HTMS Chang</a
+              >
               – Tiefe, Orientierung, was dich erwartet.
             </li>
             <li>
@@ -886,14 +955,16 @@
             </summary>
             <p>
               Sehr gut für <strong>strukturiertes Tec-Training</strong> und
-              Protokolle mit realem Wrack-Kontext (v. a. HTMS Chang) – weniger für
-              die Story „nur extreme Exploration“.
+              Protokolle mit realem Wrack-Kontext (v. a. HTMS Chang) – weniger
+              für die Story „nur extreme Exploration“.
             </p>
           </details>
 
           <details>
             <summary>
-              <strong>Kann ich in Thailand mit Technical Diving starten?</strong>
+              <strong
+                >Kann ich in Thailand mit Technical Diving starten?</strong
+              >
             </summary>
             <p>
               Ja – mit passenden Voraussetzungen, seriöser Basis und sinnvoller
@@ -921,12 +992,14 @@
             </summary>
             <p>
               Beim Chang Diving Center kannst du die auf der Seite
-              <a href="/de/courses/technical-diving-courses/">Technical Diving</a>
+              <a href="/de/courses/technical-diving-courses/"
+                >Technical Diving</a
+              >
               beschriebene Leiter gehen – u. a.
               <a href="/de/courses/advanced-nitrox/">Advanced Nitrox</a>,
-              <a href="/de/courses/deco-procedures/">Dekompressionsverfahren</a> und
-              <a href="/de/courses/advanced-wreck/">Advanced Wreck</a>, plus Pakete
-              wie das
+              <a href="/de/courses/deco-procedures/">Dekompressionsverfahren</a>
+              und <a href="/de/courses/advanced-wreck/">Advanced Wreck</a>, plus
+              Pakete wie das
               <a href="/de/courses/tech-package/">Technical-Diver-Paket</a>.
             </p>
           </details>
@@ -934,15 +1007,17 @@
           <details>
             <summary>
               <strong
-                >Qualifiziert mich Höhlentauchen automatisch für Wrack-Penetration?</strong
+                >Qualifiziert mich Höhlentauchen automatisch für
+                Wrack-Penetration?</strong
               >
             </summary>
             <p>
-              <strong>Nein.</strong> Höhle und Wrack-Penetration sind unterschiedliche
-              Umgebungen (natürlich vs. vom Menschen geschaffen) mit unterschiedlichen
-              Risikoprofilen und Protokollsets. Volle Wrack-Penetration entspricht
-              <a href="/de/courses/advanced-wreck/">TDI Advanced Wreck</a> oder einem
-              vergleichbaren Wrackprogramm der Organisation – nicht
+              <strong>Nein.</strong> Höhle und Wrack-Penetration sind
+              unterschiedliche Umgebungen (natürlich vs. vom Menschen
+              geschaffen) mit unterschiedlichen Risikoprofilen und
+              Protokollsets. Volle Wrack-Penetration entspricht
+              <a href="/de/courses/advanced-wreck/">TDI Advanced Wreck</a> oder
+              einem vergleichbaren Wrackprogramm der Organisation – nicht
               Höhlentauchen allein.
             </p>
           </details>
@@ -950,27 +1025,29 @@
           <details id="faq-certification">
             <summary>
               <strong
-                >Ist die Zertifizierung garantiert, wenn ich einen Tec-Kurs gebucht
-                und bezahlt habe?</strong
+                >Ist die Zertifizierung garantiert, wenn ich einen Tec-Kurs
+                gebucht und bezahlt habe?</strong
               >
             </summary>
             <p>
-              <strong>Nein.</strong> Tec-Zertifizierungen werden vergeben, wenn du
-              die Agenturstandards in Leistung <em>und</em> Urteil erfüllst.
+              <strong>Nein.</strong> Tec-Zertifizierungen werden vergeben, wenn
+              du die Agenturstandards in Leistung <em>und</em> Urteil erfüllst.
               Kursgebühr und Teilnahme allein <strong>garantieren kein</strong>
               Zertifikat. Neben Theorie und Kernskills zählen u. a.
               <strong>Teamkommunikation, Awareness, Disziplin</strong> und
-              durchgängiges Verhalten im realistischen Training. Wenn der Standard
-              noch nicht erreicht ist, kann die professionelle Antwort mehr Coaching,
-              gezielte Wiederholung oder ein späterer Abschluss sein – zum Schutz
-              für dich, dein Team und den Wert der Qualifikation.
+              durchgängiges Verhalten im realistischen Training. Wenn der
+              Standard noch nicht erreicht ist, kann die professionelle Antwort
+              mehr Coaching, gezielte Wiederholung oder ein späterer Abschluss
+              sein – zum Schutz für dich, dein Team und den Wert der
+              Qualifikation.
             </p>
           </details>
 
           <details>
             <summary>
               <strong
-                >Heißt Tec-Training, dass ich immer lange Dekogänge machen muss?</strong
+                >Heißt Tec-Training, dass ich immer lange Dekogänge machen
+                muss?</strong
               >
             </summary>
             <p>
@@ -978,18 +1055,23 @@
               viele Tec-Taucher arbeiten im Alltag überwiegend mit
               <strong>einfachen No-Stop- oder leichten Profilen</strong>. Der
               Gewinn ist besseres Verständnis, Teamarbeit und Sicherheit auf
-              <em>jedem</em> Dive – kein Zwang zu komplexer Deco auf jeder Reise.
+              <em>jedem</em> Dive – kein Zwang zu komplexer Deco auf jeder
+              Reise.
             </p>
           </details>
 
           <details>
             <summary>
-              <strong>Ist Technical Diving nur Sporttauchen mit mehr Ausrüstung?</strong>
+              <strong
+                >Ist Technical Diving nur Sporttauchen mit mehr
+                Ausrüstung?</strong
+              >
             </summary>
             <p>
-              Nein. Es wird eine <strong>starke sportliche Basis</strong>
-              vorausgesetzt. Tec-Programme ergänzen Theorie (z. B. Dekoplanung),
-              strukturierte Fehlerreaktionen und <strong>teambezogene</strong>
+              Nein. Es wird eine
+              <strong>starke sportliche Basis</strong> vorausgesetzt.
+              Tec-Programme ergänzen Theorie (z. B. Dekoplanung), strukturierte
+              Fehlerreaktionen und <strong>teambezogene</strong>
               Abläufe – eine andere Lernlast und eine andere Denke als „mehr
               Blei und Flaschen“.
             </p>
@@ -1003,21 +1085,21 @@
             margin: 34px 0 18px 0;
             padding: 18px;
             background: linear-gradient(
-              to right,
-              rgba(0, 119, 182, 0.06),
-              rgba(207, 216, 220, 0.06)
+              135deg,
+              rgba(58, 58, 58, 0.08) 0%,
+              rgba(255, 138, 92, 0.1) 100%
             );
-            border-left: 5px solid #0077b6;
+            border-left: 5px solid #ff8a5c;
             border-radius: 10px;
           "
         >
-          <h2 style="margin: 0 0 10px 0; color: #0077b6">
+          <h2 style="margin: 0 0 10px 0; color: #404040">
             Tec-Training buchen oder Termin anfragen
           </h2>
           <p style="margin: 0 0 12px 0">
             Schreib uns mit Daten, Zertifizierung, Tauchgang-Zahlen und Zielen –
-            wir antworten mit realistischer Reihenfolge (und sagen auch nein, wenn
-            es noch nicht passt).
+            wir antworten mit realistischer Reihenfolge (und sagen auch nein,
+            wenn es noch nicht passt).
           </p>
 
           <div
@@ -1029,7 +1111,12 @@
               style="
                 display: inline-block;
                 padding: 12px 20px;
-                background: #0077b6;
+                background: linear-gradient(
+                  135deg,
+                  #3a3a3a 0%,
+                  #5a5a5a 45%,
+                  #ff8a5c 100%
+                );
                 color: #fff;
                 text-decoration: none;
                 border-radius: 6px;
@@ -1045,8 +1132,8 @@
                 display: inline-block;
                 padding: 12px 20px;
                 background: transparent;
-                color: #0077b6;
-                border: 2px solid #0077b6;
+                color: #404040;
+                border: 2px solid #ff8a5c;
                 text-decoration: none;
                 border-radius: 6px;
                 font-weight: 600;
@@ -1066,7 +1153,9 @@
 
         <p>
           <strong>Mehr Klartext:</strong>
-          <a href="/de/posts/straight-talk/solo-diver/">Solo Tauchen auf Koh Chang</a>
+          <a href="/de/posts/straight-talk/solo-diver/"
+            >Solo Tauchen auf Koh Chang</a
+          >
           &nbsp;•&nbsp;
           <a href="/de/posts/straight-talk/">Alle Klartext-Beiträge</a>
         </p>

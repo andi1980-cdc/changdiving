@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- EDIT TITLE -->
     <title>
@@ -358,8 +359,8 @@
         padding-top: 0.75em;
         margin-top: 0.35em;
       }
-      /* Overrides global `.speciality-box img` (height:auto, margin, border-radius) so cover + position apply inside the circle */
-      .speciality-box .straight-talk-student-card .avatar img {
+      /* Overrides global `.tek-box img` (height:auto, margin, border-radius) so cover + position apply inside the circle */
+      .tek-box .straight-talk-student-card .avatar img {
         display: block !important;
         width: 100% !important;
         height: 100% !important;
@@ -420,7 +421,7 @@
         line-height: 1.45;
         padding: 0 4px;
       }
-      .speciality-box .straight-talk-story-gallery img {
+      .tek-box .straight-talk-story-gallery img {
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         margin-left: auto;
@@ -454,6 +455,48 @@
           aspect-ratio: 3 / 2;
           object-fit: cover;
         }
+      }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
       }
     </style>
     <link
@@ -650,7 +693,10 @@
         ]
       }
     </script>
-    <link rel="preload" href="/img/posts/technical_diver_stories_header_small.webp" />
+    <link
+      rel="preload"
+      href="/img/posts/technical_diver_stories_header_small.webp"
+    />
   </head>
   <body>
     <header>
@@ -697,17 +743,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <!-- EDIT TITLE (hero H1) -->
-          <h1>
-            Geschichten von Tec-Tauchern — Nitrox, Deco &amp; Advanced Wreck
-          </h1>
-          <p>
-            <!-- EDIT HERO SUBLINE -->
-            Klartext · echte Schülerperspektiven · Koh Chang
-          </p>
-        </div>
       </div>
     </header>
 
@@ -722,52 +757,21 @@
         <a href="/de/faqs/">FAQ</a>
       </nav>
 
-      <div class="speciality-box">
+      <div class="tek-box">
         <!-- Filled by /js/global.js (full trail: Home › Posts › Straight Talk › …) -->
         <nav id="breadcrumb" class="breadcrumb"></nav>
-        <hr />
-
-        <!-- EDIT TITLE (plain H2 like course pages, cf. advanced-wreck) -->
-        <h2 style="margin-top: 0">
-          Geschichten von Tec-Tauchern: Nitrox, Deco &amp; Advanced Wreck
-        </h2>
-
-        <p style="color: #555; margin: 0 0 1em">
-          <span>Chang Diving Center</span>
-          ·
-          <time datetime="2026-04-17">17. April 2026</time>
-        </p>
-
-        <p style="margin: 0 0 1.25em">
-          <!-- EDIT EXCERPT -->
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Geschichten von Tec-Tauchern — Nitrox, Deco &amp; Advanced Wreck
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
           Ehrliche Perspektiven erfahrener Sporttaucher, die auf Koh Chang den
           kombinierten TDI-Pfad gewählt haben – Advanced Nitrox,
           Dekompressionsverfahren und Advanced Wreck – im technischen Tauchen.
         </p>
 
-        <!-- TOC: dark panel in the spirit of course callouts (advanced-wreck tables) -->
-        <nav
-          class="tec-article-toc"
-          aria-label="Inhaltsverzeichnis"
-          style="
-            background-color: #2b2b2b;
-            padding: 16px 18px;
-            border-radius: 8px;
-            margin: 0 0 24px;
-            border: 1px solid #cfd8dc;
-          "
-        >
-          <p style="color: #e0e0e0; margin: 0 0 12px; font-weight: bold">
-            Auf dieser Seite
-          </p>
-          <div
-            style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 10px 16px;
-              font-size: 0.95rem;
-            "
-          >
+        <nav class="page-jump-nav" aria-label="Auf dieser Seite">
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
             <a href="#intro">Einleitung</a>
             <a href="#why-go-technical">Warum Tec</a>
             <a href="#cert-stack">Kurs-Stack</a>
@@ -775,11 +779,15 @@
             <a href="#student-story-2">Story 2</a>
             <a href="#student-story-3">Story 3</a>
             <a href="#training-value">Trainingswert</a>
-            <a href="#internal">Verwandtes</a>
             <a href="#faq">FAQ</a>
-            <a href="#next-step">Nächster Schritt</a>
           </div>
         </nav>
+
+        <p style="color: #555; margin: 0 0 1em">
+          <span>Chang Diving Center</span>
+          ·
+          <time datetime="2026-04-17">17. April 2026</time>
+        </p>
 
         <!-- Course-style context strip (cf. advanced-wreck info boxes) -->
         <div
@@ -817,7 +825,8 @@
             >
             – gleiches Layout, Fokus auf Schülerinterviews. Den passenden
             Klartext-Artikel dazu, was Technical Diving auf Koh Chang ist (und
-            nicht ist), inklusive HTMS Chang als Trainingsasset, findest du unter
+            nicht ist), inklusive HTMS Chang als Trainingsasset, findest du
+            unter
             <a
               href="/de/posts/straight-talk/tech-diving-koh-chang/"
               style="color: #80cbc4; font-weight: 600"
@@ -828,816 +837,849 @@
 
         <hr />
 
-      <article class="straight-talk-article">
-        <section id="intro" aria-labelledby="intro-heading">
-          <h2 id="intro-heading" style="color: var(--highlight-color)">
-            Einleitung
-          </h2>
-          <p>
-            Dieser Artikel basiert auf echtem Schülerfeedback und Interviewnotizen
-            – für Lesbarkeit und Privatsphäre bearbeitet – von Tauchern, die
-            unser kombiniertes Technical-Diving-Paket absolviert haben:
-            <strong
-              >TDI Advanced Nitrox, TDI Dekompressionsverfahren und TDI Advanced
-              Wreck</strong
-            >. Antworten sind sprachlich geglättet; Namen und Details erscheinen
-            nur mit Zustimmung der Taucher.
-          </p>
-          <p>
-            Wenn du als erfahrener Sporttaucher prüfst, ob sich Technical Diving
-            in Thailand in Zeit und Struktur lohnt, findest du hier genau die
-            Bodenständigkeit, die Broschüren selten liefern: was hart war, was
-            im Nachhinein klar wirkt – und was sich unter Wasser wirklich
-            verändert hat.
-          </p>
-          <p>
-            Kontext zu angereicherten Gasen vor dem Weiterlesen:
-            <a href="/de/posts/scuba-knowledge/nitrox-info/"
-              >Nitrox und realistische Vorteile im Sporttauchen</a
-            >. Zu Wracks rund um die Insel:
-            <a
-              href="/de/posts/scuba-knowledge/wreck-diving-koh-chang/"
-              >Wracktauchen Koh Chang</a
-            >
-            und unsere
-            <a href="/de/dive-sites/">Tauchplatz-Übersicht</a>. Den formalen
-            Programm-Stack beschreiben die Seiten
-            <a href="/de/courses/tech-package/"
-              >Technical-Diving-Paket</a
-            >
-            und der Hub
-            <a href="/de/courses/technical-diving-courses/"
-              >TDI Technical Diving Kurse</a
-            >. Für das große Bild zu Tec-Training hier zuerst
-            <a href="/de/posts/straight-talk/tech-diving-koh-chang/"
-              >Tec-Tauchen Koh Chang</a
-            >
-            (Erwartungen, HTMS Chang, Pfade) – dann zurück zu diesen Interviews.
-          </p>
-        </section>
-
-        <section id="why-go-technical" aria-labelledby="why-heading">
-          <h2 id="why-heading" style="color: var(--highlight-color)">
-            Warum Taucher vom Sport- ins technische Tauchen wechseln
-          </h2>
-          <p>
-            Die meisten Kandidaten jagen keine Rekorde. Sie stoßen an eine
-            Grenze, wo sportliche Konservativität – richtig fürs Zertifikatsniveau
-            – nicht mehr zu den Tauchgängen passt, die sie sicher machen wollen:
-            etwas längere Wracksegmente, klarere Gasstrategie, gestufte
-            Dekompression als Verfahren statt Panikmanagement.
-          </p>
-          <p>
-            Die Kombination aus
-            <a href="/de/courses/advanced-nitrox/"
-              >Advanced Nitrox</a
-            >,
-            <a href="/de/courses/deco-procedures/"
-              >Dekompressionsverfahren</a
-            >
-            und
-            <a href="/de/courses/advanced-wreck/"
-              >Advanced Wreck</a
-            >
-            ist Absicht: zuerst Gas- und „Ceiling“-Kompetenz, dann gestiegenes
-            Aufstiegsprozedere, dann Anwendung in overhead-nahen Settings mit
-            Leinenführung – eine Reihenfolge, die seriöse Instruktoren
-            bevorzugen, statt Stufen zu überspringen.
-          </p>
-          <p>
-            Technical-Diving-Training auf Koh Chang spielt in echten tropischen
-            Bedingungen – Strömung, Sichtschwankungen, Boot – damit Gewohnheiten
-            entstehen, wo „saubere Theorie“ allein nicht reicht. Wer vor der
-            Buchung Stimmung schnuppern will:
-            <a href="/de/day-trips/fun-dives/">Fun Dives</a
-            >
-            mit einem Team, das Tec spricht, sind oft ein entspanntes Vorspiel.
-          </p>
-        </section>
-
-        <hr />
-
-        <section id="cert-stack" aria-labelledby="cert-stack-heading">
-          <h2 id="cert-stack-heading" style="color: var(--highlight-color)">
-            Die Zertifizierungen hinter diesen Interviews
-          </h2>
-          <p>
-            Yannic, Nino und Dominic haben auf Koh Chang denselben Stack
-            durchlaufen. Diese Zertifizierungen auch erreichen? Jede Kachel führt
-            zur passenden Kursseite – Voraussetzungen, Ablauf und unsere
-            Unterrichtsweise.
-          </p>
-          <div class="row">
-            <a href="/de/courses/nitrox-blender/" class="three columns">
-              <img
-                src="/img/posts/C-Card-dominic-nitrox-gas-blender.webp"
-                alt="Dominic S.: Nitrox Gas Blender Zertifikatskarte"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="excerpt">
-                <h3>⚗️ Nitrox Gas Blender</h3>
-                <p style="min-height: 52px">
-                  <strong>Diese Zertifizierung?</strong> Praktisches Blenden für
-                  korrekte Nitrox-Füllungen vor und zwischen Tec-Trainingstauchgängen.
-                </p>
-              </div>
-            </a>
-            <a href="/de/courses/solo-diver/" class="three columns">
-              <img
-                src="/img/posts/C-Card-yannic-solo-diver.webp"
-                alt="Yannic S.: SDI Solo Diver Zertifikatskarte"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="excerpt">
-                <h3>🤿 Solo Diver</h3>
-                <p style="min-height: 52px">
-                  <strong>Diese Zertifizierung?</strong> Redundantes Gas, Planung
-                  und Mindset für Tauchen ohne Buddy, wenn die Bedingung es erlaubt.
-                </p>
-              </div>
-            </a>
-            <a href="/de/courses/advanced-nitrox/" class="three columns">
-              <img
-                src="/img/posts/C-Card-nino-adv-nitrox.webp"
-                alt="Nino W.: TDI Advanced Nitrox Zertifikatskarte"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="excerpt">
-                <h3>⚙️ Advanced Nitrox</h3>
-                <p style="min-height: 52px">
-                  <strong>Diese Zertifizierung?</strong> Angereicherte Gase,
-                  Laufzeiten und Sauerstoff-Exposure im technischen Planungsrahmen.
-                </p>
-              </div>
-            </a>
-            <a href="/de/courses/deco-procedures/" class="three columns">
-              <img
-                src="/img/posts/C-Card-yannic-decopro.webp"
-                alt="Yannic S.: TDI Dekompressionsverfahren Zertifikatskarte"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="excerpt">
-                <h3>📉 Dekompressionsverfahren</h3>
-                <p style="min-height: 52px">
-                  <strong>Diese Zertifizierung?</strong> Stopps, Ceilings und
-                  gestuftes Aufstiegsprozedere – unter echter Sicht wiederholbar.
-                </p>
-              </div>
-            </a>
-            <a href="/de/courses/advanced-wreck/" class="three columns">
-              <img
-                src="/img/posts/C-Card-dominic-adv-wreck.webp"
-                alt="Dominic S.: TDI Advanced Wreck Zertifikatskarte"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="excerpt">
-                <h3>⚓ Advanced Wreck</h3>
-                <p style="min-height: 52px">
-                  <strong>Diese Zertifizierung?</strong> Leinenführung,
-                  Teamrollen und konservative Grenzen im Wrack.
-                </p>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <hr />
-
-        <section id="student-story-1" aria-labelledby="s1-heading">
-          <h2 id="s1-heading" style="color: var(--highlight-color)">
-            Schülerstory 1
-          </h2>
-          <div class="straight-talk-student-card">
-            <div class="avatar">
-              <img
-                src="/img/posts/yannic_tech_diving_koh_chang.webp"
-                width="400"
-                height="600"
-                loading="lazy"
-                decoding="async"
-                alt="Portrait von Yannic S., Tec-Schüler im Chang Diving Koh Chang"
-              />
-            </div>
-            <div class="straight-talk-student-bio">
-              <p class="student-bio-name"><strong>Yannic S.</strong></p>
-              <p>
-                PADI Divemaster seit 2023, mit Deep, Wreck, Nitrox und Sidemount;
-                etwa 160 geloggte Tauchgänge. Erstes Tauchen 2019 als Discover
-                Scuba im Urlaub; die eigentliche Ausbildung startete 2023, als der
-                beste Freund zum Divemaster einlud – ein steiler Weg von null auf
-                professionelles Niveau. Seitdem überwiegend warmes Wasser, etwas
-                Schlechtwasser-Erfahrung, einige Wracktauchgänge und der Wille,
-                weiterzubauen.
-              </p>
-              <p class="student-bio-teaser">
-                Will Skills schärfen und die Komfortzone erweitern – und lernen,
-                welche Grenzen auch mit Technical Diving bestehen bleiben.
-              </p>
-            </div>
-          </div>
-          <div class="straight-talk-qa">
-            <h3>Interview</h3>
-            <dl>
-              <dt>
-                Wie bist du zum Tauchen gekommen und warum hast du dich für
-                Technical Diving entschieden?
-              </dt>
-              <dd>
-                2019 habe ich im Urlaub mit meiner Freundin einen Discover-Scuba
-                gemacht – eines der besten Erlebnisse, aber ohne direkten Anschluss.
-                Vier Jahre später hat mein bester Freund gefragt, ob ich mit ihm
-                Divemaster mache – ich habe sofort ja gesagt und bin in einem
-                intensiven Block von null auf Divemaster gegangen. Technical Diving
-                wollte ich aus zwei Gründen: Ich lerne gern und will Tauchplätze
-                erreichen, die echtes Tec voraussetzen.
-              </dd>
-              <dt>
-                Gab es einen Moment oder Tauchgang, an dem du mehr wolltest als
-                Sporttauchen?
-              </dt>
-              <dd>
-                Ich habe viel gereist und viele Orte getaucht, aber mit der Zeit
-                fehlte mir die strukturierte Herausforderung vom Divemaster. Dazu
-                kamen Plätze, die ich nicht tauch konnte, weil mir die passende
-                Ausbildung fehlte. Dann war klar: Ich will und muss meine Skills
-                erweitern.
-              </dd>
-              <dt>Was hast du vor dem Kurs erwartet?</dt>
-              <dd>
-                Dass ich meine Fähigkeiten schärfe und Inhalte lerne, die mich
-                wirklich zu meinen Zielen bringen – vor allem die Plätze, die ich
-                tauch möchte. Ein langfristiges Ziel ist die Grube Felicitas in
-                Deutschland.
-              </dd>
-              <dt>Was war der anspruchsvollste Teil des Trainings?</dt>
-              <dd>
-                Am härtesten war für mich nicht die reine Skill-Liste. Beim
-                Divemaster hatte ich schon viel von Instruktoren gelernt, die selbst
-                Tec-Taucher sind. Am meisten forderte mich die mentale Last: im
-                Wrack mit praktisch null Sicht, vierer Team, jeder hängt voll an den
-                anderen.
-              </dd>
-              <dt>Was war die wertvollste Lektion oder Fähigkeit?</dt>
-              <dd>
-                Einen sauber gebriefeten Plan zu vertrauen – und dem Team zu
-                vertrauen, wenn die Umgebung visuell nichts hergibt. Diese
-                gegenseitige Abhängigkeit ist geblieben. Die „Papierkram“-Seite der
-                Planung fühlt sich nicht mehr optional an, sobald klar ist, wofür
-                sie da ist.
-              </dd>
-              <dt>
-                Wie hat Tec-Training dein Tauchen verändert, auch auf Sporttauchgängen?
-              </dt>
-              <dd>
-                Ich plane gründlicher und fast automatisch – das ist Gewohnheit
-                geworden. Bessere Rescue-Skills geben mir das Gefühl, anderen
-                nötigenfalls besser helfen zu können – das entspannt mich unter
-                Wasser spürbar.
-              </dd>
-              <dt>Würdest du die Ausbildung empfehlen?</dt>
-              <dd>
-                Ja, absolut – wenn du dauerhaft lernen magst und deine Skills
-                strukturiert vertiefen willst, ist das ein logischer Schritt.
-              </dd>
-              <dt>
-                Was sagst du Taucherinnen und Tauchern, die mit Tec noch unsicher sind?
-              </dt>
-              <dd>
-                Sei ehrlich zu dir selbst: Willst du mit dem, was du lernst,
-                Komfortzone wachsen lassen – und bist du bereit, die Grenzen zu
-                respektieren, die Ausbildung trotzdem lässt? Wenn beides ja ist,
-                lohnt sich das Gespräch.
-              </dd>
-            </dl>
-          </div>
-
-          <div
-            class="straight-talk-story-gallery"
-            role="group"
-            aria-label="Trainingsfotos Schülerstory 1"
-          >
-            <figure>
-              <img
-                src="/img/posts/tech_diver_deco_stop.webp"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                alt="Tec-Taucher an Stufen-Dekostopp bei Training, Koh Chang"
-              />
-              <figcaption>
-                Gestufte Dekompression im Training: Stopptiefe halten, Gas
-                bestätigen, Ceiling als Verfahren – nicht als Schätzung.
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/img/posts/technical_wreck_diving_htmschang.webp"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                alt="Technical Wreck Diving am HTMS Chang, Koh Chang"
-              />
-              <figcaption>
-                Advanced Wreck am HTMS Chang – overhead-naher Kontext im
-                Freiwasser, mit Leinenführung und Teamrollen, die du wiederholen
-                kannst.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section id="student-story-2" aria-labelledby="s2-heading">
-          <h2 id="s2-heading" style="color: var(--highlight-color)">
-            Schülerstory 2
-          </h2>
-          <div class="straight-talk-student-card">
-            <div class="avatar">
-              <img
-                src="/img/posts/nino_tech_diving_koh_chang.webp"
-                width="400"
-                height="600"
-                loading="lazy"
-                decoding="async"
-                alt="Portrait von Nino W., TDI-Tec-Schüler Koh Chang"
-              />
-            </div>
-            <div class="straight-talk-student-bio">
-              <p class="student-bio-name"><strong>Nino W.</strong></p>
-              <p>
-                PADI Divemaster seit 2023, mit Deep, Wreck, Sidemount und Nitrox;
-                etwa 320 geloggte Tauchgänge. Seit 2016 – erster Discover Scuba auf
-                Kreta; Junior Open Water ein Jahr später auf Mauritius im
-                Familienurlaub. 2019 Deep, Wreck und Nitrox bei Chang Diving; seitdem
-                warmes Wasser in Kenia, Ägypten, Indonesien und Thailand.
-                Divemaster 2023 bei Chang Diving abgeschlossen.
-              </p>
-              <p class="student-bio-teaser">
-                Steigt mit Freunden ins Tec ein für echte Grundzeit in der Tiefe –
-                nach Adlerrochen jenseits von 40&nbsp;m, die die No-Stop-Zeit
-                fraßen, und begrenzter Wrack-Penetration am HTMS Chang, die nach
-                mehr verlangte.
-              </p>
-            </div>
-          </div>
-          <div class="straight-talk-qa">
-            <h3>Interview</h3>
-            <dl>
-              <dt>
-                Wie bist du zum Tauchen gekommen und warum Technical Diving?
-              </dt>
-              <dd>
-                Mein Vater hat mich 2015 auf Kreta zum ersten Discover Scuba
-                mitgenommen; ein Jahr später Junior Open Water auf Mauritius. 2019
-                kamen Deep, Wreck und Nitrox bei Andi im Chang Diving dazu. Seitdem
-                warmes Wasser in Kenia, Ägypten, Indonesien und Thailand. Divemaster
-                2023 bei Chang Diving – hat Spaß gemacht. Wir sind zu mehreren
-                weiter: Tec-Grundlagen, um in bestimmten Tiefen länger bleiben und
-                mehr Zeit im Blau zu haben, ohne ständig zuerst gegen die No-Stop-Zeit
-                zu laufen.
-              </dd>
-              <dt>
-                Gab es einen Moment, an dem du mehr wolltest als Sporttauchen?
-              </dt>
-              <dd>
-                Auf Nusa Penida: Adlerrochen tiefer als 40&nbsp;m – und ich hatte
-                nur noch wenige Minuten No-Stop-Zeit. Ich wollte bleiben und
-                zuschauen, nicht nur die Uhr jagen. Begrenzte Wrack-Penetration am
-                HTMS Chang hat außerdem Appetit auf einen längeren, bewussteren Weg
-                in die Struktur gemacht – mehr als ein Blick von außen.
-              </dd>
-              <dt>Was hast du vor dem Kurs erwartet?</dt>
-              <dd>
-                Professionelles, persönliches Training mit echten Drills – gute
-                Tauchgänge und harte Arbeit. Genau das kam: strukturierte Sessions,
-                fordernde Dives, Instruktoren mit hohem Standard ohne Show.
-              </dd>
-              <dt>Was war am anspruchsvollsten?</dt>
-              <dd>
-                Allein das E-Learning hat ordentlich Zeit gekostet – grob zwanzig
-                Stunden. Im Wasser: das Gewicht des Equipments und die Logistik auf
-                dem Boot – schwerer als gedacht. Unterschätzt habe ich auch, wie
-                lange sorgfältige Vorbereitung und Planung vor dem ersten Tauchgang
-                brauchen.
-              </dd>
-              <dt>Was war die wertvollste Lektion?</dt>
-              <dd>
-                Saubere Tarierung im Twinset mit Stages – und dass man im Team
-                arbeiten und sich voll auf die Partner verlassen muss. Technical
-                Diving ist kein Solo-Heldentum in teurer Ausrüstung.
-              </dd>
-              <dt>Wie hat sich Tec auf Sporttauchgänge ausgewirkt?</dt>
-              <dd>
-                Ich schätze jetzt erst recht, wie leicht ein einfaches
-                Single-Tank-Setup ist.
-              </dd>
-              <dt>Würdest du die Ausbildung empfehlen?</dt>
-              <dd>
-                Ja – wenn du dich committen kannst, Team denkst und weißt, dass die
-                Arbeit vorne dransteckt. Kein lässiges Add-on.
-              </dd>
-              <dt>
-                Was sagst du Unentschlossenen?
-              </dt>
-              <dd>
-                Wenn du unsicher bist: mach den Kurs mit einem Freund, dem du
-                vertraust – die Last verarbeitet sich leichter, wenn du zwischen den
-                Tauchgängen offen reden kannst. Und wähle Instruktoren, die Safety
-                und klare Kommunikation vorstellen; der Rest folgt.
-              </dd>
-            </dl>
-          </div>
-
-          <div
-            class="straight-talk-story-gallery"
-            role="group"
-            aria-label="Trainingsfotos Schülerstory 2"
-          >
-            <figure>
-              <img
-                src="/img/posts/technical_wreck_diving_htmschang2.webp"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                alt="Tec-Taucher am Wrack HTMS Chang, Koh Chang"
-              />
-              <figcaption>
-                Weiteres Wracksegment: Abstand, Leinenkontakt, Kommunikation –
-                Tempo setzt das Team, nicht die Sicht.
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/img/posts/technical_diving_htmschang.webp"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                alt="Technical Diving am HTMS Chang, Koh Chang"
-              />
-              <figcaption>
-                Stages und Gaswechsel, wenn Tiefe und Overhead Tarierung, Timing
-                und saubere Laufzeiten fordern – nicht nur Gerätekenntnis.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section id="student-story-3" aria-labelledby="s3-heading">
-          <h2 id="s3-heading" style="color: var(--highlight-color)">
-            Schülerstory 3
-          </h2>
-          <div class="straight-talk-student-card">
-            <div class="avatar">
-              <img
-                src="/img/posts/dominic_tech_diving_koh_chang.webp"
-                width="400"
-                height="600"
-                loading="lazy"
-                decoding="async"
-                alt="Portrait von Dominic S., Advanced Wreck &amp; Deco-Schüler"
-              />
-            </div>
-            <div class="straight-talk-student-bio">
-              <p class="student-bio-name"><strong>Dominic S.</strong></p>
-              <p>
-                PADI Divemaster seit 2024, mit Deep, Wreck und Nitrox; etwa 650
-                geloggte Tauchgänge. Seit 2021 – Freunde haben ihn in den Sport
-                gezogen; seitdem nur warmes Wasser, mit etwas Schlechtwasser-Erfahrung.
-              </p>
-              <p class="student-bio-teaser">
-                Wracks zogen ihn schon im Open Water an; HTMS Chang verfestigte
-                den Wunsch nach Penetration – dann Gasplanung, Tarierung und
-                Teamarbeit, wenn die Sicht im Rumpf in Zentimetern statt Metern
-                zählt.
-              </p>
-            </div>
-          </div>
-          <div class="straight-talk-qa">
-            <h3>Interview</h3>
-            <dl>
-              <dt>
-                Wie bist du zum Tauchen gekommen und warum Technical Diving?
-              </dt>
-              <dd>
-                Ich liebe Wasser und Wassersport seit Kindertagen – Open Water war
-                logisch. Von Anfang an faszinierten mich Wracks; ich wollte sie
-                erkunden – dafür war Technical Diving der Schlüssel.
-              </dd>
-              <dt>
-                Gab es einen Moment, an dem du mehr wolltest als Sporttauchen?
-              </dt>
-              <dd>
-                Beim ersten Mal HTMS Chang war ich komplett gefesselt. Ich wollte
-                Wrack-Penetration – und dafür braucht man die Skills aus dem
-                technischen Tauchen.
-              </dd>
-              <dt>Was hast du vor dem Kurs erwartet?</dt>
-              <dd>
-                Dass ich vorhandene Skills anwende und verbessere und
-                gleichzeitig neue Fähigkeiten dazugewinne.
-              </dd>
-              <dt>Was war am anspruchsvollsten?</dt>
-              <dd>
-                Die Wracktauchgänge – mitunter vielleicht 5&nbsp;cm Sicht. Wie
-                blind fliegen, ohne Sichtkontakt zum Team, nur mit der Leine. Dazu
-                enge Räume im Wrack – das fordert zusätzlich.
-              </dd>
-              <dt>Was war der größte Gewinn?</dt>
-              <dd>
-                Präzise Dive Planning mit verschiedenen Gasen, effektives Teamwork
-                unter Wasser und saubere Tarierung. Gute Tarierung hält dich im
-                Rumpf stabil und verhindert Sediment-Wirbel.
-              </dd>
-              <dt>Wie wirkt Tec auf Sporttauchgänge?</dt>
-              <dd>
-                Deutlich bessere Positionierung und ein klareres Bild, wie sich
-                Atemgase in verschiedenen Tiefen verhalten. Ich bewege mich
-                effizienter – das spart Energie.
-              </dd>
-              <dt>Würdest du die Ausbildung empfehlen?</dt>
-              <dd>
-                Ja – jedem, der Theorie und Praxis des Tauchens vertiefen und
-                aktiv besser werden will.
-              </dd>
-              <dt>
-                Was sagst du Unentschlossenen?
-              </dt>
-              <dd>
-                Einfach anfangen. Die ersten drei Kurse sind rund zwölf Tauchgänge
-                – du lernst enorm viel, das auch dem Sporttauchen hilft. Wenn es
-                nichts für dich ist, hast du wenig verloren – die Skills bleiben.
-              </dd>
-            </dl>
-          </div>
-
-          <div
-            class="straight-talk-story-gallery"
-            role="group"
-            aria-label="Trainingsfotos Schülerstory 3"
-          >
-            <figure>
-              <img
-                src="/img/posts/technical_wreckdiving_htmschang3.webp"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                alt="Advanced Wreck Diving am HTMS Chang, Koh Chang"
-              />
-              <figcaption>
-                Weiter am Wrack: kurze Segmente, klare Umkehrkriterien,
-                Penetration-Mindset, das konservativ bleibt, wenn die Bedingung
-                kippt.
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="/img/posts/technical_diver_deco_stop2.webp"
-                width="600"
-                height="400"
-                loading="lazy"
-                decoding="async"
-                alt="Tec-Taucher bei Dekompressionsverfahren-Training, Koh Chang"
-              />
-              <figcaption>
-                Weiterer Dekostopp in der Sequenz – gleiche Bestätigungen,
-                gleiche Tiefenkontrolle, bis das Muster unter Last langweilig
-                genug ist, um ihm zu vertrauen.
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section id="training-value" aria-labelledby="tv-heading">
-          <h2 id="tv-heading" style="color: var(--highlight-color)">
-            Trainingswert / Blick der Instruktoren
-          </h2>
-          <p>
-            Jede Schülerstory klingt anders, aber dieselben Themen tauchen in fast
-            jedem gut geführten TDI-Technical-Kurs in Thailand – oder woanders –
-            auf: Es geht weniger um Tiefenrekorde als um wiederholbare Disziplin.
-          </p>
-          <ul>
-            <li>
-              <strong>Disziplin:</strong> Checklisten immer gleich abarbeiten,
-              damit Abweichungen auffallen.
-            </li>
-            <li>
-              <strong>Awareness:</strong> Team, Zeit, Gas und Navigation als
-              einen Kreislauf – nicht als Wechsel-Monomanie.
-            </li>
-            <li>
-              <strong>Buoyancy:</strong> Stopptiefe ohne Handflattern; Stages,
-              die nicht in die Staubzone pendeln.
-            </li>
-            <li>
-              <strong>Teamprotokolle:</strong> Klare Rollen, geprobte Fehlerfälle,
-              Kommunikation, die schlechte Sicht übersteht.
-            </li>
-            <li>
-              <strong>Gasplanung:</strong> Umkehrdrücke und Reservelogik, die du
-              am Whiteboard und unter Wasser erklären kannst.
-            </li>
-            <li>
-              <strong>Mindset:</strong> Früh abbrechen, früh aufsteigen, ehrlich
-              debriefen – ohne Drama.
-            </li>
-            <li>
-              <strong>Übertrag ins Sporttauchen:</strong> Dieselben Gewohnheiten
-              machen flacheres Fun-Diving ruhiger – etwa bei
-              <a href="/de/day-trips/fun-dives/"
-                >begleiteten Fun Dives</a
+        <article class="straight-talk-article">
+          <section id="intro" aria-labelledby="intro-heading">
+            <h2 id="intro-heading" style="color: var(--highlight-color)">
+              Einleitung
+            </h2>
+            <p>
+              Dieser Artikel basiert auf echtem Schülerfeedback und
+              Interviewnotizen – für Lesbarkeit und Privatsphäre bearbeitet –
+              von Tauchern, die unser kombiniertes Technical-Diving-Paket
+              absolviert haben:
+              <strong
+                >TDI Advanced Nitrox, TDI Dekompressionsverfahren und TDI
+                Advanced Wreck</strong
+              >. Antworten sind sprachlich geglättet; Namen und Details
+              erscheinen nur mit Zustimmung der Taucher.
+            </p>
+            <p>
+              Wenn du als erfahrener Sporttaucher prüfst, ob sich Technical
+              Diving in Thailand in Zeit und Struktur lohnt, findest du hier
+              genau die Bodenständigkeit, die Broschüren selten liefern: was
+              hart war, was im Nachhinein klar wirkt – und was sich unter Wasser
+              wirklich verändert hat.
+            </p>
+            <p>
+              Kontext zu angereicherten Gasen vor dem Weiterlesen:
+              <a href="/de/posts/scuba-knowledge/nitrox-info/"
+                >Nitrox und realistische Vorteile im Sporttauchen</a
+              >. Zu Wracks rund um die Insel:
+              <a href="/de/posts/scuba-knowledge/wreck-diving-koh-chang/"
+                >Wracktauchen Koh Chang</a
               >
-              , wenn sich die Bedingung mitten im Tauchgang ändert.
-            </li>
-          </ul>
-          <p>
-            Wenn du so lernen magst – methodisch, transparent, mit Wiederholung –
-            passt das Paket meist besser als ein Einzelkurs und improvisierter
-            Rest.
-          </p>
-        </section>
-
-        <hr />
-
-        <section id="internal" aria-labelledby="internal-heading">
-          <h2 id="internal-heading" style="color: var(--highlight-color)">
-            Verwandte Artikel (Klartext)
-          </h2>
-          <ul>
-            <li>
+              und unsere
+              <a href="/de/dive-sites/">Tauchplatz-Übersicht</a>. Den formalen
+              Programm-Stack beschreiben die Seiten
+              <a href="/de/courses/tech-package/">Technical-Diving-Paket</a>
+              und der Hub
+              <a href="/de/courses/technical-diving-courses/"
+                >TDI Technical Diving Kurse</a
+              >. Für das große Bild zu Tec-Training hier zuerst
               <a href="/de/posts/straight-talk/tech-diving-koh-chang/"
                 >Tec-Tauchen Koh Chang</a
               >
-              – realistische Erwartungen an Tec-Training auf der Insel, HTMS
-              Chang als Wrack-Klassenzimmer, TDI-Stack und für wen sich der Einstieg
-              lohnt (Begleiter zu diesem Interview-Stück).
-            </li>
-          </ul>
-        </section>
+              (Erwartungen, HTMS Chang, Pfade) – dann zurück zu diesen
+              Interviews.
+            </p>
+          </section>
 
-        <hr />
+          <section id="why-go-technical" aria-labelledby="why-heading">
+            <h2 id="why-heading" style="color: var(--highlight-color)">
+              Warum Taucher vom Sport- ins technische Tauchen wechseln
+            </h2>
+            <p>
+              Die meisten Kandidaten jagen keine Rekorde. Sie stoßen an eine
+              Grenze, wo sportliche Konservativität – richtig fürs
+              Zertifikatsniveau – nicht mehr zu den Tauchgängen passt, die sie
+              sicher machen wollen: etwas längere Wracksegmente, klarere
+              Gasstrategie, gestufte Dekompression als Verfahren statt
+              Panikmanagement.
+            </p>
+            <p>
+              Die Kombination aus
+              <a href="/de/courses/advanced-nitrox/">Advanced Nitrox</a>,
+              <a href="/de/courses/deco-procedures/">Dekompressionsverfahren</a>
+              und
+              <a href="/de/courses/advanced-wreck/">Advanced Wreck</a>
+              ist Absicht: zuerst Gas- und „Ceiling“-Kompetenz, dann gestiegenes
+              Aufstiegsprozedere, dann Anwendung in overhead-nahen Settings mit
+              Leinenführung – eine Reihenfolge, die seriöse Instruktoren
+              bevorzugen, statt Stufen zu überspringen.
+            </p>
+            <p>
+              Technical-Diving-Training auf Koh Chang spielt in echten
+              tropischen Bedingungen – Strömung, Sichtschwankungen, Boot – damit
+              Gewohnheiten entstehen, wo „saubere Theorie“ allein nicht reicht.
+              Wer vor der Buchung Stimmung schnuppern will:
+              <a href="/de/day-trips/fun-dives/">Fun Dives</a>
+              mit einem Team, das Tec spricht, sind oft ein entspanntes
+              Vorspiel.
+            </p>
+          </section>
 
-        <!-- FAQ SECTION -->
-        <section id="faq" aria-labelledby="faq-heading">
-          <h2 id="faq-heading" style="color: var(--highlight-color)">
-            Häufige Fragen
-          </h2>
+          <hr />
 
-          <div class="straight-talk-faq-item">
-            <h3>Wer kann mit Technical-Diving-Training starten?</h3>
+          <section id="cert-stack" aria-labelledby="cert-stack-heading">
+            <h2 id="cert-stack-heading" style="color: var(--highlight-color)">
+              Die Zertifizierungen hinter diesen Interviews
+            </h2>
             <p>
-              Du brauchst eine solide sportliche Basis: saubere Tarierung,
-              Situationsbewusstsein und genug geloggte Erfahrung, damit Grundlagen
-              automatisch laufen – nicht heldenhaft. Agenturen setzen Mindestzertifizierungen und Tauchgangzahlen; darüber hinaus zählen oft Mindset und Konsequenz. Ein ehrliches Vorgespräch mit dem Instruktor ist wichtiger als ein gehetzter Zeitplan.
+              Yannic, Nino und Dominic haben auf Koh Chang denselben Stack
+              durchlaufen. Diese Zertifizierungen auch erreichen? Jede Kachel
+              führt zur passenden Kursseite – Voraussetzungen, Ablauf und unsere
+              Unterrichtsweise.
             </p>
-          </div>
-          <div class="straight-talk-faq-item">
-            <h3>Verbessern Tec-Fähigkeiten das Sporttauchen?</h3>
-            <p>
-              Ja, wenn das Training sitzt. Gasplanung, engere Teamarbeit, ruhigere Tarierung und gelassenere Problemlösung zeigen sich oft auf jedem späteren Tauchgang. Technical Training ist nicht nur für „Tech-Profile“; es trainiert gute Entscheidungen unter etwas strukturierteren Bedingungen.
-            </p>
-          </div>
-          <div class="straight-talk-faq-item">
-            <h3>Ist Advanced Nitrox nur für tiefe Taucher?</h3>
-            <p>
-              Nein. Advanced Nitrox geht um verständige Nutzung von angereicherten Gasen, Laufzeiten und korrektes Sauerstoff-Exposure im technischen Rahmen – nicht um ein Abzeichen, das erst ab einer bestimmten Tiefe zählt. Es passt direkt zur Dekoplanung, damit Tauchgänge mit gestuften Gasen und Stopps planbar bleiben.
-            </p>
-          </div>
-          <div class="straight-talk-faq-item">
-            <h3>Brauche ich Wrack-Erfahrung vor Advanced Wreck?</h3>
-            <p>
-              Grundlegende Wrack-Nähe hilft, aber der Kurs baut die richtigen Gewohnheiten auf: Leinenarbeit, Kommunikation, Gas- und Zeitbewusstsein und konservative Grenzen im Wrack. Der Instruktor prüft die Basis und kann Vorbereitungstauchgänge oder Refresher empfehlen, wenn Penetrationsgrundlagen noch nicht sitzen.
-            </p>
-          </div>
-          <div class="straight-talk-faq-item">
-            <h3>Wie viele Tauchgänge sollte ich vor Tec-Training haben?</h3>
-            <p>
-              Agentur-Mindestzahlen sind ein Anfang, nicht die ganze Geschichte. Viele Kandidaten fühlen sich nach einer Saison abwechslungsreicher Sporttauchgänge in echten Bedingungen bereit – nicht nur nach perfekten Steinbruchprofilen. Wenn No-Stop-Tauchen mental noch voll wirkt, zuerst sportliche Souveränität vertiefen; Tec-Kurse liefern Verfahren, keine Zaubertricks.
-            </p>
-          </div>
-          <div class="straight-talk-faq-item">
-            <h3>Ist Technical Diving nur für Höhlen- oder Extremtaucher?</h3>
-            <p>
-              Nein. Viele Tec-Schüler wollen sicherere Reserven am Wrack, längere Profile im klaren Wasser oder einen strukturierten Weg in gestufte Dekompression – ohne Social-Media-Extrem. Es geht um kontrollierten Kompetenzaufbau, der zur Umgebung passt, in der du wirklich tauchst.
-            </p>
-          </div>
-        </section>
+            <div class="row">
+              <a href="/de/courses/nitrox-blender/" class="three columns">
+                <img
+                  src="/img/posts/C-Card-dominic-nitrox-gas-blender.webp"
+                  alt="Dominic S.: Nitrox Gas Blender Zertifikatskarte"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="excerpt">
+                  <h3>⚗️ Nitrox Gas Blender</h3>
+                  <p style="min-height: 52px">
+                    <strong>Diese Zertifizierung?</strong> Praktisches Blenden
+                    für korrekte Nitrox-Füllungen vor und zwischen
+                    Tec-Trainingstauchgängen.
+                  </p>
+                </div>
+              </a>
+              <a href="/de/courses/solo-diver/" class="three columns">
+                <img
+                  src="/img/posts/C-Card-yannic-solo-diver.webp"
+                  alt="Yannic S.: SDI Solo Diver Zertifikatskarte"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="excerpt">
+                  <h3>🤿 Solo Diver</h3>
+                  <p style="min-height: 52px">
+                    <strong>Diese Zertifizierung?</strong> Redundantes Gas,
+                    Planung und Mindset für Tauchen ohne Buddy, wenn die
+                    Bedingung es erlaubt.
+                  </p>
+                </div>
+              </a>
+              <a href="/de/courses/advanced-nitrox/" class="three columns">
+                <img
+                  src="/img/posts/C-Card-nino-adv-nitrox.webp"
+                  alt="Nino W.: TDI Advanced Nitrox Zertifikatskarte"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="excerpt">
+                  <h3>⚙️ Advanced Nitrox</h3>
+                  <p style="min-height: 52px">
+                    <strong>Diese Zertifizierung?</strong> Angereicherte Gase,
+                    Laufzeiten und Sauerstoff-Exposure im technischen
+                    Planungsrahmen.
+                  </p>
+                </div>
+              </a>
+              <a href="/de/courses/deco-procedures/" class="three columns">
+                <img
+                  src="/img/posts/C-Card-yannic-decopro.webp"
+                  alt="Yannic S.: TDI Dekompressionsverfahren Zertifikatskarte"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="excerpt">
+                  <h3>📉 Dekompressionsverfahren</h3>
+                  <p style="min-height: 52px">
+                    <strong>Diese Zertifizierung?</strong> Stopps, Ceilings und
+                    gestuftes Aufstiegsprozedere – unter echter Sicht
+                    wiederholbar.
+                  </p>
+                </div>
+              </a>
+              <a href="/de/courses/advanced-wreck/" class="three columns">
+                <img
+                  src="/img/posts/C-Card-dominic-adv-wreck.webp"
+                  alt="Dominic S.: TDI Advanced Wreck Zertifikatskarte"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="excerpt">
+                  <h3>⚓ Advanced Wreck</h3>
+                  <p style="min-height: 52px">
+                    <strong>Diese Zertifizierung?</strong> Leinenführung,
+                    Teamrollen und konservative Grenzen im Wrack.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </section>
 
-        <!-- CTA LINKS: same visual language as TDI course pages (dark panel + Book-style primary) -->
-        <aside
-          id="next-step"
-          aria-labelledby="cta-heading"
-          style="
-            background-color: #2b2b2b;
-            border: 1px solid #cfd8dc;
-            border-left: 6px solid #ff6b35;
-            border-radius: 8px;
-            padding: 22px 20px;
-            margin: 2.5em 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-          "
-        >
-          <h2
-            id="cta-heading"
-            style="
-              font-size: 1.35rem;
-              font-weight: 700;
-              margin: 0 0 12px;
-              color: #f5f5f5;
-              line-height: 1.25;
-            "
-          >
-            Ehrliche Antwort auf deine Eignung?
-          </h2>
-          <p
-            style="
-              margin: 0 0 18px;
-              color: #e0e0e0;
-              font-size: 0.98em;
-              line-height: 1.55;
-            "
-          >
-            Wenn Technical Diving auf Koh Chang zu deinen Zielen passt, starte mit
-            der Paketübersprache und sprich das Team auf Zeitplan, Voraussetzungen
-            und ehrliche Skill-Lücken an – ohne Hype, nur Verfahren.
-          </p>
-          <div
-            style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 12px;
-              align-items: center;
-            "
-          >
-            <a
-              href="/de/courses/tech-package/"
-              style="
-                display: inline-block;
-                background: linear-gradient(
-                  135deg,
-                  #1a1a1a 0%,
-                  #333333 50%,
-                  #ff6b35 100%
-                );
-                color: white;
-                padding: 12px 22px;
-                border-radius: 8px;
-                font-weight: bold;
-                font-size: 1.05em;
-                text-decoration: none;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-              "
-              >Technical-Diving-Paket</a
+          <hr />
+
+          <section id="student-story-1" aria-labelledby="s1-heading">
+            <h2 id="s1-heading" style="color: var(--highlight-color)">
+              Schülerstory 1
+            </h2>
+            <div class="straight-talk-student-card">
+              <div class="avatar">
+                <img
+                  src="/img/posts/yannic_tech_diving_koh_chang.webp"
+                  width="400"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Portrait von Yannic S., Tec-Schüler im Chang Diving Koh Chang"
+                />
+              </div>
+              <div class="straight-talk-student-bio">
+                <p class="student-bio-name"><strong>Yannic S.</strong></p>
+                <p>
+                  PADI Divemaster seit 2023, mit Deep, Wreck, Nitrox und
+                  Sidemount; etwa 160 geloggte Tauchgänge. Erstes Tauchen 2019
+                  als Discover Scuba im Urlaub; die eigentliche Ausbildung
+                  startete 2023, als der beste Freund zum Divemaster einlud –
+                  ein steiler Weg von null auf professionelles Niveau. Seitdem
+                  überwiegend warmes Wasser, etwas Schlechtwasser-Erfahrung,
+                  einige Wracktauchgänge und der Wille, weiterzubauen.
+                </p>
+                <p class="student-bio-teaser">
+                  Will Skills schärfen und die Komfortzone erweitern – und
+                  lernen, welche Grenzen auch mit Technical Diving bestehen
+                  bleiben.
+                </p>
+              </div>
+            </div>
+            <div class="straight-talk-qa">
+              <h3>Interview</h3>
+              <dl>
+                <dt>
+                  Wie bist du zum Tauchen gekommen und warum hast du dich für
+                  Technical Diving entschieden?
+                </dt>
+                <dd>
+                  2019 habe ich im Urlaub mit meiner Freundin einen
+                  Discover-Scuba gemacht – eines der besten Erlebnisse, aber
+                  ohne direkten Anschluss. Vier Jahre später hat mein bester
+                  Freund gefragt, ob ich mit ihm Divemaster mache – ich habe
+                  sofort ja gesagt und bin in einem intensiven Block von null
+                  auf Divemaster gegangen. Technical Diving wollte ich aus zwei
+                  Gründen: Ich lerne gern und will Tauchplätze erreichen, die
+                  echtes Tec voraussetzen.
+                </dd>
+                <dt>
+                  Gab es einen Moment oder Tauchgang, an dem du mehr wolltest
+                  als Sporttauchen?
+                </dt>
+                <dd>
+                  Ich habe viel gereist und viele Orte getaucht, aber mit der
+                  Zeit fehlte mir die strukturierte Herausforderung vom
+                  Divemaster. Dazu kamen Plätze, die ich nicht tauch konnte,
+                  weil mir die passende Ausbildung fehlte. Dann war klar: Ich
+                  will und muss meine Skills erweitern.
+                </dd>
+                <dt>Was hast du vor dem Kurs erwartet?</dt>
+                <dd>
+                  Dass ich meine Fähigkeiten schärfe und Inhalte lerne, die mich
+                  wirklich zu meinen Zielen bringen – vor allem die Plätze, die
+                  ich tauch möchte. Ein langfristiges Ziel ist die Grube
+                  Felicitas in Deutschland.
+                </dd>
+                <dt>Was war der anspruchsvollste Teil des Trainings?</dt>
+                <dd>
+                  Am härtesten war für mich nicht die reine Skill-Liste. Beim
+                  Divemaster hatte ich schon viel von Instruktoren gelernt, die
+                  selbst Tec-Taucher sind. Am meisten forderte mich die mentale
+                  Last: im Wrack mit praktisch null Sicht, vierer Team, jeder
+                  hängt voll an den anderen.
+                </dd>
+                <dt>Was war die wertvollste Lektion oder Fähigkeit?</dt>
+                <dd>
+                  Einen sauber gebriefeten Plan zu vertrauen – und dem Team zu
+                  vertrauen, wenn die Umgebung visuell nichts hergibt. Diese
+                  gegenseitige Abhängigkeit ist geblieben. Die
+                  „Papierkram“-Seite der Planung fühlt sich nicht mehr optional
+                  an, sobald klar ist, wofür sie da ist.
+                </dd>
+                <dt>
+                  Wie hat Tec-Training dein Tauchen verändert, auch auf
+                  Sporttauchgängen?
+                </dt>
+                <dd>
+                  Ich plane gründlicher und fast automatisch – das ist
+                  Gewohnheit geworden. Bessere Rescue-Skills geben mir das
+                  Gefühl, anderen nötigenfalls besser helfen zu können – das
+                  entspannt mich unter Wasser spürbar.
+                </dd>
+                <dt>Würdest du die Ausbildung empfehlen?</dt>
+                <dd>
+                  Ja, absolut – wenn du dauerhaft lernen magst und deine Skills
+                  strukturiert vertiefen willst, ist das ein logischer Schritt.
+                </dd>
+                <dt>
+                  Was sagst du Taucherinnen und Tauchern, die mit Tec noch
+                  unsicher sind?
+                </dt>
+                <dd>
+                  Sei ehrlich zu dir selbst: Willst du mit dem, was du lernst,
+                  Komfortzone wachsen lassen – und bist du bereit, die Grenzen
+                  zu respektieren, die Ausbildung trotzdem lässt? Wenn beides ja
+                  ist, lohnt sich das Gespräch.
+                </dd>
+              </dl>
+            </div>
+
+            <div
+              class="straight-talk-story-gallery"
+              role="group"
+              aria-label="Trainingsfotos Schülerstory 1"
             >
-            <a
-              href="/de/contact/"
+              <figure>
+                <img
+                  src="/img/posts/tech_diver_deco_stop.webp"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Tec-Taucher an Stufen-Dekostopp bei Training, Koh Chang"
+                />
+                <figcaption>
+                  Gestufte Dekompression im Training: Stopptiefe halten, Gas
+                  bestätigen, Ceiling als Verfahren – nicht als Schätzung.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/img/posts/technical_wreck_diving_htmschang.webp"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Technical Wreck Diving am HTMS Chang, Koh Chang"
+                />
+                <figcaption>
+                  Advanced Wreck am HTMS Chang – overhead-naher Kontext im
+                  Freiwasser, mit Leinenführung und Teamrollen, die du
+                  wiederholen kannst.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section id="student-story-2" aria-labelledby="s2-heading">
+            <h2 id="s2-heading" style="color: var(--highlight-color)">
+              Schülerstory 2
+            </h2>
+            <div class="straight-talk-student-card">
+              <div class="avatar">
+                <img
+                  src="/img/posts/nino_tech_diving_koh_chang.webp"
+                  width="400"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Portrait von Nino W., TDI-Tec-Schüler Koh Chang"
+                />
+              </div>
+              <div class="straight-talk-student-bio">
+                <p class="student-bio-name"><strong>Nino W.</strong></p>
+                <p>
+                  PADI Divemaster seit 2023, mit Deep, Wreck, Sidemount und
+                  Nitrox; etwa 320 geloggte Tauchgänge. Seit 2016 – erster
+                  Discover Scuba auf Kreta; Junior Open Water ein Jahr später
+                  auf Mauritius im Familienurlaub. 2019 Deep, Wreck und Nitrox
+                  bei Chang Diving; seitdem warmes Wasser in Kenia, Ägypten,
+                  Indonesien und Thailand. Divemaster 2023 bei Chang Diving
+                  abgeschlossen.
+                </p>
+                <p class="student-bio-teaser">
+                  Steigt mit Freunden ins Tec ein für echte Grundzeit in der
+                  Tiefe – nach Adlerrochen jenseits von 40&nbsp;m, die die
+                  No-Stop-Zeit fraßen, und begrenzter Wrack-Penetration am HTMS
+                  Chang, die nach mehr verlangte.
+                </p>
+              </div>
+            </div>
+            <div class="straight-talk-qa">
+              <h3>Interview</h3>
+              <dl>
+                <dt>
+                  Wie bist du zum Tauchen gekommen und warum Technical Diving?
+                </dt>
+                <dd>
+                  Mein Vater hat mich 2015 auf Kreta zum ersten Discover Scuba
+                  mitgenommen; ein Jahr später Junior Open Water auf Mauritius.
+                  2019 kamen Deep, Wreck und Nitrox bei Andi im Chang Diving
+                  dazu. Seitdem warmes Wasser in Kenia, Ägypten, Indonesien und
+                  Thailand. Divemaster 2023 bei Chang Diving – hat Spaß gemacht.
+                  Wir sind zu mehreren weiter: Tec-Grundlagen, um in bestimmten
+                  Tiefen länger bleiben und mehr Zeit im Blau zu haben, ohne
+                  ständig zuerst gegen die No-Stop-Zeit zu laufen.
+                </dd>
+                <dt>
+                  Gab es einen Moment, an dem du mehr wolltest als Sporttauchen?
+                </dt>
+                <dd>
+                  Auf Nusa Penida: Adlerrochen tiefer als 40&nbsp;m – und ich
+                  hatte nur noch wenige Minuten No-Stop-Zeit. Ich wollte bleiben
+                  und zuschauen, nicht nur die Uhr jagen. Begrenzte
+                  Wrack-Penetration am HTMS Chang hat außerdem Appetit auf einen
+                  längeren, bewussteren Weg in die Struktur gemacht – mehr als
+                  ein Blick von außen.
+                </dd>
+                <dt>Was hast du vor dem Kurs erwartet?</dt>
+                <dd>
+                  Professionelles, persönliches Training mit echten Drills –
+                  gute Tauchgänge und harte Arbeit. Genau das kam: strukturierte
+                  Sessions, fordernde Dives, Instruktoren mit hohem Standard
+                  ohne Show.
+                </dd>
+                <dt>Was war am anspruchsvollsten?</dt>
+                <dd>
+                  Allein das E-Learning hat ordentlich Zeit gekostet – grob
+                  zwanzig Stunden. Im Wasser: das Gewicht des Equipments und die
+                  Logistik auf dem Boot – schwerer als gedacht. Unterschätzt
+                  habe ich auch, wie lange sorgfältige Vorbereitung und Planung
+                  vor dem ersten Tauchgang brauchen.
+                </dd>
+                <dt>Was war die wertvollste Lektion?</dt>
+                <dd>
+                  Saubere Tarierung im Twinset mit Stages – und dass man im Team
+                  arbeiten und sich voll auf die Partner verlassen muss.
+                  Technical Diving ist kein Solo-Heldentum in teurer Ausrüstung.
+                </dd>
+                <dt>Wie hat sich Tec auf Sporttauchgänge ausgewirkt?</dt>
+                <dd>
+                  Ich schätze jetzt erst recht, wie leicht ein einfaches
+                  Single-Tank-Setup ist.
+                </dd>
+                <dt>Würdest du die Ausbildung empfehlen?</dt>
+                <dd>
+                  Ja – wenn du dich committen kannst, Team denkst und weißt,
+                  dass die Arbeit vorne dransteckt. Kein lässiges Add-on.
+                </dd>
+                <dt>Was sagst du Unentschlossenen?</dt>
+                <dd>
+                  Wenn du unsicher bist: mach den Kurs mit einem Freund, dem du
+                  vertraust – die Last verarbeitet sich leichter, wenn du
+                  zwischen den Tauchgängen offen reden kannst. Und wähle
+                  Instruktoren, die Safety und klare Kommunikation vorstellen;
+                  der Rest folgt.
+                </dd>
+              </dl>
+            </div>
+
+            <div
+              class="straight-talk-story-gallery"
+              role="group"
+              aria-label="Trainingsfotos Schülerstory 2"
+            >
+              <figure>
+                <img
+                  src="/img/posts/technical_wreck_diving_htmschang2.webp"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Tec-Taucher am Wrack HTMS Chang, Koh Chang"
+                />
+                <figcaption>
+                  Weiteres Wracksegment: Abstand, Leinenkontakt, Kommunikation –
+                  Tempo setzt das Team, nicht die Sicht.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/img/posts/technical_diving_htmschang.webp"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Technical Diving am HTMS Chang, Koh Chang"
+                />
+                <figcaption>
+                  Stages und Gaswechsel, wenn Tiefe und Overhead Tarierung,
+                  Timing und saubere Laufzeiten fordern – nicht nur
+                  Gerätekenntnis.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section id="student-story-3" aria-labelledby="s3-heading">
+            <h2 id="s3-heading" style="color: var(--highlight-color)">
+              Schülerstory 3
+            </h2>
+            <div class="straight-talk-student-card">
+              <div class="avatar">
+                <img
+                  src="/img/posts/dominic_tech_diving_koh_chang.webp"
+                  width="400"
+                  height="600"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Portrait von Dominic S., Advanced Wreck &amp; Deco-Schüler"
+                />
+              </div>
+              <div class="straight-talk-student-bio">
+                <p class="student-bio-name"><strong>Dominic S.</strong></p>
+                <p>
+                  PADI Divemaster seit 2024, mit Deep, Wreck und Nitrox; etwa
+                  650 geloggte Tauchgänge. Seit 2021 – Freunde haben ihn in den
+                  Sport gezogen; seitdem nur warmes Wasser, mit etwas
+                  Schlechtwasser-Erfahrung.
+                </p>
+                <p class="student-bio-teaser">
+                  Wracks zogen ihn schon im Open Water an; HTMS Chang
+                  verfestigte den Wunsch nach Penetration – dann Gasplanung,
+                  Tarierung und Teamarbeit, wenn die Sicht im Rumpf in
+                  Zentimetern statt Metern zählt.
+                </p>
+              </div>
+            </div>
+            <div class="straight-talk-qa">
+              <h3>Interview</h3>
+              <dl>
+                <dt>
+                  Wie bist du zum Tauchen gekommen und warum Technical Diving?
+                </dt>
+                <dd>
+                  Ich liebe Wasser und Wassersport seit Kindertagen – Open Water
+                  war logisch. Von Anfang an faszinierten mich Wracks; ich
+                  wollte sie erkunden – dafür war Technical Diving der
+                  Schlüssel.
+                </dd>
+                <dt>
+                  Gab es einen Moment, an dem du mehr wolltest als Sporttauchen?
+                </dt>
+                <dd>
+                  Beim ersten Mal HTMS Chang war ich komplett gefesselt. Ich
+                  wollte Wrack-Penetration – und dafür braucht man die Skills
+                  aus dem technischen Tauchen.
+                </dd>
+                <dt>Was hast du vor dem Kurs erwartet?</dt>
+                <dd>
+                  Dass ich vorhandene Skills anwende und verbessere und
+                  gleichzeitig neue Fähigkeiten dazugewinne.
+                </dd>
+                <dt>Was war am anspruchsvollsten?</dt>
+                <dd>
+                  Die Wracktauchgänge – mitunter vielleicht 5&nbsp;cm Sicht. Wie
+                  blind fliegen, ohne Sichtkontakt zum Team, nur mit der Leine.
+                  Dazu enge Räume im Wrack – das fordert zusätzlich.
+                </dd>
+                <dt>Was war der größte Gewinn?</dt>
+                <dd>
+                  Präzise Dive Planning mit verschiedenen Gasen, effektives
+                  Teamwork unter Wasser und saubere Tarierung. Gute Tarierung
+                  hält dich im Rumpf stabil und verhindert Sediment-Wirbel.
+                </dd>
+                <dt>Wie wirkt Tec auf Sporttauchgänge?</dt>
+                <dd>
+                  Deutlich bessere Positionierung und ein klareres Bild, wie
+                  sich Atemgase in verschiedenen Tiefen verhalten. Ich bewege
+                  mich effizienter – das spart Energie.
+                </dd>
+                <dt>Würdest du die Ausbildung empfehlen?</dt>
+                <dd>
+                  Ja – jedem, der Theorie und Praxis des Tauchens vertiefen und
+                  aktiv besser werden will.
+                </dd>
+                <dt>Was sagst du Unentschlossenen?</dt>
+                <dd>
+                  Einfach anfangen. Die ersten drei Kurse sind rund zwölf
+                  Tauchgänge – du lernst enorm viel, das auch dem Sporttauchen
+                  hilft. Wenn es nichts für dich ist, hast du wenig verloren –
+                  die Skills bleiben.
+                </dd>
+              </dl>
+            </div>
+
+            <div
+              class="straight-talk-story-gallery"
+              role="group"
+              aria-label="Trainingsfotos Schülerstory 3"
+            >
+              <figure>
+                <img
+                  src="/img/posts/technical_wreckdiving_htmschang3.webp"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Advanced Wreck Diving am HTMS Chang, Koh Chang"
+                />
+                <figcaption>
+                  Weiter am Wrack: kurze Segmente, klare Umkehrkriterien,
+                  Penetration-Mindset, das konservativ bleibt, wenn die
+                  Bedingung kippt.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="/img/posts/technical_diver_deco_stop2.webp"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Tec-Taucher bei Dekompressionsverfahren-Training, Koh Chang"
+                />
+                <figcaption>
+                  Weiterer Dekostopp in der Sequenz – gleiche Bestätigungen,
+                  gleiche Tiefenkontrolle, bis das Muster unter Last langweilig
+                  genug ist, um ihm zu vertrauen.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
+          <section id="training-value" aria-labelledby="tv-heading">
+            <h2 id="tv-heading" style="color: var(--highlight-color)">
+              Trainingswert / Blick der Instruktoren
+            </h2>
+            <p>
+              Jede Schülerstory klingt anders, aber dieselben Themen tauchen in
+              fast jedem gut geführten TDI-Technical-Kurs in Thailand – oder
+              woanders – auf: Es geht weniger um Tiefenrekorde als um
+              wiederholbare Disziplin.
+            </p>
+            <ul>
+              <li>
+                <strong>Disziplin:</strong> Checklisten immer gleich abarbeiten,
+                damit Abweichungen auffallen.
+              </li>
+              <li>
+                <strong>Awareness:</strong> Team, Zeit, Gas und Navigation als
+                einen Kreislauf – nicht als Wechsel-Monomanie.
+              </li>
+              <li>
+                <strong>Buoyancy:</strong> Stopptiefe ohne Handflattern; Stages,
+                die nicht in die Staubzone pendeln.
+              </li>
+              <li>
+                <strong>Teamprotokolle:</strong> Klare Rollen, geprobte
+                Fehlerfälle, Kommunikation, die schlechte Sicht übersteht.
+              </li>
+              <li>
+                <strong>Gasplanung:</strong> Umkehrdrücke und Reservelogik, die
+                du am Whiteboard und unter Wasser erklären kannst.
+              </li>
+              <li>
+                <strong>Mindset:</strong> Früh abbrechen, früh aufsteigen,
+                ehrlich debriefen – ohne Drama.
+              </li>
+              <li>
+                <strong>Übertrag ins Sporttauchen:</strong> Dieselben
+                Gewohnheiten machen flacheres Fun-Diving ruhiger – etwa bei
+                <a href="/de/day-trips/fun-dives/">begleiteten Fun Dives</a>
+                , wenn sich die Bedingung mitten im Tauchgang ändert.
+              </li>
+            </ul>
+            <p>
+              Wenn du so lernen magst – methodisch, transparent, mit
+              Wiederholung – passt das Paket meist besser als ein Einzelkurs und
+              improvisierter Rest.
+            </p>
+          </section>
+
+          <hr />
+
+          <section id="internal" aria-labelledby="internal-heading">
+            <h2 id="internal-heading" style="color: var(--highlight-color)">
+              Verwandte Artikel (Klartext)
+            </h2>
+            <ul>
+              <li>
+                <a href="/de/posts/straight-talk/tech-diving-koh-chang/"
+                  >Tec-Tauchen Koh Chang</a
+                >
+                – realistische Erwartungen an Tec-Training auf der Insel, HTMS
+                Chang als Wrack-Klassenzimmer, TDI-Stack und für wen sich der
+                Einstieg lohnt (Begleiter zu diesem Interview-Stück).
+              </li>
+            </ul>
+          </section>
+
+          <hr />
+
+          <!-- FAQ SECTION -->
+          <section id="faq" aria-labelledby="faq-heading">
+            <h2 id="faq-heading" style="color: var(--highlight-color)">
+              Häufige Fragen
+            </h2>
+
+            <div class="straight-talk-faq-item">
+              <h3>Wer kann mit Technical-Diving-Training starten?</h3>
+              <p>
+                Du brauchst eine solide sportliche Basis: saubere Tarierung,
+                Situationsbewusstsein und genug geloggte Erfahrung, damit
+                Grundlagen automatisch laufen – nicht heldenhaft. Agenturen
+                setzen Mindestzertifizierungen und Tauchgangzahlen; darüber
+                hinaus zählen oft Mindset und Konsequenz. Ein ehrliches
+                Vorgespräch mit dem Instruktor ist wichtiger als ein gehetzter
+                Zeitplan.
+              </p>
+            </div>
+            <div class="straight-talk-faq-item">
+              <h3>Verbessern Tec-Fähigkeiten das Sporttauchen?</h3>
+              <p>
+                Ja, wenn das Training sitzt. Gasplanung, engere Teamarbeit,
+                ruhigere Tarierung und gelassenere Problemlösung zeigen sich oft
+                auf jedem späteren Tauchgang. Technical Training ist nicht nur
+                für „Tech-Profile“; es trainiert gute Entscheidungen unter etwas
+                strukturierteren Bedingungen.
+              </p>
+            </div>
+            <div class="straight-talk-faq-item">
+              <h3>Ist Advanced Nitrox nur für tiefe Taucher?</h3>
+              <p>
+                Nein. Advanced Nitrox geht um verständige Nutzung von
+                angereicherten Gasen, Laufzeiten und korrektes
+                Sauerstoff-Exposure im technischen Rahmen – nicht um ein
+                Abzeichen, das erst ab einer bestimmten Tiefe zählt. Es passt
+                direkt zur Dekoplanung, damit Tauchgänge mit gestuften Gasen und
+                Stopps planbar bleiben.
+              </p>
+            </div>
+            <div class="straight-talk-faq-item">
+              <h3>Brauche ich Wrack-Erfahrung vor Advanced Wreck?</h3>
+              <p>
+                Grundlegende Wrack-Nähe hilft, aber der Kurs baut die richtigen
+                Gewohnheiten auf: Leinenarbeit, Kommunikation, Gas- und
+                Zeitbewusstsein und konservative Grenzen im Wrack. Der
+                Instruktor prüft die Basis und kann Vorbereitungstauchgänge oder
+                Refresher empfehlen, wenn Penetrationsgrundlagen noch nicht
+                sitzen.
+              </p>
+            </div>
+            <div class="straight-talk-faq-item">
+              <h3>Wie viele Tauchgänge sollte ich vor Tec-Training haben?</h3>
+              <p>
+                Agentur-Mindestzahlen sind ein Anfang, nicht die ganze
+                Geschichte. Viele Kandidaten fühlen sich nach einer Saison
+                abwechslungsreicher Sporttauchgänge in echten Bedingungen bereit
+                – nicht nur nach perfekten Steinbruchprofilen. Wenn
+                No-Stop-Tauchen mental noch voll wirkt, zuerst sportliche
+                Souveränität vertiefen; Tec-Kurse liefern Verfahren, keine
+                Zaubertricks.
+              </p>
+            </div>
+            <div class="straight-talk-faq-item">
+              <h3>Ist Technical Diving nur für Höhlen- oder Extremtaucher?</h3>
+              <p>
+                Nein. Viele Tec-Schüler wollen sicherere Reserven am Wrack,
+                längere Profile im klaren Wasser oder einen strukturierten Weg
+                in gestufte Dekompression – ohne Social-Media-Extrem. Es geht um
+                kontrollierten Kompetenzaufbau, der zur Umgebung passt, in der
+                du wirklich tauchst.
+              </p>
+            </div>
+          </section>
+
+          <!-- CTA LINKS: same visual language as TDI course pages (dark panel + Book-style primary) -->
+          <aside
+            id="next-step"
+            aria-labelledby="cta-heading"
+            style="
+              background-color: #2b2b2b;
+              border: 1px solid #cfd8dc;
+              border-left: 6px solid #ff6b35;
+              border-radius: 8px;
+              padding: 22px 20px;
+              margin: 2.5em 0;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            "
+          >
+            <h2
+              id="cta-heading"
               style="
-                display: inline-block;
-                background: transparent;
+                font-size: 1.35rem;
+                font-weight: 700;
+                margin: 0 0 12px;
+                color: #f5f5f5;
+                line-height: 1.25;
+              "
+            >
+              Ehrliche Antwort auf deine Eignung?
+            </h2>
+            <p
+              style="
+                margin: 0 0 18px;
                 color: #e0e0e0;
-                padding: 10px 18px;
-                border-radius: 8px;
-                font-weight: 600;
-                text-decoration: none;
-                border: 2px solid #cfd8dc;
+                font-size: 0.98em;
+                line-height: 1.55;
               "
-              >Kontakt &amp; Buchung</a
             >
-            <a
-              href="/de/posts/straight-talk/"
+              Wenn Technical Diving auf Koh Chang zu deinen Zielen passt, starte
+              mit der Paketübersprache und sprich das Team auf Zeitplan,
+              Voraussetzungen und ehrliche Skill-Lücken an – ohne Hype, nur
+              Verfahren.
+            </p>
+            <div
               style="
-                display: inline-block;
-                color: #80cbc4;
-                padding: 10px 6px 10px 0;
-                font-weight: 600;
-                text-decoration: underline;
-                text-underline-offset: 3px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                align-items: center;
               "
-              >Mehr Klartext</a
             >
-          </div>
-        </aside>
-
-      </article>
+              <a
+                href="/de/courses/tech-package/"
+                style="
+                  display: inline-block;
+                  background: linear-gradient(
+                    135deg,
+                    #3a3a3a 0%,
+                    #5a5a5a 45%,
+                    #ff8a5c 100%
+                  );
+                  color: white;
+                  padding: 12px 22px;
+                  border-radius: 8px;
+                  font-weight: bold;
+                  font-size: 1.05em;
+                  text-decoration: none;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+                "
+                >Technical-Diving-Paket</a
+              >
+              <a
+                href="/de/contact/"
+                style="
+                  display: inline-block;
+                  background: transparent;
+                  color: #e0e0e0;
+                  padding: 10px 18px;
+                  border-radius: 8px;
+                  font-weight: 600;
+                  text-decoration: none;
+                  border: 2px solid #cfd8dc;
+                "
+                >Kontakt &amp; Buchung</a
+              >
+              <a
+                href="/de/posts/straight-talk/"
+                style="
+                  display: inline-block;
+                  color: #80cbc4;
+                  padding: 10px 6px 10px 0;
+                  font-weight: 600;
+                  text-decoration: underline;
+                  text-underline-offset: 3px;
+                "
+                >Mehr Klartext</a
+              >
+            </div>
+          </aside>
+        </article>
       </div>
     </main>
 

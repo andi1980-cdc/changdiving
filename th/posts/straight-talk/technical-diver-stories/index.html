@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- EDIT TITLE -->
     <title>
@@ -358,8 +359,8 @@
         padding-top: 0.75em;
         margin-top: 0.35em;
       }
-      /* Overrides global `.speciality-box img` (height:auto, margin, border-radius) so cover + position apply inside the circle */
-      .speciality-box .straight-talk-student-card .avatar img {
+      /* Overrides global `.tek-box img` (height:auto, margin, border-radius) so cover + position apply inside the circle */
+      .tek-box .straight-talk-student-card .avatar img {
         display: block !important;
         width: 100% !important;
         height: 100% !important;
@@ -420,7 +421,7 @@
         line-height: 1.45;
         padding: 0 4px;
       }
-      .speciality-box .straight-talk-story-gallery img {
+      .tek-box .straight-talk-story-gallery img {
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         margin-left: auto;
@@ -454,6 +455,48 @@
           aspect-ratio: 3 / 2;
           object-fit: cover;
         }
+      }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
       }
     </style>
     <link
@@ -700,15 +743,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <!-- EDIT TITLE (hero H1) -->
-          <h1>เรื่องราวนักดำน้ำเทคนิค — Nitrox, Deco &amp; Advanced Wreck</h1>
-          <p>
-            <!-- EDIT HERO SUBLINE -->
-            พูดตรงๆ · มุมมองนักเรียนจริง · เกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -723,52 +757,21 @@
         <a href="/th/faqs/">คำถามที่พบบ่อย</a>
       </nav>
 
-      <div class="speciality-box">
+      <div class="tek-box">
         <!-- Filled by /js/global.js (full trail: Home › Posts › Straight Talk › …) -->
         <nav id="breadcrumb" class="breadcrumb"></nav>
-        <hr />
-
-        <!-- EDIT TITLE (plain H2 like course pages, cf. advanced-wreck) -->
-        <h2 style="margin-top: 0">
-          เรื่องราวนักดำน้ำเทคนิค: Nitrox, Deco &amp; Advanced Wreck
-        </h2>
-
-        <p style="color: #555; margin: 0 0 1em">
-          <span>Chang Diving Center</span>
-          ·
-          <time datetime="2026-04-17">17 เมษายน 2026</time>
-        </p>
-
-        <p style="margin: 0 0 1.25em">
-          <!-- EDIT EXCERPT -->
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          เรื่องราวนักดำน้ำเทคนิค — Nitrox, Deco &amp; Advanced Wreck
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
           มุมมองตรงๆ จากนักดำน้ำทั่วไปที่มีประสบการณ์ซึ่งเลือกเส้นทาง TDI แบบรวม
           — Advanced Nitrox, Decompression Procedures และ Advanced Wreck —
           ระหว่างฝึกดำน้ำเทคนิคที่เกาะช้าง
         </p>
 
-        <!-- TOC: dark panel in the spirit of course callouts (advanced-wreck tables) -->
-        <nav
-          class="tec-article-toc"
-          aria-label="สารบัญ"
-          style="
-            background-color: #2b2b2b;
-            padding: 16px 18px;
-            border-radius: 8px;
-            margin: 0 0 24px;
-            border: 1px solid #cfd8dc;
-          "
-        >
-          <p style="color: #e0e0e0; margin: 0 0 12px; font-weight: bold">
-            ในหน้านี้
-          </p>
-          <div
-            style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 10px 16px;
-              font-size: 0.95rem;
-            "
-          >
+        <nav class="page-jump-nav" aria-label="ในหน้านี้">
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
             <a href="#intro">บทนำ</a>
             <a href="#why-go-technical">ทำไมเทคนิค</a>
             <a href="#cert-stack">ชุดคอร์ส</a>
@@ -776,11 +779,15 @@
             <a href="#student-story-2">เรื่อง 2</a>
             <a href="#student-story-3">เรื่อง 3</a>
             <a href="#training-value">คุณค่าการฝึก</a>
-            <a href="#internal">ที่เกี่ยวข้อง</a>
             <a href="#faq">FAQ</a>
-            <a href="#next-step">ขั้นตอนถัดไป</a>
           </div>
         </nav>
+
+        <p style="color: #555; margin: 0 0 1em">
+          <span>Chang Diving Center</span>
+          ·
+          <time datetime="2026-04-17">17 เมษายน 2026</time>
+        </p>
 
         <!-- Course-style context strip (cf. advanced-wreck info boxes) -->
         <div

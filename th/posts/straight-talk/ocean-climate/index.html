@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       มหาสมุทร: แหล่งปล่อย CO₂ รายใหญ่ –
@@ -342,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "มหาสมุทรกับบทบาทซ่อนเร้นในฐานะแหล่ง CO₂ ที่ใหญ่ที่สุด",
         "alternativeHeadline": "มหาสมุทร คาร์บอน และสภาพภูมิอากาศ: สิ่งที่นักดำน้ำควรรู้",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/ocean-climate_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "Straight Talk",
@@ -494,17 +499,6 @@
           src="/img/posts/ocean-climate_big.webp"
           alt="มหาสมุทรและภูมิอากาศ – การแลกเปลี่ยน CO₂ ระหว่างทะเลและชั้นบรรยากาศ"
         />
-
-        <div class="hero-text">
-          <h1>
-            มหาสมุทร: แหล่งปล่อย CO₂ รายใหญ่ –
-            บทบาทที่ซ่อนอยู่ต่อการเปลี่ยนแปลงสภาพภูมิอากาศ
-          </h1>
-          <p>
-            มหาสมุทรดูดซับและปล่อย CO₂ ปริมาณมหาศาล กำหนดสภาพภูมิอากาศ
-            และมีผลต่ออนาคตของการดำน้ำ
-          </p>
-        </div>
       </div>
     </header>
 
@@ -521,22 +515,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          มหาสมุทร: แหล่งปล่อย CO₂ รายใหญ่ –
+          บทบาทที่ซ่อนอยู่ต่อการเปลี่ยนแปลงสภาพภูมิอากาศ
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          มหาสมุทรดูดซับและปล่อย CO₂ ปริมาณมหาศาล กำหนดสภาพภูมิอากาศ
+          และมีผลต่ออนาคตของการดำน้ำ
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          มหาสมุทรกับบทบาทซ่อนเร้นในภาวะโลกร้อน –
-          แหล่งก๊าซคาร์บอนไดออกไซด์ที่ใหญ่ที่สุด
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#oc-intro">บทนำ</a>
+            <a href="#oc-store">เก็บ CO₂</a>
+            <a href="#oc-release">ปล่อย CO₂</a>
+            <a href="#oc-diving">ผลต่อการดำน้ำ</a>
+            <a href="#oc-action">นักดำน้ำทำอะไรได้</a>
+            <a href="#oc-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="oc-intro">
+          มหาสมุทรเคลื่อนย้าย CO₂ มหาศาล — และส่งผลต่ออนาคตการดำน้ำ
         </h2>
 
         <p><strong>บทนำ:</strong></p>
@@ -556,7 +561,7 @@
           บนเกาะช้าง เราได้เห็นการเปลี่ยนแปลงเหล่านี้จากประสบการณ์จริง
         </p>
 
-        <h2>มหาสมุทรเก็บก๊าซ CO₂ อย่างไร?</h2>
+        <h2 id="oc-store">มหาสมุทรเก็บก๊าซ CO₂ อย่างไร?</h2>
         <h3>1. ระบบละลาย CO₂ (Solubility Pump)</h3>
         <ul>
           <li>
@@ -587,7 +592,7 @@
           CO₂ รวมกับน้ำกลายเป็นกรดคาร์บอนิกและส่งผลต่อค่าความเป็นกรด-ด่างของทะเล
         </p>
 
-        <h2>ทำไมมหาสมุทรจึงปล่อย CO₂?</h2>
+        <h2 id="oc-release">ทำไมมหาสมุทรจึงปล่อย CO₂?</h2>
         <ul>
           <li>
             <strong>อุณหภูมิสูงขึ้น:</strong> น้ำอุ่นเก็บ CO₂ ได้น้อยลง
@@ -605,7 +610,7 @@
           </li>
         </ul>
 
-        <h2>CO₂ ส่งผลต่อการดำน้ำอย่างไร?</h2>
+        <h2 id="oc-diving">CO₂ ส่งผลต่อการดำน้ำอย่างไร?</h2>
         <ul>
           <li>
             <strong>ปะการังฟอกขาวและกรดในทะเล:</strong>
@@ -620,7 +625,7 @@
           </li>
         </ul>
 
-        <h2>นักดำน้ำสามารถช่วยอะไรได้บ้าง?</h2>
+        <h2 id="oc-action">นักดำน้ำสามารถช่วยอะไรได้บ้าง?</h2>
         <ul>
           <li>
             <strong>ช่วยอนุรักษ์แนวปะการังและหญ้าทะเล</strong> –
@@ -632,7 +637,7 @@
           </li>
         </ul>
 
-        <h2>สรุป</h2>
+        <h2 id="oc-conclusion">สรุป</h2>
         <p>
           มหาสมุทรมีบทบาทสำคัญทั้งในการดูดซับและปล่อย CO₂ สู่โลก
           ผลกระทบจากอุณหภูมิ กระแสน้ำ

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Diving & Social Media – Do We Really Need to Share Everything?
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "Diving & Social Media – Do We Really Need to Share Everything?",
         "alternativeHeadline": "Why Chang Diving Doesn’t Chase Likes – And You Shouldn't Either",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-social-media_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Straight Talk",
@@ -489,17 +494,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Diving & Social Media – Do We Really Need to Share Everything?
-          </h1>
-          <p>
-            At Chang Diving, we believe in real experiences over likes. Discover
-            why we keep your dives private and focus on the moment, not the
-            feed.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -516,18 +510,32 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Diving & Social Media – Do We Really Need to Share Everything?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          At Chang Diving, we believe in real experiences over likes. Discover
+          why we keep your dives private and focus on the moment, not the feed.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#dsm-intro">Intro</a>
+            <a href="#dsm-limit">Why we limit</a>
+            <a href="#dsm-pressure">Pressure</a>
+            <a href="#dsm-marketing">Marketing</a>
+            <a href="#dsm-sharing">Sharing right</a>
+            <a href="#dsm-conclusion">Conclusion</a>
+          </div>
+        </nav>
+
+        <h2 id="dsm-intro">
+          Real dive experiences over likes — why we keep it quieter online
         </h2>
 
         <p>
@@ -539,7 +547,7 @@
 
         <hr />
 
-        <h2>Why We Limit Our Social Media Presence</h2>
+        <h2 id="dsm-limit">Why We Limit Our Social Media Presence</h2>
 
         <p>
           Unlike many dive centers, we are **not overly active on Facebook,
@@ -571,7 +579,7 @@
 
         <hr />
 
-        <h2>The Pressure of Social Media & Diving</h2>
+        <h2 id="dsm-pressure">The Pressure of Social Media & Diving</h2>
 
         <p>
           Have you ever felt pressure to take the perfect underwater photo or
@@ -601,7 +609,9 @@
 
         <hr />
 
-        <h2>Why We Don't Rely on Social Media for Marketing</h2>
+        <h2 id="dsm-marketing">
+          Why We Don't Rely on Social Media for Marketing
+        </h2>
 
         <p>
           For many dive centers, social media is a major marketing tool.
@@ -633,7 +643,7 @@
 
         <hr />
 
-        <h2>Sharing Your Dive Memories – The Right Way</h2>
+        <h2 id="dsm-sharing">Sharing Your Dive Memories – The Right Way</h2>
 
         <p>
           If you love capturing and sharing your diving experiences, that’s
@@ -658,7 +668,7 @@
 
         <hr />
 
-        <h2>Conclusion – Real Diving, Real Memories</h2>
+        <h2 id="dsm-conclusion">Conclusion – Real Diving, Real Memories</h2>
 
         <p>
           We’re not against social media – but we believe diving should be about

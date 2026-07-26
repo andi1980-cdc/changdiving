@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tauchen & Social Media – Müssen wir wirklich alles teilen?</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "Tauchen & Social Media – Müssen wir wirklich alles teilen?",
         "alternativeHeadline": "Warum Chang Diving keine Likes jagt – und du das auch nicht tun solltest",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-social-media_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Straight Talk",
@@ -485,15 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Tauchen & Social Media – Müssen wir wirklich alles teilen?</h1>
-          <p>
-            Bei Chang Diving stehen echte Erlebnisse im Fokus. Erfahre, warum
-            wir deine Tauchgänge privat halten und den Moment statt der Likes
-            genießen.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -512,18 +508,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Tauchen & Social Media – Müssen wir wirklich alles teilen?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Bei Chang Diving stehen echte Erlebnisse im Fokus. Erfahre, warum wir
+          deine Tauchgänge privat halten und den Moment statt der Likes
+          genießen.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#dsm-intro">Einstieg</a>
+            <a href="#dsm-limit">Warum begrenzen</a>
+            <a href="#dsm-pressure">Druck</a>
+            <a href="#dsm-marketing">Marketing</a>
+            <a href="#dsm-sharing">Richtig teilen</a>
+            <a href="#dsm-conclusion">Fazit</a>
+          </div>
+        </nav>
+
+        <h2 id="dsm-intro">
+          Echte Taucherlebnisse vor Likes – warum wir online ruhiger bleiben
         </h2>
 
         <p>
@@ -536,7 +547,7 @@
 
         <hr />
 
-        <h2>Warum wir unsere Social-Media-Präsenz begrenzen</h2>
+        <h2 id="dsm-limit">Warum wir unsere Social-Media-Präsenz begrenzen</h2>
 
         <p>
           Im Gegensatz zu vielen anderen Tauchschulen sind wir
@@ -571,7 +582,7 @@
 
         <hr />
 
-        <h2>Der Social-Media-Druck beim Tauchen</h2>
+        <h2 id="dsm-pressure">Der Social-Media-Druck beim Tauchen</h2>
 
         <p>
           Hast du dich schon einmal unter Druck gesetzt gefühlt, das perfekte
@@ -603,7 +614,9 @@
 
         <hr />
 
-        <h2>Warum wir Social Media nicht als Haupt-Marketingkanal nutzen</h2>
+        <h2 id="dsm-marketing">
+          Warum wir Social Media nicht als Haupt-Marketingkanal nutzen
+        </h2>
 
         <p>
           Für viele Tauchbasen ist Social Media das wichtigste Marketing-Tool.
@@ -636,7 +649,7 @@
 
         <hr />
 
-        <h2>Taucherinnerungen teilen – aber richtig</h2>
+        <h2 id="dsm-sharing">Taucherinnerungen teilen – aber richtig</h2>
 
         <p>
           Wenn du gerne Tauchfotos teilst, ist das super! Aber bitte mit
@@ -665,7 +678,7 @@
 
         <hr />
 
-        <h2>Fazit – Echtes Tauchen, echte Erinnerungen</h2>
+        <h2 id="dsm-conclusion">Fazit – Echtes Tauchen, echte Erinnerungen</h2>
 
         <p>
           Wir sind nicht gegen Social Media – aber wir finden, Tauchen sollte

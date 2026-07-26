@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Die 10 häufigsten Mythen über das Tauchen – und die Wahrheit dahinter
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "Die 10 häufigsten Mythen über das Tauchen – und die Wahrheit dahinter",
         "alternativeHeadline": "Tauchen ohne Irrtümer: Mythen entlarvt",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/the-10-most-common-myths-about-scuba-diving_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Straight Talk",
@@ -496,18 +501,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Die 10 häufigsten Mythen über das Tauchen – und die Wahrheit
-            dahinter
-          </h1>
-          <p>
-            Denkst du, Tauchen ist gefährlich, teuer oder nur für Profis? Wir
-            räumen mit den 10 größten Mythen auf und zeigen: Tauchen ist für
-            alle!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -524,18 +517,34 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Die 10 häufigsten Mythen über das Tauchen – und die Wahrheit dahinter
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Denkst du, Tauchen ist gefährlich, teuer oder nur für Profis? Wir
+          räumen mit den 10 größten Mythen auf und zeigen: Tauchen ist für alle!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#myth-intro">Einstieg</a>
+            <a href="#myth-1">Gefährlich?</a>
+            <a href="#myth-2">Fitness</a>
+            <a href="#myth-3">Haie</a>
+            <a href="#myth-5">Kosten</a>
+            <a href="#myth-6">Schwimmen</a>
+            <a href="#myth-10">Nur Meer?</a>
+            <a href="#myth-conclusion">Fazit</a>
+          </div>
+        </nav>
+
+        <h2 id="myth-intro">
+          Zehn Tauchmythen – und was unter Wasser wirklich gilt
         </h2>
 
         <p>
@@ -546,21 +555,21 @@
           Sorgen machen musst!
         </p>
 
-        <h2>1. „Tauchen ist gefährlich“</h2>
+        <h2 id="myth-1">1. „Tauchen ist gefährlich“</h2>
         <p>
           Falsch! Tauchen ist eine sehr sichere Aktivität – vorausgesetzt, man
           befolgt die Regeln und ist gut ausgebildet. Statistisch gesehen ist
           Tauchen sicherer als Autofahren oder Skifahren!
         </p>
 
-        <h2>2. „Man muss super fit sein zum Tauchen“</h2>
+        <h2 id="myth-2">2. „Man muss super fit sein zum Tauchen“</h2>
         <p>
           Nein – Tauchen ist kein Leistungssport! Jeder mit durchschnittlicher
           Fitness kann tauchen lernen. Auch Menschen mit körperlichen
           Einschränkungen können die Unterwasserwelt genießen.
         </p>
 
-        <h2>3. „Haie sind eine echte Gefahr für Taucher“</h2>
+        <h2 id="myth-3">3. „Haie sind eine echte Gefahr für Taucher“</h2>
         <p>
           Haie sind keine gefährlichen Monster, sondern faszinierende Tiere. In
           Wirklichkeit sind sie scheu und meiden Menschen. Eine Hai-Sichtung ist
@@ -574,7 +583,7 @@
           Gesundheitszustand.
         </p>
 
-        <h2>5. „Tauchen ist zu teuer“</h2>
+        <h2 id="myth-5">5. „Tauchen ist zu teuer“</h2>
         <p>
           Einsteigerkurse wie der
           <a href="/de/posts/tips-and-tricks/open-water-duration/"
@@ -584,7 +593,9 @@
           oder Golf ist Tauchen nicht teurer – und die Erlebnisse unbezahlbar!
         </p>
 
-        <h2>6. „Ich kann nicht gut schwimmen, also kann ich nicht tauchen“</h2>
+        <h2 id="myth-6">
+          6. „Ich kann nicht gut schwimmen, also kann ich nicht tauchen“
+        </h2>
         <p>
           Grundlegende Schwimmkenntnisse reichen aus – du musst kein olympischer
           Schwimmer sein. In einem
@@ -612,14 +623,14 @@
           <a href="/de/dive-sites/dive-site-map-koh-chang/">Koh Chang</a>.
         </p>
 
-        <h2>10. „Man kann nur im Meer tauchen“</h2>
+        <h2 id="myth-10">10. „Man kann nur im Meer tauchen“</h2>
         <p>
           Falsch! Es gibt Tauchgänge in Seen, Flüssen, Höhlen und sogar
           speziellen Pools. Wer das Abenteuer sucht, sollte ein Wrack wie die
           <a href="/de/dive-sites/htms-chang-wreck/">HTMS Chang</a> erkunden!
         </p>
 
-        <h2>Fazit</h2>
+        <h2 id="myth-conclusion">Fazit</h2>
         <p>
           Viele Ängste rund ums Tauchen sind unbegründet. Tauchen ist sicher,
           zugänglich und bietet unvergessliche Erlebnisse. Lass dich nicht von

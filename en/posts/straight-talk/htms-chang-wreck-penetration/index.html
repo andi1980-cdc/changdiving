@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      HTMS Chang Wreck Penetration vs. Swim-through | Chang Diving
-    </title>
+    <title>HTMS Chang Wreck Penetration vs. Swim-through | Chang Diving</title>
     <meta
       name="description"
       content="Wreck penetration vs swim-through on the HTMS Chang, Koh Chang: understand light zone limits, full overhead diving, SDI/TDI requirements, and real depth restrictions for safe wreck diving."
@@ -393,6 +392,48 @@
           border: 0 !important;
         }
       }
+
+      /* Tech jump bar – critical so it shows before/without CSS cache */
+      .tek-box .page-jump-nav {
+        margin: -2px 0 10px;
+        padding: 10px 12px 8px;
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(255, 138, 92, 0.5);
+        border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+      }
+      .tek-box .page-jump-nav__label {
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .tek-box .page-jump-nav__links a,
+      .tek-box .page-jump-nav__links a:visited {
+        color: #fff !important;
+        text-decoration: none !important;
+        opacity: 1 !important;
+        border-bottom-color: transparent;
+      }
+      .tek-box .page-jump-nav__links a:hover {
+        color: #ffd2c0 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.55);
+      }
+      .tek-box .page-jump-nav__links a + a::before {
+        color: rgba(255, 255, 255, 0.45);
+      }
+
+      /* Tech-only: posts-submenu matches tek jump/CTA gradient */
+      main:has(> .tek-box) > .posts-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
     </style>
     <style>
       /* Wreck swim-through / penetration comparison — scoped to this article */
@@ -567,7 +608,10 @@
       }
     </script>
 
-    <link rel="preload" href="/img/posts/htms-chang-wreck-penetration_small.webp" />
+    <link
+      rel="preload"
+      href="/img/posts/htms-chang-wreck-penetration_small.webp"
+    />
   </head>
   <body>
     <header>
@@ -625,14 +669,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>HTMS Chang Wreck Penetration vs. Swim-through</h1>
-          <p>
-            Where the light zone ends, why your depth limit applies to the whole
-            penetration, and what full overhead really means.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -647,7 +683,15 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
-      <div class="speciality-box posts-box">
+      <div class="tek-box">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          HTMS Chang Wreck Penetration vs. Swim-through
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Where the light zone ends, why your depth limit applies to the whole
+          penetration, and what full overhead really means.
+        </p>
+
         <nav class="page-jump-nav" aria-label="On this page">
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
@@ -855,10 +899,10 @@
           <p>
             For recreational divers who want to explore the
             <a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang</a> properly,
-            a combined <strong>Deep, Wreck and Nitrox</strong> foundation usually
-            makes the most sense—not as random one-off add-ons. If you want more
-            context on how recreational depth actually behaves on wrecks before you
-            stack specialties,
+            a combined <strong>Deep, Wreck and Nitrox</strong> foundation
+            usually makes the most sense—not as random one-off add-ons. If you
+            want more context on how recreational depth actually behaves on
+            wrecks before you stack specialties,
             <a href="/en/posts/tips-and-tricks/deep-diving/"
               >our deep diving tips</a
             >
@@ -1314,13 +1358,13 @@
               line-height: 1.55;
             "
           >
-            <strong>Note on the plans below:</strong> These are
-            intentionally low-resolution reproductions of the original HTMS
-            Chang construction drawings, published here for general
-            orientation only. The full-detail plans are used exclusively
-            by our team for professional dive planning of limited and full
-            penetration dives. Do not use these images for in-water
-            navigation or route planning inside the wreck.
+            <strong>Note on the plans below:</strong> These are intentionally
+            low-resolution reproductions of the original HTMS Chang construction
+            drawings, published here for general orientation only. The
+            full-detail plans are used exclusively by our team for professional
+            dive planning of limited and full penetration dives. Do not use
+            these images for in-water navigation or route planning inside the
+            wreck.
           </div>
 
           <div
@@ -1349,8 +1393,8 @@
               <figcaption
                 style="margin-top: 8px; font-size: 0.88em; opacity: 0.7"
               >
-                HTMS Chang – limited penetration zones · original
-                construction plan (reduced resolution)
+                HTMS Chang – limited penetration zones · original construction
+                plan (reduced resolution)
               </figcaption>
             </figure>
             <figure style="margin: 0">
@@ -1371,8 +1415,8 @@
               <figcaption
                 style="margin-top: 8px; font-size: 0.88em; opacity: 0.7"
               >
-                HTMS Chang – full penetration overview · original
-                construction plan (reduced resolution)
+                HTMS Chang – full penetration overview · original construction
+                plan (reduced resolution)
               </figcaption>
             </figure>
           </div>
@@ -1394,10 +1438,6 @@
               margin-top: 2rem;
               margin-bottom: 0.5em;
               font-size: 32px;
-              background: linear-gradient(to right, #0077b6, #c0c0c0);
-              -webkit-background-clip: text;
-              background-clip: text;
-              -webkit-text-fill-color: transparent;
               font-weight: bold;
             "
           >

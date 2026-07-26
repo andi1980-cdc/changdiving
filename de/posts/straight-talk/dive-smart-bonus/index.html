@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Quiz für zertifizierte Taucher – Teste dein fortgeschrittenes Tauchwissen
@@ -339,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "description": "Quiz für zertifizierte Taucher! Teste dein fortgeschrittenes Tauchwissen mit 22 Fragen zu Spezialkursen, Ausrüstung, Tagestouren, Reiseführern, lokalem Tauchwissen, Sicherheit, Verantwortung und Chang Diving DNA. Sende deine Antworten für eine besondere Belohnung ein.",
         "url": "https://changdiving.com/de/posts/straight-talk/dive-smart-bonus/",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/dive-smart-bonus_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "publisher": {
           "@type": "Organization",
@@ -551,20 +556,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            🎓 Quiz für zertifizierte Taucher – Teste dein fortgeschrittenes
-            Tauchwissen & erhalte einen Bonus
-          </h1>
-          <p>
-            Dieses Quiz ist für zertifizierte Taucher konzipiert, die ihr Wissen
-            über Spezialkurse, Ausrüstung, Tagestouren, Reiseinformationen,
-            lokale Tauchbedingungen und verantwortungsvolles Tauchen vertiefen
-            möchten. Teste dein fortgeschrittenes Tauchwissen mit 22 Fragen und
-            verdiene dir einen besonderen Bonus bei deiner Buchung!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -581,19 +572,40 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          🎓 Quiz für zertifizierte Taucher – Teste dein fortgeschrittenes
+          Tauchwissen & erhalte einen Bonus
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Dieses Quiz ist für zertifizierte Taucher konzipiert, die ihr Wissen
+          über Spezialkurse, Ausrüstung, Tagestouren, Reiseinformationen, lokale
+          Tauchbedingungen und verantwortungsvolles Tauchen vertiefen möchten.
+          Teste dein fortgeschrittenes Tauchwissen mit 22 Fragen und verdiene
+          dir einen besonderen Bonus bei deiner Buchung!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          🎓 Quiz für zertifizierte Taucher – Fortgeschrittenes Tauchwissen
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#dsb-intro">Einstieg</a>
+            <a href="#dsb-cat-a">Kat. A</a>
+            <a href="#dsb-cat-b">Kat. B</a>
+            <a href="#dsb-cat-c">Kat. C</a>
+            <a href="#dsb-cat-d">Kat. D</a>
+            <a href="#dsb-cat-e">Kat. E</a>
+            <a href="#dsb-cat-f">Kat. F</a>
+            <a href="#dsb-submit">Absenden</a>
+          </div>
+        </nav>
+
+        <h2 id="dsb-intro">
+          22 Fragen für zertifizierte Taucher — mit Buchung einreichen für Bonus
         </h2>
+
         <p>
           Dieses Quiz ist für <strong>zertifizierte Taucher</strong> konzipiert,
           die ihr Wissen über Spezialkurse, fortgeschrittene Tauchtechniken,
@@ -612,7 +624,7 @@
         <ol class="cdc-quiz__questions">
           <!-- Kategorie A: Erfahrung & Chang Diving DNA -->
           <li>
-            <h3>🔹 Kategorie A: Erfahrung & Chang Diving DNA</h3>
+            <h3 id="dsb-cat-a">🔹 Kategorie A: Erfahrung & Chang Diving DNA</h3>
             <p>
               <strong>Frage 1:</strong> Wann feierte Chang Diving Center sein
               20-jähriges Jubiläum?
@@ -679,7 +691,7 @@
 
           <!-- Kategorie B: Umwelt & Verantwortung -->
           <li>
-            <h3>🔹 Kategorie B: Umwelt & Verantwortung</h3>
+            <h3 id="dsb-cat-b">🔹 Kategorie B: Umwelt & Verantwortung</h3>
             <p>
               <strong>Frage 3:</strong> Welche konkreten Umweltschutzmaßnahmen
               werden auf unserem Tauchboot umgesetzt?
@@ -713,7 +725,9 @@
 
           <!-- Kategorie C: Weiterbildung & Kursmöglichkeiten -->
           <li>
-            <h3>🔹 Kategorie C: Weiterbildung & Kursmöglichkeiten</h3>
+            <h3 id="dsb-cat-c">
+              🔹 Kategorie C: Weiterbildung & Kursmöglichkeiten
+            </h3>
             <p>
               <strong>Frage 4:</strong> Kann ich bei Chang Diving Spezialkurse
               absolvieren?
@@ -842,7 +856,7 @@
 
           <!-- Kategorie D: Ausrüstung & Praxiswissen -->
           <li>
-            <h3>🔹 Kategorie D: Ausrüstung & Praxiswissen</h3>
+            <h3 id="dsb-cat-d">🔹 Kategorie D: Ausrüstung & Praxiswissen</h3>
             <p>
               <strong>Frage 8:</strong> What types of Surface Marker Buoys
               (SMBs) are there – and which color is standard in recreational
@@ -972,7 +986,9 @@
 
           <!-- Kategorie E: Lokales Tauchwissen Koh Chang -->
           <li>
-            <h3>🔹 Kategorie E: Lokales Tauchwissen Koh Chang</h3>
+            <h3 id="dsb-cat-e">
+              🔹 Kategorie E: Lokales Tauchwissen Koh Chang
+            </h3>
             <p>
               <strong>Frage 12:</strong> Welches ist der tiefste Tauchplatz rund
               um Koh Chang?
@@ -1037,7 +1053,7 @@
 
           <!-- Kategorie F: Training & Limits -->
           <li>
-            <h3>🔹 Kategorie F: Training & Limits</h3>
+            <h3 id="dsb-cat-f">🔹 Kategorie F: Training & Limits</h3>
             <p>
               <strong>Frage 14:</strong> Kann ich als Open Water Diver das
               Wracktauchen bei euch erlernen?
@@ -1332,7 +1348,7 @@
         </ol>
 
         <!-- Universal Booking CTA -->
-        <div style="text-align: center; margin: 40px 0">
+        <div id="dsb-submit" style="text-align: center; margin: 40px 0">
           <div
             style="
               display: flex;

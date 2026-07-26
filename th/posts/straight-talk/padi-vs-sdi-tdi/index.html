@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PADI กับ SDI/TDI – ระบบการฝึกดำน้ำแบบไหนเหมาะกับคุณ?</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "PADI vs. SDI/TDI – ระบบการฝึกดำน้ำแบบไหนเหมาะกับคุณ?",
         "alternativeHeadline": "เปรียบเทียบใบรับรองดำน้ำ – รู้จัก PADI, SDI และ TDI",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/padi-vs-sdi-tdi.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "การฝึกดำน้ำ",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>PADI กับ SDI/TDI – ระบบการฝึกดำน้ำแบบไหนเหมาะกับคุณ?</h1>
-          <p>
-            ค้นหาความแตกต่างระหว่าง PADI, SDI และ TDI
-            แล้วเลือกใบรับรองที่เหมาะกับเป้าหมายการดำน้ำของคุณ
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,24 +506,29 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           PADI กับ SDI/TDI – ระบบการฝึกดำน้ำแบบไหนเหมาะกับคุณ?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ค้นหาความแตกต่างระหว่าง PADI, SDI และ TDI
+          แล้วเลือกใบรับรองที่เหมาะกับเป้าหมายการดำน้ำของคุณ
+        </p>
 
-        <h2>บทนำ</h2>
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#pvs-intro">บทนำ</a>
+            <a href="#pvs-who">คือใคร</a>
+            <a href="#pvs-compare">เปรียบเทียบ</a>
+            <a href="#pvs-which">ระบบไหน</a>
+          </div>
+        </nav>
+
+        <h2 id="pvs-intro">บทนำ</h2>
         <p>
           มีหลายองค์กรฝึกดำน้ำที่มีปรัชญาและความเชี่ยวชาญที่แตกต่างกัน ที่ Chang
           Diving เรานำเสนอหลักสูตรจาก <strong>PADI</strong>,
@@ -575,9 +577,7 @@
 
         <hr />
 
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
-          PADI, SDI และ TDI คือใคร?
-        </h2>
+        <h2 id="pvs-who">PADI, SDI และ TDI คือใคร?</h2>
 
         <div style="overflow-x: auto; width: 100%; margin-bottom: 2em">
           <table
@@ -696,9 +696,7 @@
 
         <hr />
 
-        <h2 style="text-align: center; font-size: 28px; color: #004d80">
-          ตารางเปรียบเทียบ – PADI vs. SDI/TDI
-        </h2>
+        <h2 id="pvs-compare">ตารางเปรียบเทียบ – PADI vs. SDI/TDI</h2>
 
         <div style="overflow-x: auto; width: 100%; margin-bottom: 2em">
           <table
@@ -758,7 +756,7 @@
 
         <hr />
 
-        <h2>ระบบไหนเหมาะกับคุณ?</h2>
+        <h2 id="pvs-which">ระบบไหนเหมาะกับคุณ?</h2>
         <ul>
           <li>
             <strong>นักดำน้ำมือใหม่หรือดำน้ำเพื่อความสนุก?</strong> → PADI หรือ

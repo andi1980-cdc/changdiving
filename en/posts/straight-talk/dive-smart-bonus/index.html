@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Quiz for Certified Divers – Test Your Advanced Scuba Knowledge & Get a
@@ -339,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "description": "Quiz for certified divers! Test your advanced scuba diving knowledge with 22 questions covering specialty courses, equipment, day trips, travel guides, local diving knowledge, safety, responsibility, and Chang Diving DNA. Submit your answers for a special bonus reward.",
         "url": "https://changdiving.com/en/posts/straight-talk/dive-smart-bonus/",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/dive-smart-bonus_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "publisher": {
           "@type": "Organization",
@@ -551,20 +556,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            🎓 Quiz for Certified Divers – Test Your Advanced Scuba Knowledge &
-            Get a Bonus
-          </h1>
-          <p>
-            This quiz is designed for certified divers who want to deepen their
-            knowledge about specialty courses, equipment, day trips, travel
-            information, local diving conditions, and responsible diving
-            practices. Test your advanced scuba knowledge with 22 questions and
-            earn a special bonus on your booking!
-          </p>
-        </div>
       </div>
     </header>
 
@@ -581,19 +572,41 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          🎓 Quiz for Certified Divers – Test Your Advanced Scuba Knowledge &
+          Get a Bonus
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          This quiz is designed for certified divers who want to deepen their
+          knowledge about specialty courses, equipment, day trips, travel
+          information, local diving conditions, and responsible diving
+          practices. Test your advanced scuba knowledge with 22 questions and
+          earn a special bonus on your booking!
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
         >
-          🎓 Quiz for Certified Divers – Advanced Scuba Knowledge
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#dsb-intro">Intro</a>
+            <a href="#dsb-cat-a">Cat. A</a>
+            <a href="#dsb-cat-b">Cat. B</a>
+            <a href="#dsb-cat-c">Cat. C</a>
+            <a href="#dsb-cat-d">Cat. D</a>
+            <a href="#dsb-cat-e">Cat. E</a>
+            <a href="#dsb-cat-f">Cat. F</a>
+            <a href="#dsb-submit">Submit</a>
+          </div>
+        </nav>
+
+        <h2 id="dsb-intro">
+          22 questions for certified divers — submit with your booking for a
+          bonus
         </h2>
+
         <p>
           This quiz is designed for <strong>certified divers</strong> who want
           to test and expand their knowledge about specialty courses, advanced
@@ -610,7 +623,7 @@
         <ol class="cdc-quiz__questions">
           <!-- Category A: Experience & Chang Diving DNA -->
           <li>
-            <h3>🔹 Category A: Experience & Chang Diving DNA</h3>
+            <h3 id="dsb-cat-a">🔹 Category A: Experience & Chang Diving DNA</h3>
             <p>
               <strong>Question 1:</strong> When did Chang Diving Center
               celebrate its 20th anniversary?
@@ -676,7 +689,7 @@
 
           <!-- Category B: Environment & Responsibility -->
           <li>
-            <h3>🔹 Category B: Environment & Responsibility</h3>
+            <h3 id="dsb-cat-b">🔹 Category B: Environment & Responsibility</h3>
             <p>
               <strong>Question 3:</strong> What specific environmental
               protection measures are implemented on our dive boat?
@@ -709,7 +722,9 @@
 
           <!-- Category C: Training & Course Opportunities -->
           <li>
-            <h3>🔹 Category C: Training & Course Opportunities</h3>
+            <h3 id="dsb-cat-c">
+              🔹 Category C: Training & Course Opportunities
+            </h3>
             <p>
               <strong>Question 4:</strong> Can I complete specialty courses with
               Chang Diving?
@@ -838,7 +853,9 @@
 
           <!-- Category D: Equipment & Practical Knowledge -->
           <li>
-            <h3>🔹 Category D: Equipment & Practical Knowledge</h3>
+            <h3 id="dsb-cat-d">
+              🔹 Category D: Equipment & Practical Knowledge
+            </h3>
             <p>
               <strong>Question 8:</strong> What types of Surface Marker Buoys
               (SMBs) are there – and which color is standard in recreational
@@ -968,7 +985,9 @@
 
           <!-- Category E: Local Diving Knowledge Koh Chang -->
           <li>
-            <h3>🔹 Category E: Local Diving Knowledge Koh Chang</h3>
+            <h3 id="dsb-cat-e">
+              🔹 Category E: Local Diving Knowledge Koh Chang
+            </h3>
             <p>
               <strong>Question 12:</strong> What is the deepest dive site around
               Koh Chang?
@@ -1033,7 +1052,7 @@
 
           <!-- Category F: Training & Limits -->
           <li>
-            <h3>🔹 Category F: Training & Limits</h3>
+            <h3 id="dsb-cat-f">🔹 Category F: Training & Limits</h3>
             <p>
               <strong>Question 14:</strong> Can I learn wreck diving with you as
               an Open Water Diver?
@@ -1326,7 +1345,7 @@
         </ol>
 
         <!-- Universal Booking CTA -->
-        <div style="text-align: center; margin: 40px 0">
+        <div id="dsb-submit" style="text-align: center; margin: 40px 0">
           <div
             style="
               display: flex;

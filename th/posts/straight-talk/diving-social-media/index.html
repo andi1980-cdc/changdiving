@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>การดำน้ำ & โซเชียลมีเดีย – เราจำเป็นต้องแชร์ทุกอย่างจริงหรือ?</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "ดำน้ำกับโซเชียลมีเดีย – จำเป็นต้องแชร์ทุกอย่างจริงหรือ?",
         "alternativeHeadline": "ทำไมช้างไดร์วิ่งไม่เน้นยอดไลค์ – และคุณก็ไม่ควรด้วย",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/diving-social-media_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "Straight Talk",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>การดำน้ำ & โซเชียลมีเดีย – เราจำเป็นต้องแชร์ทุกอย่างจริงหรือ?</h1>
-          <p>
-            ที่ช้างไดร์วิ่ง เราให้ความสำคัญกับประสบการณ์จริงมากกว่าไลค์
-            ค้นหาว่าทำไมเราจึงเน้นความเป็นส่วนตัวและช่วงเวลาตรงหน้า
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,21 +506,32 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           การดำน้ำ & โซเชียลมีเดีย – เราจำเป็นต้องแชร์ทุกอย่างจริงหรือ?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ที่ช้างไดร์วิ่ง เราให้ความสำคัญกับประสบการณ์จริงมากกว่าไลค์
+          ค้นหาว่าทำไมเราจึงเน้นความเป็นส่วนตัวและช่วงเวลาตรงหน้า
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#dsm-intro">บทนำ</a>
+            <a href="#dsm-limit">ทำไมจำกัด</a>
+            <a href="#dsm-pressure">แรงกดดัน</a>
+            <a href="#dsm-marketing">การตลาด</a>
+            <a href="#dsm-sharing">แชร์อย่างมีสติ</a>
+            <a href="#dsm-conclusion">สรุป</a>
+          </div>
+        </nav>
+
+        <h2 id="dsm-intro">
+          ประสบการณ์ดำน้ำจริงก่อนไลค์ — ทำไมเราเงียบกว่าออนไลน์
         </h2>
 
         <p>
@@ -536,7 +544,7 @@
 
         <hr />
 
-        <h2>ทำไมเราจึงจำกัดการใช้งานโซเชียลมีเดีย</h2>
+        <h2 id="dsm-limit">ทำไมเราจึงจำกัดการใช้งานโซเชียลมีเดีย</h2>
 
         <p>
           เรา
@@ -571,7 +579,7 @@
 
         <hr />
 
-        <h2>แรงกดดันจากโซเชียลมีเดียกับการดำน้ำ</h2>
+        <h2 id="dsm-pressure">แรงกดดันจากโซเชียลมีเดียกับการดำน้ำ</h2>
 
         <p>
           คุณเคยรู้สึกว่าต้องถ่ายภาพใต้น้ำให้สมบูรณ์แบบแทนที่จะสนุกกับช่วงเวลานั้นหรือไม่?
@@ -600,7 +608,9 @@
 
         <hr />
 
-        <h2>เหตุผลที่เราไม่พึ่งโซเชียลมีเดียในการทำการตลาด</h2>
+        <h2 id="dsm-marketing">
+          เหตุผลที่เราไม่พึ่งโซเชียลมีเดียในการทำการตลาด
+        </h2>
 
         <p>
           สำหรับศูนย์ดำน้ำหลายแห่ง โซเชียลมีเดียคือเครื่องมือการตลาดหลัก แต่
@@ -630,7 +640,7 @@
 
         <hr />
 
-        <h2>แบ่งปันความทรงจำการดำน้ำ – อย่างมีสติ</h2>
+        <h2 id="dsm-sharing">แบ่งปันความทรงจำการดำน้ำ – อย่างมีสติ</h2>
 
         <p>
           หากคุณชอบถ่ายและแชร์ภาพการดำน้ำ นั่นยอดเยี่ยม!
@@ -655,7 +665,7 @@
 
         <hr />
 
-        <h2>บทสรุป – ดำน้ำจริง ความทรงจำจริง</h2>
+        <h2 id="dsm-conclusion">บทสรุป – ดำน้ำจริง ความทรงจำจริง</h2>
 
         <p>
           เราไม่ต่อต้านโซเชียลมีเดีย – แต่เราเชื่อว่าการดำน้ำคือการผจญภัย

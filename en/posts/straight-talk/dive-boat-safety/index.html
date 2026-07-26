@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Dive Boat Safety & Etiquette on Koh Chang – Rules to Prevent Accidents &
@@ -339,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -459,14 +466,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            🛥️ Dive Boat Safety &amp; Etiquette on Koh Chang – Rules to Prevent
-            Accidents &amp; Gear Loss
-          </h1>
-          <p>Practical rules for beginners and experienced divers.</p>
-        </div>
       </div>
     </header>
 
@@ -483,19 +482,30 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           🛥️ Dive Boat Safety &amp; Etiquette on Koh Chang – Rules to Prevent
           Accidents &amp; Gear Loss
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Practical rules for beginners and experienced divers.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#dbs-intro">Intro</a>
+            <a href="#dbs-rules">Top rules</a>
+            <a href="#dbs-why">Why it matters</a>
+            <a href="#dbs-book">Ready to dive</a>
+          </div>
+        </nav>
+
+        <h2 id="dbs-intro">
+          Simple boat rules that prevent accidents and lost gear
         </h2>
 
         <p style="margin: 0; font-size: 1.05em; opacity: 0.9">
@@ -577,7 +587,7 @@
 
         <!-- Rules -->
         <section style="margin: 26px 0">
-          <h2 style="margin-bottom: 10px">✅ Our Top Dive Boat Rules</h2>
+          <h2 id="dbs-rules">✅ Our Top Dive Boat Rules</h2>
 
           <h3>1️⃣ Bring Only What You Really Need</h3>
           <p>
@@ -706,7 +716,7 @@
 
         <!-- Why it matters -->
         <section style="margin: 30px 0">
-          <h2 style="margin-bottom: 10px">Why This Matters</h2>
+          <h2 id="dbs-why">Why This Matters</h2>
           <p>
             At Chang Diving Center, we emphasize safety on our Koh Chang dive
             boat. Our vessel, the
@@ -746,9 +756,7 @@
             border-radius: 10px;
           "
         >
-          <h2 style="margin: 0 0 10px 0; color: #0077b6">
-            Ready to dive Koh Chang?
-          </h2>
+          <h2 id="dbs-book">Ready to dive Koh Chang?</h2>
           <p style="margin: 0 0 12px 0">
             Explore our day trips and courses — small groups, professional
             guides and a boat setup designed for safe, comfortable diving.
