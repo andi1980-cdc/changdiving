@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ดำน้ำครั้งแรกกับ ลองดำน้ำ – ผจญภัยใต้ทะเลที่เกาะช้าง</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "ดำน้ำครั้งแรกกับช้างไดร์วิ่ง – เปิดประสบการณ์ใต้น้ำครั้งแรกของคุณ",
         "alternativeHeadline": "ลองดำน้ำที่เกาะช้าง – ไม่มีใบรับรองก็เริ่มได้",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-a-try-dive_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ดำน้ำ, ลองดำน้ำ, เคล็ดลับสำหรับผู้เริ่มต้น",
@@ -489,14 +494,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ลองดำน้ำ คืออะไร? ดำน้ำครั้งแรกกับช้างไดร์วิ่ง</h1>
-          <p>
-            เคยฝันอยากสำรวจโลกใต้น้ำ
-            แต่ยังไม่แน่ใจว่าพร้อมสำหรับคอร์สเต็มรูปแบบไหม?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -513,7 +510,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2>การผจญภัยใต้น้ำครั้งแรกของคุณ (2025, เกาะช้าง)</h2>
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ลองดำน้ำ คืออะไร? ดำน้ำครั้งแรกกับช้างไดร์วิ่ง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เคยฝันอยากสำรวจโลกใต้น้ำ
+          แต่ยังไม่แน่ใจว่าพร้อมสำหรับคอร์สเต็มรูปแบบไหม?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#htd-intro">บทนำ</a>
+            <a href="#htd-what">คืออะไร</a>
+            <a href="#htd-safety">ความปลอดภัย</a>
+            <a href="#htd-steps">ขั้นตอน</a>
+            <a href="#htd-swim">ว่ายน้ำ</a>
+            <a href="#htd-included">รวมอะไร</a>
+            <a href="#htd-price">ราคา</a>
+            <a href="#htd-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="htd-intro">ทำไมถึงควรลองดำน้ำครั้งแรกที่เกาะช้าง</h2>
 
         <p>
           ที่
@@ -522,7 +545,7 @@
           – ด้วย <strong>ลองดำน้ำ</strong>
         </p>
         <hr />
-        <h2>ลองดำน้ำ คืออะไร?</h2>
+        <h2 id="htd-what">ลองดำน้ำ คืออะไร?</h2>
         <p>
           ลองดำน้ำ คือโอกาสให้คุณได้สัมผัสประสบการณ์การหายใจใต้น้ำ
           โดยไม่จำเป็นต้องมีบัตรดำน้ำใด ๆ เหมาะสำหรับผู้เริ่มต้น
@@ -541,7 +564,7 @@
           มานับรวมได้ (ขึ้นอยู่กับการประเมินของครูผู้สอน)
         </p>
         <hr />
-        <h2>ความปลอดภัยมาเป็นอันดับแรก</h2>
+        <h2 id="htd-safety">ความปลอดภัยมาเป็นอันดับแรก</h2>
         <p>เราคำนึงถึงความปลอดภัยของคุณเป็นหลัก ทุก ลองดำน้ำ รวมถึง:</p>
         <ul>
           <li>คำอธิบายเรื่องอุปกรณ์ การหายใจ และสัญญาณมือใต้น้ำ</li>
@@ -560,7 +583,7 @@
           </li>
         </ul>
         <hr />
-        <h2>ขั้นตอน ลองดำน้ำ</h2>
+        <h2 id="htd-steps">ขั้นตอน ลองดำน้ำ</h2>
         <p>
           ไม่เหมือนศูนย์ดำน้ำทั่วไป เรา <strong>ไม่ใช้สระน้ำ</strong> –
           คุณจะดำน้ำจากเรือดำน้ำที่สะดวกสบายของเรา
@@ -594,7 +617,7 @@
           >.
         </p>
         <hr />
-        <h2>ต้องว่ายน้ำเป็นไหม?</h2>
+        <h2 id="htd-swim">ต้องว่ายน้ำเป็นไหม?</h2>
         <p>ไม่จำเป็น – แค่รู้สึกสบายในน้ำก็พอ ครูผู้สอนจะอยู่กับคุณตลอดเวลา</p>
         <p><strong>แต่:</strong> ถ้าคุณจะเรียน Open Water ต่อ คุณต้องสามารถ:</p>
         <ul>
@@ -609,7 +632,7 @@
         </p>
         <p>แต่ละไดฟ์ใช้เวลาประมาณ <strong>50–60 นาที</strong></p>
         <hr />
-        <h2>ลองดำน้ำ รวมอะไรบ้าง?</h2>
+        <h2 id="htd-included">ลองดำน้ำ รวมอะไรบ้าง?</h2>
         <ul>
           <li>ดำน้ำ 2 ครั้งกับครูสอนดำน้ำ</li>
           <li>อุปกรณ์ดำน้ำครบชุด</li>
@@ -634,7 +657,8 @@
         <ul>
           <li>
             <strong>Scuba Diver (2 วัน, ลึกสูงสุด 12 ม.)</strong> –
-            ตัวเลือกที่เหมาะสมหากเวลาจำกัด หรือต้องการเริ่มต้นการรับรองอย่างค่อยเป็นค่อยไป
+            ตัวเลือกที่เหมาะสมหากเวลาจำกัด
+            หรือต้องการเริ่มต้นการรับรองอย่างค่อยเป็นค่อยไป
           </li>
           <li>
             <strong>Open Water Diver (3–4 วัน, ลึกสูงสุด 18 ม.)</strong> –
@@ -651,7 +675,16 @@
             >วิธีการทำงานของคอร์ส Open Water Diver</a
           >
         </p>
-        <div style="margin-top: 1.5em; text-align: center; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <div
+          style="
+            margin-top: 1.5em;
+            text-align: center;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
           <a
             href="/th/courses/scuba-diver/"
             target="_blank"
@@ -690,7 +723,7 @@
           </a>
         </div>
         <hr />
-        <h2>ราคา ลองดำน้ำ (2025)</h2>
+        <h2 id="htd-price">ราคา ลองดำน้ำ (2025)</h2>
         <p><strong>4890 บาท / คน</strong></p>
         <p>
           <em>ต้องการเรียนต่อหลังจาก ลองดำน้ำ หรือไม่?</em> คุณสามารถอัปเกรดเป็น
@@ -724,7 +757,7 @@
             👉 จองประสบการณ์ ลองดำน้ำ ตอนนี้
           </a>
         </div>
-        <h2>คำถามที่พบบ่อย</h2>
+        <h2 id="htd-faq">คำถามที่พบบ่อย</h2>
         <ul>
           <li>
             <strong>ต้องเคยดำน้ำมาก่อนไหม?</strong><br />ไม่ต้องเลย! ลองดำน้ำ

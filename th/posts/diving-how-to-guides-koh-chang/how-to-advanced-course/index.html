@@ -298,6 +298,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -324,7 +330,6 @@
         "headline": "วิธีเรียนหลักสูตร Advanced Open Water กับช้างไดร์วิ่ง",
         "alternativeHeadline": "คู่มือการเป็นนักดำน้ำ AOWD ที่เกาะช้างแบบทีละขั้นตอน",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-the-advanced-open-water-diver_big.webp",
@@ -332,7 +337,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "การดำน้ำ, AOWD, หลักสูตรดำน้ำ",
@@ -514,11 +518,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>การเรียนหลักสูตร Advanced Open Water กับช้างไดร์วิ่ง</h1>
-          <p>คู่มือสำหรับการเป็นนักดำน้ำระดับแอดวานซ์ที่เกาะช้าง</p>
-        </div>
       </div>
     </header>
 
@@ -535,22 +534,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          การเรียนหลักสูตร Advanced Open Water กับช้างไดร์วิ่ง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          คู่มือสำหรับการเป็นนักดำน้ำระดับแอดวานซ์ที่เกาะช้าง
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          หลักสูตร Advanced Open Water กับ ช้างไดฟ์วิ่ง – ทีละขั้นตอน (2025,
-          เกาะช้าง)
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#aowd-intro">บทนำ</a>
+            <a href="#aowd-who">ใครได้บ้าง</a>
+            <a href="#aowd-agency">SDI หรือ PADI</a>
+            <a href="#aowd-schedule">ตาราง</a>
+            <a href="#aowd-dives">Adventure Dives</a>
+            <a href="#aowd-depth">ความลึก</a>
+            <a href="#aowd-price">ราคา</a>
+            <a href="#aowd-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="aowd-intro">
+          ดำลึกขึ้น อยู่ใต้น้ำนานขึ้น – AOWD เปิดทางอะไรให้คุณ
         </h2>
 
         <p>
@@ -585,7 +595,7 @@
 
         <hr />
 
-        <h2>ใครสามารถเรียนหลักสูตร AOWD ได้บ้าง?</h2>
+        <h2 id="aowd-who">ใครสามารถเรียนหลักสูตร AOWD ได้บ้าง?</h2>
         <p>
           ทุกคนที่มีใบรับรอง
           <strong>Open Water Diver</strong> จากองค์กรที่ได้รับการยอมรับจาก
@@ -596,7 +606,7 @@
 
         <hr />
 
-        <h2>เลือกเรียนกับหน่วยงานไหน – SDI หรือ PADI?</h2>
+        <h2 id="aowd-agency">เลือกเรียนกับหน่วยงานไหน – SDI หรือ PADI?</h2>
         <p>
           ไม่ว่าคุณจะเลือก SDI หรือ PADI ใบรับรองทั้งสองมีผลทั่วโลก
           ความแตกต่างหลักอยู่ที่รูปแบบการเรียน 📘
@@ -648,7 +658,7 @@
 
         <hr />
 
-        <h2>ตารางหลักสูตร – ทีละขั้นตอน</h2>
+        <h2 id="aowd-schedule">ตารางหลักสูตร – ทีละขั้นตอน</h2>
         <ul>
           <li><strong>วันแรก:</strong> ดำน้ำผจญภัย 3 ไดฟ์จากเรือ</li>
           <li><strong>วันที่สอง:</strong> ดำน้ำผจญภัยอีก 2 ไดฟ์</li>
@@ -682,7 +692,7 @@
 
         <hr />
 
-        <h2>Adventure Dives ที่รวมอยู่มีอะไรบ้าง?</h2>
+        <h2 id="aowd-dives">Adventure Dives ที่รวมอยู่มีอะไรบ้าง?</h2>
         <ul>
           <li><strong>ภาคบังคับ:</strong> ดำน้ำลึก และการนำทางใต้น้ำ</li>
           <li>
@@ -703,7 +713,7 @@
 
         <hr />
 
-        <h2>คุณจะได้รับการรับรองให้ดำน้ำลึกแค่ไหน?</h2>
+        <h2 id="aowd-depth">คุณจะได้รับการรับรองให้ดำน้ำลึกแค่ไหน?</h2>
 
         <p>
           ในการดำน้ำเพื่อการพักผ่อน
@@ -854,7 +864,7 @@
 
         <hr />
 
-        <h2>ราคาหลักสูตร (2025)</h2>
+        <h2 id="aowd-price">ราคาหลักสูตร (2025)</h2>
         <ul>
           <li><strong>SDI AOWD:</strong> 13,490 บาท</li>
           <li><strong>PADI AOWD:</strong> 13,990 บาท</li>
@@ -897,7 +907,7 @@
 
         <hr />
 
-        <h2>คำถามที่พบบ่อย (FAQ)</h2>
+        <h2 id="aowd-faq">คำถามที่พบบ่อย (FAQ)</h2>
         <ul>
           <li>
             <strong>ฉันสามารถเรียน AOWD ได้ทันทีหลังจาก OWD ไหม?</strong

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       คอร์ส SDI Solo Diver ทำงานอย่างไรที่ ช้างไดฟ์วิ่ง – ทีละขั้นตอน (เกาะช้าง)
@@ -331,6 +332,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -356,7 +363,6 @@
         "headline": "คอร์ส SDI Solo Diver ทำงานอย่างไรที่ ช้างไดฟ์วิ่ง – ทีละขั้นตอน (เกาะช้าง)",
         "alternativeHeadline": "โครงสร้างและข้อกำหนดคอร์ส SDI Solo Diver อุปกรณ์และความปลอดภัยที่ ช้างไดฟ์วิ่ง เกาะช้าง",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/solo-diver-at-htms-chang-wreck_big.webp",
@@ -364,7 +370,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ดำน้ำเดี่ยว, ดำน้ำเฉพาะทาง, เกาะช้าง",
@@ -477,11 +482,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>คอร์ส SDI Solo Diver ทำงานอย่างไร</h1>
-          <p>คู่มือทีละขั้นตอน: ข้อกำหนด อุปกรณ์ การวางแผนและความปลอดภัย</p>
-        </div>
       </div>
     </header>
 
@@ -497,19 +497,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          คอร์ส SDI Solo Diver ทำงานอย่างไร
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          คู่มือทีละขั้นตอน: ข้อกำหนด อุปกรณ์ การวางแผนและความปลอดภัย
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          คอร์ส SDI Solo Diver ทำงานอย่างไรที่ ช้างไดฟ์วิ่ง – ทีละขั้นตอน
-          (เกาะช้าง)
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#solo-intro">บทนำ</a>
+            <a href="#solo-what">คืออะไร</a>
+            <a href="#solo-who">ใครได้บ้าง</a>
+            <a href="#solo-not">ใครไม่ควร</a>
+            <a href="#solo-gear">อุปกรณ์</a>
+            <a href="#solo-structure">โครงสร้างคอร์ส</a>
+            <a href="#solo-koh-chang">เกาะช้าง</a>
+            <a href="#solo-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="solo-intro">
+          การดำน้ำเดี่ยวต้องได้มาด้วยความสามารถ — พึ่งพาตนเอง สำรอง วินัย
         </h2>
 
         <p>
@@ -544,7 +558,7 @@
 
         <hr />
 
-        <h2>คอร์ส SDI Solo Diver คืออะไร?</h2>
+        <h2 id="solo-what">คอร์ส SDI Solo Diver คืออะไร?</h2>
         <p>
           คอร์สเฉพาะทาง SDI Solo Diver ฝึกนักดำน้ำที่มีประสบการณ์ในข้อดี
           ความเสี่ยงและขั้นตอนที่ถูกต้องสำหรับการดำน้ำเดี่ยว หลังสำเร็จ
@@ -553,7 +567,7 @@
 
         <hr />
 
-        <h2>ใครสามารถเรียนได้?</h2>
+        <h2 id="solo-who">ใครสามารถเรียนได้?</h2>
         <p>
           คอร์ส SDI Solo Diver ออกแบบมาเฉพาะสำหรับ
           <strong>นักดำน้ำที่มีประสบการณ์</strong> ข้อกำหนดขั้นต่ำ:
@@ -570,7 +584,7 @@
 
         <hr />
 
-        <h2>ใครไม่ควรดำน้ำเดี่ยว?</h2>
+        <h2 id="solo-not">ใครไม่ควรดำน้ำเดี่ยว?</h2>
         <p>
           การดำน้ำเดี่ยวไม่เหมาะกับทุกสภาพแวดล้อม ในคอร์สนี้เราจะพูดถึงสถานการณ์
           "ไม่ควรไป" ที่ชัดเจนและการตัดสินใจอย่างอนุรักษ์นิยม
@@ -593,7 +607,7 @@
 
         <hr />
 
-        <h2>อุปกรณ์ที่จำเป็น (นี่คือจุดสำคัญ)</h2>
+        <h2 id="solo-gear">อุปกรณ์ที่จำเป็น (นี่คือจุดสำคัญ)</h2>
         <p>
           การดำน้ำเดี่ยวต้องมี <strong>ระบบสำรองที่แท้จริง</strong>
           อ็อกโตปัสมาตรฐานไม่ถือว่าเป็นแหล่งอากาศสำรองสำหรับการดำน้ำเดี่ยว
@@ -642,7 +656,7 @@
 
         <hr />
 
-        <h2>โครงสร้างคอร์ส – ทีละขั้นตอน</h2>
+        <h2 id="solo-structure">โครงสร้างคอร์ส – ทีละขั้นตอน</h2>
 
         <h3>ขั้นตอนที่ 1: การตรวจสอบก่อนและเอกสาร</h3>
         <ul>
@@ -736,7 +750,9 @@
 
         <hr />
 
-        <h2>การดำน้ำเดี่ยวที่เกาะช้าง – สิ่งที่เราเน้นในท้องถิ่น</h2>
+        <h2 id="solo-koh-chang">
+          การดำน้ำเดี่ยวที่เกาะช้าง – สิ่งที่เราเน้นในท้องถิ่น
+        </h2>
         <p>
           เกาะช้างมีแนวปะการังที่สวยงาม Pinnacles และประวัติเรือจม – แต่
           สภาพอาจเปลี่ยนแปลง นั่นคือเหตุผลที่การฝึก Solo Diver ของเราเน้น:
@@ -782,7 +798,7 @@
 
         <hr />
 
-        <h2>คำถามที่พบบ่อย (FAQ)</h2>
+        <h2 id="solo-faq">คำถามที่พบบ่อย (FAQ)</h2>
         <ul>
           <li>
             <strong>การดำน้ำเดี่ยว "อนุญาต" ทุกที่ไหม?</strong><br />

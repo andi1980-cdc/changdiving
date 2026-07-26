@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       So funktionieren unsere Fun Dives – Tägliche Tauchausfahrten mit Chang
@@ -342,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "So funktionieren Fun Dives bei Chang Diving – Tagestouren auf Koh Chang",
         "alternativeHeadline": "Alles, was du über unsere täglichen Fun Dives auf Koh Chang wissen musst",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-fun-diving_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Sporttauchen, Fun Dives, Tagestouren",
@@ -535,11 +540,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>So funktionieren Fun Dives bei Chang Diving</h1>
-          <p>Du planst deine Fun Dives auf Koh Chang?</p>
-        </div>
       </div>
     </header>
 
@@ -555,19 +555,33 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          So funktionieren Fun Dives bei Chang Diving
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Du planst deine Fun Dives auf Koh Chang?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          So funktioniert Fun Diving bei Chang Diving – Schritt für Schritt
-          (2025, Koh Chang)
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#fd-intro">Einstieg</a>
+            <a href="#fd-who">Teilnahme</a>
+            <a href="#fd-tech">Tech / HTMS</a>
+            <a href="#fd-sites">Tauchplätze</a>
+            <a href="#fd-schedule">Tagesablauf</a>
+            <a href="#fd-included">Inklusiv</a>
+            <a href="#fd-price">Preise</a>
+            <a href="#fd-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="fd-intro">
+          Fun Dives für zertifizierte Taucher – jede Agentur willkommen
         </h2>
 
         <p>
@@ -579,7 +593,7 @@
         </p>
 
         <hr />
-        <h2>Wer kann bei unseren Fun Dives mitmachen?</h2>
+        <h2 id="fd-who">Wer kann bei unseren Fun Dives mitmachen?</h2>
         <p>
           Wenn du ein gültiges Tauchzertifikat (Open Water Diver oder höher)
           einer anerkannten Organisation besitzt, kannst du teilnehmen.
@@ -599,7 +613,7 @@
         </p>
 
         <hr />
-        <h2>Technisches Tauchen am Wrack der HTMS Chang</h2>
+        <h2 id="fd-tech">Technisches Tauchen am Wrack der HTMS Chang</h2>
         <p>
           Wir bieten auch <strong>technisches Tauchen</strong> am Wrack der HTMS
           Chang an – dem einzigen Spot rund um Koh Chang, wo sich echte
@@ -674,7 +688,7 @@
 
         <hr />
 
-        <h2>Welche Tauchplätze besuchen wir?</h2>
+        <h2 id="fd-sites">Welche Tauchplätze besuchen wir?</h2>
         <p>
           Unsere täglichen Tauchausflüge führen zu den besten Spots rund um Koh
           Chang, darunter:
@@ -801,7 +815,7 @@
         </ul>
         <hr />
 
-        <h2>Tagesablauf – Schritt für Schritt</h2>
+        <h2 id="fd-schedule">Tagesablauf – Schritt für Schritt</h2>
         <ul>
           <li><strong>07:15–07:45 Uhr:</strong> Abholung vom Hotel</li>
           <li>
@@ -844,7 +858,7 @@
         </ul>
         <hr />
 
-        <h2>Was ist bei den Fun Dives inklusive?</h2>
+        <h2 id="fd-included">Was ist bei den Fun Dives inklusive?</h2>
         <ul>
           <li>
             2 oder 3 Bootstauchgänge mit professionellem Tauchguide (je nach
@@ -880,7 +894,7 @@
         </ul>
 
         <hr />
-        <h2>Fun Dive Preise 2025</h2>
+        <h2 id="fd-price">Fun Dive Preise 2025</h2>
         <ul>
           <li><strong>1 Tag / 2 Tauchgänge:</strong> 3.290 THB pro Person</li>
           <li><strong>2 Tage / 4 Tauchgänge:</strong> 5.990 THB pro Person</li>
@@ -982,7 +996,7 @@
         </div>
 
         <hr />
-        <h2>Häufige Fragen (FAQ)</h2>
+        <h2 id="fd-faq">Häufige Fragen (FAQ)</h2>
         <ul>
           <li>
             <strong

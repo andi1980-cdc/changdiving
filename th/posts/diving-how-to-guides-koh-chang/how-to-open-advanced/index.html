@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       แพ็กเกจ Open Water & Advanced Open Water ทำงานอย่างไร | ช้างไดร์วิ่ง
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "คอร์สรวม Open Water + Advanced ที่ ช้างไดฟ์วิ่ง ทำงานอย่างไร",
         "alternativeHeadline": "เส้นทางจากนักดำน้ำมือใหม่สู่ระดับแอดวานซ์ที่เกาะช้าง",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-the-advanced-open-water_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ดำน้ำ, คอร์สดำน้ำ, เกาะช้าง",
@@ -525,13 +530,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            หลักสูตรแพ็คเกจ Open Water & Advanced ดำเนินอย่างไรกับ ช้างไดฟ์วิ่ง
-          </h1>
-          <p>พร้อมยกระดับทักษะการดำน้ำของคุณหรือยัง?</p>
-        </div>
       </div>
     </header>
 
@@ -548,22 +546,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          หลักสูตรแพ็คเกจ Open Water & Advanced ดำเนินอย่างไรกับ ช้างไดฟ์วิ่ง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          พร้อมยกระดับทักษะการดำน้ำของคุณหรือยัง?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          หลักสูตร Open Water และ Advanced Open Water ที่ ช้างไดฟ์วิ่ง
-          ดำเนินอย่างไร – ทีละขั้นตอน (2025, เกาะช้าง)
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#oa-intro">บทนำ</a>
+            <a href="#oa-agency">SDI หรือ PADI</a>
+            <a href="#oa-theory">ทฤษฎี</a>
+            <a href="#oa-dives">Adventure Dives</a>
+            <a href="#oa-what">AD คืออะไร</a>
+            <a href="#oa-why">ทำไมแพ็กเกจนี้</a>
+            <a href="#oa-cost">ราคา</a>
+            <a href="#oa-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="oa-intro">
+          จาก Open Water ถึง Advanced – แพ็กเกจต่อเนื่องที่เกาะช้าง
         </h2>
 
         <p>
@@ -577,7 +586,7 @@
 
         <hr />
 
-        <h2>SDI หรือ PADI เหมาะกับคุณ?</h2>
+        <h2 id="oa-agency">SDI หรือ PADI เหมาะกับคุณ?</h2>
         <p>
           ไม่ว่าคุณจะเลือก SDI หรือ PADI – ใบรับรองของคุณได้รับการยอมรับทั่วโลก
           ความแตกต่างหลักคือรูปแบบของเนื้อหาทฤษฎี อ่านคู่มือเปรียบเทียบฉบับเต็ม:
@@ -621,7 +630,7 @@
 
         <hr />
 
-        <h2>กรุณาทำทฤษฎีให้เสร็จก่อนเดินทาง</h2>
+        <h2 id="oa-theory">กรุณาทำทฤษฎีให้เสร็จก่อนเดินทาง</h2>
         <p>
           เราแนะนำให้คุณเรียนทฤษฎี Open Water ให้เสร็จสิ้น
           <strong>ก่อนเดินทางมาถึง</strong> สำหรับ AOWD
@@ -655,7 +664,9 @@
 
         <hr />
 
-        <h2>หลักสูตร Adventure Dives ที่มีให้เลือกที่ ช้างไดฟ์วิ่ง</h2>
+        <h2 id="oa-dives">
+          หลักสูตร Adventure Dives ที่มีให้เลือกที่ ช้างไดฟ์วิ่ง
+        </h2>
         <ul>
           <li><a href="/th/courses/deep-diver/">ดำน้ำลึก (จำเป็น)</a></li>
           <li><a href="/th/courses/navigation/">การนำทางใต้น้ำ (จำเป็น)</a></li>
@@ -673,7 +684,7 @@
 
         <hr />
 
-        <h2>สำคัญ: Adventure Dive คืออะไร?</h2>
+        <h2 id="oa-what">สำคัญ: Adventure Dive คืออะไร?</h2>
         <p>
           Adventure Dive ไม่ใช่หลักสูตรพิเศษเต็มรูปแบบ! ทุก Adventure Dive
           ถือเป็น <strong>ไดฟ์แรก</strong> ของหลักสูตร Specialty ที่เกี่ยวข้อง
@@ -682,7 +693,7 @@
 
         <hr />
 
-        <h2>ทำไมต้องจองแพ็กเกจ OWD + AOWD กับ ช้างไดฟ์วิ่ง?</h2>
+        <h2 id="oa-why">ทำไมต้องจองแพ็กเกจ OWD + AOWD กับ ช้างไดฟ์วิ่ง?</h2>
         <ul>
           <li>ประหยัดเวลาและค่าใช้จ่ายด้วยหลักสูตรรวม</li>
           <li>กลุ่มเล็ก เพิ่มความปลอดภัยและใส่ใจ</li>
@@ -703,7 +714,7 @@
 
         <hr />
 
-        <h2>ราคาหลักสูตรปี 2025</h2>
+        <h2 id="oa-cost">ราคาหลักสูตรปี 2025</h2>
         <ul>
           <li><strong>SDI Open Water Diver:</strong> 14,490 บาท</li>
           <li><strong>SDI Advanced Open Water Diver:</strong> 13,490 บาท</li>
@@ -764,7 +775,7 @@
 
         <hr />
 
-        <h2>คำถามที่พบบ่อย (FAQ)</h2>
+        <h2 id="oa-faq">คำถามที่พบบ่อย (FAQ)</h2>
         <ul>
           <li>
             <strong

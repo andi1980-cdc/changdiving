@@ -60,48 +60,59 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 ### Kategorie-Hub (ohne Jump-Menü)
 
-| Seite                                           | Status                                        |
-| ----------------------------------------------- | --------------------------------------------- |
-| `/day-trips/` (EN/DE/TH)                        | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/courses/beginner-courses/` (EN/DE/TH)         | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/courses/advanced-courses/` (EN/DE/TH)         | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/courses/professional-courses/` (EN/DE/TH)     | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/courses/specialty/` (EN/DE/TH)                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/courses/technical-diving-courses/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/courses/` (EN/DE/TH)                          | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/faqs/` (EN/DE/TH)                             | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/posts/` (EN/DE/TH)                            | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/posts/marine-life-koh-chang/` (EN/DE/TH)      | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
-| `/posts/scuba-knowledge/` (EN/DE/TH)            | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| Seite                                               | Status                                        |
+| --------------------------------------------------- | --------------------------------------------- |
+| `/day-trips/` (EN/DE/TH)                            | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/courses/beginner-courses/` (EN/DE/TH)             | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/courses/advanced-courses/` (EN/DE/TH)             | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/courses/professional-courses/` (EN/DE/TH)         | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/courses/specialty/` (EN/DE/TH)                    | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/courses/technical-diving-courses/` (EN/DE/TH)     | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/courses/` (EN/DE/TH)                              | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/faqs/` (EN/DE/TH)                                 | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/` (EN/DE/TH)                                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/marine-life-koh-chang/` (EN/DE/TH)          | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/scuba-knowledge/` (EN/DE/TH)                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/diving-how-to-guides-koh-chang/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 
 ### Blog-Posts (`posts-box`, mit Jump-Menü)
 
-| Seite                                                                    | Status | Jump-Punkte | Hinweis                                                                            |
-| ------------------------------------------------------------------------ | ------ | ----------- | ---------------------------------------------------------------------------------- |
-| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)                     | ✅     | **7**       | Gruppen-Anker; nach jeder Gruppe „Back to menu“ → `#on-this-page`                  |
-| `posts/marine-life-koh-chang/marine-life-whale-shark` (EN/DE/TH)         | ✅     | **7**       | Themenspezifisch; Inline `#ccc` + `critical-css`                                   |
-| `posts/marine-life-koh-chang/marine-life-green-sea-turtle` (EN/DE/TH)    | ✅     | **5**       | Biology → Dive sites; Inline `#ccc` + `critical-css`                               |
-| `posts/marine-life-koh-chang/marine-life-titan-triggerfish` (EN/DE/TH)   | ✅     | **6**       | Biology → Gallery; Inline `#ccc` + `critical-css`                                  |
-| `posts/marine-life-koh-chang/marine-life-nudibranch` (EN/DE/TH)          | ✅     | **9**       | What → Why look; Inline `#ccc` + `critical-css`                                    |
-| `posts/marine-life-koh-chang/marine-life-blacktip-reef-shark` (EN/DE/TH) | ✅     | **6**       | Traits → Conclusion; Inline `#ccc` + `critical-css`                                |
-| `posts/marine-life-koh-chang/marine-life-batfish` (EN/DE/TH)             | ✅     | **4**       | Appearance → Conclusion; Inline `#ccc` + `critical-css`                            |
-| `posts/marine-life-koh-chang/marine-life-barracuda` (EN/DE/TH)           | ✅     | **4**       | Species → Conclusion; Inline `#ccc` + `critical-css`                               |
-| `posts/scuba-knowledge/boyles-law-scuba-diving` (EN/DE/TH)               | ✅     | **8**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
-| `posts/scuba-knowledge/dalton-henry-scuba-diving` (EN/DE/TH)             | ✅     | **8**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
-| `posts/scuba-knowledge/archimedes-principle-scuba-diving` (EN/DE/TH)     | ✅     | **7**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
-| `posts/scuba-knowledge/gas-consumption` (EN/DE/TH)                       | ✅     | **5**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
-| `posts/scuba-knowledge/nitrox-info` (EN/DE/TH)                           | ✅     | **7**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt          |
-| `posts/scuba-knowledge/about-search-recovery` (EN/DE/TH)                 | ✅     | **5**       | Neues Jump (Why→Course); H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt            |
-| `posts/scuba-knowledge/dive-logbook` (EN/DE/TH)                          | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; EN-Teaser-Placeholder ersetzt; Gradient-H2 weg     |
-| `posts/scuba-knowledge/smb-guide` (EN/DE/TH)                             | ✅     | **6**       | Neues Jump; H1+Teaser + `#ccc`; EN-H1 Tippfehler „urface“ behoben; Gradient-H2 weg |
-| `posts/scuba-knowledge/safety-check` (EN/DE/TH)                          | ✅     | **8**       | Neues Jump (ohne Google Reviews); H1+Teaser + `#ccc`; Gradient-H2 weg              |
-| `posts/scuba-knowledge/buddy-system` (EN/DE/TH)                          | ✅     | **8**       | Jump auf bestehende `info-card` IDs; H1+Teaser + `#ccc`; Inner-H1 entfernt         |
-| `posts/scuba-knowledge/safety-stop` (EN/DE/TH)                           | ✅     | **8**       | Neues Jump (Kernabschnitte); H1+Teaser + `#ccc`; Gradient-H2 weg                   |
-| `posts/scuba-knowledge/ndl-no-decompression-limits` (EN/DE/TH)           | ✅     | **9**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Intro-H2 neu (kein Titel-Duplikat)  |
-| `posts/scuba-knowledge/using-a-divecomputer` (EN/DE/TH)                  | ✅     | **6**       | Neues Jump; H1+Teaser + `#ccc`; Inner-H1 weg; DE/TH Anker angeglichen              |
-| `posts/scuba-knowledge/best-dive-computers` (EN/DE/TH)                   | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; Titel- + Vergleichs-Gradient-H2 normalisiert       |
-| `posts/scuba-knowledge/wreck-diving-koh-chang` (EN/DE/TH)                | ✅     | **7**       | Neues Jump (Wracks → Book); H1+Teaser + `#ccc`; Gradient-H2 weg                    |
-| `posts/scuba-knowledge/theory-review` (EN/DE/TH)                         | ✅     | **6**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Gradient-H2 + Inner-H1 weg          |
+| Seite                                                                       | Status | Jump-Punkte | Hinweis                                                                            |
+| --------------------------------------------------------------------------- | ------ | ----------- | ---------------------------------------------------------------------------------- |
+| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)                        | ✅     | **7**       | Gruppen-Anker; nach jeder Gruppe „Back to menu“ → `#on-this-page`                  |
+| `posts/marine-life-koh-chang/marine-life-whale-shark` (EN/DE/TH)            | ✅     | **7**       | Themenspezifisch; Inline `#ccc` + `critical-css`                                   |
+| `posts/marine-life-koh-chang/marine-life-green-sea-turtle` (EN/DE/TH)       | ✅     | **5**       | Biology → Dive sites; Inline `#ccc` + `critical-css`                               |
+| `posts/marine-life-koh-chang/marine-life-titan-triggerfish` (EN/DE/TH)      | ✅     | **6**       | Biology → Gallery; Inline `#ccc` + `critical-css`                                  |
+| `posts/marine-life-koh-chang/marine-life-nudibranch` (EN/DE/TH)             | ✅     | **9**       | What → Why look; Inline `#ccc` + `critical-css`                                    |
+| `posts/marine-life-koh-chang/marine-life-blacktip-reef-shark` (EN/DE/TH)    | ✅     | **6**       | Traits → Conclusion; Inline `#ccc` + `critical-css`                                |
+| `posts/marine-life-koh-chang/marine-life-batfish` (EN/DE/TH)                | ✅     | **4**       | Appearance → Conclusion; Inline `#ccc` + `critical-css`                            |
+| `posts/marine-life-koh-chang/marine-life-barracuda` (EN/DE/TH)              | ✅     | **4**       | Species → Conclusion; Inline `#ccc` + `critical-css`                               |
+| `posts/scuba-knowledge/boyles-law-scuba-diving` (EN/DE/TH)                  | ✅     | **8**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/dalton-henry-scuba-diving` (EN/DE/TH)                | ✅     | **8**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/archimedes-principle-scuba-diving` (EN/DE/TH)        | ✅     | **7**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/gas-consumption` (EN/DE/TH)                          | ✅     | **5**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/nitrox-info` (EN/DE/TH)                              | ✅     | **7**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt          |
+| `posts/scuba-knowledge/about-search-recovery` (EN/DE/TH)                    | ✅     | **5**       | Neues Jump (Why→Course); H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt            |
+| `posts/scuba-knowledge/dive-logbook` (EN/DE/TH)                             | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; EN-Teaser-Placeholder ersetzt; Gradient-H2 weg     |
+| `posts/scuba-knowledge/smb-guide` (EN/DE/TH)                                | ✅     | **6**       | Neues Jump; H1+Teaser + `#ccc`; EN-H1 Tippfehler „urface“ behoben; Gradient-H2 weg |
+| `posts/scuba-knowledge/safety-check` (EN/DE/TH)                             | ✅     | **8**       | Neues Jump (ohne Google Reviews); H1+Teaser + `#ccc`; Gradient-H2 weg              |
+| `posts/scuba-knowledge/buddy-system` (EN/DE/TH)                             | ✅     | **8**       | Jump auf bestehende `info-card` IDs; H1+Teaser + `#ccc`; Inner-H1 entfernt         |
+| `posts/scuba-knowledge/safety-stop` (EN/DE/TH)                              | ✅     | **8**       | Neues Jump (Kernabschnitte); H1+Teaser + `#ccc`; Gradient-H2 weg                   |
+| `posts/scuba-knowledge/ndl-no-decompression-limits` (EN/DE/TH)              | ✅     | **9**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Intro-H2 neu (kein Titel-Duplikat)  |
+| `posts/scuba-knowledge/using-a-divecomputer` (EN/DE/TH)                     | ✅     | **6**       | Neues Jump; H1+Teaser + `#ccc`; Inner-H1 weg; DE/TH Anker angeglichen              |
+| `posts/scuba-knowledge/best-dive-computers` (EN/DE/TH)                      | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; Titel- + Vergleichs-Gradient-H2 normalisiert       |
+| `posts/scuba-knowledge/wreck-diving-koh-chang` (EN/DE/TH)                   | ✅     | **7**       | Neues Jump (Wracks → Book); H1+Teaser + `#ccc`; Gradient-H2 weg                    |
+| `posts/scuba-knowledge/theory-review` (EN/DE/TH)                            | ✅     | **6**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Gradient-H2 + Inner-H1 weg          |
+| `posts/diving-how-to-guides-koh-chang/how-to-try-dive` (EN/DE/TH)           | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/diving-how-to-guides-koh-chang/how-to-scuba-review` (EN/DE/TH)       | ✅     | **8**       | Bestehende Section-IDs; H1+Teaser + `#ccc`; Intro-H2 ohne Gradient                 |
+| `posts/diving-how-to-guides-koh-chang/how-to-fun-dives` (EN/DE/TH)          | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/diving-how-to-guides-koh-chang/how-to-open-water-course` (EN/DE/TH)  | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 ergänzt                                   |
+| `posts/diving-how-to-guides-koh-chang/how-to-open-advanced` (EN/DE/TH)      | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/diving-how-to-guides-koh-chang/how-to-advanced-course` (EN/DE/TH)    | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/diving-how-to-guides-koh-chang/how-to-rescue-diver` (EN/DE/TH)       | ✅     | **8**       | Bestehende IDs; H1+Teaser + `#ccc`; EN-Teaser-Copyfix; Intro ohne Gradient         |
+| `posts/diving-how-to-guides-koh-chang/how-to-master-scuba-diver` (EN/DE/TH) | ✅     | **8**       | Bestehende IDs; H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt                     |
+| `posts/diving-how-to-guides-koh-chang/how-to-specialty-courses` (EN/DE/TH)  | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
+| `posts/diving-how-to-guides-koh-chang/how-to-solo-diver` (EN/DE/TH)         | ✅     | **8**       | Neues Jump; H1+Teaser + `#ccc`; Intro-H2 SEO-getrennt vom H1                       |
 
 **Regel:** siehe [Posts (`posts-box`)](#posts-posts-box) weiter unten.
 
@@ -152,6 +163,8 @@ Beispiele: `/day-trips/`, `/courses/`, `/faqs/`, `/posts/`, später `/dive-sites
   <hr />
   Dive Deeper / Beyond the Course (Guides, Tips, FAQs + Karten)
 ```
+
+**Hub H1 vs. Intro-H2:** Ein starker SEO-H1 (nah am `<title>`) + Teaser reicht. Kein zweiter Gradient-Titel-H2 mit fast gleichem Wording — Intro-Absatz folgt direkt nach `<hr />`.
 
 **Regel:** Kategorie = Übersicht/Navigation → kein On-page-Jump. Nach H1 + Teaser ein `<hr />`. Jump-Menü nur auf buchbaren Einzel-/Produktseiten (dort ersetzt die Jump-Nav-Unterkante die Linie).
 

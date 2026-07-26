@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       So funktioniert der Advanced Open Water Kurs –
@@ -342,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "So funktioniert der Advanced Open Water Diver Kurs bei Chang Diving",
         "alternativeHeadline": "Dein Schritt-für-Schritt-Guide zum AOWD in Koh Chang",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-the-advanced-open-water-diver_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Diving, AOWD, Tauchkurse",
@@ -511,13 +516,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            So läuft der Advanced Open Water Diver Kurs bei Chang Diving ab
-          </h1>
-          <p>Dein Leitfaden zum Advanced Diver auf Koh Chang</p>
-        </div>
       </div>
     </header>
 
@@ -536,19 +534,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          So läuft der Advanced Open Water Diver Kurs bei Chang Diving ab
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Dein Leitfaden zum Advanced Diver auf Koh Chang
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          So läuft der Advanced Open Water Diver Kurs bei Chang Diving ab –
-          Schritt für Schritt (2025, Koh Chang)
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#aowd-intro">Einstieg</a>
+            <a href="#aowd-who">Teilnahme</a>
+            <a href="#aowd-agency">SDI oder PADI</a>
+            <a href="#aowd-schedule">Ablauf</a>
+            <a href="#aowd-dives">Adventure Dives</a>
+            <a href="#aowd-depth">Tiefen</a>
+            <a href="#aowd-price">Preis</a>
+            <a href="#aowd-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="aowd-intro">
+          Tiefer, länger, mehr – was der AOWD-Kurs freischaltet
         </h2>
 
         <p>
@@ -583,7 +595,7 @@
 
         <hr />
 
-        <h2>Wer kann am AOWD-Kurs teilnehmen?</h2>
+        <h2 id="aowd-who">Wer kann am AOWD-Kurs teilnehmen?</h2>
         <p>
           Jede*r mit einer
           <strong>Open Water Diver Zertifizierung</strong> einer
@@ -594,7 +606,9 @@
 
         <hr />
 
-        <h2>Welche Tauchorganisation passt zu dir – SDI oder PADI?</h2>
+        <h2 id="aowd-agency">
+          Welche Tauchorganisation passt zu dir – SDI oder PADI?
+        </h2>
         <p>
           Egal ob du dich für SDI oder PADI entscheidest – beide Zertifikate
           sind weltweit anerkannt. Der Hauptunterschied liegt im Lernformat. 🤿
@@ -647,7 +661,7 @@
 
         <hr />
 
-        <h2>Kursablauf – Schritt für Schritt</h2>
+        <h2 id="aowd-schedule">Kursablauf – Schritt für Schritt</h2>
         <ul>
           <li><strong>Tag 1:</strong> 3 Abenteuertauchgänge vom Boot</li>
           <li><strong>Tag 2:</strong> 2 weitere Abenteuertauchgänge</li>
@@ -684,7 +698,7 @@
         </p>
 
         <hr />
-        <h2>Welche Abenteuertauchgänge sind enthalten?</h2>
+        <h2 id="aowd-dives">Welche Abenteuertauchgänge sind enthalten?</h2>
         <ul>
           <li>
             <strong>Pflicht:</strong> Tieftauchgang & Unterwasser-Navigation
@@ -707,7 +721,7 @@
 
         <hr />
 
-        <h2>Welche Tiefen sind nach dem Kurs erlaubt?</h2>
+        <h2 id="aowd-depth">Welche Tiefen sind nach dem Kurs erlaubt?</h2>
         <p>
           Im Sporttauchen hängt die erlaubte Tiefe vom Zertifizierungslevel ab.
           Nach Abschluss des
@@ -854,7 +868,7 @@
 
         <hr />
 
-        <h2>Kurspreis (2025)</h2>
+        <h2 id="aowd-price">Kurspreis (2025)</h2>
         <ul>
           <li><strong>SDI AOWD:</strong> 13.490 THB</li>
           <li><strong>PADI AOWD:</strong> 13.990 THB</li>
@@ -894,7 +908,7 @@
 
         <hr />
 
-        <h2>Häufige Fragen (FAQ)</h2>
+        <h2 id="aowd-faq">Häufige Fragen (FAQ)</h2>
         <ul>
           <li>
             <strong>Kann ich den AOWD direkt nach dem OWD machen?</strong

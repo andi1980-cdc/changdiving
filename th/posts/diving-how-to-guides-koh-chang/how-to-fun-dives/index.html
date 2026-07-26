@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ดำน้ำ ฟันไดฟ์ กับช้างไดร์วิ่ง – ทริปดำน้ำรายวันบนเกาะช้าง</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "ดำน้ำ ฟันไดฟ์ กับ ช้างไดฟ์วิ่ง เป็นอย่างไร – ทริปรายวันบนเกาะช้าง",
         "alternativeHeadline": "ทุกสิ่งที่คุณควรรู้เกี่ยวกับการดำน้ำ ฟันไดฟ์ ที่เกาะช้าง",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-fun-diving_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "การดำน้ำ, ฟันไดฟ์, ทริปรายวัน",
@@ -529,11 +534,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ฟันไดฟ์ กับ ช้างไดฟ์วิ่ง ดำยังไง?</h1>
-          <p>กำลังวางแผน ฟันไดฟ์ ที่เกาะช้างอยู่ใช่ไหม?</p>
-        </div>
       </div>
     </header>
 
@@ -549,21 +549,33 @@
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ฟันไดฟ์ กับ ช้างไดฟ์วิ่ง ดำยังไง?
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          กำลังวางแผน ฟันไดฟ์ ที่เกาะช้างอยู่ใช่ไหม?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          ดำน้ำแบบสนุกกับช้างไดร์วิ่ง – ทีละขั้นตอน (2025, เกาะช้าง)
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#fd-intro">บทนำ</a>
+            <a href="#fd-who">ใครได้บ้าง</a>
+            <a href="#fd-tech">เทค / เรือหลวงช้าง</a>
+            <a href="#fd-sites">จุดดำน้ำ</a>
+            <a href="#fd-schedule">ตารางวัน</a>
+            <a href="#fd-included">รวมอะไร</a>
+            <a href="#fd-price">ราคา</a>
+            <a href="#fd-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="fd-intro">
+          ฟันไดฟ์สำหรับนักดำน้ำที่มีใบรับรอง – ยินดีต้อนรับทุกสถาบัน
         </h2>
 
         <p>
@@ -575,7 +587,7 @@
         </p>
 
         <hr />
-        <h2>ใครสามารถเข้าร่วม ฟันไดฟ์ ได้บ้าง?</h2>
+        <h2 id="fd-who">ใครสามารถเข้าร่วม ฟันไดฟ์ ได้บ้าง?</h2>
         <p>
           หากคุณมีใบรับรองการดำน้ำ (Open Water Diver หรือสูงกว่า)
           จากองค์กรที่ได้รับการยอมรับ คุณสามารถเข้าร่วม ฟันไดฟ์ ได้ทันที
@@ -595,7 +607,7 @@
         </p>
 
         <hr />
-        <h2>ดำน้ำเทคนิคที่เรือหลวง เรือหลวงช้าง</h2>
+        <h2 id="fd-tech">ดำน้ำเทคนิคที่เรือหลวง เรือหลวงช้าง</h2>
         <p>
           เรายังมีบริการ <strong>ดำน้ำเทคนิค</strong> ที่เรือ เรือหลวงช้าง –
           ซึ่งเป็นจุดเดียวรอบเกาะช้างที่การดำน้ำแบบเจาะเข้า (penetration)
@@ -669,7 +681,7 @@
 
         <hr />
 
-        <h2>เราจะไปดำน้ำที่ไหนบ้าง?</h2>
+        <h2 id="fd-sites">เราจะไปดำน้ำที่ไหนบ้าง?</h2>
         <p>
           ทริปดำน้ำประจำวันของเราครอบคลุมจุดดำน้ำที่ดีที่สุดรอบเกาะช้าง เช่น:
         </p>
@@ -793,7 +805,7 @@
 
         <hr />
 
-        <h2>ตารางกิจกรรมประจำวัน – ทีละขั้นตอน</h2>
+        <h2 id="fd-schedule">ตารางกิจกรรมประจำวัน – ทีละขั้นตอน</h2>
         <ul>
           <li><strong>07:15–07:45 น.:</strong> รับจากโรงแรม</li>
           <li>
@@ -828,7 +840,7 @@
         </ul>
         <hr />
 
-        <h2>อะไรที่รวมอยู่ใน ฟันไดฟ์?</h2>
+        <h2 id="fd-included">อะไรที่รวมอยู่ใน ฟันไดฟ์?</h2>
         <ul>
           <li>
             ดำน้ำ 2 หรือ 3 ไดฟ์จากเรือ พร้อมไกด์มืออาชีพ
@@ -858,7 +870,7 @@
         </ul>
 
         <hr />
-        <h2>ราคาดำน้ำ ฟันไดฟ์ ปี 2025</h2>
+        <h2 id="fd-price">ราคาดำน้ำ ฟันไดฟ์ ปี 2025</h2>
         <ul>
           <li><strong>1 วัน / 2 ไดฟ์:</strong> 3,290 บาท / คน</li>
           <li><strong>2 วัน / 4 ไดฟ์:</strong> 5,990 บาท / คน</li>
@@ -951,7 +963,7 @@
         </div>
 
         <hr />
-        <h2>คำถามที่พบบ่อย (FAQ)</h2>
+        <h2 id="fd-faq">คำถามที่พบบ่อย (FAQ)</h2>
         <ul>
           <li>
             <strong>ฉันมีบัตรรับรองจากสถาบันอื่น สามารถดำน้ำได้ไหม?</strong

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       คอร์สดำน้ำเฉพาะทางที่ ช้างไดฟ์วิ่ง – ขั้นตอนการเรียนปี 2025 ที่เกาะช้าง
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "หลักสูตรดำน้ำพิเศษที่ช้างไดร์วิ่งทำงานอย่างไร – คู่มือทีละขั้นตอน (2025, เกาะช้าง)",
         "alternativeHeadline": "เข้าใจการเรียนหลักสูตร Specialty Diving ที่เกาะช้าง ประเทศไทย",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-specialty-courses_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ดำน้ำเฉพาะทาง, ดำน้ำขั้นสูง, เกาะช้าง",
@@ -496,13 +501,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>หลักสูตรพิเศษที่ ช้างไดฟ์วิ่ง ทำงานอย่างไร</h1>
-          <p>
-            คุณได้รับใบรับรอง Open Water แล้วและพร้อมสำหรับขั้นต่อไปหรือยัง?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -519,22 +517,32 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          หลักสูตรพิเศษที่ ช้างไดฟ์วิ่ง ทำงานอย่างไร
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          คุณได้รับใบรับรอง Open Water แล้วและพร้อมสำหรับขั้นต่อไปหรือยัง?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          หลักสูตรพิเศษของ ช้างไดฟ์วิ่ง – ทีละขั้นตอน (2025, เกาะช้าง)
-        </h2>
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#sp-intro">บทนำ</a>
+            <a href="#sp-who">ใครได้บ้าง</a>
+            <a href="#sp-what">คืออะไร</a>
+            <a href="#sp-included">รวมอะไร</a>
+            <a href="#sp-agency">SDI vs PADI</a>
+            <a href="#sp-wreck">แพ็กเรือจม</a>
+            <a href="#sp-msd">เส้นทาง Master</a>
+            <a href="#sp-more">พัฒนาต่อ</a>
+          </div>
+        </nav>
+
+        <h2 id="sp-intro">พัฒนาทักษะ สำรวจสไตล์ดำน้ำใหม่ ได้ใบ Specialty</h2>
 
         <p>
           หลักสูตร Specialty ช่วยให้คุณพัฒนาทักษะ ค้นพบแนวทางการดำน้ำใหม่ ๆ
@@ -568,7 +576,7 @@
         </p>
         <hr />
 
-        <h2>ใครสามารถเรียนหลักสูตรพิเศษได้บ้าง?</h2>
+        <h2 id="sp-who">ใครสามารถเรียนหลักสูตรพิเศษได้บ้าง?</h2>
         <p>
           ผู้ที่มีใบรับรอง
           <strong>Open Water Diver (OWD)</strong> จากองค์กรที่ได้รับการยอมรับจาก
@@ -593,7 +601,7 @@
         <p>ดูรายละเอียดเพิ่มเติมในตารางด้านล่างหรือในหน้าจองแต่ละหลักสูตร</p>
         <hr />
 
-        <h2>หลักสูตร Specialty คืออะไร?</h2>
+        <h2 id="sp-what">หลักสูตร Specialty คืออะไร?</h2>
         <p>
           หลักสูตรเฉพาะทางเป็นหลักสูตรสั้น ๆ
           ที่มุ่งเน้นการฝึกฝนในสภาพแวดล้อมเฉพาะ เช่น ดำน้ำลึก สำรวจเรือจม
@@ -609,7 +617,7 @@
 
         <hr />
 
-        <h2>สิ่งที่รวมอยู่ในหลักสูตร</h2>
+        <h2 id="sp-included">สิ่งที่รวมอยู่ในหลักสูตร</h2>
         <ul>
           <li>เข้าถึงเนื้อหาทฤษฎีออนไลน์</li>
           <li>จำนวนไดฟ์ตามหลักสูตร (2–4 ไดฟ์)</li>
@@ -625,7 +633,7 @@
         </p>
         <hr />
 
-        <h2>เปรียบเทียบระบบ SDI/TDI กับ PADI</h2>
+        <h2 id="sp-agency">เปรียบเทียบระบบ SDI/TDI กับ PADI</h2>
         <p>
           ทั้งสองระบบมีมาตรฐานสูงและได้รับการยอมรับทั่วโลก
           ความแตกต่างอยู่ที่ความยืดหยุ่นและเงื่อนไขเบื้องต้น
@@ -759,7 +767,7 @@
         <hr />
 
         <!-- THAI TRANSLATION -->
-        <h2>แพ็คเกจพิเศษสุดสำหรับนักดำน้ำที่รักเรือจม</h2>
+        <h2 id="sp-wreck">แพ็คเกจพิเศษสุดสำหรับนักดำน้ำที่รักเรือจม</h2>
         <p>
           คุณฝันอยากสำรวจ <strong>ทุกซอกมุม</strong> ของ
           <a
@@ -875,7 +883,7 @@
           >
         </p>
 
-        <h2>👑 วางแผนเป็น Master สกูบา Diver อยู่หรือไม่?</h2>
+        <h2 id="sp-msd">👑 วางแผนเป็น Master สกูบา Diver อยู่หรือไม่?</h2>
         <p>
           แพ็คนี้ช่วยปูทางสู่ระดับ
           <strong>Master สกูบา Diver (MSD)</strong> ได้!
@@ -903,7 +911,7 @@
         </p>
 
         <hr />
-        <h2>🧭 อยากพัฒนาให้เก่งขึ้นไหม?</h2>
+        <h2 id="sp-more">🧭 อยากพัฒนาให้เก่งขึ้นไหม?</h2>
         <p>
           หลักสูตรพิเศษช่วยพัฒนาความมั่นใจ ปลอดภัย และควบคุมใต้น้ำได้ดีขึ้น –
           ไม่ว่าจะชอบสิ่งมีชีวิตทะเล เรือจม หรือทักษะลอยตัว!

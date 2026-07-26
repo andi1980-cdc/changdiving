@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Wie ein Try Dive funktioniert – Dein erstes Tauchabenteuer auf Koh Chang
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "So läuft ein Try Dive bei Chang Diving ab – Dein erstes Unterwasser-Abenteuer",
         "alternativeHeadline": "Dein erster Tauchgang auf Koh Chang – So funktioniert ein Try Dive",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-a-try-dive_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchen, Try Dive, Einsteiger Tipps",
@@ -492,14 +497,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>So funktioniert ein Try Dive bei Chang Diving</h1>
-          <p>
-            Schon immer davon geträumt, die Unterwasserwelt zu erkunden, aber
-            noch nicht bereit für einen vollständigen Tauchkurs?
-          </p>
-        </div>
       </div>
     </header>
 
@@ -516,7 +513,33 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2>Dein erstes Unterwasserabenteuer (2025, Koh Chang)</h2>
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          So funktioniert ein Try Dive bei Chang Diving
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Schon immer davon geträumt, die Unterwasserwelt zu erkunden, aber noch
+          nicht bereit für einen vollständigen Tauchkurs?
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#htd-intro">Einstieg</a>
+            <a href="#htd-what">Was ist das?</a>
+            <a href="#htd-safety">Sicherheit</a>
+            <a href="#htd-steps">Ablauf</a>
+            <a href="#htd-swim">Schwimmen</a>
+            <a href="#htd-included">Inklusiv</a>
+            <a href="#htd-price">Preis</a>
+            <a href="#htd-faq">FAQ</a>
+          </div>
+        </nav>
+
+        <h2 id="htd-intro">Warum zum ersten Mal auf Koh Chang tauchen</h2>
 
         <p>
           Im <strong>Chang Diving Center auf Koh Chang</strong> bieten wir dir
@@ -524,7 +547,7 @@
           erleben – mit einem <strong>Try Dive</strong>.
         </p>
         <hr />
-        <h2>Was ist ein Try Dive?</h2>
+        <h2 id="htd-what">Was ist ein Try Dive?</h2>
         <p>
           Ein Try Dive (Schnuppertauchgang) gibt dir die Möglichkeit, die Magie
           des Tauchens zu erleben – ganz ohne Tauchschein. Ideal für Anfänger,
@@ -543,7 +566,7 @@
           Einschätzung des Instructors).
         </p>
         <hr />
-        <h2>Sicherheit geht vor!</h2>
+        <h2 id="htd-safety">Sicherheit geht vor!</h2>
         <p>
           Deine Sicherheit hat bei uns oberste Priorität. Jeder Try Dive
           beinhaltet:
@@ -570,7 +593,7 @@
           </li>
         </ul>
         <hr />
-        <h2>So läuft dein Try Dive ab</h2>
+        <h2 id="htd-steps">So läuft dein Try Dive ab</h2>
         <p>
           Bei uns tauchst du direkt vom
           <a href="/de/posts/straight-talk/sustainable-diving/"
@@ -606,7 +629,7 @@
           >.
         </p>
         <hr />
-        <h2>Muss ich schwimmen können?</h2>
+        <h2 id="htd-swim">Muss ich schwimmen können?</h2>
         <p>
           Nein – grundlegendes Wohlbefinden im Wasser reicht. Dein Tauchlehrer
           ist immer an deiner Seite.
@@ -624,7 +647,7 @@
         <p>Ein kompletter Tauchtag von 8:15 bis ca. 14:00–16:00 Uhr.</p>
         <p>Jeder Tauchgang dauert ca. 50–60 Minuten.</p>
         <hr />
-        <h2>Was ist im Preis enthalten?</h2>
+        <h2 id="htd-included">Was ist im Preis enthalten?</h2>
         <ul>
           <li>2 Bootstauchgänge mit Instructor</li>
           <li>Komplette Tauchausrüstung</li>
@@ -643,8 +666,8 @@
         <hr />
         <h2>Kann ich danach den OWD machen?</h2>
         <p>
-          Ja! Wenn dir der Try Dive gefällt (und das wird er bestimmt 😊),
-          hast du zwei Möglichkeiten weiterzumachen:
+          Ja! Wenn dir der Try Dive gefällt (und das wird er bestimmt 😊), hast
+          du zwei Möglichkeiten weiterzumachen:
         </p>
         <ul>
           <li>
@@ -668,7 +691,16 @@
             >So funktioniert der Open Water Diver Kurs</a
           >
         </p>
-        <div style="margin-top: 1.5em; text-align: center; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <div
+          style="
+            margin-top: 1.5em;
+            text-align: center;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
           <a
             href="/de/courses/scuba-diver/"
             target="_blank"
@@ -707,7 +739,7 @@
           </a>
         </div>
         <hr />
-        <h2>Preis Try Dive (2025)</h2>
+        <h2 id="htd-price">Preis Try Dive (2025)</h2>
         <p><strong>4890 THB pro Person</strong></p>
         <p>
           <em>Möchtest du nach deinem Try Dive weitermachen?</em> Du kannst zum
@@ -743,7 +775,7 @@
             👉 Jetzt Try Dive Erlebnis buchen
           </a>
         </div>
-        <h2>FAQ – Häufige Fragen</h2>
+        <h2 id="htd-faq">FAQ – Häufige Fragen</h2>
         <ul>
           <li>
             <strong>Brauche ich Erfahrung?</strong><br />Nein – Try Dives sind

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
@@ -341,6 +342,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -367,7 +374,6 @@
         "headline": "So läuft ein Scuba Review bei Chang Diving ab – Finde zurück zur Sicherheit unter Wasser",
         "alternativeHeadline": "Scuba Refresher Dive auf Koh Chang – Auffrischungskurs bei Chang Diving",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/how-to-do-a-scuba-review_big.webp",
@@ -375,7 +381,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Gerätetauchen, Auffrischungstauchgang, zertifizierte Taucher",
@@ -499,18 +504,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            So läuft ein Scuba Review bei Chang Diving ab – Schritt für Schritt
-            (2025, Koh Chang)
-          </h1>
-          <p>
-            Schon länger nicht mehr getaucht? Gewinne Sicherheit zurück und
-            frische deine Fähigkeiten mit einem sicheren Tauchgang unter
-            Anleitung auf.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -529,20 +522,36 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <!-- 1. Beschreibung -->
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          So läuft ein Scuba Review bei Chang Diving ab – Schritt für Schritt
+          (2025, Koh Chang)
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Schon länger nicht mehr getaucht? Gewinne Sicherheit zurück und
+          frische deine Fähigkeiten mit einem sicheren Tauchgang unter Anleitung
+          auf.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          Worum geht’s bei diesem Tauchgang?
-        </h2>
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#sr-intro">Worum geht’s</a>
+            <a href="#who-can-join">Teilnahme</a>
+            <a href="#what-youll-learn">Ablauf</a>
+            <a href="#what-youll-see">Spots</a>
+            <a href="#whats-included">Inklusiv</a>
+            <a href="#extras">Extras</a>
+            <a href="#how-to-book">Buchen</a>
+            <a href="#faq">FAQ</a>
+          </div>
+        </nav>
+
+        <!-- 1. Description -->
+        <h2 id="sr-intro">Worum geht’s bei diesem Tauchgang?</h2>
         <p>
           Du warst länger nicht mehr tauchen? Unser
           <strong>Scuba Review</strong> ist die perfekte Möglichkeit, deine
