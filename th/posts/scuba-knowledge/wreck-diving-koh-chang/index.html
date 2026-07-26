@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       ดำน้ำชมเรือจมที่เกาะช้าง – สำรวจ เรือหลวงช้าง, ต11 และเรือจมลึก
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "ดำน้ำเรือจมเกาะช้าง – สำรวจ เรือหลวงช้าง, ต11 และเรือจมลึก",
         "alternativeHeadline": "จุดดำน้ำเรือจมที่ดีที่สุดบนเกาะช้าง – ประวัติศาสตร์และการผจญภัย",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/wrecks-around-koh-chang_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เรื่องการดำน้ำ",
@@ -489,16 +494,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            สำรวจเรือจมที่น่าตื่นตาของเกาะช้าง – สวรรค์ของนักดำน้ำเรือจม
-          </h1>
-          <p>
-            ดำดิ่งสู่ประวัติศาสตร์กับเรือจมดังของเกาะช้าง: เรือหลวงช้าง, ต11,
-            Koho Maru 5 และอื่นๆ เหมาะสำหรับ ฟันไดฟ์, คอร์ส และดำน้ำเทคนิค
-          </p>
-        </div>
       </div>
     </header>
 
@@ -515,22 +510,30 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          สำรวจเรือจมที่น่าตื่นตาของเกาะช้าง – สวรรค์ของนักดำน้ำเรือจม
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ดำดิ่งสู่ประวัติศาสตร์กับเรือจมดังของเกาะช้าง: เรือหลวงช้าง, ต11, Koho
+          Maru 5 และอื่นๆ เหมาะสำหรับ ฟันไดฟ์, คอร์ส และดำน้ำเทคนิค
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          เรือจมสุดตื่นตาแห่งเกาะช้าง – สวรรค์ของนักดำน้ำเรือจม
-        </h2>
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#wd-htms-chang">เรือหลวงช้าง</a>
+            <a href="#wd-t11">T-11</a>
+            <a href="#wd-koho">Koho Maru 5</a>
+            <a href="#wd-phuttha">พุทธยอดฟ้า</a>
+            <a href="#wd-thonburi">เรือหลวงธนบุรี</a>
+            <a href="#wd-why">ทำไมเกาะช้าง</a>
+            <a href="#wd-book">จอง</a>
+          </div>
+        </nav>
 
         <p>
           เกาะช้าง
@@ -553,7 +556,9 @@
           >
         </p>
         <hr />
-        <h2>เรือหลวงช้าง – แนวปะการังเทียมที่ใหญ่ที่สุดในประเทศไทย</h2>
+        <h2 id="wd-htms-chang">
+          เรือหลวงช้าง – แนวปะการังเทียมที่ใหญ่ที่สุดในประเทศไทย
+        </h2>
         <p>
           <strong>เรือหลวงช้าง</strong>
           เป็นหนึ่งในจุดดำน้ำเรือจมที่มีชื่อเสียงที่สุดในประเทศไทย
@@ -582,7 +587,7 @@
           <a href="/th/courses/advanced/">Advanced Course</a>
         </p>
         <hr />
-        <h2>เรือ T-11 – สมบัติล้ำค่าที่ซ่อนอยู่</h2>
+        <h2 id="wd-t11">เรือ T-11 – สมบัติล้ำค่าที่ซ่อนอยู่</h2>
         <p>
           <strong>เรือ T-11</strong>
           เป็นเรือตรวจการณ์เก่าที่ถูกจมลงอย่างจงใจเพื่อสร้างแนวปะการังเทียม
@@ -607,7 +612,7 @@
           >
         </p>
         <hr />
-        <h2>Koho Maru 5 – การผจญภัยสำหรับนักดำน้ำมือโปรหรือเทค</h2>
+        <h2 id="wd-koho">Koho Maru 5 – การผจญภัยสำหรับนักดำน้ำมือโปรหรือเทค</h2>
         <p>
           <strong>Koho Maru 5</strong> หรือที่รู้จักกันในชื่อ Pak1
           เป็นเรือจมลึกตั้งอยู่ห่างจากเกาะช้างไปทางตะวันตกประมาณ 5 ชั่วโมง
@@ -633,7 +638,7 @@
           คือกุญแจสู่การดำน้ำจุดนี้อย่างปลอดภัย
         </p>
         <hr />
-        <h2>เรือฟริเกตพุทธยอดฟ้าจุฬาโลก – ไฮไลต์แห่งอนาคต</h2>
+        <h2 id="wd-phuttha">เรือฟริเกตพุทธยอดฟ้าจุฬาโลก – ไฮไลต์แห่งอนาคต</h2>
         <p>
           <strong>เรือฟริเกตพุทธยอดฟ้าจุฬาโลก</strong>
           กำลังจะกลายเป็นจุดดำน้ำใหม่ใกล้เกาะช้าง
@@ -654,9 +659,10 @@
           >
         </p>
         <hr />
-        <h2>เรือหลวงธนบุรี – อนุสรณ์แห่งยุทธนาวีเกาะช้าง</h2>
+        <h2 id="wd-thonburi">เรือหลวงธนบุรี – อนุสรณ์แห่งยุทธนาวีเกาะช้าง</h2>
         <p>
-          <strong>เรือหลวงธนบุรี</strong> เป็นเรือรบชายฝั่งของไทยที่มีบทบาทสำคัญใน
+          <strong>เรือหลวงธนบุรี</strong>
+          เป็นเรือรบชายฝั่งของไทยที่มีบทบาทสำคัญใน
           <strong>ยุทธนาวีเกาะช้าง</strong> เมื่อวันที่ 17 มกราคม พ.ศ. 2484
           การรบครั้งนี้เป็นส่วนหนึ่งของสงครามไทย-ฝรั่งเศสและเป็นเหตุการณ์สำคัญที่นำไปสู่การเจรจาหย่าศึกโดยญี่ปุ่น
         </p>
@@ -694,7 +700,7 @@
           >
         </p>
         <hr />
-        <h2>ทำไมต้องเลือกเกาะช้าง?</h2>
+        <h2 id="wd-why">ทำไมต้องเลือกเกาะช้าง?</h2>
         <ul>
           <li>จุดดำน้ำเรือจมสวยงาม เหมาะทั้งมือใหม่และมือโปร</li>
           <li>สัตว์น้ำหลากหลาย ปะการังและฝูงปลา</li>
@@ -703,7 +709,7 @@
           </li>
         </ul>
         <hr />
-        <h2>จองดำน้ำกับเรา</h2>
+        <h2 id="wd-book">จองดำน้ำกับเรา</h2>
         <p>
           สำรวจเรือจมสุดตื่นตาของเกาะช้างกับ
           <a href="/th/about/">ช้างไดร์วิ่ง เซ็นเตอร์</a> จอง
@@ -719,14 +725,18 @@
           ไลน์มาร์คเกอร์ และ SMB
         </p>
         <p
-          style="font-size: 0.95rem; line-height: 1.55; color: #333; max-width: 44rem"
+          style="
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #333;
+            max-width: 44rem;
+          "
         >
           <strong>พูดตรงๆ:</strong>
           <a href="/th/posts/straight-talk/htms-chang-wreck-penetration/"
             >เรือหลวงช้าง: การว่ายผ่าน การเข้าแบบจำกัดและเต็ม</a
           >
-          — คำอธิบายปิดเหนือ/โซนแสงบนเรือหลักของเกาะ
-          ก่อนวางแผนเข้า “ข้างใน” ลำ
+          — คำอธิบายปิดเหนือ/โซนแสงบนเรือหลักของเกาะ ก่อนวางแผนเข้า “ข้างใน” ลำ
         </p>
       </div>
     </main>

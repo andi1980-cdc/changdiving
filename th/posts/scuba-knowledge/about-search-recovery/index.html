@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       ดำน้ำค้นหาและกู้คืน – อุปกรณ์ เทคนิค และภารกิจจริง | ช้างไดร์วิ่ง เกาะช้าง
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "การค้นหาและกู้คืนใต้น้ำ – อุปกรณ์ เทคนิค และเคสจริง",
         "alternativeHeadline": "เรายกเรือเร็วหนัก 5 ตันในเกาะช้างได้อย่างไร – การดำน้ำค้นหาและกู้คืน",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/search-and-recovery-diving_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้การดำน้ำ, เทคนิคการกู้คืน, อุปกรณ์ดำน้ำ",
@@ -492,15 +497,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ดำน้ำค้นหาและกู้คืน – อุปกรณ์ เทคนิค และประสบการณ์ของเรา</h1>
-          <p>
-            จากของมีค่าที่หายไปถึงเรือที่จม –
-            มาร่วมเรียนรู้วิธีการดำน้ำกู้คืนสิ่งของใต้น้ำ พร้อมเทคนิค อุปกรณ์
-            และการฝึกอบรมที่จำเป็น
-          </p>
-        </div>
       </div>
     </header>
 
@@ -517,22 +513,29 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ดำน้ำค้นหาและกู้คืน – อุปกรณ์ เทคนิค และประสบการณ์ของเรา
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          จากของมีค่าที่หายไปถึงเรือที่จม –
+          มาร่วมเรียนรู้วิธีการดำน้ำกู้คืนสิ่งของใต้น้ำ พร้อมเทคนิค อุปกรณ์
+          และการฝึกอบรมที่จำเป็น
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          การดำน้ำค้นหาและกู้คืน – อุปกรณ์ เทคนิค และประสบการณ์ของเรา
-        </h2>
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#sr-why">ทำไมสำคัญ</a>
+            <a href="#sr-equipment">อุปกรณ์</a>
+            <a href="#sr-patterns">รูปแบบค้นหา</a>
+            <a href="#sr-logistics">โลจิสติกส์</a>
+            <a href="#sr-course">คอร์สของเรา</a>
+          </div>
+        </nav>
 
         <p>
           ไม่ว่าจะเป็นของหาย สมอเรือ หรือเรือทั้งลำ –
@@ -545,7 +548,7 @@
 
         <hr />
 
-        <h2>ทำไมการค้นหาและกู้คืนจึงสำคัญ?</h2>
+        <h2 id="sr-why">ทำไมการค้นหาและกู้คืนจึงสำคัญ?</h2>
         <p>
           การค้นหาสิ่งของที่หายไปใต้น้ำมีความสำคัญด้วยหลายเหตุผล
           สำหรับนักดำน้ำหรือเจ้าของเรือ การสูญเสียอุปกรณ์ เครื่องมือ
@@ -568,7 +571,7 @@
 
         <hr />
 
-        <h2>อุปกรณ์สำหรับการค้นหาและกู้คืน</h2>
+        <h2 id="sr-equipment">อุปกรณ์สำหรับการค้นหาและกู้คืน</h2>
         <ul>
           <li>
             <strong>ถุงลมยกของ:</strong> มีหลายขนาด ตั้งแต่ 50 กก. สำหรับของเบา
@@ -678,7 +681,7 @@
 
         <hr />
 
-        <h2>รูปแบบและเทคนิคการค้นหา</h2>
+        <h2 id="sr-patterns">รูปแบบและเทคนิคการค้นหา</h2>
         <ul>
           <li>
             <strong>รูปแบบค้นหาแบบ U:</strong>
@@ -699,7 +702,7 @@
 
         <hr />
 
-        <h2>การวางแผนสำหรับการกู้คืนวัตถุขนาดใหญ่</h2>
+        <h2 id="sr-logistics">การวางแผนสำหรับการกู้คืนวัตถุขนาดใหญ่</h2>
         <p>
           เมื่อเรากู้เรือ 5 ตัน เราวางตำแหน่งถุงลมอย่างมีกลยุทธ์
           เติมอากาศอย่างระมัดระวัง และยกเรือขึ้นอย่างช้า ๆ สภาพอากาศมีผลอย่างมาก
@@ -711,7 +714,7 @@
 
         <hr />
 
-        <h2>คอร์สดำน้ำค้นหาและกู้คืนของเรา</h2>
+        <h2 id="sr-course">คอร์สดำน้ำค้นหาและกู้คืนของเรา</h2>
         <p>
           ในคอร์ส
           <a href="/en/courses/search-recovery/">ค้นหาและกู้คืนของ PADI/SDI</a>

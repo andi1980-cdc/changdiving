@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ระบบเพื่อนดำน้ำ – ความรับผิดชอบ ความปลอดภัย และการดำน้ำจริง</title>
     <meta
@@ -336,6 +337,15 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
+      .posts-box .info-card[id] {
+        scroll-margin-top: 1.25rem;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +372,6 @@
         "headline": "ระบบเพื่อนดำน้ำ – ความรับผิดชอบ ความปลอดภัย และการดำน้ำจริง",
         "alternativeHeadline": "คู่มือที่สมบูรณ์เกี่ยวกับขั้นตอนการดำน้ำกับเพื่อนและโพรโทคอลความปลอดภัย",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/buddy_system_big.webp",
@@ -370,7 +379,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เกี่ยวกับการดำน้ำ",
@@ -451,11 +459,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ระบบเพื่อนดำน้ำ</h1>
-          <p>ความรับผิดชอบ ความปลอดภัย และการดำน้ำจริง</p>
-        </div>
       </div>
     </header>
 
@@ -472,22 +475,31 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">ระบบเพื่อนดำน้ำ</h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ความรับผิดชอบ ความปลอดภัย และการดำน้ำจริง
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          ระบบเพื่อนดำน้ำ – ความรับผิดชอบ ความปลอดภัย และการดำน้ำจริง
-        </h2>
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#open-water-course-reminder">Open Water</a>
+            <a href="#why-buddy-system">ทำไมต้องมีเพื่อน</a>
+            <a href="#proper-buddy-diving">ดำน้ำอย่างไร</a>
+            <a href="#losing-your-buddy">พลัดหลง</a>
+            <a href="#local-tip-koh-chang">เกาะช้าง</a>
+            <a href="#losing-buddy-in-group">ในกลุ่ม</a>
+            <a href="#role-of-dive-guide">บทบาทไกด์</a>
+            <a href="#conclusion">สรุป</a>
+          </div>
+        </nav>
+
         <section class="content-section" id="buddy-system-guide">
           <div class="info-card">
-            <h1>ระบบเพื่อนดำน้ำในการดำน้ำเพื่อการพักผ่อน</h1>
             <p class="subtitle">
               ทำความเข้าใจเกี่ยวกับความรับผิดชอบ ขั้นตอน และความปลอดภัย
             </p>

@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      No-Decompression Limits (NDL) Explained – Tables vs. Dive Computers |
-      Koh Chang
+      No-Decompression Limits (NDL) Explained – Tables vs. Dive Computers | Koh
+      Chang
     </title>
     <meta
       name="description"
@@ -345,6 +346,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -352,9 +359,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript
-      ><link rel="stylesheet" href="/style.min.css" />
-    </noscript>
+    <noscript><link rel="stylesheet" href="/style.min.css" /> </noscript>
 
     <script type="application/ld+json">
       {
@@ -363,7 +368,6 @@
         "headline": "No-Decompression Limits (NDL) Explained – Tables vs. Dive Computers",
         "alternativeHeadline": "Understanding NDL, recreational dive planning, and why dive computers matter for multi-level dives",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_big.webp",
@@ -371,7 +375,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Diving Knowledge",
@@ -442,7 +445,11 @@
       }
     </script>
 
-    <link rel="preload" href="/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_small.webp" as="image" />
+    <link
+      rel="preload"
+      href="/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_small.webp"
+      as="image"
+    />
   </head>
   <body>
     <header>
@@ -455,9 +462,15 @@
 
         <div class="lang-switch">
           <button class="menu-toggle">☰ Menu</button>
-          <a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/">🇬🇧</a>
-          <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">🇩🇪</a>
-          <a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/">🇹🇭</a>
+          <a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/"
+            >🇬🇧</a
+          >
+          <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+            >🇩🇪</a
+          >
+          <a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
+            >🇹🇭</a
+          >
 
           <div class="dropdown-menu">
             <a href="/en/courses/">Courses</a>
@@ -475,7 +488,9 @@
 
         <picture style="aspect-ratio: 3 / 2">
           <source
-            srcset="/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_big.webp"
+            srcset="
+              /img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_big.webp
+            "
             media="(min-width: 768px)"
             type="image/webp"
           />
@@ -488,14 +503,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>No-Decompression Limits (NDL)</h1>
-          <p>
-            What they are, why tables are only part of the story, and how
-            modern dive computers fit in
-          </p>
-        </div>
       </div>
     </header>
 
@@ -511,7 +518,19 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box grid-container">
-        <nav class="page-jump-nav" aria-label="On this page">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          No-Decompression Limits (NDL)
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          What they are, why tables are only part of the story, and how modern
+          dive computers fit in
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
             <a href="#ndl-intro">Intro</a>
@@ -525,19 +544,9 @@
             <a href="#ndl-takeaways">Takeaways</a>
           </div>
         </nav>
-        <h2
-          id="ndl-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          No-Decompression Limits (NDL) – Concepts, Not Just Numbers
+
+        <h2 id="ndl-intro">
+          🧠 Why NDL concepts matter more than memorizing numbers
         </h2>
 
         <p>
@@ -570,9 +579,9 @@
             <strong>no-decompression limit</strong> is the maximum time you can
             spend at a given exposure (depth and gas) while still being allowed
             to ascend to the surface in a normal recreational way—typically with
-            a <strong>safety stop</strong>, but
-            <em>without</em> mandatory staged decompression stops caused by
-            exceeding a planned no-decompression profile.
+            a <strong>safety stop</strong>, but <em>without</em> mandatory
+            staged decompression stops caused by exceeding a planned
+            no-decompression profile.
           </p>
           <p>
             Your body loads inert gas (mostly nitrogen on normal air) during the
@@ -589,34 +598,39 @@
             <strong>Nitrox</strong> (enriched air) is still planned for
             <strong>no-decompression recreational diving</strong>, but your
             computer or table must match the <strong>actual gas mix</strong>. A
-            higher oxygen fraction means a <strong>lower nitrogen fraction</strong>
-            in the breathing gas, so at the <em>same depth</em> you typically take
-            on <strong>less nitrogen</strong> than on air. That is why your
+            higher oxygen fraction means a
+            <strong>lower nitrogen fraction</strong> in the breathing gas, so at
+            the <em>same depth</em> you typically take on
+            <strong>less nitrogen</strong> than on air. That is why your
             <strong>no-decompression allowance</strong> (what the computer shows
             as remaining time within the plan) can be <strong>longer</strong>
             than on air—it is about the inert-gas load, not about “magic gas.”
           </p>
           <div class="note-box">
             <p style="margin: 0 0 0.75em">
-              <strong>Example (illustrative—exact limits depend on your table or
-              computer model):</strong> For a <strong>square profile at 18
-              m</strong>, typical recreational planning values are about
+              <strong
+                >Example (illustrative—exact limits depend on your table or
+                computer model):</strong
+              >
+              For a <strong>square profile at 18 m</strong>, typical
+              recreational planning values are about
               <strong>56 minutes</strong> maximum no-decompression time on
               <strong>air (21% O₂)</strong>, versus about
-              <strong>95 minutes</strong> on <strong>EAN32 (32% O₂)</strong>—same
-              depth, same shape of dive, but less nitrogen in the mix so the
-              allowed time within the no-decompression ceiling increases. Always
-              use the limit calculated for <em>your</em> gas and <em>your</em>
+              <strong>95 minutes</strong> on
+              <strong>EAN32 (32% O₂)</strong>—same depth, same shape of dive,
+              but less nitrogen in the mix so the allowed time within the
+              no-decompression ceiling increases. Always use the limit
+              calculated for <em>your</em> gas and <em>your</em>
               device.
             </p>
           </div>
           <p>
             Nitrox is <strong>not</strong> a tool for diving “as deep as you
             want.” The more oxygen you add to the mix, the
-            <strong>shallower your maximum operating depth (MOD)</strong> becomes,
-            because <strong>oxygen becomes toxic under pressure</strong>. Exceeding
-            safe partial pressures risks
-            <strong>oxygen toxicity</strong>, including
+            <strong>shallower your maximum operating depth (MOD)</strong>
+            becomes, because
+            <strong>oxygen becomes toxic under pressure</strong>. Exceeding safe
+            partial pressures risks <strong>oxygen toxicity</strong>, including
             <strong>CNS (central nervous system) oxygen toxicity</strong>—a
             serious emergency situation divers train to avoid. Your course and
             tables or computer define the MOD for each blend.
@@ -643,8 +657,8 @@
             typically drain a same-size nitrox cylinder in a
             <strong>similar time</strong>: your breathing rate and tank volume
             decide gas duration; nitrox changes the
-            <strong>decompression model / nitrogen side</strong>, not how fast you
-            empty the tank in minutes.
+            <strong>decompression model / nitrogen side</strong>, not how fast
+            you empty the tank in minutes.
           </p>
           <p>
             For practical tips on breathing rate and cylinder duration, see our
@@ -680,12 +694,13 @@
             discrete steps.
           </p>
           <p>
-            In practice, most tables assume a <strong>simplified profile</strong>
-            —often “square”: you go to a maximum depth, stay there for your
-            bottom time, then come up. Real fun dives on a reef or a wreck are
-            usually <strong>multi-level</strong>: you might spend part of the
-            dive deeper, then gradually shallower along a slope, a mooring line,
-            or during a long safety stop. Your nitrogen loading changes
+            In practice, most tables assume a
+            <strong>simplified profile</strong> —often “square”: you go to a
+            maximum depth, stay there for your bottom time, then come up. Real
+            fun dives on a reef or a wreck are usually
+            <strong>multi-level</strong>: you might spend part of the dive
+            deeper, then gradually shallower along a slope, a mooring line, or
+            during a long safety stop. Your nitrogen loading changes
             continuously with depth, not only with “deepest point + one number
             for time.”
           </p>
@@ -715,8 +730,8 @@
             In other words: the computer does not only care about
             <em>maximum depth</em> and a single timer—it tracks how your
             exposure evolves through the whole profile. For everyday
-            recreational diving, that matches reality better than a one-line table
-            entry.
+            recreational diving, that matches reality better than a one-line
+            table entry.
           </p>
           <p>
             Practical guide to using your computer in the water:
@@ -754,11 +769,13 @@
         <section>
           <h2 id="ndl-multi">NDL, Multiple Dives, and Depth Order</h2>
 
-          <h3>Repetitive dives: why NDL is usually shorter on dive 2 (and 3)</h3>
+          <h3>
+            Repetitive dives: why NDL is usually shorter on dive 2 (and 3)
+          </h3>
           <p>
             Your first dive of the day starts from a “clean” recreational
-            assumption: little or no leftover nitrogen from earlier diving. After
-            you surface, your body keeps <strong>off-gassing</strong>, but
+            assumption: little or no leftover nitrogen from earlier diving.
+            After you surface, your body keeps <strong>off-gassing</strong>, but
             depending on how deep/long the first dive was and how long you stay
             out of the water, some <strong>residual nitrogen</strong> remains
             before the next dive.
@@ -770,9 +787,9 @@
             would be for a first dive—because you are not starting from zero;
             you are adding new uptake on top of what is already there. Paper
             tables express this with <strong>letter groups</strong> and
-            <strong>surface-interval credit</strong>; a dive computer shows it as
-            a higher tissue load or less remaining no-deco time before you even
-            descend.
+            <strong>surface-interval credit</strong>; a dive computer shows it
+            as a higher tissue load or less remaining no-deco time before you
+            even descend.
           </p>
           <p>
             A <strong>longer surface interval</strong> reduces residual nitrogen
@@ -783,7 +800,8 @@
           </p>
 
           <p>
-            On a two- or three-tank day, <strong>how you order your dives</strong>
+            On a two- or three-tank day,
+            <strong>how you order your dives</strong>
             affects loading and margins. Divers are often taught to plan
             <strong>deeper dives first</strong> when planning similar gas mixes
             and conservative recreational profiles, and to respect surface
@@ -806,8 +824,8 @@
           <p>
             Agencies still teach table or equivalent planning in
             <strong>Open Water</strong>-level programs because the concepts are
-            foundational. At Chang Diving, the same ideas sit at the core of
-            how we brief real dives in Koh Chang. If you want to see how a full
+            foundational. At Chang Diving, the same ideas sit at the core of how
+            we brief real dives in Koh Chang. If you want to see how a full
             entry course frames theory and in-water skills, start from our
             <a href="/en/courses/open-water-diver/">Open Water Diver</a> page.
             If your theory feels rusty, our
@@ -823,20 +841,22 @@
         <section>
           <h2 id="ndl-honest">An Honest Note from the Dive Deck</h2>
           <p>
-            Instructors see it often: even experienced certified divers have only
-            a vague memory of <strong>NDL</strong> from their first course. Out
-            on the boat, planning sometimes shrinks to “follow the guide” and
-            “glance at the computer when it beeps.” That can work—until
-            conditions change, profiles get aggressive, or someone dives close to
-            limits without noticing.
+            Instructors see it often: even experienced certified divers have
+            only a vague memory of <strong>NDL</strong> from their first course.
+            Out on the boat, planning sometimes shrinks to “follow the guide”
+            and “glance at the computer when it beeps.” That can work—until
+            conditions change, profiles get aggressive, or someone dives close
+            to limits without noticing.
           </p>
           <p>
             You do not need to solve table math on a napkin to be a good diver.
             You <em>do</em> benefit from remembering that
-            <strong>NDL is not a trivia question—it is the frame your computer
-            uses to keep recreational dives inside no-decompression
-            planning</strong>. A few seconds of attention before and during each
-            dive beats forgetting the concept entirely.
+            <strong
+              >NDL is not a trivia question—it is the frame your computer uses
+              to keep recreational dives inside no-decompression
+              planning</strong
+            >. A few seconds of attention before and during each dive beats
+            forgetting the concept entirely.
           </p>
         </section>
 
@@ -923,7 +943,9 @@
                 >
               </li>
               <li>
-                <a href="/en/posts/scuba-knowledge/dive-logbook/">Dive Logbook</a>
+                <a href="/en/posts/scuba-knowledge/dive-logbook/"
+                  >Dive Logbook</a
+                >
               </li>
               <li>
                 <a href="/en/posts/tips-and-tricks/deep-diving/">Deep Diving</a>

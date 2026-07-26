@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gas Consumption & Management for SCUBA Diving Koh Chang</title>
     <meta
@@ -330,6 +331,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -356,7 +363,6 @@
         "headline": "Gas Consumption while SCUBA Diving",
         "alternativeHeadline": "Calculate SAC rate and gas planning for diving",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/gas-consumtion_big.webp",
@@ -364,7 +370,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Knowledge",
@@ -478,11 +483,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Gas Consumption & Management for Koh Chang Diving</h1>
-          <p>Master gas planning for reef and wreck diving</p>
-        </div>
       </div>
     </header>
 
@@ -499,7 +499,18 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="On this page">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Gas Consumption & Management for Koh Chang Diving
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Master gas planning for reef and wreck diving
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
             <a href="#gc-intro">Intro</a>
@@ -509,20 +520,7 @@
             <a href="#gc-calculator">Calculator</a>
           </div>
         </nav>
-        <h2
-          id="gc-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Gas Consumption & Management for Koh Chang SCUBA Diving
-        </h2>
+        <h2 id="gc-intro">💨 Why gas planning matters on Koh Chang</h2>
 
         <p>
           Whether you're diving Koh Chang's shallow reefs or planning a
@@ -762,7 +760,7 @@
             );
             border: 1px solid #0077b6;
             border-radius: 10px;
-            font-family: var(--font-sans), 'Roboto', sans-serif;
+            font-family: var(--font-sans), &quot;Roboto&quot;, sans-serif;
           "
         >
           <div
@@ -801,10 +799,18 @@
               <option value="metric" selected>bar &amp; meters (metric)</option>
               <option value="imperial">psi &amp; feet (imperial)</option>
             </select>
-            <p style="margin: 8px 0 0 0; font-size: 13px; color: #444; line-height: 1.45">
-              <strong>Depth</strong> in the slate row and in PO₂ / MOD / best mix uses
-              this setting. SAC also uses it for pressure (bar/psi), depth, and tank
-              (L / cu ft). O₂ % and max PPO₂ stay in <strong>bar</strong>.
+            <p
+              style="
+                margin: 8px 0 0 0;
+                font-size: 13px;
+                color: #444;
+                line-height: 1.45;
+              "
+            >
+              <strong>Depth</strong> in the slate row and in PO₂ / MOD / best
+              mix uses this setting. SAC also uses it for pressure (bar/psi),
+              depth, and tank (L / cu ft). O₂ % and max PPO₂ stay in
+              <strong>bar</strong>.
             </p>
           </div>
           <div
@@ -827,11 +833,20 @@
             >
               Quick unit converters
             </p>
-            <p style="margin: 0 0 14px 0; font-size: 13px; color: #555; line-height: 1.45">
-              Type in a field — linked fields update. Useful when coursework mixes metric
-              and imperial numbers. <strong>Body weight:</strong> many UK divers use
-              <strong>stone</strong>; US/UK also use <strong>pounds (lb)</strong> — both
-              convert to <strong>kg</strong> here.
+            <p
+              style="
+                margin: 0 0 14px 0;
+                font-size: 13px;
+                color: #555;
+                line-height: 1.45;
+              "
+            >
+              Type in a field — linked fields update. Useful when coursework
+              mixes metric and imperial numbers.
+              <strong>Body weight:</strong> many UK divers use
+              <strong>stone</strong>; US/UK also use
+              <strong>pounds (lb)</strong> — both convert to
+              <strong>kg</strong> here.
             </p>
             <div
               style="
@@ -849,13 +864,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   Depth
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Feet (ft)</label
                     >
                     <input
@@ -877,7 +904,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Meters (m)</label
                     >
                     <input
@@ -908,13 +940,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   Pressure
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >PSI</label
                     >
                     <input
@@ -936,7 +980,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Bar</label
                     >
                     <input
@@ -967,13 +1016,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   Volume (actual cu ft)
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Cubic feet (ft³)</label
                     >
                     <input
@@ -995,7 +1056,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Liters (L)</label
                     >
                     <input
@@ -1026,13 +1092,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   Body weight
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Stone (st)</label
                     >
                     <input
@@ -1054,7 +1132,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Pounds (lb)</label
                     >
                     <input
@@ -1076,7 +1159,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >Kilograms (kg)</label
                     >
                     <input
@@ -1097,30 +1185,54 @@
                     />
                   </div>
                 </div>
-                <p style="margin: 10px 0 0 0; font-size: 11px; color: #777; line-height: 1.35">
-                  Decimal stone is OK (e.g. 11.286 ≈ 11 st 4 lb). 1 stone = 14 lb (avoirdupois).
+                <p
+                  style="
+                    margin: 10px 0 0 0;
+                    font-size: 11px;
+                    color: #777;
+                    line-height: 1.35;
+                  "
+                >
+                  Decimal stone is OK (e.g. 11.286 ≈ 11 st 4 lb). 1 stone = 14
+                  lb (avoirdupois).
                 </p>
               </div>
             </div>
-            <p style="margin: 12px 0 0 0; font-size: 12px; color: #666; line-height: 1.4">
-              Volume uses 1 ft³ = 28.317 L (true cubic foot). Scuba tank “80 cu ft” labels
-              describe a <em>gas capacity</em> at rated pressure — not the same as liquid
-              ft³; use the SAC calculator above for tank pressure math.
+            <p
+              style="
+                margin: 12px 0 0 0;
+                font-size: 12px;
+                color: #666;
+                line-height: 1.4;
+              "
+            >
+              Volume uses 1 ft³ = 28.317 L (true cubic foot). Scuba tank “80 cu
+              ft” labels describe a <em>gas capacity</em> at rated pressure —
+              not the same as liquid ft³; use the SAC calculator above for tank
+              pressure math.
             </p>
           </div>
           <h3 style="margin: 0 0 8px 0; color: #004d80; font-size: 1.15rem">
             Planning slate — one segment calculator
           </h3>
-          <p style="margin: 0 0 1em 0; color: #333; font-size: 15px; line-height: 1.55">
+          <p
+            style="
+              margin: 0 0 1em 0;
+              color: #333;
+              font-size: 15px;
+              line-height: 1.55;
+            "
+          >
             Enter one stop or bottom segment (same columns as the table above;
-            <strong>depth</strong> is in <strong>meters or feet</strong> according to
-            the unit selector above) to get
-            <strong>Conv. F. (ata)</strong>, <strong>Volume</strong>,
-            <strong>PO₂</strong>, and approximate NOAA-style
-            <strong>CNS</strong> for that segment. Use it for each line you copy to
-            your written plan — for example the three scenarios:
-            <em>planned profile</em>, <em>5 m deeper by mistake</em>, and
-            <em>lost deco gas</em> (re-plan segments with new depth, time, or gas).
+            <strong>depth</strong> is in
+            <strong>meters or feet</strong> according to the unit selector
+            above) to get <strong>Conv. F. (ata)</strong>,
+            <strong>Volume</strong>, <strong>PO₂</strong>, and approximate
+            NOAA-style <strong>CNS</strong> for that segment. Use it for each
+            line you copy to your written plan — for example the three
+            scenarios: <em>planned profile</em>, <em>5 m deeper by mistake</em>,
+            and <em>lost deco gas</em> (re-plan segments with new depth, time,
+            or gas).
           </p>
           <p style="margin: 0 0 1em 0; font-size: 15px">
             <a
@@ -1155,9 +1267,9 @@
               color: #665500;
             "
           >
-            <strong>CNS values are estimates</strong> (NOAA single-exposure model,
-            constant PO₂). They do not replace your training, tables, or dive
-            computer. Below 0.5 bar PO₂, CNS load is taken as 0 here.
+            <strong>CNS values are estimates</strong> (NOAA single-exposure
+            model, constant PO₂). They do not replace your training, tables, or
+            dive computer. Below 0.5 bar PO₂, CNS load is taken as 0 here.
           </p>
           <div style="overflow-x: auto">
             <table
@@ -1179,8 +1291,12 @@
                   <th style="padding: 10px 8px; text-align: left">
                     Depth (<span id="gcSlateDepthUnitLabel">m</span>)
                   </th>
-                  <th style="padding: 10px 8px; text-align: left">Time (min)</th>
-                  <th style="padding: 10px 8px; text-align: left">SAC (L/min)</th>
+                  <th style="padding: 10px 8px; text-align: left">
+                    Time (min)
+                  </th>
+                  <th style="padding: 10px 8px; text-align: left">
+                    SAC (L/min)
+                  </th>
                   <th style="padding: 10px 8px; text-align: left">Gas</th>
                   <th style="padding: 10px 8px; text-align: left">Conv. F.</th>
                   <th style="padding: 10px 8px; text-align: left">Volume</th>
@@ -1316,26 +1432,33 @@
               </tbody>
             </table>
           </div>
-          <p style="margin: 1em 0 0 0; font-size: 15px; line-height: 1.55; color: #333">
-            For full multilevel and decompression schedules (not just this one-segment
-            classroom row), see
+          <p
+            style="
+              margin: 1em 0 0 0;
+              font-size: 15px;
+              line-height: 1.55;
+              color: #333;
+            "
+          >
+            For full multilevel and decompression schedules (not just this
+            one-segment classroom row), see
             <a
               href="https://www.hhssoftware.com/multideco/"
               target="_blank"
               rel="noopener noreferrer"
               >MultiDeco</a
             >
-            — recommended decompression dive planning software (Bühlmann ZHL-16 with
-            gradient factors and VPM-B; desktop and mobile). Use only with appropriate
-            technical training.
+            — recommended decompression dive planning software (Bühlmann ZHL-16
+            with gradient factors and VPM-B; desktop and mobile). Use only with
+            appropriate technical training.
           </p>
         </div>
 
         <h2 id="gc-formulas">Calculate the surrounding pressure (ATA)</h2>
 
         <p>
-          Ambient pressure at depth is covered in every entry-level course:
-          add <strong>1 bar</strong> atmosphere at the surface, then roughly
+          Ambient pressure at depth is covered in every entry-level course: add
+          <strong>1 bar</strong> atmosphere at the surface, then roughly
           <strong>1 bar every 10 m</strong> of seawater —
           <strong>ATA = (depth in m) ÷ 10 + 1</strong> (metric rule of thumb).
         </p>
@@ -1349,7 +1472,10 @@
           <a href="#gc-calculator">SAC calculator</a> on this page.
         </p>
         <p>
-          <strong>SAC (L/min) = (bar used × tank volume in L) ÷ (time in min × ATA)</strong>
+          <strong
+            >SAC (L/min) = (bar used × tank volume in L) ÷ (time in min ×
+            ATA)</strong
+          >
         </p>
         <p>
           Example: 30 bar used from an 11.1 L tank in 10 min at 10 m (ATA = 2):
@@ -1360,16 +1486,16 @@
 
         <p>
           Gas volume at depth (or to plan a segment) from SAC:
-          <strong>volume (L) = SAC × time (min) × ATA</strong>. Example:
-          20 L/min × 15 min × 4 ATA = <strong>1200 L</strong>.
+          <strong>volume (L) = SAC × time (min) × ATA</strong>. Example: 20
+          L/min × 15 min × 4 ATA = <strong>1200 L</strong>.
         </p>
 
         <h2>Calculate the PO₂</h2>
 
         <p>
           Partial pressure of oxygen:
-          <strong>PPO₂ = fraction of O₂ × ATA</strong>. Example Nitrox 32 at 30 m
-          (4 ATA): 0.32 × 4 = <strong>1.28 bar</strong> PO₂.
+          <strong>PPO₂ = fraction of O₂ × ATA</strong>. Example Nitrox 32 at 30
+          m (4 ATA): 0.32 × 4 = <strong>1.28 bar</strong> PO₂.
         </p>
 
         <h2>Calculate the maximum operating depth (MOD)</h2>
@@ -1598,7 +1724,8 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Planned depth (<span id="gcPo2DepthUnit">meters</span>):</label
+                  >Planned depth (<span id="gcPo2DepthUnit">meters</span
+                  >):</label
                 >
                 <input
                   type="number"
@@ -1727,7 +1854,8 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >Planned depth (<span id="gcBestDepthUnit">meters</span>):</label
+                  >Planned depth (<span id="gcBestDepthUnit">meters</span
+                  >):</label
                 >
                 <input
                   type="number"
@@ -1846,7 +1974,9 @@
                   return;
                 }
                 const psi = parseFloat(raw);
-                barEl.value = Number.isFinite(psi) ? qcFormatNum(psi / k, 4) : "";
+                barEl.value = Number.isFinite(psi)
+                  ? qcFormatNum(psi / k, 4)
+                  : "";
               } else {
                 const raw = barEl.value.trim();
                 if (raw === "") {
@@ -1854,7 +1984,9 @@
                   return;
                 }
                 const bar = parseFloat(raw);
-                psiEl.value = Number.isFinite(bar) ? qcFormatNum(bar * k, 2) : "";
+                psiEl.value = Number.isFinite(bar)
+                  ? qcFormatNum(bar * k, 2)
+                  : "";
               }
             } finally {
               qcLockPressure = false;
@@ -1876,7 +2008,9 @@
                   return;
                 }
                 const cf = parseFloat(raw);
-                lEl.value = Number.isFinite(cf) ? qcFormatNum(cf * L_PER_CUFT, 3) : "";
+                lEl.value = Number.isFinite(cf)
+                  ? qcFormatNum(cf * L_PER_CUFT, 3)
+                  : "";
               } else {
                 const raw = lEl.value.trim();
                 if (raw === "") {
@@ -1884,7 +2018,9 @@
                   return;
                 }
                 const L = parseFloat(raw);
-                cfEl.value = Number.isFinite(L) ? qcFormatNum(L / L_PER_CUFT, 4) : "";
+                cfEl.value = Number.isFinite(L)
+                  ? qcFormatNum(L / L_PER_CUFT, 4)
+                  : "";
               }
             } finally {
               qcLockVolume = false;
@@ -2038,7 +2174,9 @@
             const pressureInput = parseFloat(
               document.getElementById("sacBar").value
             );
-            const depthIn = parseFloat(document.getElementById("sacDepth").value);
+            const depthIn = parseFloat(
+              document.getElementById("sacDepth").value
+            );
             const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const time = parseFloat(document.getElementById("sacTime").value);
             const tankIn = parseFloat(document.getElementById("sacTank").value);
@@ -2087,7 +2225,9 @@
             const oxygen = parseFloat(
               document.getElementById("po2Oxygen").value
             );
-            const depthIn = parseFloat(document.getElementById("po2Depth").value);
+            const depthIn = parseFloat(
+              document.getElementById("po2Depth").value
+            );
             const depthM = gcDepthInputToMeters(depthIn, isImperial);
             const result = document.getElementById("po2Result");
 
@@ -2270,9 +2410,13 @@
 
           function calculateDecoSlateRow() {
             const isImperial = gcGetImperial();
-            const depthIn = parseFloat(document.getElementById("slateDepth").value);
+            const depthIn = parseFloat(
+              document.getElementById("slateDepth").value
+            );
             const depthM = gcDepthInputToMeters(depthIn, isImperial);
-            const timeIn = parseFloat(document.getElementById("slateTime").value);
+            const timeIn = parseFloat(
+              document.getElementById("slateTime").value
+            );
             const sacIn = parseFloat(document.getElementById("slateSac").value);
             const gasStr = document.getElementById("slateGas").value;
             const elC = document.getElementById("slateOutConv");
@@ -2290,8 +2434,7 @@
               depthM <= 120;
             const timeOk =
               Number.isFinite(timeIn) && timeIn >= 0 && timeIn <= 999;
-            const sacOk =
-              Number.isFinite(sacIn) && sacIn > 0 && sacIn < 200;
+            const sacOk = Number.isFinite(sacIn) && sacIn > 0 && sacIn < 200;
             const gasOk = fo2 !== null && fo2 >= 0.1 && fo2 <= 1;
 
             if (!depthOk || !timeOk || !sacOk || !gasOk) {

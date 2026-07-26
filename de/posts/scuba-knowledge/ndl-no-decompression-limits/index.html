@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       No-Decompression Limits (NDL) erklärt – Tauchtabellen vs. Tauchcomputer |
@@ -346,6 +347,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -353,9 +360,7 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript
-      ><link rel="stylesheet" href="/style.min.css" />
-    </noscript>
+    <noscript><link rel="stylesheet" href="/style.min.css" /> </noscript>
 
     <script type="application/ld+json">
       {
@@ -364,7 +369,6 @@
         "headline": "No-Decompression Limits (NDL) erklärt – Tauchtabellen vs. Tauchcomputer",
         "alternativeHeadline": "NDL verstehen, Sporttauch-Planung und warum Tauchcomputer bei Mehrprofil-Tauchgängen entscheidend sind",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_big.webp",
@@ -372,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchwissen",
@@ -443,7 +446,11 @@
       }
     </script>
 
-    <link rel="preload" href="/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_small.webp" as="image" />
+    <link
+      rel="preload"
+      href="/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_small.webp"
+      as="image"
+    />
   </head>
   <body>
     <header>
@@ -456,9 +463,15 @@
 
         <div class="lang-switch">
           <button class="menu-toggle">☰ Menü</button>
-          <a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/">🇬🇧</a>
-          <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">🇩🇪</a>
-          <a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/">🇹🇭</a>
+          <a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/"
+            >🇬🇧</a
+          >
+          <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+            >🇩🇪</a
+          >
+          <a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
+            >🇹🇭</a
+          >
 
           <div class="dropdown-menu">
             <a href="/de/courses/">Kurse</a>
@@ -476,7 +489,9 @@
 
         <picture style="aspect-ratio: 3 / 2">
           <source
-            srcset="/img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_big.webp"
+            srcset="
+              /img/posts/no-decompression_limits_ndl_explained-tables_vs_dive_computers_big.webp
+            "
             media="(min-width: 768px)"
             type="image/webp"
           />
@@ -489,14 +504,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>No-Decompression Limits (NDL)</h1>
-          <p>
-            Was sie bedeuten, warum Tabellen nur Teil der Geschichte sind und
-            wie moderne Tauchcomputer einzuordnen sind
-          </p>
-        </div>
       </div>
     </header>
 
@@ -514,7 +521,19 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box grid-container">
-        <nav class="page-jump-nav" aria-label="Abschnitte auf dieser Seite">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          No-Decompression Limits (NDL)
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Was sie bedeuten, warum Tabellen nur Teil der Geschichte sind und wie
+          moderne Tauchcomputer einzuordnen sind
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Abschnitte auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
             <a href="#ndl-intro">Einleitung</a>
@@ -528,42 +547,32 @@
             <a href="#ndl-takeaways">Das Wichtigste</a>
           </div>
         </nav>
-        <h2
-          id="ndl-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          No-Decompression Limits (NDL) – Konzepte, nicht nur Zahlen
+
+        <h2 id="ndl-intro">
+          🧠 Warum NDL-Konzepte wichtiger sind als auswendig gelernte Zahlen
         </h2>
 
         <p>
           Wenn du vor Kurzem mit dem Tauchen angefangen hast, hast du die Idee
           einer <strong>no-decompression limit (NDL)</strong> vermutlich in der
-          Theorie und an deiner ersten Kunststoff- oder Papiertabelle kennengelernt.
-          Wenn du schon Jahre tauchst, erinnerst du dich am Kürzel vielleicht kaum
-          noch – und trotzdem zeigt dir dein
+          Theorie und an deiner ersten Kunststoff- oder Papiertabelle
+          kennengelernt. Wenn du schon Jahre tauchst, erinnerst du dich am
+          Kürzel vielleicht kaum noch – und trotzdem zeigt dir dein
           <strong>Tauchcomputer</strong> bei jedem einzelnen Tauchgang die
           verbleibende „No-Deco“-Zeit. Dieser Beitrag erklärt in klarer Sprache,
           was NDL bedeutet, wie es mit
           <strong>Mehrprofil-Tauchen</strong> zusammenhängt und warum das
-          „tabellenbasierte“ Denken noch relevant ist, auch wenn kaum noch jemand
-          auf Papier plant.
+          „tabellenbasierte“ Denken noch relevant ist, auch wenn kaum noch
+          jemand auf Papier plant.
         </p>
 
         <div class="note-box">
           <p style="margin: 0">
-            <strong>Nur zu Bildungszwecken.</strong> Dieser Beitrag ersetzt keine
-            offiziellen Unterlagen, Tabellen oder Ausbildungsstandards deiner
-            Organisation. Halte dich immer an die Planungsregeln aus deiner
-            Ausbildung, die Herstellervorgaben deines Computers und örtliche
-            Vorschriften.
+            <strong>Nur zu Bildungszwecken.</strong> Dieser Beitrag ersetzt
+            keine offiziellen Unterlagen, Tabellen oder Ausbildungsstandards
+            deiner Organisation. Halte dich immer an die Planungsregeln aus
+            deiner Ausbildung, die Herstellervorgaben deines Computers und
+            örtliche Vorschriften.
           </p>
         </div>
 
@@ -574,33 +583,35 @@
           <p>
             Beim Sporttauchen mit Luft oder Nitrox ist die
             <strong>no-decompression limit</strong> (häufig
-            <strong>Nullzeit</strong> genannt) die maximale Zeit, die du bei einer
-            bestimmten Belastung (Tiefe und Atemgas) verbringen darfst, während du
-            noch in üblicher Sporttaucher-Weise zur Oberfläche aufsteigen
-            darfst – typischerweise mit einem
-            <strong>Sicherheitsstopp</strong>, aber
-            <em>ohne</em> verpflichtende gestaffelte Dekompressionsstopps, die
-            entstehen, wenn ein geplantes No-Decompression-Profil überschritten
-            wird.
+            <strong>Nullzeit</strong> genannt) die maximale Zeit, die du bei
+            einer bestimmten Belastung (Tiefe und Atemgas) verbringen darfst,
+            während du noch in üblicher Sporttaucher-Weise zur Oberfläche
+            aufsteigen darfst – typischerweise mit einem
+            <strong>Sicherheitsstopp</strong>, aber <em>ohne</em> verpflichtende
+            gestaffelte Dekompressionsstopps, die entstehen, wenn ein geplantes
+            No-Decompression-Profil überschritten wird.
           </p>
           <p>
             Dein Körper lädt während des Tauchgangs Inertgas (bei normaler Luft
             vor allem Stickstoff). Bleibst du innerhalb der NDL für dein Profil,
-            geht der Plan davon aus, dass du diesen Stickstoff bei kontrolliertem
-            Aufstieg und Oberflächenintervall abgeben kannst. Überschreitest du,
-            was der Plan erlaubt, gerätst du in Bereiche, in denen
+            geht der Plan davon aus, dass du diesen Stickstoff bei
+            kontrolliertem Aufstieg und Oberflächenintervall abgeben kannst.
+            Überschreitest du, was der Plan erlaubt, gerätst du in Bereiche, in
+            denen
             <strong>Dekompressionspflichten</strong> entstehen können –
             <strong>das</strong> sollten Sporttaucher ohne technische
-            Dekompressionsausbildung und passende Ausrüstung unbedingt vermeiden.
+            Dekompressionsausbildung und passende Ausrüstung unbedingt
+            vermeiden.
           </p>
 
           <h3>Luft vs. Nitrox – dieselbe NDL-Logik, andere Grenzen</h3>
           <p>
             <strong>Nitrox</strong> (angereicherte Luft) wird ebenfalls für
             <strong>No-Decompression-Sporttauchen</strong> geplant, aber
-            Tauchcomputer oder Tabelle müssen zum <strong>tatsächlichen
-            Gasgemisch</strong> passen. Ein höherer Sauerstoffanteil bedeutet
-            einen <strong>geringeren Stickstoffanteil</strong> im Atemgas – in
+            Tauchcomputer oder Tabelle müssen zum
+            <strong>tatsächlichen Gasgemisch</strong> passen. Ein höherer
+            Sauerstoffanteil bedeutet einen
+            <strong>geringeren Stickstoffanteil</strong> im Atemgas – in
             <em>derselben Tiefe</em> nimmst du typischerweise
             <strong>weniger Stickstoff</strong> auf als mit Luft. Deshalb kann
             deine <strong>Nullzeit bzw. No-Decompression-Erlaubnis</strong> (was
@@ -610,9 +621,11 @@
           </p>
           <div class="note-box">
             <p style="margin: 0 0 0.75em">
-              <strong>Beispiel (illustrativ – exakte Grenzen hängen von Tabelle
-              oder Computermodell ab):</strong> Für ein
-              <strong>Rechteckprofil in 18 m</strong> liegen typische
+              <strong
+                >Beispiel (illustrativ – exakte Grenzen hängen von Tabelle oder
+                Computermodell ab):</strong
+              >
+              Für ein <strong>Rechteckprofil in 18 m</strong> liegen typische
               Planungswerte im Sporttauchbereich bei etwa
               <strong>56 Minuten</strong> maximaler No-Decompression-Zeit mit
               <strong>Luft (21 % O₂)</strong>, gegenüber etwa
@@ -626,8 +639,9 @@
           <p>
             Nitrox ist <strong>kein</strong> Mittel, um „so tief zu tauchen, wie
             du willst“. Je mehr Sauerstoff du ins Gemisch gibst, desto
-            <strong>flacher wird die maximal zulässige Betriebstiefe (MOD)</strong>,
-            weil <strong>Sauerstoff unter Druck toxisch wird</strong>. Werden
+            <strong
+              >flacher wird die maximal zulässige Betriebstiefe (MOD)</strong
+            >, weil <strong>Sauerstoff unter Druck toxisch wird</strong>. Werden
             sichere Partialdrücke überschritten, steigt das Risiko einer
             <strong>Sauerstoffvergiftung</strong>, einschließlich
             <strong>CNS-Sauerstofftoxizität</strong> (ZNS) – ein schwerer
@@ -641,24 +655,26 @@
                 1,4&nbsp;bar maximal zulässigem Sauerstoffpartialdruck –
                 Organisationen und Tabellen können abweichen):</strong
               >
-              Bei <strong>Luft (21&nbsp;% O₂)</strong> liegt die MOD typischerweise
-              bei etwa <strong>56&nbsp;m</strong>, bei
+              Bei <strong>Luft (21&nbsp;% O₂)</strong> liegt die MOD
+              typischerweise bei etwa <strong>56&nbsp;m</strong>, bei
               <strong>EAN40 (40&nbsp;% O₂)</strong> bei etwa
-              <strong>25&nbsp;m</strong>. Mehr Sauerstoff im Gemisch bedeutet hier
-              eine <em>flachere</em> MOD, nicht eine tiefere.
+              <strong>25&nbsp;m</strong>. Mehr Sauerstoff im Gemisch bedeutet
+              hier eine <em>flachere</em> MOD, nicht eine tiefere.
             </p>
           </div>
           <p>
             Ein weiteres Missverständnis:
             <strong>„Mit Nitrox kann ich länger tauchen“</strong> stimmt nur
-            teilweise. Oft ist gemeint: <strong>mehr Zeit innerhalb der NDL</strong>
+            teilweise. Oft ist gemeint:
+            <strong>mehr Zeit innerhalb der NDL</strong>
             in einer bestimmten Tiefe – nicht, dass die
-            <strong>Flasche länger hält</strong>. Leerst du eine Luftflasche in 20
-            Minuten bei einer bestimmten Belastung, leerst du eine gleich große
-            Nitrox-Flasche in der Regel in <strong>ähnlicher Zeit</strong>:
-            Atemminutenvolumen und Flaschenvolumen bestimmen die Gasdauer; Nitrox
-            ändert die <strong>Dekompressionsmodelle / Stickstoffseite</strong>,
-            nicht wie schnell die Flasche in Minuten leer wird.
+            <strong>Flasche länger hält</strong>. Leerst du eine Luftflasche in
+            20 Minuten bei einer bestimmten Belastung, leerst du eine gleich
+            große Nitrox-Flasche in der Regel in
+            <strong>ähnlicher Zeit</strong>: Atemminutenvolumen und
+            Flaschenvolumen bestimmen die Gasdauer; Nitrox ändert die
+            <strong>Dekompressionsmodelle / Stickstoffseite</strong>, nicht wie
+            schnell die Flasche in Minuten leer wird.
           </p>
           <p>
             Praxis-Tipps zu Atemfrequenz und Flaschendauer findest du in unserem
@@ -674,7 +690,8 @@
           <p>
             Zur Einordnung: Wie sich ein
             <strong>Sicherheitsstopp</strong> von einem verpflichtenden
-            <strong>Dekompressionsstopp</strong> unterscheidet, erklären wir hier:
+            <strong>Dekompressionsstopp</strong> unterscheidet, erklären wir
+            hier:
             <a href="/de/posts/scuba-knowledge/safety-stop/"
               >Sicherheitsstopp beim Gerätetauchen</a
             >.
@@ -684,10 +701,13 @@
         <hr />
 
         <section>
-          <h2 id="ndl-tables">Warum klassische Tauchtabellen heute „begrenzt“ wirken</h2>
+          <h2 id="ndl-tables">
+            Warum klassische Tauchtabellen heute „begrenzt“ wirken
+          </h2>
           <p>
             Sporttauch-Tabellen waren ein großer Schritt für die Sicherheit: Sie
-            gaben allen dieselben Regeln zu <strong>maximaler Grundzeit</strong>,
+            gaben allen dieselben Regeln zu
+            <strong>maximaler Grundzeit</strong>,
             <strong>Wiederholungsgruppen</strong> und
             <strong>Oberflächenintervallen</strong> zwischen den Tauchgängen. In
             der Ausbildung haben sie weiterhin Wert, weil sie dich zum
@@ -695,13 +715,13 @@
           </p>
           <p>
             In der Praxis gehen die meisten Tabellen von einem
-            <strong>vereinfachten Profil</strong> aus – oft „rechteckig“: maximal
-            Tiefe, dort die Grundzeit, dann hoch. Echte Spaß-Tauchgänge am Riff
-            oder Wrack sind meist <strong>mehrstufig</strong>: du bist teils
-            tiefer, dann entlang eines Hangs, einer Ankerleine oder in einem
-            langen Sicherheitsstopp flacher. Die Stickstoffbelastung ändert sich
-            kontinuierlich mit der Tiefe – nicht nur über „tiefster Punkt + eine
-            Zeit“.
+            <strong>vereinfachten Profil</strong> aus – oft „rechteckig“:
+            maximal Tiefe, dort die Grundzeit, dann hoch. Echte Spaß-Tauchgänge
+            am Riff oder Wrack sind meist <strong>mehrstufig</strong>: du bist
+            teils tiefer, dann entlang eines Hangs, einer Ankerleine oder in
+            einem langen Sicherheitsstopp flacher. Die Stickstoffbelastung
+            ändert sich kontinuierlich mit der Tiefe – nicht nur über „tiefster
+            Punkt + eine Zeit“.
           </p>
           <p>
             Tabellen bleiben <strong>pädagogisch stark</strong>, sind aber ein
@@ -768,7 +788,10 @@
         <section>
           <h2 id="ndl-multi">NDL, mehrere Tauchgänge und Tiefenreihenfolge</h2>
 
-          <h3>Wiederholungstauchgänge: Warum die NDL auf Tauchgang 2 (und 3) oft kürzer ist</h3>
+          <h3>
+            Wiederholungstauchgänge: Warum die NDL auf Tauchgang 2 (und 3) oft
+            kürzer ist
+          </h3>
           <p>
             Dein erster Tauchgang des Tages geht von einer „sauberen“
             Sporttauch-Annahme aus: wenig oder kein Reststickstoff aus früherem
@@ -778,29 +801,32 @@
             <strong>Reststickstoff</strong> im Spiel.
           </p>
           <p>
-            Beim <strong>Wiederholungstauchgang</strong> zählt diese Restlast. Bei
-            <strong>ähnlich geplanter Tiefe</strong> ist deine
-            <strong>Nullzeit typischerweise kürzer</strong> als beim Ersttauchgang
-            – weil du nicht bei null startest, sondern neue Belastung aufschichtest.
-            Papier-Tabellen drücken das mit <strong>Buchstabengruppen</strong> und
+            Beim <strong>Wiederholungstauchgang</strong> zählt diese Restlast.
+            Bei <strong>ähnlich geplanter Tiefe</strong> ist deine
+            <strong>Nullzeit typischerweise kürzer</strong> als beim
+            Ersttauchgang – weil du nicht bei null startest, sondern neue
+            Belastung aufschichtest. Papier-Tabellen drücken das mit
+            <strong>Buchstabengruppen</strong> und
             <strong>Oberflächenintervall-Gutschrift</strong> aus; der Computer
-            zeigt es als höhere Gewebelast oder weniger verbleibende No-Deco-Zeit,
-            noch bevor du abtauchst.
+            zeigt es als höhere Gewebelast oder weniger verbleibende
+            No-Deco-Zeit, noch bevor du abtauchst.
           </p>
           <p>
             Ein <strong>längeres Oberflächenintervall</strong> reduziert
-            Reststickstoff und kann die erlaubte Zeit näher an „Ersttauchgang des
-            Tages“ bringen – die konkreten Zahlen kommen aber immer von
-            <strong>deinem Plan, Gemisch und Gerät</strong>, nicht von Faustregeln.
+            Reststickstoff und kann die erlaubte Zeit näher an „Ersttauchgang
+            des Tages“ bringen – die konkreten Zahlen kommen aber immer von
+            <strong>deinem Plan, Gemisch und Gerät</strong>, nicht von
+            Faustregeln.
           </p>
 
           <p>
             An einem Zwei- oder Drei-Flaschen-Tag beeinflusst
-            <strong>die Reihenfolge der Tauchgänge</strong> Belastung und Puffer.
-            Oft wird gelehrt, bei ähnlichen Gemischen und konservativen
-            Sporttauch-Profilen zuerst die <strong>tieferen Tauchgänge</strong> zu
-            planen und Oberflächenintervalle sowie Computer-Freigaben vor dem
-            nächsten Gang zu respektieren.
+            <strong>die Reihenfolge der Tauchgänge</strong> Belastung und
+            Puffer. Oft wird gelehrt, bei ähnlichen Gemischen und konservativen
+            Sporttauch-Profilen zuerst die
+            <strong>tieferen Tauchgänge</strong> zu planen und
+            Oberflächenintervalle sowie Computer-Freigaben vor dem nächsten Gang
+            zu respektieren.
           </p>
           <p>
             Das hängt direkt mit NDL-Denken zusammen: Du managst die
@@ -816,13 +842,14 @@
         <section>
           <h2 id="ndl-owd">Wo du die Grundlagen lernst</h2>
           <p>
-            Organisationen unterrichten in <strong>Open-Water</strong>-Programmen
-            nach wie vor Tabellen- oder gleichwertige Planung – die Konzepte sind
-            fundamental. Bei Chang Diving stecken dieselben Ideen in jedem Briefing
-            für echte Tauchgänge auf Koh Chang. Wie ein kompletter Einstiegskurs
-            Theorie und Wasserfertigkeiten rahmt, siehst du auf unserer Seite
-            <a href="/de/courses/open-water-diver/">Open Water Diver</a>. Wenn die
-            Theorie eingerostet ist, führt dich unser
+            Organisationen unterrichten in
+            <strong>Open-Water</strong>-Programmen nach wie vor Tabellen- oder
+            gleichwertige Planung – die Konzepte sind fundamental. Bei Chang
+            Diving stecken dieselben Ideen in jedem Briefing für echte
+            Tauchgänge auf Koh Chang. Wie ein kompletter Einstiegskurs Theorie
+            und Wasserfertigkeiten rahmt, siehst du auf unserer Seite
+            <a href="/de/courses/open-water-diver/">Open Water Diver</a>. Wenn
+            die Theorie eingerostet ist, führt dich unser
             <a href="/de/posts/scuba-knowledge/theory-review/"
               >Theorie-Review</a
             >
@@ -837,18 +864,20 @@
           <p>
             Das sehen Instructorinnen und Instructors oft: Selbst erfahrene
             zertifizierte Taucher erinnern sich an <strong>NDL</strong> nur noch
-            vage aus dem ersten Kurs. Auf dem Boot schrumpft die Planung manchmal
-            auf „Guide folgen“ und „Computer ansehen, wenn es piept“. Das kann
-            funktionieren – bis sich Bedingungen ändern, Profile sportlicher
-            werden oder jemand unbemerkt nah an Grenzen taucht.
+            vage aus dem ersten Kurs. Auf dem Boot schrumpft die Planung
+            manchmal auf „Guide folgen“ und „Computer ansehen, wenn es piept“.
+            Das kann funktionieren – bis sich Bedingungen ändern, Profile
+            sportlicher werden oder jemand unbemerkt nah an Grenzen taucht.
           </p>
           <p>
-            Du musst keine Tabellenrechnung auf der Serviette lösen, um ein guter
-            Taucher zu sein. Du profitierst aber davon, dir zu merken:
-            <strong>NDL ist keine Schätzfrage – sie ist der Rahmen, den dein
-            Computer nutzt, um Sporttauchgänge in No-Decompression-Planung zu
-            halten</strong>. Ein paar Sekunden Aufmerksamkeit vor und während jedem
-            Tauchgang schlagen komplettes Vergessen des Konzepts.
+            Du musst keine Tabellenrechnung auf der Serviette lösen, um ein
+            guter Taucher zu sein. Du profitierst aber davon, dir zu merken:
+            <strong
+              >NDL ist keine Schätzfrage – sie ist der Rahmen, den dein Computer
+              nutzt, um Sporttauchgänge in No-Decompression-Planung zu
+              halten</strong
+            >. Ein paar Sekunden Aufmerksamkeit vor und während jedem Tauchgang
+            schlagen komplettes Vergessen des Konzepts.
           </p>
         </section>
 
@@ -876,7 +905,8 @@
               <strong>was der Computer</strong> macht.
             </li>
             <li>
-              An Mehrflaschen-Tagen zählen <strong>Tiefenreihenfolge</strong> und
+              An Mehrflaschen-Tagen zählen
+              <strong>Tiefenreihenfolge</strong> und
               <strong>Oberflächenintervalle</strong> weiter – siehe auch
               <a href="/de/posts/tips-and-tricks/deep-diving/">Tieftauchen</a>.
             </li>
@@ -886,7 +916,8 @@
             <strong>Smart tauchen auf Koh Chang:</strong> bring einen
             zuverlässigen Computer mit, plane konservativ und frische die
             Open-Water-Theorie auf, wenn sie unscharf wirkt – dann bleiben
-            Spaß-Tauchgänge näher an dem, wofür deine Zertifizierung gedacht ist.
+            Spaß-Tauchgänge näher an dem, wofür deine Zertifizierung gedacht
+            ist.
           </p>
 
           <div
@@ -919,7 +950,9 @@
                 >
               </li>
               <li>
-                <a href="/de/posts/scuba-knowledge/nitrox-info/">Warum Nitrox</a>
+                <a href="/de/posts/scuba-knowledge/nitrox-info/"
+                  >Warum Nitrox</a
+                >
               </li>
               <li>
                 <a href="/de/posts/scuba-knowledge/gas-consumption/"
@@ -927,7 +960,9 @@
                 >
               </li>
               <li>
-                <a href="/de/posts/scuba-knowledge/safety-stop/">Sicherheitsstopp</a>
+                <a href="/de/posts/scuba-knowledge/safety-stop/"
+                  >Sicherheitsstopp</a
+                >
               </li>
               <li>
                 <a href="/de/posts/scuba-knowledge/theory-review/"

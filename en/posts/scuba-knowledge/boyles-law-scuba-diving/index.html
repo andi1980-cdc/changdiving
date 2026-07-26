@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Scuba Diving Physics – Pressure &amp; Boyle’s Law Explained | Real Diving
@@ -393,6 +394,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -409,7 +416,6 @@
         "headline": "Scuba Diving Physics – Pressure & Boyle’s Law Explained",
         "alternativeHeadline": "Real diving examples: buoyancy, gas use and safe ascents",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/scuba-diving-physics-pressure-boyles-law_big.webp",
@@ -417,7 +423,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Diving Knowledge",
@@ -512,15 +517,18 @@
           <a
             href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
             hreflang="en"
-            >🇬🇧</a>
+            >🇬🇧</a
+          >
           <a
             href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
             hreflang="de"
-            >🇩🇪</a>
+            >🇩🇪</a
+          >
           <a
             href="/th/posts/scuba-knowledge/boyles-law-scuba-diving/"
             hreflang="th"
-            >🇹🇭</a>
+            >🇹🇭</a
+          >
 
           <div class="dropdown-menu">
             <a href="/en/courses/">Courses</a>
@@ -538,7 +546,9 @@
 
         <picture style="aspect-ratio: 3 / 2">
           <source
-            srcset="/img/posts/scuba-diving-physics-pressure-boyles-law_big.webp"
+            srcset="
+              /img/posts/scuba-diving-physics-pressure-boyles-law_big.webp
+            "
             media="(min-width: 768px)"
             type="image/webp"
           />
@@ -551,11 +561,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Scuba Diving Physics &amp; Boyle’s Law</h1>
-          <p>Pressure, buoyancy and real dives — explained for everyday divers</p>
-        </div>
       </div>
     </header>
 
@@ -569,9 +574,19 @@
         <a href="/en/posts/straight-talk/">Straight talk</a>
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
-
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="On this page">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Scuba Diving Physics &amp; Boyle’s Law
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Pressure, buoyancy and real dives — explained for everyday divers
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
             <a href="#sdp-intro">Intro</a>
@@ -585,28 +600,15 @@
           </div>
         </nav>
 
-        <h2
-          id="sdp-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          🧠 Scuba Diving Physics – Pressure &amp; Boyle’s Law (Real Examples)
-        </h2>
+        <h2 id="sdp-intro">🧠 Why pressure physics matters underwater</h2>
 
         <p>
           Most divers learn <strong>skills</strong> first — but fewer pause to
           picture <strong>what the water is actually doing</strong> to the gas
           they carry and breathe. Yet every metre up or down, and every breath,
-          follows simple physics. When you grasp
-          <strong>pressure</strong> and <strong>Boyle’s Law</strong>, buoyancy,
-          gas use and ascents start to make sense instead of feeling like luck.
+          follows simple physics. When you grasp <strong>pressure</strong> and
+          <strong>Boyle’s Law</strong>, buoyancy, gas use and ascents start to
+          make sense instead of feeling like luck.
         </p>
 
         <p>That understanding usually improves:</p>
@@ -619,8 +621,8 @@
 
         <p>
           This article stays <strong>practical</strong> — part of our
-          <a href="/en/posts/scuba-knowledge/">Scuba Knowledge</a> series:
-          short theory, then patterns you recognise on
+          <a href="/en/posts/scuba-knowledge/">Scuba Knowledge</a> series: short
+          theory, then patterns you recognise on
           <a href="/en/dive-sites/">Koh Chang dive sites</a> — from shallow
           reefs to the
           <a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang wreck</a>. For
@@ -700,10 +702,9 @@
 
           <p>
             <strong>Fresh water</strong> is slightly less dense: for precision
-            work people sometimes use about
-            <strong>10.3 m per 1 bar</strong> — your course and computer handle
-            the details; the <strong>idea</strong> is the same: deeper equals
-            higher pressure.
+            work people sometimes use about <strong>10.3 m per 1 bar</strong> —
+            your course and computer handle the details; the
+            <strong>idea</strong> is the same: deeper equals higher pressure.
           </p>
 
           <div
@@ -720,7 +721,9 @@
                   <label for="pressure-calc-water">Water type</label>
                   <select id="pressure-calc-water" autocomplete="off">
                     <option value="10">Sea water (~10 m per 1 bar)</option>
-                    <option value="10.3">Fresh water (~10.3 m per 1 bar)</option>
+                    <option value="10.3">
+                      Fresh water (~10.3 m per 1 bar)
+                    </option>
                   </select>
                 </div>
                 <div class="pressure-calc__field">
@@ -747,12 +750,11 @@
               </div>
               <p class="pressure-calc__hint">
                 Uses the same simple classroom models as the table above:<br />
-                <strong>absolute pressure ≈ 1 bar + (depth ÷ m per bar)</strong>.
-                Volume and density follow
+                <strong>absolute pressure ≈ 1 bar + (depth ÷ m per bar)</strong
+                >. Volume and density follow
                 <strong>pressure × volume ≈ constant</strong> (Boyle’s Law),
-                same assumptions as the table footnote.
-                Your agency materials and dive computer may use slightly
-                different assumptions.
+                same assumptions as the table footnote. Your agency materials
+                and dive computer may use slightly different assumptions.
               </p>
             </div>
           </div>
@@ -806,9 +808,16 @@
             also increase consumption; the pressure effect is the big baseline.
           </p>
           <ul>
-            <li>Same breathing rhythm → much higher gas use per minute at depth</li>
-            <li>BCD air is compressed → you often need more inflation deeper</li>
-            <li>Small depth changes deep have a smaller <em>relative</em> pressure swing</li>
+            <li>
+              Same breathing rhythm → much higher gas use per minute at depth
+            </li>
+            <li>
+              BCD air is compressed → you often need more inflation deeper
+            </li>
+            <li>
+              Small depth changes deep have a smaller <em>relative</em> pressure
+              swing
+            </li>
           </ul>
 
           <p>
@@ -872,11 +881,15 @@
                   <label for="bcd-water">Water type</label>
                   <select id="bcd-water" autocomplete="off">
                     <option value="10">Sea water (~10 m per 1 bar)</option>
-                    <option value="10.3">Fresh water (~10.3 m per 1 bar)</option>
+                    <option value="10.3">
+                      Fresh water (~10.3 m per 1 bar)
+                    </option>
                   </select>
                 </div>
                 <div class="pressure-calc__field">
-                  <label for="bcd-depth-known">Volume measured at depth (m)</label>
+                  <label for="bcd-depth-known"
+                    >Volume measured at depth (m)</label
+                  >
                   <input
                     id="bcd-depth-known"
                     type="number"
@@ -926,7 +939,8 @@
               <p class="pressure-calc__hint">
                 Uses <strong>P₁V₁ ≈ P₂V₂</strong> with absolute pressure from
                 the same simple model as the table above (1 bar at the surface +
-                1 bar per 10 m or 10.3 m). <strong>Thought experiment only</strong>
+                1 bar per 10 m or 10.3 m).
+                <strong>Thought experiment only</strong>
                 — a real wing is vented; temperature changes are ignored.
               </p>
             </div>
@@ -1001,9 +1015,7 @@
                   vol2.toFixed(2) +
                   " L";
                 outSurf.textContent =
-                  "At surface (0 m, 1 bar abs): ≈ " +
-                  vAtSurf.toFixed(2) +
-                  " L";
+                  "At surface (0 m, 1 bar abs): ≈ " + vAtSurf.toFixed(2) + " L";
               }
 
               sel.addEventListener("change", update);
@@ -1030,7 +1042,9 @@
             <li>You rise a little → pressure drops.</li>
             <li>Gas in the BCD expands → you become more positive.</li>
             <li>You rise faster → pressure drops faster.</li>
-            <li>Expansion accelerates unless you <strong>vent in time</strong>.</li>
+            <li>
+              Expansion accelerates unless you <strong>vent in time</strong>.
+            </li>
           </ol>
           <p>
             Good training and a
@@ -1046,22 +1060,24 @@
           <h2>🔥 The last few metres matter most (relatively)</h2>
           <p>
             Between <strong>10 m and the surface</strong>, absolute pressure
-            falls from about 2 bar to 1 bar — a
-            <strong>halving</strong> of ambient pressure. A pocket of gas that
-            was closed off could theoretically
-            <strong>double in volume</strong> over that band, which is why the
-            shallowest part of the ascent is where buoyancy changes bite hardest.
+            falls from about 2 bar to 1 bar — a <strong>halving</strong> of
+            ambient pressure. A pocket of gas that was closed off could
+            theoretically <strong>double in volume</strong> over that band,
+            which is why the shallowest part of the ascent is where buoyancy
+            changes bite hardest.
           </p>
           <p>That is one reason we care about:</p>
           <ul>
             <li>Slow ascent rate and computer guidance</li>
             <li>
-              A calm <strong>3-minute stop near 5 m</strong> on many dives —
-              see our
+              A calm <strong>3-minute stop near 5 m</strong> on many dives — see
+              our
               <a href="/en/posts/scuba-knowledge/safety-stop/">safety stop</a>
               guide
             </li>
-            <li>Releasing gas from the BCD <strong>before</strong> you float up</li>
+            <li>
+              Releasing gas from the BCD <strong>before</strong> you float up
+            </li>
           </ul>
         </section>
 
@@ -1115,8 +1131,8 @@
           <h3>Is Boyle’s Law the only physics I need?</h3>
           <p>
             It is one pillar. Diving also involves
-            <strong>Dalton’s</strong> and <strong>Henry’s</strong> ideas
-            (gas mixes and dissolved gas in tissues) — that is what
+            <strong>Dalton’s</strong> and <strong>Henry’s</strong> ideas (gas
+            mixes and dissolved gas in tissues) — that is what
             <strong>NDL tables</strong> and
             <a href="/en/posts/scuba-knowledge/using-a-divecomputer/"
               >dive computers</a
@@ -1140,7 +1156,8 @@
             BCD is the same idea. Nitrox changes
             <strong>oxygen exposure limits</strong> (partial pressures), not the
             fact that volume grows as you go shallower.
-            <a href="/en/posts/scuba-knowledge/nitrox-info/">Read Nitrox basics</a
+            <a href="/en/posts/scuba-knowledge/nitrox-info/"
+              >Read Nitrox basics</a
             >.
           </p>
         </section>
@@ -1162,7 +1179,8 @@
               >Dalton &amp; Henry</a
             >
             (partial pressure &amp; tissues), then
-            <a href="/en/posts/scuba-knowledge/archimedes-principle-scuba-diving/"
+            <a
+              href="/en/posts/scuba-knowledge/archimedes-principle-scuba-diving/"
               >Archimedes’ principle &amp; lift bags</a
             >
             for search &amp; recovery lifts.

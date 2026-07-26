@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Das Buddy-System – Verantwortung, Sicherheit & Tauchen in der Praxis
@@ -338,6 +339,15 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
+      .posts-box .info-card[id] {
+        scroll-margin-top: 1.25rem;
+      }
     </style>
     <link
       rel="preload"
@@ -364,7 +374,6 @@
         "headline": "Das Buddy-System – Verantwortung, Sicherheit & Tauchen in der Praxis",
         "alternativeHeadline": "Kompletter Leitfaden zu Buddy-Tauch-Verfahren und Sicherheitsprotokoll",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/buddy_system_big.webp",
@@ -372,7 +381,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchwissen",
@@ -453,11 +461,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Das Buddy-System</h1>
-          <p>Verantwortung, Sicherheit & Tauchen in der Praxis</p>
-        </div>
       </div>
     </header>
 
@@ -474,22 +477,31 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">Das Buddy-System</h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Verantwortung, Sicherheit & Tauchen in der Praxis
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          Das Buddy-System – Verantwortung, Sicherheit & Tauchen in der Praxis
-        </h2>
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#open-water-course-reminder">Open Water</a>
+            <a href="#why-buddy-system">Warum Buddy</a>
+            <a href="#proper-buddy-diving">Richtig tauchen</a>
+            <a href="#losing-your-buddy">Buddy verloren</a>
+            <a href="#local-tip-koh-chang">Koh Chang</a>
+            <a href="#losing-buddy-in-group">In der Gruppe</a>
+            <a href="#role-of-dive-guide">Guide-Rolle</a>
+            <a href="#conclusion">Fazit</a>
+          </div>
+        </nav>
+
         <section class="content-section" id="buddy-system-guide">
           <div class="info-card">
-            <h1>Das Buddy-System im Sporttauchen</h1>
             <p class="subtitle">
               Verantwortung, Verfahren & Sicherheit verstehen
             </p>

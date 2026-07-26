@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       ทฤษฎีสำหรับผู้เริ่มต้น / ทบทวนสำหรับนักดำน้ำที่มีใบอนุญาต | Chang Diving
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "ทฤษฎีสำหรับผู้เริ่มต้น / ทบทวนสำหรับนักดำน้ำที่มีใบอนุญาต",
         "alternativeHeadline": "คำแนะนำการดำน้ำสำหรับผู้เริ่มต้นที่สมบูรณ์: ความดัน การปรับความดัน ทักษะและความปลอดภัย",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/theory-review_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้การดำน้ำ",
@@ -836,14 +841,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ทฤษฎีสำหรับผู้เริ่มต้น / ทบทวนสำหรับนักดำน้ำที่มีใบอนุญาต</h1>
-          <p>
-            คำแนะนำที่สมบูรณ์สำหรับการดำน้ำทดลอง สกูบา Review และ Open Water
-            Diver
-          </p>
-        </div>
       </div>
     </header>
 
@@ -860,7 +857,18 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="เนื้อหาในหน้านี้">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          ทฤษฎีสำหรับผู้เริ่มต้น / ทบทวนสำหรับนักดำน้ำที่มีใบอนุญาต
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          คำแนะนำที่สมบูรณ์สำหรับการดำน้ำทดลอง สกูบา Review และ Open Water Diver
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="เนื้อหาในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">ในหน้านี้</span>
           <div class="page-jump-nav__links">
             <a href="#cdc-pressure-title">ความดัน</a>
@@ -871,22 +879,9 @@
             <a href="#cdc-quiz-title">แบบทดสอบ</a>
           </div>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          ทฤษฎีสำหรับผู้เริ่มต้น / ทบทวนสำหรับนักดำน้ำที่มีใบอนุญาต
-        </h2>
+
         <section class="content-section" id="theory-review-guide">
           <div class="info-card">
-            <h1>ทฤษฎีสำหรับผู้เริ่มต้น / ทบทวนสำหรับนักดำน้ำที่มีใบอนุญาต</h1>
             <p class="subtitle">
               คำแนะนำที่สมบูรณ์สำหรับการดำน้ำทดลอง สกูบา Review และ Open Water
               Diver
@@ -906,9 +901,7 @@
             <p>
               พื้นฐาน <strong>Enriched Air (Nitrox)</strong> ข้อดี และการวางแผน
               MOD อ่านได้ที่
-              <a href="/th/posts/scuba-knowledge/nitrox-info/"
-                >คู่มือ Nitrox</a
-              >
+              <a href="/th/posts/scuba-knowledge/nitrox-info/">คู่มือ Nitrox</a>
             </p>
             <p>
               <strong>ขีดจำกัดไม่ต้องหยุดคลายแรงดัน (NDL)</strong>
@@ -1426,9 +1419,10 @@
                   Diver นักดำน้ำที่มีใบรับรอง สกูบา Diver
                   สามารถเข้าร่วมฟันไดฟ์ได้
                   แต่เฉพาะเมื่อมีผู้เชี่ยวชาญการดำน้ำร่วมด้วยและที่ความลึกสูงสุด
-                  12 เมตร (40 ฟุต)
-                  สนใจคอร์สนี้?
-                  <a href="/th/courses/scuba-diver/">ดูรายละเอียดคอร์ส Scuba Diver →</a>
+                  12 เมตร (40 ฟุต) สนใจคอร์สนี้?
+                  <a href="/th/courses/scuba-diver/"
+                    >ดูรายละเอียดคอร์ส Scuba Diver →</a
+                  >
                 </div>
               </li>
 

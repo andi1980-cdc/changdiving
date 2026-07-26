@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง</title>
     <meta
@@ -327,6 +328,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -353,7 +360,6 @@
         "headline": "การใช้ก๊าซในการดำน้ำ สกูบา",
         "alternativeHeadline": "การคำนวณอัตรา SAC และการวางแผนก๊าซสำหรับการดำน้ำ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/gas-consumtion_big.webp",
@@ -361,7 +367,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เกี่ยวกับการดำน้ำ",
@@ -475,14 +480,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง</h1>
-          <p>
-            เชี่ยวชาญการวางแผนแก๊สสำหรับการดำน้ำชมปะการังและเรือจมเกาะช้าง –
-            ทักษะจำเป็นสำหรับนักดำน้ำทั่วไปและนักดำน้ำเทคนิค
-          </p>
-        </div>
       </div>
     </header>
 
@@ -499,7 +496,19 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="เนื้อหาในหน้านี้">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เชี่ยวชาญการวางแผนแก๊สสำหรับการดำน้ำชมปะการังและเรือจมเกาะช้าง –
+          ทักษะจำเป็นสำหรับนักดำน้ำทั่วไปและนักดำน้ำเทคนิค
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="เนื้อหาในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">ในหน้านี้</span>
           <div class="page-jump-nav__links">
             <a href="#gc-intro">บทนำ</a>
@@ -509,28 +518,12 @@
             <a href="#gc-calculator">เครื่องคำนวณ</a>
           </div>
         </nav>
-        <h2
-          id="gc-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง
-        </h2>
+        <h2 id="gc-intro">💨 ทำไมการวางแผนแก๊สบนเกาะช้างถึงสำคัญ</h2>
 
         <p>
-          ไม่ว่าคุณจะดำน้ำที่แนวปะการังตื้นของเกาะช้างหรือวางแผนดำน้ำเทคนิคที่เรือจม เรือหลวงช้างในระดับ
-          30-40 เมตร การทำความเข้าใจการใช้แก๊สเป็นสิ่งจำเป็น ในหลักสูตร Open
-          Water
+          ไม่ว่าคุณจะดำน้ำที่แนวปะการังตื้นของเกาะช้างหรือวางแผนดำน้ำเทคนิคที่เรือจม
+          เรือหลวงช้างในระดับ 30-40 เมตร การทำความเข้าใจการใช้แก๊สเป็นสิ่งจำเป็น
+          ในหลักสูตร Open Water
           เราเรียนรู้ตั้งแต่เริ่มต้นเกี่ยวกับการตรวจสอบปริมาณแก๊สในถังดำน้ำ
           แต่เราตระหนักถึงอัตราการใช้แก๊สและผลกระทบต่อการวางแผนการดำน้ำจริงหรือไม่?
         </p>
@@ -786,7 +779,7 @@
             );
             border: 1px solid #0077b6;
             border-radius: 10px;
-            font-family: var(--font-sans), 'Roboto', sans-serif;
+            font-family: var(--font-sans), &quot;Roboto&quot;, sans-serif;
           "
         >
           <div
@@ -825,10 +818,17 @@
               <option value="metric" selected>bar &amp; เมตร (เมตริก)</option>
               <option value="imperial">psi &amp; ฟุต (อิมพีเรียล)</option>
             </select>
-            <p style="margin: 8px 0 0 0; font-size: 13px; color: #444; line-height: 1.45">
-              <strong>ความลึก</strong> ในแถว slate และใน PO₂ / MOD / best mix ใช้การตั้งค่านี้
-              SAC ใช้เพิ่มสำหรับแรงดัน (bar/psi) ความลึก และถัง (ลิตร / cu ft) O₂ % และ max
-              PPO₂ ยังเป็น <strong>บาร์</strong>
+            <p
+              style="
+                margin: 8px 0 0 0;
+                font-size: 13px;
+                color: #444;
+                line-height: 1.45;
+              "
+            >
+              <strong>ความลึก</strong> ในแถว slate และใน PO₂ / MOD / best mix
+              ใช้การตั้งค่านี้ SAC ใช้เพิ่มสำหรับแรงดัน (bar/psi) ความลึก และถัง
+              (ลิตร / cu ft) O₂ % และ max PPO₂ ยังเป็น <strong>บาร์</strong>
             </p>
           </div>
           <div
@@ -851,10 +851,20 @@
             >
               แปลงหน่วยด่วน
             </p>
-            <p style="margin: 0 0 14px 0; font-size: 13px; color: #555; line-height: 1.45">
-              พิมพ์ในช่องใดช่องหนึ่ง — ช่องที่เกี่ยวข้องจะอัปเดต เหมาะเมื่อเอกสารสลับเมตริกกับอิมพีเรียล
-              <strong>น้ำหนักตัว:</strong> นักดำน้ำจาก UK มักใช้ <strong>สโตน (stone)</strong>
-              ส่วน <strong>ปอนด์ (lb)</strong> ใช้ในสหรัฐ/UK — แปลงเป็น <strong>กก.</strong> ได้ที่นี่
+            <p
+              style="
+                margin: 0 0 14px 0;
+                font-size: 13px;
+                color: #555;
+                line-height: 1.45;
+              "
+            >
+              พิมพ์ในช่องใดช่องหนึ่ง — ช่องที่เกี่ยวข้องจะอัปเดต
+              เหมาะเมื่อเอกสารสลับเมตริกกับอิมพีเรียล
+              <strong>น้ำหนักตัว:</strong> นักดำน้ำจาก UK มักใช้
+              <strong>สโตน (stone)</strong> ส่วน
+              <strong>ปอนด์ (lb)</strong> ใช้ในสหรัฐ/UK — แปลงเป็น
+              <strong>กก.</strong> ได้ที่นี่
             </p>
             <div
               style="
@@ -872,13 +882,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   ความลึก
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >ฟุต (ft)</label
                     >
                     <input
@@ -900,7 +922,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >เมตร (m)</label
                     >
                     <input
@@ -931,13 +958,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   แรงดัน
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >PSI</label
                     >
                     <input
@@ -959,7 +998,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >บาร์ (bar)</label
                     >
                     <input
@@ -990,13 +1034,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   ปริมาตร (ft³ จริง)
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >ลูกบาศก์ฟุต (ft³)</label
                     >
                     <input
@@ -1018,7 +1074,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >ลิตร (L)</label
                     >
                     <input
@@ -1049,13 +1110,25 @@
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
                 "
               >
-                <div style="font-weight: 600; margin-bottom: 10px; color: #0077b6; font-size: 14px">
+                <div
+                  style="
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    color: #0077b6;
+                    font-size: 14px;
+                  "
+                >
                   น้ำหนักตัว
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 10px">
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >สโตน (st)</label
                     >
                     <input
@@ -1077,7 +1150,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >ปอนด์ (lb)</label
                     >
                     <input
@@ -1099,7 +1177,12 @@
                   </div>
                   <div>
                     <label
-                      style="display: block; font-size: 12px; margin-bottom: 4px; color: #555"
+                      style="
+                        display: block;
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #555;
+                      "
                       >กิโลกรัม (kg)</label
                     >
                     <input
@@ -1120,27 +1203,53 @@
                     />
                   </div>
                 </div>
-                <p style="margin: 10px 0 0 0; font-size: 11px; color: #777; line-height: 1.35">
-                  ใส่สโตนเป็นทศนิยมได้ (เช่น 11.286 ≈ 11 st 4 lb) 1 stone = 14 lb (avoirdupois)
+                <p
+                  style="
+                    margin: 10px 0 0 0;
+                    font-size: 11px;
+                    color: #777;
+                    line-height: 1.35;
+                  "
+                >
+                  ใส่สโตนเป็นทศนิยมได้ (เช่น 11.286 ≈ 11 st 4 lb) 1 stone = 14
+                  lb (avoirdupois)
                 </p>
               </div>
             </div>
-            <p style="margin: 12px 0 0 0; font-size: 12px; color: #666; line-height: 1.4">
-              ปริมาตรใช้ 1 ft³ = 28.317 L (ปริมาตรทางเรขาคณิต) คำว่า “80 cu ft” บนถังหมายถึง
-              <em>ความจุแก๊ส</em> ตามแรงดันออกแบบ — ไม่ใช่ปริมาตรของเหลวใน ft³ สำหรับแรงดันและการใช้แก๊สให้ใช้เครื่องคำนวณ SAC ด้านล่าง
+            <p
+              style="
+                margin: 12px 0 0 0;
+                font-size: 12px;
+                color: #666;
+                line-height: 1.4;
+              "
+            >
+              ปริมาตรใช้ 1 ft³ = 28.317 L (ปริมาตรทางเรขาคณิต) คำว่า “80 cu ft”
+              บนถังหมายถึง
+              <em>ความจุแก๊ส</em> ตามแรงดันออกแบบ — ไม่ใช่ปริมาตรของเหลวใน ft³
+              สำหรับแรงดันและการใช้แก๊สให้ใช้เครื่องคำนวณ SAC ด้านล่าง
             </p>
           </div>
           <h3 style="margin: 0 0 8px 0; color: #004d80; font-size: 1.15rem">
             แผนการดำน้ำ (slate) — คำนวณหนึ่งช่วง
           </h3>
-          <p style="margin: 0 0 1em 0; color: #333; font-size: 15px; line-height: 1.55">
-            กรอก <strong>หนึ่ง</strong> ช่วง (ก้นทะเลหรือดีคอมสต็อป) คอลัมน์เดียวกับตารางด้านบน
-            (<strong>ความลึก</strong> เป็น <strong>เมตรหรือฟุต</strong> ตามตัวเลือกหน่วยด้านบน)
-            เพื่อหา <strong>แรงดัน (ata)</strong> <strong>ปริมาณแก๊ส</strong>
-            <strong>PO₂</strong> และ <strong>CNS</strong> โดยประมาณ (แบบ NOAA) สำหรับช่วงนั้น
-            ใช้ซ้ำทีละบรรทัดเมื่อคัดลอกไปใส่แผนลงมือ — เช่น สามสถานการณ์:
-            <em>ตามแผน</em> <em>ลึกเกิน 5 ม. โดยไม่ตั้งใจ</em> และ
-            <em>แก๊สดีคอมสูญหาย</em> (คำนวณใหม่เมื่อความลึก เวลา หรือส่วนผสมเปลี่ยน)
+          <p
+            style="
+              margin: 0 0 1em 0;
+              color: #333;
+              font-size: 15px;
+              line-height: 1.55;
+            "
+          >
+            กรอก <strong>หนึ่ง</strong> ช่วง (ก้นทะเลหรือดีคอมสต็อป)
+            คอลัมน์เดียวกับตารางด้านบน (<strong>ความลึก</strong> เป็น
+            <strong>เมตรหรือฟุต</strong> ตามตัวเลือกหน่วยด้านบน) เพื่อหา
+            <strong>แรงดัน (ata)</strong> <strong>ปริมาณแก๊ส</strong>
+            <strong>PO₂</strong> และ <strong>CNS</strong> โดยประมาณ (แบบ NOAA)
+            สำหรับช่วงนั้น ใช้ซ้ำทีละบรรทัดเมื่อคัดลอกไปใส่แผนลงมือ — เช่น
+            สามสถานการณ์: <em>ตามแผน</em> <em>ลึกเกิน 5 ม. โดยไม่ตั้งใจ</em> และ
+            <em>แก๊สดีคอมสูญหาย</em> (คำนวณใหม่เมื่อความลึก เวลา
+            หรือส่วนผสมเปลี่ยน)
           </p>
           <p style="margin: 0 0 1em 0; font-size: 15px">
             <a
@@ -1175,9 +1284,9 @@
               color: #665500;
             "
           >
-            <strong>ค่า CNS เป็นค่าประมาณ</strong> (โมเดล NOAA การเปิดโปงครั้งเดียว PO₂
-            คงที่) ไม่ทดแทนการฝึกอบรม ตาราง หรือคอมพิวเตอร์ดำน้ำ
-            เมื่อ PO₂ ต่ำกว่า 0.5 บาร์ ใช้ CNS = 0% ที่นี่
+            <strong>ค่า CNS เป็นค่าประมาณ</strong> (โมเดล NOAA
+            การเปิดโปงครั้งเดียว PO₂ คงที่) ไม่ทดแทนการฝึกอบรม ตาราง
+            หรือคอมพิวเตอร์ดำน้ำ เมื่อ PO₂ ต่ำกว่า 0.5 บาร์ ใช้ CNS = 0% ที่นี่
           </p>
           <div style="overflow-x: auto">
             <table
@@ -1199,8 +1308,12 @@
                   <th style="padding: 10px 8px; text-align: left">
                     ความลึก (<span id="gcSlateDepthUnitLabel">ม.</span>)
                   </th>
-                  <th style="padding: 10px 8px; text-align: left">เวลา (นาที)</th>
-                  <th style="padding: 10px 8px; text-align: left">SAC (ลิตร/นาที)</th>
+                  <th style="padding: 10px 8px; text-align: left">
+                    เวลา (นาที)
+                  </th>
+                  <th style="padding: 10px 8px; text-align: left">
+                    SAC (ลิตร/นาที)
+                  </th>
                   <th style="padding: 10px 8px; text-align: left">แก๊ส</th>
                   <th style="padding: 10px 8px; text-align: left">แรงดัน</th>
                   <th style="padding: 10px 8px; text-align: left">ปริมาณ</th>
@@ -1336,24 +1449,33 @@
               </tbody>
             </table>
           </div>
-          <p style="margin: 1em 0 0 0; font-size: 15px; line-height: 1.55; color: #333">
-            สำหรับแผนดำน้ำหลายช่วงและดีโคครบวงจร (ไม่ใช่แค่แถวเดียวในห้องเรียน) ดู
+          <p
+            style="
+              margin: 1em 0 0 0;
+              font-size: 15px;
+              line-height: 1.55;
+              color: #333;
+            "
+          >
+            สำหรับแผนดำน้ำหลายช่วงและดีโคครบวงจร (ไม่ใช่แค่แถวเดียวในห้องเรียน)
+            ดู
             <a
               href="https://www.hhssoftware.com/multideco/"
               target="_blank"
               rel="noopener noreferrer"
               >MultiDeco</a
             >
-            — ซอฟต์แวร์วางแผนดีโคที่แนะนำ (Bühlmann ZHL-16 กับ gradient factors และ
-            VPM-B; คอมพิวเตอร์และมือถือ) ใช้เมื่อมีการฝึกเทคนิคที่เหมาะสมเท่านั้น
+            — ซอฟต์แวร์วางแผนดีโคที่แนะนำ (Bühlmann ZHL-16 กับ gradient factors
+            และ VPM-B; คอมพิวเตอร์และมือถือ)
+            ใช้เมื่อมีการฝึกเทคนิคที่เหมาะสมเท่านั้น
           </p>
         </div>
 
         <h2 id="gc-formulas">การคำนวณความดันโดยรอบ (ATA)</h2>
 
         <p>
-          หลักสูตรเบื้องต้น: ที่ผิวน้ำ <strong>1 บาร์</strong>
-          ความดันบรรยากาศ โดยประมาณ <strong>เพิ่ม 1 บาร์ทุก ๆ 10 เมตร</strong> ในน้ำทะเล —
+          หลักสูตรเบื้องต้น: ที่ผิวน้ำ <strong>1 บาร์</strong> ความดันบรรยากาศ
+          โดยประมาณ <strong>เพิ่ม 1 บาร์ทุก ๆ 10 เมตร</strong> ในน้ำทะเล —
           <strong>ATA = (ความลึกเป็นเมตร) ÷ 10 + 1</strong>
         </p>
 
@@ -1365,7 +1487,10 @@
           <a href="#gc-calculator">เครื่องคำนวณ SAC</a> ในหน้านี้
         </p>
         <p>
-          <strong>SAC (ลิตร/นาที) = (บาร์ที่ใช้ × ปริมาณถังเป็นลิตร) ÷ (นาที × ATA)</strong>
+          <strong
+            >SAC (ลิตร/นาที) = (บาร์ที่ใช้ × ปริมาณถังเป็นลิตร) ÷ (นาที ×
+            ATA)</strong
+          >
         </p>
         <p>
           ตัวอย่าง: ใช้ 30 บาร์ จากถัง 11.1 ลิตร ใน 10 นาที ที่ความลึก 10 ม.
@@ -1467,7 +1592,8 @@
               line-height: 1.5;
             "
           >
-            <strong>หน่วย:</strong> เลือกที่กล่อง <strong>แผน slate</strong> ด้านบน (ใช้กับบล็อกนี้ด้วย)
+            <strong>หน่วย:</strong> เลือกที่กล่อง
+            <strong>แผน slate</strong> ด้านบน (ใช้กับบล็อกนี้ด้วย)
           </p>
           <!-- SAC Calculator -->
           <div style="margin-bottom: 30px">
@@ -1617,7 +1743,8 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ความลึกที่วางแผน (<span id="gcPo2DepthUnit">เมตร</span>):</label
+                  >ความลึกที่วางแผน (<span id="gcPo2DepthUnit">เมตร</span
+                  >):</label
                 >
                 <input
                   type="number"
@@ -1746,7 +1873,8 @@
               <div>
                 <label
                   style="display: block; margin-bottom: 5px; font-weight: 500"
-                  >ความลึกที่วางแผน (<span id="gcBestDepthUnit">เมตร</span>):</label
+                  >ความลึกที่วางแผน (<span id="gcBestDepthUnit">เมตร</span
+                  >):</label
                 >
                 <input
                   type="number"
@@ -1865,7 +1993,9 @@
                   return;
                 }
                 const psi = parseFloat(raw);
-                barEl.value = Number.isFinite(psi) ? qcFormatNum(psi / k, 4) : "";
+                barEl.value = Number.isFinite(psi)
+                  ? qcFormatNum(psi / k, 4)
+                  : "";
               } else {
                 const raw = barEl.value.trim();
                 if (raw === "") {
@@ -1873,7 +2003,9 @@
                   return;
                 }
                 const bar = parseFloat(raw);
-                psiEl.value = Number.isFinite(bar) ? qcFormatNum(bar * k, 2) : "";
+                psiEl.value = Number.isFinite(bar)
+                  ? qcFormatNum(bar * k, 2)
+                  : "";
               }
             } finally {
               qcLockPressure = false;
@@ -1895,7 +2027,9 @@
                   return;
                 }
                 const cf = parseFloat(raw);
-                lEl.value = Number.isFinite(cf) ? qcFormatNum(cf * L_PER_CUFT, 3) : "";
+                lEl.value = Number.isFinite(cf)
+                  ? qcFormatNum(cf * L_PER_CUFT, 3)
+                  : "";
               } else {
                 const raw = lEl.value.trim();
                 if (raw === "") {
@@ -1903,7 +2037,9 @@
                   return;
                 }
                 const L = parseFloat(raw);
-                cfEl.value = Number.isFinite(L) ? qcFormatNum(L / L_PER_CUFT, 4) : "";
+                cfEl.value = Number.isFinite(L)
+                  ? qcFormatNum(L / L_PER_CUFT, 4)
+                  : "";
               }
             } finally {
               qcLockVolume = false;
@@ -2296,9 +2432,13 @@
 
           function calculateDecoSlateRow() {
             const isImperial = gcGetImperial();
-            const depthIn = parseFloat(document.getElementById("slateDepth").value);
+            const depthIn = parseFloat(
+              document.getElementById("slateDepth").value
+            );
             const depthM = gcDepthInputToMeters(depthIn, isImperial);
-            const timeIn = parseFloat(document.getElementById("slateTime").value);
+            const timeIn = parseFloat(
+              document.getElementById("slateTime").value
+            );
             const sacIn = parseFloat(document.getElementById("slateSac").value);
             const gasStr = document.getElementById("slateGas").value;
             const elC = document.getElementById("slateOutConv");
@@ -2316,8 +2456,7 @@
               depthM <= 120;
             const timeOk =
               Number.isFinite(timeIn) && timeIn >= 0 && timeIn <= 999;
-            const sacOk =
-              Number.isFinite(sacIn) && sacIn > 0 && sacIn < 200;
+            const sacOk = Number.isFinite(sacIn) && sacIn > 0 && sacIn < 200;
             const gasOk = fo2 !== null && fo2 >= 0.1 && fo2 <= 1;
 
             if (!depthOk || !timeOk || !sacOk || !gasOk) {
@@ -2352,8 +2491,8 @@
 
         นำทักษะการวางแผนแก๊สของคุณไปใช้ที่จุดดำน้ำชั้นนำของเกาะช้าง!
         ตั้งแต่ฟันไดฟ์ไปจนถึงหลักสูตรเทคนิคตั้งแต่ระดับเริ่มต้นจนถึงมืออาชีพ
-        เชี่ยวชาญการจัดการแก๊สสำหรับจุดดำน้ำท้องถิ่นของเรา รวมถึงเรือจม เรือหลวงช้าง
-        แนวปะการังลึก และการดำน้ำ Nitrox
+        เชี่ยวชาญการจัดการแก๊สสำหรับจุดดำน้ำท้องถิ่นของเรา รวมถึงเรือจม
+        เรือหลวงช้าง แนวปะการังลึก และการดำน้ำ Nitrox
         พร้อมอุปกรณ์ดำน้ำส่วนตัวที่สะอาดและเชื่อถือได้สำหรับการผจญภัยของคุณ
         หากคุณต้องการเรียนรู้การผสมแก๊สไนตรอกซ์อย่างมืออาชีพ ลองดูคอร์ส
         <a href="/th/courses/nitrox-blender/">Nitrox Gas Blender</a> ของเรา

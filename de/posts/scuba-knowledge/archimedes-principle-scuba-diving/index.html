@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Auftrieb &amp; Hebesäcke – Archimedes-Prinzip erklärt | Suchen &amp;
@@ -381,6 +382,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -397,7 +404,6 @@
         "headline": "Auftrieb & Hebesäcke – Archimedes-Prinzip erklärt",
         "alternativeHeadline": "Physik Suchen & Bergung: Verdrängung, Auftrieb und Boyle-Gesetz",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/buoyancy-liftbags-diving_big.webp",
@@ -405,7 +411,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchwissen",
@@ -534,13 +539,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Archimedes &amp; Hebesack-Physik</h1>
-          <p>
-            Auftrieb, Hebesäcke &amp; Suchen &amp; Bergung — verständlich erklärt
-          </p>
-        </div>
       </div>
     </header>
 
@@ -556,7 +554,18 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="Abschnitte auf dieser Seite">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Archimedes &amp; Hebesack-Physik
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Auftrieb, Hebesäcke &amp; Suchen &amp; Bergung — verständlich erklärt
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Abschnitte auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
             <a href="#bl-intro">Einleitung</a>
@@ -569,37 +578,21 @@
           </div>
         </nav>
 
-        <h2
-          id="bl-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          ⚖️ Archimedes-Prinzip, Hebesäcke &amp; echte Tauchphysik (Suchen &amp;
-          Bergung)
-        </h2>
+        <h2 id="bl-intro">⚖️ Warum Auftrieb und Heben wichtig sind</h2>
 
         <p>
-          <strong>Auftrieb</strong> wird oft als „Jacket plus Lunge“ unterrichtet
-          — das reicht fürs Alltagstauchen — darunter steckt aber
-          <strong>eine Kernidee</strong>: wie viel Wasser du (oder deine Ausrüstung)
-          verdrängst im Vergleich zu eurem Gewicht im Wasser.
+          <strong>Auftrieb</strong> wird oft als „Jacket plus Lunge“
+          unterrichtet — das reicht fürs Alltagstauchen — darunter steckt aber
+          <strong>eine Kernidee</strong>: wie viel Wasser du (oder deine
+          Ausrüstung) verdrängst im Vergleich zu eurem Gewicht im Wasser.
         </p>
 
         <p>
           Ob du im <strong>Trim schwebst</strong> oder planst, wie sich ein
           <strong>Hebesack</strong> beim Hochkommen verhält — dasselbe Prinzip
-          gilt:
-          <strong>Archimedes-Prinzip</strong> (Auftrieb durch verdrängte Flüssigkeit).
-          Begleitartikel:
-          <a
-            href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
+          gilt: <strong>Archimedes-Prinzip</strong> (Auftrieb durch verdrängte
+          Flüssigkeit). Begleitartikel:
+          <a href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
             >Boyle-Gesetz &amp; Druck</a
           >
           und
@@ -612,13 +605,18 @@
         <p>Dieses Thema hilft dir:</p>
         <ul>
           <li><strong>Neutralen Auftrieb</strong> fein einzustellen</li>
-          <li>Zu verstehen, warum „kleine“ Tiefenänderungen flachwassernah stark wirken</li>
-          <li><strong>Suchen &amp; Bergung</strong> und Hebesäcke einzuordnen</li>
+          <li>
+            Zu verstehen, warum „kleine“ Tiefenänderungen flachwassernah stark
+            wirken
+          </li>
+          <li>
+            <strong>Suchen &amp; Bergung</strong> und Hebesäcke einzuordnen
+          </li>
         </ul>
 
         <p class="note">
-          <strong>Anheben und Rigging sind Spezialthemen.</strong> Dieser Artikel
-          ist nur Hintergrundphysik — absolviere einen echten
+          <strong>Anheben und Rigging sind Spezialthemen.</strong> Dieser
+          Artikel ist nur Hintergrundphysik — absolviere einen echten
           <a href="/de/posts/scuba-knowledge/about-search-recovery/"
             >Suchen &amp; Bergung</a
           >-Spezial- bzw. Hebekurs, bevor du echte Objektbergungen machst.
@@ -631,9 +629,9 @@
           <p>
             Auf einen untergetauchten Körper wirkt eine
             <strong>Auftriebskraft</strong>, die so groß ist wie das
-            <strong>Gewicht der verdrängten Flüssigkeit</strong>. Hält diese Kraft
-            das Gewicht (und andere vertikale Kräfte) die Waage, schwebst du —
-            sonst steigst oder sinkst du.
+            <strong>Gewicht der verdrängten Flüssigkeit</strong>. Hält diese
+            Kraft das Gewicht (und andere vertikale Kräfte) die Waage, schwebst
+            du — sonst steigst oder sinkst du.
           </p>
 
           <h3>Typische Zahlen aus dem Unterricht</h3>
@@ -673,8 +671,8 @@
           <h2>🧠 Drei Auftriebszustände</h2>
           <ul>
             <li>
-              <strong>Positiv</strong> → Netto nach oben → du (oder der Gegenstand)
-              tendierst zum Steigen, wenn du nicht gegensteuerst
+              <strong>Positiv</strong> → Netto nach oben → du (oder der
+              Gegenstand) tendierst zum Steigen, wenn du nicht gegensteuerst
             </li>
             <li>
               <strong>Neutral</strong> → im Gleichgewicht → Tiefe mit kleinen
@@ -689,9 +687,8 @@
             Sporttauchen zielt meist auf
             <strong>neutral in der Zieltiefe</strong>; an der Oberfläche ist das
             Jacket je nach Anzug und Flaschenwahl oft fast leer — Muster, die du
-            auf
-            <a href="/de/day-trips/fun-dives/">Fun-Tauchgängen</a> und in Kursen
-            übst.
+            auf <a href="/de/day-trips/fun-dives/">Fun-Tauchgängen</a> und in
+            Kursen übst.
           </p>
         </section>
 
@@ -703,15 +700,15 @@
             Stell dir einen Gegenstand vor, der im Meerwasser
             <strong>100 L verdrängt</strong>, wenn er komplett unter taucht — in
             der groben Lehrer-Faustformel:
-            <strong>≈ 100 kg Auftriebs„stütze“</strong> allein aus der Verdrängung
-            (mit 1,025 kg/L wären es 102,5 kg).
+            <strong>≈ 100 kg Auftriebs„stütze“</strong> allein aus der
+            Verdrängung (mit 1,025 kg/L wären es 102,5 kg).
           </p>
 
           <h3>Tiefe und „starre“ Gegenstände mit konstantem Volumen</h3>
           <p>
             Für einen <strong>starren, kaum komprimierbaren</strong> Körper,
-            voll untergetaucht in <strong>typischer Sporttauch-Tiefe</strong>, ist
-            die verdrängte Menge gleich — der
+            voll untergetaucht in <strong>typischer Sporttauch-Tiefe</strong>,
+            ist die verdrängte Menge gleich — der
             <strong>Auftrieb ändert sich praktisch nicht mit der Tiefe</strong>.
             (Wasser ist minimal komprimierbar; vernachlässigbar hier.)
             <strong>Nassanzüge, Trocki-Luft und Gas im Hebesack</strong> sind
@@ -757,8 +754,8 @@
               <p class="arch-lift-calc__lead">
                 Beispiel: Außenborder mit <strong>155 kg an der Luft</strong>,
                 unbekannt wie viel Wasser er verdrängt — starte mit
-                <strong>Gewicht + Gewässer</strong>; ergänze Unterwasservolumen, wenn
-                du es grob schätzen kannst (Außenmaße helfen).
+                <strong>Gewicht + Gewässer</strong>; ergänze Unterwasservolumen,
+                wenn du es grob schätzen kannst (Außenmaße helfen).
               </p>
               <div class="arch-lift-calc__fields">
                 <div>
@@ -783,9 +780,7 @@
                     <option value="1.025">
                       Meerwasser (≈ 1,025 kg/L — wie Tabelle)
                     </option>
-                    <option value="1">
-                      Süßwasser (≈ 1,0 kg/L)
-                    </option>
+                    <option value="1">Süßwasser (≈ 1,0 kg/L)</option>
                   </select>
                 </div>
                 <div>
@@ -793,7 +788,8 @@
                     >Unterwasservolumen — optional (L)
                     <span class="arch-lift-calc__label-hint"
                       >Leer lassen wenn unbekannt. Grobschätzung aus Größe unter
-                      Wasser, oder „0“ für absichtlich pessimistische Planung.</span
+                      Wasser, oder „0“ für absichtlich pessimistische
+                      Planung.</span
                     ></label
                   >
                   <input
@@ -809,8 +805,8 @@
                   <label for="arch-margin"
                     >Nach oben steigen? Zusätzlicher Netto-Auftrieb (kg)
                     <span class="arch-lift-calc__label-hint"
-                      >0 = nur neutral. 5–10 kg für einen sanften Schubs in dieser
-                      Näherung.</span
+                      >0 = nur neutral. 5–10 kg für einen sanften Schubs in
+                      dieser Näherung.</span
                     ></label
                   >
                   <input
@@ -831,14 +827,15 @@
               ></div>
               <p class="arch-lift-calc__hint">
                 <strong>Liter hier = verdrängtes Wasser</strong> durch den
-                Gasraum des Hebesacks <em>in der Tiefe, in der du arbeitest</em> —
-                nicht Liter aus der Flasche. Beim Aufstieg wachsen Volumen und
-                Auftrieb mit sinkendem Druck (<a
+                Gasraum des Hebesacks
+                <em>in der Tiefe, in der du arbeitest</em> — nicht Liter aus der
+                Flasche. Beim Aufstieg wachsen Volumen und Auftrieb mit
+                sinkendem Druck (<a
                   href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
                   >Boyle</a
                 >
-                — entlüften und kontrollieren). Dieselbe ρ×L ≈ kg-Faustformel wie
-                oben. Komma als Dezimaltrenner ist ok.
+                — entlüften und kontrollieren). Dieselbe ρ×L ≈ kg-Faustformel
+                wie oben. Komma als Dezimaltrenner ist ok.
               </p>
             </div>
           </div>
@@ -874,9 +871,11 @@
                   out.textContent = "Gewicht muss 0 kg oder mehr sein.";
                   return;
                 }
-                if (marginEl.value.trim() !== "" && (!isFinite(margin) || margin < 0)) {
-                  out.textContent =
-                    "Zusatz-Auftrieb: leer oder Zahl ≥ 0 (kg).";
+                if (
+                  marginEl.value.trim() !== "" &&
+                  (!isFinite(margin) || margin < 0)
+                ) {
+                  out.textContent = "Zusatz-Auftrieb: leer oder Zahl ≥ 0 (kg).";
                   return;
                 }
                 if (!isFinite(margin) || margin < 0) margin = 0;
@@ -897,9 +896,7 @@
                 var lines = [];
 
                 if (Vunknown) {
-                  lines.push(
-                    "Nur Gewicht (Unterwasservolumen unbekannt):"
-                  );
+                  lines.push("Nur Gewicht (Unterwasservolumen unbekannt):");
                   lines.push(
                     "• Gesamt-Verdrängung für neutral (Motor + Sack zusammen) ≈ " +
                       totalNeutralL.toFixed(1) +
@@ -950,7 +947,9 @@
                   );
                   if (net > 0.05) {
                     lines.push(
-                      "Netto „schwer“ ≈ " + net.toFixed(1) + " kg (Gewicht − Stützkraft)."
+                      "Netto „schwer“ ≈ " +
+                        net.toFixed(1) +
+                        " kg (Gewicht − Stützkraft)."
                     );
                   } else if (net < -0.05) {
                     lines.push(
@@ -1009,8 +1008,10 @@
 
           <p>
             In der Praxis kommen Knoten, Seilwinkel, Bodenreibung und deine
-            Körperhaltung dazu — <strong>verlass dich unter Wasser nie nur auf
-            Papier-Rechnung</strong>.
+            Körperhaltung dazu —
+            <strong
+              >verlass dich unter Wasser nie nur auf Papier-Rechnung</strong
+            >.
           </p>
         </section>
 
@@ -1021,18 +1022,18 @@
           <p>
             Das Gas im Hebesack steht unter <strong>Umgebungsdruck</strong>. In
             <strong>circa 20 m</strong> ist eine Näherung aus der Ausbildung oft
-            <strong>rund 3 bar absolut</strong>. Eine <strong>feste Gasmenge</strong>,
-            die dort ~50 L ausfüllt, dehnt sich an die Oberfläche ohne Entlüften
-            grob auf <strong>~150 L</strong> aus (im einfachen Modell etwa
-            Volumen ×3 bei 3 bar → 1 bar).
+            <strong>rund 3 bar absolut</strong>. Eine
+            <strong>feste Gasmenge</strong>, die dort ~50 L ausfüllt, dehnt sich
+            an die Oberfläche ohne Entlüften grob auf
+            <strong>~150 L</strong> aus (im einfachen Modell etwa Volumen ×3 bei
+            3 bar → 1 bar).
           </p>
           <p>
             <strong>Mehr Volumen → mehr Verdrängung → mehr Auftrieb.</strong>
             Deshalb kann ein Aufstieg mit aufblasendem Sack
             <strong>„weglaufen“</strong>: Auftrieb wächst, wenn der Druck fällt.
             Ausführlich:
-            <a
-              href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
+            <a href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
               >Boyle-Gesetz für Taucher</a
             >.
           </p>
@@ -1043,11 +1044,20 @@
         <section id="bl-sr">
           <h2>🛠️ Mindset Suchen &amp; Bergung</h2>
           <ul>
-            <li><strong>Langsam</strong> befüllen — den Sack nicht „vollknallen“.</li>
-            <li>Planen, wie du bei Bedarf <strong>entlüftest oder abkoppelst</strong>.</li>
-            <li>Aufstiegspfad kontrollieren — Leinen, Oberflächenverkehr, Buddy.</li>
-            <li><strong>Schwer heißt nicht unmöglich</strong> — aber
-              Rigging-Fehler können schwer enden.</li>
+            <li>
+              <strong>Langsam</strong> befüllen — den Sack nicht „vollknallen“.
+            </li>
+            <li>
+              Planen, wie du bei Bedarf
+              <strong>entlüftest oder abkoppelst</strong>.
+            </li>
+            <li>
+              Aufstiegspfad kontrollieren — Leinen, Oberflächenverkehr, Buddy.
+            </li>
+            <li>
+              <strong>Schwer heißt nicht unmöglich</strong> — aber
+              Rigging-Fehler können schwer enden.
+            </li>
           </ul>
           <p>
             Gute Teams verbinden Physik mit Ablauf: Blei- und Lastführung,
@@ -1073,14 +1083,15 @@
             <strong>Lungenvolumen (Boyle)</strong> und manchmal eingeschlossene
             Anzugblasen. Am Jacket sind oft häufige kleine Ablasen oder kurze
             Zufuhren nötig — siehe
-            <a href="/de/posts/scuba-knowledge/safety-stop/">Sicherheitsstopp</a>.
+            <a href="/de/posts/scuba-knowledge/safety-stop/">Sicherheitsstopp</a
+            >.
           </p>
 
           <h3>Wo lerne ich echtes Arbeiten mit Hebesäcken?</h3>
           <p>
             In einem entsprechenden Spezialkurs (z. B. Suchen &amp; Bergung und
-            ggf. weiteres technisches Rigging je nach Organisation). Einstieg über
-            unseren Überblick
+            ggf. weiteres technisches Rigging je nach Organisation). Einstieg
+            über unseren Überblick
             <a href="/de/posts/scuba-knowledge/about-search-recovery/"
               >Suchen &amp; Bergung beim Tauchen</a
             >.
@@ -1106,8 +1117,7 @@
             <a href="/de/posts/scuba-knowledge/dalton-henry-scuba-diving/"
               >Dalton &amp; Henry</a
             >,
-            <a href="/de/posts/scuba-knowledge/gas-consumption/"
-              >Gasverbrauch</a
+            <a href="/de/posts/scuba-knowledge/gas-consumption/">Gasverbrauch</a
             >,
             <a href="/de/posts/scuba-knowledge/theory-review/">Theorie-Review</a
             >.

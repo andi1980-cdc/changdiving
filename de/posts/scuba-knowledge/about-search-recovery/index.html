@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Suchen & Bergen – Ausrüstung, Techniken & echte Einsätze | Chang Diving
@@ -342,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -368,7 +375,6 @@
         "headline": "Suchen & Bergen unter Wasser – Ausrüstung, Techniken & reale Einsätze",
         "alternativeHeadline": "Wie wir ein 5-Tonnen-Boot in Koh Chang gehoben haben – Search & Recovery Tauchgang",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/search-and-recovery-diving_big.webp",
@@ -376,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchwissen, Bergetechniken, Tauchausrüstung",
@@ -494,17 +499,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Suchen & Bergen – Ausrüstung, Techniken und unsere Erfahrungen
-          </h1>
-          <p>
-            Von verlorenen Wertsachen bis zu versunkenen Booten – erfahre, wie
-            wir Dinge zurückholen, die andere verloren geben. Lerne Technik,
-            Ausrüstung & Ausbildung.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -521,19 +515,29 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Suchen & Bergen – Ausrüstung, Techniken und unsere Erfahrungen
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Von verlorenen Wertsachen bis zu versunkenen Booten – erfahre, wie wir
+          Dinge zurückholen, die andere verloren geben. Lerne Technik,
+          Ausrüstung & Ausbildung.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          Suchen und Bergen – Ausrüstung, Techniken und unsere Erfahrungen
-        </h2>
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#sr-why">Warum wichtig</a>
+            <a href="#sr-equipment">Ausrüstung</a>
+            <a href="#sr-patterns">Suchmuster</a>
+            <a href="#sr-logistics">Logistik</a>
+            <a href="#sr-course">Unser Kurs</a>
+          </div>
+        </nav>
 
         <p>
           Ob verlorene Gegenstände, Anker oder ganze Boote – Suchen und Bergen
@@ -545,7 +549,7 @@
 
         <hr />
 
-        <h2>Warum ist Suchen und Bergen wichtig?</h2>
+        <h2 id="sr-why">Warum ist Suchen und Bergen wichtig?</h2>
         <p>
           Unterwasser verlorene Gegenstände zu finden, ist aus vielen Gründen
           wichtig. Für Taucher oder Bootseigner bedeutet der Verlust von
@@ -566,7 +570,7 @@
 
         <hr />
 
-        <h2>Ausrüstung für Such- und Bergungstauchgänge</h2>
+        <h2 id="sr-equipment">Ausrüstung für Such- und Bergungstauchgänge</h2>
         <ul>
           <li>
             <strong>Hebesäcke:</strong> In Größen von 50 bis 5.000 kg, mit
@@ -670,7 +674,7 @@
 
         <hr />
 
-        <h2>Suchmuster und Techniken</h2>
+        <h2 id="sr-patterns">Suchmuster und Techniken</h2>
         <ul>
           <li>
             <strong>U-Muster:</strong> Zwei Taucher schwimmen parallel, decken
@@ -688,7 +692,7 @@
 
         <hr />
 
-        <h2>Logistik bei großen Bergungen</h2>
+        <h2 id="sr-logistics">Logistik bei großen Bergungen</h2>
         <p>
           Bei der Bergung eines 5-Tonnen-Boots setzten wir Hebesäcke gezielt,
           füllten sie vorsichtig mit Luft und hoben das Boot langsam an.
@@ -699,7 +703,7 @@
 
         <hr />
 
-        <h2>Unser Search & Recovery Kurs</h2>
+        <h2 id="sr-course">Unser Search & Recovery Kurs</h2>
         <p>
           Im
           <a href="/de/courses/search-recovery/"

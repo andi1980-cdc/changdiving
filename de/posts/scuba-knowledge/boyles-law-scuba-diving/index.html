@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Tauchphysik – Druck &amp; Boyle-Gesetz erklärt | Praxisbeispiele | Koh
@@ -392,6 +393,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -408,7 +415,6 @@
         "headline": "Tauchphysik – Druck & Boyle-Gesetz erklärt",
         "alternativeHeadline": "Praxisbeispiele: Auftrieb, Gasverbrauch und sichere Aufstiege",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/scuba-diving-physics-pressure-boyles-law_big.webp",
@@ -416,7 +422,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Tauchwissen",
@@ -511,11 +516,13 @@
           <a
             href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
             hreflang="en"
-            >🇬🇧</a>
+            >🇬🇧</a
+          >
           <a
             href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
             hreflang="de"
-            >🇩🇪</a>
+            >🇩🇪</a
+          >
           <a
             href="/th/posts/scuba-knowledge/boyles-law-scuba-diving/"
             hreflang="th"
@@ -538,7 +545,9 @@
 
         <picture style="aspect-ratio: 3 / 2">
           <source
-            srcset="/img/posts/scuba-diving-physics-pressure-boyles-law_big.webp"
+            srcset="
+              /img/posts/scuba-diving-physics-pressure-boyles-law_big.webp
+            "
             media="(min-width: 768px)"
             type="image/webp"
           />
@@ -551,14 +560,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Tauchphysik &amp; Boyle-Gesetz</h1>
-          <p>
-            Druck, Auftrieb und echte Tauchgänge — erklärt für den Alltag unter
-            Wasser
-          </p>
-        </div>
       </div>
     </header>
 
@@ -572,9 +573,20 @@
         <a href="/de/posts/straight-talk/">Klartext</a>
       </nav>
       <nav id="breadcrumb" class="breadcrumb"></nav>
-
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="Abschnitte auf dieser Seite">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Tauchphysik &amp; Boyle-Gesetz
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Druck, Auftrieb und echte Tauchgänge — erklärt für den Alltag unter
+          Wasser
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Abschnitte auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
             <a href="#sdp-intro">Einleitung</a>
@@ -588,20 +600,7 @@
           </div>
         </nav>
 
-        <h2
-          id="sdp-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          🧠 Tauchphysik – Druck &amp; Boyle-Gesetz (Praxisbeispiele)
-        </h2>
+        <h2 id="sdp-intro">🧠 Warum Druckphysik unter Wasser zählt</h2>
 
         <p>
           Die meisten Taucher lernen zuerst <strong>Fertigkeiten</strong> — aber
@@ -609,8 +608,8 @@
           <strong>Gas in Flasche und Lunge</strong> wirklich macht. Dabei folgt
           jeder Meter auf oder ab, und jeder Atemzug, einfachen physikalischen
           Regeln. Wenn <strong>Druck</strong> und das
-          <strong>Boyle-Gesetz</strong> sitzen, werden Auftrieb, Gasverbrauch und
-          Aufstiege verständlich statt „zufällig“.
+          <strong>Boyle-Gesetz</strong> sitzen, werden Auftrieb, Gasverbrauch
+          und Aufstiege verständlich statt „zufällig“.
         </p>
 
         <p>Dieses Verständnis hilft meist bei:</p>
@@ -627,8 +626,8 @@
           dann Muster, die du von den
           <a href="/de/dive-sites/">Tauchplätzen auf Koh Chang</a> kennst — vom
           flachen Riff bis zum
-          <a href="/de/dive-sites/htms-chang-wreck/">Wrack HTMS Chang</a>.
-          Für Zahlen und SAC-Planung passt unser
+          <a href="/de/dive-sites/htms-chang-wreck/">Wrack HTMS Chang</a>. Für
+          Zahlen und SAC-Planung passt unser
           <a href="/de/posts/scuba-knowledge/gas-consumption/"
             >Gasverbrauch-Guide</a
           >
@@ -636,9 +635,9 @@
         </p>
 
         <p class="note">
-          <strong>Hinweis zur Ausbildung:</strong> Das hier ist Hintergrundwissen
-          und ersetzt nicht dein Lehrmaterial, deinen Instructor oder den
-          Tauchcomputer.
+          <strong>Hinweis zur Ausbildung:</strong> Das hier ist
+          Hintergrundwissen und ersetzt nicht dein Lehrmaterial, deinen
+          Instructor oder den Tauchcomputer.
         </p>
 
         <hr />
@@ -646,10 +645,10 @@
         <section id="sdp-pressure">
           <h2>🌊 Druck beim Tauchen — die Basis</h2>
           <p>
-            <strong>Umgebungsdruck (ambient pressure)</strong> ist die physikalische
-            Grundlage für alles: wie dicht dein Atemgas ist, wie straff sich der
-            Trocki anfühlt und wie „nervös“ das Jacket in der Tiefe reagieren
-            kann.
+            <strong>Umgebungsdruck (ambient pressure)</strong> ist die
+            physikalische Grundlage für alles: wie dicht dein Atemgas ist, wie
+            straff sich der Trocki anfühlt und wie „nervös“ das Jacket in der
+            Tiefe reagieren kann.
           </p>
 
           <h3>Die Faustregel aus dem Open Water</h3>
@@ -700,16 +699,15 @@
             <sup>*</sup> Bei <strong>fester Gasmenge</strong> und etwa
             <strong>konstanter Temperatur</strong> gilt
             <strong>Druck × Volumen ≈ konstant</strong> (Gesetz von Boyle), also
-            nimmt das Volumen ab und die Dichte zu — proportional zum
-            absoluten Druck, bezogen auf die Oberfläche.
+            nimmt das Volumen ab und die Dichte zu — proportional zum absoluten
+            Druck, bezogen auf die Oberfläche.
           </p>
 
           <p>
             <strong>Süßwasser</strong> ist etwas weniger dicht: Für genauere
-            Rechnungen nutzt man oft etwa
-            <strong>10,3 m pro 1 bar</strong> — dein Kurs und der Computer
-            kümmern sich um Details; die <strong>Idee</strong> bleibt: tiefer
-            = mehr Druck.
+            Rechnungen nutzt man oft etwa <strong>10,3 m pro 1 bar</strong> —
+            dein Kurs und der Computer kümmern sich um Details; die
+            <strong>Idee</strong> bleibt: tiefer = mehr Druck.
           </p>
 
           <div
@@ -807,14 +805,22 @@
             Automat „mehr frisst“.
           </p>
           <p>
-            In der Praxis erhöhen <strong>Belastung, Kälte, Stress und schlechte
-            Tarierung</strong> den Verbrauch zusätzlich; der Druckeffekt ist
-            aber die große Basis.
+            In der Praxis erhöhen
+            <strong>Belastung, Kälte, Stress und schlechte Tarierung</strong>
+            den Verbrauch zusätzlich; der Druckeffekt ist aber die große Basis.
           </p>
           <ul>
-            <li>Gleicher Atemrhythmus → viel höherer Gasbedarf pro Minute in der Tiefe</li>
-            <li>Jacketluft ist komprimiert → in der Tiefe oft mehr Auffüllen nötig</li>
-            <li>Kleine Tiefenänderungen wirken in der Tiefe <em>relativ</em> weniger stark</li>
+            <li>
+              Gleicher Atemrhythmus → viel höherer Gasbedarf pro Minute in der
+              Tiefe
+            </li>
+            <li>
+              Jacketluft ist komprimiert → in der Tiefe oft mehr Auffüllen nötig
+            </li>
+            <li>
+              Kleine Tiefenänderungen wirken in der Tiefe
+              <em>relativ</em> weniger stark
+            </li>
           </ul>
 
           <p>
@@ -838,13 +844,13 @@
           <p>
             Umgangssprachlich: <strong>Gas zusammendrücken</strong> (höherer
             Druck) → <strong>kleineres</strong> Volumen.
-            <strong>Druck wegnehmen</strong> → Volumen
-            <strong>wächst</strong>.
+            <strong>Druck wegnehmen</strong> → Volumen <strong>wächst</strong>.
           </p>
           <p>
             <strong>Jacket-Blase</strong>, freiliegender Bund,
             <strong>kleine Luftblase unter dem Gurt</strong> und
-            <strong>Lungen</strong> folgen diesem Muster beim Auf- und Absteigen.
+            <strong>Lungen</strong> folgen diesem Muster beim Auf- und
+            Absteigen.
           </p>
         </section>
 
@@ -883,7 +889,9 @@
                   </select>
                 </div>
                 <div class="pressure-calc__field">
-                  <label for="bcd-depth-known">Volumen gemessen in Tiefe (m)</label>
+                  <label for="bcd-depth-known"
+                    >Volumen gemessen in Tiefe (m)</label
+                  >
                   <input
                     id="bcd-depth-known"
                     type="number"
@@ -933,8 +941,8 @@
               <p class="pressure-calc__hint">
                 Nutzt <strong>P₁V₁ ≈ P₂V₂</strong> mit absolutem Druck wie in
                 der Tabelle (1 bar Oberfläche + 1 bar je 10 m bzw. 10,3 m).
-                <strong>Nur Gedankenexperiment</strong> — ein echtes Jacket
-                wird entlüftet; Temperaturänderungen ignorieren wir hier.
+                <strong>Nur Gedankenexperiment</strong> — ein echtes Jacket wird
+                entlüftet; Temperaturänderungen ignorieren wir hier.
               </p>
             </div>
           </div>
@@ -1025,8 +1033,8 @@
           </script>
 
           <p>
-            Im echten Tauchgang entlüftest und justierst du natürlich — entscheidend
-            ist das <strong>Muster</strong>:
+            Im echten Tauchgang entlüftest und justierst du natürlich —
+            entscheidend ist das <strong>Muster</strong>:
             <strong>Luftexpansion beim Aufstieg</strong> kann einen Aufstieg
             eskalieren, wenn du nicht <strong>rechtzeitig ablässt</strong>.
           </p>
@@ -1035,16 +1043,23 @@
           <p>Ein typischer Teufelskreis:</p>
           <ol>
             <li>Du steigst ein wenig → Druck sinkt.</li>
-            <li>Gas im Jacket dehnt sich aus → du wirst Auftriebs-positiver.</li>
+            <li>
+              Gas im Jacket dehnt sich aus → du wirst Auftriebs-positiver.
+            </li>
             <li>Du steigst schneller → Druck sinkt schneller.</li>
-            <li>Die Expansion nimmt zu, solange du nicht <strong>rechtzeitig ablässt</strong>.</li>
+            <li>
+              Die Expansion nimmt zu, solange du nicht
+              <strong>rechtzeitig ablässt</strong>.
+            </li>
           </ol>
           <p>
             Gute Ausbildung und die Mentalität
-            <a href="/de/posts/scuba-knowledge/safety-stop/">Sicherheitsstops</a>
+            <a href="/de/posts/scuba-knowledge/safety-stop/"
+              >Sicherheitsstops</a
+            >
             durchbrechen die Schleife:
-            <strong>früh und in kleinen Schritten korrigieren</strong>, besonders
-            in den letzten Metern.
+            <strong>früh und in kleinen Schritten korrigieren</strong>,
+            besonders in den letzten Metern.
           </p>
         </section>
 
@@ -1054,9 +1069,9 @@
           <h2>🔥 Die letzten Meter zählen (relativ) am meisten</h2>
           <p>
             Zwischen <strong>10 m und der Oberfläche</strong> fällt der absolute
-            Druck von etwa 2 bar auf 1 bar — eine
-            <strong>Halbierung</strong>. Ein abgeschlossenes Gasvolumen könnte in
-            diesem Bereich theoretisch <strong>fast doppelt so groß</strong>
+            Druck von etwa 2 bar auf 1 bar — eine <strong>Halbierung</strong>.
+            Ein abgeschlossenes Gasvolumen könnte in diesem Bereich theoretisch
+            <strong>fast doppelt so groß</strong>
             werden; deshalb „beißen“ Auftriebsänderungen beim flachen Aufstieg
             am stärksten.
           </p>
@@ -1066,9 +1081,13 @@
             <li>
               Ein ruhiger <strong>3-Minuten-Stopp um etwa 5 m</strong> bei
               vielen Tauchgängen — mehr dazu im
-              <a href="/de/posts/scuba-knowledge/safety-stop/">Sicherheitsstopp</a>
+              <a href="/de/posts/scuba-knowledge/safety-stop/"
+                >Sicherheitsstopp</a
+              >
             </li>
-            <li>Gas aus dem Jacket <strong>bevor</strong> du nach oben „drückst“</li>
+            <li>
+              Gas aus dem Jacket <strong>bevor</strong> du nach oben „drückst“
+            </li>
           </ul>
         </section>
 
@@ -1077,11 +1096,14 @@
         <section id="sdp-lungs">
           <h2>🫁 Boyle-Gesetz und deine Lungen</h2>
           <p>
-            Die Lungen sind keine festen Ballons, aber wenn du am offenen Kreislauf
-            den <strong>Atem anhältst</strong> und aufsteigst, wird eingeschlossenes
-            Gas bei sinkendem Druck <strong>größer</strong>. Das begründet die
-            Regel:
-            <strong>kontinuierlich atmen, beim Aufstieg nicht den Atem anhalten</strong>
+            Die Lungen sind keine festen Ballons, aber wenn du am offenen
+            Kreislauf den <strong>Atem anhältst</strong> und aufsteigst, wird
+            eingeschlossenes Gas bei sinkendem Druck <strong>größer</strong>.
+            Das begründet die Regel:
+            <strong
+              >kontinuierlich atmen, beim Aufstieg nicht den Atem
+              anhalten</strong
+            >
             — ein Kernthema im
             <a href="/de/courses/open-water-diver/">Open Water</a> und in
             Folgekursen.
@@ -1103,16 +1125,19 @@
               Du <strong>erwartest</strong> Auftriebssprünge statt hinterher zu
               reagieren
             </li>
-            <li>Du lässt beim Hochkommen <strong>früh und häufig</strong> ab</li>
-            <li>Du bleibst entspannter und sparst unnötig Gas</li>
             <li>
-              Du vertraust langsamen Aufstiegen und kurzen Tiefe-Stops
+              Du lässt beim Hochkommen <strong>früh und häufig</strong> ab
             </li>
+            <li>Du bleibst entspannter und sparst unnötig Gas</li>
+            <li>Du vertraust langsamen Aufstiegen und kurzen Tiefe-Stops</li>
           </ul>
           <p>
             Wer Druck, Ohr und Ausrüstung einmal kompakt möchte: unsere
-            <a href="/de/posts/scuba-knowledge/theory-review/">Theorie-Übersicht</a>
-            entspricht vielem, was wir im Shop vor ersten Tauchgängen durchgehen.
+            <a href="/de/posts/scuba-knowledge/theory-review/"
+              >Theorie-Übersicht</a
+            >
+            entspricht vielem, was wir im Shop vor ersten Tauchgängen
+            durchgehen.
           </p>
         </section>
 
@@ -1136,7 +1161,9 @@
             >.
           </p>
 
-          <h3>Warum reagiert mein Jacket an der Oberfläche so „empfindlich“?</h3>
+          <h3>
+            Warum reagiert mein Jacket an der Oberfläche so „empfindlich“?
+          </h3>
           <p>
             Dieselbe ventilierte Menge ändert bei niedrigem Druck das Volumen
             stärker relativ zur Umgebung — kleine Volumina verschieben den
@@ -1149,7 +1176,9 @@
             Prinzip. Nitrox betrifft vor allem
             <strong>Sauerstoff-Grenzen</strong> (Partialdrücke), nicht die
             Tatsache, dass Volumina flacher werden.
-            <a href="/de/posts/scuba-knowledge/nitrox-info/">Nitrox-Grundlagen</a>
+            <a href="/de/posts/scuba-knowledge/nitrox-info/"
+              >Nitrox-Grundlagen</a
+            >
           </p>
         </section>
 
@@ -1158,16 +1187,15 @@
         <footer class="post-footer">
           <h2>📌 Kurz gesagt</h2>
           <p>
-            Druck und Boyle-Gesetz sind keine Theorie zum Nebenbei —
-            sie erklären, <strong>warum</strong> Gas in der Tiefe schneller weg
-            ist, warum Aufstiege aktive Tarierung brauchen und warum
-            Atem-Anhalten beim Hochkommen mit der Flasche gefährlich ist. Das
-            Muster verstanden, wird die Wassersäule planbar.
+            Druck und Boyle-Gesetz sind keine Theorie zum Nebenbei — sie
+            erklären, <strong>warum</strong> Gas in der Tiefe schneller weg ist,
+            warum Aufstiege aktive Tarierung brauchen und warum Atem-Anhalten
+            beim Hochkommen mit der Flasche gefährlich ist. Das Muster
+            verstanden, wird die Wassersäule planbar.
           </p>
           <p>
             Nächster Teil der Serie:
-            <a
-              href="/de/posts/scuba-knowledge/dalton-henry-scuba-diving/"
+            <a href="/de/posts/scuba-knowledge/dalton-henry-scuba-diving/"
               >Dalton &amp; Henry</a
             >
             (Partialdruck &amp; Gewebe), danach

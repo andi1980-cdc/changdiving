@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Dive Logbook – Why It’s Important and What to Record</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "The Dive Logbook – Why It’s Important and What to Record",
         "alternativeHeadline": "Your Guide to Using and Maintaining a Dive Logbook",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/dive-logbook_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Knowledge",
@@ -485,11 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>The Dive Logbook – Why It’s Important and What to Record</h1>
-          <p>////</p>
-        </div>
       </div>
     </header>
 
@@ -506,19 +506,28 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           The Dive Logbook – Why It’s Important and What to Record
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Understand why logging dives matters, what to record, and how your log
+          supports training and progress.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#dl-why">Why it matters</a>
+            <a href="#dl-record">What to record</a>
+            <a href="#dl-sac">SAC rate</a>
+            <a href="#dl-digital">Digital vs classic</a>
+            <a href="#dl-who">Who fills it in</a>
+          </div>
+        </nav>
 
         <p>
           A dive logbook is more than just a collection of memories – it’s an
@@ -529,7 +538,7 @@
 
         <hr />
 
-        <h2>Why a Dive Logbook Is Important</h2>
+        <h2 id="dl-why">Why a Dive Logbook Is Important</h2>
         <p>
           Your logbook documents all your dives, shows your experience, and
           helps when taking advanced courses or doing special dives. Some
@@ -565,7 +574,7 @@
           may also be required when renting dive equipment.
         </p>
 
-        <h2>What Should Be Recorded in a Dive Logbook?</h2>
+        <h2 id="dl-record">What Should Be Recorded in a Dive Logbook?</h2>
         <ul>
           <li>
             <strong>Date and Location:</strong> When and where did the dive take
@@ -605,9 +614,8 @@
           <li>
             <strong>Gas / mix:</strong> <strong>Air</strong> or
             <strong>Nitrox (EAN)</strong> — if Nitrox, write the
-            <strong>O₂ percentage</strong> (e.g. 32% / EAN32). Makes it easier to
-            compare gas use and plan similar dives.
-            (<a
+            <strong>O₂ percentage</strong> (e.g. 32% / EAN32). Makes it easier
+            to compare gas use and plan similar dives. (<a
               href="/en/posts/scuba-knowledge/nitrox-info/"
               target="_blank"
               rel="noopener noreferrer"
@@ -622,14 +630,15 @@
           </li>
           <li>
             <strong>Weighting (lead):</strong> How much lead you used in
-            <strong>kg</strong> — makes it easier to dial in the right weight for
-            similar conditions, exposure suits, and tanks.
+            <strong>kg</strong> — makes it easier to dial in the right weight
+            for similar conditions, exposure suits, and tanks.
           </li>
           <li>
-            <strong>Equipment notes (optional):</strong> e.g. <strong>BCD
-            size</strong>, <strong>wetsuit</strong> shorty vs. long,
-            <strong>thickness</strong> (mm), boots — a useful extra when you rent
-            gear or travel and want to remember what fit and buoyancy felt right.
+            <strong>Equipment notes (optional):</strong> e.g.
+            <strong>BCD size</strong>, <strong>wetsuit</strong> shorty vs. long,
+            <strong>thickness</strong> (mm), boots — a useful extra when you
+            rent gear or travel and want to remember what fit and buoyancy felt
+            right.
           </li>
           <li><strong>Buddy and Instructor:</strong> Who did you dive with?</li>
           <li>
@@ -659,20 +668,21 @@
         <h2 id="dl-sac">SAC rate from your logbook numbers</h2>
         <p>
           Your logbook usually lists <strong>gas used</strong> (start/end
-          pressure), <strong>time</strong>, and often <strong>max depth</strong>.
-          To turn that into a <strong>SAC (surface air consumption)</strong> in
-          L/min, the formula uses <strong>average depth</strong> — not everyone
-          writes that down. If you only know max depth, you can estimate average
-          depth as <strong>about 60% of max depth</strong> for typical Koh Chang
-          reef dives (multi-level profiles). If your computer shows average
-          depth, enter it instead for a more accurate result.
+          pressure), <strong>time</strong>, and often
+          <strong>max depth</strong>. To turn that into a
+          <strong>SAC (surface air consumption)</strong> in L/min, the formula
+          uses <strong>average depth</strong> — not everyone writes that down.
+          If you only know max depth, you can estimate average depth as
+          <strong>about 60% of max depth</strong> for typical Koh Chang reef
+          dives (multi-level profiles). If your computer shows average depth,
+          enter it instead for a more accurate result.
         </p>
         <p>
           <strong>Why calculate and log it?</strong> Working out your SAC and
           writing it in your logbook (even just now and then) helps you notice
-          patterns—how depth, currents, workload, or a stressful day affect
-          your breathing—and see real <strong>progress</strong> when your
-          numbers improve over time.
+          patterns—how depth, currents, workload, or a stressful day affect your
+          breathing—and see real <strong>progress</strong> when your numbers
+          improve over time.
         </p>
 
         <div
@@ -831,7 +841,8 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Avg depth (<span id="dlSacAvgDepthUnit">m</span>), optional</label
+                >Avg depth (<span id="dlSacAvgDepthUnit">m</span>),
+                optional</label
               >
               <input
                 type="number"
@@ -888,7 +899,7 @@
 
         <hr />
 
-        <h2>Digital Logbook vs. Classic Logbook</h2>
+        <h2 id="dl-digital">Digital Logbook vs. Classic Logbook</h2>
         <p>
           Today, many divers keep digital logbooks using apps like
           <strong>Divelog</strong>, <strong>SSI</strong>, or
@@ -910,7 +921,7 @@
 
         <hr />
 
-        <h2>Who Fills Out the Logbook?</h2>
+        <h2 id="dl-who">Who Fills Out the Logbook?</h2>
         <p>
           During courses, your instructors and divemasters help you fill out and
           stamp your logbook. For fun dives, you’re responsible for your own
@@ -1108,11 +1119,15 @@
       function calculateDiveLogSAC() {
         const units = document.getElementById("dlSacUnits").value;
         const isImperial = units === "imperial";
-        const pressureInput = parseFloat(document.getElementById("dlSacBar").value);
+        const pressureInput = parseFloat(
+          document.getElementById("dlSacBar").value
+        );
         const time = parseFloat(document.getElementById("dlSacTime").value);
         const tank = parseFloat(document.getElementById("dlSacTank").value);
         const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
+        const avgIn = parseFloat(
+          document.getElementById("dlSacAvgDepth").value
+        );
         const result = document.getElementById("dlSacResult");
         const pressureUnit = isImperial ? "psi" : "bar";
         const tankUnit = isImperial ? "cu ft" : "L";
@@ -1144,8 +1159,7 @@
           !tank ||
           tank <= 0
         ) {
-          result.innerHTML =
-            `<span>Enter <strong>gas used (${pressureUnit})</strong>, <strong>time</strong>, and <strong>tank size (${tankUnit})</strong>.</span>`;
+          result.innerHTML = `<span>Enter <strong>gas used (${pressureUnit})</strong>, <strong>time</strong>, and <strong>tank size (${tankUnit})</strong>.</span>`;
           return;
         }
 
@@ -1159,8 +1173,7 @@
 
         let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>Gas: ${liters.toFixed(0)} L over ${time} min at ${ata.toFixed(2)} ATA</small>`;
         if (isImperial) {
-          html +=
-            `<br><small style="color: #666; font-weight: normal">(psi/ft and ${tankUnit} converted internally to bar/m and L tank size)</small>`;
+          html += `<br><small style="color: #666; font-weight: normal">(psi/ft and ${tankUnit} converted internally to bar/m and L tank size)</small>`;
         }
         if (sac > 25) {
           html +=

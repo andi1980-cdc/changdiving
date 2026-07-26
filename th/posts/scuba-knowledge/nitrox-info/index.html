@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       NITROX คืออะไร และทำไมต้องเลือกศูนย์ NITROX เต็มรูปแบบแห่งเดียวในเกาะช้าง
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "NITROX คืออะไร และทำไมต้องเลือกศูนย์ดำน้ำที่มีสถานี NITROX แบบครบวงจรที่เกาะช้าง?",
         "alternativeHeadline": "ข้อดีของการดำน้ำด้วย NITROX, การคำนวณ MOD และการผสมก๊าซอย่างปลอดภัยกับศูนย์ดำน้ำชั้นนำของเกาะช้าง",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/why-nitrox_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้ด้านการดำน้ำ",
@@ -504,14 +509,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>NITROX คืออะไร และทำไมต้องเลือกศูนย์ NITROX ที่เกาะช้างของเรา</h1>
-          <p>
-            ดำน้ำนานขึ้น ฟื้นตัวไวขึ้น ปลอดภัยยิ่งขึ้น – ด้วย NITROX
-            จากสถานีเติมก๊าซที่ได้รับการรับรองแห่งเดียวในเกาะช้าง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -528,7 +525,19 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="เนื้อหาในหน้านี้">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          NITROX คืออะไร และทำไมต้องเลือกศูนย์ NITROX ที่เกาะช้างของเรา
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ดำน้ำนานขึ้น ฟื้นตัวไวขึ้น ปลอดภัยยิ่งขึ้น – ด้วย NITROX
+          จากสถานีเติมก๊าซที่ได้รับการรับรองแห่งเดียวในเกาะช้าง
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="เนื้อหาในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">ในหน้านี้</span>
           <div class="page-jump-nav__links">
             <a href="#nitrox-basics">พื้นฐาน</a>
@@ -540,28 +549,13 @@
             <a href="#nitrox-certification">ใบรับรอง</a>
           </div>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          NITROX คืออะไร และทำไมต้องเลือกสถานีเติม NITROX
-          เต็มรูปแบบแห่งเดียวในเกาะช้าง?
-        </h2>
 
         <p style="font-size: 1.1em; font-weight: 600; color: #0d47a1">
-          <strong>Nitrox คุ้มไหม?</strong> คุ้ม – อยู่ใต้น้ำได้นานขึ้นโดยไม่เข้าโนดีคอม
-          เหนื่อยน้อยลง พักระหว่างไดฟ์สั้นลง ผสมที่ใช้บ่อย:
-          <strong>EAN32</strong> (O₂ 32%), <strong>EAN36</strong> (O₂ 36%)
-          Nitrox eLearning และเวิร์กช็อป เริ่ม <strong>4,990 THB</strong> –
-          จ่ายครั้งเดียว
-          ใบรับรองตลอดชีวิต
+          <strong>Nitrox คุ้มไหม?</strong> คุ้ม –
+          อยู่ใต้น้ำได้นานขึ้นโดยไม่เข้าโนดีคอม เหนื่อยน้อยลง
+          พักระหว่างไดฟ์สั้นลง ผสมที่ใช้บ่อย: <strong>EAN32</strong> (O₂ 32%),
+          <strong>EAN36</strong> (O₂ 36%) Nitrox eLearning และเวิร์กช็อป เริ่ม
+          <strong>4,990 THB</strong> – จ่ายครั้งเดียว ใบรับรองตลอดชีวิต
         </p>
 
         <div
@@ -623,7 +617,8 @@
           "
         >
           ต้องการใบรับรองแบบ SDI พร้อมไดฟ์ฝึก 2 ครั้ง? แพ็กเกจนั้นเริ่มที่
-          <strong>7,990 THB</strong>; ตัวเลือก PADI และราคาแบบเรียนทฤษฎีอย่างเดียวดูได้ที่หน้า
+          <strong>7,990 THB</strong>; ตัวเลือก PADI
+          และราคาแบบเรียนทฤษฎีอย่างเดียวดูได้ที่หน้า
           <a
             href="/th/courses/nitrox-diver/"
             style="color: #0077b6; font-weight: 600"
@@ -654,17 +649,22 @@
         <h2 id="nitrox-diving">การดำน้ำ Nitrox สำหรับนักดำน้ำทั่วไป</h2>
         <p>
           <strong>การดำน้ำ Nitrox</strong> หมายถึงการหายใจผสม
-          <strong>Enriched Air</strong> (มักเป็น EAN32 หรือ EAN36) ที่มีออกซิเจนมากและไนโตรเจนน้อยกว่าอากาศปกติ
+          <strong>Enriched Air</strong> (มักเป็น EAN32 หรือ EAN36)
+          ที่มีออกซิเจนมากและไนโตรเจนน้อยกว่าอากาศปกติ
           ทุกไดฟ์คุณยังต้องวิเคราะห์ถัง ปฏิบัติตาม
-          <strong>ความลึกใช้งานสูงสุด (MOD)</strong> ของผสมนั้น วางแผนกับเพื่อนร่วมไดฟ์หรือคอมพิวเตอร์ดำน้ำ
+          <strong>ความลึกใช้งานสูงสุด (MOD)</strong> ของผสมนั้น
+          วางแผนกับเพื่อนร่วมไดฟ์หรือคอมพิวเตอร์ดำน้ำ
           และอยู่ในขีดจำกัดของใบรับรอง—เหมือนเมื่อดำบนอากาศ
         </p>
         <p>
-          สำหรับนักดำน้ำทั่วไป Nitrox <em>ไม่ใช่</em> แก๊สสำหรับ “ดำลึก” เป็นหลัก
-          แต่ใช้เพื่อขยายเวลาโนดีคอม ลดการสะสมไนโตรเจน และสั้นเวลาพักผิวระหว่างไดฟ์ซ้ำ
-          ต้องมีใบรับรอง <strong>Nitrox / Enriched Air</strong> ที่ได้รับการยอมรับก่อนดำ Nitrox—
-          <a href="/th/courses/nitrox-diver/">หลักสูตร Nitrox Diver</a> ที่เกาะช้างของเราครอบคลุมทฤษฎี
-          การวิเคราะห์ก๊าซ และ (ทางเลือก) การฝึกในน้ำ
+          สำหรับนักดำน้ำทั่วไป Nitrox <em>ไม่ใช่</em> แก๊สสำหรับ “ดำลึก”
+          เป็นหลัก แต่ใช้เพื่อขยายเวลาโนดีคอม ลดการสะสมไนโตรเจน
+          และสั้นเวลาพักผิวระหว่างไดฟ์ซ้ำ ต้องมีใบรับรอง
+          <strong>Nitrox / Enriched Air</strong> ที่ได้รับการยอมรับก่อนดำ
+          Nitrox—
+          <a href="/th/courses/nitrox-diver/">หลักสูตร Nitrox Diver</a>
+          ที่เกาะช้างของเราครอบคลุมทฤษฎี การวิเคราะห์ก๊าซ และ (ทางเลือก)
+          การฝึกในน้ำ
         </p>
 
         <h2 id="nitrox-benefits">ทำไมต้องใช้ NITROX?</h2>

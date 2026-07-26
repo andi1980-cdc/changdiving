@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ไดฟ์ล็อกบุ๊ก – ทำไมถึงสำคัญ และควรบันทึกอะไรไว้บ้าง</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "สมุดบันทึกการดำน้ำ – ทำไมถึงสำคัญและควรจดอะไรไว้",
         "alternativeHeadline": "คู่มือการใช้และดูแลสมุดบันทึกการดำน้ำของคุณ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/dive-logbook_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เกี่ยวกับการดำน้ำ",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ไดฟ์ล็อกบุ๊ก – ทำไมถึงสำคัญ และควรบันทึกอะไรไว้บ้าง</h1>
-          <p>
-            เข้าใจความสำคัญของไดฟ์ล็อกบุ๊ก รายละเอียดที่ควรบันทึก
-            และประโยชน์ต่อการฝึกและการดำน้ำของคุณ
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,22 +506,28 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           ไดฟ์ล็อกบุ๊ก – ทำไมถึงสำคัญ และควรบันทึกอะไรไว้บ้าง
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          เข้าใจความสำคัญของไดฟ์ล็อกบุ๊ก รายละเอียดที่ควรบันทึก
+          และประโยชน์ต่อการฝึกและการดำน้ำของคุณ
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#dl-why">ทำไมสำคัญ</a>
+            <a href="#dl-record">บันทึกอะไร</a>
+            <a href="#dl-sac">อัตรา SAC</a>
+            <a href="#dl-digital">ดิจิทัล vs คลาสสิก</a>
+            <a href="#dl-who">ใครกรอก</a>
+          </div>
+        </nav>
 
         <p>
           ไดฟ์ล็อกบุ๊กไม่ใช่แค่สมุดเก็บความทรงจำ
@@ -535,7 +538,7 @@
 
         <hr />
 
-        <h2>ทำไมไดฟ์ล็อกบุ๊กถึงสำคัญ</h2>
+        <h2 id="dl-why">ทำไมไดฟ์ล็อกบุ๊กถึงสำคัญ</h2>
         <p>
           ล็อกบุ๊กใช้สำหรับบันทึกการดำน้ำทั้งหมด แสดงประสบการณ์
           และเป็นสิ่งจำเป็นสำหรับคอร์สขั้นสูง เช่น
@@ -570,7 +573,7 @@
           รวมถึงการเช่าอุปกรณ์ดำน้ำบางครั้งก็ต้องใช้ล็อกบุ๊กประกอบ
         </p>
 
-        <h2>ควรบันทึกอะไรในไดฟ์ล็อกบุ๊ก?</h2>
+        <h2 id="dl-record">ควรบันทึกอะไรในไดฟ์ล็อกบุ๊ก?</h2>
         <ul>
           <li><strong>วันที่และสถานที่:</strong> ดำน้ำเมื่อไหร่และที่ไหน?</li>
           <li>
@@ -603,8 +606,10 @@
           </li>
           <li>
             <strong>แก๊ส / มิกซ์:</strong> <strong>อากาศ</strong> หรือ
-            <strong>Nitrox (EAN)</strong> — ถ้า Nitrox ให้จด<strong>เปอร์เซ็นต์
-            O₂</strong> (เช่น 32% / EAN32) ช่วยเปรียบเทียบการใช้แก๊สและวางแผนไดฟ์คล้ายกัน
+            <strong>Nitrox (EAN)</strong> — ถ้า Nitrox ให้จด<strong
+              >เปอร์เซ็นต์ O₂</strong
+            >
+            (เช่น 32% / EAN32) ช่วยเปรียบเทียบการใช้แก๊สและวางแผนไดฟ์คล้ายกัน
             (<a
               href="/th/posts/scuba-knowledge/nitrox-info/"
               target="_blank"
@@ -613,19 +618,20 @@
             >)
           </li>
           <li>
-            <strong>SAC (ไม่บังคับ):</strong> การใช้อากาศที่ผิวน้ำ เป็น L/นาที
-            — จดไว้ช่วยเห็นนิสัยการหายใจและความก้าวหน้า
+            <strong>SAC (ไม่บังคับ):</strong> การใช้อากาศที่ผิวน้ำ เป็น L/นาที —
+            จดไว้ช่วยเห็นนิสัยการหายใจและความก้าวหน้า
             <a href="#dl-sac">ประมาณจากตัวเลขในล็อกบุ๊ก</a>ได้ในหน้านี้
           </li>
           <li>
             <strong>ตะกั่ว (น้ำหนัก):</strong> ใช้ตะกั่วกี่กิโลกรัม
-            <strong>(kg)</strong> — ช่วยจำน้ำหนักที่เหมาะสมในสภาพคล้ายกัน ชุดดำน้ำ
-            และขนาดถัง
+            <strong>(kg)</strong> — ช่วยจำน้ำหนักที่เหมาะสมในสภาพคล้ายกัน
+            ชุดดำน้ำ และขนาดถัง
           </li>
           <li>
-            <strong>อุปกรณ์ (ไม่บังคับ):</strong> เช่น ไซส์ <strong>BCD</strong>
-            ชุด<strong>วอเตอร์สูท</strong>แบบสั้น/ยาว <strong>ความหนา</strong> (mm)
-            ไซส์รองเท้า — ช่วยจำตอนเช่าอุปกรณ์หรือเดินทางว่าอะไรพอดีและลอยตัวแค่ไหน
+            <strong>อุปกรณ์ (ไม่บังคับ):</strong> เช่น ไซส์
+            <strong>BCD</strong> ชุด<strong>วอเตอร์สูท</strong>แบบสั้น/ยาว
+            <strong>ความหนา</strong> (mm) ไซส์รองเท้า —
+            ช่วยจำตอนเช่าอุปกรณ์หรือเดินทางว่าอะไรพอดีและลอยตัวแค่ไหน
           </li>
           <li><strong>บัดดี้และผู้สอน:</strong> คุณดำน้ำกับใคร?</li>
           <li>
@@ -654,9 +660,10 @@
         <h2 id="dl-sac">คำนวณ SAC จากตัวเลขในล็อกบุ๊ก</h2>
         <p>
           ในล็อกบุ๊กมักมี <strong>การใช้แก๊ส</strong> (แรงดันเริ่ม/จบ)
-          <strong>เวลา</strong> และบ่อยครั้ง <strong>ความลึกสูงสุด</strong>
-          การหา <strong>SAC (การใช้อากาศที่ผิวน้ำ)</strong> เป็น L/นาที
-          ต้องใช้ <strong>ความลึกเฉลี่ย</strong> ซึ่งหลายคนไม่ได้จด
+          <strong>เวลา</strong> และบ่อยครั้ง
+          <strong>ความลึกสูงสุด</strong> การหา
+          <strong>SAC (การใช้อากาศที่ผิวน้ำ)</strong> เป็น L/นาที ต้องใช้
+          <strong>ความลึกเฉลี่ย</strong> ซึ่งหลายคนไม่ได้จด
           ถ้ารู้แค่ความลึกสูงสุด สามารถประมาณความลึกเฉลี่ยได้หยาบๆ ว่า
           <strong>ประมาณ 60% ของความลึกสูงสุด</strong>
           เหมาะกับโปรไฟล์ดำหลายระดับที่เกาะช้าง ถ้าคอมพิวเตอร์แสดงความลึกเฉลี่ย
@@ -664,8 +671,8 @@
         </p>
         <p>
           <strong>ทำไมต้องคำนวณแล้วจดในล็อกบุ๊ก?</strong>
-          การคำนวณ SAC แล้วบันทึกไว้ (แม้เพียงบางครั้ง)
-          ช่วยให้เห็นแพทเทิร์น เช่น ความลึก กระแส ความเหนื่อย หรือวันที่เครียด
+          การคำนวณ SAC แล้วบันทึกไว้ (แม้เพียงบางครั้ง) ช่วยให้เห็นแพทเทิร์น
+          เช่น ความลึก กระแส ความเหนื่อย หรือวันที่เครียด
           ส่งผลต่อการหายใจอย่างไร — และเห็น<strong>ความก้าวหน้า</strong>
           เมื่อตัวเลขดีขึ้นเรื่อยๆ
         </p>
@@ -826,7 +833,8 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >ความลึกเฉลี่ย (<span id="dlSacAvgDepthUnit">m</span>) ไม่บังคับ</label
+                >ความลึกเฉลี่ย (<span id="dlSacAvgDepthUnit">m</span>)
+                ไม่บังคับ</label
               >
               <input
                 type="number"
@@ -850,8 +858,8 @@
             ถ้าไม่กรอก <strong>ความลึกเฉลี่ย</strong> ระบบใช้
             <strong>60% × ความลึกสูงสุด</strong> (ประมาณการแบบเกาะช้าง)
             ถ้ากรอกความลึกเฉลี่ย จะใช้ค่านั้น และสามารถสลับหน่วย
-            <strong>bar/m</strong> กับ <strong>psi/ft</strong> ได้ (โหมด imperial
-            ให้กรอกขนาดถังเป็น <strong>cu ft</strong>)
+            <strong>bar/m</strong> กับ <strong>psi/ft</strong> ได้ (โหมด
+            imperial ให้กรอกขนาดถังเป็น <strong>cu ft</strong>)
           </p>
           <div
             id="dlSacResult"
@@ -883,7 +891,7 @@
 
         <hr />
 
-        <h2>ล็อกบุ๊กดิจิทัล vs. สมุดคลาสสิก</h2>
+        <h2 id="dl-digital">ล็อกบุ๊กดิจิทัล vs. สมุดคลาสสิก</h2>
         <p>
           ปัจจุบันนักดำน้ำหลายคนใช้แอปอย่าง <strong>Divelog</strong>,
           <strong>SSI</strong> หรือ
@@ -906,7 +914,7 @@
 
         <hr />
 
-        <h2>ใครเป็นคนกรอกล็อกบุ๊ก?</h2>
+        <h2 id="dl-who">ใครเป็นคนกรอกล็อกบุ๊ก?</h2>
         <p>
           ระหว่างการเรียนครูผู้สอนหรือไดฟ์มาสเตอร์จะช่วยกรอกและประทับตรา
           สำหรับฟันไดฟ์ ผู้ดำน้ำต้องกรอกเอง แต่ทีมงานพร้อมช่วยเสมอ
@@ -937,9 +945,9 @@
             หน้าสมุดล็อกบุ๊กสำหรับพิมพ์ (PDF, ขนาด A5)
           </p>
           <p style="margin: 0 0 14px 0; font-size: 15px; line-height: 1.5">
-            หน้าในสมุดหมดหรือลืมสมุดไว้บ้าน? ดาวน์โหลดหน้าเดียวขนาด A5 ไปพิมพ์แล้วกรอกด้วยมือ
-            — สะดวกก่อนเดินทางหรือเมื่อสมุดเต็มแล้ว ในขั้นตอนพิมพ์ให้เลือกกระดาษ A5
-            (หรือปรับขนาดให้พอดี)
+            หน้าในสมุดหมดหรือลืมสมุดไว้บ้าน? ดาวน์โหลดหน้าเดียวขนาด A5
+            ไปพิมพ์แล้วกรอกด้วยมือ — สะดวกก่อนเดินทางหรือเมื่อสมุดเต็มแล้ว
+            ในขั้นตอนพิมพ์ให้เลือกกระดาษ A5 (หรือปรับขนาดให้พอดี)
           </p>
           <p style="margin: 0">
             <a
@@ -1078,8 +1086,8 @@
         if (!isNaN(tankValue) && tankValue > 0 && lastUnits !== units) {
           tankInput.value =
             lastUnits === "imperial"
-              ? (tankValue * 11.1 / 80).toFixed(1)
-              : (tankValue * 80 / 11.1).toFixed(1);
+              ? ((tankValue * 11.1) / 80).toFixed(1)
+              : ((tankValue * 80) / 11.1).toFixed(1);
         } else if (lastUnits !== units) {
           tankInput.value = isImperial ? "80" : "12";
         }
@@ -1089,11 +1097,17 @@
       function calculateDiveLogSAC() {
         const units = document.getElementById("dlSacUnits").value;
         const isImperial = units === "imperial";
-        const pressureInput = parseFloat(document.getElementById("dlSacBar").value);
+        const pressureInput = parseFloat(
+          document.getElementById("dlSacBar").value
+        );
         const time = parseFloat(document.getElementById("dlSacTime").value);
-        const tankInput = parseFloat(document.getElementById("dlSacTank").value);
+        const tankInput = parseFloat(
+          document.getElementById("dlSacTank").value
+        );
         const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
+        const avgIn = parseFloat(
+          document.getElementById("dlSacAvgDepth").value
+        );
         const result = document.getElementById("dlSacResult");
         const pressureUnit = isImperial ? "psi" : "bar";
         const tankUnit = isImperial ? "cu ft" : "L";
@@ -1125,13 +1139,12 @@
           !tankInput ||
           tankInput <= 0
         ) {
-          result.innerHTML =
-            `<span>กรอก <strong>แก๊ส (${pressureUnit})</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง (${tankUnit})</strong></span>`;
+          result.innerHTML = `<span>กรอก <strong>แก๊ส (${pressureUnit})</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง (${tankUnit})</strong></span>`;
           return;
         }
 
         const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
-        const tankLiters = isImperial ? tankInput * 11.1 / 80 : tankInput;
+        const tankLiters = isImperial ? (tankInput * 11.1) / 80 : tankInput;
         const ata = depthM / 10 + 1;
         const liters = bar * tankLiters;
         const sac = liters / (time * ata);

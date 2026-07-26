@@ -343,6 +343,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -369,7 +375,6 @@
         "headline": "Search and Recovery Diving – Equipment, Techniques & Real Cases",
         "alternativeHeadline": "How We Lifted a 5-Ton Boat in Koh Chang – Search & Recovery Diving",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/search-and-recovery-diving_big.webp",
@@ -377,7 +382,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "Scuba Knowledge, Recovery Techniques, Diving Equipment",
@@ -495,17 +499,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Search and Recovery Diving – Equipment, Techniques, and Our
-            Experiences
-          </h1>
-          <p>
-            From lost valuables to sunken boats – explore how we recover what
-            others leave behind. Learn gear, methods, and dive training.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -522,20 +515,29 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Search and Recovery Diving – Equipment, Techniques, and Our
           Experiences
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          From lost valuables to sunken boats – explore how we recover what
+          others leave behind. Learn gear, methods, and dive training.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#sr-why">Why it matters</a>
+            <a href="#sr-equipment">Equipment</a>
+            <a href="#sr-patterns">Patterns</a>
+            <a href="#sr-logistics">Logistics</a>
+            <a href="#sr-course">Our course</a>
+          </div>
+        </nav>
 
         <p>
           Whether it’s lost items, anchors, or entire boats – Search and
@@ -547,7 +549,7 @@
 
         <hr />
 
-        <h2>Why is Search and Recovery Important?</h2>
+        <h2 id="sr-why">Why is Search and Recovery Important?</h2>
         <p>
           Finding lost items underwater is essential for many reasons. For
           divers or boat owners, losing equipment, tools, or personal items
@@ -568,7 +570,7 @@
 
         <hr />
 
-        <h2>Equipment for Search and Recovery</h2>
+        <h2 id="sr-equipment">Equipment for Search and Recovery</h2>
         <ul>
           <li>
             <strong>Lift Bags:</strong> Available in various sizes, from 50 kg
@@ -679,7 +681,7 @@
 
         <hr />
 
-        <h2>Search Patterns and Techniques</h2>
+        <h2 id="sr-patterns">Search Patterns and Techniques</h2>
         <ul>
           <li>
             <strong>U-shaped Search Pattern:</strong> Covers large areas with
@@ -700,7 +702,7 @@
 
         <hr />
 
-        <h2>Logistics for Large Object Recovery</h2>
+        <h2 id="sr-logistics">Logistics for Large Object Recovery</h2>
         <p>
           When recovering a 5-ton boat, we strategically placed lift bags,
           carefully filled them with air, and slowly raised the boat. Weather
@@ -712,7 +714,7 @@
 
         <hr />
 
-        <h2>Our Search and Recovery Course</h2>
+        <h2 id="sr-course">Our Search and Recovery Course</h2>
         <p>
           In the
           <a href="/en/courses/search-recovery/"

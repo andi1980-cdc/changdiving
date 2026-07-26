@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Safety Stop บนเกาะช้าง – ทำไมถึงสำคัญ</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "Safety Stop ในการดำน้ำ – ทำไมถึงสำคัญบนเกาะช้าง",
         "alternativeHeadline": "ทำความเข้าใจ Safety Stop และ Decompression Stop ในการดำน้ำเพื่อสันทนาการ",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/safety-stop_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เกี่ยวกับการดำน้ำ",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Safety Stop ในการดำน้ำคืออะไร?</h1>
-          <p>
-            ทำความเข้าใจความแตกต่างระหว่าง Safety Stop และ Decompression Stop
-            และทำไมการขึ้นสู่ผิวน้ำอย่างมีการควบคุมถึงสำคัญในการดำน้ำเพื่อสันทนาการ
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,19 +506,32 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Safety Stop ในการดำน้ำคืออะไร?
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ทำความเข้าใจความแตกต่างระหว่าง Safety Stop และ Decompression Stop
+          และทำไมการขึ้นสู่ผิวน้ำอย่างมีการควบคุมถึงสำคัญในการดำน้ำเพื่อสันทนาการ
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ss-why">ทำไม</a>
+            <a href="#ss-vs-deco">vs ดีคอม</a>
+            <a href="#ss-skip">ข้ามได้ไหม</a>
+            <a href="#ss-how">วิธีทำ</a>
+            <a href="#ss-mistakes">ข้อผิดพลาด</a>
+            <a href="#ss-computers">คอมพิวเตอร์</a>
+            <a href="#ss-koh-chang">เกาะช้าง</a>
+            <a href="#ss-final">สรุป</a>
+          </div>
+        </nav>
+
         <p>
           <strong>Safety Stop</strong> คือการหยุดพักสั้นๆ ในตอนท้ายของการดำน้ำ
           โดยปกติจะทำที่ความลึก
@@ -532,7 +542,7 @@
         <hr />
 
         <section>
-          <h2>ทำไมเราต้องทำ Safety Stop?</h2>
+          <h2 id="ss-why">ทำไมเราต้องทำ Safety Stop?</h2>
           <p>
             ในการดำน้ำทุกครั้ง ร่างกายของคุณจะดูดซับไนโตรเจนจากอากาศที่หายใจ
             การขึ้นสู่ผิวน้ำอย่างช้าๆ ร่วมกับการหยุดพักสั้นๆ
@@ -550,7 +560,9 @@
         <hr />
 
         <section>
-          <h2>Safety Stop กับ Decompression Stop – ความแตกต่างคืออะไร?</h2>
+          <h2 id="ss-vs-deco">
+            Safety Stop กับ Decompression Stop – ความแตกต่างคืออะไร?
+          </h2>
 
           <h3>Safety Stop (แนะนำ)</h3>
           <ul>
@@ -627,7 +639,7 @@
         <hr />
 
         <section>
-          <h2>สามารถข้าม Safety Stop ได้ไหม?</h2>
+          <h2 id="ss-skip">สามารถข้าม Safety Stop ได้ไหม?</h2>
           <p>
             ได้ — Safety Stop สามารถข้ามได้หากจำเป็น ตราบใดที่คุณอยู่ภายใน
             <strong>no-decompression limit</strong> และคุณขึ้นสู่ผิวน้ำ
@@ -650,7 +662,7 @@
         <hr />
 
         <section>
-          <h2>วิธีทำ Safety Stop อย่างถูกต้อง</h2>
+          <h2 id="ss-how">วิธีทำ Safety Stop อย่างถูกต้อง</h2>
           <p>
             การทำ Safety Stop ที่ถูกต้องต้องมีการ
             <strong>ควบคุมแรงลอยตัว</strong>
@@ -696,7 +708,7 @@
         <hr />
 
         <section>
-          <h2>ข้อผิดพลาดทั่วไประหว่าง Safety Stop</h2>
+          <h2 id="ss-mistakes">ข้อผิดพลาดทั่วไประหว่าง Safety Stop</h2>
           <p>
             แม้แต่นักดำน้ำที่มีประสบการณ์ก็ยังทำข้อผิดพลาดเหล่านี้ระหว่าง safety
             stop บางครั้ง:
@@ -744,7 +756,7 @@
         <hr />
 
         <section>
-          <h2>Dive Computer และ Safety Stop</h2>
+          <h2 id="ss-computers">Dive Computer และ Safety Stop</h2>
           <p>
             <strong>Dive computer</strong> สมัยใหม่ทำให้ safety stop
             ง่ายและปลอดภัยขึ้น Dive computer ส่วนใหญ่มีคุณสมบัติ:
@@ -767,7 +779,8 @@
             </li>
             <li>
               <strong
-                ><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                ><a
+                  href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
                   >NDL (No-Decompression Limit)</a
                 >
                 การแสดง</strong
@@ -815,7 +828,7 @@
         <hr />
 
         <section>
-          <h2>Safety Stop ภายใต้สภาพการดำน้ำของเกาะช้าง</h2>
+          <h2 id="ss-koh-chang">Safety Stop ภายใต้สภาพการดำน้ำของเกาะช้าง</h2>
           <p>
             การดำน้ำรอบๆ <strong>เกาะช้าง ประเทศไทย</strong>
             นำเสนอสภาพเฉพาะที่ส่งผลต่อขั้นตอน safety stop:
@@ -1155,7 +1168,7 @@
         <hr />
 
         <footer class="cdc-post-footer">
-          <h2>ความคิดสุดท้าย</h2>
+          <h2 id="ss-final">ความคิดสุดท้าย</h2>
           <ul>
             <li><strong>Safety stop</strong> เป็นนิสัยที่ฉลาด ไม่ใช่กฎ</li>
             <li>

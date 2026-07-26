@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>วิธีใช้เครื่องวัดการดำน้ำ – คู่มือฉบับสมบูรณ์ | เกาะช้าง</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -362,7 +369,6 @@
         "headline": "วิธีใช้เครื่องวัดการดำน้ำ – คู่มือฉบับสมบูรณ์สำหรับนักดำน้ำสันทนาการ",
         "alternativeHeadline": "เรียนรู้พื้นฐานเครื่องวัดการดำน้ำสากล + คำแนะนำ Suunto Zoop Novo แบบทีละขั้นตอน",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/dive-computer_big.webp",
@@ -370,7 +376,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "ช้างไดร์วิ่ง เซ็นเตอร์",
         "genre": "ความรู้เกี่ยวกับการดำน้ำ",
@@ -485,14 +490,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>วิธีใช้เครื่องวัดการดำน้ำ</h1>
-          <p>
-            คู่มือฉบับสมบูรณ์สำหรับนักดำน้ำสันทนาการ – พื้นฐานสากล + คำแนะนำ
-            Suunto Zoop Novo แบบทีละขั้นตอน
-          </p>
-        </div>
       </div>
     </header>
 
@@ -509,21 +506,31 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          วิธีใช้เครื่องวัดการดำน้ำ
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          คู่มือฉบับสมบูรณ์สำหรับนักดำน้ำสันทนาการ – พื้นฐานสากล + คำแนะนำ
+          Suunto Zoop Novo แบบทีละขั้นตอน
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
         >
-          วิธีใช้เครื่องวัดการดำน้ำ – คู่มือฉบับสมบูรณ์
-        </h2>
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#dive-computer-essential">ทำไมสำคัญ</a>
+            <a href="#what-a-dive-computer-monitors">ตรวจอะไร</a>
+            <a href="#basic-operation-universal">การใช้งาน</a>
+            <a href="#common-warnings">คำเตือน</a>
+            <a href="#zoop-novo-step-by-step">Zoop Novo</a>
+            <a href="#final-tip">เคล็ดลับ</a>
+          </div>
+        </nav>
+
         <section class="content-section" id="how-to-use-a-dive-computer">
-          <h1>วิธีใช้เครื่องวัดการดำน้ำ</h1>
           <p class="subtitle">คู่มือเชิงปฏิบัติสำหรับนักดำน้ำสันทนาการ</p>
 
           <p>
@@ -785,7 +792,9 @@
 
           <!-- 2) UNIVERSAL BASICS -->
 
-          <h2>สิ่งที่เครื่องวัดการดำน้ำตรวจสอบ</h2>
+          <h2 id="what-a-dive-computer-monitors">
+            สิ่งที่เครื่องวัดการดำน้ำตรวจสอบ
+          </h2>
           <p>เครื่องวัดการดำน้ำสันทนาการสมัยใหม่ทุกเครื่องติดตาม:</p>
           <ul>
             <li>ความลึกปัจจุบัน</li>
@@ -802,7 +811,9 @@
             <li>คำเตือน & สัญญาณเตือน</li>
           </ul>
 
-          <h2>การใช้งานเครื่องวัดการดำน้ำพื้นฐาน (สากล)</h2>
+          <h2 id="basic-operation-universal">
+            การใช้งานเครื่องวัดการดำน้ำพื้นฐาน (สากล)
+          </h2>
 
           <h3>ก่อนดำน้ำ</h3>
           <ul>
@@ -841,7 +852,7 @@
             <li>อย่ารีเซ็ตหรือเปลี่ยนการตั้งค่าระหว่างการดำน้ำ</li>
           </ul>
 
-          <h2>คำอธิบายคำเตือนเครื่องวัดการดำน้ำทั่วไป</h2>
+          <h2 id="common-warnings">คำอธิบายคำเตือนเครื่องวัดการดำน้ำทั่วไป</h2>
 
           <table
             style="
@@ -899,7 +910,9 @@
 
           <!-- 3) ZOOP NOVO SECTION -->
 
-          <h2>วิธีใช้เครื่องวัดการดำน้ำเช่าของเรา</h2>
+          <h2 id="zoop-novo-step-by-step">
+            วิธีใช้เครื่องวัดการดำน้ำเช่าของเรา
+          </h2>
           <p class="subtitle">Suunto Zoop Novo – ทีละขั้นตอน</p>
 
           <p>
@@ -981,7 +994,7 @@
             <li>ดำน้ำเสมอภายในขีดจำกัดการรับรองของคุณ</li>
           </ul>
 
-          <h2>เคล็ดลับสุดท้ายจากเรา 🤿</h2>
+          <h2 id="final-tip">เคล็ดลับสุดท้ายจากเรา 🤿</h2>
 
           <p>
             เครื่องวัดการดำน้ำไม่ใช่ใบอนุญาตให้ผลักดันขีดจำกัด

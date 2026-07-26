@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Das Taucher-Logbuch – Warum es wichtig ist und was du eintragen solltest
@@ -340,6 +341,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -366,7 +373,6 @@
         "headline": "Das Taucher-Logbuch – Warum es wichtig ist und was man eintragen sollte",
         "alternativeHeadline": "Dein Guide für Nutzung und Pflege eines Tauchlogbuchs",
         "image": {
-
           "@type": "ImageObject",
 
           "url": "https://changdiving.com/img/posts/dive-logbook_big.webp",
@@ -374,7 +380,6 @@
           "width": 2580,
 
           "height": 1460
-
         },
         "editor": "Chang Diving Center",
         "genre": "SCUBA-Wissen",
@@ -489,17 +494,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Das Taucher-Logbuch – Warum es wichtig ist und was du eintragen
-            solltest
-          </h1>
-          <p>
-            Verstehe den Wert deines Logbuchs, was du notieren solltest und wie
-            es deine Ausbildung und dein Tauchlevel unterstützt.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -516,20 +510,29 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Das Taucher-Logbuch – Warum es wichtig ist und was du eintragen
           solltest
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Verstehe den Wert deines Logbuchs, was du notieren solltest und wie es
+          deine Ausbildung und dein Tauchlevel unterstützt.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#dl-why">Warum wichtig</a>
+            <a href="#dl-record">Was eintragen</a>
+            <a href="#dl-sac">SAC-Rate</a>
+            <a href="#dl-digital">Digital vs klassisch</a>
+            <a href="#dl-who">Wer trägt ein</a>
+          </div>
+        </nav>
 
         <p>
           Ein Tauchlogbuch ist mehr als nur eine Sammlung schöner Erinnerungen –
@@ -540,7 +543,7 @@
 
         <hr />
 
-        <h2>Warum ein Tauchlogbuch wichtig ist</h2>
+        <h2 id="dl-why">Warum ein Tauchlogbuch wichtig ist</h2>
         <p>
           Dein Logbuch dokumentiert all deine Tauchgänge, zeigt deine Erfahrung
           und ist Voraussetzung für viele Fortgeschrittenenkurse oder
@@ -576,7 +579,7 @@
           Ausleihe von Ausrüstung kann ein Logbuch erforderlich sein.
         </p>
 
-        <h2>Was gehört ins Logbuch?</h2>
+        <h2 id="dl-record">Was gehört ins Logbuch?</h2>
         <ul>
           <li>
             <strong>Datum und Ort:</strong> Wann und wo fand der Tauchgang
@@ -616,10 +619,9 @@
           <li>
             <strong>Gas / Gemisch:</strong> <strong>Luft</strong> oder
             <strong>Nitrox (EAN)</strong> — bei Nitrox den
-            <strong>O₂-Anteil</strong> in % eintragen (z. B. 32 % / EAN32). Hilft
-            beim Vergleich des Gasverbrauchs und bei der Planung ähnlicher
-            Tauchgänge.
-            (<a
+            <strong>O₂-Anteil</strong> in % eintragen (z. B. 32 % / EAN32).
+            Hilft beim Vergleich des Gasverbrauchs und bei der Planung ähnlicher
+            Tauchgänge. (<a
               href="/de/posts/scuba-knowledge/nitrox-info/"
               target="_blank"
               rel="noopener noreferrer"
@@ -627,9 +629,9 @@
             >)
           </li>
           <li>
-            <strong>SAC-Rate (optional):</strong> Luftverbrauch an der Oberfläche
-            in L/min — lohnt sich zum Festhalten, um Muster zu erkennen und
-            Fortschritt zu sehen. Auf dieser Seite kannst du sie
+            <strong>SAC-Rate (optional):</strong> Luftverbrauch an der
+            Oberfläche in L/min — lohnt sich zum Festhalten, um Muster zu
+            erkennen und Fortschritt zu sehen. Auf dieser Seite kannst du sie
             <a href="#dl-sac">aus deinen Logbuchdaten schätzen</a>.
           </li>
           <li>
@@ -638,10 +640,11 @@
             Bedingungen, Anzügen und Flaschen wiederzufinden.
           </li>
           <li>
-            <strong>Ausrüstung (optional):</strong> z. B. <strong>BCD-Größe</strong>,
-            <strong>Neopren</strong> Shorty vs. Lang, <strong>Stärke</strong> in
-            mm, Schuhgröße — praktisch beim nächsten Mieten oder auf Reisen, um
-            Passform und Auftrieb wiederzufinden.
+            <strong>Ausrüstung (optional):</strong> z. B.
+            <strong>BCD-Größe</strong>, <strong>Neopren</strong> Shorty vs.
+            Lang, <strong>Stärke</strong> in mm, Schuhgröße — praktisch beim
+            nächsten Mieten oder auf Reisen, um Passform und Auftrieb
+            wiederzufinden.
           </li>
           <li>
             <strong>Buddy und Tauchlehrer:</strong> Mit wem bist du getaucht?
@@ -672,20 +675,22 @@
 
         <h2 id="dl-sac">SAC-Rate aus Logbuchdaten</h2>
         <p>
-          Im Logbuch stehen meist <strong>Luftverbrauch</strong> (Start-/Enddruck),
+          Im Logbuch stehen meist
+          <strong>Luftverbrauch</strong> (Start-/Enddruck),
           <strong>Zeit</strong> und oft die <strong>max. Tiefe</strong>. Für die
           <strong>SAC (Surface Air Consumption)</strong> in L/min brauchst du
           aber die <strong>mittlere Tiefe</strong> — die steht nicht überall.
           Kennst du nur die Maximaltiefe, kannst du die mittlere Tiefe
-          <strong>grob mit ca. 60&nbsp;% der max. Tiefe</strong> ansetzen — typisch
-          für mehrschichtige Riffprofile um Koh Chang. Zeigt dein Computer die
-          mittlere Tiefe, trage sie ein — das ist genauer.
+          <strong>grob mit ca. 60&nbsp;% der max. Tiefe</strong> ansetzen —
+          typisch für mehrschichtige Riffprofile um Koh Chang. Zeigt dein
+          Computer die mittlere Tiefe, trage sie ein — das ist genauer.
         </p>
         <p>
           <strong>Warum ausrechnen und ins Logbuch schreiben?</strong> Wenn du
           deine SAC ab und zu notierst, siehst du Muster: wie Tiefe, Strömung,
           Aufwand oder Stress deinen Luftverbrauch beeinflussen — und
-          <strong>Fortschritt</strong>, wenn die Werte über Monate besser werden.
+          <strong>Fortschritt</strong>, wenn die Werte über Monate besser
+          werden.
         </p>
 
         <div
@@ -698,10 +703,10 @@
           "
         >
           <p style="margin: 0; color: #856404; font-size: 14px">
-            <strong>⚠️ Hinweis:</strong> Nur zur <strong>Einordnung und Rechnung</strong>.
-            Die 60%-Regel ist eine <strong>grobe Näherung</strong> — die echte
-            mittlere Tiefe hängt vom Profil ab. Maßgeblich sind Computer und
-            Ausbildung.
+            <strong>⚠️ Hinweis:</strong> Nur zur
+            <strong>Einordnung und Rechnung</strong>. Die 60%-Regel ist eine
+            <strong>grobe Näherung</strong> — die echte mittlere Tiefe hängt vom
+            Profil ab. Maßgeblich sind Computer und Ausbildung.
           </p>
         </div>
 
@@ -844,7 +849,8 @@
             <div>
               <label
                 style="display: block; margin-bottom: 4px; font-weight: 500"
-                >Mittlere Tiefe (<span id="dlSacAvgDepthUnit">m</span>), optional</label
+                >Mittlere Tiefe (<span id="dlSacAvgDepthUnit">m</span>),
+                optional</label
               >
               <input
                 type="number"
@@ -868,8 +874,9 @@
             Ist <strong>mittlere Tiefe</strong> leer, rechnen wir mit
             <strong>60&nbsp;% × max. Tiefe</strong> (Schätzung Koh Chang). Wenn
             du eine mittlere Tiefe einträgst, wird diese verwendet. Du kannst
-            zwischen <strong>bar/m</strong> und <strong>psi/ft</strong> wechseln.
-            Im imperialen Modus bitte die Flaschengröße in <strong>cu ft</strong>
+            zwischen <strong>bar/m</strong> und
+            <strong>psi/ft</strong> wechseln. Im imperialen Modus bitte die
+            Flaschengröße in <strong>cu ft</strong>
             eingeben (z. B. 80).
           </p>
           <div
@@ -902,7 +909,7 @@
 
         <hr />
 
-        <h2>Digitales vs. klassisches Logbuch</h2>
+        <h2 id="dl-digital">Digitales vs. klassisches Logbuch</h2>
         <p>
           Viele Taucher nutzen heute Apps wie <strong>Divelog</strong>,
           <strong>SSI</strong> oder <strong>PADI</strong> für digitale
@@ -926,7 +933,7 @@
 
         <hr />
 
-        <h2>Wer trägt das Logbuch ein?</h2>
+        <h2 id="dl-who">Wer trägt das Logbuch ein?</h2>
         <p>
           Während der Kurse helfen Tauchlehrer und Divemaster beim Eintragen und
           Stempeln. Bei Fun Dives ist man selbst verantwortlich – aber unser
@@ -1105,8 +1112,8 @@
         if (!isNaN(tankValue) && tankValue > 0 && lastUnits !== units) {
           tankInput.value =
             lastUnits === "imperial"
-              ? (tankValue * 11.1 / 80).toFixed(1)
-              : (tankValue * 80 / 11.1).toFixed(1);
+              ? ((tankValue * 11.1) / 80).toFixed(1)
+              : ((tankValue * 80) / 11.1).toFixed(1);
         } else if (lastUnits !== units) {
           tankInput.value = isImperial ? "80" : "12";
         }
@@ -1116,11 +1123,17 @@
       function calculateDiveLogSAC() {
         const units = document.getElementById("dlSacUnits").value;
         const isImperial = units === "imperial";
-        const pressureInput = parseFloat(document.getElementById("dlSacBar").value);
+        const pressureInput = parseFloat(
+          document.getElementById("dlSacBar").value
+        );
         const time = parseFloat(document.getElementById("dlSacTime").value);
-        const tankInput = parseFloat(document.getElementById("dlSacTank").value);
+        const tankInput = parseFloat(
+          document.getElementById("dlSacTank").value
+        );
         const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(document.getElementById("dlSacAvgDepth").value);
+        const avgIn = parseFloat(
+          document.getElementById("dlSacAvgDepth").value
+        );
         const result = document.getElementById("dlSacResult");
         const pressureUnit = isImperial ? "psi" : "bar";
         const tankUnit = isImperial ? "cu ft" : "L";
@@ -1152,12 +1165,11 @@
           !tankInput ||
           tankInput <= 0
         ) {
-          result.innerHTML =
-            `<span><strong>Verbrauch (${pressureUnit})</strong>, <strong>Zeit</strong> und <strong>Tankgröße (${tankUnit})</strong> eintragen.</span>`;
+          result.innerHTML = `<span><strong>Verbrauch (${pressureUnit})</strong>, <strong>Zeit</strong> und <strong>Tankgröße (${tankUnit})</strong> eintragen.</span>`;
           return;
         }
 
-        const tank = isImperial ? tankInput * 11.1 / 80 : tankInput;
+        const tank = isImperial ? (tankInput * 11.1) / 80 : tankInput;
         const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
         const ata = depthM / 10 + 1;
         const liters = bar * tank;

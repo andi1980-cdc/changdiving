@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Gas Laws in Diving – Dalton &amp; Henry Explained | Narcosis &amp;
@@ -409,6 +410,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -589,11 +596,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Gas Laws for Divers</h1>
-          <p>Dalton, Henry, narcosis &amp; decompression — made practical</p>
-        </div>
       </div>
     </header>
 
@@ -609,7 +611,18 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="On this page">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Gas Laws for Divers
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Dalton, Henry, narcosis &amp; decompression — made practical
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">On this page</span>
           <div class="page-jump-nav__links">
             <a href="#gl-intro">Intro</a>
@@ -623,21 +636,7 @@
           </div>
         </nav>
 
-        <h2
-          id="gl-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          🧪 Gas Laws in Diving – Dalton &amp; Henry (Narcosis &amp;
-          Decompression)
-        </h2>
+        <h2 id="gl-intro">🧪 Why gas laws show up on every dive</h2>
 
         <p>
           When you dive open-circuit scuba, you breathe
@@ -647,7 +646,9 @@
           time.
         </p>
 
-        <p>Two classical laws frame almost everything else in “theory class”:</p>
+        <p>
+          Two classical laws frame almost everything else in “theory class”:
+        </p>
         <ul>
           <li>
             <strong>Dalton’s Law</strong> → how each gas in the mix
@@ -661,17 +662,16 @@
 
         <p>
           Pair this with
-          <a
-            href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
+          <a href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
             >pressure &amp; Boyle’s Law</a
           >
-          (volume vs pressure in your BCD and lungs) and you have the core physics
-          behind recreational limits.
+          (volume vs pressure in your BCD and lungs) and you have the core
+          physics behind recreational limits.
         </p>
 
         <p class="note">
-          <strong>Educational only:</strong> follow your agency limits, instructor
-          and computer — not a blog — for real dive planning.
+          <strong>Educational only:</strong> follow your agency limits,
+          instructor and computer — not a blog — for real dive planning.
         </p>
 
         <hr />
@@ -686,11 +686,13 @@
 
           <h3>What divers use in practice</h3>
           <p>
-            <strong>Partial pressure ≈ fraction × total ambient pressure</strong>
+            <strong
+              >Partial pressure ≈ fraction × total ambient pressure</strong
+            >
           </p>
           <p>
-            (Using the usual teaching model: depth in sea water, pressure in
-            bar absolute.)
+            (Using the usual teaching model: depth in sea water, pressure in bar
+            absolute.)
           </p>
 
           <h3>Example: air at 30 m (~4 bar)</h3>
@@ -733,7 +735,9 @@
             <div class="pressure-calc__inner">
               <div class="pressure-calc__fields">
                 <div>
-                  <label for="dalton-ambient">Ambient pressure (bar abs / ata)</label>
+                  <label for="dalton-ambient"
+                    >Ambient pressure (bar abs / ata)</label
+                  >
                   <input
                     id="dalton-ambient"
                     type="text"
@@ -797,9 +801,10 @@
                   <a href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
                     >Boyle / depth article</a
                   >:
-                  <strong>absolute pressure ≈ 1 bar + (depth ÷ m per bar)</strong>.
-                  Type any ambient pressure directly above — decimals (2.3 bar)
-                  and comma decimals work.
+                  <strong
+                    >absolute pressure ≈ 1 bar + (depth ÷ m per bar)</strong
+                  >. Type any ambient pressure directly above — decimals (2.3
+                  bar) and comma decimals work.
                 </p>
               </div>
               <div class="pressure-calc__out" aria-live="polite">
@@ -833,7 +838,12 @@
                 var fStr = fIn.value.trim().replace(",", ".");
                 var P = pStr === "" ? NaN : parseFloat(pStr);
                 var FO2 = fStr === "" ? NaN : parseFloat(fStr);
-                if (pStr === "" || fStr === "" || !isFinite(P) || !isFinite(FO2)) {
+                if (
+                  pStr === "" ||
+                  fStr === "" ||
+                  !isFinite(P) ||
+                  !isFinite(FO2)
+                ) {
                   o2Out.textContent =
                     "Enter ambient pressure and O₂ fraction to see partial pressures.";
                   n2Out.textContent = "";
@@ -916,8 +926,8 @@
           <h2>😵 Nitrogen narcosis – Dalton in the real world</h2>
           <p>
             <strong>Inert gas narcosis</strong> is depth-related; on
-            <strong>air</strong>, nitrogen partial pressure is the usual focus, so
-            people say <strong>nitrogen narcosis</strong>.
+            <strong>air</strong>, nitrogen partial pressure is the usual focus,
+            so people say <strong>nitrogen narcosis</strong>.
           </p>
           <p>Typical reported symptoms (vary by individual and day):</p>
           <ul>
@@ -948,8 +958,8 @@
           <p>
             Many recreational programmes use conservative planning values such
             as about <strong>1.4 bar PO₂</strong> as a working ceiling and
-            <strong>1.6 bar</strong> only for short, controlled exposures — exact
-            numbers belong to <strong>your course materials</strong>.
+            <strong>1.6 bar</strong> only for short, controlled exposures —
+            exact numbers belong to <strong>your course materials</strong>.
           </p>
           <p>
             Excessive PO₂ raises risk of
@@ -971,7 +981,9 @@
           </p>
           <h3>Simple mental model</h3>
           <p>
-            <strong>Higher inspired partial pressure → more gas on-loading</strong>
+            <strong
+              >Higher inspired partial pressure → more gas on-loading</strong
+            >
             (over time, tissues approach equilibrium). During
             <strong>ascent</strong>, pressure falls and
             <strong>gas comes out of solution</strong>; the body eliminates it
@@ -981,8 +993,8 @@
           <h3>On-gassing / off-gassing</h3>
           <ul>
             <li>
-              <strong>Descend / stay deep:</strong> inert gas partial pressure in
-              the lungs is higher → tissues take up more gas.
+              <strong>Descend / stay deep:</strong> inert gas partial pressure
+              in the lungs is higher → tissues take up more gas.
             </li>
             <li>
               <strong>Ascend slowly:</strong> gradient favours elimination via
@@ -995,7 +1007,9 @@
         <hr />
 
         <section id="gl-dcs">
-          <h2>⚠️ Decompression sickness (DCS) – when elimination can’t keep up</h2>
+          <h2>
+            ⚠️ Decompression sickness (DCS) – when elimination can’t keep up
+          </h2>
           <p>
             If you exceed <strong>dive computer or table limits</strong>, or
             ascend too fast for your tissue loading,
@@ -1033,7 +1047,8 @@
               diffusion into tissue).
             </li>
             <li>
-              <strong>Henry</strong> describes <em>how loading and unloading</em>
+              <strong>Henry</strong> describes
+              <em>how loading and unloading</em>
               trends work over time at those partial pressures.
             </li>
           </ul>
@@ -1057,9 +1072,9 @@
             <li>Depth limits exist because partial pressures climb fast.</li>
             <li>Slow, controlled ascents reduce supersaturation stress.</li>
             <li>
-              Nitrox reduces nitrogen fraction → lower N₂ partial pressure at the
-              same depth → often more conservative nitrogen loading for a given
-              mix and PO₂ cap — learn this properly in a
+              Nitrox reduces nitrogen fraction → lower N₂ partial pressure at
+              the same depth → often more conservative nitrogen loading for a
+              given mix and PO₂ cap — learn this properly in a
               <a href="/en/courses/nitrox-diver/">Nitrox course</a>.
             </li>
           </ul>
@@ -1075,24 +1090,26 @@
             Dalton’s Law states that in a gas mixture each component gas exerts
             its own partial pressure, and the total pressure is the sum of those
             partial pressures. For divers, the important idea is:
-            <strong>partial pressure ≈ fraction × ambient pressure (P × F)</strong>.
+            <strong
+              >partial pressure ≈ fraction × ambient pressure (P × F)</strong
+            >.
           </p>
 
           <h3>What is Henry’s Law in scuba diving?</h3>
           <p>
             Henry’s Law relates the amount of gas that dissolves in a liquid to
             the partial pressure of that gas. At higher pressure, more gas can
-            dissolve into blood and tissues; during ascent, pressure falls and gas
-            comes out of solution — which is why controlled ascent and dive
+            dissolve into blood and tissues; during ascent, pressure falls and
+            gas comes out of solution — which is why controlled ascent and dive
             computer limits matter.
           </p>
 
           <h3>Why does nitrogen narcosis increase with depth on air?</h3>
           <p>
             On air, nitrogen fraction is fixed, but ambient pressure rises with
-            depth, so nitrogen partial pressure rises. Higher partial pressure of
-            narcotic gases correlates with stronger inert gas narcosis — often
-            called nitrogen narcosis when diving air.
+            depth, so nitrogen partial pressure rises. Higher partial pressure
+            of narcotic gases correlates with stronger inert gas narcosis —
+            often called nitrogen narcosis when diving air.
           </p>
 
           <h3>What does oxygen partial pressure have to do with toxicity?</h3>
@@ -1125,8 +1142,7 @@
           <p>
             Same dive, different question: Boyle explains volume changes as
             pressure changes — critical for buoyancy and breath control. See the
-            <a
-              href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
+            <a href="/en/posts/scuba-knowledge/boyles-law-scuba-diving/"
               >companion article</a
             >.
           </p>
@@ -1137,15 +1153,16 @@
         <footer class="post-footer">
           <h2>📌 Bottom line</h2>
           <p>
-            Dalton explains <strong>why each gas feels “stronger” deeper</strong>.
-            Henry explains <strong>why your body loads and unloads gas</strong>
+            Dalton explains
+            <strong>why each gas feels “stronger” deeper</strong>. Henry
+            explains <strong>why your body loads and unloads gas</strong>
             over a dive. Respect those ideas and the limits they generate — and
             diving stops feeling like memorised magic and starts feeling
-            coherent.
-            For
+            coherent. For
             <strong>lift and displacement</strong> (Archimedes’ principle) and
             <strong>lift bags</strong>, continue with
-            <a href="/en/posts/scuba-knowledge/archimedes-principle-scuba-diving/"
+            <a
+              href="/en/posts/scuba-knowledge/archimedes-principle-scuba-diving/"
               >Archimedes’ principle &amp; lift bags</a
             >.
           </p>

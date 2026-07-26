@@ -6,13 +6,13 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 **Dieses** Dokument ist der aktuelle Standard:
 
-| Seitentyp                          | H1 + Teaser unter Hero | Jump-Menü                                      |
-| ---------------------------------- | ---------------------- | ---------------------------------------------- |
-| **Produkt-/Buchungsseiten**        | ja                     | ja (4 Punkte)                                  |
-| **Kategorie-/Hub-Seiten**          | ja                     | **nie**                                        |
-| **Blog-Posts (`posts-box`)**       | ja (wie Kurse)         | **ja, individuell** je nach Post-Thematik      |
-| **Preisliste `/prices/`**          | ja                     | **ja (7 Punkte, Ausnahme)**                    |
-| **Tech-Produktseiten (`tek-box`)** | ja                     | ja (4 Punkte, **Jump-Bar-Ausnahme**)           |
+| Seitentyp                          | H1 + Teaser unter Hero | Jump-Menü                                 |
+| ---------------------------------- | ---------------------- | ----------------------------------------- |
+| **Produkt-/Buchungsseiten**        | ja                     | ja (4 Punkte)                             |
+| **Kategorie-/Hub-Seiten**          | ja                     | **nie**                                   |
+| **Blog-Posts (`posts-box`)**       | ja (wie Kurse)         | **ja, individuell** je nach Post-Thematik |
+| **Preisliste `/prices/`**          | ja                     | **ja (7 Punkte, Ausnahme)**               |
+| **Tech-Produktseiten (`tek-box`)** | ja                     | ja (4 Punkte, **Jump-Bar-Ausnahme**)      |
 
 ---
 
@@ -72,19 +72,36 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 | `/faqs/` (EN/DE/TH)                             | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/posts/` (EN/DE/TH)                            | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/posts/marine-life-koh-chang/` (EN/DE/TH)      | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/posts/scuba-knowledge/` (EN/DE/TH)            | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 
 ### Blog-Posts (`posts-box`, mit Jump-Menü)
 
-| Seite                                                         | Status | Jump-Punkte | Hinweis                                                |
-| ------------------------------------------------------------- | ------ | ----------- | ------------------------------------------------------ |
-| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)          | ✅     | **7**       | Gruppen-Anker; nach jeder Gruppe „Back to menu“ → `#on-this-page` |
-| `posts/marine-life-koh-chang/marine-life-whale-shark` (EN/DE/TH) | ✅  | **7**       | Themenspezifisch; Inline `#ccc` + `critical-css`       |
-| `posts/marine-life-koh-chang/marine-life-green-sea-turtle` (EN/DE/TH) | ✅ | **5**       | Biology → Dive sites; Inline `#ccc` + `critical-css`   |
-| `posts/marine-life-koh-chang/marine-life-titan-triggerfish` (EN/DE/TH) | ✅ | **6**       | Biology → Gallery; Inline `#ccc` + `critical-css`      |
-| `posts/marine-life-koh-chang/marine-life-nudibranch` (EN/DE/TH) | ✅ | **9**       | What → Why look; Inline `#ccc` + `critical-css`        |
-| `posts/marine-life-koh-chang/marine-life-blacktip-reef-shark` (EN/DE/TH) | ✅ | **6**       | Traits → Conclusion; Inline `#ccc` + `critical-css`    |
-| `posts/marine-life-koh-chang/marine-life-batfish` (EN/DE/TH) | ✅ | **4**       | Appearance → Conclusion; Inline `#ccc` + `critical-css` |
-| `posts/marine-life-koh-chang/marine-life-barracuda` (EN/DE/TH) | ✅ | **4**       | Species → Conclusion; Inline `#ccc` + `critical-css`   |
+| Seite                                                                    | Status | Jump-Punkte | Hinweis                                                                            |
+| ------------------------------------------------------------------------ | ------ | ----------- | ---------------------------------------------------------------------------------- |
+| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)                     | ✅     | **7**       | Gruppen-Anker; nach jeder Gruppe „Back to menu“ → `#on-this-page`                  |
+| `posts/marine-life-koh-chang/marine-life-whale-shark` (EN/DE/TH)         | ✅     | **7**       | Themenspezifisch; Inline `#ccc` + `critical-css`                                   |
+| `posts/marine-life-koh-chang/marine-life-green-sea-turtle` (EN/DE/TH)    | ✅     | **5**       | Biology → Dive sites; Inline `#ccc` + `critical-css`                               |
+| `posts/marine-life-koh-chang/marine-life-titan-triggerfish` (EN/DE/TH)   | ✅     | **6**       | Biology → Gallery; Inline `#ccc` + `critical-css`                                  |
+| `posts/marine-life-koh-chang/marine-life-nudibranch` (EN/DE/TH)          | ✅     | **9**       | What → Why look; Inline `#ccc` + `critical-css`                                    |
+| `posts/marine-life-koh-chang/marine-life-blacktip-reef-shark` (EN/DE/TH) | ✅     | **6**       | Traits → Conclusion; Inline `#ccc` + `critical-css`                                |
+| `posts/marine-life-koh-chang/marine-life-batfish` (EN/DE/TH)             | ✅     | **4**       | Appearance → Conclusion; Inline `#ccc` + `critical-css`                            |
+| `posts/marine-life-koh-chang/marine-life-barracuda` (EN/DE/TH)           | ✅     | **4**       | Species → Conclusion; Inline `#ccc` + `critical-css`                               |
+| `posts/scuba-knowledge/boyles-law-scuba-diving` (EN/DE/TH)               | ✅     | **8**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/dalton-henry-scuba-diving` (EN/DE/TH)             | ✅     | **8**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/archimedes-principle-scuba-diving` (EN/DE/TH)     | ✅     | **7**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/gas-consumption` (EN/DE/TH)                       | ✅     | **5**       | Bestehendes Jump behalten; H1+Teaser + `#ccc` Linie                                |
+| `posts/scuba-knowledge/nitrox-info` (EN/DE/TH)                           | ✅     | **7**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt          |
+| `posts/scuba-knowledge/about-search-recovery` (EN/DE/TH)                 | ✅     | **5**       | Neues Jump (Why→Course); H1+Teaser + `#ccc`; Gradient-Titel-H2 entfernt            |
+| `posts/scuba-knowledge/dive-logbook` (EN/DE/TH)                          | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; EN-Teaser-Placeholder ersetzt; Gradient-H2 weg     |
+| `posts/scuba-knowledge/smb-guide` (EN/DE/TH)                             | ✅     | **6**       | Neues Jump; H1+Teaser + `#ccc`; EN-H1 Tippfehler „urface“ behoben; Gradient-H2 weg |
+| `posts/scuba-knowledge/safety-check` (EN/DE/TH)                          | ✅     | **8**       | Neues Jump (ohne Google Reviews); H1+Teaser + `#ccc`; Gradient-H2 weg              |
+| `posts/scuba-knowledge/buddy-system` (EN/DE/TH)                          | ✅     | **8**       | Jump auf bestehende `info-card` IDs; H1+Teaser + `#ccc`; Inner-H1 entfernt         |
+| `posts/scuba-knowledge/safety-stop` (EN/DE/TH)                           | ✅     | **8**       | Neues Jump (Kernabschnitte); H1+Teaser + `#ccc`; Gradient-H2 weg                   |
+| `posts/scuba-knowledge/ndl-no-decompression-limits` (EN/DE/TH)           | ✅     | **9**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Intro-H2 neu (kein Titel-Duplikat)  |
+| `posts/scuba-knowledge/using-a-divecomputer` (EN/DE/TH)                  | ✅     | **6**       | Neues Jump; H1+Teaser + `#ccc`; Inner-H1 weg; DE/TH Anker angeglichen              |
+| `posts/scuba-knowledge/best-dive-computers` (EN/DE/TH)                   | ✅     | **5**       | Neues Jump; H1+Teaser + `#ccc`; Titel- + Vergleichs-Gradient-H2 normalisiert       |
+| `posts/scuba-knowledge/wreck-diving-koh-chang` (EN/DE/TH)                | ✅     | **7**       | Neues Jump (Wracks → Book); H1+Teaser + `#ccc`; Gradient-H2 weg                    |
+| `posts/scuba-knowledge/theory-review` (EN/DE/TH)                         | ✅     | **6**       | Bestehendes Jump behalten; H1+Teaser + `#ccc`; Gradient-H2 + Inner-H1 weg          |
 
 **Regel:** siehe [Posts (`posts-box`)](#posts-posts-box) weiter unten.
 
@@ -232,12 +249,12 @@ Label „On this page“: EN `On this page` · DE `Auf dieser Seite` · TH `ใ�
 
 ## 5. Linienfarbe / Jump-Bar-Look
 
-| Box               | Jump-Nav                                                                                                              |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `changdiving-box` | Inline `border-bottom: 1px solid #ccc` (wie globales `hr`)                                                            |
+| Box               | Jump-Nav                                                                                                             |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `changdiving-box` | Inline `border-bottom: 1px solid #ccc` (wie globales `hr`)                                                           |
 | `posts-box`       | **Inline** `border-bottom: 1px solid #ccc` + gleiche Regel in Page-`critical-css` (async `style.min.css` sonst FOUC) |
-| `speciality-box`  | CSS: leichte Grün/Gelb-Fläche (`.speciality-box .page-jump-nav`) – **kein** Inline-Border `#ccc`                      |
-| `tek-box`         | CSS: grauer→oranger Verlauf (s. Ausnahme unten) – **kein** Inline-Border `#ccc`                                       |
+| `speciality-box`  | CSS: leichte Grün/Gelb-Fläche (`.speciality-box .page-jump-nav`) – **kein** Inline-Border `#ccc`                     |
+| `tek-box`         | CSS: grauer→oranger Verlauf (s. Ausnahme unten) – **kein** Inline-Border `#ccc`                                      |
 
 - **Kein** `<hr>` zwischen Jump-Nav und Banner
 - `<hr />` unter dem Banner vor Intro ist ok
@@ -309,6 +326,8 @@ Markup für H1 + Teaser (identisch zu Kurs-/Produktseiten):
 <p style="margin: 0 0 24px; color: #555; text-align: center">…</p>
 ```
 
+**Intro-H2 nach dem Jump:** nicht den H1 wiederholen (kein zweiter Seitentitel, kein Gradient-„Hero“-H2). Stattdessen ein echter Abschnitts-H2 wie die übrigen (`Why … matters` / `Warum … zählt`), Anker-`id` für „Intro“ behalten.
+
 ### Jump-Menü: individuell je Post
 
 - **Kein** Standard „Intro · Who can join? · What's included · Prices & book“
@@ -329,7 +348,7 @@ Markup für H1 + Teaser (identisch zu Kurs-/Produktseiten):
   class="page-jump-nav"
   aria-label="On this page"
   style="border-bottom: 1px solid #ccc"
->
+></nav>
 ```
 
 2. Dieselbe Regel zusätzlich im Page-`<style id="critical-css">`:
@@ -351,8 +370,12 @@ Bei sehr langen Posts (z. B. `marine-life` Artengalerie): nach **jeder Jump-Gr
 ```html
 <nav id="on-this-page" class="page-jump-nav" …>…</nav>
 …
-<p class="back-to-menu" style="text-align: center; margin: 1.25rem 0 0.35rem; font-size: 0.95rem">
-  <a href="#on-this-page">↑ Back to menu</a>   <!-- DE: Zum Menü · TH: กลับเมนู -->
+<p
+  class="back-to-menu"
+  style="text-align: center; margin: 1.25rem 0 0.35rem; font-size: 0.95rem"
+>
+  <a href="#on-this-page">↑ Back to menu</a>
+  <!-- DE: Zum Menü · TH: กลับเมนู -->
 </p>
 ```
 
@@ -361,10 +384,10 @@ Bei sehr langen Posts (z. B. `marine-life` Artengalerie): nach **jeder Jump-Gr
 
 ### Abgrenzung: Post-Hubs vs. Posts
 
-| Typ                         | Beispiel                         | Jump-Menü      |
-| --------------------------- | -------------------------------- | -------------- |
+| Typ                         | Beispiel                                   | Jump-Menü                            |
+| --------------------------- | ------------------------------------------ | ------------------------------------ |
 | Kategorie-Hub               | `/posts/`, `/posts/marine-life-koh-chang/` | **nie** – nur H1 + Teaser + `<hr />` |
-| Einzelner Blog-Post / Guide | `/posts/.../marine-life/`        | **ja**, themenspezifisch |
+| Einzelner Blog-Post / Guide | `/posts/.../marine-life/`                  | **ja**, themenspezifisch             |
 
 ---
 
@@ -413,15 +436,15 @@ Anker sitzen am Info-Kasten bzw. an den Abschnitts-`<tr>` der Preistabelle.
 
 Referenz für themenspezifisches Jump-Menü (Posts-Regeln oben). Lange Artengalerie (~43 H2s) → nur **Gruppen**, Anker am ersten H2. Jump-Linie: Inline `#ccc` + `critical-css`.
 
-| #   | EN                | DE                     | TH                           | Anker               |
-| --- | ----------------- | ---------------------- | ---------------------------- | ------------------- |
-| 1   | Marine Mammals    | Meeressäuger           | สัตว์เลี้ยงลูกด้วยนม         | `#marine-mammals`   |
-| 2   | Sharks & Rays     | Haie & Rochen          | ฉลามและกระเบน                | `#sharks-rays`      |
-| 3   | Coastal & Jacks   | Küstenfische & Jacks   | ปลาชายฝั่ง & Jacks           | `#coastal-jacks`    |
-| 4   | Reef Fishes       | Riffische              | ปลาแนวปะการัง                | `#reef-fishes`      |
-| 5   | Reptiles          | Reptilien              | สัตว์เลื้อยคลาน              | `#reptiles`         |
-| 6   | Invertebrates     | Wirbellose             | สัตว์ไม่มีกระดูกสันหลัง      | `#invertebrates`    |
-| 7   | Corals & Sponges  | Korallen & Schwämme    | ปะการัง & ฟองน้ำ             | `#corals-sponges`   |
+| #   | EN               | DE                   | TH                      | Anker             |
+| --- | ---------------- | -------------------- | ----------------------- | ----------------- |
+| 1   | Marine Mammals   | Meeressäuger         | สัตว์เลี้ยงลูกด้วยนม    | `#marine-mammals` |
+| 2   | Sharks & Rays    | Haie & Rochen        | ฉลามและกระเบน           | `#sharks-rays`    |
+| 3   | Coastal & Jacks  | Küstenfische & Jacks | ปลาชายฝั่ง & Jacks      | `#coastal-jacks`  |
+| 4   | Reef Fishes      | Riffische            | ปลาแนวปะการัง           | `#reef-fishes`    |
+| 5   | Reptiles         | Reptilien            | สัตว์เลื้อยคลาน         | `#reptiles`       |
+| 6   | Invertebrates    | Wirbellose           | สัตว์ไม่มีกระดูกสันหลัง | `#invertebrates`  |
+| 7   | Corals & Sponges | Korallen & Schwämme  | ปะการัง & ฟองน้ำ        | `#corals-sponges` |
 
 ### Technical Diving (`tek-box`) – Jump-Bar- & CTA-Ausnahme
 
@@ -490,7 +513,7 @@ Weitere Tech-Produkte (`advanced-nitrox`, `deco-procedures`, `advanced-wreck`, `
 ## Nächster Rollout (offen)
 
 **Kategorie-Hubs** (H1 + Teaser, **ohne** Jump-Menü):  
-`/dive-sites/`, weitere Post-Sub-Hubs (`scuba-knowledge/`, `tips-and-tricks/`, …) – gleiches Header-Muster wie `/posts/marine-life-koh-chang/`.
+`/dive-sites/`, weitere Post-Sub-Hubs (`tips-and-tricks/`, `straight-talk/`, …) – gleiches Header-Muster wie `/posts/marine-life-koh-chang/`.
 
 **Blog-Posts** (`posts-box`, H1 + Teaser wie Kurse, Jump individuell, Jump-Linie `#ccc`):  
 weitere Artikel unter `/posts/…` nach dem Muster von `marine-life` / bestehenden Knowledge-Posts.

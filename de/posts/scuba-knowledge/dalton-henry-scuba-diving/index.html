@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Gasgesetze beim Tauchen – Dalton &amp; Henry erklärt | Gasnarkose &amp;
@@ -409,6 +410,12 @@
           object-fit: cover;
         }
       }
+
+      .posts-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -589,11 +596,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Gasgesetze für Taucher</h1>
-          <p>Dalton, Henry, Narkose &amp; Dekompression — praxisnah erklärt</p>
-        </div>
       </div>
     </header>
 
@@ -609,7 +611,18 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="posts-box">
-        <nav class="page-jump-nav" aria-label="Auf dieser Seite">
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Gasgesetze für Taucher
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Dalton, Henry, Narkose &amp; Dekompression — praxisnah erklärt
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
           <span class="page-jump-nav__label">Auf dieser Seite</span>
           <div class="page-jump-nav__links">
             <a href="#gl-intro">Einstieg</a>
@@ -623,28 +636,14 @@
           </div>
         </nav>
 
-        <h2
-          id="gl-intro"
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          🧪 Gasgesetze beim Tauchen – Dalton &amp; Henry (Gasnarkose &amp;
-          Dekompression)
-        </h2>
+        <h2 id="gl-intro">🧪 Warum Gasgesetze bei jedem Tauchgang greifen</h2>
 
         <p>
           Beim offenen Kreislauf atmest du
           <strong>verdichtetes Atemgas auf Umgebungsdruck</strong>. Genau damit
-          hängen Gasnarkose, Sauerstoffbelastung, Stickstoffbelastung — und warum
-          sich dein <strong>Tauchcomputer</strong> so stark für Tiefe und Zeit
-          interessiert.
+          hängen Gasnarkose, Sauerstoffbelastung, Stickstoffbelastung — und
+          warum sich dein <strong>Tauchcomputer</strong> so stark für Tiefe und
+          Zeit interessiert.
         </p>
 
         <p>Zwei klassische Gesetze rahmen fast alles in der „Theorie“ ein:</p>
@@ -661,8 +660,7 @@
 
         <p>
           Zusammen mit
-          <a
-            href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
+          <a href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
             >Druck &amp; Boyle-Gesetz</a
           >
           (Volumen vs. Druck in Jacket und Lunge) hast du die Kernphysik hinter
@@ -689,9 +687,7 @@
           <p>
             <strong>Partialdruck ≈ Anteil × Gesamt-Umgebungsdruck</strong>
           </p>
-          <p>
-            (Übliches Schulmodell: Meerwassertiefe, Druck in bar absolut.)
-          </p>
+          <p>(Übliches Schulmodell: Meerwassertiefe, Druck in bar absolut.)</p>
 
           <h3>Beispiel: Luft in 30 m (~4 bar)</h3>
           <p>Trockenluft wird oft genähert mit:</p>
@@ -733,7 +729,9 @@
             <div class="pressure-calc__inner">
               <div class="pressure-calc__fields">
                 <div>
-                  <label for="dalton-ambient">Umgebungsdruck (bar abs / ata)</label>
+                  <label for="dalton-ambient"
+                    >Umgebungsdruck (bar abs / ata)</label
+                  >
                   <input
                     id="dalton-ambient"
                     type="text"
@@ -797,8 +795,8 @@
                   <a href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
                     >Boyle-/Tiefen-Artikel</a
                   >:
-                  <strong>absoluter Druck ≈ 1 bar + (Tiefe ÷ m pro bar)</strong>.
-                  Oben kannst du jeden Umgebungsdruck direkt eingeben — auch
+                  <strong>absoluter Druck ≈ 1 bar + (Tiefe ÷ m pro bar)</strong
+                  >. Oben kannst du jeden Umgebungsdruck direkt eingeben — auch
                   Dezimalwerte (2,3 bar) und Komma als Dezimaltrennzeichen.
                 </p>
               </div>
@@ -811,9 +809,9 @@
               </div>
               <p class="pressure-calc__hint">
                 Jeder Partialdruck ≈
-                <strong>Anteil × Gesamt-Umgebungsdruck</strong>. Stickstoffanteil =
-                <strong>1 − O₂</strong> (Zwei-Gas-Lehrmodell für Luft und Nitrox —
-                kein Trimix).
+                <strong>Anteil × Gesamt-Umgebungsdruck</strong>.
+                Stickstoffanteil = <strong>1 − O₂</strong> (Zwei-Gas-Lehrmodell
+                für Luft und Nitrox — kein Trimix).
               </p>
             </div>
           </div>
@@ -833,7 +831,12 @@
                 var fStr = fIn.value.trim().replace(",", ".");
                 var P = pStr === "" ? NaN : parseFloat(pStr);
                 var FO2 = fStr === "" ? NaN : parseFloat(fStr);
-                if (pStr === "" || fStr === "" || !isFinite(P) || !isFinite(FO2)) {
+                if (
+                  pStr === "" ||
+                  fStr === "" ||
+                  !isFinite(P) ||
+                  !isFinite(FO2)
+                ) {
                   o2Out.textContent =
                     "Umgebungsdruck und O₂-Anteil eingeben, um Partialdrücke zu sehen.";
                   n2Out.textContent = "";
@@ -902,11 +905,12 @@
           </script>
 
           <p>
-            Die <strong>Prozentangaben auf der Flasche ändern sich nicht</strong>
-            — aber die <strong>„Wirkstärke“</strong> jedes Gases als
-            Partialdruck <strong>ändern</strong> sich mit der Tiefe. Deshalb wird
-            „normale Luft“ unten narkotischer und lädt mehr Edelgas — obwohl das
-            Gemisch gleich bleibt.
+            Die
+            <strong>Prozentangaben auf der Flasche ändern sich nicht</strong> —
+            aber die <strong>„Wirkstärke“</strong> jedes Gases als Partialdruck
+            <strong>ändern</strong> sich mit der Tiefe. Deshalb wird „normale
+            Luft“ unten narkotischer und lädt mehr Edelgas — obwohl das Gemisch
+            gleich bleibt.
           </p>
         </section>
 
@@ -927,11 +931,12 @@
             <li>Tunnelblick, eingeschränktes Urteilsvermögen</li>
           </ul>
           <p>
-            Ausbildung, Tiefendisziplin, Gaswahl (mit entsprechender Qualifikation)
-            und konservative Planung zählen. Für Kontext zu tiefen Profilen siehe
-            unsere Hinweise zum
-            <a href="/de/posts/tips-and-tricks/deep-diving/">Tiefen-Tauchen</a> —
-            Narkose lässt sich nicht zuverlässig „nur mit Erfahrung wegtrainieren“.
+            Ausbildung, Tiefendisziplin, Gaswahl (mit entsprechender
+            Qualifikation) und konservative Planung zählen. Für Kontext zu
+            tiefen Profilen siehe unsere Hinweise zum
+            <a href="/de/posts/tips-and-tricks/deep-diving/">Tiefen-Tauchen</a>
+            — Narkose lässt sich nicht zuverlässig „nur mit Erfahrung
+            wegtrainieren“.
           </p>
         </section>
 
@@ -942,7 +947,7 @@
           <p>
             Der Sauerstoff-Partialdruck bestimmt die
             <strong>Sauerstoffexposition</strong>. Steigen Tiefe oder O₂-Anteil,
-            steigt die PO₂ —             hilfreich innerhalb der Grenzen für Dekompression
+            steigt die PO₂ — hilfreich innerhalb der Grenzen für Dekompression
             und Nitrox, aber riskant oberhalb der in deiner Ausbildung
             <strong>vorgegebenen maximalen PO₂</strong> oder empfohlener Zeiten.
           </p>
@@ -973,7 +978,9 @@
           </p>
           <h3>Merksatz</h3>
           <p>
-            <strong>Höherer Partialdruck beim Einatmen → mehr Gasaufnahme</strong>
+            <strong
+              >Höherer Partialdruck beim Einatmen → mehr Gasaufnahme</strong
+            >
             (mit der Zeit nähern sich die Gewebe dem Gleichgewicht). Beim
             <strong>Aufstieg</strong> sinkt der Druck,
             <strong>Gas geht aus der Lösung</strong>; der Körper baut es
@@ -983,13 +990,13 @@
           <h3>Aufgasen / Abgasen</h3>
           <ul>
             <li>
-              <strong>Abtauchen / tief bleiben:</strong> höherer Edelgas-Partialdruck
-              in der Lunge → Gewebe nimmt mehr Gas auf.
+              <strong>Abtauchen / tief bleiben:</strong> höherer
+              Edelgas-Partialdruck in der Lunge → Gewebe nimmt mehr Gas auf.
             </li>
             <li>
-              <strong>Langsam aufsteigen:</strong> der Gradient begünstigt Elimination
-              über das Atmen; entstehende Blasen bleiben im Rahmen der Modelle
-              klein genug, um unkritisch zu bleiben.
+              <strong>Langsam aufsteigen:</strong> der Gradient begünstigt
+              Elimination über das Atmen; entstehende Blasen bleiben im Rahmen
+              der Modelle klein genug, um unkritisch zu bleiben.
             </li>
           </ul>
         </section>
@@ -999,17 +1006,20 @@
         <section id="gl-dcs">
           <h2>⚠️ Dekompressionskrankheit (DCS) – wenn’s zu schnell geht</h2>
           <p>
-            Überschreitest du <strong>Tauchcomputer- oder Tabellengrenzen</strong>
+            Überschreitest du
+            <strong>Tauchcomputer- oder Tabellengrenzen</strong>
             oder steigst du für deine Gewebeansättigung zu schnell auf, können
-            <strong>Blasen groß genug werden, um Beschwerden zu machen</strong> —
-            Gelenke, Haut, Nervensystem, Kreislauf — das fasst man als
+            <strong>Blasen groß genug werden, um Beschwerden zu machen</strong>
+            — Gelenke, Haut, Nervensystem, Kreislauf — das fasst man als
             <strong>Dekompressionskrankheit</strong> zusammen.
           </p>
           <p>
-            Es ist <strong>nicht</strong> „eine Blase = immer Schmerz“; es ist ein
-            statistisches, modellbasiertes Sporttauchen mit echten Folgen — deshalb
-            lehren Verbände maximale Aufstiegsgeschwindigkeiten,
-            <a href="/de/posts/scuba-knowledge/safety-stop/">Sicherheitsstopps</a>
+            Es ist <strong>nicht</strong> „eine Blase = immer Schmerz“; es ist
+            ein statistisches, modellbasiertes Sporttauchen mit echten Folgen —
+            deshalb lehren Verbände maximale Aufstiegsgeschwindigkeiten,
+            <a href="/de/posts/scuba-knowledge/safety-stop/"
+              >Sicherheitsstopps</a
+            >
             und
             <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
               >Nullzeit-/NDL-Grenzen</a
@@ -1017,10 +1027,11 @@
           </p>
           <p>
             <strong>Sporttauchen:</strong> ein
-            <strong>Sicherheitsstopp</strong> in ~5&nbsp;m ist auf vielen Profilen
-            <strong>empfohlene gute Praxis</strong>; das ist nicht dasselbe wie ein
-            verpflichtender <strong>Dekompressionsstopp</strong> nach Überschreiten
-            der NDL in technischen Profilen.
+            <strong>Sicherheitsstopp</strong> in ~5&nbsp;m ist auf vielen
+            Profilen <strong>empfohlene gute Praxis</strong>; das ist nicht
+            dasselbe wie ein verpflichtender
+            <strong>Dekompressionsstopp</strong> nach Überschreiten der NDL in
+            technischen Profilen.
           </p>
         </section>
 
@@ -1035,13 +1046,13 @@
               Diffusion ins Gewebe treibt).
             </li>
             <li>
-              <strong>Henry</strong> beschreibt, <em>wie</em> Auf- und Abbautrends
-              über die Zeit bei diesen Partialdrücken laufen.
+              <strong>Henry</strong> beschreibt, <em>wie</em> Auf- und
+              Abbautrends über die Zeit bei diesen Partialdrücken laufen.
             </li>
           </ul>
           <p>
-            Der Algorithmus deines Computers verpackt diese Ideen plus
-            Empirie — deshalb zählt
+            Der Algorithmus deines Computers verpackt diese Ideen plus Empirie —
+            deshalb zählt
             <a href="/de/posts/scuba-knowledge/using-a-divecomputer/"
               >richtige Bedienung</a
             >
@@ -1057,12 +1068,16 @@
 
           <h3>Praxis-Folgerungen</h3>
           <ul>
-            <li>Tiefengrenzen existieren, weil Partialdrücke schnell steigen.</li>
-            <li>Langsame, kontrollierte Aufstiege reduzieren Übersättigungsstress.</li>
+            <li>
+              Tiefengrenzen existieren, weil Partialdrücke schnell steigen.
+            </li>
+            <li>
+              Langsame, kontrollierte Aufstiege reduzieren Übersättigungsstress.
+            </li>
             <li>
               Nitrox senkt den Stickstoffanteil → niedrigerer N₂-Partialdruck in
-              gleicher Tiefe → oft konservativere Stickstoffbelastung bei gegebenem
-              Gemisch und PO₂-Obergrenze — das gehört in einen
+              gleicher Tiefe → oft konservativere Stickstoffbelastung bei
+              gegebenem Gemisch und PO₂-Obergrenze — das gehört in einen
               <a href="/de/courses/nitrox-diver/">Nitrox-Kurs</a>.
             </li>
           </ul>
@@ -1083,43 +1098,45 @@
 
           <h3>Was besagt das Henry-Gesetz beim Tauchen?</h3>
           <p>
-            Das Henry-Gesetz verbindet die Menge gelösten Gases in einer Flüssigkeit
-            mit dem Partialdruck dieses Gases. Unter höherem Druck kann mehr Gas in
-            Blut und Gewebe gehen; beim Aufstieg sinkt der Druck, Gas geht aus der
-            Lösung — deshalb sind kontrollierter Aufstieg und Tauchcomputer-Grenzen
-            wichtig.
+            Das Henry-Gesetz verbindet die Menge gelösten Gases in einer
+            Flüssigkeit mit dem Partialdruck dieses Gases. Unter höherem Druck
+            kann mehr Gas in Blut und Gewebe gehen; beim Aufstieg sinkt der
+            Druck, Gas geht aus der Lösung — deshalb sind kontrollierter
+            Aufstieg und Tauchcomputer-Grenzen wichtig.
           </p>
 
           <h3>Warum nimmt die Stickstoffnarkose mit der Tiefe auf Luft zu?</h3>
           <p>
-            Auf Luft ist der Stickstoffanteil fest, aber der Umgebungsdruck steigt
-            mit der Tiefe — also steigt auch der Partialdruck von Stickstoff.
-            Höhere Partialdrücke narkotischer Gase hängen mit stärkerer
-            Edelgasnarkose zusammen; auf Luft spricht man oft von Stickstoffnarkose.
+            Auf Luft ist der Stickstoffanteil fest, aber der Umgebungsdruck
+            steigt mit der Tiefe — also steigt auch der Partialdruck von
+            Stickstoff. Höhere Partialdrücke narkotischer Gase hängen mit
+            stärkerer Edelgasnarkose zusammen; auf Luft spricht man oft von
+            Stickstoffnarkose.
           </p>
 
           <h3>Was hat Sauerstoff-Partialdruck mit Toxizität zu tun?</h3>
           <p>
             Das Risiko einer Sauerstoffvergiftung hängt von inspiriertem
             Sauerstoff-Partialdruck und Expositionszeit ab. Ausbildungsprogramme
-            nennen maximale PO₂-Werte für die Planung; deren Überschreitung erhöht
-            das Risiko akuter Sauerstofftoxizität — inklusive Krampfanfällen unter
-            Wasser — deshalb achten Nitrox- und technische Taucher genau auf ihre
-            PO₂.
+            nennen maximale PO₂-Werte für die Planung; deren Überschreitung
+            erhöht das Risiko akuter Sauerstofftoxizität — inklusive
+            Krampfanfällen unter Wasser — deshalb achten Nitrox- und technische
+            Taucher genau auf ihre PO₂.
           </p>
 
           <h3>„Heilt“ Nitrox die Narkose?</h3>
           <p>
             Nicht von selbst. In <strong>gleicher Tiefe</strong> senken gängige
-            Nitrox-Gemische den <strong>Stickstoff-Partialdruck</strong> gegenüber
-            Luft und können die Narkose etwas mindern — aber Sauerstoff und andere
-            Faktoren bleiben, und du musst <strong>PO₂ und MOD</strong> beachten.
+            Nitrox-Gemische den
+            <strong>Stickstoff-Partialdruck</strong> gegenüber Luft und können
+            die Narkose etwas mindern — aber Sauerstoff und andere Faktoren
+            bleiben, und du musst <strong>PO₂ und MOD</strong> beachten.
           </p>
 
           <h3>Ist gelöstes Gas dasselbe wie Blasen in den Venen?</h3>
           <p>
-            Gelöstes Gas liegt auf molekularer Ebene in Lösung vor. Problematisch
-            wird es, wenn lokale Übersättigung
+            Gelöstes Gas liegt auf molekularer Ebene in Lösung vor.
+            Problematisch wird es, wenn lokale Übersättigung
             <strong>freies Gas (Gasphase)</strong> erlaubt, das der Körper nicht
             toleriert — Modelle sollen dich auf der sicheren Seite dieser Grenze
             halten.
@@ -1127,8 +1144,9 @@
 
           <h3>Wo kommt das Boyle-Gesetz ins Spiel?</h3>
           <p>
-            Gleicher Tauchgang, andere Frage: Boyle erklärt Volumenänderungen bei
-            Druckänderung — zentral für Auftrieb und Atemkontrolle. Siehe den
+            Gleicher Tauchgang, andere Frage: Boyle erklärt Volumenänderungen
+            bei Druckänderung — zentral für Auftrieb und Atemkontrolle. Siehe
+            den
             <a href="/de/posts/scuba-knowledge/boyles-law-scuba-diving/"
               >Begleitartikel</a
             >.
@@ -1140,12 +1158,15 @@
         <footer class="post-footer">
           <h2>📌 Kurz gesagt</h2>
           <p>
-            Dalton erklärt, <strong>warum jedes Gas tiefer „stärker“ wirkt</strong>.
-            Henry erklärt, <strong>warum dein Körper über einen Tauchgang Gas
-            auf- und abbaut</strong>. Wenn du diese Ideen und die daraus folgenden
-            Grenzen respektierst, hört Tauchen auf, wie auswendig gelernte Magie
-            zu wirken — und wird nachvollziehbar.
-            Zu
+            Dalton erklärt,
+            <strong>warum jedes Gas tiefer „stärker“ wirkt</strong>. Henry
+            erklärt,
+            <strong
+              >warum dein Körper über einen Tauchgang Gas auf- und
+              abbaut</strong
+            >. Wenn du diese Ideen und die daraus folgenden Grenzen
+            respektierst, hört Tauchen auf, wie auswendig gelernte Magie zu
+            wirken — und wird nachvollziehbar. Zu
             <strong>Auftrieb und Verdrängung</strong> (Archimedes) und
             <strong>Hebesäcken</strong> geht es weiter mit
             <a
