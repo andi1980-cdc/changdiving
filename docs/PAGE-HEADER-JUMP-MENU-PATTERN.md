@@ -77,7 +77,7 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 | Seite                                                         | Status | Jump-Punkte | Hinweis                                                |
 | ------------------------------------------------------------- | ------ | ----------- | ------------------------------------------------------ |
-| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)          | ✅     | **7**       | Gruppen-Anker (nicht alle ~43 H2s); s. Posts-Abschnitt |
+| `posts/marine-life-koh-chang/marine-life` (EN/DE/TH)          | ✅     | **7**       | Gruppen-Anker; nach jeder Gruppe „Back to menu“ → `#on-this-page` |
 | `posts/marine-life-koh-chang/marine-life-whale-shark` (EN/DE/TH) | ✅  | **7**       | Themenspezifisch; Inline `#ccc` + `critical-css`       |
 | `posts/marine-life-koh-chang/marine-life-green-sea-turtle` (EN/DE/TH) | ✅ | **5**       | Biology → Dive sites; Inline `#ccc` + `critical-css`   |
 | `posts/marine-life-koh-chang/marine-life-titan-triggerfish` (EN/DE/TH) | ✅ | **6**       | Biology → Gallery; Inline `#ccc` + `critical-css`      |
@@ -343,6 +343,21 @@ Markup für H1 + Teaser (identisch zu Kurs-/Produktseiten):
 ```
 
 Farbe `#ccc` = normales `<hr>` (`style.css`). Kein extra `<hr />` direkt unter der Jump-Nav nötig – die Border ersetzt die Linie.
+
+### Lange Guides: „Back to menu“
+
+Bei sehr langen Posts (z. B. `marine-life` Artengalerie): nach **jeder Jump-Gruppe** einen Link zurück zum Menü.
+
+```html
+<nav id="on-this-page" class="page-jump-nav" …>…</nav>
+…
+<p class="back-to-menu" style="text-align: center; margin: 1.25rem 0 0.35rem; font-size: 0.95rem">
+  <a href="#on-this-page">↑ Back to menu</a>   <!-- DE: Zum Menü · TH: กลับเมนู -->
+</p>
+```
+
+- Jump-Nav braucht `id="on-this-page"` (+ `scroll-margin-top` in `critical-css`)
+- Nicht nach jedem Unter-H2, nur nach den Jump-Gruppen
 
 ### Abgrenzung: Post-Hubs vs. Posts
 
