@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -568,14 +574,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>สำรวจเรือจม ต11 – จุดดำน้ำเรือจมในตำนานของเกาะช้าง</h1>
-          <p>
-            ดำน้ำสู่ประวัติศาสตร์กับเรือรบจม ต11 ที่กลายเป็นแนวปะการังเทียม
-            พร้อมชีวิตใต้ทะเลหลากหลาย
-          </p>
-        </div>
       </div>
     </header>
 
@@ -592,22 +590,29 @@
           <a href="/th/day-trips/insurance/">ประกัน</a>
           <a href="/th/faqs/">คำถามที่พบบ่อย</a>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           สำรวจเรือจม ต11 – จุดดำน้ำเรือจมในตำนานของเกาะช้าง
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ดำน้ำสู่ประวัติศาสตร์กับเรือรบจม ต11 ที่กลายเป็นแนวปะการังเทียม
+          พร้อมชีวิตใต้ทะเลหลากหลาย
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">บทนำ</a>
+            <a href="#ds-overview">ภาพรวม</a>
+            <a href="#ds-level">ระดับ</a>
+            <a href="#ds-briefing">บรีฟฟิ่ง</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">เรือลาดตระเวนปืนใหญ่ที่จมกลายเป็นแนวปะการังเทียม</h2>
 
         <p>
           ลองนึกภาพการดำลงผ่านน้ำใสไปสู่เงาของ
@@ -660,22 +665,7 @@
           </li>
         </ul>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ข้อมูลโดยรวมของจุดดำน้ำ
-        </h2>
+        <h2 id="ds-overview">ข้อมูลโดยรวมของจุดดำน้ำ</h2>
 
         <table>
           <tr>
@@ -735,7 +725,7 @@
         </div>
 
         <hr />
-        <h2>ระดับนักดำน้ำที่เหมาะสมสำหรับจุดนี้</h2>
+        <h2 id="ds-level">ระดับนักดำน้ำที่เหมาะสมสำหรับจุดนี้</h2>
         <a
           href="/th/day-trips/fun-dives/"
           rel="noopener noreferrer"
@@ -756,18 +746,7 @@
         >: ไม่สามารถทำได้
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           ตัวอย่างบรีฟดำน้ำสำหรับผู้เชี่ยวชาญ – เรือจม ต11
         </h2>
 
@@ -995,8 +974,12 @@
             ที่สาย mooring ก่อนขึ้นผิวน้ำ
           </li>
           <li>
-            <strong><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/">ขีดจำกัดไม่ต้องแช่น้ำ</a>:</strong> ที่ความลึก 16 เมตร
-            เราจะดำน้ำอยู่ในขีดจำกัดที่ปลอดภัย
+            <strong
+              ><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >ขีดจำกัดไม่ต้องแช่น้ำ</a
+              >:</strong
+            >
+            ที่ความลึก 16 เมตร เราจะดำน้ำอยู่ในขีดจำกัดที่ปลอดภัย
           </li>
         </ul>
         <p>
@@ -1246,8 +1229,8 @@
                 การควบคุมการลอยตัวที่ดีเป็นสิ่งจำเป็นเพื่อหลีกเลี่ยงความเสียหาย
               </li>
               <li>
-                <strong>ฉลามไผ่:</strong> มักพักอยู่ใต้เรือจม –
-                สังเกตจากระยะไกล อย่ารบกวน
+                <strong>ฉลามไผ่:</strong> มักพักอยู่ใต้เรือจม – สังเกตจากระยะไกล
+                อย่ารบกวน
               </li>
               <li>
                 <strong>ปลาทริกเกอร์:</strong> อาจหวง territory ในช่วงวางไข่ –
@@ -1501,7 +1484,14 @@
           สำรวจการผจญภัยดำน้ำที่เรืออับปางรอบเกาะช้าง
           เรืออับปางที่มีประวัติศาสตร์เหล่านี้มีการสำรวจใต้น้ำที่น่าสนใจและสิ่งมีชีวิตทางทะเลมากมาย
         </p>
-        <p style="font-size: 0.95rem; line-height: 1.55; color: #333; max-width: 44rem">
+        <p
+          style="
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #333;
+            max-width: 44rem;
+          "
+        >
           <strong>พูดตรงๆ:</strong>
           <a href="/th/posts/straight-talk/htms-chang-wreck-penetration/"
             >ศัพท์เรือจม เกาะช้าง (เน้น เรือหลวงช้าง)</a

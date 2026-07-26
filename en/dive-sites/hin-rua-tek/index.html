@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hin Rua Tek – Coral Wall Diving at Koh Chang</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -567,14 +574,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Discover Hin Rua Tek – Koh Chang's Stunning Coral Wall Dive</h1>
-          <p>
-            Dive Koh Chang's south reef and explore the colorful coral wall of
-            Hin Rua Tek – ideal for fun dives and macro lovers.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -594,19 +593,29 @@
           <a href="/en/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Discover Hin Rua Tek – Koh Chang's Stunning Coral Wall Dive
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Dive Koh Chang's south reef and explore the colorful coral wall of Hin
+          Rua Tek – ideal for fun dives and macro lovers.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Overview</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">A colorful coral wall on Koh Chang’s south reef</h2>
 
         <p>
           Imagine descending along a <strong>buoy line</strong> into crystal
@@ -664,19 +673,7 @@
           </li>
         </ul>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Dive Site Overview
-        </h2>
+        <h2 id="ds-overview">Dive Site Overview</h2>
 
         <table>
           <tr>
@@ -735,7 +732,7 @@
         </div>
         <hr />
 
-        <h2>Diver Level for this dive site.</h2>
+        <h2 id="ds-level">Diver Level for this dive site.</h2>
         <a
           href="/en/day-trips/fun-dives/"
           rel="noopener noreferrer"
@@ -757,18 +754,7 @@
         >
         possibility: Yes
         <hr />
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Dive Briefing Example for Dive Professionals – Hin Rua Tek
         </h2>
 
@@ -1015,8 +1001,12 @@
             surfacing.
           </li>
           <li>
-            <strong><a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/">No-Decompression Limits</a>:</strong> At 15 meters depth, we'll
-            keep the dive well within safe limits.
+            <strong
+              ><a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >No-Decompression Limits</a
+              >:</strong
+            >
+            At 15 meters depth, we'll keep the dive well within safe limits.
           </li>
         </ul>
         <p>
@@ -1400,19 +1390,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Similar Dive Sites
-        </h2>
+        <h2>Similar Dive Sites</h2>
         <p>
           Explore more beginner-friendly reef dives around Koh Chang. These
           sites offer similar depths and difficulty levels.

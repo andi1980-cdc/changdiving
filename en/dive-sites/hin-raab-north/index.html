@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hin Raab North – Exclusive Dive Site in Koh Chang</title>
     <meta
@@ -336,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -567,14 +574,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Explore Hin Raab North – Koh Chang's Exclusive Dive Adventure</h1>
-          <p>
-            Dive into one of Koh Chang's best coral reefs – exclusive access,
-            blacktip reef sharks & stunning canyon formations await.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -594,18 +593,30 @@
           <a href="/en/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Explore Hin Raab North – Koh Chang's Exclusive Dive Adventure
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Dive into one of Koh Chang's best coral reefs – exclusive access,
+          blacktip reef sharks & stunning canyon formations await.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Overview</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Exclusive reef access with blacktip reef sharks and coral gardens
         </h2>
 
         <p>
@@ -686,19 +697,7 @@
             loading="lazy"
           />
         </div>
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Dive Site Overview
-        </h2>
+        <h2 id="ds-overview">Dive Site Overview</h2>
 
         <table
           style="
@@ -772,7 +771,7 @@
         </div>
 
         <hr />
-        <h2>Diver Level for this dive site.</h2>
+        <h2 id="ds-level">Diver Level for this dive site.</h2>
 
         <a
           href="/en/day-trips/fun-dives/"
@@ -796,18 +795,7 @@
         possibility: Yes
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Dive Briefing Example for Dive Professionals – Hin Raab North
         </h2>
 
@@ -1081,9 +1069,14 @@
             provides perfect conditions for this.
           </li>
           <li>
-            <strong><a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/">No-Decompression Limits</a>:</strong> For this depth (12-18
-            meters), your no-decompression limit is approximately 50 minutes.
-            We'll keep the dive well within these limits.
+            <strong
+              ><a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >No-Decompression Limits</a
+              >:</strong
+            >
+            For this depth (12-18 meters), your no-decompression limit is
+            approximately 50 minutes. We'll keep the dive well within these
+            limits.
           </li>
         </ul>
         <p>
@@ -1587,19 +1580,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Similar Dive Sites
-        </h2>
+        <h2>Similar Dive Sites</h2>
         <p>
           Explore more intermediate to advanced reef dives around Koh Chang.
           These sites offer similar depths and challenge levels.

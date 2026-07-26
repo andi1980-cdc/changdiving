@@ -803,12 +803,14 @@ main:has(> .tek-box) > .posts-submenu a {
 .tek-box .page-jump-nav__links::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.35);
 }
-.posts-box .page-jump-nav {
+.posts-box .page-jump-nav,
+.dive-site-box .page-jump-nav {
   margin: 0 0 2px;
   padding: 2px 8px 4px;
   border-bottom: 1px solid #ccc;
 }
-.posts-box .page-jump-nav__links {
+.posts-box .page-jump-nav__links,
+.dive-site-box .page-jump-nav__links {
   display: block;
   text-align: center;
   overflow-x: visible;
@@ -856,7 +858,8 @@ main:has(> .tek-box) > .posts-submenu a {
     padding-bottom: 18px;
     margin-bottom: 6px;
   }
-  .posts-box .page-jump-nav__links {
+  .posts-box .page-jump-nav__links,
+  .dive-site-box .page-jump-nav__links {
     justify-content: unset;
     padding-bottom: 10px;
     margin-bottom: 4px;
@@ -866,6 +869,8 @@ main:has(> .tek-box) > .posts-submenu a {
 .changdiving-box .page-jump-nav__links a:visited,
 .posts-box .page-jump-nav__links a,
 .posts-box .page-jump-nav__links a:visited,
+.dive-site-box .page-jump-nav__links a,
+.dive-site-box .page-jump-nav__links a:visited,
 .speciality-box .page-jump-nav__links a,
 .speciality-box .page-jump-nav__links a:visited,
 .tek-box .page-jump-nav__links a,
@@ -889,7 +894,9 @@ main:has(> .tek-box) > .posts-submenu a {
   color: #fff;
 }
 .posts-box .page-jump-nav__links a,
-.posts-box .page-jump-nav__links a:visited {
+.posts-box .page-jump-nav__links a:visited,
+.dive-site-box .page-jump-nav__links a,
+.dive-site-box .page-jump-nav__links a:visited {
   display: inline;
   padding: 0 0.04em;
   font-size: 0.78rem;
@@ -907,7 +914,8 @@ main:has(> .tek-box) > .posts-submenu a {
   pointer-events: none;
   user-select: none;
 }
-.posts-box .page-jump-nav__links a + a::before {
+.posts-box .page-jump-nav__links a + a::before,
+.dive-site-box .page-jump-nav__links a + a::before {
   margin: 0 0.35em;
   font-size: 0.95em;
   color: #b8c5cc;
@@ -917,6 +925,7 @@ main:has(> .tek-box) > .posts-submenu a {
 }
 .changdiving-box .page-jump-nav__links a:hover,
 .posts-box .page-jump-nav__links a:hover,
+.dive-site-box .page-jump-nav__links a:hover,
 .speciality-box .page-jump-nav__links a:hover {
   color: #0077b6;
   border-bottom-color: rgba(0, 119, 182, 0.35);
@@ -931,6 +940,7 @@ main:has(> .tek-box) > .posts-submenu a {
 }
 .changdiving-box .page-jump-nav__links a:focus-visible,
 .posts-box .page-jump-nav__links a:focus-visible,
+.dive-site-box .page-jump-nav__links a:focus-visible,
 .speciality-box .page-jump-nav__links a:focus-visible {
   outline: 2px solid rgba(0, 119, 182, 0.35);
   outline-offset: 3px;
@@ -945,6 +955,8 @@ main:has(> .tek-box) > .posts-submenu a {
 .changdiving-box h3[id],
 .posts-box h2[id],
 .posts-box h3[id],
+.dive-site-box h2[id],
+.dive-site-box h3[id],
 .speciality-box h2[id],
 .speciality-box h3[id],
 .tek-box h2[id],

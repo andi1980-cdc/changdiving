@@ -339,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -797,14 +803,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>แผนที่จุดดำน้ำเกาะช้าง</h1>
-          <p>
-            ค้นหาจุดดำน้ำที่ดีที่สุดรอบเกาะช้าง – เรือจม ปะการัง และยอดหิน
-            สำหรับทุกระดับประสบการณ์ ดูแผนที่แบบอินเทอร์แอคทีฟได้เลย
-          </p>
-        </div>
       </div>
     </header>
 
@@ -822,22 +820,27 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="dive-site-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           แผนที่จุดดำน้ำเกาะช้าง
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ค้นหาจุดดำน้ำที่ดีที่สุดรอบเกาะช้าง – เรือจม ปะการัง และยอดหิน
+          สำหรับทุกระดับประสบการณ์ ดูแผนที่แบบอินเทอร์แอคทีฟได้เลย
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">บทนำ</a>
+            <a href="#kc-map-title">แผนที่</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">เรือจม ปะการัง และยอดหิน – สำรวจเกาะช้างบนแผนที่</h2>
 
         <p>
           ยินดีต้อนรับสู่ ช้างไดฟ์วิ่ง!
@@ -918,7 +921,9 @@
             <li>
               <a href="/th/dive-sites/koh-rang-pinnacle/">หินกระเดื่อง</a>
             </li>
-            <li><a href="/th/dive-sites/koho-maru-5/">โคโฮะ มารุ 5 (PAK-1)</a></li>
+            <li>
+              <a href="/th/dive-sites/koho-maru-5/">โคโฮะ มารุ 5 (PAK-1)</a>
+            </li>
           </ul>
         </section>
 

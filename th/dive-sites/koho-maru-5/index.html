@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -577,14 +583,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>เรือ Koho Maru 5 – เรือจมที่มีสามชีวิต</h1>
-          <p>
-            ดำลึกถึง 42 เมตร และสำรวจเรือจมที่น่าตื่นเต้นที่สุดแห่งหนึ่งในไทย –
-            เหมาะสำหรับนักดำน้ำเทคนิคขั้นสูง
-          </p>
-        </div>
       </div>
     </header>
 
@@ -601,22 +599,29 @@
           <a href="/th/day-trips/insurance/">ประกัน</a>
           <a href="/th/faqs/">คำถามที่พบบ่อย</a>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           เรือ Koho Maru 5 – เรือจมที่มีสามชีวิต
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ดำลึกถึง 42 เมตร และสำรวจเรือจมที่น่าตื่นเต้นที่สุดแห่งหนึ่งในไทย –
+          เหมาะสำหรับนักดำน้ำเทคนิคขั้นสูง
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">เรื่องราว</a>
+            <a href="#ds-overview">ภาพรวม</a>
+            <a href="#ds-level">ระดับ</a>
+            <a href="#ds-procedures">ขั้นตอน</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">เรือ Koho Maru 5 – เรือจมที่มีสามชีวิต</h2>
 
         <p>
           <strong>Koho Maru 5 Pak1</strong>
@@ -629,25 +634,21 @@
 
         <h2>เฟส 1: เรือจมแนวตั้ง (2539–2544)</h2>
         <p>
-          เมื่อวันที่ 25 สิงหาคม 2539
-          เรือ PAK-1 เรือบรรทุกก๊าซอายุ 25 ปีของบริษัท PAK Line
-          จมลงในพายุที่รุนแรงห่างจากเกาะช้างราว 50 กิโลเมตร
-          ขณะมุ่งหน้าสู่เวียดนาม ลูกเรือ 7 คนจาก 10
-          ไม่รอดชีวิต โดยสามคนที่อยู่บริเวณหัวเรือรอดชีวิตมาได้
-          เรือจมในท่าที่ไม่เคยพบเห็นมาก่อน:
-          ท้ายเรือติดพื้นทะเลที่ความลึก 60 เมตร
-          และหัวเรือชี้ตรงขึ้นไปโดยมีน้ำอยู่เหนือเพียง 5 เมตร
-          ในบางครั้งทัศนวิสัยใต้น้ำเกิน 50 เมตร
-          ข่าวแพร่ออกไปอย่างรวดเร็ว
+          เมื่อวันที่ 25 สิงหาคม 2539 เรือ PAK-1 เรือบรรทุกก๊าซอายุ 25
+          ปีของบริษัท PAK Line จมลงในพายุที่รุนแรงห่างจากเกาะช้างราว 50 กิโลเมตร
+          ขณะมุ่งหน้าสู่เวียดนาม ลูกเรือ 7 คนจาก 10 ไม่รอดชีวิต
+          โดยสามคนที่อยู่บริเวณหัวเรือรอดชีวิตมาได้
+          เรือจมในท่าที่ไม่เคยพบเห็นมาก่อน: ท้ายเรือติดพื้นทะเลที่ความลึก 60
+          เมตร และหัวเรือชี้ตรงขึ้นไปโดยมีน้ำอยู่เหนือเพียง 5 เมตร
+          ในบางครั้งทัศนวิสัยใต้น้ำเกิน 50 เมตร ข่าวแพร่ออกไปอย่างรวดเร็ว
           และเกือบ 6 ปีที่นักดำน้ำจากทั่วโลกเดินทางมาดำน้ำเรือจมที่ยืนตรงนี้
         </p>
 
         <h2>เฟส 2: เรือลอยน้ำ (กุมภาพันธ์ 2544)</h2>
         <p>
           ในเดือนกุมภาพันธ์ 2544 ก๊าซที่ค้ำเรือให้ยืนตรงได้เคลื่อนตัว
-          แต่แทนที่จะจมลงราบ เรือกลับลอยขึ้นมาอีกครั้ง
-          หัวเรือโผล่พ้นผิวน้ำราว 6 เมตร
-          และเรือบรรทุกก๊าซเริ่มลอยตามกระแสน้ำสู่กัมพูชา
+          แต่แทนที่จะจมลงราบ เรือกลับลอยขึ้นมาอีกครั้ง หัวเรือโผล่พ้นผิวน้ำราว 6
+          เมตร และเรือบรรทุกก๊าซเริ่มลอยตามกระแสน้ำสู่กัมพูชา
           นักดำน้ำบนทริปสำรวจไลฟ์อะบอร์ดครั้งสุดท้ายได้พบกับประสบการณ์ที่ไม่อาจเกิดซ้ำ:
           ดำน้ำลงไปใต้ท้ายเรือที่ความลึก 50 เมตร
           และมองขึ้นไปตามความยาวทั้งหมดของกระดูกงูเรือจนถึงผิวน้ำด้านบน
@@ -655,19 +656,16 @@
 
         <h2>เฟส 3: เรือจมปัจจุบัน – หน้าหาดแม่พิม (2544–ปัจจุบัน)</h2>
         <p>
-          เมื่อ PAK-1 ลอยเข้าไปในเส้นทางเดินเรือ
-          กองทัพเรือไทยได้เข้าแทรกแซง
-          เรือลากจูงสองลำพร้อมเรือรบคุ้มกันลากเรือลำดังกล่าวลงใต้
-          หน้าหาดแม่พิม จังหวัดระยอง
-          การจมเรือครั้งนี้ยากกว่าที่คิด:
-          ในครั้งแรกมีระเบิดเพียงจุดเดียวจากสี่จุดที่จุดระเบิด
-          ทำให้ถังก๊าซ LPG หนัก 300 ตันหลุดออกไป
-          และยังทำให้เรือลอยตัวสูงขึ้นชั่วคราว
+          เมื่อ PAK-1 ลอยเข้าไปในเส้นทางเดินเรือ กองทัพเรือไทยได้เข้าแทรกแซง
+          เรือลากจูงสองลำพร้อมเรือรบคุ้มกันลากเรือลำดังกล่าวลงใต้ หน้าหาดแม่พิม
+          จังหวัดระยอง การจมเรือครั้งนี้ยากกว่าที่คิด:
+          ในครั้งแรกมีระเบิดเพียงจุดเดียวจากสี่จุดที่จุดระเบิด ทำให้ถังก๊าซ LPG
+          หนัก 300 ตันหลุดออกไป และยังทำให้เรือลอยตัวสูงขึ้นชั่วคราว
           หลังจากความพยายามอย่างมาก
           ในที่สุดถังทั้งสองถูกถอดออกและเรือจมลงสู่พื้นทะเล
           ซึ่งยังคงอยู่ที่นั่นจนถึงปัจจุบัน
-          บริเวณท้ายเรือยังคงมีร่องรอยของสีขาวดั้งเดิม
-          พิกัด GPS ปัจจุบัน: N 12°05′32.5″ / E 101°40′56.7″
+          บริเวณท้ายเรือยังคงมีร่องรอยของสีขาวดั้งเดิม พิกัด GPS ปัจจุบัน: N
+          12°05′32.5″ / E 101°40′56.7″
         </p>
 
         <h2>สภาพการดำน้ำ</h2>
@@ -683,37 +681,68 @@
             text-align: center;
           "
         >
-          <tr style="background: linear-gradient(to right, #0077b6, #c0c0c0); color: white;">
+          <tr
+            style="
+              background: linear-gradient(to right, #0077b6, #c0c0c0);
+              color: white;
+            "
+          >
             <th style="padding: 12px">พารามิเตอร์</th>
             <th style="padding: 12px">รายละเอียด</th>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>ความลึก – ดาดฟ้าเรือ</strong></td>
-            <td style="padding: 12px; background-color: #f0f4f8">ประมาณ 25 เมตร</td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>ความลึก – ดาดฟ้าเรือ</strong>
+            </td>
+            <td style="padding: 12px; background-color: #f0f4f8">
+              ประมาณ 25 เมตร
+            </td>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>ความลึก – พื้นทะเล</strong></td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>ความลึก – พื้นทะเล</strong>
+            </td>
             <td style="padding: 12px; background-color: #f0f4f8">42 เมตร</td>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>ชั้น Thermocline</strong></td>
-            <td style="padding: 12px; background-color: #f0f4f8">โดยทั่วไป 25–35 เมตร (เปลี่ยนแปลงได้)</td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>ชั้น Thermocline</strong>
+            </td>
+            <td style="padding: 12px; background-color: #f0f4f8">
+              โดยทั่วไป 25–35 เมตร (เปลี่ยนแปลงได้)
+            </td>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>ทัศนวิสัยเหนือ Thermocline</strong></td>
-            <td style="padding: 12px; background-color: #f0f4f8">ถึง 30 เมตรขึ้นไป</td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>ทัศนวิสัยเหนือ Thermocline</strong>
+            </td>
+            <td style="padding: 12px; background-color: #f0f4f8">
+              ถึง 30 เมตรขึ้นไป
+            </td>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>ทัศนวิสัยใต้ Thermocline</strong></td>
-            <td style="padding: 12px; background-color: #f0f4f8">1–3 เมตร (ต้องใช้ไฟฉาย)</td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>ทัศนวิสัยใต้ Thermocline</strong>
+            </td>
+            <td style="padding: 12px; background-color: #f0f4f8">
+              1–3 เมตร (ต้องใช้ไฟฉาย)
+            </td>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>ก๊าซที่แนะนำ</strong></td>
-            <td style="padding: 12px; background-color: #f0f4f8">Nitrox 28 (ถังคู่ + ถังดีโค)</td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>ก๊าซที่แนะนำ</strong>
+            </td>
+            <td style="padding: 12px; background-color: #f0f4f8">
+              Nitrox 28 (ถังคู่ + ถังดีโค)
+            </td>
           </tr>
           <tr>
-            <td style="padding: 12px; background-color: #e0eaf0"><strong>เวลาใต้น้ำ (Bottom time)</strong></td>
-            <td style="padding: 12px; background-color: #f0f4f8">45 นาทีขึ้นไปด้วยถังคู่และดีโค</td>
+            <td style="padding: 12px; background-color: #e0eaf0">
+              <strong>เวลาใต้น้ำ (Bottom time)</strong>
+            </td>
+            <td style="padding: 12px; background-color: #f0f4f8">
+              45 นาทีขึ้นไปด้วยถังคู่และดีโค
+            </td>
           </tr>
         </table>
         <p>
@@ -740,22 +769,7 @@
           </li>
         </ul>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ภาพรวมจุดดำน้ำ
-        </h2>
+        <h2 id="ds-overview">ภาพรวมจุดดำน้ำ</h2>
 
         <table
           style="
@@ -790,34 +804,55 @@
           </tr>
         </table>
 
-        <p>
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0;">
-          <figure style="margin: 0; text-align: center;">
+        <p></p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+          "
+        >
+          <figure style="margin: 0; text-align: center">
             <img
               src="/img/dive-sites/koho_maru_5_by_Steve_Burton.webp"
               alt="แผนที่จุดดำน้ำเรือ PAK-1 (Koho Maru 5) – ภาพร่างแสดงดาดฟ้าและตำแหน่งบนพื้นทะเล"
               width="600"
               height="451"
               loading="lazy"
-              style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;"
+              style="
+                max-width: 100%;
+                height: auto;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              "
             />
-            <figcaption style="font-size: 0.85rem; color: #666; margin-top: 8px;">
+            <figcaption
+              style="font-size: 0.85rem; color: #666; margin-top: 8px"
+            >
               ภาพร่างจุดดำน้ำ – ขอประทานโดย Steve Burton,
               <em>thaiwreckdiver.com</em>
             </figcaption>
           </figure>
-          <figure style="margin: 0; text-align: center;">
+          <figure style="margin: 0; text-align: center">
             <img
               src="/img/dive-sites/koho_maru_5_drawings.webp"
               alt="แบบก่อสร้างดั้งเดิมของเรือบรรทุก็ PAK-1 – มุมมองจากด้านบนและด้านข้าง"
               width="600"
               height="400"
               loading="lazy"
-              style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 4px;"
+              style="
+                max-width: 100%;
+                height: auto;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              "
             />
-            <figcaption style="font-size: 0.85rem; color: #666; margin-top: 8px;">
-              แบบก่อสร้างดั้งเดิมของ PAK-1 –
-              ขอประทานโดย Steve Burton, <em>thaiwreckdiver.com</em>
+            <figcaption
+              style="font-size: 0.85rem; color: #666; margin-top: 8px"
+            >
+              แบบก่อสร้างดั้งเดิมของ PAK-1 – ขอประทานโดย Steve Burton,
+              <em>thaiwreckdiver.com</em>
             </figcaption>
           </figure>
         </div>
@@ -830,7 +865,7 @@
         </p>
 
         <hr />
-        <h2>ระดับนักดำน้ำที่แนะนำสำหรับจุดนี้</h2>
+        <h2 id="ds-level">ระดับนักดำน้ำที่แนะนำสำหรับจุดนี้</h2>
 
         <a
           href="/th/day-trips/fun-dives/"
@@ -892,7 +927,7 @@
         </ul>
         <hr />
 
-        <h2>ขั้นตอนการดำน้ำ</h2>
+        <h2 id="ds-procedures">ขั้นตอนการดำน้ำ</h2>
         <ul>
           <li>
             ตรวจสอบ<strong>สัญญาณมือ</strong>ที่สำคัญในการดำน้ำด้วยถังอากาศ:<br />
@@ -961,24 +996,19 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          จุดดำน้ำเรืออับปางอื่นๆ
-        </h2>
+        <h2>จุดดำน้ำเรืออับปางอื่นๆ</h2>
         <p>
           สำรวจการผจญภัยดำน้ำที่เรืออับปางรอบเกาะช้าง
           เรืออับปางที่มีประวัติศาสตร์เหล่านี้มีการสำรวจใต้น้ำที่น่าสนใจและสิ่งมีชีวิตทางทะเลมากมาย
         </p>
-        <p style="font-size: 0.95rem; line-height: 1.55; color: #333; max-width: 44rem">
+        <p
+          style="
+            font-size: 0.95rem;
+            line-height: 1.55;
+            color: #333;
+            max-width: 44rem;
+          "
+        >
           <strong>พูดตรงๆ:</strong>
           <a href="/th/posts/straight-talk/htms-chang-wreck-penetration/"
             >ศัพท์เรือจม เกาะช้าง (เน้น เรือหลวงช้าง)</a

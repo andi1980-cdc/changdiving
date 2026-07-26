@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -571,14 +577,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>สำรวจหินราบเหนือ – การผจญภัยดำน้ำสุดพิเศษของเกาะช้าง</h1>
-          <p>
-            ดำดิ่งสู่แนวปะการังที่สวยที่สุดของเกาะช้าง – เข้าถึงได้เฉพาะกับเรา
-            ฉลามครีบดำ และหุบเขาใต้ทะเลสุดตื่นตาตื่นใจรอคุณอยู่
-          </p>
-        </div>
       </div>
     </header>
 
@@ -595,21 +593,30 @@
           <a href="/th/day-trips/insurance/">ประกัน</a>
           <a href="/th/faqs/">คำถามที่พบบ่อย</a>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           สำรวจหินราบเหนือ – การผจญภัยดำน้ำสุดพิเศษของเกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          ดำดิ่งสู่แนวปะการังที่สวยที่สุดของเกาะช้าง – เข้าถึงได้เฉพาะกับเรา
+          ฉลามครีบดำ และหุบเขาใต้ทะเลสุดตื่นตาตื่นใจรอคุณอยู่
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">บทนำ</a>
+            <a href="#ds-overview">ภาพรวม</a>
+            <a href="#ds-level">ระดับ</a>
+            <a href="#ds-briefing">บรีฟฟิ่ง</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          แนวปะการังเฉพาะพร้อมฉลามแนวปะการังครีบดำและสวนปะการัง
         </h2>
 
         <p>
@@ -688,22 +695,7 @@
           />
         </div>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ภาพรวมจุดดำน้ำ
-        </h2>
+        <h2 id="ds-overview">ภาพรวมจุดดำน้ำ</h2>
 
         <table
           style="
@@ -763,7 +755,7 @@
         </div>
 
         <hr />
-        <h2>ระดับนักดำน้ำสำหรับจุดนี้</h2>
+        <h2 id="ds-level">ระดับนักดำน้ำสำหรับจุดนี้</h2>
 
         <a
           href="/th/day-trips/fun-dives/"
@@ -788,18 +780,7 @@
         ได้
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           ตัวอย่างการบรีฟฟิ่งสำหรับมืออาชีพ – หินราบเหนือ
         </h2>
 
@@ -1072,9 +1053,13 @@
             แพลตฟอร์มกลางตื้นให้เงื่อนไขที่สมบูรณ์แบบสำหรับสิ่งนี้
           </li>
           <li>
-            <strong><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/">ขีดจำกัดไม่ต้องลดแรงดัน</a>:</strong> สำหรับความลึกนี้ (12-18
-            เมตร) ขีดจำกัดไม่ต้องลดแรงดันของคุณคือประมาณ 50 นาที
-            เราจะรักษาการดำน้ำให้อยู่ในขีดจำกัดเหล่านี้อย่างดี
+            <strong
+              ><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >ขีดจำกัดไม่ต้องลดแรงดัน</a
+              >:</strong
+            >
+            สำหรับความลึกนี้ (12-18 เมตร) ขีดจำกัดไม่ต้องลดแรงดันของคุณคือประมาณ
+            50 นาที เราจะรักษาการดำน้ำให้อยู่ในขีดจำกัดเหล่านี้อย่างดี
           </li>
         </ul>
         <p>
@@ -1573,19 +1558,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          จุดดำน้ำที่คล้ายกัน
-        </h2>
+        <h2>จุดดำน้ำที่คล้ายกัน</h2>
         <p>
           สำรวจจุดดำน้ำแนวปะการังระดับกลางถึงสูงเพิ่มเติมรอบเกาะช้าง
           จุดเหล่านี้มีความลึกและระดับความท้าทายที่คล้ายกัน

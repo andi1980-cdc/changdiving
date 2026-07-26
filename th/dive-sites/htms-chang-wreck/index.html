@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -621,16 +627,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            ดำน้ำที่เรือหลวงช้าง – เรือจมที่ใหญ่ที่สุดในประเทศไทย ณ เกาะช้าง
-          </h1>
-          <p>
-            สำรวจเรือหลวงช้าง อันเลื่องชื่อ – ปะการังเทียมยาว 100 เมตร
-            เต็มไปด้วยชีวิตใต้ทะเลและประวัติศาสตร์ที่รอการค้นพบ
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -646,21 +642,30 @@
           <a href="/th/day-trips/insurance/">ประกัน</a>
           <a href="/th/faqs/">คำถามที่พบบ่อย</a>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           ดำน้ำที่เรือหลวงช้าง – เรือจมที่ใหญ่ที่สุดในประเทศไทย ณ เกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          สำรวจเรือหลวงช้าง อันเลื่องชื่อ – ปะการังเทียมยาว 100 เมตร
+          เต็มไปด้วยชีวิตใต้ทะเลและประวัติศาสตร์ที่รอการค้นพบ
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">บทนำ</a>
+            <a href="#ds-overview">ภาพรวม</a>
+            <a href="#ds-level">ระดับ</a>
+            <a href="#ds-briefing">บรีฟฟิ่ง</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          เรือจมแนวปะการังเทียมที่ใหญ่ที่สุดของไทยที่เกาะช้าง
         </h2>
 
         <p>
@@ -669,8 +674,8 @@
           เมื่อเงามืดขนาดใหญ่ปรากฏขึ้นจากความลึก เมื่อคุณเข้าใกล้มากขึ้น
           รูปร่างก็ชัดเจนขึ้น – คุณกำลังจะสำรวจ
           <strong>เรือหลวงช้าง</strong>
-          เรือจมที่ใหญ่ที่สุดและน่าตื่นตาตื่นใจที่สุดในประเทศไทย ด้วยความยาว
-          100 เมตร นี่ไม่ใช่เรือจมธรรมดาๆ แต่เป็นการดำน้ำที่ต้องทำ (Must-Dive)
+          เรือจมที่ใหญ่ที่สุดและน่าตื่นตาตื่นใจที่สุดในประเทศไทย ด้วยความยาว 100
+          เมตร นี่ไม่ใช่เรือจมธรรมดาๆ แต่เป็นการดำน้ำที่ต้องทำ (Must-Dive)
           ที่รวมประวัติศาสตร์ การผจญภัย
           และการพบเห็นสิ่งมีชีวิตใต้ทะเลที่น่าทึ่งที่สุดที่คุณจะได้ประสบ
         </p>
@@ -690,23 +695,26 @@
           <p>
             สำหรับเรา <strong>เรือหลวงช้าง</strong> คือ
             <strong>สนามฝึกในธรรมชาติ (open water)</strong>
-            หลักสำหรับดำน้ำเทคนิคที่เกาะช้าง: เราจัดหลักสูตร TDI หลักๆ ที่นี่ ได้แก่
+            หลักสำหรับดำน้ำเทคนิคที่เกาะช้าง: เราจัดหลักสูตร TDI หลักๆ ที่นี่
+            ได้แก่
             <a href="/th/courses/advanced-nitrox/">Advanced Nitrox</a>,
             <a href="/th/courses/deco-procedures/">Decompression Procedures</a>
             (ดีโค) และโดยเฉพาะ
-            <a href="/th/courses/advanced-wreck/">Advanced Wreck</a
-            >—ขนาดเรือ ดาดฟ้า และพื้นที่ภายในให้บริบท overhead
-            ของเรือจมตามที่การฝึก penetration ต้องการ ณ เกาะช้าง
-            <strong>เรือหลวงช้าง</strong> คือเรือจมที่เราใช้สำหรับการฝึกในลักษณะนี้
-            ในมุมมองของเราจุดที่เหมาะสมที่สุดบนเกาะ สำหรับงานระดับ Advanced Wreck
+            <a href="/th/courses/advanced-wreck/">Advanced Wreck</a>—ขนาดเรือ
+            ดาดฟ้า และพื้นที่ภายในให้บริบท overhead ของเรือจมตามที่การฝึก
+            penetration ต้องการ ณ เกาะช้าง
+            <strong>เรือหลวงช้าง</strong>
+            คือเรือจมที่เราใช้สำหรับการฝึกในลักษณะนี้
+            ในมุมมองของเราจุดที่เหมาะสมที่สุดบนเกาะ สำหรับงานระดับ Advanced
+            Wreck
           </p>
           <p>
             ด้วยเหตุนี้ เรามองว่าการวางแผน
             <strong>ดำน้ำเทคนิคแบบดีโค</strong>
             ที่ไซต์นี้มีความหมายมากที่สุดเมื่อทำควบคู่กับเป้าหมาย
             <strong>penetration แบบเต็มในเรือจม</strong>—ทีม เชือก
-            และการทำดีโคหลังช่วง overhead จริง การทำ “โปรไฟล์เทค”
-            โดยไม่มีทักษะ overhead ของเรือจม มักเล่าเรื่องไม่ครบบนเรือจมขนาดนี้
+            และการทำดีโคหลังช่วง overhead จริง การทำ “โปรไฟล์เทค” โดยไม่มีทักษะ
+            overhead ของเรือจม มักเล่าเรื่องไม่ครบบนเรือจมขนาดนี้
           </p>
           <p>
             <strong>Penetration แบบเต็ม</strong> (ในลำเรือ เกินขอบเขตสันทนาการ)
@@ -714,12 +722,13 @@
             <strong>การฝึกและใบรับรองเฉพาะ overhead ของเรือจม</strong>—เช่น
             <strong>TDI Advanced Wreck</strong>
             หรือคุณสมบัติที่สถาบันรับรองว่าเทียบเท่าสำหรับการ penetration
-            ในเรือจม คุณสมบัติเทคนิคประเภทอื่นไม่สลับกันได้โดยอัตโนมัติ: แม้นักดำ
+            ในเรือจม คุณสมบัติเทคนิคประเภทอื่นไม่สลับกันได้โดยอัตโนมัติ:
+            แม้นักดำ
             <strong>ถ้ำระดับ full cave</strong> ก็
             <strong>ไม่ถือว่า</strong> มีสิทธิ์ทำ
             <strong>full penetration เรือจม</strong> ตาม
-            <strong>มาตรฐานสถาบัน</strong> ทั่วไป
-            เพราะ overhead ถ้ำกับของเรือจม เป็นสายการฝึกคนละเส้นทาง ดูภาพรวมหลักสูตรและแพ็กเกจได้ที่
+            <strong>มาตรฐานสถาบัน</strong> ทั่วไป เพราะ overhead ถ้ำกับของเรือจม
+            เป็นสายการฝึกคนละเส้นทาง ดูภาพรวมหลักสูตรและแพ็กเกจได้ที่
             <a href="/th/courses/technical-diving-courses/"
               >หน้าหลักสูตรดำน้ำเทคนิค</a
             >
@@ -741,7 +750,8 @@
               <div class="excerpt">
                 <h3>⚙️ เทคที่เกาะช้าง</h3>
                 <p>
-                  พูดตรงๆ เรื่องเส้นทาง TDI และทำไมเรือจมลำนี้ถึงเป็นศูนย์กลางการฝึกเทคที่นี่—เน้นข้อเท็จจริง
+                  พูดตรงๆ เรื่องเส้นทาง TDI
+                  และทำไมเรือจมลำนี้ถึงเป็นศูนย์กลางการฝึกเทคที่นี่—เน้นข้อเท็จจริง
                   ไม่ใช่โฆษณา
                 </p>
               </div>
@@ -761,8 +771,9 @@
               <div class="excerpt">
                 <h3>🎤 เรื่องราวนักดำน้ำเทคนิค</h3>
                 <p>
-                  สัมภาษณ์นักเรียน — Advanced Nitrox, Decompression Procedures และ
-                  Advanced Wreck จากงานฝึกบน <strong>เรือหลวงช้าง</strong> จริงๆ
+                  สัมภาษณ์นักเรียน — Advanced Nitrox, Decompression Procedures
+                  และ Advanced Wreck จากงานฝึกบน
+                  <strong>เรือหลวงช้าง</strong> จริงๆ
                 </p>
               </div>
             </a>
@@ -778,8 +789,9 @@
               <div class="excerpt">
                 <h3>📋 ก่อนสแต็กเทค</h3>
                 <p>
-                  Deep, Wreck และ Nitrox เป็นแพ็กเกจสันทนาการ—พื้นฐานที่พบบ่อยก่อนเข้า
-                  Advanced Nitrox, ดีโค และ Advanced Wreck ที่ใช้เรือจมนี้
+                  Deep, Wreck และ Nitrox
+                  เป็นแพ็กเกจสันทนาการ—พื้นฐานที่พบบ่อยก่อนเข้า Advanced Nitrox,
+                  ดีโค และ Advanced Wreck ที่ใช้เรือจมนี้
                 </p>
               </div>
             </a>
@@ -799,8 +811,8 @@
                 <h3>🚪 การเข้าในโครงสร้างซาก</h3>
                 <p>
                   Swim-Through, การเข้าในโครงสร้างแบบจำกัด (โซนแสง) และแบบเต็ม—
-                  แต่ละระดับหมายความว่าอะไรบนเรือหลวงช้าง และต้องผ่านการฝึกอบรมอะไร
-                  ก่อนดำน้ำเข้าในซาก
+                  แต่ละระดับหมายความว่าอะไรบนเรือหลวงช้าง
+                  และต้องผ่านการฝึกอบรมอะไร ก่อนดำน้ำเข้าในซาก
                 </p>
               </div>
             </a>
@@ -815,12 +827,16 @@
             "
           >
             <strong>ร่วมเรียนและดำน้ำกับเรา</strong>
-            ไม่ว่าจะดำซากเบื้องต้นหรือหลักสูตรเทคนิค—Advanced Nitrox, ดีโค, Advanced
-            Wreck—กับทีมที่ใช้ <strong>เรือหลวงช้าง</strong> เป็นห้องเรียนประจำ
-            ไม่ใช่แค่ฉากถ่ายรูป ถ้าอยาก<strong>ดำน้ำ</strong>จริง คุณไม่ไปถามคนแค่
+            ไม่ว่าจะดำซากเบื้องต้นหรือหลักสูตรเทคนิค—Advanced Nitrox, ดีโค,
+            Advanced Wreck—กับทีมที่ใช้
+            <strong>เรือหลวงช้าง</strong> เป็นห้องเรียนประจำ ไม่ใช่แค่ฉากถ่ายรูป
+            ถ้าอยาก<strong>ดำน้ำ</strong>จริง คุณไม่ไปถามคนแค่
             <strong>ดำผิว</strong>—คุณถาม<strong>นักดำน้ำ</strong> เรามอง
-            <strong>การฝึกดำซากและเทคนิค</strong> แบบเดียวกัน: เรียนกับผู้สอนที่เชี่ยวชาญ
-            ที่สอนบนเรือจมนี้<strong>สัปดาห์แล้วสัปดาห์</strong> ไม่ใช่ทริปวันเดียวแบบทั่วไป
+            <strong>การฝึกดำซากและเทคนิค</strong> แบบเดียวกัน:
+            เรียนกับผู้สอนที่เชี่ยวชาญ ที่สอนบนเรือจมนี้<strong
+              >สัปดาห์แล้วสัปดาห์</strong
+            >
+            ไม่ใช่ทริปวันเดียวแบบทั่วไป
           </p>
           <p
             style="
@@ -832,8 +848,7 @@
           >
             <strong>พูดตรงๆ:</strong>
             <a href="/th/posts/straight-talk/htms-chang-wreck-penetration/"
-              >การว่ายผ่าน การเข้าแบบจำกัดและเต็ม
-              บนเรือหลวงช้าง</a
+              >การว่ายผ่าน การเข้าแบบจำกัดและเต็ม บนเรือหลวงช้าง</a
             >
             — นิยามปิดเหนือ/โซนแสง สำหรับงานลำนี้
           </p>
@@ -941,8 +956,7 @@
           </li>
           <li>
             <strong>สิ่งมีชีวิตใต้น้ำมากมาย:</strong> พบปลาบาราคูด้า
-            ปลากรุ๊ปเปอร์ ปลาค้างคาว ปลาสิงโต
-            และปลาหลายชนิดที่อาศัยอยู่ในเรือจม
+            ปลากรุ๊ปเปอร์ ปลาค้างคาว ปลาสิงโต และปลาหลายชนิดที่อาศัยอยู่ในเรือจม
           </li>
         </ul>
 
@@ -986,22 +1000,7 @@
         </div>
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
-          ภาพรวมจุดดำน้ำ
-        </h2>
+        <h2 id="ds-overview">ภาพรวมจุดดำน้ำ</h2>
 
         <table
           style="
@@ -1064,7 +1063,7 @@
         </div>
         <hr />
 
-        <h2>ระดับนักดำน้ำสำหรับจุดนี้</h2>
+        <h2 id="ds-level">ระดับนักดำน้ำสำหรับจุดนี้</h2>
         <a
           href="/th/day-trips/fun-dives/"
           rel="noopener noreferrer"
@@ -1085,18 +1084,7 @@
         >: ไม่สามารถทำได้
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           ตัวอย่างการบรีฟการดำน้ำสำหรับผู้เชี่ยวชาญ – เรือจม เรือหลวงช้าง
         </h2>
 
@@ -1346,9 +1334,13 @@
             แทนที่จะยึดติดกับสาย
           </li>
           <li>
-            <strong><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/">ขีดจำกัดไม่ต้องลดแรงดัน</a>:</strong> สำหรับความลึกนี้ (23-30
-            เมตร) ขีดจำกัดไม่ต้องลดแรงดันของคุณคือประมาณ 20 นาที
-            เราจะรักษาการดำน้ำให้อยู่ในขีดจำกัดเหล่านี้อย่างดี
+            <strong
+              ><a href="/th/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >ขีดจำกัดไม่ต้องลดแรงดัน</a
+              >:</strong
+            >
+            สำหรับความลึกนี้ (23-30 เมตร) ขีดจำกัดไม่ต้องลดแรงดันของคุณคือประมาณ
+            20 นาที เราจะรักษาการดำน้ำให้อยู่ในขีดจำกัดเหล่านี้อย่างดี
           </li>
         </ul>
         <p>

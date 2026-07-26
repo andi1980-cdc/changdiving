@@ -339,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -581,14 +587,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>สำรวจโขดหินกระเดื่อง – จุดดำน้ำลึกที่งดงามของเกาะช้าง</h1>
-          <p>
-            โขดหินลึก 30 เมตร พบปลากระเบนราหู ปลาทูยักษ์ ปลากระโทงแทง
-            และโพรงหินใต้น้ำ – เหมาะสำหรับนักดำน้ำขั้นสูงเท่านั้น
-          </p>
-        </div>
       </div>
     </header>
 
@@ -605,21 +603,30 @@
           <a href="/th/day-trips/insurance/">ประกัน</a>
           <a href="/th/faqs/">คำถามที่พบบ่อย</a>
         </nav>
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            line-height: 1.4;
-            padding-top: 0.12em;
-            padding-bottom: 0.08em;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           สำรวจโขดหินกระเดื่อง – จุดดำน้ำลึกที่งดงามของเกาะช้าง
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          โขดหินลึก 30 เมตร พบปลากระเบนราหู ปลาทูยักษ์ ปลากระโทงแทง
+          และโพรงหินใต้น้ำ – เหมาะสำหรับนักดำน้ำขั้นสูงเท่านั้น
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">บทนำ</a>
+            <a href="#ds-overview">ภาพรวม</a>
+            <a href="#ds-level">ระดับ</a>
+            <a href="#ds-briefing">บรีฟฟิ่ง</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          ยอดหินลึกพร้อมกระเบนนก ปลาเก๋า และปลาน้ำลึกขนาดใหญ่
         </h2>
 
         <p>
@@ -715,7 +722,7 @@
           />
         </div>
 
-        <h2>ภาพรวมจุดดำน้ำ</h2>
+        <h2 id="ds-overview">ภาพรวมจุดดำน้ำ</h2>
         <table>
           <tr>
             <th>ความลึกสูงสุด</th>
@@ -743,7 +750,7 @@
 
         <hr />
 
-        <h2>ระดับนักดำน้ำที่เหมาะสม</h2>
+        <h2 id="ds-level">ระดับนักดำน้ำที่เหมาะสม</h2>
 
         <a
           href="/th/day-trips/fun-dives/"
@@ -766,18 +773,7 @@
         >ได้: ไม่
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           ตัวอย่างการบรีฟสำหรับผู้เชี่ยวชาญด้านการดำน้ำ – โขดหินกระเดื่อง
         </h2>
 
@@ -979,9 +975,9 @@
           <strong>จุดกลับ:</strong> ที่ <strong>130 บาร์</strong> (หรือ 1900
           PSI) ที่ความลึก 30 ม. อากาศหมดเร็ว – ตรวจสอบบ่อย!
           <strong>การหยุดนิรภัย:</strong> 3 นาทีที่ 5 เมตร แบบลอย
-          <strong>ขีดจำกัดเวลาที่ไม่มี:</strong> ที่ 30 เมตร สั้น – เราจะวางแผนตามสภาพ
-          <strong>กระแสน้ำ:</strong> หากพบ อาจต้องปรับเส้นทาง –
-          อยู่ด้วยกัน!
+          <strong>ขีดจำกัดเวลาที่ไม่มี:</strong> ที่ 30 เมตร สั้น –
+          เราจะวางแผนตามสภาพ <strong>กระแสน้ำ:</strong> หากพบ อาจต้องปรับเส้นทาง
+          – อยู่ด้วยกัน!
         </p>
         <p>
           <strong>จำไว้:</strong> กฎที่สำคัญที่สุดในการดำน้ำคืออย่ากลั้นหายใจ
@@ -1221,19 +1217,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          จุดดำน้ำที่คล้ายกัน
-        </h2>
+        <h2>จุดดำน้ำที่คล้ายกัน</h2>
         <p>
           สำรวจจุดดำน้ำแนวปะการังขั้นสูงเพิ่มเติมรอบเกาะช้าง
           จุดเหล่านี้มีสภาพที่ท้าทายสำหรับนักดำน้ำที่มีประสบการณ์

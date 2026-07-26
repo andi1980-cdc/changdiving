@@ -77,6 +77,28 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 | `/posts/straight-talk/` (EN/DE/TH)                  | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/posts/tips-and-tricks/` (EN/DE/TH)                | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
 | `/posts/koh-chang-diving-travel-guides/` (EN/DE/TH) | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+| `/dive-sites/` (EN/DE/TH)                           | ✅ H1 + Teaser unter Hero, **kein** Jump-Menü |
+
+### Dive Sites (`dive-site-box`, Jump max. **4**)
+
+| Seite                                                         | Status | Jump-Punkte | Hinweis                                                    |
+| ------------------------------------------------------------- | ------ | ----------- | ---------------------------------------------------------- |
+| `dive-sites/blueberry-hill` (EN/DE/TH)                        | ✅     | **4**       | Intro · Overview · Level · Briefing; `#ccc` + critical-css |
+| `dive-sites/dive-site-map-koh-chang` (EN/DE/TH)               | ✅     | **2**       | Intro · Map (`#kc-map-title`)                              |
+| `dive-sites/hin-luk-bat` (EN/DE/TH)                           | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/hin-pray-nam` (EN/DE/TH)                          | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/hin-raab-north` (EN/DE/TH)                        | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/hin-raab-south` (EN/DE/TH)                        | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/hin-rua-tek` (EN/DE/TH)                           | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/hin-sam-sao` (EN/DE/TH)                           | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/htms-chang-wreck` (EN/DE/TH)                      | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/koh-rang-pinnacle` (EN/DE/TH)                     | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/koho-maru-5` (EN/DE/TH)                           | ✅     | **4**       | Story · Overview · Level · Procedures                      |
+| `dive-sites/phutthayotfa-chulalok-wreck-koh-chang` (EN/DE/TH) | ✅     | **4**       | Intro · Details · Status · Alternatives                    |
+| `dive-sites/secret-reef` (EN/DE/TH)                           | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+| `dive-sites/t11-wreck` (EN/DE/TH)                             | ✅     | **4**       | Intro · Overview · Level · Briefing                        |
+
+Jump-Bar wie Posts: Inline `border-bottom: 1px solid #ccc` + `.dive-site-box .page-jump-nav` in Page-`critical-css` und `style.css` / `style.min.css`.
 
 ### Blog-Posts (`posts-box`, mit Jump-Menü)
 
@@ -176,7 +198,7 @@ Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
 
 Gleiche Header-Logik wie Produktseiten, **aber nie `page-jump-nav`**.
 
-Beispiele: `/day-trips/`, `/courses/`, `/faqs/`, `/posts/`, später `/dive-sites/`, weitere Sub-Hubs …
+Beispiele: `/day-trips/`, `/courses/`, `/faqs/`, `/posts/`, `/dive-sites/`, weitere Sub-Hubs …
 
 ```
 <header> … hero picture (kein .hero-text) … </header>
@@ -554,8 +576,7 @@ Weitere Tech-Produkte (`advanced-nitrox`, `deco-procedures`, `advanced-wreck`, `
 
 ## Nächster Rollout (offen)
 
-**Kategorie-Hubs** (H1 + Teaser, **ohne** Jump-Menü):  
-`/dive-sites/` – gleiches Header-Muster wie die Post-Hubs (H1 + Teaser, ohne Jump-Menü).
+**Dive Sites:** Hub + alle Spot-Seiten ✅ (Jump max. 4, `dive-site-box`, Linie `#ccc`).
 
 **Blog-Posts** (`posts-box`, H1 + Teaser wie Kurse, Jump individuell, Jump-Linie `#ccc`):  
 weitere Artikel unter `/posts/…` nach dem Muster von `marine-life` / bestehenden Knowledge-Posts.

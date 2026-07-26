@@ -339,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -570,15 +576,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Erkunde das T11 Wrack – Koh Changs legendärer Wracktauchplatz</h1>
-          <p>
-            Tauche ein in die Geschichte am T11 – ein versenktes
-            Patrouillenboot, das heute ein künstliches Riff und ein
-            Top-Wrackspot ist.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -596,18 +593,30 @@
           <a href="/de/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
+        <h1 style="margin: 20px 0 8px; text-align: center">
+          Erkunde das T11 Wrack – Koh Changs legendärer Wracktauchplatz
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Tauche ein in die Geschichte am T11 – ein versenktes Patrouillenboot,
+          das heute ein künstliches Riff und ein Top-Wrackspot ist.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
         >
-          Entdecke das T11 Wrack – Koh Changs legendärer Wracktauchplatz
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Überblick</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Ein versenktes Patrouillenboot als künstliches Riff
         </h2>
 
         <p>
@@ -667,7 +676,7 @@
           </li>
         </ul>
 
-        <h2>Überblick Tauchplatz</h2>
+        <h2 id="ds-overview">Überblick Tauchplatz</h2>
         <table>
           <tr>
             <th>Maximale Tiefe</th>
@@ -726,7 +735,7 @@
         </div>
         <hr />
 
-        <h2>Zertifizierungslevel für diesen Tauchplatz</h2>
+        <h2 id="ds-level">Zertifizierungslevel für diesen Tauchplatz</h2>
         <a
           href="/de/day-trips/fun-dives/"
           rel="noopener noreferrer"
@@ -747,18 +756,7 @@
         >: Nicht möglich
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Tauchbriefing-Vorlage für Tauchprofis – T11 Wrack
         </h2>
 
@@ -1023,8 +1021,13 @@
             Mooring-Leine vor dem Auftauchen durch.
           </li>
           <li>
-            <strong><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">Nullzeitgrenzen</a>:</strong> Bei 16 Metern Tiefe halten wir den
-            Tauchgang gut innerhalb sicherer Grenzen.
+            <strong
+              ><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >Nullzeitgrenzen</a
+              >:</strong
+            >
+            Bei 16 Metern Tiefe halten wir den Tauchgang gut innerhalb sicherer
+            Grenzen.
           </li>
         </ul>
         <p>
@@ -1537,19 +1540,7 @@
         <hr />
 
         <!-- Related Dive Sites Section -->
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Weitere Wracktauchgänge
-        </h2>
+        <h2>Weitere Wracktauchgänge</h2>
         <p>
           Entdecke weitere Wracktauch-Abenteuer rund um Koh Chang. Diese
           historischen Wracks bieten faszinierende Unterwasser-Erkundungen und

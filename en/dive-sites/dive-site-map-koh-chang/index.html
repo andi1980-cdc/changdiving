@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dive Site Map of Koh Chang | Explore the Best Dive Spots</title>
     <meta
@@ -337,6 +338,12 @@
           aspect-ratio: 3 / 2;
           object-fit: cover;
         }
+      }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
       }
     </style>
     <link
@@ -793,14 +800,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Dive Site Map of Koh Chang</h1>
-          <p>
-            Find the best dive sites in Koh Chang – wrecks, reefs & pinnacles
-            for every experience level. View on our interactive map.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -817,18 +816,28 @@
       <nav id="breadcrumb" class="breadcrumb"></nav>
 
       <div class="dive-site-box">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Dive Site Map of Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Find the best dive sites in Koh Chang – wrecks, reefs & pinnacles for
+          every experience level. View on our interactive map.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#kc-map-title">Map</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Wrecks, reefs, and pinnacles – explore Koh Chang on the map
         </h2>
 
         <p>
@@ -906,7 +915,9 @@
             <li>
               <a href="/en/dive-sites/koh-rang-pinnacle/">Koh Rang Pinnacle</a>
             </li>
-            <li><a href="/en/dive-sites/koho-maru-5/">Koho Maru 5 (PAK-1)</a></li>
+            <li>
+              <a href="/en/dive-sites/koho-maru-5/">Koho Maru 5 (PAK-1)</a>
+            </li>
           </ul>
         </section>
 

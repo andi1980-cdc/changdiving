@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="de">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       Blueberry Hill – Koh Changs Doppel-Pinnacle Tauchplatz mit
@@ -339,6 +340,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -570,16 +577,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Entdecke Blueberry Hill – Koh Changs Doppel-Pinnacle Paradies</h1>
-          <p>
-            Zwei spektakuläre Unterwasser-Pinnacles mit Canyons, lebendigen
-            Geweihkorallen und tropischen Fischschwärmen – perfekt für Anfänger
-            und Fun Diver auf der Suche nach einem unvergesslichen
-            Unterwasser-Abenteuer.
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -596,18 +593,32 @@
           <a href="/de/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Entdecke Blueberry Hill – Koh Changs Doppel-Pinnacle Paradies
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Zwei spektakuläre Unterwasser-Pinnacles mit Canyons, lebendigen
+          Geweihkorallen und tropischen Fischschwärmen – perfekt für Anfänger
+          und Fun Diver auf der Suche nach einem unvergesslichen
+          Unterwasser-Abenteuer.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Überblick</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Doppel-Pinnacles, Canyons und Geweihkorallen-Gärten
         </h2>
 
         <p>
@@ -698,7 +709,7 @@
           dich! 🌊🪸
         </p>
 
-        <h2>Tauchplatz-Übersicht</h2>
+        <h2 id="ds-overview">Tauchplatz-Übersicht</h2>
         <table>
           <tr>
             <th>Max. Tiefe</th>
@@ -760,7 +771,7 @@
         </div>
         <hr />
 
-        <h2>Taucher-Level für diesen Tauchplatz.</h2>
+        <h2 id="ds-level">Taucher-Level für diesen Tauchplatz.</h2>
 
         <a
           href="/de/day-trips/fun-dives/"
@@ -785,18 +796,7 @@
 
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Dive Briefing Beispiel für Tauchprofis – Blueberry Hill
         </h2>
 
@@ -1100,10 +1100,14 @@
             Erfahrung als an einer Leine zu hängen!
           </li>
           <li>
-            <strong><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">Nullzeit-Grenzen</a>:</strong> Für diesen Tiefenbereich (8-15
-            Meter) ist deine Nullzeit-Grenze sehr großzügig. Wir halten den
-            Tauchgang gut innerhalb sicherer Grenzen, verbringen typischerweise
-            die meiste Zeit um 8-12 Meter.
+            <strong
+              ><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >Nullzeit-Grenzen</a
+              >:</strong
+            >
+            Für diesen Tiefenbereich (8-15 Meter) ist deine Nullzeit-Grenze sehr
+            großzügig. Wir halten den Tauchgang gut innerhalb sicherer Grenzen,
+            verbringen typischerweise die meiste Zeit um 8-12 Meter.
           </li>
         </ul>
         <p>
@@ -1641,19 +1645,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Ähnliche Tauchplätze
-        </h2>
+        <h2>Ähnliche Tauchplätze</h2>
         <p>
           Erkunde mehr anfängerfreundliche Riff-Tauchgänge rund um Koh Chang.
           Diese Plätze bieten ähnliche Tiefen und Schwierigkeitsgrade, perfekt

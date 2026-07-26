@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -618,16 +624,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Tauche am HTMS Chang – Thailands größtes Schiffswrack bei Koh Chang
-          </h1>
-          <p>
-            Erkunde das legendäre Wrack der HTMS Chang – ein 100 Meter langes
-            künstliches Riff voller Meeresleben und Geschichte.
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -644,18 +640,30 @@
           <a href="/de/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Tauche am HTMS Chang – Thailands größtes Schiffswrack bei Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Erkunde das legendäre Wrack der HTMS Chang – ein 100 Meter langes
+          künstliches Riff voller Meeresleben und Geschichte.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Überblick</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Thailands größtes künstliches Riff-Wrack bei Koh Chang
         </h2>
 
         <p>
@@ -691,30 +699,36 @@
             <a href="/de/courses/advanced-wreck/">Advanced Wreck</a>—Größe,
             Decks und Innenräume liefern den wrackspezifischen Overhead, den
             realistische Penetrations-Drills brauchen. Auf Koh Chang ist das
-            <strong>HTMS Chang</strong> das Wrack, auf dem wir das trainieren: für
-            uns die klar passende Penetrations-Trainingsstätte vor Ort für
+            <strong>HTMS Chang</strong> das Wrack, auf dem wir das trainieren:
+            für uns die klar passende Penetrations-Trainingsstätte vor Ort für
             Advanced-Wreck-Niveau.
           </p>
           <p>
-            Deshalb macht für uns <strong>geplante technische Dekompression</strong>
-            genau hier am meisten Sinn <strong>zusammen mit echter Voll-Penetration</strong>
-            im Wrack: Teamabläufe, Leinenarbeit und gestaffelte Dekompression nach
-            echten Overhead-Segmenten. Ein reines „Tech“-Profil ohne
+            Deshalb macht für uns
+            <strong>geplante technische Dekompression</strong> genau hier am
+            meisten Sinn <strong>zusammen mit echter Voll-Penetration</strong>
+            im Wrack: Teamabläufe, Leinenarbeit und gestaffelte Dekompression
+            nach echten Overhead-Segmenten. Ein reines „Tech“-Profil ohne
             Wrack-Overhead-Kompetenz bleibt auf einem so komplexen Schiff oft
             inhaltsleer.
           </p>
           <p>
             <strong>Vollständige Penetration</strong> (im Rumpf, jenseits
-            sporttaucherischer Grenzen) setzt <strong>wrackspezifisches
-            Overhead-Training und Zertifizierung</strong> voraus—typischerweise
-            <strong>TDI Advanced Wreck</strong> oder ein vom Verband anerkanntes
-            direktes Äquivalent zur Wrack-Penetration. Andere Tech-Hintergründe ersetzen
-            das nicht automatisch: Selbst <strong>Full-Cave</strong>-Qualifikationen
-            gelten unter üblichen <strong>Agentur-Standards</strong> <strong>nicht</strong>
-            als Berechtigung für Wrack-<strong>Full Penetration</strong>, weil Höhle
+            sporttaucherischer Grenzen) setzt
+            <strong
+              >wrackspezifisches Overhead-Training und Zertifizierung</strong
+            >
+            voraus—typischerweise <strong>TDI Advanced Wreck</strong> oder ein
+            vom Verband anerkanntes direktes Äquivalent zur Wrack-Penetration.
+            Andere Tech-Hintergründe ersetzen das nicht automatisch: Selbst
+            <strong>Full-Cave</strong>-Qualifikationen gelten unter üblichen
+            <strong>Agentur-Standards</strong> <strong>nicht</strong> als
+            Berechtigung für Wrack-<strong>Full Penetration</strong>, weil Höhle
             und Wrack getrennte Overhead-Pfade sind. Unser Überblick
-            <a href="/de/courses/technical-diving-courses/">Technical Diving
-            Kurse</a> zeigt, wie die Module sinnvoll kombiniert werden.
+            <a href="/de/courses/technical-diving-courses/"
+              >Technical Diving Kurse</a
+            >
+            zeigt, wie die Module sinnvoll kombiniert werden.
           </p>
 
           <div class="row htms-chang-tech-resources" style="margin-top: 18px">
@@ -733,7 +747,8 @@
                 <h3>⚙️ Tec auf Koh Chang</h3>
                 <p>
                   Klartext zu TDI-Pfaden und warum dieses Wrack hier das
-                  technische Training strukturiert—sachlich, ohne Broschüren-Sound.
+                  technische Training strukturiert—sachlich, ohne
+                  Broschüren-Sound.
                 </p>
               </div>
             </a>
@@ -752,8 +767,8 @@
               <div class="excerpt">
                 <h3>🎤 Interviews zum Tech-Training</h3>
                 <p>
-                  Schülerinterviews zu Advanced Nitrox, Dekompressionsverfahren und
-                  Advanced Wreck—von Tauchern, die Kursblöcke auf dem
+                  Schülerinterviews zu Advanced Nitrox, Dekompressionsverfahren
+                  und Advanced Wreck—von Tauchern, die Kursblöcke auf dem
                   <strong>HTMS Chang</strong> gelaufen haben.
                 </p>
               </div>
@@ -770,9 +785,9 @@
               <div class="excerpt">
                 <h3>📋 Vor dem Tech-Stack</h3>
                 <p>
-                  Deep, Wrack und Nitrox als sporttaucherisches Paket—typische Basis,
-                  bevor Advanced Nitrox, Dekompression und Advanced Wreck hier auf
-                  dem Wrack ansetzen.
+                  Deep, Wrack und Nitrox als sporttaucherisches Paket—typische
+                  Basis, bevor Advanced Nitrox, Dekompression und Advanced Wreck
+                  hier auf dem Wrack ansetzen.
                 </p>
               </div>
             </a>
@@ -792,8 +807,8 @@
                 <h3>🚪 Penetration erklärt</h3>
                 <p>
                   Swim-Through, Limited Penetration und Full Overhead—was jede
-                  Stufe auf der HTMS Chang bedeutet und welche Ausbildung
-                  nötig ist, bevor man ins Wrack einsteigt.
+                  Stufe auf der HTMS Chang bedeutet und welche Ausbildung nötig
+                  ist, bevor man ins Wrack einsteigt.
                 </p>
               </div>
             </a>
@@ -807,14 +822,16 @@
               line-height: 1.55;
             "
           >
-            <strong>Komm zu uns</strong> für sporttaucherische Wracktauchgänge oder
-            technische Programme—Advanced Nitrox, Dekompression, Advanced Wreck—mit
-            einem Team, das das <strong>HTMS Chang</strong> als festen Trainingsort
-            kennt, nicht als einmalige Kulisse. Wenn du <strong>tauchen</strong>
-            willst, fragst du nicht den <strong>Schnorchler</strong>, sondern den
-            <strong>Taucher</strong>—genauso verstehen wir <strong>Wrack- und
-            Overhead-Ausbildung</strong>: mit Profis, die auf diesem Wrack
-            unterrichten und diese Programme hier <strong>Woche für Woche</strong>
+            <strong>Komm zu uns</strong> für sporttaucherische Wracktauchgänge
+            oder technische Programme—Advanced Nitrox, Dekompression, Advanced
+            Wreck—mit einem Team, das das <strong>HTMS Chang</strong> als festen
+            Trainingsort kennt, nicht als einmalige Kulisse. Wenn du
+            <strong>tauchen</strong> willst, fragst du nicht den
+            <strong>Schnorchler</strong>, sondern den
+            <strong>Taucher</strong>—genauso verstehen wir
+            <strong>Wrack- und Overhead-Ausbildung</strong>: mit Profis, die auf
+            diesem Wrack unterrichten und diese Programme hier
+            <strong>Woche für Woche</strong>
             fahren, nicht als beliebigen Tagesausflug.
           </p>
         </div>
@@ -962,19 +979,7 @@
         </div>
 
         <hr />
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Tauchplatz Übersicht
-        </h2>
+        <h2 id="ds-overview">Tauchplatz Übersicht</h2>
 
         <table
           style="
@@ -1049,7 +1054,7 @@
         </div>
 
         <hr />
-        <h2>Tauchlevel für diesen Spot</h2>
+        <h2 id="ds-level">Tauchlevel für diesen Spot</h2>
         <a
           href="/de/day-trips/fun-dives/"
           rel="noopener noreferrer"
@@ -1071,18 +1076,7 @@
         >: nicht möglich
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Tauchbriefing-Beispiel für Tauchprofis – HTMS Chang Wrack
         </h2>
 
@@ -1358,9 +1352,13 @@
             Meter Tiefe beibehalten, anstatt uns an einer Leine festzuhalten.
           </li>
           <li>
-            <strong><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">Nullzeitgrenzen</a>:</strong> Für diese Tiefe (23-30 Meter)
-            beträgt deine Nullzeitgrenze etwa 20 Minuten. Wir halten den
-            Tauchgang gut innerhalb dieser Grenzen.
+            <strong
+              ><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >Nullzeitgrenzen</a
+              >:</strong
+            >
+            Für diese Tiefe (23-30 Meter) beträgt deine Nullzeitgrenze etwa 20
+            Minuten. Wir halten den Tauchgang gut innerhalb dieser Grenzen.
           </li>
         </ul>
         <p>
@@ -1883,19 +1881,7 @@
         <hr />
 
         <!-- Related Dive Sites Section -->
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Weitere Wracktauchgänge
-        </h2>
+        <h2>Weitere Wracktauchgänge</h2>
         <p>
           Entdecke weitere Wracktauch-Abenteuer rund um Koh Chang. Diese
           historischen Wracks bieten faszinierende Unterwasser-Erkundungen und

@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -568,15 +574,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Erkunde Hin Raab North – Koh Changs exklusives Tauchabenteuer</h1>
-          <p>
-            Erlebe eines der besten Korallenriffe Koh Changs – exklusiver
-            Zugang, Schwarzspitzen-Riffhaie & beeindruckende Canyon-Formationen
-            erwarten dich.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -594,18 +591,31 @@
           <a href="/de/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Erkunde Hin Raab North – Koh Changs exklusives Tauchabenteuer
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Erlebe eines der besten Korallenriffe Koh Changs – exklusiver Zugang,
+          Schwarzspitzen-Riffhaie & beeindruckende Canyon-Formationen erwarten
+          dich.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Überblick</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Exklusiver Riffzugang mit Schwarzspitzen-Riffhaien und Korallengärten
         </h2>
 
         <p>
@@ -689,19 +699,7 @@
           />
         </div>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 28px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Tauchplatz Übersicht
-        </h2>
+        <h2 id="ds-overview">Tauchplatz Übersicht</h2>
 
         <table
           style="
@@ -763,7 +761,7 @@
         </div>
 
         <hr />
-        <h2>Tauchlevel für diesen Tauchplatz</h2>
+        <h2 id="ds-level">Tauchlevel für diesen Tauchplatz</h2>
 
         <a
           href="/de/day-trips/fun-dives/"
@@ -787,18 +785,7 @@
         möglich: Ja
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Tauchbriefing-Beispiel für Tauchprofis – Hin Raab North
         </h2>
 
@@ -1095,9 +1082,13 @@
             flache mittlere Plattform bietet perfekte Bedingungen dafür.
           </li>
           <li>
-            <strong><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">Nullzeitgrenzen</a>:</strong> Für diese Tiefe (12-18 Meter)
-            beträgt deine Nullzeitgrenze etwa 50 Minuten. Wir halten den
-            Tauchgang gut innerhalb dieser Grenzen.
+            <strong
+              ><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >Nullzeitgrenzen</a
+              >:</strong
+            >
+            Für diese Tiefe (12-18 Meter) beträgt deine Nullzeitgrenze etwa 50
+            Minuten. Wir halten den Tauchgang gut innerhalb dieser Grenzen.
           </li>
         </ul>
         <p>
@@ -1619,19 +1610,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Ähnliche Tauchplätze
-        </h2>
+        <h2>Ähnliche Tauchplätze</h2>
         <p>
           Erkunde weitere fortgeschrittene Rifftauchgänge rund um Koh Chang.
           Diese Plätze bieten ähnliche Tiefen und Herausforderungen.

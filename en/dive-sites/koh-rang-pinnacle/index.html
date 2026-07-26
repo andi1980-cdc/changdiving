@@ -339,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -578,16 +584,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Discover Koh Rang Pinnacle – Koh Chang's Spectacular Deep Pinnacle
-          </h1>
-          <p>
-            Spectacular pinnacle at 30m with eagle rays, giant trevallies,
-            sailfish, and thrilling swim-throughs – advanced divers only.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -607,18 +603,30 @@
           <a href="/en/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Discover Koh Rang Pinnacle – Koh Chang's Spectacular Deep Pinnacle
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Spectacular pinnacle at 30m with eagle rays, giant trevallies,
+          sailfish, and thrilling swim-throughs – advanced divers only.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="On this page"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">On this page</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Overview</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          A deep pinnacle with eagle rays, trevallies, and big pelagics
         </h2>
 
         <p>
@@ -718,7 +726,7 @@
           />
         </div>
 
-        <h2>Dive Site Overview</h2>
+        <h2 id="ds-overview">Dive Site Overview</h2>
         <table>
           <tr>
             <th>Max Depth</th>
@@ -746,7 +754,7 @@
 
         <hr />
 
-        <h2>Diver Level for this dive site.</h2>
+        <h2 id="ds-level">Diver Level for this dive site.</h2>
 
         <a
           href="/en/day-trips/fun-dives/"
@@ -770,18 +778,7 @@
         possibility: No
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Dive Briefing Example for Dive Professionals – Koh Rang Pinnacle
         </h2>
 
@@ -1046,9 +1043,13 @@
             holding onto a line.
           </li>
           <li>
-            <strong><a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/">No-Decompression Limits</a>:</strong> At 30 meters, your
-            no-decompression limit is short. We'll stay within safe limits and
-            plan the dive accordingly.
+            <strong
+              ><a href="/en/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >No-Decompression Limits</a
+              >:</strong
+            >
+            At 30 meters, your no-decompression limit is short. We'll stay
+            within safe limits and plan the dive accordingly.
           </li>
           <li>
             <strong>Current:</strong> If we encounter current, we may need to
@@ -1571,19 +1572,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Similar Dive Sites
-        </h2>
+        <h2>Similar Dive Sites</h2>
         <p>
           Explore more advanced dive sites around Koh Chang. These sites offer
           challenging depths and conditions for experienced divers.

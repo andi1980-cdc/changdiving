@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="th">
-  <head>    <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
       บลูเบอร์รี่ฮิลล์ – จุดดำน้ำสองยอดหินแห่งเกาะช้างพร้อมหุบเขาใต้น้ำ
@@ -338,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -569,15 +576,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>ค้นพบบลูเบอร์รี่ฮิลล์ – สวรรค์สองยอดหินใต้น้ำแห่งเกาะช้าง</h1>
-          <p>
-            สองยอดหินใต้น้ำที่น่าตื่นตาตื่นใจพร้อมหุบเขาใต้น้ำ
-            ปะการังเขากวางที่สดใส และฝูงปลาเขตร้อน – สมบูรณ์แบบสำหรับผู้เริ่มต้น
-            และนักฟันไดฟ์ที่กำลังมองหาการผจญภัยใต้น้ำที่ไม่รู้ลืม
-          </p>
-        </div>
       </div>
     </header>
     <main>
@@ -594,19 +592,30 @@
           <a href="/th/faqs/">คำถามที่พบบ่อย</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           ค้นพบบลูเบอร์รี่ฮิลล์ – สวรรค์สองยอดหินใต้น้ำแห่งเกาะช้าง
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          สองยอดหินใต้น้ำที่น่าตื่นตาตื่นใจพร้อมหุบเขาใต้น้ำ
+          ปะการังเขากวางที่สดใส และฝูงปลาเขตร้อน – สมบูรณ์แบบสำหรับผู้เริ่มต้น
+          และนักฟันไดฟ์ที่กำลังมองหาการผจญภัยใต้น้ำที่ไม่รู้ลืม
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="ในหน้านี้"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">ในหน้านี้</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">บทนำ</a>
+            <a href="#ds-overview">ภาพรวม</a>
+            <a href="#ds-level">ระดับ</a>
+            <a href="#ds-briefing">บรีฟฟิ่ง</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">สองยอดหิน หุบเขาปะการัง และเส้นทางฟันไดฟ์ที่ง่าย</h2>
 
         <p>
           ลองจินตนาการถึงการดำลงไปในน้ำใสราวคริสตัลสู่
@@ -691,7 +700,7 @@
           ใต้น้ำคู่แฝดเหล่านี้แล้วหรือยัง? บลูเบอร์รี่ฮิลล์กำลังรอคุณอยู่! 🌊🪸
         </p>
 
-        <h2>ภาพรวมจุดดำน้ำ</h2>
+        <h2 id="ds-overview">ภาพรวมจุดดำน้ำ</h2>
         <table>
           <tr>
             <th>ความลึกสูงสุด</th>
@@ -753,7 +762,7 @@
         </div>
         <hr />
 
-        <h2>ระดับนักดำน้ำสำหรับจุดดำน้ำนี้</h2>
+        <h2 id="ds-level">ระดับนักดำน้ำสำหรับจุดดำน้ำนี้</h2>
 
         <a
           href="/th/day-trips/fun-dives/"
@@ -778,18 +787,7 @@
 
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           ตัวอย่างการบรีฟฟิ่งการดำน้ำสำหรับมืออาชีพ – บลูเบอร์รี่ฮิลล์
         </h2>
 
@@ -1607,19 +1605,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          จุดดำน้ำที่คล้ายกัน
-        </h2>
+        <h2>จุดดำน้ำที่คล้ายกัน</h2>
         <p>
           สำรวจการดำน้ำแนวปะการังที่เหมาะกับผู้เริ่มต้นมากขึ้นรอบๆ เกาะช้าง
           จุดเหล่านี้ เสนอความลึกและระดับความยากที่คล้ายกัน

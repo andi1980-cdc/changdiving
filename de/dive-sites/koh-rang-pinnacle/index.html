@@ -339,6 +339,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -578,17 +584,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Entdecke Koh Rang Pinnacle – Koh Changs spektakulärer Tief-Pinnacle
-          </h1>
-          <p>
-            Spektakulärer Pinnacle bis 30m mit Adlerrochen, riesigen Trevallies,
-            Segelfischen und spannenden Swim-Throughs – nur für
-            Fortgeschrittene.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -606,18 +601,30 @@
           <a href="/de/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Entdecke Koh Rang Pinnacle – Koh Changs spektakulärer Tief-Pinnacle
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Spektakulärer Pinnacle bis 30m mit Adlerrochen, riesigen Trevallies,
+          Segelfischen und spannenden Swim-Throughs – nur für Fortgeschrittene.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Überblick</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Ein tiefer Felsturm mit Adlerrochen, Stachelmakrelen und Großfischen
         </h2>
 
         <p>
@@ -720,7 +727,7 @@
           />
         </div>
 
-        <h2>Tauchplatz-Übersicht</h2>
+        <h2 id="ds-overview">Tauchplatz-Übersicht</h2>
         <table>
           <tr>
             <th>Maximale Tiefe</th>
@@ -747,7 +754,7 @@
 
         <hr />
 
-        <h2>Erforderliches Tauchlevel für diesen Spot</h2>
+        <h2 id="ds-level">Erforderliches Tauchlevel für diesen Spot</h2>
 
         <a
           href="/de/day-trips/fun-dives/"
@@ -771,18 +778,7 @@
         möglich: Nein
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Tauchbriefing-Beispiel für Tauchprofis – Koh Rang Pinnacle
         </h2>
 
@@ -860,8 +856,10 @@
             nach pelagischen Arten. Der
             <strong>Swim-Through auf 12 Metern</strong>
             ist optional – nur für kleinere Taucher. Dann arbeiten wir uns um
-            den Pinnacle herum, bleiben innerhalb der <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">Nullzeitgrenzen</a>, und
-            steigen zur Mooring-Leine für unseren Sicherheitsstopp auf.
+            den Pinnacle herum, bleiben innerhalb der
+            <a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+              >Nullzeitgrenzen</a
+            >, und steigen zur Mooring-Leine für unseren Sicherheitsstopp auf.
           </li>
           <li>
             <strong>Platzmerkmale:</strong> Unterwasser-Pinnacle westlich von
@@ -1210,19 +1208,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Ähnliche Tauchplätze
-        </h2>
+        <h2>Ähnliche Tauchplätze</h2>
         <p>
           Erkunde weitere fortgeschrittene Tauchplätze rund um Koh Chang. Diese
           Plätze bieten herausfordernde Tiefen und Bedingungen für erfahrene

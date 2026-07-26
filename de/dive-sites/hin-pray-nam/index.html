@@ -337,6 +337,12 @@
           object-fit: cover;
         }
       }
+
+      .dive-site-box .page-jump-nav {
+        margin: 0 0 2px;
+        padding: 2px 8px 4px;
+        border-bottom: 1px solid #ccc;
+      }
     </style>
     <link
       rel="preload"
@@ -576,16 +582,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>
-            Entdecke Hin Pray Nam – Verstecktes Korallenriff bei Koh Chang
-          </h1>
-          <p>
-            Ruhige Korallenwände und farbenfrohes Meeresleben – ideal für
-            Anfänger und fortgeschrittene Taucher vor der Küste Koh Changs.
-          </p>
-        </div>
       </div>
     </header>
 
@@ -603,18 +599,30 @@
           <a href="/de/faqs/">FAQ's</a>
         </nav>
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Entdecke Hin Pray Nam – Verstecktes Korallenriff bei Koh Chang
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Ruhige Korallenwände und farbenfrohes Meeresleben – ideal für Anfänger
+          und fortgeschrittene Taucher vor der Küste Koh Changs.
+        </p>
+
+        <nav
+          class="page-jump-nav"
+          aria-label="Auf dieser Seite"
+          style="border-bottom: 1px solid #ccc"
+        >
+          <span class="page-jump-nav__label">Auf dieser Seite</span>
+          <div class="page-jump-nav__links">
+            <a href="#ds-intro">Intro</a>
+            <a href="#ds-overview">Überblick</a>
+            <a href="#ds-level">Level</a>
+            <a href="#ds-briefing">Briefing</a>
+          </div>
+        </nav>
+
+        <h2 id="ds-intro">
+          Ruhige Korallenwände und buntes Meeresleben für jedes Level
         </h2>
 
         <p>
@@ -705,7 +713,7 @@
           />
         </div>
 
-        <h2>Tauchplatz-Übersicht</h2>
+        <h2 id="ds-overview">Tauchplatz-Übersicht</h2>
         <table>
           <tr>
             <th>Maximale Tiefe</th>
@@ -731,7 +739,7 @@
         </p>
 
         <hr />
-        <h2>Tauchlevel für diesen Tauchplatz</h2>
+        <h2 id="ds-level">Tauchlevel für diesen Tauchplatz</h2>
 
         <a
           href="/de/day-trips/fun-dives/"
@@ -753,18 +761,7 @@
         >: Nicht möglich
         <hr />
 
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-            margin-top: 40px;
-          "
-        >
+        <h2 id="ds-briefing">
           Tauchbriefing-Beispiel für Tauchprofis – Hin Pray Nam
         </h2>
 
@@ -960,8 +957,13 @@
             schwimmend oder an der Leine
           </li>
           <li>
-            <strong><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/">Nullzeiten</a>:</strong> Bei 16 Metern haben wir genug
-            Grundzeit. Wir bleiben in sicheren Grenzen
+            <strong
+              ><a href="/de/posts/scuba-knowledge/ndl-no-decompression-limits/"
+                >Nullzeiten</a
+              >:</strong
+            >
+            Bei 16 Metern haben wir genug Grundzeit. Wir bleiben in sicheren
+            Grenzen
           </li>
         </ul>
 
@@ -1162,9 +1164,7 @@
             <li>Maximale Tiefe und Tauchdauer</li>
             <li>Luftverbrauch (Anfangs- und Enddruck)</li>
             <li>Dein Buddy und Guide</li>
-            <li>
-              Highlights (Rochen, Nacktschnecken, Korallen usw.)
-            </li>
+            <li>Highlights (Rochen, Nacktschnecken, Korallen usw.)</li>
           </ul>
           <p style="margin-bottom: 0">
             Mehr Infos zum Logbuch findest du in unserem
@@ -1197,19 +1197,7 @@
 
         <hr />
 
-        <h2
-          style="
-            margin-top: 50px;
-            font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-        >
-          Ähnliche Tauchplätze
-        </h2>
+        <h2>Ähnliche Tauchplätze</h2>
         <p>
           Erkunde weitere anfängerfreundliche Rifftauchgänge rund um Koh Chang.
           Diese Plätze bieten ähnliche Tiefen und Schwierigkeitsgrade.
