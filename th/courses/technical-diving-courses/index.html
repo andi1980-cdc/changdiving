@@ -294,7 +294,7 @@
         font-weight: 700;
         margin-top: 2em;
         margin-bottom: 1em;
-        color: #0d47a1;
+        color: #404040;
         line-height: 1.18;
         text-align: center;
       }
@@ -304,41 +304,52 @@
         color: #222;
         margin: 0 0 1.3em;
       }
-      .changdiving-box {
-        max-width: 1320px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 40px;
-        background: #fff;
-        border-radius: 8px;
-        padding: 40px;
-        position: relative;
-        box-shadow:
-          0 4px 20px 0 rgba(33, 150, 243, 0.25),
-          0 8px 40px 0 rgba(207, 216, 220, 0.35);
-        color: #212121;
-        line-height: 1.6;
-        overflow: hidden;
-        font-family: var(--font-sans);
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
       }
-      .changdiving-box h1,
-      .changdiving-box h2,
-      .changdiving-box h3 {
-        color: #0077b6;
-        margin-top: 1.2em;
-        margin-bottom: 0.5em;
-        font-weight: 700;
+      .grid-container.grid-container--tek strong {
+        color: #1a1a1a !important;
+        -webkit-text-fill-color: #1a1a1a;
       }
+      .grid-container--tek h1,
+      .grid-container--tek .three.columns .excerpt h3,
+      .grid-container--tek .tek-accent,
+      .grid-container--tek p a:not(.button) {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0%,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: #c45c3a;
+      }
+      .grid-container--tek p a:not(.button) {
+        text-decoration: underline;
+        text-decoration-color: #ff8a5c;
+        transition: opacity 0.2s;
+      }
+      .grid-container--tek p a:not(.button):hover {
+        opacity: 0.85;
+        color: #c45c3a;
+      }
+      .grid-container.grid-container--tek p a:not(.button) strong {
+        color: inherit !important;
+        -webkit-text-fill-color: transparent;
+      }
+      .grid-container--tek .three.columns .excerpt h3 {
+        text-decoration-color: #ff8a5c;
+      }
+
       .headline-black {
         line-height: 1.25;
-      }
-      .changdiving-box img.lazy[src*="_header.webp"],
-      .changdiving-box img.lazy[src*="-header.webp"] {
-        display: block;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 8 / 1;
-        object-fit: cover;
       }
       @media (max-width: 700px) {
         .grid-container h2 {
@@ -769,7 +780,7 @@
     </header>
 
     <main>
-      <section class="grid-container">
+      <section class="grid-container grid-container--tek">
         <!-- Course Submenu -->
         <nav class="course-submenu">
           <a href="/th/courses/beginner-courses/">เริ่มต้น</a>
@@ -793,7 +804,12 @@
           style="
             text-align: center;
             font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -865,7 +881,7 @@
           <strong>ความยืดหยุ่นและความอดทน</strong> คือกุญแจสู่ความสำเร็จ
         </p>
 
-        <p style="font-weight: bold; color: #0077b6">
+        <p class="tek-accent" style="font-weight: bold">
           🌊 ก้าวสู่ระดับใหม่ – ฝึกกับ
           <a href="/th/about/">ช้างไดวิ่ง เซ็นเตอร์</a>
           เพื่อพัฒนาทั้งทักษะ ความแม่นยำ และความมั่นใจในทุกการดำน้ำเทคนิค
@@ -886,12 +902,8 @@
                 และการวางแผนการดำน้ำระดับเทคนิค
               </p>
               <p
-                style="
-                  text-align: center;
-                  margin: 10px 0;
-                  font-weight: bold;
-                  color: #0077b6;
-                "
+                class="tek-accent"
+                style="text-align: center; margin: 10px 0; font-weight: bold"
               >
                 💸 เริ่มต้นที่ 14,990 THB
               </p>
@@ -911,12 +923,8 @@
                 เพิ่มเวลาใต้น้ำและลดเวลารอบการดำน้ำ กับหลักสูตรระดับเทคนิค
               </p>
               <p
-                style="
-                  text-align: center;
-                  margin: 10px 0;
-                  font-weight: bold;
-                  color: #0077b6;
-                "
+                class="tek-accent"
+                style="text-align: center; margin: 10px 0; font-weight: bold"
               >
                 💸 เริ่มต้นที่ 14,990 THB
               </p>
@@ -936,12 +944,8 @@
                 และการใช้เวลาใต้น้ำอย่างปลอดภัย
               </p>
               <p
-                style="
-                  text-align: center;
-                  margin: 10px 0;
-                  font-weight: bold;
-                  color: #0077b6;
-                "
+                class="tek-accent"
+                style="text-align: center; margin: 10px 0; font-weight: bold"
               >
                 💸 เริ่มต้นที่ 14,990 THB
               </p>
@@ -961,12 +965,8 @@
                 เรียนรู้การเข้าสู่โครงสร้างที่ซับซ้อนและการดำน้ำในสภาพแวดล้อมพิเศษ
               </p>
               <p
-                style="
-                  text-align: center;
-                  margin: 10px 0;
-                  font-weight: bold;
-                  color: #0077b6;
-                "
+                class="tek-accent"
+                style="text-align: center; margin: 10px 0; font-weight: bold"
               >
                 💸 เริ่มต้นที่ 18,870 THB
               </p>
@@ -986,12 +986,8 @@
                 TDI 4 ไดฟ์น้ำเปิดตลอด 2 วันที่เกาะช้าง
               </p>
               <p
-                style="
-                  text-align: center;
-                  margin: 10px 0;
-                  font-weight: bold;
-                  color: #0077b6;
-                "
+                class="tek-accent"
+                style="text-align: center; margin: 10px 0; font-weight: bold"
               >
                 💸 เริ่มต้น 14,990 บาท
               </p>
@@ -1011,12 +1007,8 @@
                 Diver ในหลักสูตรเดียว
               </p>
               <p
-                style="
-                  text-align: center;
-                  margin: 10px 0;
-                  font-weight: bold;
-                  color: #0077b6;
-                "
+                class="tek-accent"
+                style="text-align: center; margin: 10px 0; font-weight: bold"
               >
                 💸 เริ่มต้นที่ 66,990 THB
               </p>
@@ -1046,7 +1038,12 @@
             text-align: center;
             margin-top: 40px;
             font-size: 32px;
-            background: linear-gradient(to right, #0077b6, #c0c0c0);
+            background: linear-gradient(
+              135deg,
+              #3a3a3a 0%,
+              #5a5a5a 45%,
+              #ff8a5c 100%
+            );
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
