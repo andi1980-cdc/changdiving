@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
-  font-display: swap;
+  font-display: optional;
   size-adjust: 99.75%;
   ascent-override: 92.49%;
   descent-override: 24.34%;
@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 700;
   src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
-  font-display: swap;
+  font-display: optional;
   size-adjust: 99.75%;
   ascent-override: 92.49%;
   descent-override: 24.34%;
@@ -25,14 +25,14 @@
   font-style: normal;
   font-weight: 400;
   src: url("/fonts/noto-sans-thai-400.ttf") format("truetype");
-  font-display: swap;
+  font-display: optional;
 }
 @font-face {
   font-family: "Noto Sans Thai";
   font-style: normal;
   font-weight: 700;
   src: url("/fonts/noto-sans-thai-700.ttf") format("truetype");
-  font-display: swap;
+  font-display: optional;
 }
 :root {
   --primary-blue: #0077b6;
