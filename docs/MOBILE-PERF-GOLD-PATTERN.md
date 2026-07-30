@@ -309,6 +309,36 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 
 **Regel:** Jede neue Kurs-/Produktseite mit `.video-responsive` in der Content-Box braucht diesen Block im Critical CSS. Jump-Nav/Breadcrumb zuerst verdächtigen lohnt sich hier meist nicht.
 
+### D2) Day-Trip Banner-Bild in der Box (`img.lazy` `*_header.webp`)
+
+**Symptom:** `/day-trips/fun-dives/` hat 4D (Box-Padding + `> h1`) wie die Kurse, CLS auf `.changdiving-box` bleibt ~0.15.
+
+**Ursache:** Day-Trip-Seiten haben oft früh in der Box ein breites Banner (`fun_dive_header.webp` o.ä.). Critical reservierte nur `aspect-ratio: 8 / 1`, aber `style.css` setzt zusätzlich `margin: 24px auto` (Mobile `16px auto 24px`) — der Margin-Sprung wächst die Box. Kurse haben an dieser Stelle oft Videos (→ 4E), kein Banner.
+
+**Fix (nur Day-Trip-Produktseiten, Kurse unverändert):**
+
+```css
+.changdiving-box img.lazy[src*="_header.webp"],
+.changdiving-box img.lazy[src*="-header.webp"] {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 1;
+  object-fit: cover;
+  margin: 24px auto; /* match style.css */
+}
+@media (max-width: 700px) {
+  /* … existing 4D box padding … */
+  .changdiving-box img.lazy[src*="_header.webp"],
+  .changdiving-box img.lazy[src*="-header.webp"] {
+    max-width: 98vw;
+    width: 100%;
+    margin: 16px auto 24px auto;
+  }
+}
+```
+
 ---
 
 ## 5. Typische PSI-Fallen → Fix
@@ -321,6 +351,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 | Hub deutlich schlechter als `/en/` | Dutzende Eager-Kartenbilder | Abschnitt 3 |
 | CLS ≈ 0.14 auf Kurs-Box (Padding/H1) | Critical kennt nur Desktop-`.changdiving-box` | Abschnitt 4D |
 | CLS ≈ 0.15 auf Kurs-Box trotz 4D | `.video-responsive` ohne Höhe bis Full-CSS | Abschnitt **4E** (verifiziert) |
+| CLS ≈ 0.15 auf Day-Trip-Box trotz 4D | Banner-`img` bekommt Margin erst aus Full-CSS | Abschnitt **D2** |
 | „Render-blocking“ `global.js` / `fonts.css` | Sync-Load | `defer` + async fonts |
 | „Improve image delivery“ große KiB | Oft Below-the-fold Tiles, nicht Hero | Lazy + `_small` für Tiles; Hero separat prüfen |
 
@@ -336,6 +367,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 - [ ] Critical: `.grid-container h1` (+ Mobile @700px)
 - [ ] Critical: Submenu/Breadcrumb falls im Above-the-fold
 - [ ] Kurs-Box: `.changdiving-box` **und** `.speciality-box` / `.tek-box` + Mobile-Padding zuletzt (4D)
+- [ ] Day-Trip mit Banner-`*_header.webp` in der Box: Critical-Margin wie `style.css` (D2)
 - [ ] Kurs-Box mit YouTube-Platzhaltern: `.video-flex` + `.video-responsive` `aspect-ratio: 16 / 9` im Critical (4E)
 - [ ] `fonts.css` async + noscript-Fallback
 - [ ] `style.min.css` async
