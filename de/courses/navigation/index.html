@@ -327,7 +327,9 @@
         color: #222;
         margin: 0 0 1.3em;
       }
-      .changdiving-box {
+      .changdiving-box,
+      .speciality-box,
+      .tek-box {
         max-width: 1320px;
         margin-left: auto;
         margin-right: auto;
@@ -346,7 +348,13 @@
       }
       .changdiving-box h1,
       .changdiving-box h2,
-      .changdiving-box h3 {
+      .changdiving-box h3,
+      .speciality-box h1,
+      .speciality-box h2,
+      .speciality-box h3,
+      .tek-box h1,
+      .tek-box h2,
+      .tek-box h3 {
         color: #0077b6;
         margin-top: 1.2em;
         margin-bottom: 0.5em;
@@ -356,7 +364,11 @@
         line-height: 1.25;
       }
       .changdiving-box img.lazy[src*="_header.webp"],
-      .changdiving-box img.lazy[src*="-header.webp"] {
+      .changdiving-box img.lazy[src*="-header.webp"],
+      .speciality-box img.lazy[src*="_header.webp"],
+      .speciality-box img.lazy[src*="-header.webp"],
+      .tek-box img.lazy[src*="_header.webp"],
+      .tek-box img.lazy[src*="-header.webp"] {
         display: block;
         max-width: 100%;
         height: auto;
@@ -410,6 +422,30 @@
           object-fit: cover;
         }
       }
+
+      /* course-box CLS: mobile padding + H1 — keep last in critical-css */
+      .changdiving-box > h1,
+      .speciality-box > h1,
+      .tek-box > h1 {
+        margin-top: 1.2em;
+        margin-bottom: 0.5em;
+        font-weight: 700;
+        line-height: 1.15;
+        color: #0077b6;
+      }
+      @media (max-width: 700px) {
+        .changdiving-box,
+        .speciality-box,
+        .tek-box {
+          padding: 6vw 2vw;
+          border-radius: 4vw;
+          max-width: 99vw;
+          margin-bottom: 32px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
     </style>
     <link
       rel="preload"

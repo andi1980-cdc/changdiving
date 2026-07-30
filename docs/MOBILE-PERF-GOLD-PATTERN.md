@@ -233,6 +233,7 @@ Critical CSS sollte außerdem `.grid-container`, `.grid-container h2`, `.grid-co
 | CLS ≈ 0.1, Element Content-`<h1>` | H1-Styles erst aus `style.min.css` | Abschnitt 4B |
 | LCP > 4s, LCP = Hero-`<img>` | Preload spät / JS-Preload konkurriert | Abschnitt 1 |
 | Hub deutlich schlechter als `/en/` | Dutzende Eager-Kartenbilder | Abschnitt 3 |
+| CLS ≈ 0.14 auf `.speciality-box` / `.changdiving-box` / `.tek-box` | Critical stylt nur Desktop-`.changdiving-box`; Mobile-Padding fehlt | Kursseiten: alle 3 Boxen + `> h1` in Critical; Mobile-`padding: 6vw 2vw` **zuletzt** |
 | „Render-blocking“ `global.js` / `fonts.css` | Sync-Load | `defer` + async fonts |
 | „Improve image delivery“ große KiB | Oft Below-the-fold Tiles, nicht Hero | Lazy + `_small` für Tiles; Hero separat prüfen |
 
