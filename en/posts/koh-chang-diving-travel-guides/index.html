@@ -345,14 +345,14 @@
     <noscript
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/gulf-vs-andemann_big.webp"
-        imagesrcset="/img/posts/gulf-vs-andemann_big.webp 600w, /img/posts/gulf-vs-andemann_big.webp 1200w"
-        imagesizes="100vw"
-      />
     </noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/gulf-vs-andemann_small.webp"
+      imagesrcset="/img/posts/gulf-vs-andemann_small.webp 600w, /img/posts/gulf-vs-andemann_big.webp 1200w"
+      imagesizes="100vw"
+    />
 
     <script type="application/ld+json">
       {
@@ -377,7 +377,13 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/posts_big.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/posts_small.webp"
+      imagesrcset="/img/posts/posts_small.webp 600w, /img/posts/posts_big.webp 1200w"
+      imagesizes="100vw"
+    />
   </head>
   <body>
     <header>
@@ -426,10 +432,10 @@
           />
           <img
             class="hero-header-img"
-            src="/img/posts/gulf-vs-andemann_big.webp"
+            src="/img/posts/gulf-vs-andemann_small.webp"
             alt="koh chang diving travel guides blog header – scuba tips, marine life, how-to guides and diving knowledge for Koh Chang"
-            width="2580"
-            height="1460"
+            width="600"
+            height="400"
             loading="eager"
             fetchpriority="high"
           />

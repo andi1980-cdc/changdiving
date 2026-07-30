@@ -70,7 +70,6 @@
     <link rel="stylesheet" href="/fonts/fonts.css" />
     <link rel="stylesheet" href="/style.min.css" />
 
-
     <style>
       /* Search Page Specific Styles */
       .search-hero {
@@ -342,7 +341,6 @@
         text-decoration: underline;
         cursor: pointer;
       }
-
 
       /* Autocomplete dropdown */
       .ac-wrap {
@@ -705,14 +703,14 @@
       <div class="search-container">
         <form id="searchForm" class="search-form-main">
           <div class="ac-wrap">
-          <input
-            type="text"
-            id="searchInput"
-            name="q"
-            placeholder="Search for courses, dive sites, or topics..."
-            value=""
-            required
-          />
+            <input
+              type="text"
+              id="searchInput"
+              name="q"
+              placeholder="Search for courses, dive sites, or topics..."
+              value=""
+              required
+            />
             <div id="ac-dropdown" class="ac-dropdown" hidden></div>
           </div>
           <button type="submit">
@@ -1014,11 +1012,11 @@
         renderResultItems(results, rawTerms, query, results);
       }
 
-
       // ── Levenshtein distance (for typo tolerance) ─────────────────
       function levenshtein(a, b) {
         if (Math.abs(a.length - b.length) > 3) return 99;
-        const m = a.length, n = b.length;
+        const m = a.length,
+          n = b.length;
         const dp = [];
         for (let i = 0; i <= m; i++) {
           dp[i] = [i];
@@ -1116,7 +1114,8 @@
           items.forEach((el, i) =>
             el.classList.toggle("ac-active", i === acActive)
           );
-          if (acActive >= 0) items[acActive].scrollIntoView({ block: "nearest" });
+          if (acActive >= 0)
+            items[acActive].scrollIntoView({ block: "nearest" });
         });
 
       document.addEventListener("click", function (e) {

@@ -340,7 +340,6 @@
         cursor: pointer;
       }
 
-
       /* Autocomplete dropdown */
       .ac-wrap {
         flex: 1;
@@ -702,14 +701,14 @@
       <div class="search-container">
         <form id="searchForm" class="search-form-main">
           <div class="ac-wrap">
-          <input
-            type="text"
-            id="searchInput"
-            name="q"
-            placeholder="Suchen Sie nach Kursen, Tauchplätzen oder Themen..."
-            value=""
-            required
-          />
+            <input
+              type="text"
+              id="searchInput"
+              name="q"
+              placeholder="Suchen Sie nach Kursen, Tauchplätzen oder Themen..."
+              value=""
+              required
+            />
             <div id="ac-dropdown" class="ac-dropdown" hidden></div>
           </div>
           <button type="submit">
@@ -834,7 +833,10 @@
         if (!searchTerms.length) return;
 
         const allMatches = searchData
-          .map((item) => ({ item, score: getRelevanceScore(item, searchTerms) }))
+          .map((item) => ({
+            item,
+            score: getRelevanceScore(item, searchTerms),
+          }))
           .filter(({ score }) => score > 0)
           .sort((a, b) => b.score - a.score)
           .slice(0, MAX_RESULTS)
@@ -844,7 +846,10 @@
         if (allMatches.length === 0 && searchTerms.length > 1) {
           for (const singleTerm of searchTerms) {
             const fallback = searchData
-              .map((item) => ({ item, score: getRelevanceScore(item, [singleTerm]) }))
+              .map((item) => ({
+                item,
+                score: getRelevanceScore(item, [singleTerm]),
+              }))
               .filter(({ score }) => score > 0)
               .slice(0, MAX_RESULTS)
               .map(({ item }) => item);
@@ -998,11 +1003,11 @@
         renderResultItems(results, rawTerms, query, results);
       }
 
-
       // ── Levenshtein distance (for typo tolerance) ─────────────────
       function levenshtein(a, b) {
         if (Math.abs(a.length - b.length) > 3) return 99;
-        const m = a.length, n = b.length;
+        const m = a.length,
+          n = b.length;
         const dp = [];
         for (let i = 0; i <= m; i++) {
           dp[i] = [i];
@@ -1100,7 +1105,8 @@
           items.forEach((el, i) =>
             el.classList.toggle("ac-active", i === acActive)
           );
-          if (acActive >= 0) items[acActive].scrollIntoView({ block: "nearest" });
+          if (acActive >= 0)
+            items[acActive].scrollIntoView({ block: "nearest" });
         });
 
       document.addEventListener("click", function (e) {

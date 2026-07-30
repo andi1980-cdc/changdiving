@@ -359,14 +359,14 @@
     <noscript
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/ocean-climate_small.webp"
-        imagesrcset="/img/posts/ocean-climate_small.webp 600w, /img/posts/ocean-climate_big.webp 1200w"
-        imagesizes="100vw"
-      />
     </noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/ocean-climate_small.webp"
+      imagesrcset="/img/posts/ocean-climate_small.webp 600w, /img/posts/ocean-climate_big.webp 1200w"
+      imagesizes="100vw"
+    />
 
     <script type="application/ld+json">
       {
@@ -445,7 +445,13 @@
     </script>
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
-    <link rel="preload" href="/img/posts/ocean-climate_big.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/ocean-climate_small.webp"
+      imagesrcset="/img/posts/ocean-climate_small.webp 600w, /img/posts/ocean-climate_big.webp 1200w"
+      imagesizes="100vw"
+    />
   </head>
   <body>
     <header>
@@ -496,7 +502,7 @@
         </picture>
 
         <img
-          src="/img/posts/ocean-climate_big.webp"
+          src="/img/posts/ocean-climate_small.webp"
           alt="มหาสมุทรและภูมิอากาศ – การแลกเปลี่ยน CO₂ ระหว่างทะเลและชั้นบรรยากาศ"
         />
       </div>

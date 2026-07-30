@@ -389,14 +389,14 @@
     <noscript
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/faq/faq-health-safety_small.webp"
-        imagesrcset="/img/faq/faq-health-safety_small.webp 600w, /img/faq/faq-health-safety_big.webp 1200w"
-        imagesizes="100vw"
-      />
     </noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="/img/faq/faq-health-safety_small.webp"
+      imagesrcset="/img/faq/faq-health-safety_small.webp 600w, /img/faq/faq-health-safety_big.webp 1200w"
+      imagesizes="100vw"
+    />
 
     <script type="application/ld+json">
       {
@@ -2124,9 +2124,7 @@
         });
 
         complete =
-          mains.length > 0 &&
-          answered === mains.length &&
-          !incompleteBox;
+          mains.length > 0 && answered === mains.length && !incompleteBox;
 
         return {
           mains: mains,
@@ -2147,7 +2145,9 @@
         var assess = medicalAssess();
         var lines = [];
         lines.push("Diver Medical Self-Check results");
-        lines.push("Page: https://changdiving.com/en/faqs/faq-diving-health-safety-thailand/#medical-self-check");
+        lines.push(
+          "Page: https://changdiving.com/en/faqs/faq-diving-health-safety-thailand/#medical-self-check"
+        );
         lines.push("");
         lines.push(
           "Screening outcome: " +
@@ -2176,12 +2176,7 @@
                 var st = medicalShortText(s);
                 if (st.length > 90) st = st.slice(0, 87) + "...";
                 lines.push(
-                  "  - " +
-                    s.getAttribute("data-sub") +
-                    " [" +
-                    sa +
-                    "] " +
-                    st
+                  "  - " + s.getAttribute("data-sub") + " [" + sa + "] " + st
                 );
               });
             }
@@ -2300,13 +2295,13 @@
         }
         var subject =
           "Medical Self-Check results – " +
-          (assess.needsPhysician
-            ? "physician recommended"
-            : "screening clear");
+          (assess.needsPhysician ? "physician recommended" : "screening clear");
         var body = medicalBuildSummary();
         // Keep mailto bodies practical for common email clients
         if (body.length > 1800) {
-          body = body.slice(0, 1750) + "\n\n[Truncated – full list was long. Please also attach/sign the PDF.]";
+          body =
+            body.slice(0, 1750) +
+            "\n\n[Truncated – full list was long. Please also attach/sign the PDF.]";
         }
         var href =
           "mailto:info@changdiving.com?subject=" +

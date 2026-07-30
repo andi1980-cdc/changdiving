@@ -344,14 +344,14 @@
     <noscript
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/posts_big.webp"
-        imagesrcset="/img/posts/posts_big.webp 600w, /img/posts/posts_big.webp 1200w"
-        imagesizes="100vw"
-      />
     </noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/posts_small.webp"
+      imagesrcset="/img/posts/posts_small.webp 600w, /img/posts/posts_big.webp 1200w"
+      imagesizes="100vw"
+    />
 
     <script type="application/ld+json">
       {
@@ -416,7 +416,13 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/posts_big.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/posts_small.webp"
+      imagesrcset="/img/posts/posts_small.webp 600w, /img/posts/posts_big.webp 1200w"
+      imagesizes="100vw"
+    />
   </head>
   <body>
     <header>
@@ -465,10 +471,10 @@
           />
           <img
             class="hero-header-img"
-            src="/img/posts/posts_big.webp"
+            src="/img/posts/posts_small.webp"
             alt="posts blog header – scuba tips, marine life, how-to guides and diving knowledge for Koh Chang"
-            width="2580"
-            height="1460"
+            width="600"
+            height="400"
             loading="eager"
             fetchpriority="high"
           />
@@ -684,8 +690,8 @@
         <p style="text-align: center; max-width: 700px; margin: 0 auto 30px">
           Koh Chang is one of Thailand's best kept diving secrets –
           crystal-clear water, thriving reefs, and world-class wrecks like the
-          <a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang</a>. Whether you want
-          to explore the reef on a
+          <a href="/en/dive-sites/htms-chang-wreck/">HTMS Chang</a>. Whether you
+          want to explore the reef on a
           <a href="/en/day-trips/fun-dives/">fun dive</a>, earn your
           <a href="/en/courses/open-water-diver/">Open Water certification</a>,
           or check our <a href="/en/prices/">transparent pricing</a> before you

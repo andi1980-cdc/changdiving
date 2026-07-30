@@ -351,14 +351,14 @@
     <noscript
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
-      <link
-        rel="preload"
-        as="image"
-        href="/img/posts/marine-life-koh-chang_big.webp"
-        imagesrcset="/img/posts/marine-life-koh-chang_big.webp 600w, /img/posts/marine-life-koh-chang_big.webp 1200w"
-        imagesizes="100vw"
-      />
     </noscript>
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/marine-life-koh-chang_small.webp"
+      imagesrcset="/img/posts/marine-life-koh-chang_small.webp 600w, /img/posts/marine-life-koh-chang_big.webp 1200w"
+      imagesizes="100vw"
+    />
 
     <script type="application/ld+json">
       {
@@ -383,7 +383,13 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/marine-life-koh-chang_big.webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/posts/marine-life-koh-chang_small.webp"
+      imagesrcset="/img/posts/marine-life-koh-chang_small.webp 600w, /img/posts/marine-life-koh-chang_big.webp 1200w"
+      imagesizes="100vw"
+    />
   </head>
   <body>
     <header>
@@ -432,10 +438,10 @@
           />
           <img
             class="hero-header-img"
-            src="/img/posts/marine-life-koh-chang_big.webp"
+            src="/img/posts/marine-life-koh-chang_small.webp"
             alt="Marine life Koh Chang – tropical reef fish, sharks, turtles and coral Thailand"
-            width="2580"
-            height="1460"
+            width="600"
+            height="400"
             loading="eager"
             fetchpriority="high"
           />
