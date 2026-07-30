@@ -493,54 +493,74 @@
         }
       }
 
-      /* course-box CLS: video aspect-ratio — reserve space inside box before style.min.css */
-      .video-flex {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        justify-content: center;
-      }
-      .video-responsive {
-        flex: 1 1 calc(50% - 24px);
-        max-width: calc(50% - 24px);
-        min-width: 260px;
+      /* Try Dive single-video CLS: display:block + aspect-ratio (flex+one child collapses height) */
+      .video-flex--single {
+        display: block;
         width: 100%;
+      }
+      .video-flex--single .video-responsive {
+        display: block;
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
         aspect-ratio: 16 / 9;
         background: #000;
         border-radius: 12px;
         overflow: hidden;
+      }
+      /* Play button absolute in critical — otherwise in-flow child breaks aspect-ratio */
+      .video-flex--single .lty-playbtn {
+        width: 70px;
+        height: 46px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(212, 0, 0, 0.9);
+        border-radius: 14px;
+        z-index: 1;
+      }
+      .video-flex--single .lty-playbtn::before {
+        content: "";
+        border: 11px solid transparent;
+        border-left: 22px solid #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-42%, -50%);
+      }
+      /* ATF hr + jump-nav: same metrics as style.css before full CSS loads */
+      .changdiving-box > hr,
+      .changdiving-box hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 40px 0;
+        height: 0;
+      }
+      .page-jump-nav {
+        margin: 0 0 6px;
+        padding: 6px 8px 4px;
+      }
+      .page-jump-nav__label {
+        display: block;
+        font-size: 0.68rem;
+        font-weight: 500;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #888;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      .page-jump-nav__links {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      /* Try Dive etc.: single video must not stay at 50% max-width */
-      .video-flex .video-responsive:only-child {
-        flex: 1 1 100%;
-        max-width: 100%;
-        min-width: 0;
-        width: 100%;
-      }
-
-      /* Try Dive: one video = full width (courses use 2×50%; :only-child alone is fragile) */
-      .video-flex--single .video-responsive {
-        flex: 1 1 100%;
-        max-width: 100%;
-        min-width: 0;
-        width: 100%;
-      }
-      @media (max-width: 700px) {
-        .video-flex {
-          flex-direction: column;
-          gap: 16px;
-        }
-        .video-responsive {
-          max-width: 100%;
-          flex: 1 1 100%;
-          min-width: 0;
-          width: 100%;
-          aspect-ratio: 16 / 9;
-        }
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: baseline;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 18px;
+        margin-bottom: 6px;
       }
 
     
@@ -812,6 +832,9 @@
             data-title="Try Diving - Your First Step into the Underwater World"
             onclick="loadYouTubeVideo(this, 'gHTU2MJGjBE', 'Try Diving - Your First Step into the Underwater World')"
             style="
+              aspect-ratio: 16 / 9;
+              width: 100%;
+              max-width: 100%;
               background: #000
                 url(&quot;https://i.ytimg.com/vi/gHTU2MJGjBE/hqdefault.jpg&quot;)
                 center/cover;
