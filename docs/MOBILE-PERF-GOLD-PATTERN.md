@@ -223,7 +223,9 @@ Reserviert Höhe bevor Full-CSS / JS greifen:
 
 Critical CSS sollte außerdem `.grid-container`, `.grid-container h2`, `.grid-container p` und die Basis-Hero-Regeln enthalten (wie auf bestehenden Hub-Seiten).
 
-### D) Kurs-Boxen (`.changdiving-box` / `.speciality-box` / `.tek-box`)
+### D) Kurs-/Day-Trip-Boxen (`.changdiving-box` / `.speciality-box` / `.tek-box`)
+
+Gilt für **Kurs- und Day-Trip-Produktseiten** (z. B. `/en/courses/nitrox-diver/`, `/en/day-trips/fun-dives/`).
 
 Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). Mobile-Padding **zuletzt** im Critical-Block, sonst überschreibt Desktop-`padding: 40px` das Mobile-Layout:
 
