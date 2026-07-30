@@ -2,7 +2,8 @@
 // ---------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const breadcrumb = document.getElementById("breadcrumb");
-  if (breadcrumb) {
+  // Skip if server already rendered crumbs (avoids CLS from JS fill)
+  if (breadcrumb && !breadcrumb.innerHTML.trim()) {
     const knownLangs = new Set(["en", "de", "th"]);
     let path = window.location.pathname.split("/").filter(Boolean);
     // Local preview / wrong mount: pathname is not /en/… — use canonical URL if present

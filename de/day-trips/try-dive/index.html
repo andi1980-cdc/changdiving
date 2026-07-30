@@ -161,6 +161,21 @@
 
     <!-- Preconnect for External Resources -->
     <!-- Structured Data JSON-LD -->
+    <!-- Preload Roboto files so ATF text does not swap after first paint (CLS) -->
+    <link
+      rel="preload"
+      href="/fonts/roboto-v48-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/roboto-v48-latin-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
     <link
@@ -172,6 +187,29 @@
     <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
+      /* Inline @font-face so preloaded woff2 can apply before async fonts.css */
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
+        font-display: optional;
+        size-adjust: 99.75%;
+        ascent-override: 92.49%;
+        descent-override: 24.34%;
+        line-gap-override: 0%;
+      }
+      @font-face {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 700;
+        src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
+        font-display: optional;
+        size-adjust: 99.75%;
+        ascent-override: 92.49%;
+        descent-override: 24.34%;
+        line-gap-override: 0%;
+      }
       :root {
         --font-sans:
           system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont,
@@ -453,6 +491,39 @@
           max-width: 98vw;
           width: 100%;
           margin: 16px auto 24px auto;
+        }
+      }
+
+    
+      /* product-gallery: reserve 3:2 before style.min (PSI unsized-image / CLS) */
+      .product-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+      }
+      .product-gallery img {
+        flex: 1 1 calc(50% - 24px);
+        max-width: calc(50% - 24px);
+        min-width: 220px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        margin: 0;
+        display: block;
+        border-radius: 12px;
+      }
+      @media (max-width: 700px) {
+        .product-gallery {
+          flex-direction: column;
+          gap: 12px;
+        }
+        .product-gallery img {
+          flex: 1 1 100%;
+          max-width: 100%;
+          min-width: 0;
+          margin-bottom: 18px;
+          aspect-ratio: 3 / 2;
         }
       }
 
@@ -740,7 +811,7 @@
       </nav>
 
       <div class="changdiving-box">
-        <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav id="breadcrumb" class="breadcrumb"><a href="/de/">🏠 Startseite</a> › <a href="/de/day-trips/">Day Trips</a> › Try Dive</nav>
 
         <h1>
           Try Dive Koh Chang – 2 Riff-Tauchgänge, keine Zertifizierung - ab

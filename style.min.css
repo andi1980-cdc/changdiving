@@ -2165,6 +2165,9 @@ main:has(> .tek-box) > .posts-submenu a {
   flex: 1 1 calc(50% - 24px);
   max-width: calc(50% - 24px);
   min-width: 220px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
   border-radius: 12px;
   box-shadow: 0 2px 12px rgba(33, 150, 243, 0.1);
   margin: 0;
@@ -2182,6 +2185,10 @@ main:has(> .tek-box) > .posts-submenu a {
   .product-gallery img {
     flex: 1 1 100%;
     max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
     margin-bottom: 18px;
     border-radius: 4vw;
   }
