@@ -2100,6 +2100,10 @@ main:has(> .tek-box) > .posts-submenu a {
 .course-section-banner--specialty {
   background: linear-gradient(135deg, #558b2f 0%, #8bc34a 45%, #fdd835 100%);
 }
+.course-section-banner--pros {
+  background: linear-gradient(to right, #0077b6, silver);
+}
+
 .course-section-banner--tec {
   background: linear-gradient(135deg, #3a3a3a 0%, #5a5a5a 45%, #ff8a5c 100%);
 }
