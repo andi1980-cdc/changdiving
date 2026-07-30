@@ -429,12 +429,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/deco-procedures/deco-pro-header_small.webp"
-      imagesrcset="/img/products/deco-procedures/deco-pro-header_small.webp 600w, /img/products/deco-procedures/deco-pro-header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/deco-procedures/deco-pro-header_small.webp"
+/>
 
     <!-- Performance Optimizations -->
 
@@ -660,6 +658,13 @@
           <source
             srcset="/img/products/deco-procedures/deco-pro-header_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/deco-procedures/deco-pro-header_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

@@ -359,12 +359,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/why-nitrox_small.webp"
-      imagesrcset="/img/posts/why-nitrox_small.webp 600w, /img/posts/why-nitrox_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/why-nitrox_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -460,8 +458,7 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/why-nitrox_small.webp" />
-  </head>
+      </head>
   <body>
     <header>
       <!-- ส่วนเฮดเดอร์ -->
@@ -497,6 +494,13 @@
           <source
             srcset="/img/posts/why-nitrox_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/why-nitrox_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

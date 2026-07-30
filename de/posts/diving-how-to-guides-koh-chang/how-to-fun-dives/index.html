@@ -361,12 +361,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/how-fun-diving_small.webp"
-      imagesrcset="/img/posts/how-fun-diving_small.webp 600w, /img/posts/how-fun-dives_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/how-fun-diving_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -528,6 +526,13 @@
           <source
             srcset="/img/posts/how-fun-dives_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/how-fun-diving_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

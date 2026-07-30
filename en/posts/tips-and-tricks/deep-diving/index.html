@@ -357,12 +357,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/deep-diving_small.webp"
-      imagesrcset="/img/posts/deep-diving_small.webp 600w, /img/posts/deep-diving_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/deep-diving_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -451,14 +449,7 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link
-      rel="preload"
-      as="image"
-      href="/img/posts/deep-diving_small.webp"
-      imagesrcset="/img/posts/deep-diving_small.webp 600w, /img/posts/deep-diving_big.webp 1200w"
-      imagesizes="100vw"
-    />
-  </head>
+      </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -494,6 +485,13 @@
           <source
             srcset="/img/posts/deep-diving_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/deep-diving_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

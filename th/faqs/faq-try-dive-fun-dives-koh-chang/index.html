@@ -358,12 +358,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/faq/faq-try-fun-dives_small.webp"
-      imagesrcset="/img/faq/faq-try-fun-dives_small.webp 600w, /img/faq/faq-try-fun-dives_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/faq/faq-try-fun-dives_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -515,6 +513,13 @@
             type="image/webp"
             width="2580"
             height="1460"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/faq/faq-try-fun-dives_small.webp"
+            width="600"
+            height="400"
+            type="image/webp"
           />
           <!-- Fallback และมือถือ: 600x400 -->
           <img

@@ -354,12 +354,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/theory-review_small.webp"
-      imagesrcset="/img/posts/theory-review_small.webp 600w, /img/posts/theory-review_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/theory-review_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -622,8 +620,7 @@
     </script>
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="/img/posts/theory-review_small.webp" as="image" />
-
+    
     <style>
       .cdc-briefing__section {
         margin-bottom: 40px;
@@ -828,6 +825,13 @@
           <source
             srcset="/img/posts/theory-review_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/theory-review_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

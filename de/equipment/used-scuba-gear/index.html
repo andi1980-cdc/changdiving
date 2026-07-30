@@ -361,12 +361,10 @@
 
     <!-- Critical Image Preload (for header images) -->
     <link
-      rel="preload"
-      as="image"
-      href="/img/used-gear/used-gear_small.webp"
-      imagesrcset="/img/used-gear/used-gear_small.webp 600w, /img/used-gear/used-gear_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/used-gear/used-gear_small.webp"
+/>
 
     <!-- Performance Optimizations -->
 
@@ -879,6 +877,13 @@
           <source
             srcset="/img/used-gear/used-gear_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/used-gear/used-gear_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

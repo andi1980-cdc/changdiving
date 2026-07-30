@@ -427,12 +427,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/tech-package/tech-package-header_small.webp"
-      imagesrcset="/img/products/tech-package/tech-package-header_small.webp 600w, /img/products/tech-package/tech-package-header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/tech-package/tech-package-header_small.webp"
+/>
 
     <!-- Performance Optimizations -->
 
@@ -668,6 +666,13 @@
           <source
             srcset="/img/products/tech-package/tech-package-header_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/tech-package/tech-package-header_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

@@ -371,12 +371,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/marine-life-koh-chang_small.webp"
-      imagesrcset="/img/posts/marine-life-koh-chang_small.webp 600w, /img/posts/marine-life-koh-chang_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/marine-life-koh-chang_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -494,6 +492,13 @@
           <source
             srcset="/img/posts/marine-life-koh-chang_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/marine-life-koh-chang_small2.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

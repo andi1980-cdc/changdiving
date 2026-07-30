@@ -341,12 +341,10 @@
     />
     <noscript><link rel="stylesheet" href="/style.min.css" /> </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/tips-and-tricks_small.webp"
-      imagesrcset="/img/posts/tips-and-tricks_small.webp 600w, /img/posts/tips-and-tricks_header.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/tips-and-tricks_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -408,8 +406,7 @@
       }
     </script>
 
-    <link rel="preload" href="/img/posts/tips-and-tricks_small.webp" />
-  </head>
+      </head>
   <body>
     <header>
       <div class="hero">
@@ -443,6 +440,13 @@
           <source
             srcset="/img/posts/tips-and-tricks_header.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/tips-and-tricks_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <img

@@ -1138,6 +1138,12 @@ const REDIRECTS_EXACT_RAW = [
     "/posts/scuba-knowledge/wreck-diving-koh-chang/",
     "/en/posts/scuba-knowledge/wreck-diving-koh-chang/",
   ],
+
+  // Renamed hero asset (was mobile size without _small suffix)
+  [
+    "/img/posts/solo-diver-at-htms-chang-wreck.webp",
+    "/img/posts/solo-diver-at-htms-chang-wreck_small.webp",
+  ],
 ];
 
 // 2) PREFIX/WILDCARD 301 — als Objekte { from, to }

@@ -523,12 +523,10 @@
     <!-- Critical CSS and Font Loading -->
     <!-- Critical Image Preload -->
     <link
-      rel="preload"
-      as="image"
-      href="/img/pages/header_weather_small.webp"
-      imagesrcset="/img/pages/header_weather_small.webp 600w, /img/pages/header_weather_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/pages/header_weather_small.webp"
+/>
   </head>
   <body>
     <header>
@@ -573,6 +571,13 @@
           <source
             srcset="/img/pages/header_weather_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/pages/header_weather_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

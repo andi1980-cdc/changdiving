@@ -346,12 +346,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/faq/faq-general-questions_small.webp"
-      imagesrcset="/img/faq/faq-general-questions_small.webp 600w, /img/faq/faq-general-questions_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/faq/faq-general-questions_small.webp"
+/>
 
     <!-- Structured Data JSON-LD -->
     <noscript
@@ -359,12 +357,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/faq/faq-about-koh-chang_small.webp"
-      imagesrcset="/img/faq/faq-about-koh-chang_small.webp 600w, /img/faq/faq-about-koh-chang_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/faq/faq-about-koh-chang_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -562,8 +558,7 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/faq/faq-about-koh-chang_small.webp" />
-  </head>
+      </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -599,6 +594,13 @@
           <source
             srcset="/img/faq/faq-about-koh-chang_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/faq/faq-about-koh-chang_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->

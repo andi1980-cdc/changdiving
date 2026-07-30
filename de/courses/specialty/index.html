@@ -345,6 +345,22 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      
+      @media (max-width: 767px) {
+        .hero {
+          height: auto;
+          min-height: unset;
+        }
+        .hero picture,
+        .hero-header-img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 3 / 2;
+          object-fit: cover;
+        }
+      }
+
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -372,12 +388,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/courses/speciality_courses_header_small.webp"
-      imagesrcset="/img/courses/speciality_courses_header_small.webp 600w, /img/courses/speciality_courses_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/courses/speciality_courses_header_small.webp"
+/>
 
     <script type="application/ld+json">
       [
@@ -1479,7 +1493,7 @@
 
           <a href="/de/posts/straight-talk/solo-diver/" class="three columns">
             <img
-              src="/img/posts/solo-diver-at-htms-chang-wreck.webp"
+              src="/img/posts/solo-diver-at-htms-chang-wreck_small.webp"
               alt="Solo Taucher am HTMS Chang Wrack, Koh Chang – Freiheit, Verantwortung & SDI Solo Diver Guide"
               width="600"
               height="400"

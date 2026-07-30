@@ -382,12 +382,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/first_aid/first-aid-header_small.webp"
-      imagesrcset="/img/products/first_aid/first-aid-header_small.webp 600w, /img/products/first_aid/first-aid-header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/first_aid/first-aid-header_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -596,6 +594,13 @@
           <source
             srcset="/img/products/first_aid/first-aid-header_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/first_aid/first-aid-header_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <img

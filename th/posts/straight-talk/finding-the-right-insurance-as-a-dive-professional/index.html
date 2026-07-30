@@ -309,6 +309,22 @@
         color: #222;
         margin: 0 0 1.3em;
       }
+      
+      @media (max-width: 767px) {
+        .hero {
+          height: auto;
+          min-height: unset;
+        }
+        .hero picture,
+        .hero-header-img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 3 / 2;
+          object-fit: cover;
+        }
+      }
+
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -339,12 +355,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/find-insurance_small.webp"
-      imagesrcset="/img/posts/find-insurance_small.webp 600w, /img/posts/find-insurance_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/find-insurance_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -430,8 +444,7 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/find-insurance_small.webp" />
-  </head>
+      </head>
   <body>
     <header>
       <!-- Hero-Bereich -->

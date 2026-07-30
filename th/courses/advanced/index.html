@@ -379,12 +379,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/aowd/advanced-open-water-diver-header_small.webp"
-      imagesrcset="/img/products/aowd/advanced-open-water-diver-header_small.webp 600w, /img/products/aowd/advanced-open-water-header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/aowd/advanced-open-water-diver-header_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -602,6 +600,13 @@
           <source
             srcset="/img/products/aowd/advanced-open-water-header_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/aowd/advanced-open-water-diver-header_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- มือถือและสำรอง: 600x400 -->

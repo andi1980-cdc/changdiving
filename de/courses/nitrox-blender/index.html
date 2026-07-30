@@ -386,12 +386,10 @@
       <link rel="stylesheet" href="/style.min.css" />
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/gas_blender/nitrox-gas-blender_small.webp"
-      imagesrcset="/img/products/gas_blender/nitrox-gas-blender_small.webp 600w, /img/products/gas_blender/nitrox-gas-blender_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/gas_blender/nitrox-gas-blender_small.webp"
+/>
 
     <!-- Performance Optimizations -->
 
@@ -597,6 +595,13 @@
           <source
             srcset="/img/products/gas_blender/nitrox-gas-blender_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/gas_blender/nitrox-gas-blender_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <img

@@ -388,12 +388,10 @@
 
     <!-- Critical Image Preload (for header images) -->
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/instructor-crossover/crossover-header_small.webp"
-      imagesrcset="/img/products/instructor-crossover/crossover-header_small.webp 600w, /img/products/instructor-crossover/crossover-header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/instructor-crossover/crossover-header_small.webp"
+/>
 
     <!-- Performance Optimizations -->
 
@@ -612,6 +610,13 @@
               /img/products/instructor-crossover/crossover-header_big.webp
             "
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/instructor-crossover/crossover-header_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <img

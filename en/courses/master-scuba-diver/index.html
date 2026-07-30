@@ -382,12 +382,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/products/msd/msd_small.webp"
-      imagesrcset="/img/products/msd/msd_small.webp 600w, /img/products/msd/msd_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/products/msd/msd_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -599,6 +597,13 @@
           <source
             srcset="/img/products/msd/msd_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/products/msd/msd_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <img

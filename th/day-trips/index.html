@@ -332,6 +332,22 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
+      
+      @media (max-width: 767px) {
+        .hero {
+          height: auto;
+          min-height: unset;
+        }
+        .hero picture,
+        .hero-header-img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 3 / 2;
+          object-fit: cover;
+        }
+      }
+
       @media (max-width: 700px) {
         .grid-container h2 {
           font-size: 1.4rem;
@@ -356,12 +372,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/daytrips/daytrips_header_small.webp"
-      imagesrcset="/img/daytrips/daytrips_header_small.webp 600w, /img/daytrips/daytrips_header_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/daytrips/daytrips_header_small.webp"
+/>
 
     <script type="application/ld+json">
       [

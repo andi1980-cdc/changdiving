@@ -355,12 +355,10 @@
       <!-- Critical Image Preload -->
     </noscript>
     <link
-      rel="preload"
-      as="image"
-      href="/img/posts/diving-social-media_small.webp"
-      imagesrcset="/img/posts/diving-social-media_small.webp 600w, /img/posts/diving-social-media_big.webp 1200w"
-      imagesizes="100vw"
-    />
+  rel="preload"
+  as="image"
+  href="/img/posts/diving-social-media_small.webp"
+/>
 
     <script type="application/ld+json">
       {
@@ -441,8 +439,7 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/diving-social-media_small.webp" />
-  </head>
+      </head>
   <body>
     <header>
       <!-- ส่วน Hero -->
@@ -478,6 +475,13 @@
           <source
             srcset="/img/posts/diving-social-media_big.webp"
             media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/img/posts/diving-social-media_small.webp"
+            width="600"
+            height="400"
             type="image/webp"
           />
           <!-- Fallback und Mobile: 600x400 -->
