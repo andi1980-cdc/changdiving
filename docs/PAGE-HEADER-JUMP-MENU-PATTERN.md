@@ -2,7 +2,8 @@
 
 Stand: Juli 2026  
 Referenz: `docs/PAGE-HEADER-JUMP-MENU-PATTERN.md`  
-Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`
+Verwandt (älter, H1 _im_ Hero): `HERO-TRANSACTIONAL-PATTERN.md`  
+Performance (LCP/CLS Mobile): [`docs/MOBILE-PERF-GOLD-PATTERN.md`](MOBILE-PERF-GOLD-PATTERN.md)
 
 **Dieses** Dokument ist der aktuelle Standard:
 

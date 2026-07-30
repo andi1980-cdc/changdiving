@@ -286,3 +286,20 @@ The primary issue was sending mixed signals to Google:
 3. Crawl-delay that Google ignores but shows in Search Console
 
 All issues have been addressed. The site now sends clear, positive signals to search engines while providing better user experience through instant server-side language detection.
+
+---
+
+## Mobile Performance Gold Pattern (July 2026)
+
+**Canonical checklist:** [`docs/MOBILE-PERF-GOLD-PATTERN.md`](docs/MOBILE-PERF-GOLD-PATTERN.md)
+
+**Reference:** `/en/` — best mobile + desktop lab scores in the project. Hubs must match the same head/hero stack **and** lazy-load card tiles (only logo + LCP hero stay eager).
+
+When adding or editing any hero page, follow that doc for:
+
+1. Early `_small` image preload + `fetchpriority="high"` (no competing `global.js` preload)
+2. `<picture>` dual sources (desktop `_big` / mobile `_small`)
+3. Critical CSS: mobile hero `aspect-ratio: 3/2` + content `.grid-container h1` metrics
+4. Async `fonts.css`, async `style.min.css`, `global.js` with `defer`
+5. Hub/card images: `loading="lazy"` (never compete with LCP)
+6. Image renames → 301 in `functions/[[path]].js`
