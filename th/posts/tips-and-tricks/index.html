@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/tips-and-tricks_small.webp" />
+
     <title>เคล็ดลับดำน้ำ – พัฒนาทักษะของคุณกับ ช้างไดฟ์วิ่ง</title>
     <meta
       name="description"
@@ -152,7 +154,13 @@
     <!-- JavaScript Preload -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -366,14 +374,6 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/posts/tips-and-tricks_small.webp"
-/>
-
-    <link rel="preload" href="/js/global.js" as="script" />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -803,7 +803,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js"></script>
+    <script src="../../../../js/global.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

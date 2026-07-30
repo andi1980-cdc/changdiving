@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/products/owd/open-water-diver-header_small.webp" />
+
     <title>
       Open Water Diver Koh Chang – Zertifizierung in 3 Tagen - ab 14.490 THB |
       Chang Diving
@@ -160,7 +162,13 @@
     <!-- Structured Data JSON-LD -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -410,12 +418,6 @@
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/products/owd/open-water-diver-header_small.webp"
-/>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -546,10 +548,9 @@
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/404/404_header_small.webp" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/pages/mobile_header_small.webp" />
+
     <title>
       Page No Longer Available - 410 | Chang Diving Center Koh Chang
     </title>
@@ -145,16 +148,16 @@
 
     <!-- Critical Resource Preloads -->
 
-    <link
-  rel="preload"
-  as="image"
-  href="/img/404/404_header_small.webp"
-/>
-    
     <!-- Critical CSS -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
       [
@@ -834,11 +837,6 @@
     </script>
 
     <!-- Critical Image Preload (for header images) -->
-    <link
-  rel="preload"
-  as="image"
-  href="/img/pages/mobile_header_small.webp"
-/>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {

@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/posts_small.webp" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/how-to-guide_small.webp" />
+
     <title>
       So funktioniert Tauchen – Schritt-für-Schritt-Anleitungen auf Koh Chang
     </title>
@@ -158,12 +161,17 @@
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Strukturierte Daten (JSON-LD) -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -377,12 +385,6 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/posts/posts_small.webp"
-/>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -446,8 +448,7 @@
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    <link rel="preload" href="/img/posts/how-to-guide_small.webp" />
-  </head>
+    </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -922,7 +923,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js"></script>
+    <script src="../../../../js/global.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

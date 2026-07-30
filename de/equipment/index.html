@@ -4,6 +4,8 @@
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/comming-soon/comming-soon_small.webp" />
+
     <title>Tauchausrüstung Koh Chang – Shoppen beim Chang Diving Center</title>
     <meta
       name="description"
@@ -152,7 +154,13 @@
     <!-- Critical CSS and Font Loading -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -368,16 +376,9 @@
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/comming-soon/comming-soon_small.webp"
-/>
-
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD (Deutsch) -->
     <script type="application/ld+json">
@@ -557,7 +558,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js"></script>
+    <script src="../../../../js/global.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

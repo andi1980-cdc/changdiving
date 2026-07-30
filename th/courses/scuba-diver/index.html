@@ -4,6 +4,8 @@
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/courses/scuba-diver/scuba-diver_small.webp" />
+
     <title>
       สคูบา ไดเวอร์ เกาะช้าง – รับใบรับรองใน 2 วัน – ตั้งแต่ 10,490 บาท | Chang
       Diving
@@ -157,7 +159,13 @@
 
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -398,14 +406,6 @@
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/courses/scuba-diver/scuba-diver_small.webp"
-/>
-
-    <link rel="preload" href="/js/global.js" as="script" />
-
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
       {

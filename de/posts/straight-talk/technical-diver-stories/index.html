@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/technical_diver_stories_header_small.webp" />
+
     <!-- EDIT TITLE -->
     <title>
       Geschichten von Tec-Tauchern: TDI Nitrox, Dekompressionsverfahren &amp;
@@ -159,10 +161,14 @@
     />
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
-    <link rel="preload" href="/js/global.js" as="script" />
-
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
 
     <!-- Critical Above-the-fold CSS (matches blog posts — do not redefine .hero below) -->
     <style id="critical-css">
@@ -535,12 +541,6 @@
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/posts/technical_diver_stories_header_small.webp"
-/>
-
     <!-- JSON-LD: BlogPosting -->
     <script type="application/ld+json">
       {
@@ -1732,7 +1732,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="/js/global.js"></script>
+    <script src="/js/global.js" defer></script>
     <!-- BreadcrumbList: blog trail (aligns with Straight Talk, not /courses/) -->
     <script type="application/ld+json">
       {

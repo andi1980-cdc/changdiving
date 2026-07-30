@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/courses/beginner_courses_header_small.webp" />
+
     <title>
       Learn to Dive in Koh Chang – Beginner Scuba Courses, Open Water &amp; Try
       Dive | Chang Diving
@@ -157,12 +159,17 @@
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -384,8 +391,7 @@
         aspect-ratio: 8 / 1;
         object-fit: cover;
       }
-      
-      
+
       .course-submenu {
         display: flex;
         flex-wrap: nowrap;
@@ -459,12 +465,6 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/courses/beginner_courses_header_small.webp"
-/>
-
     <script type="application/ld+json">
       [
         {
@@ -1339,7 +1339,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../../js/global.js"></script>
+    <script src="../../../../../js/global.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

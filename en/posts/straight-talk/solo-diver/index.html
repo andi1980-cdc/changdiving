@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/solo-diver-at-htms-chang-wreck_small.webp" />
+
     <title>
       Solo Diving on Koh Chang – Freedom, Responsibility & SDI Solo Diver Guide
       | Chang Diving Center
@@ -155,9 +157,15 @@
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
+    
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
 
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
@@ -420,8 +428,7 @@
     </script>
 
     <!-- Solo diver at HTMS Chang wreck -->
-    <link rel="preload" href="/img/posts/solo-diver-at-htms-chang-wreck_small.webp" />
-  </head>
+    </head>
   <body>
     <header>
       <div class="hero">
@@ -981,7 +988,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js"></script>
+    <script src="../../../../js/global.js" defer></script>
 
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

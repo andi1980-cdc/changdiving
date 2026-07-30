@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/gas-consumption_small.webp" />
+
     <title>Gasverbrauch & Management beim Tauchen auf Koh Chang</title>
     <meta
       name="description"
@@ -161,7 +163,13 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
+    <noscript><link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -402,12 +410,6 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/posts/gas-consumption_small.webp"
-/>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

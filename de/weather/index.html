@@ -276,13 +276,21 @@
     <noscript> </noscript>
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <noscript>
       <link rel="stylesheet" href="/style.min.css" />
     </noscript>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/pages/header_weather_small.webp" />
+
     <title>
       Koh Chang Wetter Live – Wind, Wellen & beste Tauchbedingungen Nov–Apr
     </title>
@@ -435,7 +443,6 @@
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -497,12 +504,7 @@
 
     <!-- Critical CSS and Font Loading -->
     <!-- Critical Image Preload -->
-    <link
-  rel="preload"
-  as="image"
-  href="/img/pages/header_weather_small.webp"
-/>
-  </head>
+    </head>
   <body>
     <header>
       <!-- Hero-Bereich -->

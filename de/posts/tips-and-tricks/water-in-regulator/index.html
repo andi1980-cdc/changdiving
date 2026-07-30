@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/tips-and-tricks_small.webp" />
+
     <title>
       Was tun, wenn ständig Wasser in den Lungenautomaten gelangt? | Koh Chang
     </title>
@@ -149,9 +151,14 @@
     />
     <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon" />
 
-    <link rel="preload" href="/js/global.js" as="script" />
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <style id="critical-css">
       :root {
         --font-sans:
@@ -367,12 +374,6 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="/style.min.css" /> </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/posts/tips-and-tricks_small.webp"
-/>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -828,7 +829,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js"></script>
+    <script src="../../../../js/global.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

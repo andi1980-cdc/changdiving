@@ -4,6 +4,8 @@
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/products/night/night-diver-header_small.webp" />
+
     <title>
       Night Diver Koh Chang – 1,5-Tage-Specialty - ab 7.990 THB | Chang Diving
     </title>
@@ -157,7 +159,13 @@
     <!-- Critical CSS and Font Loading -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -407,17 +415,10 @@
       <link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/products/night/night-diver-header_small.webp"
-/>
-
     <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://www.youtube.com" />
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">

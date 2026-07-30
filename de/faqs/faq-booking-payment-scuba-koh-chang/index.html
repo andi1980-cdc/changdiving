@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/faq/faq-booking-payment_small.webp" />
+
     <title>
       Buchung & Bezahlung – Häufig gestellte Fragen | Chang Diving Koh Chang
     </title>
@@ -158,16 +160,20 @@
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
 
-    
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -364,12 +370,6 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/faq/faq-booking-payment_small.webp"
-/>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

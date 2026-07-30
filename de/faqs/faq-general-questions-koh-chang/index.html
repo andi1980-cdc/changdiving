@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/faq/faq-about-koh-chang_small.webp" />
+
     <title>
       Allgemeine Fragen zu Koh Chang – Transport, Sicherheit, SIM-Karten,
       Wetter, lokale Tipps
@@ -147,7 +149,13 @@
     <!-- Structured Data -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Styles -->
 
     <!-- Critical Above-the-fold CSS -->
@@ -346,12 +354,6 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-    <link
-  rel="preload"
-  as="image"
-  href="/img/faq/faq-about-koh-chang_small.webp"
-/>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

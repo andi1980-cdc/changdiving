@@ -4,6 +4,8 @@
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" fetchpriority="high" href="/img/used-gear/used-gear_small.webp" />
+
     <title>
       Gebrauchte Tauchausrüstung – Second-Hand Flaschen, Atemregler & Equipment
       | Chang Diving Center Koh Chang
@@ -164,7 +166,13 @@
     <!-- Critical CSS and Font Loading -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <link
       rel="stylesheet"
       href="/style.min.css"
@@ -368,16 +376,9 @@
     </noscript>
 
     <!-- Critical Image Preload (for header images) -->
-    <link
-  rel="preload"
-  as="image"
-  href="/img/used-gear/used-gear_small.webp"
-/>
-
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    <link rel="preload" href="/js/global.js" as="script" />
 
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">

@@ -67,7 +67,13 @@
     <!-- JSON-LD Structured Data for Search Page -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <link rel="stylesheet" href="/style.min.css" />
 
     <style>
@@ -750,7 +756,7 @@
     </main>
 
     <!-- Scripts -->
-    <script src="/js/global.js"></script>
+    <script src="/js/global.js" defer></script>
     <script>
       let searchData = [];
 
