@@ -319,9 +319,69 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 
 **Regel:** Jede neue Kurs-/Produktseite mit `.video-responsive` in der Content-Box braucht diesen Block im Critical CSS. Jump-Nav/Breadcrumb zuerst verdächtigen lohnt sich hier meist nicht.
 
-**Try Dive vs Fun Dives:** Fun Dives hat früh ein Banner → **D2**. Try Dive hat früh **ein** Video (nicht zwei wie Nitrox) → **4E** plus `:only-child` (sonst bleibt Critical bei `max-width: 50%` / `min-width: 260px` und springt erst mit Full-CSS auf 100%).
+**Zwei Videos (Kurse):** `display: flex` + `aspect-ratio: 16 / 9` reicht (Referenz Nitrox / Open Water).
+
+### E2) Einzelnes ATF-Video — Try Dive (verifiziert Juli 2026)
+
+**Symptom:** `/day-trips/try-dive/` — trotz 4D + 4E + voller Breite (`:only-child` / `video-flex--single`) bleibt CLS ≈ **0.15** auf `.changdiving-box`. Fun Dives (Banner/D2) und Kurse (2 Videos/4E) sind ok. Font-Swap war Nebenbefund; nach Font-Preload blieb die Box bei ~0.15.
+
+**Ursache:** Ein einziges `.video-responsive` mit `display: flex` + in-flow `.lty-playbtn` (Play-Button erst in `style.min.css` absolut). Die `aspect-ratio`-Höhe kollabiert bis Full-CSS → Box wächst stark. Bei **zwei** Videos (Kurse) tritt das nicht auf.
+
+**Fix (funktioniert):** Klasse `video-flex--single`, Video als **`display: block`** (nicht flex), Play-Button absolut schon im Critical, optional Inline-`aspect-ratio: 16 / 9`. Zusätzlich ATF-`hr` + `.page-jump-nav` wie in `style.css`. Referenz: `/en/day-trips/try-dive/` — **CLS 0**, Performance **98**.
+
+```css
+.video-flex--single {
+  display: block;
+  width: 100%;
+}
+.video-flex--single .video-responsive {
+  display: block; /* nicht flex — sonst kollabiert aspect-ratio bei einem Kind */
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.video-flex--single .lty-playbtn {
+  width: 70px;
+  height: 46px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* … rest like style.css … */
+}
+/* ATF hr + jump-nav margins/padding match style.css */
+```
+
+**HTML:**
+
+```html
+<div id="intro" class="video-flex video-flex--single">
+  <div
+    class="video-responsive"
+    style="aspect-ratio: 16 / 9; width: 100%; max-width: 100%; …"
+  >
+    <div class="lty-playbtn"></div>
+  </div>
+</div>
+```
+
+**Nicht tun:** Breadcrumb serverseitig hardcoden — üblich bleibt `<nav id="breadcrumb" class="breadcrumb"></nav>` (füllt `global.js`). SSR-Crumbs weichen vom Site-Muster ab und waren für den Try-Dive-CLS nicht nötig.
+
+**Try Dive vs Fun Dives vs Kurse:**
+
+| Seite | Früh in der Box | Fix |
+| ----- | --------------- | --- |
+| Fun Dives | Banner `*_header.webp` | **D2** |
+| Kurse (Nitrox) | **2** Videos | **4E** (flex ok) |
+| Try Dive | **1** Video | **E2** (`display: block` + Play absolut im Critical) |
 
 ### D2) Day-Trip Banner-Bild in der Box (`img.lazy` `*_header.webp`)
+
 
 **Symptom:** `/day-trips/fun-dives/` hat 4D (Box-Padding + `> h1`) wie die Kurse, CLS auf `.changdiving-box` bleibt ~0.15.
 
@@ -351,6 +411,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 }
 ```
 
+**Sonderfall Scuba Review:** ATF-Banner heißt `freshup2.webp` (nicht `*_header.webp`) → zusätzliche Critical-Regel `.changdiving-box img[src*="freshup"]` mit denselben Margins/`aspect-ratio: 8 / 1`, plus ATF-`hr` + `.page-jump-nav`. Gallery-Bilder unter `/scuba_review/` **nicht** mitselektieren.
 ---
 
 ## 5. Typische PSI-Fallen → Fix
@@ -364,6 +425,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 | CLS ≈ 0.14 auf Kurs-Box (Padding/H1) | Critical kennt nur Desktop-`.changdiving-box` | Abschnitt 4D |
 | CLS ≈ 0.15 auf Kurs-Box trotz 4D | `.video-responsive` ohne Höhe bis Full-CSS | Abschnitt **4E** (verifiziert) |
 | CLS ≈ 0.15 auf Day-Trip-Box trotz 4D | Banner-`img` bekommt Margin erst aus Full-CSS | Abschnitt **D2** |
+| CLS ≈ 0.15 auf Try Dive trotz 4E / voller Breite | **Ein** Video mit `display:flex` + Play in-flow | Abschnitt **E2** (verifiziert: CLS 0) |
 | „Render-blocking“ `global.js` / `fonts.css` | Sync-Load | `defer` + async fonts |
 | „Improve image delivery“ große KiB | Oft Below-the-fold Tiles, nicht Hero | Lazy + `_small` für Tiles; Hero separat prüfen |
 
@@ -380,7 +442,9 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 - [ ] Critical: Submenu/Breadcrumb falls im Above-the-fold
 - [ ] Kurs-Box: `.changdiving-box` **und** `.speciality-box` / `.tek-box` + Mobile-Padding zuletzt (4D)
 - [ ] Day-Trip mit Banner-`*_header.webp` in der Box: Critical-Margin wie `style.css` (D2)
-- [ ] Kurs-Box mit YouTube-Platzhaltern: `.video-flex` + `.video-responsive` `aspect-ratio: 16 / 9` im Critical (4E); bei nur einem Video auch `:only-child` (100% Breite)
+- [ ] Kurs-Box mit YouTube-Platzhaltern: `.video-flex` + `.video-responsive` `aspect-ratio: 16 / 9` im Critical (4E)
+- [ ] **Nur ein** ATF-Video: `video-flex--single` + `display: block` + Play-Button absolut im Critical (**E2**); nicht nur `:only-child` / 100%-Breite
+- [ ] Breadcrumb: leeres `<nav id="breadcrumb" class="breadcrumb"></nav>` (wie üblich; `global.js` füllt)
 - [ ] `fonts.css` async + noscript-Fallback
 - [ ] `style.min.css` async
 - [ ] `global.js` mit `defer`, **kein** Head-Preload dafür
@@ -399,6 +463,9 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 | `bee236a0` | Hub-Karten `loading="lazy"` + Gold-Pattern-Doc |
 | `cba43bb2` | Kurs-Boxen + H1 in Critical (4D) |
 | `a3a35126` | Video `aspect-ratio` in Critical (4E) — CLS-Fix verifiziert |
+| `ec56931a` | Day-Trip Banner-Margins in Critical (D2) |
+| `6c247172` | Try Dive Einzelvideo `display:block` + Play absolut (**E2**) — CLS 0 / Perf 98 |
+| `349f4ce4` | Try Dive: Breadcrumb wieder leer (JS), kein SSR |
 
 ---
 
@@ -408,4 +475,5 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 2. **CLS:** Finales Layout schon im Critical CSS (Hero 3:2 + H1-Maße + Kurs-Boxen + Videos 16:9).  
 3. **JS/Fonts:** nie den kritischen Pfad blockieren.  
 4. **Hubs:** Karten lazy — Vorbild `/en/` (nur Logo + Hero eager).  
-5. **Kurs-Boxen mit Videos:** Critical muss `.video-responsive` kennen — sonst meldet PSI CLS auf der Box.
+5. **Kurs-Boxen mit Videos:** Critical muss `.video-responsive` kennen — sonst meldet PSI CLS auf der Box.  
+6. **Ein ATF-Video (Try Dive):** `display: block` + Play absolut im Critical (**E2**) — reines 4E/Flex reicht nicht.
