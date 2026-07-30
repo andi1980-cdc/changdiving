@@ -427,46 +427,8 @@
         line-height: 1.15;
         color: #0077b6;
       }
-      @media (max-width: 700px) {
-        .changdiving-box,
-        .speciality-box,
-        .tek-box {
-          padding: 6vw 2vw;
-          border-radius: 4vw;
-          max-width: 99vw;
-          margin-bottom: 32px;
-          margin-left: 10px;
-          margin-right: 10px;
-        }
-        .changdiving-box img.lazy[src*="_header.webp"],
-        .changdiving-box img.lazy[src*="-header.webp"],
-        .speciality-box img.lazy[src*="_header.webp"],
-        .speciality-box img.lazy[src*="-header.webp"],
-        .tek-box img.lazy[src*="_header.webp"],
-        .tek-box img.lazy[src*="-header.webp"] {
-          max-width: 98vw;
-          width: 100%;
-          margin: 16px auto 24px auto;
-        }
-
-        .changdiving-box img[src*="freshup"] {
-          max-width: 98vw;
-          width: 100%;
-          margin: 16px auto 24px auto;
-        }
-      }
-
-      /* Scuba Review ATF banner (freshup2) — same margins as D2; filename ≠ *_header.webp */
-      .changdiving-box img[src*="freshup"] {
-        display: block;
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 8 / 1;
-        object-fit: cover;
-        margin: 24px auto;
-      }
-      .changdiving-box > hr,
+      
+      /* ATF hr + jump-nav — before mobile block (gold order) */
       .changdiving-box hr {
         border: none;
         border-top: 1px solid #ccc;
@@ -497,6 +459,31 @@
         padding-bottom: 18px;
         margin-bottom: 6px;
       }
+
+      @media (max-width: 700px) {
+        .changdiving-box,
+        .speciality-box,
+        .tek-box {
+          padding: 6vw 2vw;
+          border-radius: 4vw;
+          max-width: 99vw;
+          margin-bottom: 32px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        .changdiving-box img.lazy[src*="_header.webp"],
+        .changdiving-box img.lazy[src*="-header.webp"],
+        .speciality-box img.lazy[src*="_header.webp"],
+        .speciality-box img.lazy[src*="-header.webp"],
+        .tek-box img.lazy[src*="_header.webp"],
+        .tek-box img.lazy[src*="-header.webp"] {
+          max-width: 98vw;
+          width: 100%;
+          margin: 16px auto 24px auto;
+        }
+
+      }
+
 
     </style>
     <link
@@ -643,7 +630,7 @@
   </head>
   <body>
     <header>
-      <div class="hero">
+      <div class="hero hero--transactional">
         <div class="hero-logo">
           <a href="/de/">
             <img src="/img/logos/logo_cdc_white.webp" alt="Chang Diving Logo" />
@@ -671,18 +658,13 @@
         </div>
 
         <picture style="aspect-ratio: 3 / 2">
+          <!-- Desktop: 768px and up -->
           <source
             srcset="/img/products/scuba_review/refresher-header_big.webp"
             media="(min-width: 768px)"
             type="image/webp"
           />
-          <source
-            media="(max-width: 767px)"
-            srcset="/img/products/scuba_review/refresher-header_small.webp"
-            width="600"
-            height="400"
-            type="image/webp"
-          />
+          <!-- Mobile and Fallback: 600x400 -->
           <img
             class="hero-header-img"
             src="/img/products/scuba_review/refresher-header_small.webp"
@@ -732,11 +714,13 @@
           </div>
         </nav>
         <img
-          src="/img/products/scuba_review/freshup2.webp"
+          class="lazy"
+          src="/img/products/scuba_review/scuba_review_header.webp"
           alt="Auffrischungskurs im Pool mit Tauchlehrer des Chang Diving Center"
+          loading="lazy"
           width="1600"
           height="200"
-          class="lazy alignnone size-full wp-image-31514" loading="lazy" />
+        />
         <hr />
 
         <div class="videos">

@@ -411,7 +411,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 }
 ```
 
-**Sonderfall Scuba Review:** ATF-Banner heißt `freshup2.webp` (nicht `*_header.webp`) → zusätzliche Critical-Regel `.changdiving-box img[src*="freshup"]` mit denselben Margins/`aspect-ratio: 8 / 1`, plus ATF-`hr` + `.page-jump-nav`. Gallery-Bilder unter `/scuba_review/` **nicht** mitselektieren.
+**Sonderfall Scuba Review:** Banner als `scuba_review_header.webp` benennen (D2 greift), Hero wie Fun/Try (`hero--transactional`, Picture nur Desktop-`<source>` + `<img>` Fallback, kein extra Mobile-`<source>`), plus ATF-`hr` + `.page-jump-nav` im Critical **vor** dem Mobile-Block.
 ---
 
 ## 5. Typische PSI-Fallen → Fix
