@@ -484,6 +484,14 @@
         min-width: 0;
         width: 100%;
       }
+
+      /* Try Dive: one video = full width (courses use 2×50%; :only-child alone is fragile) */
+      .video-flex--single .video-responsive {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+      }
       @media (max-width: 700px) {
         .video-flex {
           flex-direction: column;
@@ -727,7 +735,7 @@
         </nav>
 
         <!-- 2. Video + What is Try Dive -->
-        <div id="intro" class="video-flex">
+        <div id="intro" class="video-flex video-flex--single">
           <div
             class="video-responsive"
             data-videoid="gHTU2MJGjBE"

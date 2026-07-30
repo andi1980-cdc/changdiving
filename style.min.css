@@ -1343,7 +1343,8 @@ main:has(> .tek-box) > .posts-submenu a {
   justify-content: center;
   position: relative;
 }
-.video-flex .video-responsive:only-child {
+.video-flex .video-responsive:only-child,
+.video-flex--single .video-responsive {
   flex: 1 1 100%;
   max-width: 100%;
   min-width: 0;
