@@ -223,6 +223,90 @@ Reserviert Höhe bevor Full-CSS / JS greifen:
 
 Critical CSS sollte außerdem `.grid-container`, `.grid-container h2`, `.grid-container p` und die Basis-Hero-Regeln enthalten (wie auf bestehenden Hub-Seiten).
 
+### D) Kurs-Boxen (`.changdiving-box` / `.speciality-box` / `.tek-box`)
+
+Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). Mobile-Padding **zuletzt** im Critical-Block, sonst überschreibt Desktop-`padding: 40px` das Mobile-Layout:
+
+```css
+.changdiving-box,
+.speciality-box,
+.tek-box {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 40px;
+  /* … weitere Layout-Props wie in style.css … */
+}
+.changdiving-box > h1,
+.speciality-box > h1,
+.tek-box > h1 {
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0077b6;
+}
+/* MUST be last in critical-css */
+@media (max-width: 700px) {
+  .changdiving-box,
+  .speciality-box,
+  .tek-box {
+    padding: 6vw 2vw;
+    border-radius: 4vw;
+    max-width: 99vw;
+    margin-bottom: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+```
+
+### E) YouTube-Platzhalter in der Box (verifiziert Juli 2026)
+
+**Symptom:** PSI meldet CLS auf `.speciality-box` / `.changdiving-box` / `.tek-box` (~0.15), obwohl Jump-Nav, Submenu und Breadcrumb auf anderen Seiten unauffällig sind.
+
+**Ursache:** Viele Kursseiten haben früh in der Box `.video-responsive`-Divs (nur Thumbnail-Background + Play-Button). Ohne Critical-CSS ist die Höhe ~0; erst `style.min.css` setzt `aspect-ratio: 16 / 9` → die Box wächst stark. Day-Trip-Seiten ohne diese Videos sind davon nicht betroffen.
+
+**Fix (funktioniert):** dieselben Regeln wie in `style.css` ins Page-`critical-css` — inkl. Mobile-Stack. Referenz: `/en/courses/nitrox-diver/` (CLS ~0.15 → ~0.03, Performance 99).
+
+```css
+.video-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.video-responsive {
+  flex: 1 1 calc(50% - 24px);
+  max-width: calc(50% - 24px);
+  min-width: 260px;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media (max-width: 700px) {
+  .video-flex {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .video-responsive {
+    max-width: 100%;
+    flex: 1 1 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
+```
+
+**Regel:** Jede neue Kurs-/Produktseite mit `.video-responsive` in der Content-Box braucht diesen Block im Critical CSS. Jump-Nav/Breadcrumb zuerst verdächtigen lohnt sich hier meist nicht.
+
 ---
 
 ## 5. Typische PSI-Fallen → Fix
@@ -233,8 +317,8 @@ Critical CSS sollte außerdem `.grid-container`, `.grid-container h2`, `.grid-co
 | CLS ≈ 0.1, Element Content-`<h1>` | H1-Styles erst aus `style.min.css` | Abschnitt 4B |
 | LCP > 4s, LCP = Hero-`<img>` | Preload spät / JS-Preload konkurriert | Abschnitt 1 |
 | Hub deutlich schlechter als `/en/` | Dutzende Eager-Kartenbilder | Abschnitt 3 |
-| CLS ≈ 0.14 auf `.speciality-box` / `.changdiving-box` / `.tek-box` | Critical stylt nur Desktop-`.changdiving-box`; Mobile-Padding fehlt | Kursseiten: alle 3 Boxen + `> h1` in Critical; Mobile-`padding: 6vw 2vw` **zuletzt** |
-| CLS bleibt auf Kurs-Box trotz Box-Padding-Fix | `.video-responsive` in der Box ohne Höhe bis `style.min.css` (`aspect-ratio: 16/9`) | Critical: `.video-flex` + `.video-responsive` inkl. Mobile-Stack |
+| CLS ≈ 0.14 auf Kurs-Box (Padding/H1) | Critical kennt nur Desktop-`.changdiving-box` | Abschnitt 4D |
+| CLS ≈ 0.15 auf Kurs-Box trotz 4D | `.video-responsive` ohne Höhe bis Full-CSS | Abschnitt **4E** (verifiziert) |
 | „Render-blocking“ `global.js` / `fonts.css` | Sync-Load | `defer` + async fonts |
 | „Improve image delivery“ große KiB | Oft Below-the-fold Tiles, nicht Hero | Lazy + `_small` für Tiles; Hero separat prüfen |
 
@@ -249,6 +333,8 @@ Critical CSS sollte außerdem `.grid-container`, `.grid-container h2`, `.grid-co
 - [ ] Critical: Mobile-Hero `aspect-ratio: 3 / 2`
 - [ ] Critical: `.grid-container h1` (+ Mobile @700px)
 - [ ] Critical: Submenu/Breadcrumb falls im Above-the-fold
+- [ ] Kurs-Box: `.changdiving-box` **und** `.speciality-box` / `.tek-box` + Mobile-Padding zuletzt (4D)
+- [ ] Kurs-Box mit YouTube-Platzhaltern: `.video-flex` + `.video-responsive` `aspect-ratio: 16 / 9` im Critical (4E)
 - [ ] `fonts.css` async + noscript-Fallback
 - [ ] `style.min.css` async
 - [ ] `global.js` mit `defer`, **kein** Head-Preload dafür
@@ -264,12 +350,16 @@ Critical CSS sollte außerdem `.grid-container`, `.grid-container h2`, `.grid-co
 | `e06b1198` | Hero CLS + Dual-Sources + Solo-Diver-Rename/301 |
 | `7af25cd6` | Content-H1 / Submenu / Breadcrumb in Critical CSS |
 | `a6cf8b7d` | LCP: frühes Image-Preload, defer JS, async fonts |
+| `bee236a0` | Hub-Karten `loading="lazy"` + Gold-Pattern-Doc |
+| `cba43bb2` | Kurs-Boxen + H1 in Critical (4D) |
+| `a3a35126` | Video `aspect-ratio` in Critical (4E) — CLS-Fix verifiziert |
 
 ---
 
 ## Kurzfassung
 
 1. **LCP:** kleines Hero-Bild zuerst laden, nichts anderes im Weg.  
-2. **CLS:** Finales Layout schon im Critical CSS (Hero 3:2 + H1-Maße).  
+2. **CLS:** Finales Layout schon im Critical CSS (Hero 3:2 + H1-Maße + Kurs-Boxen + Videos 16:9).  
 3. **JS/Fonts:** nie den kritischen Pfad blockieren.  
-4. **Hubs:** Karten lazy — Vorbild `/en/` (nur Logo + Hero eager).
+4. **Hubs:** Karten lazy — Vorbild `/en/` (nur Logo + Hero eager).  
+5. **Kurs-Boxen mit Videos:** Critical muss `.video-responsive` kennen — sonst meldet PSI CLS auf der Box.
