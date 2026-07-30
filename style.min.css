@@ -1332,6 +1332,7 @@ main:has(> .tek-box) > .posts-submenu a {
   flex: 1 1 calc(50% - 24px);
   max-width: calc(50% - 24px);
   min-width: 260px;
+  width: 100%;
   aspect-ratio: 16/9;
   background: #000;
   border-radius: 12px;
@@ -1341,6 +1342,12 @@ main:has(> .tek-box) > .posts-submenu a {
   align-items: center;
   justify-content: center;
   position: relative;
+}
+.video-flex .video-responsive:only-child {
+  flex: 1 1 100%;
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
 }
 .video-responsive.lyt-activated {
   display: block;
@@ -1377,6 +1384,8 @@ main:has(> .tek-box) > .posts-submenu a {
   .video-responsive {
     max-width: 100%;
     flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
     aspect-ratio: 16/9;
   }
 }
@@ -1448,6 +1457,8 @@ main:has(> .tek-box) > .posts-submenu a {
   .video-responsive {
     max-width: 100%;
     flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
     aspect-ratio: 16/9;
     border-radius: 4vw;
   }

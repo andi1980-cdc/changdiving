@@ -285,6 +285,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
   flex: 1 1 calc(50% - 24px);
   max-width: calc(50% - 24px);
   min-width: 260px;
+  width: 100%;
   aspect-ratio: 16 / 9;
   background: #000;
   border-radius: 12px;
@@ -294,6 +295,13 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
   justify-content: center;
   position: relative;
 }
+/* Single video (Try Dive): do not stay at 50% max-width */
+.video-flex .video-responsive:only-child {
+  flex: 1 1 100%;
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
 @media (max-width: 700px) {
   .video-flex {
     flex-direction: column;
@@ -302,12 +310,16 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
   .video-responsive {
     max-width: 100%;
     flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
     aspect-ratio: 16 / 9;
   }
 }
 ```
 
 **Regel:** Jede neue Kurs-/Produktseite mit `.video-responsive` in der Content-Box braucht diesen Block im Critical CSS. Jump-Nav/Breadcrumb zuerst verdächtigen lohnt sich hier meist nicht.
+
+**Try Dive vs Fun Dives:** Fun Dives hat früh ein Banner → **D2**. Try Dive hat früh **ein** Video (nicht zwei wie Nitrox) → **4E** plus `:only-child` (sonst bleibt Critical bei `max-width: 50%` / `min-width: 260px` und springt erst mit Full-CSS auf 100%).
 
 ### D2) Day-Trip Banner-Bild in der Box (`img.lazy` `*_header.webp`)
 
@@ -368,7 +380,7 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 - [ ] Critical: Submenu/Breadcrumb falls im Above-the-fold
 - [ ] Kurs-Box: `.changdiving-box` **und** `.speciality-box` / `.tek-box` + Mobile-Padding zuletzt (4D)
 - [ ] Day-Trip mit Banner-`*_header.webp` in der Box: Critical-Margin wie `style.css` (D2)
-- [ ] Kurs-Box mit YouTube-Platzhaltern: `.video-flex` + `.video-responsive` `aspect-ratio: 16 / 9` im Critical (4E)
+- [ ] Kurs-Box mit YouTube-Platzhaltern: `.video-flex` + `.video-responsive` `aspect-ratio: 16 / 9` im Critical (4E); bei nur einem Video auch `:only-child` (100% Breite)
 - [ ] `fonts.css` async + noscript-Fallback
 - [ ] `style.min.css` async
 - [ ] `global.js` mit `defer`, **kein** Head-Preload dafür

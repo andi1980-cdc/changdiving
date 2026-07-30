@@ -447,6 +447,7 @@
         flex: 1 1 calc(50% - 24px);
         max-width: calc(50% - 24px);
         min-width: 260px;
+        width: 100%;
         aspect-ratio: 16 / 9;
         background: #000;
         border-radius: 12px;
@@ -456,6 +457,13 @@
         justify-content: center;
         position: relative;
       }
+      /* Try Dive etc.: single video must not stay at 50% max-width */
+      .video-flex .video-responsive:only-child {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+      }
       @media (max-width: 700px) {
         .video-flex {
           flex-direction: column;
@@ -464,6 +472,8 @@
         .video-responsive {
           max-width: 100%;
           flex: 1 1 100%;
+          min-width: 0;
+          width: 100%;
           aspect-ratio: 16 / 9;
         }
       }
