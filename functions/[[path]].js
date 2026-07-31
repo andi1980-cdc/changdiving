@@ -107,7 +107,6 @@ const ROOT_FILES = new Set([
   "/style.css",
   "/robots.txt",
   "/sitemap.xml",
-  "/sitemap-images.xml",
   "/site.webmanifest",
   "/favicon.ico",
   "/favicon.svg",
@@ -1042,7 +1041,11 @@ const REDIRECTS_EXACT_RAW = [
     "/th/posts/scuba-knowledge/smb-guide/",
   ],
 
-  // DE Tipps-und-Tricks alte Slugs
+  // DE Tipps-und-Tricks alte Slugs (GSC 404 Coverage 2026-07)
+  [
+    "/de/posts/tipps-und-tricks/",
+    "/de/posts/tips-and-tricks/",
+  ],
   [
     "/de/posts/tipps-und-tricks/tieftauchen/",
     "/de/posts/tips-and-tricks/deep-diving/",
@@ -1051,14 +1054,34 @@ const REDIRECTS_EXACT_RAW = [
     "/de/posts/tipps-und-tricks/open-water-dauer/",
     "/de/posts/tips-and-tricks/open-water-duration/",
   ],
+  [
+    "/de/posts/tipps-und-tricks/welcher-kurs/",
+    "/de/posts/tips-and-tricks/which-course/",
+  ],
 
   // TH alte Thai-Slugs
   ["/th/about/กระบวนการดำน้ำ/", "/th/about/"],
   ["/th/ทำไมการจองดำน้ำในเกาะช/", "/th/posts/straight-talk/book-in-advance/"],
   ["/th/ทีม/นาย-อันเดรียส-ไมเออร์/", "/th/about/"],
   ["/th/นโยบายความเป็นส่วนตัว/", "/th/privacy-policy/"],
+  ["/th/ข้อตกลงและเงื่อนไข/", "/th/terms-and-conditions/"],
+  ["/th/เกี่ยวกับเรา/นโยบายการคืนเงิน/", "/th/refund-policy/"],
+  [
+    "/th/คอร์ส-owd-ใช้เวลานานเท่าไห/",
+    "/th/posts/tips-and-tricks/open-water-duration/",
+  ],
 
-  // sitemap-index.xml was removed; 410 is handled in FORCE_GONE_EXACT below
+  // Legacy docs filenames (GSC 404 Coverage 2026-07)
+  [
+    "/docs/TH_DCS_Field_Evaluation_Slate.pdf",
+    "/docs/EN_DCS_Field_Evaluation_Slate.pdf",
+  ],
+  [
+    "/docs/SDI-Diver-Standards_12_Master_สกูบา_Diver.pdf",
+    "/docs/SDI-Diver-Standards_12_Master_Scuba_Diver.pdf",
+  ],
+
+  // sitemap-index.xml / sitemap-images.xml removed; 410 in FORCE_GONE_EXACT below
 
   // URLs ohne Sprachpräfix → English (erhalten 301 statt globalem 410)
   ["/privacy-policy/", "/en/privacy-policy/"],
@@ -1246,8 +1269,9 @@ const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW.map(({ from, to }) => ({
 // 3) EXAKTE 410 — als Set (Strings). Vollständig URL-encodiert eintragen.
 const FORCE_GONE_EXACT = new Set(
   [
-    // Sitemap-Index (removed, permanently gone)
+    // Sitemaps removed / never published (permanently gone)
     "/sitemap-index.xml",
+    "/sitemap-images.xml",
     // Beispiele:
     "/what-is-nitrox//1000",
     "/de/123test/",
