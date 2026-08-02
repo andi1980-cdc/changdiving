@@ -440,15 +440,267 @@
           margin-right: 10px;
         }
       }
+
+      /* static reviews block (also in style.min.css) */
+      .cdc-reviews {
+        --sea: #0077b6;
+        --sea-dark: #005f87;
+        --sea-deep: #023e5c;
+        --ink: #1a2330;
+        --muted: #5a6b7a;
+        --line: #d5e4ee;
+        --star: #f0b429;
+        --google: #4285f4;
+        --tripadvisor: #00aa6c;
+        --facebook: #1877f2;
+        width: 100%;
+        margin: 1.75rem 0 2rem;
+        color: var(--ink);
+        line-height: 1.55;
+      }
+      .cdc-reviews .reviews-intro {
+        width: 100%;
+        text-align: center;
+      }
+      .cdc-reviews .reviews-heading,
+      .changdiving-box .cdc-reviews .reviews-heading {
+        margin: 0 0 0.35rem;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #333;
+        text-align: center;
+      }
+      .cdc-reviews .reviews-lead,
+      .changdiving-box .cdc-reviews .reviews-lead {
+        margin: 0 auto;
+        max-width: 70ch;
+        font-size: 0.95rem;
+        color: var(--muted);
+        text-align: center;
+      }
+      .cdc-reviews .reviews-banner {
+        padding: 1.4rem 1.25rem 1.35rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 119, 182, 0.07) 0%,
+          rgba(0, 119, 182, 0.02) 45%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+      }
+      .cdc-reviews .reviews-banner-top {
+        display: grid;
+        gap: 1.15rem 1.75rem;
+        align-items: center;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 800px) {
+        .cdc-reviews .reviews-banner {
+          padding: 1.6rem 1.5rem 1.5rem;
+        }
+        .cdc-reviews .reviews-banner-top {
+          grid-template-columns: minmax(220px, 280px) 1fr;
+        }
+        .cdc-reviews .review-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .cdc-reviews .review-tile {
+          padding: 1.25rem 1.15rem 0.25rem;
+          border-bottom: none;
+          border-right: 1px solid var(--line);
+        }
+        .cdc-reviews .review-tile:first-child {
+          padding-left: 0;
+        }
+        .cdc-reviews .review-tile:last-child {
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+      .cdc-reviews .reviews-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+      .cdc-reviews .reviews-brand img {
+        width: 64px;
+        height: auto;
+        display: block;
+        flex: 0 0 auto;
+      }
+      .cdc-reviews .reviews-brand h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--sea-deep);
+      }
+      .cdc-reviews .reviews-score {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.35rem 0.55rem;
+        margin-top: 0.3rem;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .cdc-reviews .stars {
+        color: var(--star);
+        letter-spacing: 0.06em;
+        font-size: 1rem;
+        line-height: 1;
+      }
+      .cdc-reviews .reviews-score .rating {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .cdc-reviews .reviews-banner hr {
+        margin: 1.15rem 0;
+        border: none;
+        border-top: 1px solid var(--line);
+      }
+      .cdc-reviews .reviews-actions {
+        margin: 0;
+        text-align: center;
+      }
+      .cdc-reviews .platform-label {
+        margin: 0 0 0.5rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .cdc-reviews .platform-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.55rem;
+      }
+      .cdc-reviews .platform-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.6rem 0.9rem;
+        border-radius: 6px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 500;
+      }
+      .cdc-reviews .platform-btn .dot,
+      .cdc-reviews .platform-name .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+      }
+      .cdc-reviews .platform-btn.google .dot,
+      .cdc-reviews .review-tile.google .platform-name .dot {
+        background: var(--google);
+      }
+      .cdc-reviews .platform-btn.tripadvisor .dot,
+      .cdc-reviews .review-tile.tripadvisor .platform-name .dot {
+        background: var(--tripadvisor);
+      }
+      .cdc-reviews .platform-btn.facebook .dot,
+      .cdc-reviews .review-tile.facebook .platform-name .dot {
+        background: var(--facebook);
+      }
+      .cdc-reviews .platform-btn .count {
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .cdc-reviews .guest-summary .label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--sea);
+      }
+      .cdc-reviews .guest-summary p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--ink);
+      }
+      .cdc-reviews .review-grid {
+        display: grid;
+        gap: 0;
+        margin-top: 1.35rem;
+        padding-top: 0.25rem;
+        border-top: 1px solid var(--line);
+      }
+      .cdc-reviews .review-tile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.15rem 0;
+        min-height: 100%;
+        border-bottom: 1px solid var(--line);
+      }
+      .cdc-reviews .review-tile:last-child {
+        border-bottom: none;
+        padding-bottom: 0.15rem;
+      }
+      .cdc-reviews .review-platform {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+      .cdc-reviews .platform-name {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .cdc-reviews .review-quote {
+        margin: 0;
+        flex: 1;
+        font-size: 0.98rem;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+      .cdc-reviews .review-author {
+        margin: 0;
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .cdc-reviews .read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        align-self: flex-start;
+        margin-top: 0.15rem;
+        color: var(--sea);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .cdc-reviews .read-more::after {
+        content: "→";
+      }
     </style>
+    <link rel="preload" href="/style.min.css?v=cdc-reviews-1" as="style" />
     <link
-      rel="preload"
-      href="/style.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      rel="stylesheet"
+      href="/style.min.css?v=cdc-reviews-1"
+      media="print"
+      onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css" />
+      <link rel="stylesheet" href="/style.min.css?v=cdc-reviews-1" />
       <!-- Critical Image Preload -->
     </noscript>
     <script type="application/ld+json">
