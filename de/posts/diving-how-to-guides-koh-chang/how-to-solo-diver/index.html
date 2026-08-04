@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/solo-diver-at-htms-chang-wreck_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/solo-diver-at-htms-chang-wreck_small.webp"
+    />
 
     <title>
       So funktioniert der SDI Solo Diver Kurs bei Chang Diving – Schritt für
@@ -292,7 +297,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -336,7 +341,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -370,6 +375,46 @@
         margin: 0 0 2px;
         padding: 2px 8px 4px;
         border-bottom: 1px solid #ccc;
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -526,12 +571,14 @@
         <a href="/de/posts/koh-chang-diving-travel-guides/">Reiseführer</a>
         <a href="/de/posts/straight-talk/">Klartext</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
+        <a href="/de/posts/diving-how-to-guides-koh-chang/">How to Guides</a> ›
+        how to solo diver
+      </nav>
 
       <div class="posts-box">
-        <h1>
-          So funktioniert der SDI Solo Diver Kurs
-        </h1>
+        <h1>So funktioniert der SDI Solo Diver Kurs</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Schritt-für-Schritt: Voraussetzungen, Ausrüstung, Planung &
           Sicherheit.
@@ -880,7 +927,12 @@
         </p>
 
         <div style="margin-top: 1em; text-align: center">
-          <a href="mailto:info@changdiving.com?subject=SDI%20Solo%20Diver%20Kurs%20Koh%20Chang%20-%20Anfrage&body=Hallo%20Chang%20Diving%20Team%2C%0A%0AIch%20interessiere%20mich%20f%C3%BCr%20den%20SDI%20Solo%20Diver%20Kurs%20auf%20Koh%20Chang.%0A%0AName%20(in%20Englisch)%3A%0AGeburtsdatum%3A%0AZertifizierungslevel%20%2B%20Kartenfoto%3A%0AAnzahl%20geloggter%20Tauchg%C3%A4nge%3A%0ALetzter%20Tauchgang%20(Datum%20%2B%20Ort)%3A%0AGeplantes%20redundantes%20Luft-Setup%20(Pony%2FTwinset%2Fetc.)%3A%0AKoh%20Chang%20Reisedaten%3A%0AHotelname%3A%0ATelefon%2FWhatsApp%3A%0A%0AVielen%20Dank!" target="_blank" rel="noopener noreferrer" class="btn-cta">
+          <a
+            href="mailto:info@changdiving.com?subject=SDI%20Solo%20Diver%20Kurs%20Koh%20Chang%20-%20Anfrage&body=Hallo%20Chang%20Diving%20Team%2C%0A%0AIch%20interessiere%20mich%20f%C3%BCr%20den%20SDI%20Solo%20Diver%20Kurs%20auf%20Koh%20Chang.%0A%0AName%20(in%20Englisch)%3A%0AGeburtsdatum%3A%0AZertifizierungslevel%20%2B%20Kartenfoto%3A%0AAnzahl%20geloggter%20Tauchg%C3%A4nge%3A%0ALetzter%20Tauchgang%20(Datum%20%2B%20Ort)%3A%0AGeplantes%20redundantes%20Luft-Setup%20(Pony%2FTwinset%2Fetc.)%3A%0AKoh%20Chang%20Reisedaten%3A%0AHotelname%3A%0ATelefon%2FWhatsApp%3A%0A%0AVielen%20Dank!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cta"
+          >
             📩 Solo Diver Anfrage senden
           </a>
         </div>
@@ -944,7 +996,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

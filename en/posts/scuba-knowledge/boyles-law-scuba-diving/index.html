@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/scuba-diving-physics-pressure-boyles-law_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/scuba-diving-physics-pressure-boyles-law_small.webp"
+    />
 
     <title>
       Scuba Diving Physics – Pressure &amp; Boyle’s Law Explained | Real Diving
@@ -379,7 +384,7 @@
         font-size: 0.98rem;
         font-weight: 600;
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -431,7 +436,46 @@
           margin-top: 1.5em;
           margin-bottom: 0.8em;
         }
-
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -526,8 +570,7 @@
         ]
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero">
@@ -582,7 +625,9 @@
           />
           <source
             media="(max-width: 767px)"
-            srcset="/img/posts/scuba-diving-physics-pressure-boyles-law_small.webp"
+            srcset="
+              /img/posts/scuba-diving-physics-pressure-boyles-law_small.webp
+            "
             width="600"
             height="400"
             type="image/webp"
@@ -608,11 +653,13 @@
         <a href="/en/posts/koh-chang-diving-travel-guides/">Travel guides</a>
         <a href="/en/posts/straight-talk/">Straight talk</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/">🏠 Home</a> › <a href="/en/posts/">Posts</a> ›
+        <a href="/en/posts/scuba-knowledge/">Scuba Knowledge</a> › boyles law
+        scuba diving
+      </nav>
       <div class="posts-box">
-        <h1>
-          Scuba Diving Physics &amp; Boyle’s Law
-        </h1>
+        <h1>Scuba Diving Physics &amp; Boyle’s Law</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Pressure, buoyancy and real dives — explained for everyday divers
         </p>
@@ -1246,7 +1293,8 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      class="whatsapp-btn">
+      class="whatsapp-btn"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
@@ -1258,7 +1306,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
 
     <script type="application/ld+json">
       {

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/posts_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/posts_small.webp"
+    />
 
     <title>
       Alles über das Tauchen auf Koh Chang – Tipps, Guides & Meeresleben | Chang
@@ -293,7 +298,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -337,7 +342,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -365,6 +370,46 @@
           aspect-ratio: 3 / 2;
           object-fit: cover;
         }
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -445,7 +490,7 @@
       ><link rel="stylesheet" href="/style.min.css" />
       <!-- Critical Image Preload -->
     </noscript>
-      </head>
+  </head>
   <body>
     <header>
       <!-- Hero-Bereich -->
@@ -514,11 +559,11 @@
           <a href="/de/posts/koh-chang-diving-travel-guides/">Reiseführer</a>
           <a href="/de/posts/straight-talk/">Klartext</a>
         </nav>
-        <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/de/">🏠 Startseite</a> › Posts
+        </nav>
 
-        <h1>
-          Alles über das Tauchen auf Koh Chang
-        </h1>
+        <h1>Alles über das Tauchen auf Koh Chang</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Willkommen auf unserem Tauchblog für Koh Chang! Entdecke
           Top-Tauchplätze, Tipps von Experten, Meereslebewesen und
@@ -601,7 +646,9 @@
               src="/img/posts/marine-life-koh-chang_small.webp"
               alt="Meeresleben auf Koh Chang - Entdecke die Unterwasserwelt und Artenvielfalt"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🐠 Meeresleben</h3>
               <p>
@@ -615,7 +662,9 @@
               src="/img/posts/knowledge-base_small.webp"
               alt="Tauchtheorie - Grundlegendes Wissen für sicheres Tauchen"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>📚 Wissensbasis</h3>
               <p>
@@ -627,12 +676,15 @@
           </a>
           <a
             href="/de/posts/diving-how-to-guides-koh-chang/"
-            class="three columns">
+            class="three columns"
+          >
             <img
               src="/img/posts/how-to-guide_small.webp"
               alt="Tauchen How-To Guides - Schritt-für-Schritt Tauchtechniken und praktische Fähigkeiten"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🎯 How-to Guides</h3>
               <p>
@@ -647,7 +699,9 @@
               src="/img/posts/straight-talk_small.webp"
               alt="Klartext - Ehrliche Einblicke in die Tauchbranche und Ausrüstung"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>💬 Klartext</h3>
               <p>
@@ -661,7 +715,9 @@
               src="/img/posts/tips-and-tricks_small.webp"
               alt="Tipps und Tricks - Verbessere deine Tauchfähigkeiten mit Expertentipps"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>💡 Tipps & Tricks</h3>
               <p>
@@ -672,12 +728,15 @@
           </a>
           <a
             href="/de/posts/koh-chang-diving-travel-guides/"
-            class="three columns">
+            class="three columns"
+          >
             <img
               src="/img/posts/travel-guids_small.webp"
               alt="Koh Chang Reiseführer - Plane deinen Tauchurlaub und erkunde die Insel"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🏝️ Reiseführer</h3>
               <p>
@@ -813,7 +872,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

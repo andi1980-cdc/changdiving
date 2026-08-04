@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/faq/faq_header_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/faq/faq_header_small.webp"
+    />
 
     <title>
       Diving FAQs – All Your Koh Chang Questions Answered | Chang Diving
@@ -299,7 +304,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -343,7 +348,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -371,6 +376,46 @@
           aspect-ratio: 3 / 2;
           object-fit: cover;
         }
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -605,11 +650,11 @@
           id="breadcrumb"
           class="breadcrumb"
           aria-label="Breadcrumb navigation"
-        ></nav>
+        >
+          <a href="/en/">🏠 Home</a> › FAQs
+        </nav>
 
-        <h1>
-          Your Questions Answered – Diving in Koh Chang Made Simple
-        </h1>
+        <h1>Your Questions Answered – Diving in Koh Chang Made Simple</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Browse our most frequently asked questions – from dive courses and
           safety to gear, logistics, and travel advice. All in one place.
@@ -618,7 +663,8 @@
         <hr />
 
         <section
-          class="faq-intro px-4 py-6 max-w-3xl mx-auto text-base leading-relaxed">
+          class="faq-intro px-4 py-6 max-w-3xl mx-auto text-base leading-relaxed"
+        >
           <h2 class="text-3xl font-bold mb-4">
             Your Questions Answered – Diving in Koh Chang Made Simple
           </h2>
@@ -658,7 +704,8 @@
 
           <p>
             If you don’t find your answer here, just
-            <a href="/en/contact/" class="text-blue-600 underline">get in touch with our team</a
+            <a href="/en/contact/" class="text-blue-600 underline"
+              >get in touch with our team</a
             >
             – we’re happy to help in English, German, and Thai.
           </p>
@@ -671,7 +718,8 @@
         >
           <a
             href="/en/faqs/faq-general-questions-koh-chang/"
-            class="faq-card general">
+            class="faq-card general"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -705,7 +753,8 @@
 
           <a
             href="/en/faqs/faq-getting-here-accommodation/"
-            class="faq-card accommodation">
+            class="faq-card accommodation"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -769,7 +818,8 @@
 
           <a
             href="/en/faqs/faq-diving-health-safety-thailand/"
-            class="faq-card health">
+            class="faq-card health"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -801,7 +851,8 @@
 
           <a
             href="/en/faqs/faq-try-dive-fun-dives-koh-chang/"
-            class="faq-card trydive">
+            class="faq-card trydive"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -833,7 +884,8 @@
 
           <a
             href="/en/faqs/faq-dive-courses-koh-chang/"
-            class="faq-card courses">
+            class="faq-card courses"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -865,7 +917,8 @@
 
           <a
             href="/en/faqs/faq-equipment-logistics-koh-chang/"
-            class="faq-card equipment">
+            class="faq-card equipment"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -897,7 +950,8 @@
 
           <a
             href="/en/faqs/faq-booking-payment-scuba-koh-chang/"
-            class="faq-card booking">
+            class="faq-card booking"
+          >
             <div class="faq-card-image">
               <picture>
                 <source
@@ -953,10 +1007,12 @@
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
         width="128"
-        height="30" loading="lazy" />
+        height="30"
+        loading="lazy"
+      />
     </a>
     <footer id="footer"></footer>
-    <script src="../../js/global.js" defer></script>
+    <script src="../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

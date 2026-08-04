@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/about/about_header_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/about/about_header_small.webp"
+    />
 
     <title>
       เกี่ยวกับ ช้างไดร์วิ่ง เซ็นเตอร์ เกาะช้าง | ศูนย์ดำน้ำมืออาชีพตั้งแต่ปี
@@ -322,7 +327,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -386,6 +391,46 @@
           aspect-ratio: 3 / 2;
           object-fit: cover;
         }
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -907,12 +952,8 @@
 
         <!-- CTA Buttons -->
         <div style="text-align: center; margin: 30px 0">
-          <a href="/th/courses/" class="btn-cta">
-            📚 จองคอร์สเลย
-          </a>
-          <a href="/th/day-trips/" class="btn-cta">
-            🤿 จองทริปเลย
-          </a>
+          <a href="/th/courses/" class="btn-cta"> 📚 จองคอร์สเลย </a>
+          <a href="/th/day-trips/" class="btn-cta"> 🤿 จองทริปเลย </a>
         </div>
 
         <hr />
@@ -931,7 +972,12 @@
         </p>
 
         <p style="text-align: center; margin-top: 20px">
-          <a href="https://share.google/XPpvD4gObVLN5JfUg" target="_blank" rel="noopener noreferrer" class="btn-cta">
+          <a
+            href="https://share.google/XPpvD4gObVLN5JfUg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cta"
+          >
             📍 ดูตำแหน่งบน Google Maps
           </a>
         </p>
@@ -970,7 +1016,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../js/global.js" defer></script>
+    <script src="../../js/global.min.js" defer></script>
 
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

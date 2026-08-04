@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/tech_diving_koh_chang_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/tech_diving_koh_chang_small.webp"
+    />
 
     <title>
       Tec-Tauchen Koh Chang – TDI-Training &amp; HTMS-Chang-Wrack | Chang Diving
@@ -281,7 +286,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -325,7 +330,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -395,6 +400,46 @@
           #5a5a5a 45%,
           #ff8a5c 100%
         );
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -471,8 +516,7 @@
         }
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero hero--transactional">
@@ -529,12 +573,14 @@
         <a href="/de/posts/koh-chang-diving-travel-guides/">Reiseführer</a>
         <a href="/de/posts/straight-talk/">Klartext</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
+        <a href="/de/posts/straight-talk/">Straight Talk</a> › tech diving koh
+        chang
+      </nav>
 
       <div class="tek-box">
-        <h1>
-          Tec-Tauchen Koh Chang – TDI-Training &amp; HTMS-Chang-Wrack
-        </h1>
+        <h1>Tec-Tauchen Koh Chang – TDI-Training &amp; HTMS-Chang-Wrack</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Klartext zu Technical Diving Koh Chang Thailand: realistische
           Erwartungen, Wrack HTMS Chang, TDI-Kurse – und für wen dieser Text
@@ -1136,10 +1182,16 @@
           <div
             style="margin: 16px 0; display: flex; flex-wrap: wrap; gap: 12px"
           >
-            <a class="btn btn-primary btn-cta btn-cta--tek" href="mailto:info@changdiving.com?subject=Tec-Tauchen%20Koh%20Chang%20-%20Anfrage&body=Hallo%20Chang%20Diving%20Team%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCrs%20Technical%20Diving%20auf%20Koh%20Chang.%0A%0AName%3A%0AGeburtsdatum%3A%0AQualifikation%20%2B%20Kartenfoto%3A%0AAnzahl%20geloggte%20Tauchg%C3%A4nge%3A%0ALetzte%20Tec-%2FTief-Tauchg%C3%A4nge%20(Datum%20%2B%20Tiefe)%3A%0AZiele%20(z.%20B.%20Advanced%20Nitrox%20zuerst%2C%20Wrack%2C%20Paket)%3A%0AGeplante%20Reisedaten%20Koh%20Chang%3A%0AHotel%3A%0ATelefon%20%2F%20WhatsApp%3A%0A%0ADanke">
+            <a
+              class="btn btn-primary btn-cta btn-cta--tek"
+              href="mailto:info@changdiving.com?subject=Tec-Tauchen%20Koh%20Chang%20-%20Anfrage&body=Hallo%20Chang%20Diving%20Team%2C%0A%0Aich%20interessiere%20mich%20f%C3%BCrs%20Technical%20Diving%20auf%20Koh%20Chang.%0A%0AName%3A%0AGeburtsdatum%3A%0AQualifikation%20%2B%20Kartenfoto%3A%0AAnzahl%20geloggte%20Tauchg%C3%A4nge%3A%0ALetzte%20Tec-%2FTief-Tauchg%C3%A4nge%20(Datum%20%2B%20Tiefe)%3A%0AZiele%20(z.%20B.%20Advanced%20Nitrox%20zuerst%2C%20Wrack%2C%20Paket)%3A%0AGeplante%20Reisedaten%20Koh%20Chang%3A%0AHotel%3A%0ATelefon%20%2F%20WhatsApp%3A%0A%0ADanke"
+            >
               Anfrage per E-Mail
             </a>
-            <a class="btn btn-secondary btn-cta btn-cta--tek" href="/de/courses/technical-diving-courses/">
+            <a
+              class="btn btn-secondary btn-cta btn-cta--tek"
+              href="/de/courses/technical-diving-courses/"
+            >
               Übersicht Technical Diving Kurse
             </a>
           </div>
@@ -1192,7 +1244,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
 
     <script type="application/ld+json">
       {

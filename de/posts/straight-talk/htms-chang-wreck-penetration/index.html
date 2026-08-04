@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/htms-chang-wreck-penetration_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/htms-chang-wreck-penetration_small.webp"
+    />
 
     <title>HTMS Chang: Wrack-Penetration vs. Swim-through | Chang Diving</title>
     <meta
@@ -301,7 +306,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -345,7 +350,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -465,6 +470,46 @@
           #5a5a5a 45%,
           #ff8a5c 100%
         );
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <style>
@@ -639,8 +684,7 @@
         }
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero hero--transactional">
@@ -709,12 +753,14 @@
         <a href="/de/posts/koh-chang-diving-travel-guides/">Reiseführer</a>
         <a href="/de/posts/straight-talk/">Klartext</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
+        <a href="/de/posts/straight-talk/">Straight Talk</a> › htms chang wreck
+        penetration
+      </nav>
 
       <div class="tek-box">
-        <h1>
-          HTMS Chang: Wrack-Penetration vs. Swim-through
-        </h1>
+        <h1>HTMS Chang: Wrack-Penetration vs. Swim-through</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Wo die Lichtzone endet, warum dein Tiefenlimit für die gesamte
           Penetration gilt – und was „volles Overhead“ wirklich bedeutet.
@@ -1530,7 +1576,8 @@
             </a>
             <a
               href="/de/posts/scuba-knowledge/gas-consumption/"
-              class="three columns">
+              class="three columns"
+            >
               <img
                 src="/img/posts/gas-consumption_small.webp"
                 alt="Gasverbrauch und -planung, SAC"
@@ -1613,7 +1660,8 @@
             </a>
             <a
               href="/de/posts/straight-talk/technical-diver-stories/"
-              class="three columns">
+              class="three columns"
+            >
               <img
                 src="/img/posts/technical_diver_stories_header_small.webp"
                 alt="Technical Diver Stories, Koh Chang"
@@ -1696,7 +1744,8 @@
             </a>
             <a
               href="/de/posts/scuba-knowledge/wreck-diving-koh-chang/"
-              class="three columns">
+              class="three columns"
+            >
               <img
                 src="/img/posts/wrecks-around-koh-chang_small.webp"
                 alt="Wracktauchen Koh Chang – Überblick"
@@ -1744,7 +1793,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

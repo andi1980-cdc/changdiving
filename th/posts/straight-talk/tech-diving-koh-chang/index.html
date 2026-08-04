@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/tech_diving_koh_chang_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/tech_diving_koh_chang_small.webp"
+    />
 
     <title>
       ดำน้ำเทคนิคเกาะช้าง – หลักสูตร TDI และเรือจม เรือหลวงช้าง | ช้างไดฟ์วิ่ง
@@ -281,7 +286,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -325,7 +330,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -395,6 +400,46 @@
           #5a5a5a 45%,
           #ff8a5c 100%
         );
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -471,8 +516,7 @@
         }
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero hero--transactional">
@@ -529,12 +573,14 @@
         <a href="/th/posts/koh-chang-diving-travel-guides/">ไกด์ท่องเที่ยว</a>
         <a href="/th/posts/straight-talk/">พูดตรงๆ</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/th/">🏠 หน้าแรก</a> › <a href="/th/posts/">Posts</a> ›
+        <a href="/th/posts/straight-talk/">Straight Talk</a> › tech diving koh
+        chang
+      </nav>
 
       <div class="tek-box">
-        <h1>
-          ดำน้ำเทคนิคเกาะช้าง – หลักสูตร TDI และเรือจม เรือหลวงช้าง
-        </h1>
+        <h1>ดำน้ำเทคนิคเกาะช้าง – หลักสูตร TDI และเรือจม เรือหลวงช้าง</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           พูดตรงๆ เรื่องดำน้ำเทคนิคที่เกาะช้าง: ความจริงของพื้นที่ เรือหลวงช้าง
           เส้นทาง TDI และใครเหมาะกับการเริ่มที่นี่
@@ -1120,10 +1166,16 @@
           <div
             style="margin: 16px 0; display: flex; flex-wrap: wrap; gap: 12px"
           >
-            <a class="btn btn-primary btn-cta btn-cta--tek" href="mailto:info@changdiving.com?subject=TDI%20%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%84%20%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%20-%20%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%96%E0%B8%B2%E0%B8%A1&body=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5%20Chang%20Diving%0A%0A%E0%B8%AA%E0%B8%99%E0%B9%83%E0%B8%88%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%84%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%0A%0A%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%3A%0A%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94%3A%0A%E0%B9%83%E0%B8%9A%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%20%2B%20%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%83%E0%B8%9A%3A%0A%E0%B8%88%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%99%E0%B9%84%E0%B8%94%E0%B8%9F%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%3A%0A%E0%B9%84%E0%B8%94%E0%B8%9F%E0%B9%8C%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94%20%28%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%20%2B%20%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B6%E0%B8%81%29%3A%0A%E0%B9%80%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%20%28%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%99%20Advanced%20Nitrox%20%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%20wreck%20%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%29%3A%0A%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%3A%0A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%3A%0A%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%20%2F%20WhatsApp%3A%0A%0A%E0%B8%82%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%B8%E0%B8%93">
+            <a
+              class="btn btn-primary btn-cta btn-cta--tek"
+              href="mailto:info@changdiving.com?subject=TDI%20%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%84%20%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%20-%20%E0%B8%AA%E0%B8%AD%E0%B8%9A%E0%B8%96%E0%B8%B2%E0%B8%A1&body=%E0%B8%AA%E0%B8%A7%E0%B8%B1%E0%B8%AA%E0%B8%94%E0%B8%B5%20Chang%20Diving%0A%0A%E0%B8%AA%E0%B8%99%E0%B9%83%E0%B8%88%E0%B8%AD%E0%B8%9A%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%99%E0%B8%B4%E0%B8%84%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%0A%0A%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%3A%0A%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B9%80%E0%B8%81%E0%B8%B4%E0%B8%94%3A%0A%E0%B9%83%E0%B8%9A%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%A3%E0%B8%AD%E0%B8%87%20%2B%20%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%83%E0%B8%9A%3A%0A%E0%B8%88%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%99%E0%B9%84%E0%B8%94%E0%B8%9F%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9A%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B6%E0%B8%81%3A%0A%E0%B9%84%E0%B8%94%E0%B8%9F%E0%B9%8C%E0%B9%80%E0%B8%97%E0%B8%84%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%A5%E0%B9%88%E0%B8%B2%E0%B8%AA%E0%B8%B8%E0%B8%94%20%28%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%20%2B%20%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B6%E0%B8%81%29%3A%0A%E0%B9%80%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%20%28%E0%B9%80%E0%B8%8A%E0%B9%88%E0%B8%99%20Advanced%20Nitrox%20%E0%B8%81%E0%B9%88%E0%B8%AD%E0%B8%99%20wreck%20%E0%B8%AB%E0%B8%A3%E0%B8%B7%E0%B8%AD%E0%B9%81%E0%B8%9E%E0%B9%87%E0%B8%81%E0%B9%80%E0%B8%81%E0%B8%88%29%3A%0A%E0%B8%A7%E0%B8%B1%E0%B8%99%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A7%E0%B8%B2%E0%B8%87%E0%B9%81%E0%B8%9C%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B9%80%E0%B8%81%E0%B8%B2%E0%B8%B0%E0%B8%8A%E0%B9%89%E0%B8%B2%E0%B8%87%3A%0A%E0%B9%82%E0%B8%A3%E0%B8%87%E0%B9%81%E0%B8%A3%E0%B8%A1%3A%0A%E0%B9%82%E0%B8%97%E0%B8%A3%E0%B8%A8%E0%B8%B1%E0%B8%9E%E0%B8%97%E0%B9%8C%20%2F%20WhatsApp%3A%0A%0A%E0%B8%82%E0%B8%AD%E0%B8%9A%E0%B8%84%E0%B8%B8%E0%B8%93"
+            >
               ส่งคำถามทางอีเมล
             </a>
-            <a class="btn btn-secondary btn-cta btn-cta--tek" href="/th/courses/technical-diving-courses/">
+            <a
+              class="btn btn-secondary btn-cta btn-cta--tek"
+              href="/th/courses/technical-diving-courses/"
+            >
               สรุปคอร์สดำน้ำเทคนิค
             </a>
           </div>
@@ -1174,7 +1226,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
 
     <script type="application/ld+json">
       {

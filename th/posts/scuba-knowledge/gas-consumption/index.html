@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/gas-consumption_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/gas-consumption_small.webp"
+    />
 
     <title>การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง</title>
     <meta
@@ -154,13 +159,14 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link
-      rel="stylesheet"
-      href="/fonts/fonts.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript></noscript>
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="/fonts/fonts.css"
+        media="print"
+        onload="this.media='all'" />
+      <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript
+    ></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
       :root {
@@ -290,7 +296,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -479,7 +485,7 @@
 
     <!-- Local Fonts with Preload -->
     <!-- Preload critical resources -->
-      </head>
+  </head>
   <body>
     <header>
       <!-- Hero Section -->
@@ -547,12 +553,14 @@
         <a href="/th/posts/koh-chang-diving-travel-guides/">ไกด์ท่องเที่ยว</a>
         <a href="/th/posts/straight-talk/">บทความตรงไปตรงมา</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/th/">🏠 หน้าแรก</a> › <a href="/th/posts/">Posts</a> ›
+        <a href="/th/posts/scuba-knowledge/">Scuba Knowledge</a> › gas
+        consumption
+      </nav>
 
       <div class="posts-box">
-        <h1>
-          การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง
-        </h1>
+        <h1>การใช้แก๊สและการจัดการสำหรับการดำน้ำเกาะช้าง</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           เชี่ยวชาญการวางแผนแก๊สสำหรับการดำน้ำชมปะการังและเรือจมเกาะช้าง –
           ทักษะจำเป็นสำหรับนักดำน้ำทั่วไปและนักดำน้ำเทคนิค
@@ -1307,7 +1315,11 @@
             หรือส่วนผสมเปลี่ยน)
           </p>
           <p style="margin: 0 0 1em 0; font-size: 15px">
-            <a href="/docs/dive_planning_slate.pdf" download="dive_planning_slate.pdf" class="btn-cta">⬇ ดาวน์โหลดแผน slate (PDF)</a
+            <a
+              href="/docs/dive_planning_slate.pdf"
+              download="dive_planning_slate.pdf"
+              class="btn-cta"
+              >⬇ ดาวน์โหลดแผน slate (PDF)</a
             >
             <span style="color: #555; margin-left: 0.5em"
               >— แบบฟอร์มเปล่าสำหรับกรอกมือหรือพิมพ์</span
@@ -2753,7 +2765,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

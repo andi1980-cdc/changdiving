@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/buoyancy-liftbags-diving_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/buoyancy-liftbags-diving_small.webp"
+    />
 
     <title>
       การลอยตัวและถุงยก – อธิบายหลักอาร์คิมิดีส์ | การค้นหาและกู้วัตถุ |
@@ -373,7 +378,7 @@
         font-size: 0.85em;
         color: #555;
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -425,7 +430,46 @@
           margin-top: 1.5em;
           margin-bottom: 0.8em;
         }
-
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -512,8 +556,7 @@
         ]
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero">
@@ -592,12 +635,14 @@
         <a href="/th/posts/koh-chang-diving-travel-guides/">ไกด์ท่องเที่ยว</a>
         <a href="/th/posts/straight-talk/">บทความตรงไปตรงมา</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/th/">🏠 หน้าแรก</a> › <a href="/th/posts/">Posts</a> ›
+        <a href="/th/posts/scuba-knowledge/">Scuba Knowledge</a> › archimedes
+        principle scuba diving
+      </nav>
 
       <div class="posts-box">
-        <h1>
-          หลักอาร์คิมิดีส์ &amp; ถุงยก
-        </h1>
+        <h1>หลักอาร์คิมิดีส์ &amp; ถุงยก</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           การลอยตัว ถุงยก และงานการค้นหา–กู้วัตถุ — อ่านง่าย เหมือนในห้องเรียน
         </p>
@@ -815,7 +860,8 @@
                 <div>
                   <label for="arch-mass"
                     >น้ำหนักในอากาศ (kg)
-                    <span class="arch-lift-calc__label-hint">เช่น 155 สำหรับเครื่องยนต์</span
+                    <span class="arch-lift-calc__label-hint"
+                      >เช่น 155 สำหรับเครื่องยนต์</span
                     ></label
                   >
                   <input
@@ -839,7 +885,8 @@
                 <div>
                   <label for="arch-vol"
                     >ปริมาตรที่จมในน้ำ (L) — ถ้ามี
-                    <span class="arch-lift-calc__label-hint">เว้นว่างถ้ายังไม่รู้ หรือใส่ 0
+                    <span class="arch-lift-calc__label-hint"
+                      >เว้นว่างถ้ายังไม่รู้ หรือใส่ 0
                       ถ้าคิดแบบระมัดระวังสุด</span
                     ></label
                   >
@@ -855,7 +902,8 @@
                 <div>
                   <label for="arch-margin"
                     >อยากให้ลอยขึ้นเบาๆ? แรงลอยเพิ่ม (kg)
-                    <span class="arch-lift-calc__label-hint">0 = แค่ลอยตัวเป็นกลาง ลอง 5–10 kg
+                    <span class="arch-lift-calc__label-hint"
+                      >0 = แค่ลอยตัวเป็นกลาง ลอง 5–10 kg
                       เพื่อให้มีแรงดันขึ้นเล็กน้อย</span
                     ></label
                   >
@@ -1191,7 +1239,8 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="แชท WhatsApp ช้างไดร์วิ่ง เซ็นเตอร์"
-      class="whatsapp-btn">
+      class="whatsapp-btn"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="แชท WhatsApp"
@@ -1203,7 +1252,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
 
     <script type="application/ld+json">
       {

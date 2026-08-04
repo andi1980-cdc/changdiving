@@ -346,6 +346,46 @@
           object-fit: cover;
         }
       }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
+      }
     </style>
     <link
       rel="preload"
@@ -657,7 +697,8 @@
             font-size: 0.9em;
             color: #1565c0;
           "
-          class="mobile-only">
+          class="mobile-only"
+        >
           <strong>📱 Mobile Tip:</strong> For the best view of the forecast
           table, please rotate your device to landscape mode (hold your phone
           sideways).
@@ -884,7 +925,8 @@
         <div class="row">
           <a
             href="/en/faqs/faq-general-questions-koh-chang/"
-            class="three columns">
+            class="three columns"
+          >
             <img
               src="/img/faq/faq-about-koh-chang_small.webp"
               alt="General questions about Koh Chang – island, weather, best time"
@@ -954,7 +996,8 @@
 
           <a
             href="/en/posts/koh-chang-diving-travel-guides/travel-guide/"
-            class="three columns">
+            class="three columns"
+          >
             <img
               src="/img/posts/gulf-vs-andemann_small.webp"
               alt="Koh Chang travel guide – when to visit, beaches, tips"
@@ -1062,7 +1105,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../js/global.js" defer></script>
+    <script src="../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

@@ -191,9 +191,8 @@
     <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
     <style id="critical-css">
-      /* Inline @font-face so preloaded woff2 can apply before async fonts.css */
       @font-face {
-        font-family: "Roboto";
+        font-family: Roboto;
         font-style: normal;
         font-weight: 400;
         src: url("/fonts/roboto-v48-latin-regular.woff2") format("woff2");
@@ -204,7 +203,7 @@
         line-gap-override: 0%;
       }
       @font-face {
-        font-family: "Roboto";
+        font-family: Roboto;
         font-style: normal;
         font-weight: 700;
         src: url("/fonts/roboto-v48-latin-700.woff2") format("woff2");
@@ -225,8 +224,8 @@
           BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica,
           Arial, sans-serif;
       }
-      html,
-      body {
+      body,
+      html {
         margin: 0;
         padding: 0;
         width: 100%;
@@ -318,7 +317,7 @@
         text-decoration: none;
       }
       .menu-toggle {
-        background: none;
+        background: 0 0;
         border: 0;
         color: #000;
         font-weight: 700;
@@ -341,7 +340,6 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -403,17 +401,17 @@
       .headline-black {
         line-height: 1.25;
       }
-      .changdiving-box img.lazy[src*="_header.webp"],
       .changdiving-box img.lazy[src*="-header.webp"],
-      .speciality-box img.lazy[src*="_header.webp"],
+      .changdiving-box img.lazy[src*="_header.webp"],
       .speciality-box img.lazy[src*="-header.webp"],
-      .tek-box img.lazy[src*="_header.webp"],
-      .tek-box img.lazy[src*="-header.webp"] {
+      .speciality-box img.lazy[src*="_header.webp"],
+      .tek-box img.lazy[src*="-header.webp"],
+      .tek-box img.lazy[src*="_header.webp"] {
         display: block;
         max-width: 100%;
         width: 100%;
         height: auto;
-        aspect-ratio: 8 / 1;
+        aspect-ratio: 8/1;
         object-fit: cover;
         margin: 24px auto;
       }
@@ -423,7 +421,6 @@
           margin-top: 1.5em;
           margin-bottom: 0.8em;
         }
-
         .grid-container h2 {
           font-size: 1.4rem;
           margin-top: 1.2em;
@@ -435,7 +432,6 @@
           max-width: 99vw;
         }
       }
-
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -446,8 +442,6 @@
         color: #005a8c;
         text-decoration: underline;
       }
-
-      /* Submenu in critical CSS — avoid CLS when style.min.css loads */
       .posts-submenu {
         display: flex;
         flex-wrap: nowrap;
@@ -470,7 +464,6 @@
         border: none;
         white-space: nowrap;
       }
-
       @media (max-width: 767px) {
         .hero-text h1,
         .hero-text p {
@@ -488,12 +481,10 @@
           position: relative;
           width: 100%;
           height: auto;
-          aspect-ratio: 3 / 2;
+          aspect-ratio: 3/2;
           object-fit: cover;
         }
       }
-
-      /* course-box CLS: mobile padding + H1 — keep last in critical-css */
       .changdiving-box > h1,
       .speciality-box > h1,
       .tek-box > h1 {
@@ -514,19 +505,17 @@
           margin-left: 10px;
           margin-right: 10px;
         }
-        .changdiving-box img.lazy[src*="_header.webp"],
         .changdiving-box img.lazy[src*="-header.webp"],
-        .speciality-box img.lazy[src*="_header.webp"],
+        .changdiving-box img.lazy[src*="_header.webp"],
         .speciality-box img.lazy[src*="-header.webp"],
-        .tek-box img.lazy[src*="_header.webp"],
-        .tek-box img.lazy[src*="-header.webp"] {
+        .speciality-box img.lazy[src*="_header.webp"],
+        .tek-box img.lazy[src*="-header.webp"],
+        .tek-box img.lazy[src*="_header.webp"] {
           max-width: 98vw;
           width: 100%;
           margin: 16px auto 24px auto;
         }
       }
-
-      /* Try Dive single-video CLS: display:block + aspect-ratio (flex+one child collapses height) */
       .video-flex--single {
         display: block;
         width: 100%;
@@ -537,12 +526,11 @@
         width: 100%;
         max-width: 100%;
         min-width: 0;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16/9;
         background: #000;
         border-radius: 12px;
         overflow: hidden;
       }
-      /* Play button absolute in critical — otherwise in-flow child breaks aspect-ratio */
       .video-flex--single .lty-playbtn {
         width: 70px;
         height: 46px;
@@ -563,9 +551,8 @@
         top: 50%;
         transform: translate(-42%, -50%);
       }
-      /* ATF hr + jump-nav: same metrics as style.css before full CSS loads */
-      .changdiving-box > hr,
-      .changdiving-box hr {
+      .changdiving-box hr,
+      .changdiving-box > hr {
         border: none;
         border-top: 1px solid #ccc;
         margin: 40px 0;
@@ -595,8 +582,6 @@
         padding-bottom: 18px;
         margin-bottom: 6px;
       }
-
-      /* product-gallery: reserve 3:2 before style.min (PSI unsized-image / CLS) */
       .product-gallery {
         display: flex;
         flex-wrap: wrap;
@@ -609,7 +594,7 @@
         min-width: 220px;
         width: 100%;
         height: auto;
-        aspect-ratio: 3 / 2;
+        aspect-ratio: 3/2;
         margin: 0;
         display: block;
         border-radius: 12px;
@@ -624,11 +609,9 @@
           max-width: 100%;
           min-width: 0;
           margin-bottom: 18px;
-          aspect-ratio: 3 / 2;
+          aspect-ratio: 3/2;
         }
       }
-
-      /* static reviews block (also in style.min.css) */
       .cdc-reviews {
         --sea: #005a8c;
         --sea-dark: #005f87;
@@ -671,7 +654,7 @@
         border-radius: 12px;
         background: linear-gradient(
           180deg,
-          rgba(0, 119, 182, 0.07) 0%,
+          rgba(0, 119, 182, 0.07) 0,
           rgba(0, 119, 182, 0.02) 45%,
           rgba(255, 255, 255, 0.4) 100%
         );
@@ -896,8 +879,6 @@
         color: var(--sea-dark);
         text-decoration: underline;
       }
-
-      /* compact reviews box */
       .cdc-reviews {
         margin: 1rem 0 1.25rem;
         line-height: 1.4;
@@ -1817,7 +1798,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../js/global.js" defer></script>
+    <script src="../../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

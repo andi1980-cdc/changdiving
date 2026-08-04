@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/how-the-advanced-open-water-diver_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/how-the-advanced-open-water-diver_small.webp"
+    />
 
     <title>
       เรียนหลักสูตร Advanced Open Water ที่เกาะช้าง – คู่มือทีละขั้นตอน |
@@ -258,7 +263,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -302,7 +307,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -336,6 +341,46 @@
         margin: 0 0 2px;
         padding: 2px 8px 4px;
         border-bottom: 1px solid #ccc;
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -477,7 +522,6 @@
     <!-- Performance Optimizations -->
 
     <!-- JavaScript Preload -->
-    
   </head>
   <body>
     <header>
@@ -558,12 +602,14 @@
         <a href="/th/posts/koh-chang-diving-travel-guides/">คู่มือท่องเที่ยว</a>
         <a href="/th/posts/straight-talk/">บทความตรงไปตรงมา</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/th/">🏠 หน้าแรก</a> › <a href="/th/posts/">Posts</a> ›
+        <a href="/th/posts/diving-how-to-guides-koh-chang/">How to Guides</a> ›
+        how to advanced course
+      </nav>
 
       <div class="posts-box">
-        <h1>
-          การเรียนหลักสูตร Advanced Open Water กับช้างไดร์วิ่ง
-        </h1>
+        <h1>การเรียนหลักสูตร Advanced Open Water กับช้างไดร์วิ่ง</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           คู่มือสำหรับการเป็นนักดำน้ำระดับแอดวานซ์ที่เกาะช้าง
         </p>
@@ -910,7 +956,12 @@
 
         <h2>จองตอนนี้ – เริ่มการผจญภัย AOWD ของคุณ!</h2>
         <div style="margin-top: 1em; text-align: center">
-          <a href="/th/courses/advanced/" target="_blank" rel="noopener noreferrer" class="btn-cta">
+          <a
+            href="/th/courses/advanced/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cta"
+          >
             จองหลักสูตร Advanced Open Water ตอนนี้
           </a>
         </div>
@@ -977,7 +1028,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

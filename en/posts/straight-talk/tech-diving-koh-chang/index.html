@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/tech_diving_koh_chang_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/tech_diving_koh_chang_small.webp"
+    />
 
     <title>
       Tech Diving Koh Chang – TDI Technical Training &amp; HTMS Chang Wreck |
@@ -282,7 +287,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -326,7 +331,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -396,6 +401,46 @@
           #5a5a5a 45%,
           #ff8a5c 100%
         );
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -472,8 +517,7 @@
         }
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero hero--transactional">
@@ -530,7 +574,11 @@
         <a href="/en/posts/koh-chang-diving-travel-guides/">Travel guides</a>
         <a href="/en/posts/straight-talk/">Straight talk</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/en/">🏠 Home</a> › <a href="/en/posts/">Posts</a> ›
+        <a href="/en/posts/straight-talk/">Straight Talk</a> › tech diving koh
+        chang
+      </nav>
 
       <div class="tek-box">
         <h1>
@@ -1155,10 +1203,16 @@
           <div
             style="margin: 16px 0; display: flex; flex-wrap: wrap; gap: 12px"
           >
-            <a class="btn btn-primary btn-cta btn-cta--tek" href="mailto:info@changdiving.com?subject=TDI%20Technical%20Diving%20Koh%20Chang%20-%20Inquiry&body=Hi%20Chang%20Diving%20Team%2C%0A%0AI%20am%20interested%20in%20technical%20diving%20training%20on%20Koh%20Chang.%0A%0AName%20(in%20English)%3A%0ADate%20of%20birth%3A%0ACertification%20level%20%2B%20photo%20of%20card%3A%0ANumber%20of%20logged%20dives%3A%0ALast%20technical%20or%20deep%20dives%20(dates%20%2B%20depth)%3A%0AGoals%20(e.g.%20Advanced%20Nitrox%20first%2C%20wreck%20procedures%2C%20package)%3A%0APlanned%20travel%20dates%20on%20Koh%20Chang%3A%0AHotel%20name%3A%0APhone%20%2F%20WhatsApp%3A%0A%0AThank%20you">
+            <a
+              class="btn btn-primary btn-cta btn-cta--tek"
+              href="mailto:info@changdiving.com?subject=TDI%20Technical%20Diving%20Koh%20Chang%20-%20Inquiry&body=Hi%20Chang%20Diving%20Team%2C%0A%0AI%20am%20interested%20in%20technical%20diving%20training%20on%20Koh%20Chang.%0A%0AName%20(in%20English)%3A%0ADate%20of%20birth%3A%0ACertification%20level%20%2B%20photo%20of%20card%3A%0ANumber%20of%20logged%20dives%3A%0ALast%20technical%20or%20deep%20dives%20(dates%20%2B%20depth)%3A%0AGoals%20(e.g.%20Advanced%20Nitrox%20first%2C%20wreck%20procedures%2C%20package)%3A%0APlanned%20travel%20dates%20on%20Koh%20Chang%3A%0AHotel%20name%3A%0APhone%20%2F%20WhatsApp%3A%0A%0AThank%20you"
+            >
               Send inquiry by email
             </a>
-            <a class="btn btn-secondary btn-cta btn-cta--tek" href="/en/courses/technical-diving-courses/">
+            <a
+              class="btn btn-secondary btn-cta btn-cta--tek"
+              href="/en/courses/technical-diving-courses/"
+            >
               Technical diving courses overview
             </a>
           </div>
@@ -1215,7 +1269,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
 
     <script type="application/ld+json">
       {

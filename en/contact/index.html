@@ -284,7 +284,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -328,7 +328,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -436,7 +436,9 @@
         >
           Contact Us
         </h1>
-        <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/en/">🏠 Home</a> › Contact
+        </nav>
 
         <hr />
 
@@ -724,7 +726,10 @@
           </div>
 
           <div style="text-align: center; margin-top: 30px">
-            <a href="mailto:info@changdiving.com?subject=Additional%20Info%20Request%20–%20Travel%20Dates%20From%20...%20to%20...&body=Hi%20Chang%20Diving%20Team%2C%0A%0A🔹%20Preferred%20Start%20Date:%0ACourse%20Start%20Date:%0AI%27d%20like%20to%20inquire%20about%20diving%20options.%20Here%20are%20my%20travel%20dates%20to%20Koh%20Chang%3A%20FROM%20...%20TO%20...%0A%0AMy%20questions%3A%0A-%20%0A-%20%0A%0AThank%20you%21" class="cta-button btn-cta">
+            <a
+              href="mailto:info@changdiving.com?subject=Additional%20Info%20Request%20–%20Travel%20Dates%20From%20...%20to%20...&body=Hi%20Chang%20Diving%20Team%2C%0A%0A🔹%20Preferred%20Start%20Date:%0ACourse%20Start%20Date:%0AI%27d%20like%20to%20inquire%20about%20diving%20options.%20Here%20are%20my%20travel%20dates%20to%20Koh%20Chang%3A%20FROM%20...%20TO%20...%0A%0AMy%20questions%3A%0A-%20%0A-%20%0A%0AThank%20you%21"
+              class="cta-button btn-cta"
+            >
               📧 Send Email Inquiry
             </a>
             <p style="margin-top: 12px; color: #555; font-size: 0.95em">
@@ -768,7 +773,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../js/global.js" defer></script>
+    <script src="../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/buoyancy-liftbags-diving_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/buoyancy-liftbags-diving_small.webp"
+    />
 
     <title>
       Auftrieb &amp; Hebesäcke – Archimedes-Prinzip erklärt | Suchen &amp;
@@ -367,7 +372,7 @@
         font-size: 0.85em;
         color: #555;
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -419,7 +424,46 @@
           margin-top: 1.5em;
           margin-bottom: 0.8em;
         }
-
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -506,8 +550,7 @@
         ]
       }
     </script>
-
-    </head>
+  </head>
   <body>
     <header>
       <div class="hero">
@@ -586,12 +629,14 @@
         <a href="/de/posts/koh-chang-diving-travel-guides/">Reiseführer</a>
         <a href="/de/posts/straight-talk/">Klartext</a>
       </nav>
-      <nav id="breadcrumb" class="breadcrumb"></nav>
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
+        <a href="/de/posts/scuba-knowledge/">Scuba Knowledge</a> › archimedes
+        principle scuba diving
+      </nav>
 
       <div class="posts-box">
-        <h1>
-          Archimedes &amp; Hebesack-Physik
-        </h1>
+        <h1>Archimedes &amp; Hebesack-Physik</h1>
         <p style="margin: 0 0 24px; color: #555; text-align: center">
           Auftrieb, Hebesäcke &amp; Suchen &amp; Bergung — verständlich erklärt
         </p>
@@ -796,7 +841,8 @@
                 <div>
                   <label for="arch-mass"
                     >Gewicht an der Luft (kg)
-                    <span class="arch-lift-calc__label-hint">z. B. 155 beim Motor</span
+                    <span class="arch-lift-calc__label-hint"
+                      >z. B. 155 beim Motor</span
                     ></label
                   >
                   <input
@@ -820,7 +866,8 @@
                 <div>
                   <label for="arch-vol"
                     >Unterwasservolumen — optional (L)
-                    <span class="arch-lift-calc__label-hint">Leer lassen wenn unbekannt. Grobschätzung aus Größe unter
+                    <span class="arch-lift-calc__label-hint"
+                      >Leer lassen wenn unbekannt. Grobschätzung aus Größe unter
                       Wasser, oder „0“ für absichtlich pessimistische
                       Planung.</span
                     ></label
@@ -837,7 +884,8 @@
                 <div>
                   <label for="arch-margin"
                     >Nach oben steigen? Zusätzlicher Netto-Auftrieb (kg)
-                    <span class="arch-lift-calc__label-hint">0 = nur neutral. 5–10 kg für einen sanften Schubs in
+                    <span class="arch-lift-calc__label-hint"
+                      >0 = nur neutral. 5–10 kg für einen sanften Schubs in
                       dieser Näherung.</span
                     ></label
                   >
@@ -1179,7 +1227,8 @@
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp-Chat Chang Diving"
-      class="whatsapp-btn">
+      class="whatsapp-btn"
+    >
       <img
         src="/img/icons/whatsapp-128x30.webp"
         alt="WhatsApp-Chat"
@@ -1191,7 +1240,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../../../js/global.js" defer></script>
+    <script src="../../../../js/global.min.js" defer></script>
 
     <script type="application/ld+json">
       {

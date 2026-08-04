@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/posts/technical_diver_stories_header_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/posts/technical_diver_stories_header_small.webp"
+    />
 
     <!-- EDIT TITLE -->
     <title>
@@ -441,7 +446,7 @@
       .straight-talk-faq-item:last-child {
         border-bottom: none;
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -529,7 +534,46 @@
           margin-top: 1.5em;
           margin-bottom: 0.8em;
         }
-
+      }
+      .posts-submenu,
+      .daytrip-submenu,
+      .course-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a,
+      .daytrip-submenu a,
+      .course-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
+      main:has(> .tek-box) > .posts-submenu a,
+      main:has(> .tek-box) > .course-submenu a,
+      .grid-container--tek .course-submenu a {
+        background: linear-gradient(
+          135deg,
+          #3a3a3a 0,
+          #5a5a5a 45%,
+          #ff8a5c 100%
+        );
+      }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
       }
     </style>
     <link
@@ -718,7 +762,7 @@
         ]
       }
     </script>
-      </head>
+  </head>
   <body>
     <header>
       <div class="hero hero--transactional">
@@ -779,8 +823,12 @@
       </nav>
 
       <div class="tek-box">
-        <!-- Filled by /js/global.js (full trail: Home › Posts › Straight Talk › …) -->
-        <nav id="breadcrumb" class="breadcrumb"></nav>
+        <!-- Filled by /js/global.min.js (full trail: Home › Posts › Straight Talk › …) -->
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
+          <a href="/de/posts/straight-talk/">Straight Talk</a> › technical diver
+          stories
+        </nav>
         <h1>
           Geschichten von Tec-Tauchern — Nitrox, Deco &amp; Advanced Wreck
         </h1>
@@ -1652,7 +1700,8 @@
                 align-items: center;
               "
             >
-              <a href="/de/courses/tech-package/" class="btn-cta btn-cta--tek">Technical-Diving-Paket</a
+              <a href="/de/courses/tech-package/" class="btn-cta btn-cta--tek"
+                >Technical-Diving-Paket</a
               >
               <a
                 href="/de/contact/"
@@ -1714,7 +1763,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="/js/global.js" defer></script>
+    <script src="/js/global.min.js" defer></script>
     <!-- BreadcrumbList: blog trail (aligns with Straight Talk, not /courses/) -->
     <script type="application/ld+json">
       {

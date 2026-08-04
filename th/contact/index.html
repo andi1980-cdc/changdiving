@@ -240,7 +240,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -284,7 +284,7 @@
           max-width: 99vw;
         }
       }
-      
+
       .breadcrumb {
         font-size: 0.9em;
         margin: 20px 0 20px 20px;
@@ -395,7 +395,9 @@
         >
           ยังมีคำถามอยู่ใช่ไหม? ติดต่อเราเลย!
         </h1>
-        <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/th/">🏠 หน้าแรก</a> › Contact
+        </nav>
 
         <hr />
 
@@ -680,7 +682,10 @@
           </div>
 
           <div style="text-align: center; margin-top: 30px">
-            <a href="mailto:info@changdiving.com?subject=สอบถามข้อมูลเพิ่มเติม%20–%20วันเดินทางจาก%20...%20ถึง%20...&body=สวัสดีทีมงานช้างไดร์วิ่ง%2C%0A%0Aฉันสนใจบริการดำน้ำของคุณ%20นี่คือช่วงเวลาที่ฉันจะอยู่ที่เกาะช้าง%3A%20จาก%20...%20ถึง%20...%0A%0Aคำถามของฉัน%3A%0A-%20%0A-%20%0A%0Aขอบคุณมากค่ะ%2Fครับ" class="cta-button btn-cta">
+            <a
+              href="mailto:info@changdiving.com?subject=สอบถามข้อมูลเพิ่มเติม%20–%20วันเดินทางจาก%20...%20ถึง%20...&body=สวัสดีทีมงานช้างไดร์วิ่ง%2C%0A%0Aฉันสนใจบริการดำน้ำของคุณ%20นี่คือช่วงเวลาที่ฉันจะอยู่ที่เกาะช้าง%3A%20จาก%20...%20ถึง%20...%0A%0Aคำถามของฉัน%3A%0A-%20%0A-%20%0A%0Aขอบคุณมากค่ะ%2Fครับ"
+              class="cta-button btn-cta"
+            >
               📧 ส่งอีเมลสอบถาม
             </a>
             <p style="margin-top: 12px; color: #555; font-size: 0.95em">
@@ -724,7 +729,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../js/global.js" defer></script>
+    <script src="../../js/global.min.js" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
