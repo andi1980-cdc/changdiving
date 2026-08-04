@@ -442,6 +442,34 @@
         color: #555;
         min-height: 1.35em;
       }
+      .breadcrumb a {
+        color: #005a8c;
+        text-decoration: underline;
+      }
+
+      /* Submenu in critical CSS — avoid CLS when style.min.css loads */
+      .posts-submenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px 10px 15px;
+        justify-content: center;
+        margin: 0 auto 10px;
+        min-height: 52px;
+        box-sizing: border-box;
+      }
+      .posts-submenu a {
+        display: inline-block;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        white-space: nowrap;
+      }
 
       @media (max-width: 767px) {
         .hero-text h1,
@@ -1180,7 +1208,10 @@
       </nav>
 
       <div class="changdiving-box">
-        <nav id="breadcrumb" class="breadcrumb"></nav>
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/en/">🏠 Home</a> › <a href="/en/day-trips/">Day Trips</a> ›
+          Try Dive
+        </nav>
 
         <h1>
           Try Dive Koh Chang – 2 reef dives, no cert needed - from 4,890 THB
