@@ -1088,6 +1088,66 @@
         background-color: #005f8f;
         border-color: #005f8f;
       }
+      .cdc-medical-quiz__identity {
+        display: grid;
+        gap: 10px;
+        margin: 0 0 14px;
+        padding: 12px;
+        background: #f7fafc;
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+      }
+      .cdc-medical-quiz__identity-row {
+        display: grid;
+        gap: 10px;
+      }
+      @media (min-width: 560px) {
+        .cdc-medical-quiz__identity-row {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .cdc-medical-quiz__field label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.92rem;
+        margin-bottom: 4px;
+        color: #243b53;
+      }
+      .cdc-medical-quiz__field input[type="text"],
+      .cdc-medical-quiz__field input[type="date"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px solid #bcccdc;
+        border-radius: 4px;
+        font: inherit;
+        background: #fff;
+      }
+      .cdc-medical-quiz__field input:focus {
+        outline: 2px solid #005a8c;
+        outline-offset: 1px;
+        border-color: #005a8c;
+      }
+      .cdc-medical-quiz__declare {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 12px 0 4px;
+        padding: 12px;
+        background: #f7fafc;
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+        font-size: 0.92rem;
+        line-height: 1.45;
+        color: #243b53;
+        cursor: pointer;
+      }
+      .cdc-medical-quiz__declare input {
+        margin-top: 3px;
+        flex-shrink: 0;
+        width: 1.1rem;
+        height: 1.1rem;
+      }
     </style>
   </head>
   <body>
@@ -1231,18 +1291,45 @@
               Complete this screening honestly (same questions as the official
               UHMS / RSTC Medical Questionnaire). Click <strong>Yes</strong> or
               <strong>No</strong>. A <strong>Yes</strong> opens the related
-              follow-up box. Informational only — not medical advice. Sign the
+              follow-up box. Informational only — not medical advice. If the
+              screening is clear, emailing your confirmed results is enough. If
+              a physician’s evaluation is required, print the
               <a
                 href="/docs/Medical_Questionnaire.pdf"
                 target="_blank"
                 rel="noopener"
-                >official PDF</a
+                >Medical Questionnaire PDF</a
               >
-              with us before diving. If pregnant or trying to become pregnant,
-              do not dive.
+              and bring the signed dive medical clearance to Chang Diving. If
+              pregnant or trying to become pregnant, do not dive.
             </p>
 
             <div class="cdc-medical-quiz">
+              <div class="cdc-medical-quiz__identity" id="cdc-medical-identity">
+                <div class="cdc-medical-quiz__identity-row">
+                  <div class="cdc-medical-quiz__field">
+                    <label for="cdc-medical-name">First and last name</label>
+                    <input
+                      type="text"
+                      id="cdc-medical-name"
+                      name="medical-name"
+                      autocomplete="name"
+                      required
+                      placeholder="e.g. Jane Smith"
+                    />
+                  </div>
+                  <div class="cdc-medical-quiz__field">
+                    <label for="cdc-medical-dob">Date of birth</label>
+                    <input
+                      type="date"
+                      id="cdc-medical-dob"
+                      name="medical-dob"
+                      autocomplete="bday"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
               <ol class="cdc-quiz__list" id="cdc-medical-list">
                 <li data-q="1" data-box="A">
                   <p>
@@ -2342,6 +2429,17 @@
 
               <div id="cdc-medical-result" class="cdc-quiz__answer"></div>
 
+              <label
+                class="cdc-medical-quiz__declare"
+                for="cdc-medical-declare"
+              >
+                <input type="checkbox" id="cdc-medical-declare" />
+                <span id="cdc-medical-declare-text"
+                  >I hereby confirm that the information I have provided is true
+                  and complete to the best of my knowledge.</span
+                >
+              </label>
+
               <p class="cdc-medical-quiz__actions" style="margin-top: 10px">
                 <button
                   type="button"
@@ -2349,7 +2447,7 @@
                   id="cdc-medical-email"
                   onclick="medicalEmailResults()"
                   disabled
-                  title="Complete all questions first"
+                  title="Complete name, date of birth, all questions, and the confirmation first"
                 >
                   📩 Email my results
                 </button>
@@ -2366,8 +2464,10 @@
                 id="cdc-medical-email-hint"
                 style="margin-top: 0.4rem"
               >
-                After you finish the self-check, you can email your answers to
-                Chang Diving (opens your email app).
+                Enter your name and date of birth, finish the self-check, tick
+                the confirmation, then email your answers. If the screening is
+                clear, that email is your declaration. If a physician’s
+                evaluation is required, also print the PDF and see a doctor.
               </p>
             </div>
           </dd>
@@ -2704,6 +2804,21 @@
         return mains;
       }
 
+      function medicalGetIdentity() {
+        var nameEl = document.getElementById("cdc-medical-name");
+        var dobEl = document.getElementById("cdc-medical-dob");
+        var declareEl = document.getElementById("cdc-medical-declare");
+        var name = nameEl ? nameEl.value.replace(/\s+/g, " ").trim() : "";
+        var dob = dobEl ? dobEl.value : "";
+        var declared = declareEl ? !!declareEl.checked : false;
+        return {
+          name: name,
+          dob: dob,
+          declared: declared,
+          ready: name.length >= 2 && !!dob && declared,
+        };
+      }
+
       function medicalAssess() {
         var mains = medicalGetMains();
         var answered = 0;
@@ -2751,6 +2866,7 @@
 
       function medicalBuildSummary() {
         var assess = medicalAssess();
+        var id = medicalGetIdentity();
         var lines = [];
         lines.push("Diver Medical Self-Check results");
         lines.push(
@@ -2764,7 +2880,16 @@
               : "No physician required by this screening")
         );
         lines.push("");
-        lines.push("Name / ชื่อ-นามสกุล (in English):");
+        lines.push("First and last name: " + id.name);
+        lines.push("Date of birth: " + id.dob);
+        lines.push(
+          "Declaration: I hereby confirm that the information I have provided is true and complete to the best of my knowledge. Confirmed: Yes"
+        );
+        if (assess.needsPhysician) {
+          lines.push(
+            "Additional acknowledgment: I understand that a physician's evaluation is required. I will print the Medical Questionnaire PDF and bring the signed dive medical clearance to Chang Diving."
+          );
+        }
         lines.push("Preferred course or dive dates:");
         lines.push("Phone:");
         lines.push("");
@@ -2792,9 +2917,15 @@
         });
 
         lines.push("");
-        lines.push(
-          "Note: This is an informational self-check only. I still need to complete/sign the official Medical Questionnaire PDF with Chang Diving."
-        );
+        if (assess.needsPhysician) {
+          lines.push(
+            "Next step: Physician evaluation required. Print https://changdiving.com/docs/Medical_Questionnaire.pdf and obtain dive medical clearance before diving."
+          );
+        } else {
+          lines.push(
+            "Next step: Screening clear — this emailed confirmation is my self-check declaration. No additional Medical Questionnaire paper is required unless Chang Diving asks for it."
+          );
+        }
         return lines.join("\n");
       }
 
@@ -2804,7 +2935,29 @@
         btn.disabled = !enabled;
         btn.title = enabled
           ? "Open your email app with your results"
-          : "Complete all questions first";
+          : "Complete name, date of birth, all questions, and the confirmation first";
+      }
+
+      function medicalUpdateDeclareText(needsPhysician) {
+        var el = document.getElementById("cdc-medical-declare-text");
+        if (!el) return;
+        if (needsPhysician) {
+          el.textContent =
+            "I hereby confirm that the information I have provided is true and complete to the best of my knowledge. I understand that a physician’s evaluation is required — I will print the Medical Questionnaire PDF and bring it to my doctor for dive medical clearance.";
+        } else {
+          el.textContent =
+            "I hereby confirm that the information I have provided is true and complete to the best of my knowledge.";
+        }
+      }
+
+      function medicalRefreshEmailGate() {
+        var assess = medicalAssess();
+        if (!assess.complete) {
+          medicalSetEmailEnabled(false);
+          return;
+        }
+        medicalUpdateDeclareText(assess.needsPhysician);
+        medicalSetEmailEnabled(medicalGetIdentity().ready);
       }
 
       function medicalPick(button, value) {
@@ -2881,15 +3034,15 @@
           return;
         }
 
-        medicalSetEmailEnabled(true);
+        medicalRefreshEmailGate();
 
         if (assess.needsPhysician) {
           result.innerHTML =
-            '<strong>Physician evaluation recommended</strong><br />Based on your answers, take the completed questionnaire (all pages) to a physician before diving or starting a course. <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Download PDF</a> · <a href="/en/contact/">Contact us</a><br /><br />You can also <strong>Email my results</strong> to Chang Diving below.';
+            '<strong>Physician’s evaluation is required</strong><br />Print the <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Medical Questionnaire PDF</a>, take it to a doctor for dive medical clearance, and bring the signed documents to Chang Diving before diving. Confirm below and <strong>Email my results</strong> so we have your answers on file. · <a href="/en/contact/">Contact us</a>';
           result.classList.add("show", "incorrect-answer");
         } else {
           result.innerHTML =
-            '<strong>No physician required by this screening</strong><br />You still need to complete and sign the official PDF with us before diving. <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Download PDF</a><br /><br />Optional: <strong>Email my results</strong> to Chang Diving below.';
+            "<strong>No physician required by this screening</strong><br />Confirm below and <strong>Email my results</strong> to Chang Diving — that emailed declaration is enough for this screening. No extra Medical Questionnaire paper is needed unless we ask for it.";
           result.classList.add("show", "correct-answer");
         }
         result.style.display = "block";
@@ -2897,12 +3050,17 @@
 
       function medicalEmailResults() {
         var assess = medicalAssess();
-        if (!assess.complete) {
-          alert("Please complete all questions first.");
+        var id = medicalGetIdentity();
+        if (!assess.complete || !id.ready) {
+          alert(
+            "Please enter your name and date of birth, complete all questions, and tick the confirmation box first."
+          );
           return;
         }
         var subject =
           "Medical Self-Check results – " +
+          id.name +
+          " – " +
           (assess.needsPhysician ? "physician recommended" : "screening clear");
         var body = medicalBuildSummary();
         // Keep mailto bodies practical for common email clients
@@ -2936,6 +3094,13 @@
             var box = li.querySelector(".cdc-medical-followup");
             if (box) box.classList.remove("show");
           });
+        var nameEl = document.getElementById("cdc-medical-name");
+        var dobEl = document.getElementById("cdc-medical-dob");
+        var declareEl = document.getElementById("cdc-medical-declare");
+        if (nameEl) nameEl.value = "";
+        if (dobEl) dobEl.value = "";
+        if (declareEl) declareEl.checked = false;
+        medicalUpdateDeclareText(false);
         var result = document.getElementById("cdc-medical-result");
         if (result) {
           result.classList.remove("show", "correct-answer", "incorrect-answer");
@@ -2944,6 +3109,17 @@
         }
         medicalSetEmailEnabled(false);
       }
+
+      (function medicalBindIdentity() {
+        ["cdc-medical-name", "cdc-medical-dob", "cdc-medical-declare"].forEach(
+          function (id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.addEventListener("input", medicalRefreshEmailGate);
+            el.addEventListener("change", medicalRefreshEmailGate);
+          }
+        );
+      })();
     </script>
   </body>
 </html>

@@ -1082,6 +1082,66 @@
         background-color: #005f8f;
         border-color: #005f8f;
       }
+      .cdc-medical-quiz__identity {
+        display: grid;
+        gap: 10px;
+        margin: 0 0 14px;
+        padding: 12px;
+        background: #f7fafc;
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+      }
+      .cdc-medical-quiz__identity-row {
+        display: grid;
+        gap: 10px;
+      }
+      @media (min-width: 560px) {
+        .cdc-medical-quiz__identity-row {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .cdc-medical-quiz__field label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.92rem;
+        margin-bottom: 4px;
+        color: #243b53;
+      }
+      .cdc-medical-quiz__field input[type="text"],
+      .cdc-medical-quiz__field input[type="date"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px solid #bcccdc;
+        border-radius: 4px;
+        font: inherit;
+        background: #fff;
+      }
+      .cdc-medical-quiz__field input:focus {
+        outline: 2px solid #005a8c;
+        outline-offset: 1px;
+        border-color: #005a8c;
+      }
+      .cdc-medical-quiz__declare {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 12px 0 4px;
+        padding: 12px;
+        background: #f7fafc;
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+        font-size: 0.92rem;
+        line-height: 1.45;
+        color: #243b53;
+        cursor: pointer;
+      }
+      .cdc-medical-quiz__declare input {
+        margin-top: 3px;
+        flex-shrink: 0;
+        width: 1.1rem;
+        height: 1.1rem;
+      }
     </style>
   </head>
   <body>
@@ -1205,19 +1265,46 @@
               offizielle UHMS-/RSTC-Medical-Fragebogen). Tippen Sie auf
               <strong>Ja</strong> oder <strong>Nein</strong>. Bei
               <strong>Ja</strong> öffnet sich der zugehörige Fragenkasten. Nur
-              zur Information — keine medizinische Beratung. Unterschreiben Sie
-              den
+              zur Information — keine medizinische Beratung. Ist das Screening
+              klar, reicht die bestätigte E-Mail. Ist eine ärztliche Beurteilung
+              nötig, drucken Sie den
               <a
                 href="/docs/Medical_Questionnaire.pdf"
                 target="_blank"
                 rel="noopener"
-                >offiziellen PDF</a
+                >Medical Questionnaire PDF</a
               >
-              bei uns vor dem Tauchen. Bei Schwangerschaft oder Kinderwunsch
-              bitte nicht tauchen.
+              aus und bringen Sie die unterschriebene
+              Tauchtauglichkeitsbescheinigung zu Chang Diving. Bei
+              Schwangerschaft oder Kinderwunsch bitte nicht tauchen.
             </p>
 
             <div class="cdc-medical-quiz">
+              <div class="cdc-medical-quiz__identity" id="cdc-medical-identity">
+                <div class="cdc-medical-quiz__identity-row">
+                  <div class="cdc-medical-quiz__field">
+                    <label for="cdc-medical-name">Vor- und Nachname</label>
+                    <input
+                      type="text"
+                      id="cdc-medical-name"
+                      name="medical-name"
+                      autocomplete="name"
+                      required
+                      placeholder="z. B. Max Mustermann"
+                    />
+                  </div>
+                  <div class="cdc-medical-quiz__field">
+                    <label for="cdc-medical-dob">Geburtsdatum</label>
+                    <input
+                      type="date"
+                      id="cdc-medical-dob"
+                      name="medical-dob"
+                      autocomplete="bday"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
               <ol class="cdc-quiz__list" id="cdc-medical-list">
                 <li data-q="1" data-box="A">
                   <p>
@@ -2325,6 +2412,17 @@
 
               <div id="cdc-medical-result" class="cdc-quiz__answer"></div>
 
+              <label
+                class="cdc-medical-quiz__declare"
+                for="cdc-medical-declare"
+              >
+                <input type="checkbox" id="cdc-medical-declare" />
+                <span id="cdc-medical-declare-text"
+                  >Ich bestätige hiermit die Richtigkeit und Vollständigkeit
+                  meiner Angaben nach bestem Wissen und Gewissen.</span
+                >
+              </label>
+
               <p class="cdc-medical-quiz__actions" style="margin-top: 10px">
                 <button
                   type="button"
@@ -2332,7 +2430,7 @@
                   id="cdc-medical-email"
                   onclick="medicalEmailResults()"
                   disabled
-                  title="Bitte zuerst alle Fragen beantworten"
+                  title="Bitte Name, Geburtsdatum, alle Fragen und die Bestätigung ausfüllen"
                 >
                   📩 Ergebnisse per E-Mail senden
                 </button>
@@ -2665,33 +2763,47 @@
     <script>
       var MEDICAL_I18N = {
         emailTitleOn: "E-Mail-App mit Ihren Ergebnissen öffnen",
-        emailTitleOff: "Bitte zuerst alle Fragen beantworten",
+        emailTitleOff:
+          "Bitte Name, Geburtsdatum, alle Fragen und die Bestätigung ausfüllen",
         keepGoing: "Weiter so…",
         answeredOf: "Beantwortet {a} von {t} Hauptfragen.",
         almost: "Fast geschafft…",
         almostBody:
           "Bitte beantworten Sie auch die Folgefragen, die nach einem Ja geöffnet wurden.",
-        docTitle: "Ärztliche Beurteilung empfohlen",
+        docTitle: "Ärztliche Beurteilung ist erforderlich",
         docBody:
-          'Nach Ihren Angaben sollten Sie den ausgefüllten Fragebogen (alle Seiten) vor dem Tauchen oder Kursbeginn zu einem Arzt mitnehmen. <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">PDF herunterladen<\/a> · <a href="/de/contact/">Kontakt<\/a><br /><br />Sie können die Ergebnisse unten auch per <strong>E-Mail an Chang Diving<\/strong> senden.',
+          'Drucken Sie den <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Medical Questionnaire PDF<\/a>, lassen Sie sich tauchtauglich untersuchen und bringen Sie die unterschriebenen Unterlagen vor dem Tauchen zu Chang Diving. Bestätigen Sie unten und senden Sie die Ergebnisse per <strong>E-Mail an Chang Diving<\/strong>. · <a href="/de/contact/">Kontakt<\/a>',
         okTitle: "Laut diesem Screening kein Arzt nötig",
         okBody:
-          'Sie müssen den offiziellen PDF trotzdem bei uns ausfüllen und unterschreiben, bevor Sie tauchen. <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">PDF herunterladen<\/a><br /><br />Optional: Ergebnisse unten per <strong>E-Mail an Chang Diving<\/strong> senden.',
-        mailAlert: "Bitte beantworten Sie zuerst alle Fragen.",
-        mailSubjDoc: "Medical Self-Check Ergebnisse – Arzt empfohlen",
+          "Bestätigen Sie unten und senden Sie die Ergebnisse per <strong>E-Mail an Chang Diving</strong> — diese E-Mail-Erklärung reicht für dieses Screening. Zusätzliches Medical-Questionnaire-Papier ist nur nötig, wenn wir danach fragen.",
+        mailAlert:
+          "Bitte Name und Geburtsdatum eintragen, alle Fragen beantworten und die Bestätigung anhaken.",
+        mailSubjDoc: "Medical Self-Check Ergebnisse – Arzt erforderlich",
         mailSubjOk: "Medical Self-Check Ergebnisse – Screening klar",
         summaryTitle: "Diver Medical Self-Check Ergebnisse",
         pageUrl:
           "https://changdiving.com/de/faqs/faq-diving-health-safety-thailand/#medical-self-check",
-        outcomeDoc: "Ergebnis: Ärztliche Beurteilung empfohlen",
+        outcomeDoc: "Ergebnis: Ärztliche Beurteilung ist erforderlich",
         outcomeOk: "Ergebnis: Laut Screening kein Arzt nötig",
-        nameLine: "Name / ชื่อ-นามสกุล (in English):",
+        nameLabel: "Vor- und Nachname: ",
+        dobLabel: "Geburtsdatum: ",
+        declareLineOk:
+          "Erklärung: Ich bestätige hiermit die Richtigkeit und Vollständigkeit meiner Angaben nach bestem Wissen und Gewissen. Bestätigt: Ja",
+        declareLineDoc:
+          "Zusätzliche Bestätigung: Ich verstehe, dass eine ärztliche Beurteilung erforderlich ist. Ich drucke den Medical Questionnaire PDF aus und bringe die unterschriebene Tauchtauglichkeitsbescheinigung zu Chang Diving.",
+        declareTextOk:
+          "Ich bestätige hiermit die Richtigkeit und Vollständigkeit meiner Angaben nach bestem Wissen und Gewissen.",
+        declareTextDoc:
+          "Ich bestätige hiermit die Richtigkeit und Vollständigkeit meiner Angaben nach bestem Wissen und Gewissen. Ich verstehe, dass eine ärztliche Beurteilung erforderlich ist — ich drucke den Medical Questionnaire PDF aus und bringe ihn zu meinem Arzt für die Tauchtauglichkeitsbescheinigung.",
         datesLine: "Gewünschter Kurs oder Tauchtermine:",
         phoneLine: "Telefon:",
         answersHdr: "--- Antworten ---",
-        note: "Hinweis: Dies ist nur ein informativer Selbst-Check. Den offiziellen Medical Questionnaire PDF muss ich weiterhin mit Chang Diving ausfüllen/unterschreiben.",
+        noteOk:
+          "Nächster Schritt: Screening klar — diese E-Mail-Bestätigung ist meine Selbst-Check-Erklärung. Zusätzliches Medical-Questionnaire-Papier ist nur nötig, wenn Chang Diving danach fragt.",
+        noteDoc:
+          "Nächster Schritt: Ärztliche Beurteilung erforderlich. PDF drucken: https://changdiving.com/docs/Medical_Questionnaire.pdf und Tauchtauglichkeit vor dem Tauchen einholen.",
         trunc:
-          "[Gekürzt – Liste war zu lang. Bitte zusätzlich den PDF ausfüllen/unterschreiben.]",
+          "[Gekürzt – Liste war zu lang. Bei Arztpflicht bitte zusätzlich PDF und Attest mitbringen.]",
       };
 
       function medicalGetMains() {
@@ -2704,6 +2816,39 @@
           }
         }
         return mains;
+      }
+
+      function medicalGetIdentity() {
+        var nameEl = document.getElementById("cdc-medical-name");
+        var dobEl = document.getElementById("cdc-medical-dob");
+        var declareEl = document.getElementById("cdc-medical-declare");
+        var name = nameEl ? nameEl.value.replace(/\s+/g, " ").trim() : "";
+        var dob = dobEl ? dobEl.value : "";
+        var declared = declareEl ? !!declareEl.checked : false;
+        return {
+          name: name,
+          dob: dob,
+          declared: declared,
+          ready: name.length >= 2 && !!dob && declared,
+        };
+      }
+
+      function medicalUpdateDeclareText(needsPhysician) {
+        var el = document.getElementById("cdc-medical-declare-text");
+        if (!el) return;
+        el.textContent = needsPhysician
+          ? MEDICAL_I18N.declareTextDoc
+          : MEDICAL_I18N.declareTextOk;
+      }
+
+      function medicalRefreshEmailGate() {
+        var assess = medicalAssess();
+        if (!assess.complete) {
+          medicalSetEmailEnabled(false);
+          return;
+        }
+        medicalUpdateDeclareText(assess.needsPhysician);
+        medicalSetEmailEnabled(medicalGetIdentity().ready);
       }
 
       function medicalAssess() {
@@ -2752,6 +2897,7 @@
 
       function medicalBuildSummary() {
         var assess = medicalAssess();
+        var id = medicalGetIdentity();
         var lines = [];
         lines.push(MEDICAL_I18N.summaryTitle);
         lines.push("Page: " + MEDICAL_I18N.pageUrl);
@@ -2762,7 +2908,12 @@
             : MEDICAL_I18N.outcomeOk
         );
         lines.push("");
-        lines.push(MEDICAL_I18N.nameLine);
+        lines.push(MEDICAL_I18N.nameLabel + id.name);
+        lines.push(MEDICAL_I18N.dobLabel + id.dob);
+        lines.push(MEDICAL_I18N.declareLineOk);
+        if (assess.needsPhysician) {
+          lines.push(MEDICAL_I18N.declareLineDoc);
+        }
         lines.push(MEDICAL_I18N.datesLine);
         lines.push(MEDICAL_I18N.phoneLine);
         lines.push("");
@@ -2790,7 +2941,9 @@
         });
 
         lines.push("");
-        lines.push(MEDICAL_I18N.note);
+        lines.push(
+          assess.needsPhysician ? MEDICAL_I18N.noteDoc : MEDICAL_I18N.noteOk
+        );
         return lines.join("\n");
       }
 
@@ -2881,7 +3034,7 @@
           return;
         }
 
-        medicalSetEmailEnabled(true);
+        medicalRefreshEmailGate();
 
         if (assess.needsPhysician) {
           result.innerHTML =
@@ -2903,13 +3056,17 @@
 
       function medicalEmailResults() {
         var assess = medicalAssess();
-        if (!assess.complete) {
+        var id = medicalGetIdentity();
+        if (!assess.complete || !id.ready) {
           alert(MEDICAL_I18N.mailAlert);
           return;
         }
-        var subject = assess.needsPhysician
-          ? MEDICAL_I18N.mailSubjDoc
-          : MEDICAL_I18N.mailSubjOk;
+        var subject =
+          (assess.needsPhysician
+            ? MEDICAL_I18N.mailSubjDoc
+            : MEDICAL_I18N.mailSubjOk) +
+          " – " +
+          id.name;
         var body = medicalBuildSummary();
         if (body.length > 1800) {
           body = body.slice(0, 1750) + "\n\n" + MEDICAL_I18N.trunc;
@@ -2939,6 +3096,13 @@
             var box = li.querySelector(".cdc-medical-followup");
             if (box) box.classList.remove("show");
           });
+        var nameEl = document.getElementById("cdc-medical-name");
+        var dobEl = document.getElementById("cdc-medical-dob");
+        var declareEl = document.getElementById("cdc-medical-declare");
+        if (nameEl) nameEl.value = "";
+        if (dobEl) dobEl.value = "";
+        if (declareEl) declareEl.checked = false;
+        medicalUpdateDeclareText(false);
         var result = document.getElementById("cdc-medical-result");
         if (result) {
           result.classList.remove("show", "correct-answer", "incorrect-answer");
@@ -2947,6 +3111,17 @@
         }
         medicalSetEmailEnabled(false);
       }
+
+      (function medicalBindIdentity() {
+        ["cdc-medical-name", "cdc-medical-dob", "cdc-medical-declare"].forEach(
+          function (id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.addEventListener("input", medicalRefreshEmailGate);
+            el.addEventListener("change", medicalRefreshEmailGate);
+          }
+        );
+      })();
     </script>
   </body>
 </html>

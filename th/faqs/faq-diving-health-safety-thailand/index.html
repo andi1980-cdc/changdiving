@@ -1094,6 +1094,66 @@
         background-color: #005f8f;
         border-color: #005f8f;
       }
+      .cdc-medical-quiz__identity {
+        display: grid;
+        gap: 10px;
+        margin: 0 0 14px;
+        padding: 12px;
+        background: #f7fafc;
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+      }
+      .cdc-medical-quiz__identity-row {
+        display: grid;
+        gap: 10px;
+      }
+      @media (min-width: 560px) {
+        .cdc-medical-quiz__identity-row {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .cdc-medical-quiz__field label {
+        display: block;
+        font-weight: 600;
+        font-size: 0.92rem;
+        margin-bottom: 4px;
+        color: #243b53;
+      }
+      .cdc-medical-quiz__field input[type="text"],
+      .cdc-medical-quiz__field input[type="date"] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        border: 1px solid #bcccdc;
+        border-radius: 4px;
+        font: inherit;
+        background: #fff;
+      }
+      .cdc-medical-quiz__field input:focus {
+        outline: 2px solid #005a8c;
+        outline-offset: 1px;
+        border-color: #005a8c;
+      }
+      .cdc-medical-quiz__declare {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        margin: 12px 0 4px;
+        padding: 12px;
+        background: #f7fafc;
+        border: 1px solid #d9e2ec;
+        border-radius: 6px;
+        font-size: 0.92rem;
+        line-height: 1.45;
+        color: #243b53;
+        cursor: pointer;
+      }
+      .cdc-medical-quiz__declare input {
+        margin-top: 3px;
+        flex-shrink: 0;
+        width: 1.1rem;
+        height: 1.1rem;
+      }
     </style>
   </head>
   <body>
@@ -1230,17 +1290,44 @@
               <strong>ใช่</strong> หรือ <strong>ไม่</strong> หากตอบ
               <strong>ใช่</strong> จะเปิดกล่องคำถามติดตาม
               ข้อมูลเพื่อประกอบการตัดสินใจเท่านั้น — ไม่ใช่คำแนะนำทางการแพทย์
-              กรุณาลงนามใน
+              หากผลคัดกรองผ่าน การส่งอีเมลที่ยืนยันแล้วก็เพียงพอ
+              หากต้องให้แพทย์ประเมิน ให้พิมพ์
               <a
                 href="/docs/Medical_Questionnaire.pdf"
                 target="_blank"
                 rel="noopener"
-                >PDF อย่างเป็นทางการ</a
+                >Medical Questionnaire PDF</a
               >
-              กับเราก่อนดำน้ำ หากตั้งครรภ์หรือกำลังพยายามมีบุตร ห้ามดำน้ำ
+              และนำใบรับรองความพร้อมในการดำน้ำที่แพทย์ลงนามมาที่ Chang Diving
+              หากตั้งครรภ์หรือกำลังพยายามมีบุตร ห้ามดำน้ำ
             </p>
 
             <div class="cdc-medical-quiz">
+              <div class="cdc-medical-quiz__identity" id="cdc-medical-identity">
+                <div class="cdc-medical-quiz__identity-row">
+                  <div class="cdc-medical-quiz__field">
+                    <label for="cdc-medical-name">ชื่อและนามสกุล</label>
+                    <input
+                      type="text"
+                      id="cdc-medical-name"
+                      name="medical-name"
+                      autocomplete="name"
+                      required
+                      placeholder="เช่น Jane Smith"
+                    />
+                  </div>
+                  <div class="cdc-medical-quiz__field">
+                    <label for="cdc-medical-dob">วันเดือนปีเกิด</label>
+                    <input
+                      type="date"
+                      id="cdc-medical-dob"
+                      name="medical-dob"
+                      autocomplete="bday"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
               <ol class="cdc-quiz__list" id="cdc-medical-list">
                 <li data-q="1" data-box="A">
                   <p>
@@ -2291,6 +2378,16 @@
 
               <div id="cdc-medical-result" class="cdc-quiz__answer"></div>
 
+              <label
+                class="cdc-medical-quiz__declare"
+                for="cdc-medical-declare"
+              >
+                <input type="checkbox" id="cdc-medical-declare" />
+                <span id="cdc-medical-declare-text"
+                  >ข้าพเจ้าขอรับรองว่าข้อมูลที่ให้ไว้นี้ถูกต้องและครบถ้วนตามความรู้และความเชื่อที่ดีที่สุดของข้าพเจ้า</span
+                >
+              </label>
+
               <p class="cdc-medical-quiz__actions" style="margin-top: 10px">
                 <button
                   type="button"
@@ -2298,7 +2395,7 @@
                   id="cdc-medical-email"
                   onclick="medicalEmailResults()"
                   disabled
-                  title="กรุณาตอบคำถามให้ครบก่อน"
+                  title="กรุณากรอกชื่อ วันเกิด ตอบคำถามให้ครบ และติ๊กยืนยันก่อน"
                 >
                   📩 ส่งผลลัพธ์ทางอีเมล
                 </button>
@@ -2626,32 +2723,45 @@
     <script>
       var MEDICAL_I18N = {
         emailTitleOn: "เปิดแอปอีเมลพร้อมผลลัพธ์ของคุณ",
-        emailTitleOff: "กรุณาตอบคำถามให้ครบก่อน",
+        emailTitleOff: "กรุณากรอกชื่อ วันเกิด ตอบคำถามให้ครบ และติ๊กยืนยันก่อน",
         keepGoing: "ไปต่อเลย…",
         answeredOf: "ตอบแล้ว {a} จาก {t} คำถามหลัก",
         almost: "เกือบครบแล้ว…",
         almostBody: "กรุณาตอบคำถามติดตามที่เปิดขึ้นหลังจากตอบ ใช่ ด้วย",
-        docTitle: "แนะนำให้แพทย์ประเมิน",
+        docTitle: "ต้องให้แพทย์ประเมิน",
         docBody:
-          'จากคำตอบของคุณ ควรนำแบบสอบถามที่กรอกครบทุกหน้าไปพบแพทย์ก่อนดำน้ำหรือเริ่มคอร์ส <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">ดาวน์โหลด PDF<\/a> · <a href="/th/contact/">ติดต่อเรา<\/a><br /><br />คุณยังสามารถ <strong>ส่งผลลัพธ์ทางอีเมล<\/strong> ถึง Chang Diving ได้ด้านล่าง',
+          'พิมพ์ <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">Medical Questionnaire PDF<\/a> นำไปพบแพทย์เพื่อรับใบรับรองความพร้อมในการดำน้ำ และนำเอกสารที่ลงนามแล้วมาที่ Chang Diving ก่อนดำน้ำ ยืนยันด้านล่างแล้ว <strong>ส่งผลลัพธ์ทางอีเมล<\/strong> เพื่อเก็บคำตอบไว้ · <a href="/th/contact/">ติดต่อเรา<\/a>',
         okTitle: "ตามแบบคัดกรองนี้ยังไม่จำเป็นต้องพบแพทย์",
         okBody:
-          'คุณยังต้องกรอกและลงนามใน PDF อย่างเป็นทางการกับเราก่อนดำน้ำ <a href="/docs/Medical_Questionnaire.pdf" target="_blank" rel="noopener">ดาวน์โหลด PDF<\/a><br /><br />ทางเลือก: <strong>ส่งผลลัพธ์ทางอีเมล<\/strong> ถึง Chang Diving ด้านล่าง',
-        mailAlert: "กรุณาตอบคำถามให้ครบก่อน",
-        mailSubjDoc: "Medical Self-Check results – physician recommended",
+          "ยืนยันด้านล่างแล้ว <strong>ส่งผลลัพธ์ทางอีเมล</strong> ถึง Chang Diving — อีเมลยืนยันนี้เพียงพอสำหรับแบบคัดกรองนี้ ไม่ต้องกรอกกระดาษ Medical Questionnaire เพิ่ม เว้นแต่เราขอ",
+        mailAlert:
+          "กรุณากรอกชื่อและวันเกิด ตอบคำถามให้ครบ และติ๊กช่องยืนยันก่อน",
+        mailSubjDoc: "Medical Self-Check results – physician required",
         mailSubjOk: "Medical Self-Check results – screening clear",
         summaryTitle: "Diver Medical Self-Check results",
         pageUrl:
           "https://changdiving.com/th/faqs/faq-diving-health-safety-thailand/#medical-self-check",
-        outcomeDoc: "Screening outcome: Physician evaluation recommended",
+        outcomeDoc: "Screening outcome: Physician evaluation is required",
         outcomeOk: "Screening outcome: No physician required by this screening",
-        nameLine: "Name / ชื่อ-นามสกุล (in English):",
+        nameLabel: "First and last name / ชื่อและนามสกุล: ",
+        dobLabel: "Date of birth / วันเดือนปีเกิด: ",
+        declareLineOk:
+          "Declaration: I hereby confirm that the information I have provided is true and complete to the best of my knowledge. Confirmed: Yes",
+        declareLineDoc:
+          "Additional acknowledgment: I understand that a physician's evaluation is required. I will print the Medical Questionnaire PDF and bring the signed dive medical clearance to Chang Diving.",
+        declareTextOk:
+          "ข้าพเจ้าขอรับรองว่าข้อมูลที่ให้ไว้นี้ถูกต้องและครบถ้วนตามความรู้และความเชื่อที่ดีที่สุดของข้าพเจ้า",
+        declareTextDoc:
+          "ข้าพเจ้าขอรับรองว่าข้อมูลที่ให้ไว้นี้ถูกต้องและครบถ้วนตามความรู้และความเชื่อที่ดีที่สุดของข้าพเจ้า ข้าพเจ้าเข้าใจว่าต้องให้แพทย์ประเมิน — ข้าพเจ้าจะพิมพ์ Medical Questionnaire PDF และนำไปพบแพทย์เพื่อรับใบรับรองความพร้อมในการดำน้ำ",
         datesLine: "Preferred course or dive dates:",
         phoneLine: "Phone:",
         answersHdr: "--- Answers ---",
-        note: "Note: This is an informational self-check only. I still need to complete/sign the official Medical Questionnaire PDF with Chang Diving.",
+        noteOk:
+          "Next step: Screening clear — this emailed confirmation is my self-check declaration. No additional Medical Questionnaire paper is required unless Chang Diving asks for it.",
+        noteDoc:
+          "Next step: Physician evaluation required. Print https://changdiving.com/docs/Medical_Questionnaire.pdf and obtain dive medical clearance before diving.",
         trunc:
-          "[Truncated – full list was long. Please also attach/sign the PDF.]",
+          "[Truncated – full list was long. If physician required, also bring PDF and medical clearance.]",
       };
 
       function medicalGetMains() {
@@ -2664,6 +2774,39 @@
           }
         }
         return mains;
+      }
+
+      function medicalGetIdentity() {
+        var nameEl = document.getElementById("cdc-medical-name");
+        var dobEl = document.getElementById("cdc-medical-dob");
+        var declareEl = document.getElementById("cdc-medical-declare");
+        var name = nameEl ? nameEl.value.replace(/\s+/g, " ").trim() : "";
+        var dob = dobEl ? dobEl.value : "";
+        var declared = declareEl ? !!declareEl.checked : false;
+        return {
+          name: name,
+          dob: dob,
+          declared: declared,
+          ready: name.length >= 2 && !!dob && declared,
+        };
+      }
+
+      function medicalUpdateDeclareText(needsPhysician) {
+        var el = document.getElementById("cdc-medical-declare-text");
+        if (!el) return;
+        el.textContent = needsPhysician
+          ? MEDICAL_I18N.declareTextDoc
+          : MEDICAL_I18N.declareTextOk;
+      }
+
+      function medicalRefreshEmailGate() {
+        var assess = medicalAssess();
+        if (!assess.complete) {
+          medicalSetEmailEnabled(false);
+          return;
+        }
+        medicalUpdateDeclareText(assess.needsPhysician);
+        medicalSetEmailEnabled(medicalGetIdentity().ready);
       }
 
       function medicalAssess() {
@@ -2712,6 +2855,7 @@
 
       function medicalBuildSummary() {
         var assess = medicalAssess();
+        var id = medicalGetIdentity();
         var lines = [];
         lines.push(MEDICAL_I18N.summaryTitle);
         lines.push("Page: " + MEDICAL_I18N.pageUrl);
@@ -2722,7 +2866,12 @@
             : MEDICAL_I18N.outcomeOk
         );
         lines.push("");
-        lines.push(MEDICAL_I18N.nameLine);
+        lines.push(MEDICAL_I18N.nameLabel + id.name);
+        lines.push(MEDICAL_I18N.dobLabel + id.dob);
+        lines.push(MEDICAL_I18N.declareLineOk);
+        if (assess.needsPhysician) {
+          lines.push(MEDICAL_I18N.declareLineDoc);
+        }
         lines.push(MEDICAL_I18N.datesLine);
         lines.push(MEDICAL_I18N.phoneLine);
         lines.push("");
@@ -2750,7 +2899,9 @@
         });
 
         lines.push("");
-        lines.push(MEDICAL_I18N.note);
+        lines.push(
+          assess.needsPhysician ? MEDICAL_I18N.noteDoc : MEDICAL_I18N.noteOk
+        );
         return lines.join("\n");
       }
 
@@ -2841,7 +2992,7 @@
           return;
         }
 
-        medicalSetEmailEnabled(true);
+        medicalRefreshEmailGate();
 
         if (assess.needsPhysician) {
           result.innerHTML =
@@ -2863,13 +3014,17 @@
 
       function medicalEmailResults() {
         var assess = medicalAssess();
-        if (!assess.complete) {
+        var id = medicalGetIdentity();
+        if (!assess.complete || !id.ready) {
           alert(MEDICAL_I18N.mailAlert);
           return;
         }
-        var subject = assess.needsPhysician
-          ? MEDICAL_I18N.mailSubjDoc
-          : MEDICAL_I18N.mailSubjOk;
+        var subject =
+          (assess.needsPhysician
+            ? MEDICAL_I18N.mailSubjDoc
+            : MEDICAL_I18N.mailSubjOk) +
+          " – " +
+          id.name;
         var body = medicalBuildSummary();
         if (body.length > 1800) {
           body = body.slice(0, 1750) + "\n\n" + MEDICAL_I18N.trunc;
@@ -2899,6 +3054,13 @@
             var box = li.querySelector(".cdc-medical-followup");
             if (box) box.classList.remove("show");
           });
+        var nameEl = document.getElementById("cdc-medical-name");
+        var dobEl = document.getElementById("cdc-medical-dob");
+        var declareEl = document.getElementById("cdc-medical-declare");
+        if (nameEl) nameEl.value = "";
+        if (dobEl) dobEl.value = "";
+        if (declareEl) declareEl.checked = false;
+        medicalUpdateDeclareText(false);
         var result = document.getElementById("cdc-medical-result");
         if (result) {
           result.classList.remove("show", "correct-answer", "incorrect-answer");
@@ -2907,6 +3069,17 @@
         }
         medicalSetEmailEnabled(false);
       }
+
+      (function medicalBindIdentity() {
+        ["cdc-medical-name", "cdc-medical-dob", "cdc-medical-declare"].forEach(
+          function (id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.addEventListener("input", medicalRefreshEmailGate);
+            el.addEventListener("change", medicalRefreshEmailGate);
+          }
+        );
+      })();
     </script>
   </body>
 </html>
