@@ -405,6 +405,60 @@
           #ff8a5c 100%
         );
       }
+
+      /* posts above-fold layout – critical (CLS) */
+      .posts-box {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        position: relative;
+        box-sizing: border-box;
+        color: #212121;
+        line-height: 1.6;
+        overflow: hidden;
+      }
+      .posts-box h1,
+      .posts-box h2,
+      .posts-box h3 {
+        color: #005a8c;
+        margin-top: 1.2em;
+        margin-bottom: 0.5em;
+      }
+      .posts-box p {
+        margin: 1em 0;
+        font-size: 1.08em;
+      }
+      .btn-cta,
+      .posts-box a.btn-cta {
+        display: inline-block;
+        box-sizing: border-box;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 1.3;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        border-bottom: none;
+        text-align: center;
+      }
+      @media (max-width: 700px) {
+        .posts-box {
+          padding: 6vw 2vw;
+          border-radius: 4vw;
+          max-width: 99vw;
+          margin-bottom: 32px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
       .breadcrumb a {
         color: #005a8c;
         text-decoration: underline;
@@ -561,11 +615,13 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css"
+      href="/style.min.css?v=contrast-6"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link rel="stylesheet" href="/style.min.css" /> </noscript>
+    <noscript
+      ><link rel="stylesheet" href="/style.min.css?v=contrast-6" />
+    </noscript>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
