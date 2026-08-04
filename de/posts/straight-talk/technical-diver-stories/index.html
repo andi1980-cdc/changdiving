@@ -466,13 +466,29 @@
           height: auto;
           min-height: unset;
         }
-        .hero:not(.hero--transactional):not(.hero--fun-dives) picture,
-        .hero:not(.hero--transactional):not(.hero--fun-dives) .hero-header-img {
+        /* Keep picture in-flow for ALL heroes (incl. transactional) — prevents main CLS */
+        .hero picture,
+        .hero-header-img {
           position: relative;
           width: 100%;
           height: auto;
           aspect-ratio: 3 / 2;
           object-fit: cover;
+        }
+
+        /* .hero--transactional: first-paint + mobile — aligned with style.min.css */
+        .hero--transactional {
+          height: auto !important;
+          min-height: unset !important;
+        }
+        .hero--transactional picture,
+        .hero--transactional .hero-header-img {
+          position: relative !important;
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 3 / 2 !important;
+          object-fit: contain !important;
+          display: block !important;
         }
       }
 
@@ -839,12 +855,12 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css?v=contrast-7"
+      href="/style.min.css?v=contrast-8"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-7" />
+      <link rel="stylesheet" href="/style.min.css?v=contrast-8" />
     </noscript>
     <!-- JSON-LD: BlogPosting -->
     <script type="application/ld+json">
@@ -1083,13 +1099,12 @@
         <a href="/de/posts/straight-talk/">Klartext</a>
       </nav>
 
+      <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
+        <a href="/de/posts/straight-talk/">Straight Talk</a> › technical diver
+        stories
+      </nav>
       <div class="tek-box">
-        <!-- Filled by /js/global.min.js (full trail: Home › Posts › Straight Talk › …) -->
-        <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/de/">🏠 Startseite</a> › <a href="/de/posts/">Posts</a> ›
-          <a href="/de/posts/straight-talk/">Straight Talk</a> › technical diver
-          stories
-        </nav>
         <h1>
           Geschichten von Tec-Tauchern — Nitrox, Deco &amp; Advanced Wreck
         </h1>
