@@ -691,16 +691,134 @@
       .cdc-reviews .read-more::after {
         content: "→";
       }
+      .cdc-reviews .reviews-follow {
+        margin: 1.15rem 0 0;
+        padding-top: 1rem;
+        border-top: 1px solid var(--line);
+        text-align: center;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .cdc-reviews .reviews-follow a {
+        color: var(--sea);
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .cdc-reviews .reviews-follow a:hover {
+        color: var(--sea-dark);
+        text-decoration: underline;
+      }
+
+      /* compact reviews box */
+      .cdc-reviews {
+        margin: 1rem 0 1.25rem;
+        line-height: 1.4;
+      }
+      .cdc-reviews .reviews-heading,
+      .changdiving-box .cdc-reviews .reviews-heading {
+        margin: 0 0 0.2rem;
+        font-size: 1.1rem;
+      }
+      .cdc-reviews .reviews-lead,
+      .changdiving-box .cdc-reviews .reviews-lead {
+        max-width: 58ch;
+        font-size: 0.82rem;
+      }
+      .cdc-reviews .reviews-banner {
+        padding: 0.8rem 0.85rem 0.85rem;
+        border-radius: 10px;
+      }
+      .cdc-reviews .reviews-banner-top {
+        gap: 0.55rem 1rem;
+      }
+      .cdc-reviews .reviews-brand {
+        gap: 0.55rem;
+      }
+      .cdc-reviews .reviews-brand img {
+        width: 44px;
+      }
+      .cdc-reviews .reviews-brand h3 {
+        font-size: 0.92rem;
+      }
+      .cdc-reviews .reviews-score {
+        margin-top: 0.2rem;
+        font-size: 0.82rem;
+      }
+      .cdc-reviews .stars {
+        font-size: 0.9rem;
+      }
+      .cdc-reviews .reviews-score .rating {
+        font-size: 1.05rem;
+      }
+      .cdc-reviews .reviews-banner hr {
+        margin: 0.55rem 0;
+      }
+      .cdc-reviews .platform-label {
+        margin: 0 0 0.25rem;
+        font-size: 0.68rem;
+      }
+      .cdc-reviews .platform-row {
+        gap: 0.35rem;
+      }
+      .cdc-reviews .platform-btn {
+        gap: 0.35rem;
+        padding: 0.35rem 0.6rem;
+        font-size: 0.78rem;
+      }
+      .cdc-reviews .guest-summary .label {
+        margin-bottom: 0.2rem;
+        font-size: 0.65rem;
+      }
+      .cdc-reviews .guest-summary p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      .cdc-reviews .review-grid {
+        margin-top: 0.65rem;
+        padding-top: 0.1rem;
+      }
+      .cdc-reviews .review-tile {
+        gap: 0.3rem;
+        padding: 0.65rem 0;
+      }
+      .cdc-reviews .review-quote {
+        font-size: 0.8rem;
+        line-height: 1.35;
+      }
+      .cdc-reviews .review-author {
+        font-size: 0.75rem;
+      }
+      .cdc-reviews .read-more {
+        margin-top: 0;
+        font-size: 0.78rem;
+      }
+      .cdc-reviews .reviews-follow {
+        margin: 0.55rem 0 0;
+        padding-top: 0.55rem;
+        font-size: 0.78rem;
+      }
+      @media (min-width: 800px) {
+        .cdc-reviews .reviews-banner {
+          padding: 0.85rem 1rem 0.9rem;
+        }
+        .cdc-reviews .reviews-banner-top {
+          grid-template-columns: minmax(180px, 220px) 1fr;
+        }
+        .cdc-reviews .review-tile {
+          padding: 0.55rem 0.7rem 0.1rem;
+        }
+      }
     </style>
-    <link rel="preload" href="/style.min.css?v=cdc-reviews-1" as="style" />
+    <link rel="preload" href="/style.min.css?v=cdc-reviews-5" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=cdc-reviews-1"
+      href="/style.min.css?v=cdc-reviews-5"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=cdc-reviews-1" />
+      <link rel="stylesheet" href="/style.min.css?v=cdc-reviews-5" />
       <!-- Critical Image Preload -->
     </noscript>
     <script type="application/ld+json">
@@ -826,8 +944,8 @@
         "sameAs": [
           "https://g.page/r/CWe5cDXUcQcdEBM/review",
           "https://www.tripadvisor.com/Attraction_Review-d2718481-Reviews.html",
-          "https://www.facebook.com/changdivingcenter/"
-          "https://www.youtube.com/@changdiving1842"
+          "https://www.facebook.com/changdivingcenter/",
+          "https://www.youtube.com/@changdiving1842",
           "https://www.instagram.com/chang_diving_center/"
         ]
       }
@@ -1470,6 +1588,22 @@
                 >
               </article>
             </div>
+            <p class="reviews-follow">
+              Follow us on
+              <a
+                href="https://www.instagram.com/chang_diving_center/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              or
+              <a
+                href="https://www.youtube.com/@changdiving1842"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </p>
           </div>
         </section>
 

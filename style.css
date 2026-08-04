@@ -3148,9 +3148,9 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
   --tripadvisor: #00aa6c;
   --facebook: #1877f2;
   width: 100%;
-  margin: 1.75rem 0 2rem;
+  margin: 1rem 0 1.25rem;
   color: var(--ink);
-  line-height: 1.55;
+  line-height: 1.4;
 }
 
 .cdc-reviews .reviews-intro {
@@ -3160,8 +3160,8 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 
 .cdc-reviews .reviews-heading,
 .changdiving-box .cdc-reviews .reviews-heading {
-  margin: 0 0 0.35rem;
-  font-size: 1.35rem;
+  margin: 0 0 0.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #333;
   text-align: center;
@@ -3170,8 +3170,8 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 .cdc-reviews .reviews-lead,
 .changdiving-box .cdc-reviews .reviews-lead {
   margin: 0 auto;
-  max-width: 70ch;
-  font-size: 0.95rem;
+  max-width: 58ch;
+  font-size: 0.82rem;
   color: var(--muted);
   text-align: center;
 }
@@ -3182,9 +3182,9 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 }
 
 .cdc-reviews .reviews-banner {
-  padding: 1.4rem 1.25rem 1.35rem;
+  padding: 0.8rem 0.85rem 0.85rem;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 10px;
   background: linear-gradient(
     180deg,
     rgba(0, 119, 182, 0.07) 0%,
@@ -3195,31 +3195,31 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 
 @media (min-width: 800px) {
   .cdc-reviews .reviews-banner {
-    padding: 1.6rem 1.5rem 1.5rem;
+    padding: 0.85rem 1rem 0.9rem;
   }
 }
 
 .cdc-reviews .reviews-banner-top {
   display: grid;
-  gap: 1.15rem 1.75rem;
+  gap: 0.55rem 1rem;
   align-items: center;
   grid-template-columns: 1fr;
 }
 
 @media (min-width: 800px) {
   .cdc-reviews .reviews-banner-top {
-    grid-template-columns: minmax(220px, 280px) 1fr;
+    grid-template-columns: minmax(180px, 220px) 1fr;
   }
 }
 
 .cdc-reviews .reviews-brand {
   display: flex;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.55rem;
 }
 
 .cdc-reviews .reviews-brand img {
-  width: 64px;
+  width: 44px;
   height: auto;
   display: block;
   flex: 0 0 auto;
@@ -3227,7 +3227,7 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 
 .cdc-reviews .reviews-brand h3 {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--sea-deep);
 }
@@ -3236,27 +3236,27 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.35rem 0.55rem;
-  margin-top: 0.3rem;
-  font-size: 0.92rem;
+  gap: 0.25rem 0.4rem;
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
   color: var(--muted);
 }
 
 .cdc-reviews .stars {
   color: var(--star);
   letter-spacing: 0.06em;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1;
 }
 
 .cdc-reviews .reviews-score .rating {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink);
 }
 
 .cdc-reviews .reviews-banner hr {
-  margin: 1.15rem 0;
+  margin: 0.55rem 0;
   border: none;
   border-top: 1px solid var(--line);
 }
@@ -3267,8 +3267,8 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 }
 
 .cdc-reviews .platform-label {
-  margin: 0 0 0.5rem;
-  font-size: 0.78rem;
+  margin: 0 0 0.25rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -3279,20 +3279,20 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.55rem;
+  gap: 0.35rem;
 }
 
 .cdc-reviews .platform-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.6rem 0.9rem;
-  border-radius: 6px;
+  gap: 0.35rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 5px;
   border: 1px solid var(--line);
   background: #fff;
   color: var(--ink);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   font-weight: 500;
   transition:
     border-color 0.2s ease,
@@ -3338,8 +3338,8 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 
 .cdc-reviews .guest-summary .label {
   display: block;
-  margin-bottom: 0.4rem;
-  font-size: 0.72rem;
+  margin-bottom: 0.2rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -3348,16 +3348,16 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 
 .cdc-reviews .guest-summary p {
   margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.4;
   color: var(--ink);
 }
 
 .cdc-reviews .review-grid {
   display: grid;
   gap: 0;
-  margin-top: 1.35rem;
-  padding-top: 0.25rem;
+  margin-top: 0.65rem;
+  padding-top: 0.1rem;
   border-top: 1px solid var(--line);
 }
 
@@ -3370,20 +3370,20 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 .cdc-reviews .review-tile {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 1.15rem 0;
+  gap: 0.3rem;
+  padding: 0.65rem 0;
   min-height: 100%;
   border-bottom: 1px solid var(--line);
 }
 
 .cdc-reviews .review-tile:last-child {
   border-bottom: none;
-  padding-bottom: 0.15rem;
+  padding-bottom: 0.05rem;
 }
 
 @media (min-width: 800px) {
   .cdc-reviews .review-tile {
-    padding: 1.25rem 1.15rem 0.25rem;
+    padding: 0.55rem 0.7rem 0.1rem;
     border-bottom: none;
     border-right: 1px solid var(--line);
   }
@@ -3437,14 +3437,14 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 .cdc-reviews .review-quote {
   margin: 0;
   flex: 1;
-  font-size: 0.98rem;
-  line-height: 1.55;
+  font-size: 0.8rem;
+  line-height: 1.35;
   color: var(--ink);
 }
 
 .cdc-reviews .review-author {
   margin: 0;
-  font-size: 0.88rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--ink);
 }
@@ -3452,12 +3452,12 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 .cdc-reviews .read-more {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.25rem;
   align-self: flex-start;
-  margin-top: 0.15rem;
+  margin-top: 0;
   color: var(--sea);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
   font-weight: 500;
   transition:
     color 0.2s ease,
@@ -3476,4 +3476,25 @@ html[lang="th"] h3[style*="background: linear-gradient"] {
 
 .cdc-reviews .read-more:hover::after {
   transform: translateX(2px);
+}
+
+.cdc-reviews .reviews-follow {
+  margin: 0.55rem 0 0;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.cdc-reviews .reviews-follow a {
+  color: var(--sea);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cdc-reviews .reviews-follow a:hover {
+  color: var(--sea-dark);
+  text-decoration: underline;
 }
