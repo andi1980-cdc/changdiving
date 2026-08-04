@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" fetchpriority="high" href="/img/courses/header_course_small.webp" />
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="/img/courses/header_course_small.webp"
+    />
 
     <title>
       Tauchkurse auf Koh Chang – Lerne, tauche & wachse | Chang Diving
@@ -288,7 +293,7 @@
         line-height: 1.6;
         color: #1a1a1a;
       }
-      
+
       .grid-container h1 {
         font-size: 2.6rem;
         font-weight: 800;
@@ -410,16 +415,385 @@
           max-width: 99vw;
         }
       }
+
+      /* static reviews block (also in style.min.css) */
+      .cdc-reviews {
+        --sea: #0077b6;
+        --sea-dark: #005f87;
+        --sea-deep: #023e5c;
+        --ink: #1a2330;
+        --muted: #5a6b7a;
+        --line: #d5e4ee;
+        --star: #f0b429;
+        --google: #4285f4;
+        --tripadvisor: #00aa6c;
+        --facebook: #1877f2;
+        width: 100%;
+        margin: 1.75rem 0 2rem;
+        color: var(--ink);
+        line-height: 1.55;
+      }
+      .cdc-reviews .reviews-intro {
+        width: 100%;
+        text-align: center;
+      }
+      .cdc-reviews .reviews-heading,
+      .changdiving-box .cdc-reviews .reviews-heading {
+        margin: 0 0 0.35rem;
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: #333;
+        text-align: center;
+      }
+      .cdc-reviews .reviews-lead,
+      .changdiving-box .cdc-reviews .reviews-lead {
+        margin: 0 auto;
+        max-width: 70ch;
+        font-size: 0.95rem;
+        color: var(--muted);
+        text-align: center;
+      }
+      .cdc-reviews .reviews-banner {
+        padding: 1.4rem 1.25rem 1.35rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 119, 182, 0.07) 0%,
+          rgba(0, 119, 182, 0.02) 45%,
+          rgba(255, 255, 255, 0.4) 100%
+        );
+      }
+      .cdc-reviews .reviews-banner-top {
+        display: grid;
+        gap: 1.15rem 1.75rem;
+        align-items: center;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 800px) {
+        .cdc-reviews .reviews-banner {
+          padding: 1.6rem 1.5rem 1.5rem;
+        }
+        .cdc-reviews .reviews-banner-top {
+          grid-template-columns: minmax(220px, 280px) 1fr;
+        }
+        .cdc-reviews .review-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .cdc-reviews .review-tile {
+          padding: 1.25rem 1.15rem 0.25rem;
+          border-bottom: none;
+          border-right: 1px solid var(--line);
+        }
+        .cdc-reviews .review-tile:first-child {
+          padding-left: 0;
+        }
+        .cdc-reviews .review-tile:last-child {
+          padding-right: 0;
+          border-right: none;
+        }
+      }
+      .cdc-reviews .reviews-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+      .cdc-reviews .reviews-brand img {
+        width: 64px;
+        height: auto;
+        display: block;
+        flex: 0 0 auto;
+      }
+      .cdc-reviews .reviews-brand h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--sea-deep);
+      }
+      .cdc-reviews .reviews-score {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.35rem 0.55rem;
+        margin-top: 0.3rem;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .cdc-reviews .stars {
+        color: var(--star);
+        letter-spacing: 0.06em;
+        font-size: 1rem;
+        line-height: 1;
+      }
+      .cdc-reviews .reviews-score .rating {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .cdc-reviews .reviews-banner hr {
+        margin: 1.15rem 0;
+        border: none;
+        border-top: 1px solid var(--line);
+      }
+      .cdc-reviews .reviews-actions {
+        margin: 0;
+        text-align: center;
+      }
+      .cdc-reviews .platform-label {
+        margin: 0 0 0.5rem;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .cdc-reviews .platform-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.55rem;
+      }
+      .cdc-reviews .platform-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.6rem 0.9rem;
+        border-radius: 6px;
+        border: 1px solid var(--line);
+        background: #fff;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 500;
+      }
+      .cdc-reviews .platform-btn .dot,
+      .cdc-reviews .platform-name .dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        flex: 0 0 auto;
+      }
+      .cdc-reviews .platform-btn.google .dot,
+      .cdc-reviews .review-tile.google .platform-name .dot {
+        background: var(--google);
+      }
+      .cdc-reviews .platform-btn.tripadvisor .dot,
+      .cdc-reviews .review-tile.tripadvisor .platform-name .dot {
+        background: var(--tripadvisor);
+      }
+      .cdc-reviews .platform-btn.facebook .dot,
+      .cdc-reviews .review-tile.facebook .platform-name .dot {
+        background: var(--facebook);
+      }
+      .cdc-reviews .platform-btn .count {
+        color: var(--muted);
+        font-weight: 400;
+      }
+      .cdc-reviews .guest-summary .label {
+        display: block;
+        margin-bottom: 0.4rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--sea);
+      }
+      .cdc-reviews .guest-summary p {
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: var(--ink);
+      }
+      .cdc-reviews .review-grid {
+        display: grid;
+        gap: 0;
+        margin-top: 1.35rem;
+        padding-top: 0.25rem;
+        border-top: 1px solid var(--line);
+      }
+      .cdc-reviews .review-tile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.15rem 0;
+        min-height: 100%;
+        border-bottom: 1px solid var(--line);
+      }
+      .cdc-reviews .review-tile:last-child {
+        border-bottom: none;
+        padding-bottom: 0.15rem;
+      }
+      .cdc-reviews .review-platform {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+      .cdc-reviews .platform-name {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .cdc-reviews .review-quote {
+        margin: 0;
+        flex: 1;
+        font-size: 0.98rem;
+        line-height: 1.55;
+        color: var(--ink);
+      }
+      .cdc-reviews .review-author {
+        margin: 0;
+        font-size: 0.88rem;
+        font-weight: 500;
+        color: var(--ink);
+      }
+      .cdc-reviews .read-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        align-self: flex-start;
+        margin-top: 0.15rem;
+        color: var(--sea);
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+      .cdc-reviews .read-more::after {
+        content: "→";
+      }
+      .cdc-reviews .reviews-follow {
+        margin: 1.15rem 0 0;
+        padding-top: 1rem;
+        border-top: 1px solid var(--line);
+        text-align: center;
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .cdc-reviews .reviews-follow a {
+        color: var(--sea);
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .cdc-reviews .reviews-follow a:hover {
+        color: var(--sea-dark);
+        text-decoration: underline;
+      }
+
+      /* compact reviews box */
+      .cdc-reviews {
+        margin: 1rem 0 1.25rem;
+        line-height: 1.4;
+      }
+      .cdc-reviews .reviews-heading,
+      .changdiving-box .cdc-reviews .reviews-heading {
+        margin: 0 0 0.2rem;
+        font-size: 1.1rem;
+      }
+      .cdc-reviews .reviews-lead,
+      .changdiving-box .cdc-reviews .reviews-lead {
+        max-width: 58ch;
+        font-size: 0.82rem;
+      }
+      .cdc-reviews .reviews-banner {
+        padding: 0.8rem 0.85rem 0.85rem;
+        border-radius: 10px;
+      }
+      .cdc-reviews .reviews-banner-top {
+        gap: 0.55rem 1rem;
+      }
+      .cdc-reviews .reviews-brand {
+        gap: 0.55rem;
+      }
+      .cdc-reviews .reviews-brand img {
+        width: 44px;
+      }
+      .cdc-reviews .reviews-brand h3 {
+        font-size: 0.92rem;
+      }
+      .cdc-reviews .reviews-score {
+        margin-top: 0.2rem;
+        font-size: 0.82rem;
+      }
+      .cdc-reviews .stars {
+        font-size: 0.9rem;
+      }
+      .cdc-reviews .reviews-score .rating {
+        font-size: 1.05rem;
+      }
+      .cdc-reviews .reviews-banner hr {
+        margin: 0.55rem 0;
+      }
+      .cdc-reviews .platform-label {
+        margin: 0 0 0.25rem;
+        font-size: 0.68rem;
+      }
+      .cdc-reviews .platform-row {
+        gap: 0.35rem;
+      }
+      .cdc-reviews .platform-btn {
+        gap: 0.35rem;
+        padding: 0.35rem 0.6rem;
+        font-size: 0.78rem;
+      }
+      .cdc-reviews .guest-summary .label {
+        margin-bottom: 0.2rem;
+        font-size: 0.65rem;
+      }
+      .cdc-reviews .guest-summary p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+      }
+      .cdc-reviews .review-grid {
+        margin-top: 0.65rem;
+        padding-top: 0.1rem;
+      }
+      .cdc-reviews .review-tile {
+        gap: 0.3rem;
+        padding: 0.65rem 0;
+      }
+      .cdc-reviews .review-quote {
+        font-size: 0.8rem;
+        line-height: 1.35;
+      }
+      .cdc-reviews .review-author {
+        font-size: 0.75rem;
+      }
+      .cdc-reviews .read-more {
+        margin-top: 0;
+        font-size: 0.78rem;
+      }
+      .cdc-reviews .reviews-follow {
+        margin: 0.55rem 0 0;
+        padding-top: 0.55rem;
+        font-size: 0.78rem;
+      }
+      @media (min-width: 800px) {
+        .cdc-reviews .reviews-banner {
+          padding: 0.85rem 1rem 0.9rem;
+        }
+        .cdc-reviews .reviews-banner-top {
+          grid-template-columns: minmax(180px, 220px) 1fr;
+        }
+        .cdc-reviews .review-tile {
+          padding: 0.55rem 0.7rem 0.1rem;
+        }
+      }
     </style>
+    <link rel="preload" href="/style.min.css?v=cdc-reviews-5" as="style" />
     <link
-      rel="preload"
-      href="/style.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      rel="stylesheet"
+      href="/style.min.css?v=cdc-reviews-5"
+      media="print"
+      onload="this.media='all'"
     />
-    <noscript
-      ><link rel="stylesheet" href="/style.min.css" />
-      <!-- Critical Image Preload -->
+    <noscript>
+      <link rel="stylesheet" href="/style.min.css?v=cdc-reviews-5" />
     </noscript>
     <script type="application/ld+json">
       [
@@ -469,9 +843,11 @@
             "longitude": 102.28982
           },
           "sameAs": [
+            "https://g.page/r/CWe5cDXUcQcdEBM/review",
+            "https://www.tripadvisor.com/Attraction_Review-d2718481-Reviews.html",
             "https://www.facebook.com/changdivingcenter/",
-            "https://www.instagram.com/chang_diving_center",
-            "https://www.youtube.com/@changdiving1842"
+            "https://www.youtube.com/@changdiving1842",
+            "https://www.instagram.com/chang_diving_center/"
           ],
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -1868,7 +2244,9 @@
               src="/img/daytrips/scuba-review/scuba-review-refresher.webp"
               alt="Tauch-Auffrischungskurs - Fähigkeiten erneuern mit professionellem Instructor"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🔄 Auffrischungskurs</h3>
               <p>
@@ -1894,7 +2272,9 @@
               src="/img/daytrips/try_dive/try_dive_kohchang.webp"
               alt="Schnuppertauchen auf Koh Chang - Erster Tauchgang ohne Lizenz"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🌊 Schnuppertauchen</h3>
               <p>
@@ -1920,7 +2300,9 @@
               src="/img/courses/scuba-diver/scuba-diver_small.webp"
               alt="Scuba Diver Kurs Koh Chang – Zertifizierung in 2 Tagen"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🤿 Scuba Diver</h3>
               <p>
@@ -1945,7 +2327,9 @@
               src="/img/courses/owd/chang-diving-courses.webp"
               alt="Open Water Diver Kurs - Beginne deine Tauchzertifizierung"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🎓 Open Water Diver</h3>
               <p>
@@ -1971,7 +2355,9 @@
               src="/img/courses/advanced/aowd.webp"
               alt="Advanced Open Water Diver Kurs - Bringe deine Tauchfähigkeiten auf das nächste Level"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>⚡ Advanced OWD</h3>
               <p>
@@ -1997,7 +2383,9 @@
               src="/img/courses/owd_aowd/owd_aowd.webp"
               alt="Open Water & Advanced Paket - Komplettes Tauchzertifizierungs-Kombo"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🎓 OWD & AOWD Paket</h3>
               <p>
@@ -2022,7 +2410,9 @@
               src="/img/courses/owd_to_dm/owd_to_dm.webp"
               alt="Vom Anfänger zum Profi – Komplettpaket"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🏄 OWD bis DM Paket</h3>
               <p>
@@ -2047,7 +2437,9 @@
               src="/img/courses/first_aid/first_aid.webp"
               alt="Erste-Hilfe-Kurs - CPR, AED und Notfalltraining"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🚑 Erste Hilfe</h3>
               <p>
@@ -2073,7 +2465,9 @@
               src="/img/courses/rescue/rescue_kc.webp"
               alt="Rescue Diver Kurs - Notfallmanagement und Tauchsicherheitstraining"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🛟 Rescue Diver</h3>
               <p>
@@ -2099,7 +2493,9 @@
               src="/img/courses/msd/masterscubadiver.webp"
               alt="Master Scuba Diver - Höchste Freizeittaucher-Zertifizierung"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🏆 MSD – Master Diver</h3>
               <p>
@@ -2149,7 +2545,9 @@
               src="/img/courses/divemaster/chang-diving-courses.webp"
               alt="Werde Tauchprofi auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>👨‍🎓 Divemaster</h3>
               <p>
@@ -2174,7 +2572,9 @@
               src="/img/courses/first_aid/first_aid.webp"
               alt="Werde Erste-Hilfe-Ausbilder auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🚑 EFR Instructor</h3>
               <p>
@@ -2199,7 +2599,9 @@
               src="/img/courses/idc/idc_koh_chang.webp"
               alt="SDI Instructor-Kurs – Tauchlehrer werden auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🎓 SDI IDC Kurs</h3>
               <p>
@@ -2224,7 +2626,9 @@
               src="/img/courses/sdi_ie/sdi_ie.webp"
               alt="SDI Instructor Examination – Tauchlehrer werden"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>📝 SDI IE</h3>
               <p>
@@ -2249,7 +2653,9 @@
               src="/img/courses/crossover/chang-diving-courses.webp"
               alt="SDI Instructor Crossover – Wechsel zu SDI/TDI"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🔄 SDI Crossover</h3>
               <p>
@@ -2305,7 +2711,9 @@
               src="/img/courses/deep_wreck_nitrox/deep_wreck_eanx_pack_small.webp"
               alt="Tieftauchen, Wracktauchen & Nitrox auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>📦 Deep, Wrack & Nitrox Paket</h3>
               <p>
@@ -2331,7 +2739,9 @@
               src="/img/courses/nitrox/nitrox_speck.webp"
               alt="Werde Nitrox-Taucher auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🫁 Nitrox Kurs</h3>
               <p>
@@ -2355,7 +2765,9 @@
               src="/img/products/gas_blender/gas_blender_workshop_tec_preperation.webp"
               alt="Nitrox Gas Blender Kurs - Professionelles Gasmischen lernen"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>⚗️ Nitrox Gas Blender Kurs</h3>
               <p>
@@ -2380,7 +2792,9 @@
               src="/img/courses/deep_diver/deep_diver_course.webp"
               alt="Werde Tieftaucher auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🌊 Deep Diver</h3>
               <p>
@@ -2406,7 +2820,9 @@
               src="/img/courses/wreck_diver/wreck_diver_course_small.webp"
               alt="Wracktauchen lernen auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🚢 Wracktaucher</h3>
               <p>
@@ -2431,7 +2847,9 @@
               src="/img/courses/navigation_speck/navigation_diver_course.webp"
               alt="Verbessere deine Unterwasser-Navigation"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🧭 Navigation Spezialkurs</h3>
               <p>
@@ -2456,7 +2874,9 @@
               src="/img/courses/search_a_recovery/search_a_recovery_spec.webp"
               alt="Unterwassersuche und Bergung"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🔍 Search & Recovery</h3>
               <p>
@@ -2480,7 +2900,9 @@
               src="/img/courses/night_diver/night_diver_speck.webp"
               alt="Erkunde das Meer bei Nacht auf Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🌙 Nachttaucher</h3>
               <p>
@@ -2506,7 +2928,9 @@
               src="/img/courses/sidemount/sidemount_course.webp"
               alt="Tauchen mit Sidemount – mehr Freiheit & Balance"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>⚖️ Sidemount Kurs</h3>
               <p>
@@ -2532,7 +2956,9 @@
               src="/img/courses/solo_diver/solo_diver_course.webp"
               alt="Lerne selbstständig & sicher zu tauchen"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🏄 Solo Diver</h3>
               <p>
@@ -2588,7 +3014,9 @@
               src="/img/courses/intro_to_tech/intro_to_tech_course.webp"
               alt="Einführung ins technische Tauchen – TDI"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🔧 TDI Intro to Tech</h3>
               <p>
@@ -2613,7 +3041,9 @@
               src="/img/courses/advanced nitrox/tdi_advanced_nitrox_course.webp"
               alt="Maximiere deine Grundzeit mit Sauerstoff"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>⚡ TDI Advanced Nitrox</h3>
               <p>
@@ -2638,7 +3068,9 @@
               src="/img/courses/decompression procedures/tdi_deco_pro.webp"
               alt="Erlerne Dekompressionstauchen"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>⏱️ Dekompressions-Verfahren</h3>
               <p>
@@ -2664,7 +3096,9 @@
               src="/img/courses/advanced wreck/tdi_advanced_wreck_diver.webp"
               alt="Tauche in die größten Wracks Thailands"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🏛️ Advanced Wracktaucher</h3>
               <p>
@@ -2689,7 +3123,9 @@
               src="/img/products/sidemount/sidemount-diver_4_small.webp"
               alt="TDI Sidemount-Taucher-Kurs – Technisches Doppelflaschen-Tauchen Koh Chang"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>⚙️ TDI Sidemount Diver</h3>
               <p style="min-height: 60px">
@@ -2714,7 +3150,9 @@
               src="/img/courses/technical_diver/tdi_technical_diver.webp"
               alt="Starte deine Tec-Karriere"
               width="600"
-              height="400" loading="lazy" />
+              height="400"
+              loading="lazy"
+            />
             <div class="excerpt">
               <h3>🏆 Technical Diver Paket</h3>
               <p>
@@ -2736,14 +3174,180 @@
           </a>
         </div>
 
-        <div style="margin-top: 20px">
-          <script
-            defer
-            async
-            data-src="https://cdn.trustindex.io/loader.js?10987fa47f9a902e6d96b4a1e44"
-            crossorigin="anonymous"
-          ></script>
-        </div>
+        <section class="cdc-reviews" aria-label="Gästebewertungen">
+          <div class="reviews-banner">
+            <div class="reviews-intro">
+              <h2 class="reviews-heading">Was andere Taucher entdeckt haben</h2>
+              <p class="reviews-lead">
+                Echte Bewertungen und Erfahrungen unserer Gäste – sieh selbst,
+                was andere bei ihren Abenteuern mit uns entdeckt haben!
+                <span class="stars" aria-label="5 Sterne">★★★★★</span>
+              </p>
+            </div>
+
+            <hr />
+
+            <div class="reviews-banner-top">
+              <div class="reviews-brand">
+                <img
+                  src="/img/logos/logo_cdc_black.webp"
+                  alt="Chang Diving Center"
+                  width="64"
+                  height="64"
+                />
+                <div>
+                  <h3>Chang Diving Center</h3>
+                  <div class="reviews-score">
+                    <span class="stars" aria-hidden="true">★★★★★</span>
+                    <span class="rating">4.8</span>
+                    <span>aus über 400 Gästebewertungen</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guest-summary">
+                <span class="label">KI-Überblick</span>
+                <p>
+                  Das Chang Diving Center bietet ein großartiges Taucherlebnis
+                  mit herausragenden Instructors wie Andy und Pern, die für eine
+                  sichere und angenehme Zeit sorgen. Gäste schätzen das
+                  kompetente Team, die ausgezeichnete Ausbildung und die
+                  herzliche Atmosphäre. Gut organisierte Touren, Liebe zum
+                  Detail und durchdachte Annehmlichkeiten an Bord machen das
+                  Center zur starken Wahl für Taucher aller Level.
+                </p>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="reviews-actions">
+              <p class="platform-label">
+                Bewertungen lesen oder selbst schreiben
+              </p>
+              <div class="platform-row">
+                <a
+                  class="platform-btn google"
+                  href="https://g.page/r/CWe5cDXUcQcdEBM/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="dot" aria-hidden="true"></span>
+                  Google <span class="count">(170+)</span>
+                </a>
+                <a
+                  class="platform-btn tripadvisor"
+                  href="https://www.tripadvisor.com/UserReviewEdit-d2718481?m=68676"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="dot" aria-hidden="true"></span>
+                  TripAdvisor <span class="count">(190+)</span>
+                </a>
+                <a
+                  class="platform-btn facebook"
+                  href="https://www.facebook.com/changdivingcenter/reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="dot" aria-hidden="true"></span>
+                  Facebook <span class="count">(50+)</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="review-grid">
+              <article class="review-tile google">
+                <div class="review-platform">
+                  <span class="platform-name"
+                    ><span class="dot" aria-hidden="true"></span> Google</span
+                  >
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  “Just finished my Deep Diver and Wreck Specialty courses here
+                  with Instructor Pern – absolutely amazing experience from
+                  start to finish. Safety was always the priority, but every
+                  dive was also genuinely fun. Can't recommend Chang Diving and
+                  Instructor Pern enough.”
+                </p>
+                <p class="review-author">Wan W.</p>
+                <a
+                  class="read-more"
+                  href="https://g.page/r/CWe5cDXUcQcdEBM/review"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Mehr auf Google</a
+                >
+              </article>
+
+              <article class="review-tile tripadvisor">
+                <div class="review-platform">
+                  <span class="platform-name"
+                    ><span class="dot" aria-hidden="true"></span>
+                    TripAdvisor</span
+                  >
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  “I completed my Open Water course at Chang Diving Center and
+                  everything was perfectly organized. Great service, a very
+                  friendly and professional team, and an excellent instructor.
+                  My instructor Pern was extremely skilled, calm, and in full
+                  control at all times. Highly recommended – 10/10.”
+                </p>
+                <p class="review-author">Markus J.</p>
+                <a
+                  class="read-more"
+                  href="https://www.tripadvisor.com/Attraction_Review-d2718481-Reviews.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Mehr auf TripAdvisor</a
+                >
+              </article>
+
+              <article class="review-tile facebook">
+                <div class="review-platform">
+                  <span class="platform-name"
+                    ><span class="dot" aria-hidden="true"></span> Facebook</span
+                  >
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                </div>
+                <p class="review-quote">
+                  “This was my first sea dive after having qualified and the
+                  staff at Chang Diving were superb and professional ensuring my
+                  experience was the best – in fact I booked a second dive with
+                  them.”
+                </p>
+                <p class="review-author">Santa Van Staden</p>
+                <a
+                  class="read-more"
+                  href="https://www.facebook.com/changdivingcenter/reviews"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Mehr auf Facebook</a
+                >
+              </article>
+            </div>
+
+            <p class="reviews-follow">
+              Folge uns auf
+              <a
+                href="https://www.instagram.com/chang_diving_center/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              oder
+              <a
+                href="https://www.youtube.com/@changdiving1842"
+                target="_blank"
+                rel="noopener noreferrer"
+                >YouTube</a
+              >
+            </p>
+          </div>
+        </section>
 
         <hr />
 
@@ -2918,10 +3522,6 @@
       </section>
     </main>
 
-    <!-- Cookie Consent Banner EN -->
-    <link rel="stylesheet" href="/css/cookieconsent.min.css" />
-    <script src="/js/cookieconsent.min.js"></script>
-
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
@@ -2934,7 +3534,9 @@
         src="/img/icons/whatsapp-128x30.webp"
         alt="Chat on WhatsApp"
         width="128"
-        height="30" loading="lazy" />
+        height="30"
+        loading="lazy"
+      />
     </a>
     <footer id="footer"></footer>
     <script src="../../../../js/global.js" defer></script>
