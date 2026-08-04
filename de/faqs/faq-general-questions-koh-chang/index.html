@@ -149,8 +149,6 @@
     />
 
     <!-- Preconnect for external resources -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-
     <!-- Structured Data -->
     <!-- Local Fonts -->
     <link rel="preload" href="/fonts/fonts.css" as="style" />
@@ -753,20 +751,104 @@
           #ff8a5c 100%
         );
       }
+
+      /* FAQ above-fold layout – critical (CLS) */
+      .faq-box {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        position: relative;
+        box-sizing: border-box;
+      }
+      .faq-box h2 {
+        color: #005a8c;
+        margin-top: 1.2em;
+        margin-bottom: 0.5em;
+      }
+      .faq-box p {
+        margin: 1em 0;
+        font-size: 1.08em;
+      }
+      .faq-list {
+        margin: 0;
+        padding: 0;
+      }
+      .faq-list dt {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: #005a8c;
+        margin-top: 2em;
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+        border-bottom: 2px solid #c0c0c0;
+        line-height: 1.3;
+      }
+      .faq-list dt:first-of-type {
+        margin-top: 0;
+      }
+      .faq-list dd {
+        margin: 0 0 2em 0;
+        padding: 0 0 2em 0;
+        border-bottom: 1px solid #c0c0c0;
+      }
+      .faq-list dd:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      .faq-list dd p {
+        margin-bottom: 1em;
+        line-height: 1.6;
+      }
+      .faq-list dd p:last-child {
+        margin-bottom: 0;
+      }
+      .btn-cta,
+      .faq-list dd a.btn-cta,
+      .faq-box a.btn-cta {
+        display: inline-block;
+        box-sizing: border-box;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-size: 1em;
+        line-height: 1.3;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 6px;
+        border-bottom: none;
+        text-align: center;
+      }
+      @media (max-width: 700px) {
+        .faq-box {
+          padding: 6vw 2vw;
+          border-radius: 4vw;
+          max-width: 99vw;
+          margin-bottom: 32px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+
       .breadcrumb a {
         color: #005a8c;
         text-decoration: underline;
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-5" as="style" />
+    <link rel="preload" href="/style.min.css?v=contrast-6" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-5"
+      href="/style.min.css?v=contrast-6"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-5" />
+      <link rel="stylesheet" href="/style.min.css?v=contrast-6" />
     </noscript>
     <script type="application/ld+json">
       {
