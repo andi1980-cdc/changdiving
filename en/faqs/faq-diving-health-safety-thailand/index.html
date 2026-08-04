@@ -1106,15 +1106,15 @@
           grid-template-columns: 1fr 1fr;
         }
       }
-      .cdc-medical-quiz__field label {
+      .cdc-medical-quiz__field label,
+      .cdc-medical-quiz__dob-legend {
         display: block;
         font-weight: 600;
         font-size: 0.92rem;
         margin-bottom: 4px;
         color: #243b53;
       }
-      .cdc-medical-quiz__field input[type="text"],
-      .cdc-medical-quiz__field input[type="date"] {
+      .cdc-medical-quiz__field input[type="text"] {
         width: 100%;
         box-sizing: border-box;
         padding: 8px 10px;
@@ -1127,6 +1127,16 @@
         outline: 2px solid #005a8c;
         outline-offset: 1px;
         border-color: #005a8c;
+      }
+      .cdc-medical-quiz__dob-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.4fr;
+        gap: 8px;
+      }
+      .cdc-medical-quiz__dob-row label {
+        font-weight: 500;
+        font-size: 0.8rem;
+        margin-bottom: 3px;
       }
       .cdc-medical-quiz__declare {
         display: flex;
@@ -1306,27 +1316,67 @@
 
             <div class="cdc-medical-quiz">
               <div class="cdc-medical-quiz__identity" id="cdc-medical-identity">
-                <div class="cdc-medical-quiz__identity-row">
-                  <div class="cdc-medical-quiz__field">
-                    <label for="cdc-medical-name">First and last name</label>
-                    <input
-                      type="text"
-                      id="cdc-medical-name"
-                      name="medical-name"
-                      autocomplete="name"
-                      required
-                      placeholder="e.g. Jane Smith"
-                    />
-                  </div>
-                  <div class="cdc-medical-quiz__field">
-                    <label for="cdc-medical-dob">Date of birth</label>
-                    <input
-                      type="date"
-                      id="cdc-medical-dob"
-                      name="medical-dob"
-                      autocomplete="bday"
-                      required
-                    />
+                <div class="cdc-medical-quiz__field">
+                  <label for="cdc-medical-name">First and last name</label>
+                  <input
+                    type="text"
+                    id="cdc-medical-name"
+                    name="medical-name"
+                    autocomplete="name"
+                    required
+                    placeholder="e.g. Jane Smith"
+                  />
+                </div>
+                <div
+                  class="cdc-medical-quiz__field"
+                  role="group"
+                  aria-labelledby="cdc-medical-dob-legend"
+                >
+                  <span
+                    class="cdc-medical-quiz__dob-legend"
+                    id="cdc-medical-dob-legend"
+                    >Date of birth</span
+                  >
+                  <div class="cdc-medical-quiz__dob-row">
+                    <div>
+                      <label for="cdc-medical-dob-day">Day</label>
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        id="cdc-medical-dob-day"
+                        name="medical-dob-day"
+                        autocomplete="bday-day"
+                        maxlength="2"
+                        placeholder="DD"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label for="cdc-medical-dob-month">Month</label>
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        id="cdc-medical-dob-month"
+                        name="medical-dob-month"
+                        autocomplete="bday-month"
+                        maxlength="2"
+                        placeholder="MM"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label for="cdc-medical-dob-year">Year</label>
+                      <input
+                        type="text"
+                        inputmode="numeric"
+                        id="cdc-medical-dob-year"
+                        name="medical-dob-year"
+                        autocomplete="bday-year"
+                        maxlength="4"
+                        placeholder="YYYY"
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2804,12 +2854,47 @@
         return mains;
       }
 
+      function medicalParseDob() {
+        var dayEl = document.getElementById("cdc-medical-dob-day");
+        var monthEl = document.getElementById("cdc-medical-dob-month");
+        var yearEl = document.getElementById("cdc-medical-dob-year");
+        var day = dayEl ? parseInt(String(dayEl.value).trim(), 10) : NaN;
+        var month = monthEl ? parseInt(String(monthEl.value).trim(), 10) : NaN;
+        var year = yearEl ? parseInt(String(yearEl.value).trim(), 10) : NaN;
+        var now = new Date();
+        var maxYear = now.getFullYear();
+        if (
+          !(
+            day >= 1 &&
+            day <= 31 &&
+            month >= 1 &&
+            month <= 12 &&
+            year >= 1900 &&
+            year <= maxYear
+          )
+        ) {
+          return "";
+        }
+        var dt = new Date(year, month - 1, day);
+        if (
+          dt.getFullYear() !== year ||
+          dt.getMonth() !== month - 1 ||
+          dt.getDate() !== day ||
+          dt > now
+        ) {
+          return "";
+        }
+        function pad(n) {
+          return n < 10 ? "0" + n : String(n);
+        }
+        return year + "-" + pad(month) + "-" + pad(day);
+      }
+
       function medicalGetIdentity() {
         var nameEl = document.getElementById("cdc-medical-name");
-        var dobEl = document.getElementById("cdc-medical-dob");
         var declareEl = document.getElementById("cdc-medical-declare");
         var name = nameEl ? nameEl.value.replace(/\s+/g, " ").trim() : "";
-        var dob = dobEl ? dobEl.value : "";
+        var dob = medicalParseDob();
         var declared = declareEl ? !!declareEl.checked : false;
         return {
           name: name,
@@ -3095,10 +3180,16 @@
             if (box) box.classList.remove("show");
           });
         var nameEl = document.getElementById("cdc-medical-name");
-        var dobEl = document.getElementById("cdc-medical-dob");
         var declareEl = document.getElementById("cdc-medical-declare");
         if (nameEl) nameEl.value = "";
-        if (dobEl) dobEl.value = "";
+        [
+          "cdc-medical-dob-day",
+          "cdc-medical-dob-month",
+          "cdc-medical-dob-year",
+        ].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) el.value = "";
+        });
         if (declareEl) declareEl.checked = false;
         medicalUpdateDeclareText(false);
         var result = document.getElementById("cdc-medical-result");
@@ -3111,14 +3202,18 @@
       }
 
       (function medicalBindIdentity() {
-        ["cdc-medical-name", "cdc-medical-dob", "cdc-medical-declare"].forEach(
-          function (id) {
-            var el = document.getElementById(id);
-            if (!el) return;
-            el.addEventListener("input", medicalRefreshEmailGate);
-            el.addEventListener("change", medicalRefreshEmailGate);
-          }
-        );
+        [
+          "cdc-medical-name",
+          "cdc-medical-dob-day",
+          "cdc-medical-dob-month",
+          "cdc-medical-dob-year",
+          "cdc-medical-declare",
+        ].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.addEventListener("input", medicalRefreshEmailGate);
+          el.addEventListener("change", medicalRefreshEmailGate);
+        });
       })();
     </script>
   </body>
