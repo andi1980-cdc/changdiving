@@ -195,7 +195,7 @@
       rel="stylesheet"
       href="/fonts/fonts.css"
       media="print"
-      onload="this.media='all'"
+      onload="this.media = 'all'"
     />
     <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Critical Above-the-fold CSS -->
@@ -586,7 +586,10 @@
       rel="preload"
       href="/style.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link rel="stylesheet" href="/style.min.css" />
@@ -1142,7 +1145,10 @@
       rel="preload"
       href="/css/cookieconsent.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript
       ><link rel="stylesheet" href="/css/cookieconsent.min.css"
