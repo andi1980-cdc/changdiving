@@ -106,6 +106,50 @@ def ensure_dropdown_id(html: str) -> str:
     )
 
 
+SKIP_CRITICAL_CSS = """
+      /* Skip link – critical (CLS) */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100000;
+        padding: 0.75rem 1rem;
+        background: #000;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0.5rem;
+        top: 0.5rem;
+        outline: 3px solid #ffd700;
+        outline-offset: 2px;
+      }
+"""
+
+
+def ensure_skip_critical_css(html: str) -> str:
+    """Keep skip-link off-screen from first paint (avoid CLS)."""
+    if "skip-link" not in html or "Skip link – critical (CLS)" in html:
+        return html
+    m = re.search(
+        r'(<style\b[^>]*\bid=["\']critical-css["\'][^>]*>)([\s\S]*?)(</style>)',
+        html,
+        re.I,
+    )
+    if not m:
+        return html
+    new_block = (
+        m.group(1)
+        + m.group(2).rstrip()
+        + "\n"
+        + SKIP_CRITICAL_CSS
+        + "\n    "
+        + m.group(3)
+    )
+    return html[: m.start()] + new_block + html[m.end() :]
+
+
 def ensure_skip_and_main(html: str, lang: str) -> str:
     if re.search(r"<main\b", html, re.I):
         if 'id="main-content"' not in html and "id='main-content'" not in html:
@@ -126,17 +170,16 @@ def ensure_skip_and_main(html: str, lang: str) -> str:
                     flags=re.I,
                 )
 
-    if re.search(r'class="skip-link"', html):
-        return html
-
-    skip = f'<a class="skip-link" href="#main-content">{SKIP[lang]}</a>'
-    html = re.sub(
-        r"(<body[^>]*>)",
-        rf"\1\n    {skip}",
-        html,
-        count=1,
-        flags=re.I,
-    )
+    if not re.search(r'class="skip-link"', html):
+        skip = f'<a class="skip-link" href="#main-content">{SKIP[lang]}</a>'
+        html = re.sub(
+            r"(<body[^>]*>)",
+            rf"\1\n    {skip}",
+            html,
+            count=1,
+            flags=re.I,
+        )
+    html = ensure_skip_critical_css(html)
     return html
 
 

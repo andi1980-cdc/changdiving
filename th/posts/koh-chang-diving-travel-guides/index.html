@@ -548,6 +548,25 @@
           max-width: 80px;
         }
       }
+
+      /* Skip link – critical (CLS) */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100000;
+        padding: 0.75rem 1rem;
+        background: #000;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0.5rem;
+        top: 0.5rem;
+        outline: 3px solid #ffd700;
+        outline-offset: 2px;
+      }
     </style>
     <link
       rel="preload"

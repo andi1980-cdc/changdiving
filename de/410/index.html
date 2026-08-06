@@ -1395,6 +1395,25 @@
           padding: 0.55rem 0.7rem 0.1rem;
         }
       }
+
+      /* Skip link – critical (CLS) */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100000;
+        padding: 0.75rem 1rem;
+        background: #000;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      .skip-link:focus {
+        left: 0.5rem;
+        top: 0.5rem;
+        outline: 3px solid #ffd700;
+        outline-offset: 2px;
+      }
     </style>
     <link rel="preload" href="/style.min.css?v=search-cls-1" as="style" />
     <link
