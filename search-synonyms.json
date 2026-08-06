@@ -476,23 +476,29 @@
         "best nitrox mix",
         "mod calculator",
         "maximum operating depth",
+        "po2",
+        "ppo2",
         "po2 calculator",
         "ppo2 calculator",
+        "partial pressure oxygen",
+        "partial pressure of oxygen",
         "nitrox calculator",
         "nitrox rechner",
         "best mix rechner",
         "mod rechner",
         "maximale einsatztiefe",
         "po2 rechner",
+        "sauerstoffpartialdruck",
         "เครื่องคำนวณ best mix",
         "เครื่องคำนวณ mod",
         "เครื่องคำนวณ po2",
+        "ความดันย่อยออกซิเจน",
         "ความลึกการใช้งานสูงสุด"
       ],
       "matchTerms": {
-        "en": ["nitrox", "mod", "mix"],
-        "de": ["nitrox", "mod", "mix"],
-        "th": ["nitrox", "mod", "mix"]
+        "en": ["nitrox", "mod", "po2"],
+        "de": ["nitrox", "mod", "po2"],
+        "th": ["nitrox", "mod", "po2"]
       },
       "targets": {
         "en": [

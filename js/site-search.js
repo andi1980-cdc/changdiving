@@ -30,6 +30,17 @@
         .replace(/\u00f6/g, "oe")
         .replace(/\u00fc/g, "ue")
         .replace(/\u00df/g, "ss");
+      // Subscripts/superscripts (PO₂, O₂) → ASCII digits so "po2" matches
+      s = s.replace(/[\u2070\u2080]/g, "0");
+      s = s.replace(/[\u00b9\u2081]/g, "1");
+      s = s.replace(/[\u00b2\u2082]/g, "2");
+      s = s.replace(/[\u00b3\u2083]/g, "3");
+      s = s.replace(/[\u2074\u2084]/g, "4");
+      s = s.replace(/[\u2075\u2085]/g, "5");
+      s = s.replace(/[\u2076\u2086]/g, "6");
+      s = s.replace(/[\u2077\u2087]/g, "7");
+      s = s.replace(/[\u2078\u2088]/g, "8");
+      s = s.replace(/[\u2079\u2089]/g, "9");
       if (typeof s.normalize === "function") {
         s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       }
