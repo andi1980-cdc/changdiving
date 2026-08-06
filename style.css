@@ -1604,10 +1604,14 @@ main:has(> .tek-box) > .posts-submenu a {
   padding: 8px 12px 8px 16px;
   font-size: 0.85rem;
   width: 140px;
+  max-width: 140px;
+  height: 36px;
   color: #333;
   font-weight: 500;
   outline: none;
-  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  transition: width 0.3s ease;
 }
 
 .search-input-elegant::placeholder {
@@ -1617,6 +1621,7 @@ main:has(> .tek-box) > .posts-submenu a {
 
 .search-input-elegant:focus {
   width: 160px;
+  max-width: 160px;
 }
 
 .search-btn-elegant {
@@ -1625,11 +1630,16 @@ main:has(> .tek-box) > .posts-submenu a {
   padding: 8px 12px;
   cursor: pointer;
   color: #555;
-  transition: all 0.3s ease;
+  transition:
+    color 0.3s ease,
+    background 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 0 20px 20px 0;
+  height: 36px;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .search-btn-elegant:hover {
@@ -1653,16 +1663,20 @@ main:has(> .tek-box) > .posts-submenu a {
 @media (max-width: 768px) {
   .search-input-elegant {
     width: 100px;
+    max-width: 100px;
+    height: 32px;
     font-size: 0.8rem;
     padding: 6px 10px 6px 12px;
   }
 
   .search-input-elegant:focus {
     width: 120px;
+    max-width: 120px;
   }
 
   .search-btn-elegant {
     padding: 6px 10px;
+    height: 32px;
   }
 
   .search-btn-elegant svg {
@@ -1674,10 +1688,12 @@ main:has(> .tek-box) > .posts-submenu a {
 @media (max-width: 480px) {
   .search-input-elegant {
     width: 80px;
+    max-width: 80px;
   }
 
   .search-input-elegant:focus {
     width: 100px;
+    max-width: 100px;
   }
 }
 

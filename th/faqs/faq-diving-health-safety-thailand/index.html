@@ -904,16 +904,89 @@
         color: #005a8c;
         text-decoration: underline;
       }
+
+      /* Header search – critical (CLS) */
+      .search-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+      }
+      .search-form-elegant {
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+      }
+      .search-input-elegant {
+        background: transparent;
+        border: none;
+        padding: 8px 12px 8px 16px;
+        font-size: 0.85rem;
+        width: 140px;
+        max-width: 140px;
+        height: 36px;
+        color: #333;
+        font-weight: 500;
+        outline: none;
+        font-family: var(--font-sans);
+        box-sizing: border-box;
+      }
+      .search-btn-elegant {
+        background: transparent;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        color: #555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        height: 36px;
+        box-sizing: border-box;
+      }
+      .search-btn-elegant svg {
+        width: 16px;
+        height: 16px;
+        display: block;
+      }
+      @media (max-width: 768px) {
+        .search-input-elegant {
+          width: 100px;
+          max-width: 100px;
+          height: 32px;
+          font-size: 0.8rem;
+          padding: 6px 10px 6px 12px;
+        }
+        .search-btn-elegant {
+          padding: 6px 10px;
+          height: 32px;
+        }
+        .search-btn-elegant svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+      @media (max-width: 480px) {
+        .search-input-elegant {
+          width: 80px;
+          max-width: 80px;
+        }
+      }
     </style>
-    <link rel="preload" href="/style.min.css?v=a11y-1" as="style" />
+    <link rel="preload" href="/style.min.css?v=search-cls-1" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=a11y-1"
+      href="/style.min.css?v=search-cls-1"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=a11y-1" />
+      <link rel="stylesheet" href="/style.min.css?v=search-cls-1" />
     </noscript>
     <script type="application/ld+json">
       {
