@@ -350,9 +350,24 @@
         min-height: 1.35em;
       }
 
+      /* Transactional hero: in-flow from first paint (prevents main CLS) */
+      .hero--transactional {
+        height: auto !important;
+        min-height: unset !important;
+      }
+      .hero--transactional picture,
+      .hero--transactional .hero-header-img {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 3 / 2 !important;
+        object-fit: contain !important;
+        display: block !important;
+      }
+
       @media (max-width: 767px) {
-        .hero-text h1,
-        .hero-text p {
+        .hero:not(.hero--transactional):not(.hero--fun-dives) .hero-text h1,
+        .hero:not(.hero--transactional):not(.hero--fun-dives) .hero-text p {
           visibility: hidden;
           height: 0;
           margin: 0;
@@ -362,6 +377,7 @@
           height: auto;
           min-height: unset;
         }
+        /* Keep picture in-flow for ALL heroes (incl. transactional) */
         .hero picture,
         .hero-header-img {
           position: relative;
@@ -369,6 +385,47 @@
           height: auto;
           aspect-ratio: 3 / 2;
           object-fit: cover;
+        }
+        .hero--transactional picture,
+        .hero--transactional .hero-header-img {
+          object-fit: contain !important;
+        }
+      }
+
+      /* dive-site-box above-fold layout – critical (CLS) */
+      .dive-site-box {
+        max-width: 1320px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 40px;
+        position: relative;
+        box-sizing: border-box;
+        color: #212121;
+        line-height: 1.6;
+        overflow: hidden;
+      }
+      .dive-site-box h1,
+      .dive-site-box h2,
+      .dive-site-box h3 {
+        color: #005a8c;
+        margin-top: 1.2em;
+        margin-bottom: 0.5em;
+      }
+      .dive-site-box p {
+        margin: 1em 0;
+        font-size: 1.08em;
+      }
+      @media (max-width: 600px) {
+        .dive-site-box {
+          padding: 6vw 2vw;
+          border-radius: 4vw;
+          max-width: 99vw;
+          margin-bottom: 32px;
+          margin-left: 10px;
+          margin-right: 10px;
         }
       }
 
@@ -936,15 +993,15 @@
         }
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-4" as="style" />
+    <link rel="preload" href="/style.min.css?v=contrast-9" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-4"
+      href="/style.min.css?v=contrast-9"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-4" />
+      <link rel="stylesheet" href="/style.min.css?v=contrast-9" />
     </noscript>
     <script type="application/ld+json">
       {
