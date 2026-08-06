@@ -429,6 +429,124 @@
           "/th/courses/divemaster/"
         ]
       }
+    },
+    {
+      "id": "sac_calculator",
+      "terms": [
+        "sac rate",
+        "sac calculator",
+        "sac rate calculator",
+        "surface air consumption",
+        "gas calculator",
+        "gas consumption calculator",
+        "sac rate rechner",
+        "sac rechner",
+        "sac kalkulator",
+        "gasverbrauch rechner",
+        "เครื่องคำนวณ sac",
+        "อัตรา sac",
+        "คำนวณการใช้แก๊ส"
+      ],
+      "matchTerms": {
+        "en": ["sac", "gas", "consumption"],
+        "de": ["sac", "gasverbrauch"],
+        "th": ["sac", "แก๊ส"]
+      },
+      "targets": {
+        "en": [
+          "/en/posts/scuba-knowledge/gas-consumption/",
+          "/en/posts/scuba-knowledge/dive-logbook/"
+        ],
+        "de": [
+          "/de/posts/scuba-knowledge/gas-consumption/",
+          "/de/posts/scuba-knowledge/dive-logbook/"
+        ],
+        "th": [
+          "/th/posts/scuba-knowledge/gas-consumption/",
+          "/th/posts/scuba-knowledge/dive-logbook/"
+        ]
+      }
+    },
+    {
+      "id": "nitrox_calculators",
+      "terms": [
+        "best mix",
+        "nitrox best mix",
+        "best mix calculator",
+        "best nitrox mix",
+        "mod calculator",
+        "maximum operating depth",
+        "po2 calculator",
+        "ppo2 calculator",
+        "nitrox calculator",
+        "nitrox rechner",
+        "best mix rechner",
+        "mod rechner",
+        "maximale einsatztiefe",
+        "po2 rechner",
+        "เครื่องคำนวณ best mix",
+        "เครื่องคำนวณ mod",
+        "เครื่องคำนวณ po2",
+        "ความลึกการใช้งานสูงสุด"
+      ],
+      "matchTerms": {
+        "en": ["nitrox", "mod", "mix"],
+        "de": ["nitrox", "mod", "mix"],
+        "th": ["nitrox", "mod", "mix"]
+      },
+      "targets": {
+        "en": [
+          "/en/posts/scuba-knowledge/gas-consumption/",
+          "/en/posts/scuba-knowledge/nitrox-info/",
+          "/en/courses/nitrox-diver/"
+        ],
+        "de": [
+          "/de/posts/scuba-knowledge/gas-consumption/",
+          "/de/posts/scuba-knowledge/nitrox-info/",
+          "/de/courses/nitrox-diver/"
+        ],
+        "th": [
+          "/th/posts/scuba-knowledge/gas-consumption/",
+          "/th/posts/scuba-knowledge/nitrox-info/",
+          "/th/courses/nitrox-diver/"
+        ]
+      }
+    },
+    {
+      "id": "dive_calculator",
+      "terms": [
+        "dive calculator",
+        "scuba calculator",
+        "diving calculator",
+        "interactive calculator",
+        "tauchrechner",
+        "interaktiver tauchrechner",
+        "tauch kalkulator",
+        "เครื่องคำนวณการดำน้ำ",
+        "เครื่องคิดเลขดำน้ำ"
+      ],
+      "matchTerms": {
+        "en": ["calculator", "sac"],
+        "de": ["rechner", "sac"],
+        "th": ["เครื่องคำนวณ", "sac"]
+      },
+      "targets": {
+        "en": [
+          "/en/posts/scuba-knowledge/gas-consumption/",
+          "/en/posts/scuba-knowledge/nitrox-info/",
+          "/en/posts/scuba-knowledge/dive-logbook/"
+        ],
+        "de": [
+          "/de/posts/scuba-knowledge/gas-consumption/",
+          "/de/posts/scuba-knowledge/nitrox-info/",
+          "/de/posts/scuba-knowledge/dive-logbook/"
+        ],
+        "th": [
+          "/th/posts/scuba-knowledge/gas-consumption/",
+          "/th/posts/scuba-knowledge/nitrox-info/",
+          "/th/posts/scuba-knowledge/dive-logbook/"
+        ]
+      }
     }
   ]
 }
