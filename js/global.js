@@ -492,14 +492,14 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(dropdown);
       console.log(
         `[DEBUG] Zugehöriges Dropdown für Button #${i + 1} gefunden:`,
-        dropdown,
+        dropdown
       );
       toggle.addEventListener("click", function (e) {
         e.stopPropagation();
         dropdown.classList.toggle("show");
         console.log(
           `[DEBUG] Button #${i + 1} geklickt. Dropdown sichtbar:`,
-          dropdown.classList.contains("show"),
+          dropdown.classList.contains("show")
         );
       });
       // Klick außerhalb schließt das Menü
@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (dropdown.classList.contains("show")) {
             dropdown.classList.remove("show");
             console.log(
-              `[DEBUG] Dropdown für Button #${i + 1} durch Außenklick geschlossen.`,
+              `[DEBUG] Dropdown für Button #${i + 1} durch Außenklick geschlossen.`
             );
           }
         }
@@ -561,6 +561,24 @@ function _loadTrustindex() {
   });
 }
 
+// Windguru consent-gated loader (weather pages register via __cdcWindguruLoaders)
+// ---------------------------------------------
+function _loadWindguru() {
+  var loaders = window.__cdcWindguruLoaders;
+  if (!loaders || !loaders.length) return;
+  while (loaders.length) {
+    var fn = loaders.shift();
+    try {
+      fn();
+    } catch (e) {}
+  }
+}
+
+function _loadConsentedEmbeds() {
+  _loadTrustindex();
+  _loadWindguru();
+}
+
 // Cookie Consent Banner Initialisierung (sprachabhängig)
 // ---------------------------------------------
 window.addEventListener("load", function () {
@@ -604,12 +622,12 @@ window.addEventListener("load", function () {
       content: c,
       onInitialise: function (status) {
         if (status === window.cookieconsent.status.allow) {
-          _loadTrustindex();
+          _loadConsentedEmbeds();
         }
       },
       onStatusChange: function (status) {
         if (status === "allow") {
-          _loadTrustindex();
+          _loadConsentedEmbeds();
         }
       },
     });
@@ -861,7 +879,7 @@ function loadYouTubeVideo(element, videoId, title) {
   videoContainer.classList.add("lyt-activated");
 
   console.log(
-    "[YouTube Lite] ✅ Direct replacement completed - no more nested containers!",
+    "[YouTube Lite] ✅ Direct replacement completed - no more nested containers!"
   );
 }
 function initYouTubeLite() {
@@ -873,7 +891,7 @@ function initYouTubeLite() {
   console.log(
     "[YouTube Lite] Found",
     youtubeLiteElements.length,
-    "video elements",
+    "video elements"
   );
 
   youtubeLiteElements.forEach((element, index) => {
@@ -883,7 +901,7 @@ function initYouTubeLite() {
     console.log(
       `[YouTube Lite] Processing video ${index + 1}:`,
       videoId,
-      title,
+      title
     );
 
     if (!videoId) {
@@ -906,7 +924,7 @@ function initYouTubeLite() {
 
     console.log(
       `[YouTube Lite] Set thumbnail for video ${index + 1}:`,
-      thumbnailUrl,
+      thumbnailUrl
     );
 
     // Remove any existing click handlers
@@ -920,7 +938,7 @@ function initYouTubeLite() {
 
       console.log(
         `[YouTube Lite] Click detected on video ${index + 1}:`,
-        videoId,
+        videoId
       );
 
       if (newElement.classList.contains("lyt-activated")) {
@@ -964,7 +982,7 @@ function initYouTubeLite() {
     if (playButton) {
       playButton.addEventListener("click", handleVideoClick);
       console.log(
-        `[YouTube Lite] Added click handler to play button ${index + 1}`,
+        `[YouTube Lite] Added click handler to play button ${index + 1}`
       );
     }
   });
@@ -975,7 +993,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("[YouTube Lite] DOM loaded, initializing...");
   console.log(
     "[YouTube Lite] loadYouTubeVideo function available:",
-    typeof loadYouTubeVideo === "function",
+    typeof loadYouTubeVideo === "function"
   );
   initYouTubeLite();
 });
@@ -1041,6 +1059,6 @@ document.addEventListener("DOMContentLoaded", function () {
     tileImages.length,
     "tile images and",
     rowImages.length,
-    "row images",
+    "row images"
   );
 });

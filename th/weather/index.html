@@ -686,7 +686,7 @@
               border-radius: 8px;
             "
           >
-            กำลังโหลดพยากรณ์ลม...
+            ยอมรับคุกกี้เพื่อโหลดพยากรณ์ลม Windguru
           </div>
           <script id="wg_fwdg_208446_100_1751105218770">
             (function (window, document) {
@@ -737,9 +737,8 @@
                   "https://www.windguru.cz/js/widget.php?" + arg.join("&");
                 tag.parentNode.insertBefore(script, tag);
               };
-              window.addEventListener
-                ? window.addEventListener("load", loader, false)
-                : window.attachEvent("onload", loader);
+              window.__cdcWindguruLoaders = window.__cdcWindguruLoaders || [];
+              window.__cdcWindguruLoaders.push(loader);
             })(window, document);
           </script>
         </div>
@@ -767,7 +766,7 @@
               border-radius: 8px;
             "
           >
-            กำลังโหลดพยากรณ์คลื่น...
+            ยอมรับคุกกี้เพื่อโหลดพยากรณ์คลื่น Windguru
           </div>
           <script id="wg_fwdg_208446_84_1751105407164">
             (function (window, document) {
@@ -820,9 +819,8 @@
                   "https://www.windguru.cz/js/widget.php?" + arg.join("&");
                 tag.parentNode.insertBefore(script, tag);
               };
-              window.addEventListener
-                ? window.addEventListener("load", loader, false)
-                : window.attachEvent("onload", loader);
+              window.__cdcWindguruLoaders = window.__cdcWindguruLoaders || [];
+              window.__cdcWindguruLoaders.push(loader);
             })(window, document);
           </script>
         </div>
@@ -1068,7 +1066,7 @@
       />
     </a>
     <footer id="footer"></footer>
-    <script src="../../js/global.min.js" defer></script>
+    <script src="../../js/global.min.js?v=consent-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {
