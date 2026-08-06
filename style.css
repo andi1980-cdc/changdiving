@@ -1028,6 +1028,7 @@ main:has(> .tek-box) > .posts-submenu a {
   margin: 0 0 6px;
   padding: 6px 8px 4px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  min-height: 6.25rem;
 }
 
 /* Speciality pages: jump bar harmonises with green/yellow card shadow */
@@ -1041,6 +1042,7 @@ main:has(> .tek-box) > .posts-submenu a {
   );
   border-radius: 8px;
   border-bottom: 1px solid rgba(104, 159, 56, 0.16);
+  min-height: 6.5rem;
 }
 
 .speciality-box .page-jump-nav__label {
@@ -1055,6 +1057,7 @@ main:has(> .tek-box) > .posts-submenu a {
   border-radius: 8px;
   border: 1px solid rgba(255, 138, 92, 0.5);
   border-bottom: 1px solid rgba(255, 138, 92, 0.5);
+  min-height: 6.5rem;
 }
 
 .tek-box .page-jump-nav__label {
@@ -1076,6 +1079,7 @@ main:has(> .tek-box) > .posts-submenu a {
   margin: 0 0 2px;
   padding: 2px 8px 4px;
   border-bottom: 1px solid #ccc; /* same as global hr */
+  min-height: 4.5rem;
 }
 
 .posts-box .page-jump-nav__links,
