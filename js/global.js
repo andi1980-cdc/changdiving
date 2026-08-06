@@ -509,12 +509,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggle.addEventListener("click", function (e) {
       e.stopPropagation();
-      const willOpen = !dropdown.classList.contains("show");
-      setOpen(willOpen);
-      if (willOpen) {
-        const first = dropdown.querySelector("a");
-        if (first) first.focus();
-      }
+      // Do not move focus into the first link — that painted a focus ring on
+      // "Courses" for every mouse open. Keyboard users can Tab into the menu.
+      setOpen(!dropdown.classList.contains("show"));
     });
 
     document.addEventListener("click", function (event) {
