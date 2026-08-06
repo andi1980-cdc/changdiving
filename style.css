@@ -1497,6 +1497,36 @@ main:has(> .tek-box) > .posts-submenu a {
   font-size: 1.5rem;
   text-decoration: none;
 }
+/* Skip link — keyboard/AT first focus target */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100000;
+  padding: 0.75rem 1rem;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+  outline: 3px solid #ffd700;
+  outline-offset: 2px;
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .menu-toggle {
   background: none;
   border: none;

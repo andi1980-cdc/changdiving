@@ -984,15 +984,15 @@
         }
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-9" as="style" />
+    <link rel="preload" href="/style.min.css?v=a11y-1" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-9"
+      href="/style.min.css?v=a11y-1"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-9" />
+      <link rel="stylesheet" href="/style.min.css?v=a11y-1" />
     </noscript>
     <script type="application/ld+json">
       {
@@ -1167,6 +1167,7 @@
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero hero--transactional">
@@ -1177,7 +1178,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menu</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Navigationsmenü öffnen"
+          >
+            ☰ Menu
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -1209,11 +1217,17 @@
             </form>
           </div>
 
-          <a href="/en/dive-sites/secret-reef/">🇬🇧</a>
-          <a href="/de/dive-sites/secret-reef/">🇩🇪</a>
-          <a href="/th/dive-sites/secret-reef/">🇹🇭</a>
+          <a href="/en/dive-sites/secret-reef/" aria-label="Switch to English"
+            >🇬🇧</a
+          >
+          <a href="/de/dive-sites/secret-reef/" aria-label="Switch to German"
+            >🇩🇪</a
+          >
+          <a href="/th/dive-sites/secret-reef/" aria-label="Switch to Thai"
+            >🇹🇭</a
+          >
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/de/courses/">Kurse</a>
             <a href="/de/day-trips/">Tagesausflüge</a>
             <a href="/de/prices/">Preise</a>
@@ -1247,7 +1261,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <nav id="breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
         <a href="/de/">🏠 Startseite</a> ›
         <a href="/de/dive-sites/">Dive Sites</a> › Secret Reef
@@ -2522,7 +2536,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

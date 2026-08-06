@@ -637,6 +637,7 @@
     />
   </head>
   <body class="search-page">
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero search-hero">
@@ -647,7 +648,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ เมนู:</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="เปิดเมนูนำทาง"
+          >
+            ☰ เมนู:
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -679,11 +687,11 @@
             </form>
           </div>
 
-          <a href="/th/">🇬🇧</a>
-          <a href="/de/">🇩🇪</a>
-          <a href="/th/">🇹🇭</a>
+          <a href="/th/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/th/courses/">คอร์ส</a>
             <a href="/th/day-trips/">ไปเช้าเย็นกลับ</a>
             <a href="/th/prices/">ราคา</a>
@@ -730,11 +738,12 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Search Form -->
       <div class="search-container">
         <form id="searchForm" class="search-form-main">
           <div class="ac-wrap">
+            <label for="searchInput" class="visually-hidden">ค้นหา</label>
             <input
               type="text"
               id="searchInput"
@@ -742,8 +751,20 @@
               placeholder="ค้นหาคอร์ส จุดดำน้ำ หรือหัวข้อ..."
               value=""
               required
+              aria-label="ค้นหาเว็บไซต์"
+              autocomplete="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-controls="ac-dropdown"
+              aria-expanded="false"
             />
-            <div id="ac-dropdown" class="ac-dropdown" hidden></div>
+            <div
+              id="ac-dropdown"
+              class="ac-dropdown"
+              role="listbox"
+              aria-label="คำแนะนำการค้นหา"
+              hidden
+            ></div>
           </div>
           <button type="submit">
             <svg
@@ -782,8 +803,8 @@
     </main>
 
     <!-- Scripts -->
-    <script src="/js/global.min.js?v=footer-static-2" defer></script>
-    <script src="/js/site-search.js?v=synonyms-2" defer></script>
+    <script src="/js/global.min.js?v=a11y-menu-1" defer></script>
+    <script src="/js/site-search.js?v=a11y-search-1" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         if (typeof initSiteSearch !== "function") {
@@ -817,6 +838,7 @@
             ],
             dymPrefix: "ไม่พบผลตรงกัน — แสดงผลสำหรับ",
             dymSuffix: ":",
+            suggestionsLabel: "คำแนะนำการค้นหา",
           },
         });
       });

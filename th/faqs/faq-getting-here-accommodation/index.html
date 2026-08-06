@@ -597,6 +597,7 @@
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- ส่วนเฮดเดอร์ -->
       <div class="hero">
@@ -613,7 +614,12 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle" aria-label="สลับเมนูนำทาง">
+          <button
+            class="menu-toggle"
+            aria-label="สลับเมนูนำทาง"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
             ☰ เมนู
           </button>
 
@@ -663,7 +669,7 @@
             >🇹🇭</a
           >
 
-          <div class="dropdown-menu" role="menu" aria-label="เมนูหลัก">
+          <div id="main-menu" class="dropdown-menu" aria-label="เมนูหลัก">
             <a href="/th/courses/">คอร์สเรียนดำน้ำ</a>
             <a href="/th/day-trips/">ทริปดำน้ำ</a>
             <a href="/th/prices/">ราคา</a>
@@ -713,7 +719,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <!-- เมนูย่อย: หมวดหมู่ -->
       <nav class="posts-submenu" aria-label="เมนูหมวดหมู่บทความ">
         <a href="/th/posts/diving-how-to-guides-koh-chang/">คำแนะนำเบื้องต้น</a>
@@ -906,7 +912,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

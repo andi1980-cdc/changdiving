@@ -539,10 +539,18 @@
     </script>
   </head>
   <body>
-    <main>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <main id="main-content">
       <div class="changdiving-box">
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menu</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle navigation menu"
+          >
+            ☰ Menu
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -574,11 +582,11 @@
             </form>
           </div>
 
-          <a href="/en/privacy-policy/">🇬🇧</a>
-          <a href="/de/privacy-policy/">🇩🇪</a>
-          <a href="/th/privacy-policy/">🇹🇭</a>
+          <a href="/en/privacy-policy/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/privacy-policy/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/privacy-policy/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/en/courses/">Courses</a>
             <a href="/en/day-trips/">Day Trips</a>
             <a href="/en/prices/">Prices</a>
@@ -883,7 +891,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

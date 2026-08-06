@@ -726,6 +726,7 @@
     <!-- JavaScript Preload -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -739,7 +740,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ เมนู</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="เปิดเมนูนำทาง"
+          >
+            ☰ เมนู
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -771,11 +779,15 @@
             </form>
           </div>
 
-          <a href="/en/day-trips/insurance/">🇬🇧</a>
-          <a href="/de/day-trips/insurance/">🇩🇪</a>
-          <a href="/th/day-trips/insurance/">🇹🇭</a>
+          <a href="/en/day-trips/insurance/" aria-label="Switch to English"
+            >🇬🇧</a
+          >
+          <a href="/de/day-trips/insurance/" aria-label="Switch to German"
+            >🇩🇪</a
+          >
+          <a href="/th/day-trips/insurance/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/th/courses/">คอร์สเรียน</a>
             <a href="/th/day-trips/">ทริปวันเดียว</a>
             <a href="/th/prices/">ราคา</a>
@@ -816,7 +828,7 @@
         </picture>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <!-- Submenu: Optional Navigation -->
       <nav class="posts-submenu">
         <a href="/th/posts/diving-how-to-guides-koh-chang/">คู่มือ</a>
@@ -1303,7 +1315,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

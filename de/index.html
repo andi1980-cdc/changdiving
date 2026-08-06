@@ -689,15 +689,15 @@
         }
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-4" as="style" />
+    <link rel="preload" href="/style.min.css?v=a11y-1" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-4"
+      href="/style.min.css?v=a11y-1"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-4" />
+      <link rel="stylesheet" href="/style.min.css?v=a11y-1" />
     </noscript>
 
     <!-- Preconnect for External Resources -->
@@ -1526,6 +1526,7 @@
     <!-- Critical Image Preload (for header images) -->
   </head>
   <body class="main-page">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero hero--transactional">
@@ -1536,7 +1537,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menü</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Navigationsmenü öffnen"
+          >
+            ☰ Menü
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -1568,12 +1576,17 @@
             </form>
           </div>
 
-          <a href="/" title="Automatische Sprachwahl">🌐</a>
-          <a href="/en/">🇬🇧</a>
-          <a href="/de/">🇩🇪</a>
-          <a href="/th/">🇹🇭</a>
+          <a
+            aria-label="Automatische Sprachauswahl"
+            href="/"
+            title="Automatische Sprachwahl"
+            >🌐</a
+          >
+          <a href="/en/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/de/courses/">Kurse</a>
             <a href="/de/day-trips/">Tagestrips</a>
             <a href="/de/prices/">Preise</a>
@@ -1622,7 +1635,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="grid-container">
         <h2
           style="
@@ -2246,7 +2259,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

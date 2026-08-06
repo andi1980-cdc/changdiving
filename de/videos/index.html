@@ -483,6 +483,7 @@
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header class="product-header">
       <div class="product-logo">
         <a href="/de/">
@@ -494,7 +495,14 @@
       </div>
 
       <div class="lang-switch">
-        <button class="menu-toggle">☰ Menu</button>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="main-menu"
+          aria-label="Navigationsmenü öffnen"
+        >
+          ☰ Menu
+        </button>
 
         <!-- Elegant Search Field -->
         <div class="search-wrapper">
@@ -522,11 +530,11 @@
           </form>
         </div>
 
-        <a href="/en/videos/">🇬🇧</a>
-        <a href="/de/videos/">🇩🇪</a>
-        <a href="/th/videos/">🇹🇭</a>
+        <a href="/en/videos/" aria-label="Switch to English">🇬🇧</a>
+        <a href="/de/videos/" aria-label="Switch to German">🇩🇪</a>
+        <a href="/th/videos/" aria-label="Switch to Thai">🇹🇭</a>
 
-        <div class="dropdown-menu">
+        <div id="main-menu" class="dropdown-menu">
           <a href="/de/courses/">Courses</a>
           <a href="/de/day-trips/">Day Trips</a>
           <a href="/de/prices/">Prices</a>
@@ -540,7 +548,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <div class="changdiving-box">
         <section class="video-gallery">
           <div class="container">
@@ -842,7 +850,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

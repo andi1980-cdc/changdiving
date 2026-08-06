@@ -602,6 +602,7 @@
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -618,7 +619,12 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle" aria-label="Navigationsmenü umschalten">
+          <button
+            class="menu-toggle"
+            aria-label="Navigationsmenü umschalten"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
             ☰ Menü
           </button>
 
@@ -668,7 +674,11 @@
             >🇹🇭</a
           >
 
-          <div class="dropdown-menu" role="menu" aria-label="Hauptnavigation">
+          <div
+            id="main-menu"
+            class="dropdown-menu"
+            aria-label="Hauptnavigation"
+          >
             <a href="/de/courses/">Kurse</a>
             <a href="/de/day-trips/">Tagestouren</a>
             <a href="/de/prices/">Preise</a>
@@ -718,7 +728,7 @@
         </div>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <!-- Untermenü: Kategorien -->
       <nav class="posts-submenu" aria-label="Blog-Kategorien Navigation">
         <a href="/de/posts/diving-how-to-guides-koh-chang/"
@@ -914,7 +924,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

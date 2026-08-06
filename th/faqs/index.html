@@ -575,6 +575,7 @@
     <!-- Styles -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -591,7 +592,12 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle" aria-label="สลับเมนูนำทาง">
+          <button
+            class="menu-toggle"
+            aria-label="สลับเมนูนำทาง"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
             ☰ เมนู
           </button>
 
@@ -629,7 +635,7 @@
           <a href="/de/faqs/" aria-label="เปลี่ยนเป็นภาษาเยอรมัน">🇩🇪</a>
           <a href="/th/faqs/" aria-label="เปลี่ยนเป็นภาษาไทย">🇹🇭</a>
 
-          <div class="dropdown-menu" role="menu" aria-label="เมนูหลัก">
+          <div id="main-menu" class="dropdown-menu" aria-label="เมนูหลัก">
             <a href="/th/courses/">คอร์สเรียน</a>
             <a href="/th/day-trips/">ทริปวันเดียว</a>
             <a href="/th/prices/">ราคา</a>
@@ -671,7 +677,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="grid-container">
         <!-- Submenu: Blog Categories -->
         <nav class="posts-submenu" aria-label="การนำทางหมวดหมู่บล็อก">
@@ -1110,7 +1116,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

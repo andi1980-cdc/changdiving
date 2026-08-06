@@ -614,12 +614,12 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css?v=contrast-7"
+      href="/style.min.css?v=a11y-1"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
-      ><link rel="stylesheet" href="/style.min.css?v=contrast-7" />
+      ><link rel="stylesheet" href="/style.min.css?v=a11y-1" />
     </noscript>
     <script type="application/ld+json">
       {
@@ -682,6 +682,7 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <div class="hero">
         <div class="hero-logo">
@@ -691,7 +692,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ เมนู</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="เปิดเมนูนำทาง"
+          >
+            ☰ เมนู
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -723,11 +731,23 @@
             </form>
           </div>
 
-          <a href="/en/posts/tips-and-tricks/self-inflating-bcd/">🇬🇧</a>
-          <a href="/de/posts/tips-and-tricks/self-inflating-bcd/">🇩🇪</a>
-          <a href="/th/posts/tips-and-tricks/self-inflating-bcd/">🇹🇭</a>
+          <a
+            href="/en/posts/tips-and-tricks/self-inflating-bcd/"
+            aria-label="Switch to English"
+            >🇬🇧</a
+          >
+          <a
+            href="/de/posts/tips-and-tricks/self-inflating-bcd/"
+            aria-label="Switch to German"
+            >🇩🇪</a
+          >
+          <a
+            href="/th/posts/tips-and-tricks/self-inflating-bcd/"
+            aria-label="Switch to Thai"
+            >🇹🇭</a
+          >
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/th/courses/">คอร์สเรียน</a>
             <a href="/th/day-trips/">ทริปวันเดียว</a>
             <a href="/th/prices/">ราคา</a>
@@ -766,7 +786,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <nav class="posts-submenu">
         <a href="/th/posts/diving-how-to-guides-koh-chang/">คู่มือการดำน้ำ</a>
         <a href="/th/posts/marine-life-koh-chang/">สิ่งมีชีวิตใต้ทะเล</a>
@@ -1086,7 +1106,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

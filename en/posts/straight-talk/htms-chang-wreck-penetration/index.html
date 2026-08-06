@@ -883,12 +883,12 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css?v=contrast-8"
+      href="/style.min.css?v=a11y-1"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
-      ><link rel="stylesheet" href="/style.min.css?v=contrast-8"
+      ><link rel="stylesheet" href="/style.min.css?v=a11y-1"
     /></noscript>
 
     <script type="application/ld+json">
@@ -949,6 +949,7 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
       <div class="hero hero--transactional">
         <div class="hero-logo">
@@ -958,7 +959,15 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle" type="button">☰ Menu</button>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle navigation menu"
+          >
+            ☰ Menu
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -1006,7 +1015,7 @@
             >🇹🇭</a
           >
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/en/courses/">Courses</a>
             <a href="/en/day-trips/">Day Trips</a>
             <a href="/en/prices/">Prices</a>
@@ -2153,7 +2162,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

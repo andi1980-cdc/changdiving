@@ -1009,15 +1009,15 @@
         }
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-4" as="style" />
+    <link rel="preload" href="/style.min.css?v=a11y-1" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-4"
+      href="/style.min.css?v=a11y-1"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-4" />
+      <link rel="stylesheet" href="/style.min.css?v=a11y-1" />
     </noscript>
     <!-- Performance Optimizations -->
 
@@ -1195,6 +1195,7 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero hero--transactional">
@@ -1208,7 +1209,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menu</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="เปิดเมนูนำทาง"
+          >
+            ☰ Menu
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -1240,11 +1248,13 @@
             </form>
           </div>
 
-          <a href="/en/courses/navigation/">🇬🇧</a>
-          <a href="/de/courses/navigation/">🇩🇪</a>
-          <a href="/th/courses/navigation/">🇹🇭</a>
+          <a href="/en/courses/navigation/" aria-label="Switch to English"
+            >🇬🇧</a
+          >
+          <a href="/de/courses/navigation/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/courses/navigation/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/th/courses/">คอร์สเรียน</a>
             <a href="/th/day-trips/">ทริปประจำวัน</a>
             <a href="/th/prices/">ราคา</a>
@@ -1280,7 +1290,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Submenu: Optional Navigation -->
       <nav class="posts-submenu">
         <a href="/th/posts/diving-how-to-guides-koh-chang/">คู่มือ</a>
@@ -1901,7 +1911,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

@@ -563,6 +563,7 @@
     <!-- Critical Image Preload -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -581,7 +582,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menü</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Navigationsmenü öffnen"
+          >
+            ☰ Menü
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -613,11 +621,11 @@
             </form>
           </div>
 
-          <a href="/en/weather/">🇬🇧</a>
-          <a href="/de/weather/">🇩🇪</a>
-          <a href="/th/weather/">🇹🇭</a>
+          <a href="/en/weather/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/weather/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/weather/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/de/courses/">Kurse</a>
             <a href="/de/day-trips/">Tagestouren</a>
             <a href="/de/prices/">Preise</a>
@@ -663,7 +671,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Submenu: Optional Navigation -->
       <nav class="posts-submenu">
         <a href="/de/dive-sites/">Tauchplätze</a>
@@ -1220,7 +1228,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

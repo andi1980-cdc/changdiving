@@ -1394,18 +1394,19 @@
         }
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-4" as="style" />
+    <link rel="preload" href="/style.min.css?v=a11y-1" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-4"
+      href="/style.min.css?v=a11y-1"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-4" />
+      <link rel="stylesheet" href="/style.min.css?v=a11y-1" />
     </noscript>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -1416,12 +1417,19 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ เมนู</button>
-          <a href="/en/404/">🇬🇧</a>
-          <a href="/de/404/">🇩🇪</a>
-          <a href="/th/404/">🇹🇭</a>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="เปิดเมนูนำทาง"
+          >
+            ☰ เมนู
+          </button>
+          <a href="/en/404/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/404/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/404/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/th/courses/">คอร์สเรียน</a>
             <a href="/th/day-trips/">ทัวร์ดำน้ำ</a>
             <a href="/th/prices/">ราคา</a>
@@ -1471,7 +1479,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="grid-container">
         <h2
           style="
@@ -1927,7 +1935,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

@@ -627,12 +627,12 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css?v=contrast-7"
+      href="/style.min.css?v=a11y-1"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
-      ><link rel="stylesheet" href="/style.min.css?v=contrast-7" />
+      ><link rel="stylesheet" href="/style.min.css?v=a11y-1" />
       <!-- Critical Image Preload -->
     </noscript>
     <script type="application/ld+json">
@@ -730,6 +730,7 @@
     <!-- Preload critical resources -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -740,7 +741,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menu</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle navigation menu"
+          >
+            ☰ Menu
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -772,11 +780,23 @@
             </form>
           </div>
 
-          <a href="/en/posts/scuba-knowledge/nitrox-info/">🇬🇧</a>
-          <a href="/de/posts/scuba-knowledge/nitrox-info/">🇩🇪</a>
-          <a href="/th/posts/scuba-knowledge/nitrox-info/">🇹🇭</a>
+          <a
+            href="/en/posts/scuba-knowledge/nitrox-info/"
+            aria-label="Switch to English"
+            >🇬🇧</a
+          >
+          <a
+            href="/de/posts/scuba-knowledge/nitrox-info/"
+            aria-label="Switch to German"
+            >🇩🇪</a
+          >
+          <a
+            href="/th/posts/scuba-knowledge/nitrox-info/"
+            aria-label="Switch to Thai"
+            >🇹🇭</a
+          >
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/en/courses/">Courses</a>
             <a href="/en/day-trips/">Day Trips</a>
             <a href="/en/prices/">Prices</a>
@@ -817,7 +837,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Submenu: daytrip Categories -->
       <nav class="posts-submenu">
         <a href="/en/posts/diving-how-to-guides-koh-chang/">How to... guides</a>
@@ -1727,7 +1747,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

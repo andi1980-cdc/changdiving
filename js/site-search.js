@@ -217,8 +217,10 @@
         cats
           .map(
             (cat) =>
-              `<button class="filter-btn${
+              `<button type="button" class="filter-btn${
                 cat === activeCategory ? " active" : ""
+              }" aria-pressed="${
+                cat === activeCategory ? "true" : "false"
               }" onclick="filterByCategory('${escHtml(cat)}')">${escHtml(
                 cat
               )}</button>`
@@ -249,7 +251,7 @@
             ).replace("{n}", String(total));
 
       let html =
-        `<div class="search-info"><h3>🔍 ${countLabel} ${i18n.forQuery} "${escHtml(
+        `<div class="search-info" role="status"><h3>🔍 ${countLabel} ${i18n.forQuery} "${escHtml(
           query
         )}"</h3></div>` + buildFilterBar(allResults);
 
@@ -381,11 +383,21 @@
       displaySearchResults(allMatches, query, rawTerms, dymSuggestion);
     }
 
+    function setComboboxExpanded(open) {
+      const inputEl = document.getElementById("searchInput");
+      if (inputEl)
+        inputEl.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
     function acUpdate() {
-      const q = document.getElementById("searchInput").value.trim();
+      const inputEl = document.getElementById("searchInput");
+      const q = inputEl.value.trim();
       const drop = document.getElementById("ac-dropdown");
       if (!q || q.length < 2 || !searchData.length) {
         drop.hidden = true;
+        drop.innerHTML = "";
+        setComboboxExpanded(false);
+        inputEl.removeAttribute("aria-activedescendant");
         return;
       }
       const nq = norm(q);
@@ -406,13 +418,18 @@
         .slice(0, 6);
       if (!matches.length) {
         drop.hidden = true;
+        drop.innerHTML = "";
+        setComboboxExpanded(false);
+        inputEl.removeAttribute("aria-activedescendant");
         return;
       }
       const rawTerms = q.split(/\s+/);
       drop.innerHTML = matches
         .map(
-          (item) =>
-            `<a class="ac-item" href="${escHtml(item.url)}">` +
+          (item, idx) =>
+            `<a class="ac-item" role="option" id="ac-opt-${idx}" href="${escHtml(
+              item.url
+            )}">` +
             `<span class="ac-cat">${escHtml(item.category)}</span>` +
             `<span class="ac-title">${highlight(item.title, rawTerms)}</span>` +
             `</a>`
@@ -420,10 +437,19 @@
         .join("");
       acActive = -1;
       drop.hidden = false;
+      setComboboxExpanded(true);
+      inputEl.removeAttribute("aria-activedescendant");
     }
 
     function acClose() {
-      document.getElementById("ac-dropdown").hidden = true;
+      const drop = document.getElementById("ac-dropdown");
+      const inputEl = document.getElementById("searchInput");
+      if (drop) {
+        drop.hidden = true;
+        drop.innerHTML = "";
+      }
+      setComboboxExpanded(false);
+      if (inputEl) inputEl.removeAttribute("aria-activedescendant");
       acActive = -1;
     }
 
@@ -469,6 +495,25 @@
         acTimer = setTimeout(acUpdate, 200);
       });
 
+      // Combobox wiring for autocomplete
+      inputEl.setAttribute("role", "combobox");
+      inputEl.setAttribute("aria-autocomplete", "list");
+      inputEl.setAttribute("aria-controls", "ac-dropdown");
+      inputEl.setAttribute("aria-expanded", "false");
+      inputEl.setAttribute("autocomplete", "off");
+      const dropEl = document.getElementById("ac-dropdown");
+      if (dropEl) {
+        dropEl.setAttribute("role", "listbox");
+        if (!dropEl.getAttribute("aria-label")) {
+          dropEl.setAttribute(
+            "aria-label",
+            i18n.suggestionsLabel || "Search suggestions"
+          );
+        }
+      }
+      resultsEl.setAttribute("aria-live", "polite");
+      resultsEl.setAttribute("aria-atomic", "false");
+
       inputEl.addEventListener("keydown", function (e) {
         const drop = document.getElementById("ac-dropdown");
         if (!drop || drop.hidden) return;
@@ -490,7 +535,12 @@
         items.forEach((el, i) =>
           el.classList.toggle("ac-active", i === acActive)
         );
-        if (acActive >= 0) items[acActive].scrollIntoView({ block: "nearest" });
+        if (acActive >= 0) {
+          items[acActive].scrollIntoView({ block: "nearest" });
+          inputEl.setAttribute("aria-activedescendant", items[acActive].id);
+        } else {
+          inputEl.removeAttribute("aria-activedescendant");
+        }
       });
 
       document.addEventListener("click", function (e) {

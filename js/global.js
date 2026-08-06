@@ -476,49 +476,58 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Menü-Toggle für Mobile Dropdown (mit Debug-Ausgaben)
+// Menü-Toggle für Mobile Dropdown (a11y: aria-expanded, Escape, focus)
 // ---------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const toggles = document.querySelectorAll(".menu-toggle");
-  console.log("[DEBUG] Gefundene .menu-toggle Buttons:", toggles.length);
   toggles.forEach(function (toggle, i) {
-    // Suche im Eltern-Container nach .dropdown-menu
     const parent = toggle.closest(".lang-switch") || toggle.parentElement;
     let dropdown = parent.querySelector(".dropdown-menu");
-    console.log(`[DEBUG] Button #${i + 1}:`, toggle);
-    if (dropdown) {
-      // Dropdown in body verschieben: Hero hat overflow:hidden und schneidet das Menü ab.
-      // Außerhalb von Hero = position:fixed funktioniert, Menü wird nicht abgeschnitten.
-      document.body.appendChild(dropdown);
-      console.log(
-        `[DEBUG] Zugehöriges Dropdown für Button #${i + 1} gefunden:`,
-        dropdown
-      );
-      toggle.addEventListener("click", function (e) {
-        e.stopPropagation();
-        dropdown.classList.toggle("show");
-        console.log(
-          `[DEBUG] Button #${i + 1} geklickt. Dropdown sichtbar:`,
-          dropdown.classList.contains("show")
-        );
-      });
-      // Klick außerhalb schließt das Menü
-      document.addEventListener("click", function (event) {
-        if (
-          !toggle.contains(event.target) &&
-          !dropdown.contains(event.target)
-        ) {
-          if (dropdown.classList.contains("show")) {
-            dropdown.classList.remove("show");
-            console.log(
-              `[DEBUG] Dropdown für Button #${i + 1} durch Außenklick geschlossen.`
-            );
-          }
-        }
-      });
-    } else {
-      console.warn(`[DEBUG] Kein Dropdown für Button #${i + 1} gefunden!`);
+    if (!dropdown) return;
+
+    if (!dropdown.id) {
+      dropdown.id = i === 0 ? "main-menu" : "main-menu-" + (i + 1);
     }
+    toggle.setAttribute("aria-controls", dropdown.id);
+    if (!toggle.hasAttribute("aria-expanded")) {
+      toggle.setAttribute("aria-expanded", "false");
+    }
+
+    // Move to body: hero overflow:hidden would clip position:fixed menu
+    document.body.appendChild(dropdown);
+
+    function setOpen(open) {
+      dropdown.classList.toggle("show", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    }
+
+    function closeMenu(returnFocus) {
+      if (!dropdown.classList.contains("show")) return;
+      setOpen(false);
+      if (returnFocus) toggle.focus();
+    }
+
+    toggle.addEventListener("click", function (e) {
+      e.stopPropagation();
+      const willOpen = !dropdown.classList.contains("show");
+      setOpen(willOpen);
+      if (willOpen) {
+        const first = dropdown.querySelector("a");
+        if (first) first.focus();
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!toggle.contains(event.target) && !dropdown.contains(event.target)) {
+        closeMenu(false);
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeMenu(true);
+      }
+    });
   });
 });
 

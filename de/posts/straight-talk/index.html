@@ -466,12 +466,12 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css?v=contrast-7"
+      href="/style.min.css?v=a11y-1"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
-      ><link rel="stylesheet" href="/style.min.css?v=contrast-7" />
+      ><link rel="stylesheet" href="/style.min.css?v=a11y-1" />
       <!-- Critical Image Preload -->
     </noscript>
     <script type="application/ld+json">
@@ -498,6 +498,7 @@
     <!-- Preload critical resources -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -508,7 +509,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menü</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Navigationsmenü öffnen"
+          >
+            ☰ Menü
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -540,11 +548,15 @@
             </form>
           </div>
 
-          <a href="/en/posts/straight-talk/">🇬🇧</a>
-          <a href="/de/posts/straight-talk/">🇩🇪</a>
-          <a href="/th/posts/straight-talk/">🇹🇭</a>
+          <a href="/en/posts/straight-talk/" aria-label="Switch to English"
+            >🇬🇧</a
+          >
+          <a href="/de/posts/straight-talk/" aria-label="Switch to German"
+            >🇩🇪</a
+          >
+          <a href="/th/posts/straight-talk/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/de/courses/">Kurse</a>
             <a href="/de/day-trips/">Tagestouren</a>
             <a href="/de/prices/">Preise</a>
@@ -586,7 +598,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="grid-container">
         <!-- Submenu: Beitragskategorien -->
         <nav class="posts-submenu">
@@ -1090,7 +1102,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

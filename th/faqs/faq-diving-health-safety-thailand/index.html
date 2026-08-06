@@ -905,15 +905,15 @@
         text-decoration: underline;
       }
     </style>
-    <link rel="preload" href="/style.min.css?v=contrast-6" as="style" />
+    <link rel="preload" href="/style.min.css?v=a11y-1" as="style" />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=contrast-6"
+      href="/style.min.css?v=a11y-1"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=contrast-6" />
+      <link rel="stylesheet" href="/style.min.css?v=a11y-1" />
     </noscript>
     <script type="application/ld+json">
       {
@@ -1251,6 +1251,7 @@
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- ฮีโร่ -->
       <div class="hero">
@@ -1267,7 +1268,12 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle" aria-label="สลับเมนูนำทาง">
+          <button
+            class="menu-toggle"
+            aria-label="สลับเมนูนำทาง"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
             ☰ เมนู
           </button>
 
@@ -1317,7 +1323,7 @@
             >🇹🇭</a
           >
 
-          <div class="dropdown-menu" role="menu" aria-label="เมนูหลัก">
+          <div id="main-menu" class="dropdown-menu" aria-label="เมนูหลัก">
             <a href="/th/courses/">คอร์สดำน้ำ</a>
             <a href="/th/day-trips/">ทริปแบบเช้าไปเย็นกลับ</a>
             <a href="/th/prices/">ราคา</a>
@@ -1358,7 +1364,7 @@
         </picture>
       </div>
     </header>
-    <main>
+    <main id="main-content">
       <!-- เมนูย่อย: หมวดหมู่บทความ -->
       <nav class="posts-submenu">
         <a href="/th/posts/diving-how-to-guides-koh-chang/">คู่มือเริ่มต้น</a>
@@ -2924,7 +2930,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

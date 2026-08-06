@@ -743,6 +743,7 @@
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -753,7 +754,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menu</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle navigation menu"
+          >
+            ☰ Menu
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -785,11 +793,11 @@
             </form>
           </div>
 
-          <a href="/en/about/">🇬🇧</a>
-          <a href="/de/about/">🇩🇪</a>
-          <a href="/th/about/">🇹🇭</a>
+          <a href="/en/about/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/about/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/about/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/en/courses/">Courses</a>
             <a href="/en/day-trips/">Day Trips</a>
             <a href="/en/prices/">Prices</a>
@@ -831,7 +839,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Submenu: Optional Navigation -->
       <nav class="posts-submenu">
         <a href="/en/courses/">Courses</a>
@@ -1263,7 +1271,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
 
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

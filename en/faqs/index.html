@@ -568,6 +568,7 @@
     <!-- Styles -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -584,7 +585,12 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle" aria-label="Toggle navigation menu">
+          <button
+            class="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-menu"
+          >
             ☰ Menu
           </button>
 
@@ -622,7 +628,11 @@
           <a href="/de/faqs/" aria-label="Switch to German">🇩🇪</a>
           <a href="/th/faqs/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu" role="menu" aria-label="Main navigation">
+          <div
+            id="main-menu"
+            class="dropdown-menu"
+            aria-label="Main navigation"
+          >
             <a href="/en/courses/">Courses</a>
             <a href="/en/day-trips/">Day Trips</a>
             <a href="/en/prices/">Prices</a>
@@ -664,7 +674,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="grid-container">
         <!-- Submenu: Blog Categories -->
         <nav class="posts-submenu" aria-label="Blog categories navigation">
@@ -1096,7 +1106,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

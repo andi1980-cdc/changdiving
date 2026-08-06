@@ -557,6 +557,7 @@
     <!-- Critical Image Preload -->
   </head>
   <body>
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหา</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero">
@@ -575,7 +576,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ เมนู</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="เปิดเมนูนำทาง"
+          >
+            ☰ เมนู
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -607,11 +615,11 @@
             </form>
           </div>
 
-          <a href="/en/weather/">🇬🇧</a>
-          <a href="/de/weather/">🇩🇪</a>
-          <a href="/th/weather/">🇹🇭</a>
+          <a href="/en/weather/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/weather/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/weather/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/th/courses/">คอร์ส</a>
             <a href="/th/day-trips/">ไปเช้าเย็นกลับ</a>
             <a href="/th/prices/">ราคา</a>
@@ -657,7 +665,7 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Submenu: Optional Navigation -->
       <nav class="posts-submenu">
         <a href="/th/dive-sites/">จุดดำน้ำ</a>
@@ -1163,7 +1171,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

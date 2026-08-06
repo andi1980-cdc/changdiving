@@ -390,12 +390,12 @@
     </style>
     <link
       rel="preload"
-      href="/style.min.css?v=contrast-8"
+      href="/style.min.css?v=a11y-1"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript
-      ><link rel="stylesheet" href="/style.min.css?v=contrast-8"
+      ><link rel="stylesheet" href="/style.min.css?v=a11y-1"
     /></noscript>
 
     <script type="application/ld+json">
@@ -432,11 +432,19 @@
     </script>
   </head>
   <body>
-    <main>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <main id="main-content">
       <div class="changdiving-box">
         <div class="document-header">
           <div class="lang-switch">
-            <button class="menu-toggle">☰ Menu</button>
+            <button
+              class="menu-toggle"
+              aria-expanded="false"
+              aria-controls="main-menu"
+              aria-label="Navigationsmenü öffnen"
+            >
+              ☰ Menu
+            </button>
 
             <!-- Elegant Search Field -->
             <div class="search-wrapper">
@@ -472,10 +480,10 @@
               </form>
             </div>
 
-            <a href="/en/contact/">🇬🇧</a>
-            <a href="/de/contact/">🇩🇪</a>
-            <a href="/th/contact/">🇹🇭</a>
-            <div class="dropdown-menu">
+            <a href="/en/contact/" aria-label="Switch to English">🇬🇧</a>
+            <a href="/de/contact/" aria-label="Switch to German">🇩🇪</a>
+            <a href="/th/contact/" aria-label="Switch to Thai">🇹🇭</a>
+            <div id="main-menu" class="dropdown-menu">
               <a href="/de/courses/">Kurse</a>
               <a href="/de/day-trips/">Tagesausflüge</a>
               <a href="/de/prices/">Preise</a>
@@ -896,7 +904,7 @@
         </div>
       </div>
     </footer>
-    <script src="../../js/global.min.js?v=footer-static-2" defer></script>
+    <script src="../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
       {

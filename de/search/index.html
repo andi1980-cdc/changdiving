@@ -637,6 +637,7 @@
     />
   </head>
   <body class="search-page">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header>
       <!-- Hero-Bereich -->
       <div class="hero search-hero">
@@ -647,7 +648,14 @@
         </div>
 
         <div class="lang-switch">
-          <button class="menu-toggle">☰ Menü</button>
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Navigationsmenü öffnen"
+          >
+            ☰ Menü
+          </button>
 
           <!-- Elegant Search Field -->
           <div class="search-wrapper">
@@ -679,11 +687,11 @@
             </form>
           </div>
 
-          <a href="/de/">🇬🇧</a>
-          <a href="/de/">🇩🇪</a>
-          <a href="/th/">🇹🇭</a>
+          <a href="/de/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/" aria-label="Switch to Thai">🇹🇭</a>
 
-          <div class="dropdown-menu">
+          <div id="main-menu" class="dropdown-menu">
             <a href="/de/courses/">Kurse</a>
             <a href="/de/day-trips/">Tagestrips</a>
             <a href="/de/prices/">Preise</a>
@@ -733,11 +741,12 @@
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- Search Form -->
       <div class="search-container">
         <form id="searchForm" class="search-form-main">
           <div class="ac-wrap">
+            <label for="searchInput" class="visually-hidden">Suche</label>
             <input
               type="text"
               id="searchInput"
@@ -745,8 +754,20 @@
               placeholder="Suchen Sie nach Kursen, Tauchplätzen oder Themen..."
               value=""
               required
+              aria-label="Website durchsuchen"
+              autocomplete="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-controls="ac-dropdown"
+              aria-expanded="false"
             />
-            <div id="ac-dropdown" class="ac-dropdown" hidden></div>
+            <div
+              id="ac-dropdown"
+              class="ac-dropdown"
+              role="listbox"
+              aria-label="Suchvorschläge"
+              hidden
+            ></div>
           </div>
           <button type="submit">
             <svg
@@ -785,8 +806,8 @@
     </main>
 
     <!-- Scripts -->
-    <script src="/js/global.min.js?v=footer-static-2" defer></script>
-    <script src="/js/site-search.js?v=synonyms-2" defer></script>
+    <script src="/js/global.min.js?v=a11y-menu-1" defer></script>
+    <script src="/js/site-search.js?v=a11y-search-1" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         if (typeof initSiteSearch !== "function") {
@@ -821,6 +842,7 @@
             ],
             dymPrefix: "Keine genaue Übereinstimmung — Ergebnisse für",
             dymSuffix: ":",
+            suggestionsLabel: "Suchvorschläge",
           },
         });
       });
