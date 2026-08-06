@@ -1493,119 +1493,7 @@
         </div>
       </div>
     </main>
-    <script>
-      function setDiveLogUnitLabels() {
-        const unitsEl = document.getElementById("dlSacUnits");
-        const units = unitsEl.value;
-        const isImperial = units === "imperial";
-        const lastUnits = unitsEl.dataset.lastUnits || units;
-        const tankInput = document.getElementById("dlSacTank");
-        const tankValue = parseFloat(tankInput.value);
 
-        document.getElementById("dlSacPressureUnit").textContent = isImperial
-          ? "psi"
-          : "bar";
-        document.getElementById("dlSacTankUnit").textContent = isImperial
-          ? "cu ft"
-          : "L";
-        document.getElementById("dlSacDepthUnit").textContent = isImperial
-          ? "ft"
-          : "m";
-        document.getElementById("dlSacAvgDepthUnit").textContent = isImperial
-          ? "ft"
-          : "m";
-        document.getElementById("dlSacBar").placeholder = isImperial
-          ? "z. B. 1450"
-          : "z. B. 100";
-        document.getElementById("dlSacTank").placeholder = isImperial
-          ? "z. B. 80"
-          : "z. B. 12";
-        document.getElementById("dlSacMaxDepth").placeholder = isImperial
-          ? "z. B. 60"
-          : "z. B. 18";
-
-        if (!isNaN(tankValue) && tankValue > 0 && lastUnits !== units) {
-          tankInput.value =
-            lastUnits === "imperial"
-              ? ((tankValue * 11.1) / 80).toFixed(1)
-              : ((tankValue * 80) / 11.1).toFixed(1);
-        } else if (lastUnits !== units) {
-          tankInput.value = isImperial ? "80" : "12";
-        }
-        unitsEl.dataset.lastUnits = units;
-      }
-
-      function calculateDiveLogSAC() {
-        const units = document.getElementById("dlSacUnits").value;
-        const isImperial = units === "imperial";
-        const pressureInput = parseFloat(
-          document.getElementById("dlSacBar").value
-        );
-        const time = parseFloat(document.getElementById("dlSacTime").value);
-        const tankInput = parseFloat(
-          document.getElementById("dlSacTank").value
-        );
-        const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(
-          document.getElementById("dlSacAvgDepth").value
-        );
-        const result = document.getElementById("dlSacResult");
-        const pressureUnit = isImperial ? "psi" : "bar";
-        const tankUnit = isImperial ? "cu ft" : "L";
-
-        let depthM;
-        let depthNote;
-        if (!isNaN(avgIn) && avgIn > 0) {
-          depthM = isImperial ? avgIn * 0.3048 : avgIn;
-          depthNote = isImperial
-            ? `Mittlere Tiefe <strong>${avgIn.toFixed(1)} ft</strong> (Eingabe).`
-            : `Mittlere Tiefe <strong>${avgIn.toFixed(1)} m</strong> (Eingabe).`;
-        } else if (!isNaN(maxD) && maxD > 0) {
-          const estimatedAvg = maxD * 0.6;
-          depthM = isImperial ? estimatedAvg * 0.3048 : estimatedAvg;
-          depthNote = isImperial
-            ? `Mittlere Tiefe geschätzt: <strong>60&nbsp;% der max. Tiefe</strong> → ${estimatedAvg.toFixed(1)} ft (max ${maxD.toFixed(1)} ft).`
-            : `Mittlere Tiefe geschätzt: <strong>60&nbsp;% der max. Tiefe</strong> → ${estimatedAvg.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
-        } else {
-          result.innerHTML =
-            "<span><strong>Max. Tiefe</strong> eintragen (optional: <strong>mittlere Tiefe</strong> vom Computer).</span>";
-          return;
-        }
-
-        if (
-          !pressureInput ||
-          pressureInput <= 0 ||
-          !time ||
-          time <= 0 ||
-          !tankInput ||
-          tankInput <= 0
-        ) {
-          result.innerHTML = `<span><strong>Verbrauch (${pressureUnit})</strong>, <strong>Zeit</strong> und <strong>Tankgröße (${tankUnit})</strong> eintragen.</span>`;
-          return;
-        }
-
-        const tank = isImperial ? (tankInput * 11.1) / 80 : tankInput;
-        const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
-        const ata = depthM / 10 + 1;
-        const liters = bar * tank;
-        const sac = liters / (time * ata);
-
-        let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>Gas: ${liters.toFixed(0)} L in ${time} min bei ${ata.toFixed(2)} ATA</small>`;
-        if (isImperial) {
-          html +=
-            '<br><small style="color: #666; font-weight: normal">(psi/ft und cu ft intern in bar/m/L umgerechnet)</small>';
-        }
-        if (sac > 25) {
-          html +=
-            '<br><small style="color: #f39c12; font-weight: normal">⚠️ Hohe SAC — entspannt atmen üben</small>';
-        } else if (sac < 15) {
-          html +=
-            '<br><small style="color: #27ae60; font-weight: normal">🌟 Sehr effiziente SAC</small>';
-        }
-        result.innerHTML = html;
-      }
-      setDiveLogUnitLabels();
-    </script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
@@ -1692,6 +1580,14 @@
         </div>
       </div>
     </footer>
+    <script
+      src="../../../../js/calculators/dive-calc-core.js?v=calc-1"
+      defer
+    ></script>
+    <script
+      src="../../../../js/calculators/dive-logbook.js?v=calc-1"
+      defer
+    ></script>
     <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

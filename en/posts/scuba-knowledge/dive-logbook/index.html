@@ -1481,124 +1481,7 @@
         </div>
       </div>
     </main>
-    <script>
-      const LITERS_PER_CUFT_AT_3000_PSI = 11.1 / 80;
-      const CUFT_PER_LITER_AT_3000_PSI = 80 / 11.1;
 
-      function setDiveLogUnitLabels(convertTankValue = false) {
-        const unitSelect = document.getElementById("dlSacUnits");
-        const units = unitSelect.value;
-        const previousUnits = unitSelect.dataset.lastUnit || units;
-        const isImperial = units === "imperial";
-        const tankInput = document.getElementById("dlSacTank");
-
-        if (convertTankValue && previousUnits !== units) {
-          const tankVal = parseFloat(tankInput.value);
-          if (!isNaN(tankVal) && tankVal > 0) {
-            const convertedTank =
-              units === "imperial"
-                ? tankVal * CUFT_PER_LITER_AT_3000_PSI
-                : tankVal * LITERS_PER_CUFT_AT_3000_PSI;
-            tankInput.value = convertedTank.toFixed(1).replace(/\.0$/, "");
-          } else {
-            tankInput.value = units === "imperial" ? "80" : "12";
-          }
-        }
-
-        document.getElementById("dlSacPressureUnit").textContent = isImperial
-          ? "psi"
-          : "bar";
-        document.getElementById("dlSacDepthUnit").textContent = isImperial
-          ? "ft"
-          : "m";
-        document.getElementById("dlSacAvgDepthUnit").textContent = isImperial
-          ? "ft"
-          : "m";
-        document.getElementById("dlSacTankUnit").textContent = isImperial
-          ? "cu ft"
-          : "L";
-        document.getElementById("dlSacBar").placeholder = isImperial
-          ? "e.g. 1450"
-          : "e.g. 100";
-        document.getElementById("dlSacMaxDepth").placeholder = isImperial
-          ? "e.g. 60"
-          : "e.g. 18";
-        document.getElementById("dlSacTank").placeholder = isImperial
-          ? "e.g. 80"
-          : "e.g. 12";
-        unitSelect.dataset.lastUnit = units;
-      }
-
-      function calculateDiveLogSAC() {
-        const units = document.getElementById("dlSacUnits").value;
-        const isImperial = units === "imperial";
-        const pressureInput = parseFloat(
-          document.getElementById("dlSacBar").value
-        );
-        const time = parseFloat(document.getElementById("dlSacTime").value);
-        const tank = parseFloat(document.getElementById("dlSacTank").value);
-        const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(
-          document.getElementById("dlSacAvgDepth").value
-        );
-        const result = document.getElementById("dlSacResult");
-        const pressureUnit = isImperial ? "psi" : "bar";
-        const tankUnit = isImperial ? "cu ft" : "L";
-
-        let depthM;
-        let depthNote;
-        if (!isNaN(avgIn) && avgIn > 0) {
-          depthM = isImperial ? avgIn * 0.3048 : avgIn;
-          depthNote = isImperial
-            ? `Average depth <strong>${avgIn.toFixed(1)} ft</strong> (from your entry).`
-            : `Average depth <strong>${avgIn.toFixed(1)} m</strong> (from your entry).`;
-        } else if (!isNaN(maxD) && maxD > 0) {
-          const estimatedAvg = maxD * 0.6;
-          depthM = isImperial ? estimatedAvg * 0.3048 : estimatedAvg;
-          depthNote = isImperial
-            ? `Average depth estimated as <strong>60% of max</strong> → ${estimatedAvg.toFixed(1)} ft (max ${maxD.toFixed(1)} ft).`
-            : `Average depth estimated as <strong>60% of max</strong> → ${estimatedAvg.toFixed(1)} m (max ${maxD.toFixed(1)} m).`;
-        } else {
-          result.innerHTML =
-            "<span>Enter <strong>max depth</strong> (and optionally <strong>average depth</strong> from your computer).</span>";
-          return;
-        }
-
-        if (
-          !pressureInput ||
-          pressureInput <= 0 ||
-          !time ||
-          time <= 0 ||
-          !tank ||
-          tank <= 0
-        ) {
-          result.innerHTML = `<span>Enter <strong>gas used (${pressureUnit})</strong>, <strong>time</strong>, and <strong>tank size (${tankUnit})</strong>.</span>`;
-          return;
-        }
-
-        const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
-        const tankLiters = isImperial
-          ? tank * LITERS_PER_CUFT_AT_3000_PSI
-          : tank;
-        const ata = depthM / 10 + 1;
-        const liters = bar * tankLiters;
-        const sac = liters / (time * ata);
-
-        let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>Gas: ${liters.toFixed(0)} L over ${time} min at ${ata.toFixed(2)} ATA</small>`;
-        if (isImperial) {
-          html += `<br><small style="color: #666; font-weight: normal">(psi/ft and ${tankUnit} converted internally to bar/m and L tank size)</small>`;
-        }
-        if (sac > 25) {
-          html +=
-            '<br><small style="color: #f39c12; font-weight: normal">⚠️ High SAC — work on relaxed breathing</small>';
-        } else if (sac < 15) {
-          html +=
-            '<br><small style="color: #27ae60; font-weight: normal">🌟 Very efficient SAC</small>';
-        }
-        result.innerHTML = html;
-      }
-      setDiveLogUnitLabels();
-    </script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
@@ -1685,6 +1568,14 @@
         </div>
       </div>
     </footer>
+    <script
+      src="../../../../js/calculators/dive-calc-core.js?v=calc-1"
+      defer
+    ></script>
+    <script
+      src="../../../../js/calculators/dive-logbook.js?v=calc-1"
+      defer
+    ></script>
     <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

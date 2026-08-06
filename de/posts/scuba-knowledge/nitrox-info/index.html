@@ -1466,117 +1466,6 @@
           </div>
         </div>
 
-        <script>
-          function nitroxCalcPO2_de() {
-            const oxygen = parseFloat(
-              document.getElementById("nitrox-po2-o2-de").value
-            );
-            const depth = parseFloat(
-              document.getElementById("nitrox-po2-depth-de").value
-            );
-            const result = document.getElementById("nitrox-po2-result-de");
-
-            if (oxygen && depth >= 0) {
-              const ata = depth / 10 + 1;
-              const po2 = (oxygen / 100) * ata;
-
-              result.innerHTML = `✅ PO₂: <span style="color: #e74c3c">${po2.toFixed(2)} bar</span><br><small style="color: #666">bei ${depth}m Tiefe (${ata.toFixed(1)} ATA)</small>`;
-
-              if (po2 > 1.6) {
-                result.innerHTML +=
-                  '<br><small style="color: #e74c3c">⚠️ GEFAHR: PO₂ zu hoch! Sauerstofftoxizität-Risiko</small>';
-              } else if (po2 > 1.4) {
-                result.innerHTML +=
-                  '<br><small style="color: #f39c12">⚠️ Vorsicht: Über Freizeittauch-Limit (1,4 bar)</small>';
-              } else if (po2 < 0.16) {
-                result.innerHTML +=
-                  '<br><small style="color: #e74c3c">⚠️ GEFAHR: PO₂ zu niedrig! Hypoxie-Risiko</small>';
-              } else {
-                result.innerHTML +=
-                  '<br><small style="color: #27ae60">✓ Sicherer PO₂-Wert</small>';
-              }
-            } else {
-              result.textContent = "Werte eingeben für PO₂-Berechnung";
-            }
-          }
-
-          function nitroxCalcMOD_de() {
-            const oxygen = parseFloat(
-              document.getElementById("nitrox-mod-o2-de").value
-            );
-            const maxPPO2 = parseFloat(
-              document.getElementById("nitrox-mod-ppo2-de").value
-            );
-            const result = document.getElementById("nitrox-mod-result-de");
-
-            if (oxygen && maxPPO2) {
-              const mod = (maxPPO2 / (oxygen / 100) - 1) * 10;
-
-              result.innerHTML = `✅ MOD: <span style="color: #e74c3c">${mod.toFixed(1)} Meter</span><br><small style="color: #666">Max. sichere Tiefe für ${oxygen}% O₂ bei ${maxPPO2} bar PPO₂</small>`;
-
-              if (mod < 18) {
-                result.innerHTML +=
-                  '<br><small style="color: #3498db">💡 Flachwasser – ideal für Anfänger</small>';
-              } else if (mod > 40) {
-                result.innerHTML +=
-                  '<br><small style="color: #f39c12">💡 Tieftauchgang – erweiterte Zertifizierung erforderlich</small>';
-              } else {
-                result.innerHTML +=
-                  '<br><small style="color: #27ae60">💡 Standard Freizeittauch-Bereich</small>';
-              }
-            } else {
-              result.textContent = "Werte eingeben für MOD-Berechnung";
-            }
-          }
-
-          function nitroxCalcBestMix_de() {
-            const depth = parseFloat(
-              document.getElementById("nitrox-best-depth-de").value
-            );
-            const maxPPO2 = parseFloat(
-              document.getElementById("nitrox-best-ppo2-de").value
-            );
-            const result = document.getElementById("nitrox-best-result-de");
-
-            if (depth >= 0 && maxPPO2) {
-              const ata = depth / 10 + 1;
-              const bestO2 = (maxPPO2 / ata) * 100;
-
-              let recommendedMix = Math.round(bestO2);
-              let mixName = `EAN${recommendedMix}`;
-
-              if (bestO2 >= 31 && bestO2 <= 33) {
-                recommendedMix = 32;
-                mixName = "EAN32 (N32)";
-              } else if (bestO2 >= 35 && bestO2 <= 37) {
-                recommendedMix = 36;
-                mixName = "EAN36 (N36)";
-              } else if (bestO2 >= 39 && bestO2 <= 41) {
-                recommendedMix = 40;
-                mixName = "EAN40";
-              } else if (bestO2 <= 21) {
-                recommendedMix = 21;
-                mixName = "Luft (21%)";
-              }
-
-              result.innerHTML = `✅ Beste Mischung: <span style="color: #e74c3c">${mixName}</span><br><small style="color: #666">Optimal O₂: ${bestO2.toFixed(1)}% für ${depth}m bei ${maxPPO2} bar PPO₂</small>`;
-
-              if (recommendedMix > 40) {
-                result.innerHTML +=
-                  '<br><small style="color: #f39c12">💡 Erfordert erweiterte Nitrox-Zertifizierung (&gt;40% O₂)</small>';
-              } else if (recommendedMix <= 21) {
-                result.innerHTML +=
-                  '<br><small style="color: #3498db">💡 Normale Luft ist für diese Tiefe ausreichend</small>';
-              } else {
-                result.innerHTML +=
-                  '<br><small style="color: #27ae60">✓ Standard Freizeit-Nitrox-Mischung</small>';
-              }
-            } else {
-              result.textContent = "Tiefe eingeben für beste Nitrox-Mischung";
-            }
-          }
-        </script>
-
         <p
           style="
             text-align: center;
@@ -1832,6 +1721,14 @@
         </div>
       </div>
     </footer>
+    <script
+      src="../../../../js/calculators/dive-calc-core.js?v=calc-1"
+      defer
+    ></script>
+    <script
+      src="../../../../js/calculators/nitrox-info.js?v=calc-1"
+      defer
+    ></script>
     <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">

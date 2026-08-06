@@ -1468,116 +1468,7 @@
         </div>
       </div>
     </main>
-    <script>
-      function setDiveLogUnitLabels() {
-        const unitsEl = document.getElementById("dlSacUnits");
-        const units = unitsEl.value;
-        const isImperial = units === "imperial";
-        const lastUnits = unitsEl.dataset.lastUnits || units;
-        const tankInput = document.getElementById("dlSacTank");
-        const tankValue = parseFloat(tankInput.value);
-        document.getElementById("dlSacPressureUnit").textContent = isImperial
-          ? "psi"
-          : "bar";
-        document.getElementById("dlSacDepthUnit").textContent = isImperial
-          ? "ft"
-          : "m";
-        document.getElementById("dlSacAvgDepthUnit").textContent = isImperial
-          ? "ft"
-          : "m";
-        document.getElementById("dlSacTankUnit").textContent = isImperial
-          ? "cu ft"
-          : "L";
-        document.getElementById("dlSacBar").placeholder = isImperial
-          ? "เช่น 1450"
-          : "เช่น 100";
-        document.getElementById("dlSacMaxDepth").placeholder = isImperial
-          ? "เช่น 60"
-          : "เช่น 18";
-        tankInput.placeholder = isImperial ? "เช่น 80" : "เช่น 12";
 
-        if (!isNaN(tankValue) && tankValue > 0 && lastUnits !== units) {
-          tankInput.value =
-            lastUnits === "imperial"
-              ? ((tankValue * 11.1) / 80).toFixed(1)
-              : ((tankValue * 80) / 11.1).toFixed(1);
-        } else if (lastUnits !== units) {
-          tankInput.value = isImperial ? "80" : "12";
-        }
-        unitsEl.dataset.lastUnits = units;
-      }
-
-      function calculateDiveLogSAC() {
-        const units = document.getElementById("dlSacUnits").value;
-        const isImperial = units === "imperial";
-        const pressureInput = parseFloat(
-          document.getElementById("dlSacBar").value
-        );
-        const time = parseFloat(document.getElementById("dlSacTime").value);
-        const tankInput = parseFloat(
-          document.getElementById("dlSacTank").value
-        );
-        const maxD = parseFloat(document.getElementById("dlSacMaxDepth").value);
-        const avgIn = parseFloat(
-          document.getElementById("dlSacAvgDepth").value
-        );
-        const result = document.getElementById("dlSacResult");
-        const pressureUnit = isImperial ? "psi" : "bar";
-        const tankUnit = isImperial ? "cu ft" : "L";
-
-        let depthM;
-        let depthNote;
-        if (!isNaN(avgIn) && avgIn > 0) {
-          depthM = isImperial ? avgIn * 0.3048 : avgIn;
-          depthNote = isImperial
-            ? `ความลึกเฉลี่ย <strong>${avgIn.toFixed(1)} ft</strong> (จากที่กรอก)`
-            : `ความลึกเฉลี่ย <strong>${avgIn.toFixed(1)} m</strong> (จากที่กรอก)`;
-        } else if (!isNaN(maxD) && maxD > 0) {
-          const estimatedAvg = maxD * 0.6;
-          depthM = isImperial ? estimatedAvg * 0.3048 : estimatedAvg;
-          depthNote = isImperial
-            ? `ประมาณความลึกเฉลี่ย: <strong>60% ของความลึกสูงสุด</strong> → ${estimatedAvg.toFixed(1)} ft (max ${maxD.toFixed(1)} ft)`
-            : `ประมาณความลึกเฉลี่ย: <strong>60% ของความลึกสูงสุด</strong> → ${estimatedAvg.toFixed(1)} m (max ${maxD.toFixed(1)} m)`;
-        } else {
-          result.innerHTML =
-            "<span>กรอก <strong>ความลึกสูงสุด</strong> (หรือ <strong>ความลึกเฉลี่ย</strong> จากคอมพิวเตอร์)</span>";
-          return;
-        }
-
-        if (
-          !pressureInput ||
-          pressureInput <= 0 ||
-          !time ||
-          time <= 0 ||
-          !tankInput ||
-          tankInput <= 0
-        ) {
-          result.innerHTML = `<span>กรอก <strong>แก๊ส (${pressureUnit})</strong> <strong>เวลา</strong> และ <strong>ขนาดถัง (${tankUnit})</strong></span>`;
-          return;
-        }
-
-        const bar = isImperial ? pressureInput / 14.5038 : pressureInput;
-        const tankLiters = isImperial ? (tankInput * 11.1) / 80 : tankInput;
-        const ata = depthM / 10 + 1;
-        const liters = bar * tankLiters;
-        const sac = liters / (time * ata);
-
-        let html = `✅ SAC: <span style="color: #e74c3c">${sac.toFixed(1)} L/min</span><br><small style="color: #666; font-weight: normal">${depthNote}<br>แก๊ส ${liters.toFixed(0)} L ใน ${time} นาที ที่ ${ata.toFixed(2)} ATA</small>`;
-        if (isImperial) {
-          html +=
-            '<br><small style="color: #666; font-weight: normal">(ระบบแปลง psi/ft และ cu ft เป็น bar/m/L ภายใน)</small>';
-        }
-        if (sac > 25) {
-          html +=
-            '<br><small style="color: #f39c12; font-weight: normal">⚠️ SAC สูง — ฝึกหายใจให้นุ่มนวล</small>';
-        } else if (sac < 15) {
-          html +=
-            '<br><small style="color: #27ae60; font-weight: normal">🌟 SAC ดีมาก</small>';
-        }
-        result.innerHTML = html;
-      }
-      setDiveLogUnitLabels();
-    </script>
     <!-- WhatsApp Button -->
     <a
       href="https://wa.me/66894013927"
@@ -1664,6 +1555,14 @@
         </div>
       </div>
     </footer>
+    <script
+      src="../../../../js/calculators/dive-calc-core.js?v=calc-1"
+      defer
+    ></script>
+    <script
+      src="../../../../js/calculators/dive-logbook.js?v=calc-1"
+      defer
+    ></script>
     <script src="../../../../js/global.min.js?v=a11y-menu-1" defer></script>
     <!-- Breadcrumb Structured Data -->
     <script type="application/ld+json">
