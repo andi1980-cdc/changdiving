@@ -120,7 +120,7 @@ _NAV_LABELS_TH = {
 
 _META_EN = """  <div class="footer-meta">
     <div class="container">
-      <p><strong>Phone, WhatsApp & Line:</strong> +66 (0) 894-013-927</p>
+      <p><strong>Phone, WhatsApp & Line:</strong> <a href="tel:+66894013927">+66 (0) 894-013-927</a></p>
       <p>
         Chang Diving Center Co.,Ltd<br />
         21/52 Moo 4, Klong Prao Beach<br />
@@ -144,7 +144,7 @@ _META_EN = """  <div class="footer-meta">
 
 _META_DE = """  <div class="footer-meta">
     <div class="container">
-      <p><strong>Phone, WhatsApp & Line:</strong> +66 (0) 894-013-927</p>
+      <p><strong>Phone, WhatsApp & Line:</strong> <a href="tel:+66894013927">+66 (0) 894-013-927</a></p>
       <p>
         Chang Diving Center Co.,Ltd<br />
         21/52 Moo 4, Klong Prao Beach<br />
@@ -168,7 +168,7 @@ _META_DE = """  <div class="footer-meta">
 
 _META_TH = """  <div class="footer-meta">
     <div class="container">
-      <p><strong>โทรศัพท์, WhatsApp และ Line:</strong> +66 (0) 894-013-927</p>
+      <p><strong>โทรศัพท์, WhatsApp และ Line:</strong> <a href="tel:+66894013927">+66 (0) 894-013-927</a></p>
       <p>
         บจก ช้างไดร์วิ่ง เซ็นเตอร์<br />
         21/52 หมู่ที่ 4,<br />
