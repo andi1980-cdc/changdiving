@@ -1,0 +1,434 @@
+{
+  "groups": [
+    {
+      "id": "try_dive",
+      "terms": [
+        "try dive",
+        "try diving",
+        "trial dive",
+        "first dive",
+        "discover scuba",
+        "discover scuba diving",
+        "introductory dive",
+        "schnuppertauchen",
+        "probetauchen",
+        "tauchen ausprobieren",
+        "erster tauchgang",
+        "ทดลองดำน้ำ",
+        "ดำน้ำครั้งแรก"
+      ],
+      "matchTerms": {
+        "en": ["try", "dive"],
+        "de": ["schnuppertauchen"],
+        "th": ["ทดลอง", "ดำน้ำ"]
+      },
+      "targets": {
+        "en": [
+          "/en/day-trips/try-dive/",
+          "/en/courses/beginner-courses/",
+          "/en/faqs/faq-try-dive-fun-dives-koh-chang/",
+          "/en/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"
+        ],
+        "de": [
+          "/de/day-trips/try-dive/",
+          "/de/courses/beginner-courses/",
+          "/de/faqs/faq-try-dive-fun-dives-koh-chang/",
+          "/de/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"
+        ],
+        "th": [
+          "/th/day-trips/try-dive/",
+          "/th/courses/beginner-courses/",
+          "/th/faqs/faq-try-dive-fun-dives-koh-chang/",
+          "/th/posts/diving-how-to-guides-koh-chang/how-to-try-dive/"
+        ]
+      }
+    },
+    {
+      "id": "beginner_course",
+      "terms": [
+        "beginner course",
+        "beginner diving",
+        "diving for beginners",
+        "learn to dive",
+        "diving course",
+        "scuba course",
+        "open water course",
+        "tauchkurs",
+        "tauchkurse",
+        "anfaengerkurs",
+        "anfängerkurs",
+        "anfaengertauchen",
+        "anfängertauchen",
+        "grundkurs tauchen",
+        "tauchen lernen",
+        "tauchen fuer anfaenger",
+        "tauchen für anfänger",
+        "geraetetauchen",
+        "gerätetauchen",
+        "เรียนดำน้ำ",
+        "เรียนดำน้ำลึก",
+        "คอร์สดำน้ำ",
+        "คอร์สดำน้ำสำหรับมือใหม่",
+        "หลักสูตรดำน้ำ",
+        "ดำน้ำสำหรับมือใหม่",
+        "มือใหม่หัดดำน้ำ"
+      ],
+      "matchTerms": {
+        "en": ["open", "water"],
+        "de": ["open", "water"],
+        "th": ["open", "water"]
+      },
+      "targets": {
+        "en": [
+          "/en/courses/beginner-courses/",
+          "/en/courses/open-water-diver/",
+          "/en/courses/scuba-diver/",
+          "/en/courses/open-advanced-package/"
+        ],
+        "de": [
+          "/de/courses/beginner-courses/",
+          "/de/courses/open-water-diver/",
+          "/de/courses/scuba-diver/",
+          "/de/courses/open-advanced-package/"
+        ],
+        "th": [
+          "/th/courses/beginner-courses/",
+          "/th/courses/open-water-diver/",
+          "/th/courses/scuba-diver/",
+          "/th/courses/open-advanced-package/"
+        ]
+      }
+    },
+    {
+      "id": "owd",
+      "terms": [
+        "owd",
+        "open water diver",
+        "open-water diver",
+        "open water diver course"
+      ],
+      "matchTerms": {
+        "en": ["open", "water", "diver"],
+        "de": ["open", "water"],
+        "th": ["open", "water"]
+      },
+      "targets": {
+        "en": [
+          "/en/courses/open-water-diver/",
+          "/en/courses/beginner-courses/",
+          "/en/courses/open-advanced-package/"
+        ],
+        "de": [
+          "/de/courses/open-water-diver/",
+          "/de/courses/beginner-courses/",
+          "/de/courses/open-advanced-package/"
+        ],
+        "th": [
+          "/th/courses/open-water-diver/",
+          "/th/courses/beginner-courses/",
+          "/th/courses/open-advanced-package/"
+        ]
+      }
+    },
+    {
+      "id": "refresher",
+      "terms": [
+        "refresher",
+        "refresher course",
+        "scuba refresher",
+        "refresh dive",
+        "scuba review",
+        "auffrischungskurs",
+        "tauchauffrischung",
+        "คอร์สทบทวนการดำน้ำ",
+        "ทบทวนทักษะดำน้ำ"
+      ],
+      "matchTerms": {
+        "en": ["scuba", "review"],
+        "de": ["auffrischung"],
+        "th": ["ทบทวน"]
+      },
+      "targets": {
+        "en": [
+          "/en/day-trips/scuba-review/",
+          "/en/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/"
+        ],
+        "de": [
+          "/de/day-trips/scuba-review/",
+          "/de/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/"
+        ],
+        "th": [
+          "/th/day-trips/scuba-review/",
+          "/th/posts/diving-how-to-guides-koh-chang/how-to-scuba-review/"
+        ]
+      }
+    },
+    {
+      "id": "day_trip",
+      "terms": [
+        "dive trip",
+        "diving trip",
+        "day trip",
+        "fun dive",
+        "fun dives",
+        "guided dive",
+        "boat diving",
+        "tauchausflug",
+        "tauchtour",
+        "tagestour",
+        "tagesausflug",
+        "bootstauchen",
+        "gefuehrtes tauchen",
+        "geführtes tauchen",
+        "ทริปดำน้ำ",
+        "ทริปดำน้ำลึก",
+        "ทริปดำน้ำวันเดียว",
+        "ดำน้ำจากเรือ"
+      ],
+      "matchTerms": {
+        "en": ["fun", "dive"],
+        "de": ["fun", "dive"],
+        "th": ["fun", "dive"]
+      },
+      "targets": {
+        "en": ["/en/day-trips/fun-dives/", "/en/prices/"],
+        "de": ["/de/day-trips/fun-dives/", "/de/prices/"],
+        "th": ["/th/day-trips/fun-dives/", "/th/prices/"]
+      }
+    },
+    {
+      "id": "private",
+      "terms": [
+        "private diving",
+        "private dive",
+        "private instructor",
+        "privates tauchen",
+        "privater tauchlehrer",
+        "ดำน้ำส่วนตัว"
+      ],
+      "matchTerms": {
+        "en": ["private"],
+        "de": ["privat"],
+        "th": ["ส่วนตัว"]
+      },
+      "targets": {
+        "en": ["/en/day-trips/fun-dives/", "/en/contact/", "/en/prices/"],
+        "de": ["/de/day-trips/fun-dives/", "/de/contact/", "/de/prices/"],
+        "th": ["/th/day-trips/fun-dives/", "/th/contact/", "/th/prices/"]
+      }
+    },
+    {
+      "id": "snorkel",
+      "terms": [
+        "snorkeling",
+        "snorkelling",
+        "snorkeling trip",
+        "snorkel trip",
+        "schnorcheln",
+        "schnorchelausflug",
+        "สน็อกเกิล",
+        "ดำน้ำตื้น",
+        "ทริปดำน้ำตื้น"
+      ],
+      "matchTerms": {
+        "en": ["snorkeling"],
+        "de": ["schnorcheln"],
+        "th": ["ดำน้ำตื้น"]
+      },
+      "targets": {
+        "en": ["/en/day-trips/snorkeling/"],
+        "de": ["/de/day-trips/snorkeling/"],
+        "th": ["/th/day-trips/snorkeling/"]
+      }
+    },
+    {
+      "id": "advanced_course",
+      "terms": [
+        "advanced diving course",
+        "advanced course",
+        "advanced open water",
+        "aowd",
+        "fortgeschrittenenkurs",
+        "คอร์สดำน้ำขั้นสูง"
+      ],
+      "matchTerms": {
+        "en": ["advanced"],
+        "de": ["advanced"],
+        "th": ["advanced"]
+      },
+      "targets": {
+        "en": [
+          "/en/courses/advanced-courses/",
+          "/en/courses/advanced/",
+          "/en/courses/open-advanced-package/"
+        ],
+        "de": [
+          "/de/courses/advanced-courses/",
+          "/de/courses/advanced/",
+          "/de/courses/open-advanced-package/"
+        ],
+        "th": [
+          "/th/courses/advanced-courses/",
+          "/th/courses/advanced/",
+          "/th/courses/open-advanced-package/"
+        ]
+      }
+    },
+    {
+      "id": "specialty",
+      "terms": [
+        "specialty course",
+        "specialty",
+        "spezialkurs",
+        "คอร์สเฉพาะทาง",
+        "wreck diving",
+        "wracktauchen",
+        "ดำน้ำซากเรือ",
+        "night diving",
+        "nachttauchen",
+        "ดำน้ำกลางคืน",
+        "deep diving",
+        "tieftauchen",
+        "ดำน้ำลึกพิเศษ",
+        "drift diving",
+        "stroemungstauchen",
+        "strömungstauchen",
+        "ดำน้ำตามกระแสน้ำ",
+        "reef diving",
+        "rifftauchen",
+        "ดำน้ำแนวปะการัง"
+      ],
+      "matchTerms": {
+        "en": ["specialty"],
+        "de": ["specialty"],
+        "th": ["specialty"]
+      },
+      "targets": {
+        "en": [
+          "/en/courses/specialty/",
+          "/en/courses/wreck-diver/",
+          "/en/courses/night/",
+          "/en/courses/deep-diver/"
+        ],
+        "de": [
+          "/de/courses/specialty/",
+          "/de/courses/wreck-diver/",
+          "/de/courses/night/",
+          "/de/courses/deep-diver/"
+        ],
+        "th": [
+          "/th/courses/specialty/",
+          "/th/courses/wreck-diver/",
+          "/th/courses/night/",
+          "/th/courses/deep-diver/"
+        ]
+      }
+    },
+    {
+      "id": "equipment",
+      "terms": [
+        "diving equipment",
+        "scuba equipment",
+        "equipment rental",
+        "tauchausruestung",
+        "tauchausrüstung",
+        "leihausruestung",
+        "leihausrüstung",
+        "ausruestung mieten",
+        "ausrüstung mieten",
+        "อุปกรณ์ดำน้ำ",
+        "เช่าอุปกรณ์ดำน้ำ"
+      ],
+      "matchTerms": {
+        "en": ["equipment"],
+        "de": ["ausruestung"],
+        "th": ["อุปกรณ์"]
+      },
+      "targets": {
+        "en": [
+          "/en/equipment/",
+          "/en/equipment/used-scuba-gear/",
+          "/en/faqs/faq-equipment-logistics-koh-chang/"
+        ],
+        "de": [
+          "/de/equipment/",
+          "/de/equipment/used-scuba-gear/",
+          "/de/faqs/faq-equipment-logistics-koh-chang/"
+        ],
+        "th": [
+          "/th/equipment/",
+          "/th/equipment/used-scuba-gear/",
+          "/th/faqs/faq-equipment-logistics-koh-chang/"
+        ]
+      }
+    },
+    {
+      "id": "prices",
+      "terms": [
+        "diving price",
+        "diving prices",
+        "diving cost",
+        "dive package",
+        "book diving",
+        "preise tauchen",
+        "kosten tauchkurs",
+        "tauchen buchen",
+        "tauchpaket",
+        "ราคาดำน้ำ",
+        "จองดำน้ำ",
+        "แพ็กเกจดำน้ำ"
+      ],
+      "matchTerms": {
+        "en": ["price"],
+        "de": ["preis"],
+        "th": ["ราคา"]
+      },
+      "targets": {
+        "en": ["/en/prices/", "/en/contact/"],
+        "de": ["/de/prices/", "/de/contact/"],
+        "th": ["/th/prices/", "/th/contact/"]
+      }
+    },
+    {
+      "id": "instructor",
+      "terms": [
+        "diving instructor",
+        "dive guide",
+        "dive training",
+        "certified diver",
+        "certification",
+        "tauchlehrer",
+        "tauchguide",
+        "tauchschein",
+        "tauchausbildung",
+        "zertifizierter taucher",
+        "ครูสอนดำน้ำ",
+        "ไกด์ดำน้ำ",
+        "ใบรับรองดำน้ำ",
+        "นักดำน้ำที่มีใบรับรอง"
+      ],
+      "matchTerms": {
+        "en": ["instructor"],
+        "de": ["tauchlehrer"],
+        "th": ["ครู"]
+      },
+      "targets": {
+        "en": [
+          "/en/courses/professional-courses/",
+          "/en/about/",
+          "/en/courses/divemaster/"
+        ],
+        "de": [
+          "/de/courses/professional-courses/",
+          "/de/about/",
+          "/de/courses/divemaster/"
+        ],
+        "th": [
+          "/th/courses/professional-courses/",
+          "/th/about/",
+          "/th/courses/divemaster/"
+        ]
+      }
+    }
+  ]
+}
