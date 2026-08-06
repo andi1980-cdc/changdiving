@@ -783,9 +783,14 @@
 
     <!-- Scripts -->
     <script src="/js/global.min.js?v=footer-static-2" defer></script>
-    <script src="/js/site-search.js?v=synonyms-1" defer></script>
-    <script defer>
-      initSiteSearch({
+    <script src="/js/site-search.js?v=synonyms-2" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (typeof initSiteSearch !== "function") {
+          console.error("initSiteSearch missing");
+          return;
+        }
+        initSiteSearch({
         lang: "th",
         i18n: {
           allCategory: "ทั้งหมด",
@@ -813,6 +818,7 @@
           dymPrefix: "ไม่พบผลตรงกัน — แสดงผลสำหรับ",
           dymSuffix: ":",
         },
+      });
       });
     </script>
   </body>

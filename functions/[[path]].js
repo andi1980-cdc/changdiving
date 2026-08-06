@@ -105,6 +105,7 @@ function ensureSecurityHeaders(headers) {
 const ROOT_FILES = new Set([
   "/",
   "/style.css",
+  "/style.min.css",
   "/robots.txt",
   "/sitemap.xml",
   "/site.webmanifest",
@@ -112,6 +113,8 @@ const ROOT_FILES = new Set([
   "/favicon.svg",
   "/404.html",
   "/410.html",
+  "/search-index.json",
+  "/search-synonyms.json",
 ]);
 
 function isAsset(path) {

@@ -24,19 +24,18 @@
     function norm(str) {
       if (!str) return "";
       let s = String(str).toLowerCase();
+      // ASCII escapes only — avoids encoding / unicode-regex parse issues
       s = s
-        .replace(/ä/g, "ae")
-        .replace(/ö/g, "oe")
-        .replace(/ü/g, "ue")
-        .replace(/ß/g, "ss");
-      try {
-        s = s.normalize("NFD").replace(/\p{M}/gu, "");
-      } catch (_) {
-        /* older browsers without unicode property escapes */
+        .replace(/\u00e4/g, "ae")
+        .replace(/\u00f6/g, "oe")
+        .replace(/\u00fc/g, "ue")
+        .replace(/\u00df/g, "ss");
+      if (typeof s.normalize === "function") {
         s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       }
-      s = s.replace(/['’‘`]/g, "");
-      s = s.replace(/[-_/]+/g, " ");
+      s = s.replace(/['\u2019\u2018`]/g, "");
+      // Hyphens/underscores → space; keep slashes (URLs)
+      s = s.replace(/[-_]+/g, " ");
       s = s.replace(/\bsnorkelling\b/g, "snorkeling");
       s = s.replace(/\s+/g, " ").trim();
       return s;
@@ -430,58 +429,49 @@
 
     async function load() {
       const resultsEl = document.getElementById("searchResults");
+      const inputEl = document.getElementById("searchInput");
+      const formEl = document.getElementById("searchForm");
+      if (!resultsEl || !inputEl || !formEl) {
+        console.error("Search DOM nodes missing");
+        return;
+      }
+
       resultsEl.innerHTML = `<div class="loading">${i18n.loading}</div>`;
       try {
-        const [indexRes, synRes] = await Promise.all([
-          fetch("/search-index.json"),
-          fetch("/search-synonyms.json"),
-        ]);
+        const indexRes = await fetch("/search-index.json");
         if (!indexRes.ok) throw new Error(`HTTP ${indexRes.status}`);
         const index = await indexRes.json();
         searchData = index[lang] || [];
-        if (synRes.ok) {
-          const syn = await synRes.json();
-          synonymGroups = prepareGroups(syn.groups || []);
-        }
-        console.log(
-          `Loaded ${searchData.length} pages + ${synonymGroups.length} synonym groups for ${lang}`
-        );
       } catch (error) {
-        console.error("Error loading search data:", error);
+        console.error("Error loading search index:", error);
         resultsEl.innerHTML = `<div class="search-info"><h3>${i18n.loadErrorTitle}</h3><p>${i18n.loadErrorBody}</p></div>`;
         return;
       }
 
-      const urlParams = new URLSearchParams(window.location.search);
-      const query = urlParams.get("q");
-      if (query) {
-        document.getElementById("searchInput").value = query;
-        performSearch(query);
-      } else {
-        resultsEl.innerHTML = `
-              <div class="search-info">
-                <h3>${i18n.readyTitle}</h3>
-                <p>${i18n.readyBody}</p>
-              </div>`;
+      // Synonyms are optional — never block core search if this fails
+      try {
+        const synRes = await fetch("/search-synonyms.json");
+        if (synRes.ok) {
+          const syn = await synRes.json();
+          synonymGroups = prepareGroups(syn.groups || []);
+        }
+      } catch (error) {
+        console.warn("Search synonyms skipped:", error);
+        synonymGroups = [];
       }
-    }
 
-    // Expose for inline onclick handlers
-    window.performSearch = performSearch;
-    window.filterByCategory = filterByCategory;
+      console.log(
+        `Loaded ${searchData.length} pages + ${synonymGroups.length} synonym groups for ${lang}`
+      );
 
-    document
-      .getElementById("searchInput")
-      .addEventListener("input", function () {
+      inputEl.addEventListener("input", function () {
         clearTimeout(acTimer);
         acTimer = setTimeout(acUpdate, 200);
       });
 
-    document
-      .getElementById("searchInput")
-      .addEventListener("keydown", function (e) {
+      inputEl.addEventListener("keydown", function (e) {
         const drop = document.getElementById("ac-dropdown");
-        if (drop.hidden) return;
+        if (!drop || drop.hidden) return;
         const items = drop.querySelectorAll(".ac-item");
         if (e.key === "ArrowDown") {
           e.preventDefault();
@@ -503,21 +493,36 @@
         if (acActive >= 0) items[acActive].scrollIntoView({ block: "nearest" });
       });
 
-    document.addEventListener("click", function (e) {
-      const form = document.getElementById("searchForm");
-      if (form && !form.contains(e.target)) acClose();
-    });
+      document.addEventListener("click", function (e) {
+        if (!formEl.contains(e.target)) acClose();
+      });
 
-    document
-      .getElementById("searchForm")
-      .addEventListener("submit", function (e) {
+      formEl.addEventListener("submit", function (e) {
         e.preventDefault();
-        const query = document.getElementById("searchInput").value;
+        const query = inputEl.value;
         performSearch(query);
         const url = new URL(window.location);
         url.searchParams.set("q", query);
         window.history.pushState({}, "", url);
       });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get("q");
+      if (query) {
+        inputEl.value = query;
+        performSearch(query);
+      } else {
+        resultsEl.innerHTML = `
+              <div class="search-info">
+                <h3>${i18n.readyTitle}</h3>
+                <p>${i18n.readyBody}</p>
+              </div>`;
+      }
+    }
+
+    // Expose for inline onclick handlers
+    window.performSearch = performSearch;
+    window.filterByCategory = filterByCategory;
 
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", load);
