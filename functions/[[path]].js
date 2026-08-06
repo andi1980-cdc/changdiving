@@ -1275,6 +1275,9 @@ const FORCE_GONE_EXACT = new Set(
     // Sitemaps removed / never published (permanently gone)
     "/sitemap-index.xml",
     "/sitemap-images.xml",
+    // Legacy CSS paths (replaced by /style.min.css; stop GSC 404 crawls)
+    "/css/global.css",
+    "/css/speciality.css",
     // Beispiele:
     "/what-is-nitrox//1000",
     "/de/123test/",
@@ -1758,8 +1761,9 @@ export async function onRequest(context) {
     FORCE_GONE_EXACT.has(normalizedPath) ||
     findPrefixRule(normalizedPath, FORCE_GONE_PREFIX)
   ) {
-    // Assets sollen normal weiter geprüft werden
-    if (isAsset(normalizedPath)) {
+    // Prefix-gone must not blanket-kill live /css|/js|/img assets.
+    // Exact gone entries still apply (e.g. removed legacy CSS files).
+    if (isAsset(normalizedPath) && !FORCE_GONE_EXACT.has(normalizedPath)) {
       return await context.next();
     }
     const html = await loadHtmlFromAssets("/410/index.html");
