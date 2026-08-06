@@ -359,21 +359,7 @@
         min-height: 1.35em;
       }
 
-      /* Transactional hero: in-flow from first paint (prevents main CLS) */
-      .hero--transactional {
-        height: auto !important;
-        min-height: unset !important;
-      }
-      .hero--transactional picture,
-      .hero--transactional .hero-header-img {
-        position: relative !important;
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 3 / 2 !important;
-        object-fit: contain !important;
-        display: block !important;
-      }
-
+      /* Mobile only: transactional hero in-flow (desktop keeps 75vh like courses) */
       @media (max-width: 767px) {
         .hero:not(.hero--transactional):not(.hero--fun-dives) .hero-text h1,
         .hero:not(.hero--transactional):not(.hero--fun-dives) .hero-text p {
