@@ -83,7 +83,7 @@ function ensureSecurityHeaders(headers) {
   if (!headers.has("Strict-Transport-Security")) {
     headers.set(
       "Strict-Transport-Security",
-      "max-age=31536000; includeSubDomains; preload",
+      "max-age=31536000; includeSubDomains; preload"
     );
   }
   if (!headers.has("Referrer-Policy")) {
@@ -92,7 +92,7 @@ function ensureSecurityHeaders(headers) {
   if (!headers.has("Permissions-Policy")) {
     headers.set(
       "Permissions-Policy",
-      "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()",
+      "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
     );
   }
   if (!headers.has("X-Content-Type-Options")) {
@@ -107,6 +107,7 @@ const ROOT_FILES = new Set([
   "/style.css",
   "/style.min.css",
   "/robots.txt",
+  "/llms.txt",
   "/sitemap.xml",
   "/site.webmanifest",
   "/favicon.ico",
@@ -1045,10 +1046,7 @@ const REDIRECTS_EXACT_RAW = [
   ],
 
   // DE Tipps-und-Tricks alte Slugs (GSC 404 Coverage 2026-07)
-  [
-    "/de/posts/tipps-und-tricks/",
-    "/de/posts/tips-and-tricks/",
-  ],
+  ["/de/posts/tipps-und-tricks/", "/de/posts/tips-and-tricks/"],
   [
     "/de/posts/tipps-und-tricks/tieftauchen/",
     "/de/posts/tips-and-tricks/deep-diving/",
@@ -1258,7 +1256,7 @@ const REDIRECTS_EXACT = new Map(
     ensureLeadingSlash(to),
   ])
     // Selbst-Redirects rausfiltern:
-    .filter(([from, to]) => from !== normPath(to)),
+    .filter(([from, to]) => from !== normPath(to))
 );
 
 const REDIRECTS_PREFIX = REDIRECTS_PREFIX_RAW.map(({ from, to }) => ({
@@ -1417,7 +1415,7 @@ const FORCE_GONE_EXACT = new Set(
   ].map((entry) => {
     const raw = Array.isArray(entry) ? entry[0] : entry;
     return normPath(ensureLeadingSlash(raw));
-  }),
+  })
 );
 
 // 4) PREFIX 410 — alles darunter Gone - wildcard (Strings)
@@ -1506,10 +1504,10 @@ function withDebug(res, tag) {
     // Check by content-type or file extension
     const isStaticAsset =
       contentType.match(
-        /\/(css|javascript|image|font|woff|woff2|ttf|eot|svg\+xml)/i,
+        /\/(css|javascript|image|font|woff|woff2|ttf|eot|svg\+xml)/i
       ) ||
       path.match(
-        /\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$/i,
+        /\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$/i
       );
 
     if (isStaticAsset && !h.has("Cache-Control")) {
@@ -1530,7 +1528,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: url.href,
-      }),
+      })
     );
     // Only add debug header in development/staging
     const env =
@@ -1547,7 +1545,7 @@ export async function onRequest(context) {
       if (!response.ok) {
         // Fallback to 410 page if asset not found
         const fallbackResponse = await context.env.ASSETS.fetch(
-          new URL("/410/index.html", url),
+          new URL("/410/index.html", url)
         );
         return fallbackResponse.ok
           ? await fallbackResponse.text()
@@ -1578,7 +1576,7 @@ export async function onRequest(context) {
     const userAgent = request.headers.get("User-Agent") || "";
     const isBot =
       /bot|crawler|spider|crawling|google|bing|yahoo|duckduckgo|baidu|yandex|slurp|facebookexternalhit|linkedinbot|whatsapp|telegram|slack/i.test(
-        userAgent,
+        userAgent
       );
 
     if (!isBot && !url.searchParams.has("noredirect")) {
@@ -1611,11 +1609,11 @@ export async function onRequest(context) {
       }
 
       let assetResponse = await context.env.ASSETS.fetch(
-        new URL(`/${detectedLang}/index.html`, url),
+        new URL(`/${detectedLang}/index.html`, url)
       );
       if (!assetResponse.ok) {
         assetResponse = await context.env.ASSETS.fetch(
-          new URL("/en/index.html", url),
+          new URL("/en/index.html", url)
         );
         detectedLang = "en";
       }
@@ -1624,7 +1622,7 @@ export async function onRequest(context) {
       headers.set("Content-Language", detectedLang);
       headers.set(
         "Set-Cookie",
-        `user_lang=${detectedLang}; Path=/; Max-Age=2592000; SameSite=Lax`,
+        `user_lang=${detectedLang}; Path=/; Max-Age=2592000; SameSite=Lax`
       );
       headers.set("Cache-Control", "private, max-age=0, no-cache, no-store");
 
@@ -1633,7 +1631,7 @@ export async function onRequest(context) {
         (existingVary || "")
           .split(",")
           .map((v) => v.trim())
-          .filter(Boolean),
+          .filter(Boolean)
       );
       varyValues.add("Accept-Language");
       varyValues.add("Cookie");
@@ -1688,7 +1686,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: `${url.origin}${normalizedPath}/`,
-      }),
+      })
     );
     const env =
       typeof process !== "undefined" ? process.env?.NODE_ENV : "production";
@@ -1712,7 +1710,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: `${url.origin}${path}/`,
-      }),
+      })
     );
     const env =
       typeof process !== "undefined" ? process.env?.NODE_ENV : "production";
@@ -1728,7 +1726,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: exactRedirect,
-      }),
+      })
     );
     // Only add debug header in development/staging
     const env =
@@ -1745,7 +1743,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: loc,
-      }),
+      })
     );
     // Only add debug header in development/staging
     const env =
@@ -1781,7 +1779,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: `${url.origin}/en/videos/`,
-      }),
+      })
     );
     const env =
       typeof process !== "undefined" ? process.env?.NODE_ENV : "production";
@@ -1797,7 +1795,7 @@ export async function onRequest(context) {
     const headers = ensureSecurityHeaders(
       new Headers({
         Location: `${url.origin}/de/videos/`,
-      }),
+      })
     );
     const env =
       typeof process !== "undefined" ? process.env?.NODE_ENV : "production";

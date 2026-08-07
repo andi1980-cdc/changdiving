@@ -1,0 +1,39 @@
+# Chang Diving Center
+> Dive school and scuba shop on Koh Chang, Thailand (Klong Prao Beach). SDI/TDI/PADI courses, day trips, wreck diving, snorkeling, and gear — since 2005. Languages: English (`/en/`), German (`/de/`), Thai (`/th/`).
+
+Prefer language-prefixed URLs. Default / English canonical hub: `/en/`. Contact: +66 894-013-927. Site search (noindex utility): `/en/search/`, `/de/search/`, `/th/search/`. Sitemap: https://changdiving.com/sitemap.xml
+
+## Primary
+- [English home](https://changdiving.com/en/): Main English landing page
+- [German home](https://changdiving.com/de/): German landing page
+- [Thai home](https://changdiving.com/th/): Thai landing page
+- [Courses (EN)](https://changdiving.com/en/courses/): Dive course catalog
+- [Prices (EN)](https://changdiving.com/en/prices/): Course and trip prices
+- [Day trips (EN)](https://changdiving.com/en/day-trips/): Fun dives, try dive, snorkeling
+- [Dive sites (EN)](https://changdiving.com/en/dive-sites/): Koh Chang dive sites including HTMS Chang wreck
+- [Contact (EN)](https://changdiving.com/en/contact/): Booking and location
+- [About (EN)](https://changdiving.com/en/about/): Center background and credentials
+
+## Popular courses
+- [Open Water Diver](https://changdiving.com/en/courses/open-water-diver/): Beginner certification (≈3 days)
+- [OWD + Advanced package](https://changdiving.com/en/courses/open-advanced-package/): Open Water + Advanced combo
+- [Advanced Diver](https://changdiving.com/en/courses/advanced/): Next step after Open Water
+- [Deep, Wreck & Nitrox](https://changdiving.com/en/courses/deep-wreck-nitrox/): Specialty package on HTMS Chang
+- [Rescue Diver](https://changdiving.com/en/courses/rescue-diver/): Rescue training
+- [Divemaster](https://changdiving.com/en/courses/divemaster/): Professional pathway
+
+## Guides & FAQs
+- [Posts / guides (EN)](https://changdiving.com/en/posts/): How-to, scuba knowledge, marine life, tips
+- [FAQs (EN)](https://changdiving.com/en/faqs/): Booking, courses, health & safety
+- [How Open Water works](https://changdiving.com/en/posts/diving-how-to-guides-koh-chang/how-to-open-water-course/): Step-by-step beginner course guide
+- [Gas consumption calculator](https://changdiving.com/en/posts/scuba-knowledge/gas-consumption/): SAC / RMV dive calculator
+- [Nitrox info & calculators](https://changdiving.com/en/posts/scuba-knowledge/nitrox-info/): MOD, best mix, PO₂ tools
+
+## Optional
+- [Equipment (EN)](https://changdiving.com/en/equipment/): Dive gear overview
+- [Weather (EN)](https://changdiving.com/en/weather/): Local diving conditions
+- [German courses](https://changdiving.com/de/courses/): Kurskatalog auf Deutsch
+- [Thai courses](https://changdiving.com/th/courses/): คอร์สดำน้ำภาษาไทย
+- [Privacy policy](https://changdiving.com/en/privacy-policy/): Privacy terms
+- [Terms](https://changdiving.com/en/terms-and-conditions/): Terms and conditions
+- [Refund policy](https://changdiving.com/en/refund-policy/): Refunds
