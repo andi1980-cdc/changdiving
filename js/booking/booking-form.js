@@ -1566,9 +1566,6 @@
     if (mailLink) mailLink.addEventListener("click", onMailtoClick);
     if (waLink) waLink.addEventListener("click", onWhatsAppClick);
 
-    var draftBanner = $("book-draft-banner");
-    if (draftBanner) draftBanner.hidden = !DRAFT_MODE;
-
     renderPeople();
     updateHeadingAndSummary();
   }
