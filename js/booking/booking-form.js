@@ -37,6 +37,8 @@
         "For snorkeling we only need a few details per guest: name, date of birth, email, vegetarian preference, plus wetsuit/T-shirt size and fin/shoe size.",
       sizeWetsuitShirt: "Wetsuit / T-shirt size (EU)",
       sizeFinShoe: "Fin / shoe size (EU)",
+      medicalNote:
+        'Do I need a medical checkup? <a href="/en/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Check the self-test</a>',
       diver: "Diver",
       guest: "Guest",
       name: "Full name (in English)",
@@ -168,6 +170,8 @@
         "Fürs Schnorcheln brauchen wir pro Gast nur: Name, Geburtsdatum, E-Mail, vegetarisch sowie Neopren/T-Shirt-Größe und Flossen-/Schuhgröße.",
       sizeWetsuitShirt: "Neoprenanzug / T-Shirt-Größe (EU)",
       sizeFinShoe: "Flossen- / Schuhgröße (EU)",
+      medicalNote:
+        'Brauche ich eine ärztliche Untersuchung? <a href="/de/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Selbsttest machen</a>',
       diver: "Taucher",
       guest: "Gast",
       name: "Vollständiger Name (auf Englisch)",
@@ -301,6 +305,8 @@
         "สำหรับดำน้ำตื้น ต้องการเพียง: ชื่อ วันเกิด อีเมล กินเจ ไซส์เวทสูท/เสื้อยืด และไซส์ตีนกบ/รองเท้า",
       sizeWetsuitShirt: "ไซส์เวทสูท / เสื้อยืด (EU)",
       sizeFinShoe: "ไซส์ตีนกบ / รองเท้า (EU)",
+      medicalNote:
+        'ต้องตรวจสุขภาพก่อนดำน้ำไหม? <a href="/th/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">ทำแบบทดสอบด้วยตนเอง</a>',
       diver: "นักดำน้ำ",
       guest: "ผู้ร่วมทริป",
       name: "ชื่อ-นามสกุล (ภาษาอังกฤษ)",
@@ -872,6 +878,11 @@
     if (section) section.textContent = t.diversSection;
     var intro = $("book-people-intro");
     if (intro) intro.innerHTML = snorkel ? t.snorkelIntro : t.diversIntro;
+    var medical = $("book-medical-note");
+    if (medical) {
+      medical.hidden = snorkel;
+      medical.innerHTML = t.medicalNote;
+    }
     var countLabel = document.querySelector('label[for="book-people-count"]');
     if (countLabel) {
       countLabel.textContent = snorkel ? t.numGuests : t.numDivers;
