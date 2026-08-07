@@ -89,8 +89,6 @@
       price: "Price",
       startDate: "Preferred start / trip date",
       numDivers: "Number of divers",
-      groupOffer:
-        "Group offer: yes (2+ people, same course – 5% when applicable)",
       equipment: "Equipment",
       bcdSize: "BCD size",
       wetsuitSize: "Wetsuit size",
@@ -209,8 +207,6 @@
       price: "Preis",
       startDate: "Gewünschtes Start- / Tourdatum",
       numDivers: "Anzahl Taucher",
-      groupOffer:
-        "Gruppenangebot: ja (2+ Personen, gleicher Kurs – 5 % wo zutreffend)",
       equipment: "Ausrüstung",
       bcdSize: "BCD-Größe",
       wetsuitSize: "Neoprenanzug-Größe",
@@ -329,8 +325,6 @@
       price: "ราคา",
       startDate: "วันที่เริ่ม / ทริปที่ต้องการ",
       numDivers: "จำนวนนักดำน้ำ",
-      groupOffer:
-        "ข้อเสนอกลุ่ม: ใช่ (2+ คน คอร์สเดียวกัน – ส่วนลด 5% ตามที่เสนอ)",
       equipment: "อุปกรณ์",
       bcdSize: "ไซส์ BCD",
       wetsuitSize: "ไซส์เวทสูท",
@@ -1300,7 +1294,6 @@
       optionPrice: opt.price || "",
       startDate: ($("book-date") && $("book-date").value) || "",
       peopleCount: people.length,
-      groupOffer: people.length >= 2,
       people: people,
       funAddons: addons,
       phone: ($("book-phone") && $("book-phone").value.trim()) || "",
@@ -1326,7 +1319,6 @@
       payload.optionPrice ? "• " + t.price + ": " + payload.optionPrice : "",
       payload.startDate ? "• " + t.startDate + ": " + payload.startDate : "",
       "• " + t.numDivers + ": " + payload.peopleCount,
-      payload.groupOffer ? "• " + t.groupOffer : "",
       "",
     ];
 
