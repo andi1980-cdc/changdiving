@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buche dein Tauchabenteuer – Chang Diving (ENTWURF)</title>
+    <meta
+      name="description"
+      content="Entwurf Buchungsformular Chang Diving Center. Lokale Arbeitsversion – nicht für Produktion."
+    />
+    <link rel="canonical" href="https://changdiving.com/de/book/" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="author" content="Chang Diving Center" />
+    <meta name="language" content="de" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preload" href="/fonts/fonts.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="/fonts/fonts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
+
+    <style id="critical-css">
+      :root {
+        --font-sans:
+          system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        --sea: #005a8c;
+        --sea-deep: #023e5c;
+        --ink: #212121;
+        --muted: #555;
+        --line: #d5e4ee;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+        font-family: var(--font-sans);
+        color: var(--ink);
+        background: #fff;
+      }
+      .changdiving-box {
+        max-width: 680px;
+        margin: 24px auto 40px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 22px;
+        position: relative;
+        box-sizing: border-box;
+        line-height: 1.45;
+        font-size: 0.95rem;
+        box-shadow:
+          0 3px 14px rgba(33, 150, 243, 0.12),
+          0 12px 32px rgba(2, 62, 92, 0.06);
+        overflow: hidden;
+      }
+      @media (max-width: 700px) {
+        .changdiving-box {
+          padding: 4vw 3.5vw;
+          margin: 12px 8px 28px;
+          max-width: none;
+          border-radius: 10px;
+        }
+      }
+
+      .hero {
+        position: relative;
+        width: 100vw;
+        height: 75vh;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      /* Book page: shorter hero (wins over style.min.css) */
+      .hero.hero--book {
+        height: auto !important;
+        max-height: none;
+        aspect-ratio: 1600 / 720;
+      }
+      .hero picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 1;
+      }
+      .hero-header-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .hero-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 9999;
+        max-width: 350px;
+      }
+      .hero-logo img {
+        display: block;
+        max-width: 100%;
+        max-height: 100px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+      .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        width: 100%;
+        padding: 0 20px;
+        pointer-events: none;
+      }
+      .hero-text h1 {
+        font-size: clamp(1.5rem, 4vw, 2.6rem);
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+      }
+      .lang-switch {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 4;
+        font-size: 22px;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 5px 12px;
+        border-radius: 2px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .lang-switch a {
+        margin-left: 10px;
+        font-size: 1.5rem;
+        text-decoration: none;
+      }
+      .menu-toggle {
+        background: none;
+        border: 0;
+        color: #000;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-right: 10px;
+        font-family: var(--font-sans);
+        cursor: pointer;
+      }
+      .dropdown-menu {
+        display: none;
+      }
+      @media (max-width: 767px) {
+        .hero {
+          height: auto;
+          min-height: unset;
+        }
+        .hero picture,
+        .hero-header-img {
+          position: relative;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 3 / 2;
+          object-fit: cover;
+        }
+        .hero.hero--book {
+          aspect-ratio: 300 / 200;
+          max-height: 220px;
+        }
+        .hero.hero--book picture,
+        .hero.hero--book .hero-header-img {
+          aspect-ratio: 300 / 200;
+          max-height: 220px;
+        }
+      }
+      .posts-submenu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        background: #f4f7fa;
+        border-bottom: 1px solid #d5e4ee;
+        font-size: 0.88rem;
+      }
+      .posts-submenu a {
+        color: #005a8c;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .breadcrumb {
+        font-size: 0.82em;
+        margin: 0 0 0.55rem;
+        color: var(--muted);
+      }
+      .breadcrumb a {
+        color: var(--sea);
+        text-decoration: underline;
+      }
+      #book-product-title {
+        margin: 0 0 0.3rem;
+        font-size: clamp(1.15rem, 3.2vw, 1.45rem);
+        line-height: 1.2;
+        color: var(--sea);
+        font-weight: 700;
+      }
+      .cdc-book__lead {
+        margin: 0 0 0.65rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .cdc-book__draft {
+        margin: 0 0 0.75rem;
+        padding: 0.5rem 0.7rem;
+        border: 1px solid #e0c36a;
+        border-radius: 6px;
+        background: #fff8e1;
+        color: #5c4a00;
+        font-size: 0.82rem;
+      }
+      .cdc-book__summary {
+        margin: 0 0 0.2rem;
+        padding: 0.55rem 0.75rem;
+        border-left: 3px solid var(--sea);
+        border-radius: 0 6px 6px 0;
+        background: linear-gradient(
+          90deg,
+          rgba(0, 90, 140, 0.1),
+          rgba(0, 90, 140, 0.03)
+        );
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .cdc-book__section {
+        margin: 0 0 1.1rem;
+        padding-top: 0.15rem;
+      }
+      .cdc-book__section > h2 {
+        margin: 0 0 0.4rem;
+        padding-bottom: 0.3rem;
+        font-size: 1rem;
+        color: var(--sea-deep);
+        border-bottom: 1px solid var(--line);
+      }
+      .cdc-book__intro {
+        margin: 0 0 0.55rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .cdc-book__subhead {
+        margin: 0.65rem 0 0.25rem;
+        font-size: 0.92rem;
+        color: var(--sea);
+      }
+      .cdc-book__hint {
+        margin: 0.15rem 0 0.4rem;
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.35;
+      }
+      .cdc-book__check {
+        display: flex;
+        gap: 0.45rem;
+        align-items: flex-start;
+        font-size: 0.88rem;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .cdc-book__check input {
+        margin-top: 0.15rem;
+        width: auto;
+        flex-shrink: 0;
+      }
+      .cdc-book__checkfield {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-height: 0;
+      }
+      .cdc-book__grid {
+        display: grid;
+        gap: 0.55rem;
+      }
+      @media (min-width: 640px) {
+        .cdc-book__grid--2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .cdc-book__field label {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .cdc-book__field input,
+      .cdc-book__field select,
+      .cdc-book__field textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.45rem 0.55rem;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        font: inherit;
+        font-size: 0.9rem;
+        background: #fff;
+      }
+      .cdc-book__field textarea {
+        min-height: 3.5rem;
+        resize: vertical;
+      }
+      .cdc-book__field input:focus,
+      .cdc-book__field select:focus,
+      .cdc-book__field textarea:focus {
+        outline: 2px solid var(--sea);
+        outline-offset: 1px;
+      }
+      .cdc-book__person {
+        margin: 0 0 0.75rem;
+        padding: 0.65rem 0.7rem 0.75rem;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: linear-gradient(180deg, #f7fbfd 0%, #fafcfd 100%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+      .cdc-book__person legend {
+        padding: 0.1rem 0.45rem;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(90deg, #005a8c, #023e5c);
+        border-radius: 999px;
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+      }
+      .cdc-book__footer-note {
+        margin-top: 1.1rem;
+        padding-top: 0.65rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      .cdc-book__footer-note a {
+        color: var(--sea);
+      }
+      .cdc-book__group-note {
+        margin: 0.4rem 0 0;
+        padding: 0.45rem 0.6rem;
+        border-radius: 6px;
+        background: #fff8e1;
+        border: 1px solid #e0c36a;
+        color: #5c4a00;
+        font-size: 0.8rem;
+      }
+      .cdc-book__hp {
+        position: absolute;
+        left: -9999px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .cdc-book__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: center;
+        margin-top: 0.35rem;
+      }
+      .btn-cta,
+      button.btn-cta {
+        display: inline-block;
+        box-sizing: border-box;
+        background: linear-gradient(to right, #005a8c, #023e5c);
+        color: #fff !important;
+        text-decoration: none !important;
+        font-weight: 700;
+        font-size: 0.92em;
+        line-height: 1.25;
+        padding: 0.55rem 0.95rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: inherit;
+        box-shadow: 0 4px 12px rgba(2, 62, 92, 0.18);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+      }
+      .btn-cta:hover,
+      button.btn-cta:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 14px rgba(2, 62, 92, 0.24);
+      }
+      .btn-cta--ghost {
+        background: transparent;
+        color: var(--sea) !important;
+        border: 1px solid var(--sea);
+        box-shadow: none;
+      }
+      .btn-cta--ghost:hover {
+        background: rgba(0, 90, 140, 0.06);
+        box-shadow: none;
+      }
+      .cdc-book__status {
+        margin: 1rem 0;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+      }
+      .cdc-book__status--ok {
+        background: #e8f5e9;
+        border: 1px solid #a5d6a7;
+        color: #1b5e20;
+      }
+      .cdc-book__status--error {
+        background: #ffebee;
+        border: 1px solid #ef9a9a;
+        color: #b71c1c;
+      }
+      .cdc-book__preview {
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px dashed var(--line);
+        border-radius: 8px;
+        background: #fafbfc;
+        white-space: pre-wrap;
+        font-size: 0.85rem;
+        line-height: 1.45;
+        max-height: 24rem;
+        overflow: auto;
+      }
+      .skip-link {
+        position: absolute;
+        left: -999px;
+      }
+      .skip-link:focus {
+        left: 0.5rem;
+        top: 0.5rem;
+        z-index: 10;
+        background: #000;
+        color: #fff;
+        padding: 0.5rem 0.75rem;
+      }
+    </style>
+
+    <link rel="preload" href="/style.min.css?v=jump-cls-2" as="style" />
+    <link
+      rel="stylesheet"
+      href="/style.min.css?v=jump-cls-2"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="/style.min.css?v=jump-cls-2" />
+    </noscript>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header>
+      <div class="hero hero--transactional hero--book">
+        <div class="hero-logo">
+          <a href="/de/">
+            <img
+              src="/img/logos/logo_cdc_white.webp"
+              alt="Chang Diving Logo"
+              width="200"
+              height="65"
+            />
+          </a>
+        </div>
+
+        <div class="lang-switch">
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Navigationsmenü umschalten"
+          >
+            ☰ Menü
+          </button>
+
+          <div class="search-wrapper">
+            <form action="/de/search/" method="get" class="search-form-elegant">
+              <input
+                type="text"
+                name="q"
+                placeholder="Suchen..."
+                aria-label="Suchen"
+                class="search-input-elegant"
+              />
+              <button
+                type="submit"
+                class="search-btn-elegant"
+                aria-label="Suchen"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <a href="/en/book/" aria-label="Switch to English">🇬🇧</a>
+          <a href="/de/book/" aria-label="Switch to German">🇩🇪</a>
+          <a href="/th/book/" aria-label="Switch to Thai">🇹🇭</a>
+
+          <div id="main-menu" class="dropdown-menu">
+            <a href="/de/courses/">Kurse</a>
+            <a href="/de/day-trips/">Tagestouren</a>
+            <a href="/de/prices/">Preise</a>
+            <a href="/de/about/">Über uns</a>
+            <a href="/de/equipment/">Ausrüstung</a>
+            <a href="/de/weather/">Wetter</a>
+            <a href="/de/dive-sites/">Tauchplätze</a>
+            <a href="/de/posts/">Beiträge</a>
+            <a href="/de/faqs/">Faq's</a>
+            <a href="/de/contact/">Kontakt</a>
+          </div>
+        </div>
+
+        <div class="hero-text">
+          <h1>Buche dein Tauchabenteuer</h1>
+        </div>
+
+        <picture style="aspect-ratio: 1600 / 720">
+          <source
+            srcset="/img/booking/booking_big.webp"
+            media="(min-width: 768px)"
+            width="1600"
+            height="720"
+            type="image/webp"
+          />
+          <img
+            class="hero-header-img"
+            src="/img/booking/booking_small.webp"
+            alt="Tauchen buchen bei Chang Diving Center Koh Chang"
+            width="300"
+            height="200"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </picture>
+      </div>
+    </header>
+    <main id="main-content">
+      <nav class="posts-submenu" aria-label="Secondary">
+        <a href="/de/day-trips/">Tagestouren</a>
+        <a href="/de/courses/">Kurse</a>
+        <a href="/de/prices/">Preise</a>
+        <a href="/de/equipment/">Ausrüstung</a>
+        <a href="/de/contact/">Kontakt</a>
+        <a href="/de/faqs/">FAQ's</a>
+      </nav>
+
+      <div class="changdiving-box">
+        <nav id="breadcrumb" class="breadcrumb" aria-label="Brotkrumen">
+          <a href="/de/">🏠 Start</a> › <a href="/de/book/">Buchen</a>
+        </nav>
+        <div id="book-draft-banner" class="cdc-book__draft">
+          <strong>Lokaler Entwurf</strong> — kein Server-Versand,
+          <code>noindex</code>. CTA-Seiten verlinken später mit
+          <code>?product=open-water-diver&amp;option=…</code>.
+        </div>
+
+        <h2 id="book-product-title">Kurs oder Tour buchen</h2>
+        <p class="cdc-book__lead">
+          Für ein reibungsloses und persönliches Taucherlebnis bitte die
+          folgenden Angaben machen.
+        </p>
+
+        <div id="book-summary" class="cdc-book__summary" aria-live="polite">
+          —
+        </div>
+        <p style="margin: 0 0 0.85rem; font-size: 0.85rem">
+          <a id="book-product-link" href="/de/courses/">Zur Produktseite</a>
+        </p>
+
+        <form id="cdc-book-form" action="#" method="post" novalidate>
+          <div class="cdc-book__hp" aria-hidden="true">
+            <label for="book-website">Website</label>
+            <input
+              type="text"
+              id="book-website"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <section class="cdc-book__section">
+            <h2>1. Paket &amp; Datum</h2>
+            <div class="cdc-book__grid cdc-book__grid--2">
+              <div class="cdc-book__field">
+                <label for="book-product"
+                  >Produkt (von der Angebotsseite)</label
+                >
+                <select id="book-product" name="product" required></select>
+              </div>
+              <div class="cdc-book__field">
+                <label for="book-option">Paket / Option auf der Seite</label>
+                <select id="book-option" name="option" required></select>
+              </div>
+              <div class="cdc-book__field">
+                <label for="book-date">Gewünschtes Start- / Tourdatum</label>
+                <input id="book-date" name="date" type="date" required />
+              </div>
+              <div class="cdc-book__field">
+                <label for="book-people-count">Anzahl Taucher</label>
+                <select id="book-people-count" name="peopleCount">
+                  <option value="1">1 Person</option>
+                  <option value="2">2 Personen</option>
+                  <option value="3">3 Personen</option>
+                  <option value="4">4 Personen</option>
+                </select>
+              </div>
+            </div>
+            <p id="book-group-note" class="cdc-book__group-note" hidden>
+              <strong>Gruppe (2–4):</strong> gleiches Paket &amp; Datum für
+              alle. Zusätzlich <strong>5&nbsp;% Rabatt</strong>, wenn 2+
+              denselben Kurs gemeinsam buchen (wo angeboten). Jeder Taucher
+              füllt den eigenen Block unten aus — ein gemeinsames Telefon für
+              die Buchung.
+            </p>
+          </section>
+
+          <section id="book-fun-addons" class="cdc-book__section" hidden>
+            <h2>1b. Fun-Dive-Extras (optional)</h2>
+            <p class="cdc-book__intro">
+              Dieselben Extras wie auf der Fun-Dives-Seite. Zuerst Paket oben
+              wählen; diese Upgrades sind optional.
+            </p>
+            <div class="cdc-book__grid cdc-book__grid--2">
+              <div class="cdc-book__field">
+                <label for="book-extra-dive"
+                  >+ Extra-Tauchgang (+800 THB / Tauchgang)</label
+                >
+                <select id="book-extra-dive" name="extraDive">
+                  <option value="No">Nein</option>
+                  <option value="Yes">
+                    Ja – abhängig von Bootsplan / Tauchplatz
+                  </option>
+                </select>
+                <p class="cdc-book__hint">
+                  Dritter Tauchgang am Tag. Nicht an jedem Platz möglich.
+                </p>
+              </div>
+              <div class="cdc-book__field">
+                <label for="book-nitrox"
+                  >+ Nitrox-Upgrade (+100 THB / Flasche)</label
+                >
+                <select id="book-nitrox" name="nitrox">
+                  <option value="No">Nein</option>
+                  <option value="Yes">
+                    Ja – für zertifizierte Nitrox-Taucher
+                  </option>
+                </select>
+              </div>
+              <div class="cdc-book__field" style="grid-column: 1 / -1">
+                <label for="book-sidemount"
+                  >Sidemount – Extra-Flaschen über 1 pro Tauchgang</label
+                >
+                <select id="book-sidemount" name="sidemount">
+                  <option value="No">
+                    Nein (1 Flasche pro Tauchgang inklusive)
+                  </option>
+                  <option value="Air">
+                    Ja – Extra-Flaschen Luft (+250 THB je)
+                  </option>
+                  <option value="EAN">
+                    Ja – Extra-Flaschen EAN / Nitrox (+300 THB je)
+                  </option>
+                </select>
+                <p class="cdc-book__hint">
+                  1 Flasche pro Tauchgang ist im Paket. Nur wählen, wenn mehr
+                  Flaschen als Tauchgänge nötig sind.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="cdc-book__section">
+            <h2>2. Taucher</h2>
+            <p class="cdc-book__intro">
+              Jeder Taucher braucht
+              <strong>eigenen Namen, Geburtsdatum und E-Mail</strong>
+              (für Kurse und Tauchunfallversicherung). Zertifikatsfoto optional
+              — in diesem Entwurf Dateien in der E-Mail-App anhängen.
+            </p>
+            <div id="book-people"></div>
+          </section>
+
+          <section class="cdc-book__section">
+            <h2>3. Gemeinsamer Buchungskontakt</h2>
+            <p class="cdc-book__intro">
+              Telefon und Hotel für die Gruppe. E-Mails stehen bei jedem Taucher
+              oben.
+            </p>
+            <div class="cdc-book__grid cdc-book__grid--2">
+              <div class="cdc-book__field">
+                <label for="book-phone">Telefonnummer</label>
+                <input
+                  id="book-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+              <div class="cdc-book__field">
+                <label for="book-hotel">Hotelname</label>
+                <input id="book-hotel" name="hotel" type="text" />
+              </div>
+              <div class="cdc-book__field" style="grid-column: 1 / -1">
+                <label for="book-message">Noch etwas?</label>
+                <textarea id="book-message" name="message"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <div id="book-status" class="cdc-book__status" hidden></div>
+
+          <div class="cdc-book__actions">
+            <button type="submit" class="btn-cta">
+              Buchungs-E-Mail prüfen
+            </button>
+            <a
+              id="book-mailto"
+              class="btn-cta btn-cta--ghost"
+              href="mailto:info@changdiving.com"
+              >E-Mail-App öffnen</a
+            >
+            <a
+              id="book-whatsapp"
+              class="btn-cta btn-cta--ghost"
+              href="https://wa.me/66894013927"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >
+          </div>
+          <p class="cdc-book__hint" style="margin-top: 0.65rem">
+            Bitte gib uns bis zu 24 Stunden für eine Antwort (Zeitverschiebung).
+            Falls du nichts von uns hörst, prüfe bitte auch deinen Spam-Ordner.
+          </p>
+
+          <pre
+            id="book-preview"
+            class="cdc-book__preview"
+            hidden
+            aria-label="E-Mail-Vorschau"
+          ></pre>
+        </form>
+
+        <p class="cdc-book__footer-note">
+          Prefill-Beispiele:
+          <a href="/de/book/?product=open-water-diver&amp;option=sdi-elearning"
+            >OWD · SDI eLearning</a
+          >
+          ·
+          <a
+            href="/de/book/?product=open-water-diver&amp;option=owd-nitrox-sdi&amp;people=2"
+            >OWD + Nitrox · 2 Personen</a
+          >
+          ·
+          <a href="/de/book/?product=advanced-nitrox&amp;option=single"
+            >Advanced Nitrox</a
+          >
+        </p>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <nav class="footer-navigation">
+        <div class="container">
+          <div class="row">
+            <div class="three columns">
+              <a href="/de/about/">Über uns</a>
+              <a href="/de/posts/diving-how-to-guides-koh-chang/"
+                >How-to-Guides</a
+              >
+              <a href="/de/faqs/faq-getting-here-accommodation/"
+                >Anreise Koh Chang</a
+              >
+              <a href="/de/dive-sites/">Tauchplätze</a>
+              <a href="/de/faqs/">FAQs</a>
+              <a href="/de/videos/">Videos</a>
+              <a href="/de/contact/">Kontakt</a>
+            </div>
+            <div class="three columns">
+              <a href="/de/courses/">Kurse</a>
+              <a href="/de/courses/open-water-diver/">Open Water Diver</a>
+              <a href="/de/courses/advanced/">Advanced Diver</a>
+              <a href="/de/courses/rescue-diver/">Rescue Diver</a>
+              <a href="/de/courses/divemaster/">Divemaster</a>
+              <a href="/de/courses/sdi-idc/">IDC</a>
+            </div>
+            <div class="three columns">
+              <a href="/de/day-trips/">Tagestouren</a>
+              <a href="/de/day-trips/fun-dives/">Fun Dives</a>
+              <a href="/de/day-trips/try-dive/">Try Diving</a>
+              <a href="/de/day-trips/scuba-review/">Scuba Review</a>
+              <a href="/de/day-trips/snorkeling/">Schnorcheln</a>
+            </div>
+            <div class="three columns">
+              <a href="/de/courses/open-advanced-package/">OW &amp; Advanced</a>
+              <a href="/de/courses/deep-wreck-nitrox/">Deep, Wreck, Nitrox</a>
+              <a href="/de/courses/open-to-divemaster/">Open to Divemaster</a>
+              <a href="/de/courses/tech-package/">Technical Diving</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="footer-meta">
+        <div class="container">
+          <p>
+            <strong>Phone, WhatsApp &amp; Line:</strong>
+            <a href="tel:+66894013927">+66 (0) 894-013-927</a>
+          </p>
+          <p>
+            Chang Diving Center Co.,Ltd<br />
+            21/52 Moo 4, Klong Prao Beach<br />
+            Koh Chang, Trat, Thailand 23170
+          </p>
+          <p>
+            <a href="/de/terms-and-conditions/">AGB</a> |
+            <a href="/de/privacy-policy/">Datenschutz</a> |
+            <a href="/de/refund-policy/">Rückerstattung</a>
+          </p>
+          <p>
+            <strong>DBD:</strong> 0237354800207 &nbsp;
+            <strong>TAT:</strong> 13/02754 &nbsp;
+            <strong>Tax ID:</strong> 0-2355-48000-20-7
+          </p>
+          <p>
+            <strong>2025 © Chang Diving Center CO.,LTD</strong>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/global.min.js?v=a11y-menu-2" defer></script>
+    <script src="/js/booking/booking-form.js?v=draft-18" defer></script>
+  </body>
+</html>
