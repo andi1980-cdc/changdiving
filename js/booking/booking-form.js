@@ -1964,22 +1964,56 @@
       if (peopleQ >= 1 && peopleQ <= MAX_PEOPLE) {
         $("book-people-count").value = String(peopleQ);
       }
-      $("book-people-count").addEventListener("change", renderPeople);
+      if (!$("book-people-count")._cdcBoundCount) {
+        $("book-people-count")._cdcBoundCount = true;
+        $("book-people-count").addEventListener("change", renderPeople);
+      }
     }
 
-    form.addEventListener("submit", onSubmit);
+    if (!form._cdcBoundSubmit) {
+      form._cdcBoundSubmit = true;
+      form.addEventListener("submit", onSubmit);
+    }
 
     var mailLink = $("book-mailto");
     var waLink = $("book-whatsapp");
-    if (mailLink) mailLink.addEventListener("click", onMailtoClick);
-    if (waLink) waLink.addEventListener("click", onWhatsAppClick);
+    if (mailLink && !mailLink._cdcBoundClick) {
+      mailLink._cdcBoundClick = true;
+      mailLink.addEventListener("click", onMailtoClick);
+    }
+    if (waLink && !waLink._cdcBoundClick) {
+      waLink._cdcBoundClick = true;
+      waLink.addEventListener("click", onWhatsAppClick);
+    }
 
     renderPeople();
   }
 
+  function boot() {
+    try {
+      init();
+    } catch (err) {
+      if (typeof console !== "undefined" && console.error) {
+        console.error("booking-form init failed", err);
+      }
+    }
+  }
+
+  function bootIfEmpty() {
+    var host = $("book-people");
+    if (!host) return;
+    if (!host.querySelector(".cdc-book__person")) boot();
+  }
+
+  // Deferred scripts often run at readyState "interactive" (not "loading").
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
+    document.addEventListener("DOMContentLoaded", boot);
   } else {
-    init();
+    boot();
+  }
+  // Fallback if the first pass ran too early or threw.
+  document.addEventListener("DOMContentLoaded", bootIfEmpty);
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", bootIfEmpty);
   }
 })();
