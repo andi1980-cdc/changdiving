@@ -540,6 +540,29 @@
           },
         ],
       },
+      "scuba-diver": {
+        h1:
+          LANG === "de"
+            ? "Scuba Diver Koh Chang – Zertifizierung bis 12m - ab 10.490 THB"
+            : LANG === "th"
+              ? "Scuba Diver Koh Chang – ใบรับรองถึง 12ม. - เริ่ม 10,490 บาท"
+              : "Scuba Diver Koh Chang – Certified to 12m - from 10,490 THB",
+        shortLabel: "Scuba Diver",
+        type: "course-beginner",
+        url: "/" + LANG + "/courses/scuba-diver/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Scuba Diver",
+            price: price("10,490 THB", "10.490 THB", "10,490 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Scuba Diver",
+            price: price("10,490 THB", "10.490 THB", "10,490 บาท"),
+          },
+        ],
+      },
       "open-advanced-package": {
         h1:
           LANG === "de"
