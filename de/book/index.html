@@ -321,6 +321,10 @@
           grid-template-columns: 1fr 1fr;
         }
       }
+      .cdc-book__equip-list {
+        grid-template-columns: 1fr;
+        max-width: 28rem;
+      }
       .cdc-book__field label {
         display: block;
         margin-bottom: 0.2rem;
@@ -622,21 +626,11 @@
             <h2>1. Paket &amp; Datum</h2>
             <div class="cdc-book__grid cdc-book__grid--2">
               <div class="cdc-book__field">
-                <label for="book-product"
-                  >Produkt (von der Angebotsseite)</label
-                >
-                <select id="book-product" name="product" required></select>
-              </div>
-              <div class="cdc-book__field">
-                <label for="book-option">Paket / Option auf der Seite</label>
-                <select id="book-option" name="option" required></select>
-              </div>
-              <div class="cdc-book__field">
                 <label for="book-date">Gewünschtes Start- / Tourdatum</label>
                 <input id="book-date" name="date" type="date" required />
               </div>
               <div class="cdc-book__field">
-                <label for="book-people-count">Anzahl Taucher</label>
+                <label for="book-people-count">Anzahl Personen</label>
                 <select id="book-people-count" name="peopleCount">
                   <option value="1">1 Person</option>
                   <option value="2">2 Personen</option>
@@ -646,74 +640,17 @@
               </div>
             </div>
             <p id="book-group-note" class="cdc-book__group-note" hidden>
-              <strong>Gruppe (2–4):</strong> gleiches Paket &amp; Datum für alle.
-              Jeder Taucher füllt den eigenen Block unten aus — ein gemeinsames
-              Telefon für die Buchung.
+              <strong>Gruppe (2–4):</strong> gleiches Datum für alle. Jede
+              Person kann unten ein eigenes Produkt/Paket wählen — ein
+              gemeinsames Telefon für die Buchung.
             </p>
-          </section>
-
-          <section id="book-fun-addons" class="cdc-book__section" hidden>
-            <h2>1b. Fun-Dive-Extras (optional)</h2>
-            <p class="cdc-book__intro">
-              Dieselben Extras wie auf der Fun-Dives-Seite. Zuerst Paket oben
-              wählen; diese Upgrades sind optional.
-            </p>
-            <div class="cdc-book__grid cdc-book__grid--2">
-              <div class="cdc-book__field">
-                <label for="book-extra-dive"
-                  >+ Extra-Tauchgang (+800 THB / Tauchgang)</label
-                >
-                <select id="book-extra-dive" name="extraDive">
-                  <option value="No">Nein</option>
-                  <option value="Yes">
-                    Ja – abhängig von Bootsplan / Tauchplatz
-                  </option>
-                </select>
-                <p class="cdc-book__hint">
-                  Dritter Tauchgang am Tag. Nicht an jedem Platz möglich.
-                </p>
-              </div>
-              <div class="cdc-book__field">
-                <label for="book-nitrox"
-                  >+ Nitrox-Upgrade (+100 THB / Flasche)</label
-                >
-                <select id="book-nitrox" name="nitrox">
-                  <option value="No">Nein</option>
-                  <option value="Yes">
-                    Ja – für zertifizierte Nitrox-Taucher
-                  </option>
-                </select>
-              </div>
-              <div class="cdc-book__field" style="grid-column: 1 / -1">
-                <label for="book-sidemount"
-                  >Sidemount – Extra-Flaschen über 1 pro Tauchgang</label
-                >
-                <select id="book-sidemount" name="sidemount">
-                  <option value="No">
-                    Nein (1 Flasche pro Tauchgang inklusive)
-                  </option>
-                  <option value="Air">
-                    Ja – Extra-Flaschen Luft (+250 THB je)
-                  </option>
-                  <option value="EAN">
-                    Ja – Extra-Flaschen EAN / Nitrox (+300 THB je)
-                  </option>
-                </select>
-                <p class="cdc-book__hint">
-                  1 Flasche pro Tauchgang ist im Paket. Nur wählen, wenn mehr
-                  Flaschen als Tauchgänge nötig sind.
-                </p>
-              </div>
-            </div>
           </section>
 
           <section class="cdc-book__section">
-            <h2 id="book-people-heading">2. Taucher</h2>
+            <h2 id="book-people-heading">2. Personen</h2>
             <p id="book-people-intro" class="cdc-book__intro">
-              Jeder Taucher braucht
-              <strong>eigenen Namen, Geburtsdatum und E-Mail</strong>
-              (für Kurse und Tauchunfallversicherung). Zertifikatsfoto optional
-              — in diesem Entwurf Dateien in der E-Mail-App anhängen.
+              Jede Person wählt ihr eigenes Produkt/Paket und trägt ihre Angaben
+              ein (Schnorchler brauchen weniger Felder).
             </p>
             <p id="book-medical-note" class="cdc-book__medical">
               Brauche ich eine ärztliche Untersuchung?
@@ -861,6 +798,6 @@
     </footer>
 
     <script src="/js/global.min.js?v=a11y-menu-2" defer></script>
-    <script src="/js/booking/booking-form.js?v=draft-26" defer></script>
+    <script src="/js/booking/booking-form.js?v=draft-32" defer></script>
   </body>
 </html>

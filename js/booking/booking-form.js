@@ -29,18 +29,24 @@
       titleSuffix: " – Chang Diving (DRAFT)",
       pageTitle: "Book your Dive Adventure",
       viewProduct: "View product page",
-      diversSection: "2. Divers",
+      diversSection: "2. People",
       diversIntro:
-        "Each diver needs <strong>own name, date of birth and email</strong> (required for courses and dive accident insurance). Certification photo optional — attach files in the email app.",
-      snorkelSection: "2. Guests",
+        "Each person picks their <strong>own product and package</strong>. Divers need name, date of birth and email (courses &amp; dive accident insurance). Snorkelers need fewer fields. Certification photo optional — attach files in the email app.",
+      snorkelSection: "2. People",
       snorkelIntro:
-        "For snorkeling we only need a few details per guest: name, date of birth, email, vegetarian preference, plus wetsuit/T-shirt size and fin/shoe size.",
+        "Each person picks their own product and package. For snorkeling we only need name, date of birth, email, vegetarian preference, plus wetsuit/T-shirt size and fin/shoe size.",
       sizeWetsuitShirt: "Wetsuit / T-shirt size (EU)",
       sizeFinShoe: "Fin / shoe size (EU)",
       medicalNote:
         'Do I need a medical checkup? <a href="/en/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Check the self-test</a>',
+      person: "Person",
       diver: "Diver",
       guest: "Guest",
+      productLbl: "Product",
+      optionLbl: "Package / option",
+      startedFrom: "Started from",
+      mixedBooking: "Mixed booking",
+      numPeople: "Number of people",
       name: "Full name (in English)",
       dob: "Date of birth",
       email: "Email (this diver)",
@@ -73,7 +79,7 @@
       wetsuit: "Wetsuit – size",
       selectSize: "— select size —",
       bcdTip:
-        "Tip: BCDs run large (dry-suit room). Usually choose <strong>one size smaller</strong> than your EU T-shirt size.",
+        "Choose BCD <strong>one size smaller</strong> than EU T-shirt size.",
       mask: "Mask – need rental",
       fins: "Fins – need rental",
       regulator: "Regulator – need rental",
@@ -103,6 +109,8 @@
       startDate: "Preferred start / trip date",
       numDivers: "Number of divers",
       numGuests: "Number of guests",
+      errProduct: "Please select a product for person ",
+      errOption: "Please select a package for person ",
       equipment: "Equipment",
       bcdSize: "BCD size",
       wetsuitSize: "Wetsuit size",
@@ -162,18 +170,24 @@
       titleSuffix: " – Chang Diving (ENTWURF)",
       pageTitle: "Buche dein Tauchabenteuer",
       viewProduct: "Zur Produktseite",
-      diversSection: "2. Taucher",
+      diversSection: "2. Personen",
       diversIntro:
-        "Jeder Taucher braucht <strong>eigenen Namen, Geburtsdatum und E-Mail</strong> (für Kurse und Tauchunfallversicherung). Zertifikatsfoto optional — Dateien in der E-Mail-App anhängen.",
-      snorkelSection: "2. Gäste",
+        "Jede Person wählt <strong>eigenes Produkt und Paket</strong>. Taucher brauchen Name, Geburtsdatum und E-Mail (Kurse &amp; Tauchunfallversicherung). Schnorchler brauchen weniger Felder. Zertifikatsfoto optional — Dateien in der E-Mail-App anhängen.",
+      snorkelSection: "2. Personen",
       snorkelIntro:
-        "Fürs Schnorcheln brauchen wir pro Gast nur: Name, Geburtsdatum, E-Mail, vegetarisch sowie Neopren/T-Shirt-Größe und Flossen-/Schuhgröße.",
+        "Jede Person wählt eigenes Produkt und Paket. Fürs Schnorcheln brauchen wir nur: Name, Geburtsdatum, E-Mail, vegetarisch sowie Neopren/T-Shirt-Größe und Flossen-/Schuhgröße.",
       sizeWetsuitShirt: "Neoprenanzug / T-Shirt-Größe (EU)",
       sizeFinShoe: "Flossen- / Schuhgröße (EU)",
       medicalNote:
         'Brauche ich eine ärztliche Untersuchung? <a href="/de/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Selbsttest machen</a>',
+      person: "Person",
       diver: "Taucher",
       guest: "Gast",
+      productLbl: "Produkt",
+      optionLbl: "Paket / Option",
+      startedFrom: "Gestartet von",
+      mixedBooking: "Gemischte Buchung",
+      numPeople: "Anzahl Personen",
       name: "Vollständiger Name (auf Englisch)",
       dob: "Geburtsdatum",
       email: "E-Mail (dieser Taucher)",
@@ -205,8 +219,7 @@
       bcd: "BCD – Größe",
       wetsuit: "Neoprenanzug – Größe",
       selectSize: "— Größe wählen —",
-      bcdTip:
-        "Tipp: BCDs fallen groß aus (Trockentauchanzug-Raum). Meist <strong>eine Größe kleiner</strong> als EU-T-Shirt wählen.",
+      bcdTip: "BCD <strong>eine Größe kleiner</strong> als EU-T-Shirt wählen.",
       mask: "Maske – Ausleihe benötigt",
       fins: "Flossen – Ausleihe benötigt",
       regulator: "Atemregler – Ausleihe benötigt",
@@ -237,6 +250,8 @@
       startDate: "Gewünschtes Start- / Tourdatum",
       numDivers: "Anzahl Taucher",
       numGuests: "Anzahl Gäste",
+      errProduct: "Bitte Produkt für Person ",
+      errOption: "Bitte Paket für Person ",
       equipment: "Ausrüstung",
       bcdSize: "BCD-Größe",
       wetsuitSize: "Neoprenanzug-Größe",
@@ -297,18 +312,24 @@
       titleSuffix: " – Chang Diving (ฉบับร่าง)",
       pageTitle: "จองการผจญภัยดำน้ำของคุณ",
       viewProduct: "ดูหน้ารายละเอียด",
-      diversSection: "2. นักดำน้ำ",
+      diversSection: "2. คน",
       diversIntro:
-        "แต่ละคนต้องมี <strong>ชื่อ วันเกิด และอีเมลของตัวเอง</strong> (สำหรับคอร์สและประกันอุบัติเหตุดำน้ำ) รูปใบรับรองเป็นทางเลือก — แนบไฟล์ในแอปอีเมล",
-      snorkelSection: "2. ผู้ร่วมทริป",
+        "แต่ละคนเลือก<strong>ผลิตภัณฑ์และแพ็กเกจของตัวเอง</strong> นักดำน้ำต้องมีชื่อ วันเกิด และอีเมล (คอร์สและประกันอุบัติเหตุดำน้ำ) ผู้ดำน้ำตื้นกรอกน้อยกว่า รูปใบรับรองเป็นทางเลือก — แนบไฟล์ในแอปอีเมล",
+      snorkelSection: "2. คน",
       snorkelIntro:
-        "สำหรับดำน้ำตื้น ต้องการเพียง: ชื่อ วันเกิด อีเมล กินเจ ไซส์เวทสูท/เสื้อยืด และไซส์ตีนกบ/รองเท้า",
+        "แต่ละคนเลือกผลิตภัณฑ์และแพ็กเกจของตัวเอง สำหรับดำน้ำตื้นต้องการเพียง: ชื่อ วันเกิด อีเมล กินเจ ไซส์เวทสูท/เสื้อยืด และไซส์ตีนกบ/รองเท้า",
       sizeWetsuitShirt: "ไซส์เวทสูท / เสื้อยืด (EU)",
       sizeFinShoe: "ไซส์ตีนกบ / รองเท้า (EU)",
       medicalNote:
         'ต้องตรวจสุขภาพก่อนดำน้ำไหม? <a href="/th/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">ทำแบบทดสอบด้วยตนเอง</a>',
+      person: "บุคคล",
       diver: "นักดำน้ำ",
       guest: "ผู้ร่วมทริป",
+      productLbl: "ผลิตภัณฑ์",
+      optionLbl: "แพ็กเกจ / ตัวเลือก",
+      startedFrom: "เริ่มจาก",
+      mixedBooking: "การจองแบบผสม",
+      numPeople: "จำนวนคน",
       name: "ชื่อ-นามสกุล (ภาษาอังกฤษ)",
       dob: "วันเกิด",
       email: "อีเมล (นักดำน้ำคนนี้)",
@@ -339,8 +360,7 @@
       bcd: "BCD – ไซส์",
       wetsuit: "เวทสูท – ไซส์",
       selectSize: "— เลือกไซส์ —",
-      bcdTip:
-        "เคล็ดลับ: BCD มักใหญ่ (มีที่สำหรับดรายสูท) โดยทั่วไปเลือก<strong>เล็กกว่าหนึ่งไซส์</strong>จากไซส์เสื้อ EU",
+      bcdTip: "เลือก BCD <strong>เล็กกว่าหนึ่งไซส์</strong>จากไซส์เสื้อ EU",
       mask: "หน้ากาก – ต้องการเช่า",
       fins: "ตีนกบ – ต้องการเช่า",
       regulator: "เรกกูเลเตอร์ – ต้องการเช่า",
@@ -371,6 +391,8 @@
       startDate: "วันที่เริ่ม / ทริปที่ต้องการ",
       numDivers: "จำนวนนักดำน้ำ",
       numGuests: "จำนวนผู้ร่วมทริป",
+      errProduct: "กรุณาเลือกผลิตภัณฑ์สำหรับบุคคลที่ ",
+      errOption: "กรุณาเลือกแพ็กเกจสำหรับบุคคลที่ ",
       equipment: "อุปกรณ์",
       bcdSize: "ไซส์ BCD",
       wetsuitSize: "ไซส์เวทสูท",
@@ -703,6 +725,34 @@
           },
         ],
       },
+      "scuba-review": {
+        h1:
+          LANG === "de"
+            ? "Scuba Review Koh Chang – 2 Auffrischungstauchgänge - ab 3.950 THB"
+            : LANG === "th"
+              ? "Scuba Review Koh Chang – 2 ไดฟ์ทบทวน - เริ่ม 3,950 บาท"
+              : "Scuba Review Koh Chang – 2 refresher dives - from 3,950 THB",
+        shortLabel: "Scuba Review",
+        type: "daytrip",
+        url: "/" + LANG + "/day-trips/scuba-review/",
+        options: [
+          {
+            id: "cdc-fresh-up",
+            label: "CDC Fresh-Up",
+            price: price("3,950 THB", "3.950 THB", "3,950 บาท"),
+          },
+          {
+            id: "padi-review",
+            label: "PADI Scuba Review",
+            price: price("4,890 THB", "4.890 THB", "4,890 บาท"),
+          },
+          {
+            id: "sdi-review",
+            label: "SDI Scuba Review",
+            price: price("4,890 THB", "4.890 THB", "4,890 บาท"),
+          },
+        ],
+      },
       snorkeling: {
         h1:
           LANG === "de"
@@ -794,139 +844,119 @@
     el.value = value;
   }
 
-  function fillProductSelect() {
-    var sel = $("book-product");
-    if (!sel) return;
-    sel.innerHTML = "";
-    Object.keys(PRODUCTS).forEach(function (key) {
-      var opt = document.createElement("option");
-      opt.value = key;
-      opt.textContent = PRODUCTS[key].shortLabel;
-      sel.appendChild(opt);
-    });
+  var primaryKey = "open-water-diver";
+  var primaryOption = "";
+
+  function getProduct(key) {
+    return PRODUCTS[key] || PRODUCTS.other;
   }
 
-  function fillOptions(productKey, preferred) {
-    var sel = $("book-option");
-    var product = PRODUCTS[productKey] || PRODUCTS.other;
-    if (!sel) return;
-    sel.innerHTML = "";
-    product.options.forEach(function (o) {
-      var opt = document.createElement("option");
-      opt.value = o.id;
-      opt.textContent = o.price ? o.label + " – " + o.price : o.label;
-      sel.appendChild(opt);
-    });
-    if (preferred) {
-      for (var i = 0; i < sel.options.length; i++) {
-        if (sel.options[i].value === preferred) {
-          sel.selectedIndex = i;
-          break;
-        }
-      }
-    }
-    updateHeadingAndSummary();
-  }
-
-  function currentProduct() {
-    var key = ($("book-product") && $("book-product").value) || "other";
-    return { key: key, product: PRODUCTS[key] || PRODUCTS.other };
-  }
-
-  function currentOption() {
-    var info = currentProduct();
-    var oid = ($("book-option") && $("book-option").value) || "";
-    var list = info.product.options || [];
+  function findOption(productKey, optionId) {
+    var list = getProduct(productKey).options || [];
     for (var i = 0; i < list.length; i++) {
-      if (list[i].id === oid) return list[i];
+      if (list[i].id === optionId) return list[i];
     }
     return list[0] || { id: "", label: "", price: "" };
   }
 
-  function syncFunAddons() {
-    var wrap = $("book-fun-addons");
-    if (!wrap) return;
-    var isFun = currentProduct().key === "fun-dives";
-    wrap.hidden = !isFun;
-    if (!isFun) {
-      if ($("book-extra-dive")) $("book-extra-dive").value = "No";
-      if ($("book-nitrox")) $("book-nitrox").value = "No";
-      if ($("book-sidemount")) $("book-sidemount").value = "No";
-    }
+  function isSnorkelKey(key) {
+    return key === "snorkeling";
   }
 
-  function funAddonSummaryParts() {
-    if (currentProduct().key !== "fun-dives") return [];
-    var parts = [];
-    var extra = ($("book-extra-dive") && $("book-extra-dive").value) || "No";
-    var nitrox = ($("book-nitrox") && $("book-nitrox").value) || "No";
-    var side = ($("book-sidemount") && $("book-sidemount").value) || "No";
-    if (extra === "Yes") parts.push("+ Extra dive");
-    if (nitrox === "Yes") parts.push("+ Nitrox");
-    if (side === "Air") parts.push("+ Sidemount air");
-    if (side === "EAN") parts.push("+ Sidemount EAN");
-    return parts;
+  function optionOptionsHtml(productKey, preferred) {
+    var list = getProduct(productKey).options || [];
+    var chosen = findOption(productKey, preferred).id;
+    var html = "";
+    list.forEach(function (o) {
+      var label = o.price ? o.label + " – " + o.price : o.label;
+      html +=
+        '<option value="' +
+        o.id +
+        '"' +
+        (o.id === chosen ? " selected" : "") +
+        ">" +
+        label +
+        "</option>";
+    });
+    return html;
   }
 
-  function isSnorkel() {
-    return currentProduct().key === "snorkeling";
+  function productOptionsHtml(selectedKey) {
+    var html = "";
+    Object.keys(PRODUCTS).forEach(function (key) {
+      html +=
+        '<option value="' +
+        key +
+        '"' +
+        (key === selectedKey ? " selected" : "") +
+        ">" +
+        PRODUCTS[key].shortLabel +
+        "</option>";
+    });
+    return html;
   }
 
-  function syncPeopleUi() {
-    var snorkel = isSnorkel();
-    var section = $("book-people-heading");
-    if (section) section.textContent = t.diversSection;
-    var intro = $("book-people-intro");
-    if (intro) intro.innerHTML = snorkel ? t.snorkelIntro : t.diversIntro;
-    var medical = $("book-medical-note");
-    if (medical) {
-      medical.hidden = snorkel;
-      medical.innerHTML = t.medicalNote;
-    }
-    var countLabel = document.querySelector('label[for="book-people-count"]');
-    if (countLabel) {
-      countLabel.textContent = snorkel ? t.numGuests : t.numDivers;
-    }
-  }
-
-  function updateHeadingAndSummary() {
-    var info = currentProduct();
-    var opt = currentOption();
-    var productTitle = $("book-product-title");
-    if (productTitle) productTitle.textContent = info.product.h1;
-    document.title = t.pageTitle + t.titleSuffix;
-
-    syncFunAddons();
-    syncPeopleUi();
-
-    var summary = $("book-summary");
-    if (summary) {
-      var parts = [info.product.shortLabel];
-      if (opt.label) parts.push(opt.label);
-      if (opt.price) parts.push(opt.price);
-      parts = parts.concat(funAddonSummaryParts());
-      summary.textContent = parts.join(" · ");
-    }
-    var link = $("book-product-link");
-    if (link) {
-      link.href = info.product.url;
-      link.textContent = t.viewProduct;
-      link.hidden = !info.product.url;
-    }
-  }
-
-  function personTemplateSnorkel(index) {
-    var n = index + 1;
-    var id = "p" + n;
+  function funAddonsHtml(id) {
     return (
-      '<fieldset class="cdc-book__person" data-person="' +
-      n +
-      '" data-mode="snorkel">' +
-      "<legend>" +
-      t.guest +
-      " " +
-      n +
-      "</legend>" +
+      '<h3 class="cdc-book__subhead">' +
+      t.funAddons +
+      "</h3>" +
+      '<div class="cdc-book__grid cdc-book__grid--2">' +
+      '<div class="cdc-book__field"><label for="' +
+      id +
+      '-extra">' +
+      t.extraDive +
+      "</label>" +
+      '<select id="' +
+      id +
+      '-extra" name="extraDive">' +
+      '<option value="No">' +
+      t.no +
+      "</option>" +
+      '<option value="Yes">' +
+      t.yes +
+      "</option></select></div>" +
+      '<div class="cdc-book__field"><label for="' +
+      id +
+      '-nitrox">' +
+      t.nitrox +
+      "</label>" +
+      '<select id="' +
+      id +
+      '-nitrox" name="nitrox">' +
+      '<option value="No">' +
+      t.no +
+      "</option>" +
+      '<option value="Yes">' +
+      t.yes +
+      "</option></select></div>" +
+      '<div class="cdc-book__field" style="grid-column:1/-1"><label for="' +
+      id +
+      '-sidemount">' +
+      t.sidemount +
+      "</label>" +
+      '<select id="' +
+      id +
+      '-sidemount" name="sidemount">' +
+      '<option value="No">' +
+      t.sidemountNo +
+      "</option>" +
+      '<option value="Air">' +
+      t.yes +
+      " – " +
+      t.sidemountAir +
+      "</option>" +
+      '<option value="EAN">' +
+      t.yes +
+      " – " +
+      t.sidemountEan +
+      "</option></select></div>" +
+      "</div>"
+    );
+  }
+
+  function personBodySnorkel(id) {
+    return (
       '<div class="cdc-book__grid cdc-book__grid--2">' +
       '<div class="cdc-book__field"><label for="' +
       id +
@@ -987,24 +1017,12 @@
       '-fin-shoe" name="finShoe">' +
       selectOptions(SIZES_SHOE, t.selectSize) +
       "</select></div>" +
-      "</div>" +
-      "</fieldset>"
+      "</div>"
     );
   }
 
-  function personTemplate(index) {
-    if (isSnorkel()) return personTemplateSnorkel(index);
-    var n = index + 1;
-    var id = "p" + n;
+  function personBodyDiver(id, includeFunAddons, includeGopro) {
     return (
-      '<fieldset class="cdc-book__person" data-person="' +
-      n +
-      '" data-mode="diver">' +
-      "<legend>" +
-      t.diver +
-      " " +
-      n +
-      "</legend>" +
       '<div class="cdc-book__grid cdc-book__grid--2">' +
       '<div class="cdc-book__field"><label for="' +
       id +
@@ -1132,7 +1150,7 @@
       '<p class="cdc-book__hint">' +
       t.equipHint +
       "</p>" +
-      '<div class="cdc-book__grid cdc-book__grid--2">' +
+      '<div class="cdc-book__grid cdc-book__equip-list">' +
       '<div class="cdc-book__field"><label for="' +
       id +
       '-bcd">' +
@@ -1146,6 +1164,13 @@
       '<p class="cdc-book__hint">' +
       t.bcdTip +
       "</p></div>" +
+      '<div class="cdc-book__field cdc-book__checkfield"><label class="cdc-book__check">' +
+      '<input id="' +
+      id +
+      '-reg" name="regulator" type="checkbox" value="Need" />' +
+      "<span>" +
+      t.regulator +
+      "</span></label></div>" +
       '<div class="cdc-book__field"><label for="' +
       id +
       '-wetsuit-shirt">' +
@@ -1163,13 +1188,6 @@
       "<span>" +
       t.mask +
       "</span></label></div>" +
-      '<div class="cdc-book__field cdc-book__checkfield"><label class="cdc-book__check">' +
-      '<input id="' +
-      id +
-      '-reg" name="regulator" type="checkbox" value="Need" />' +
-      "<span>" +
-      t.regulator +
-      "</span></label></div>" +
       '<div class="cdc-book__field"><label for="' +
       id +
       '-fin-shoe">' +
@@ -1180,14 +1198,14 @@
       '-fin-shoe" name="finShoe">' +
       selectOptions(SIZES_SHOE, t.selectSize) +
       "</select></div>" +
-      '<div class="cdc-book__field cdc-book__checkfield" style="grid-column:1/-1"><label class="cdc-book__check">' +
+      '<div class="cdc-book__field cdc-book__checkfield"><label class="cdc-book__check">' +
       '<input id="' +
       id +
       '-own" name="ownEquipment" type="checkbox" value="Yes" />' +
       "<span>" +
       t.ownEquip +
       "</span></label></div>" +
-      '<div class="cdc-book__field cdc-book__checkfield" style="grid-column:1/-1"><label class="cdc-book__check">' +
+      '<div class="cdc-book__field cdc-book__checkfield"><label class="cdc-book__check">' +
       '<input id="' +
       id +
       '-ins" name="insurance" type="checkbox" value="Yes" data-insurance-toggle />' +
@@ -1197,7 +1215,7 @@
       '<p class="cdc-book__hint" style="margin:0.35rem 0 0 1.5rem">' +
       t.insuranceHint +
       "</p></div>" +
-      '<div class="cdc-book__field" style="grid-column:1/-1" data-insurance-package hidden>' +
+      '<div class="cdc-book__field" data-insurance-package hidden>' +
       '<label for="' +
       id +
       '-ins-pkg">' +
@@ -1215,37 +1233,208 @@
       '<option value="10 Days Coverage – 50 USD">10 Days Coverage – 50 USD</option>' +
       '<option value="30 Days Coverage – 60 USD">30 Days Coverage – 60 USD</option>' +
       "</select></div>" +
-      '<div class="cdc-book__field cdc-book__checkfield" style="grid-column:1/-1"><label class="cdc-book__check">' +
-      '<input id="' +
+      (includeGopro
+        ? '<div class="cdc-book__field cdc-book__checkfield"><label class="cdc-book__check">' +
+          '<input id="' +
+          id +
+          '-gopro" name="gopro" type="checkbox" value="Yes" data-gopro-toggle />' +
+          "<span>" +
+          t.gopro +
+          "</span></label>" +
+          '<p class="cdc-book__hint" style="margin:0.35rem 0 0 1.5rem">' +
+          t.goproHint +
+          "</p></div>" +
+          '<div class="cdc-book__field" data-gopro-package hidden>' +
+          '<label for="' +
+          id +
+          '-gopro-pkg">' +
+          t.goproPkg +
+          "</label>" +
+          '<select id="' +
+          id +
+          '-gopro-pkg" name="goproPackage">' +
+          '<option value="">' +
+          t.selectDays +
+          "</option>" +
+          '<option value="1 Day – 700 THB">1 Day – 700 THB</option>' +
+          '<option value="2 Days – 1,400 THB">2 Days – 1,400 THB</option>' +
+          '<option value="3 Days – 2,100 THB">3 Days – 2,100 THB</option>' +
+          '<option value="4 Days – 2,800 THB">4 Days – 2,800 THB</option>' +
+          '<option value="5 Days – 3,500 THB">5 Days – 3,500 THB</option>' +
+          "</select></div>"
+        : "") +
+      "</div>" +
+      (includeFunAddons ? funAddonsHtml(id) : "")
+    );
+  }
+
+  function personBodyHtml(id, productKey) {
+    if (isSnorkelKey(productKey)) return personBodySnorkel(id);
+    return personBodyDiver(
+      id,
+      productKey === "fun-dives",
+      productKey !== "try-dive"
+    );
+  }
+
+  function personTemplate(index, productKey, optionId) {
+    var n = index + 1;
+    var id = "p" + n;
+    var key = PRODUCTS[productKey] ? productKey : "other";
+    var snorkel = isSnorkelKey(key);
+    return (
+      '<fieldset class="cdc-book__person" data-person="' +
+      n +
+      '" data-mode="' +
+      (snorkel ? "snorkel" : "diver") +
+      '">' +
+      "<legend>" +
+      t.person +
+      " " +
+      n +
+      "</legend>" +
+      '<div class="cdc-book__grid cdc-book__grid--2">' +
+      '<div class="cdc-book__field"><label for="' +
       id +
-      '-gopro" name="gopro" type="checkbox" value="Yes" data-gopro-toggle />' +
-      "<span>" +
-      t.gopro +
-      "</span></label>" +
-      '<p class="cdc-book__hint" style="margin:0.35rem 0 0 1.5rem">' +
-      t.goproHint +
-      "</p></div>" +
-      '<div class="cdc-book__field" style="grid-column:1/-1" data-gopro-package hidden>' +
-      '<label for="' +
-      id +
-      '-gopro-pkg">' +
-      t.goproPkg +
+      '-product">' +
+      t.productLbl +
       "</label>" +
       '<select id="' +
       id +
-      '-gopro-pkg" name="goproPackage">' +
-      '<option value="">' +
-      t.selectDays +
-      "</option>" +
-      '<option value="1 Day – 700 THB">1 Day – 700 THB</option>' +
-      '<option value="2 Days – 1,400 THB">2 Days – 1,400 THB</option>' +
-      '<option value="3 Days – 2,100 THB">3 Days – 2,100 THB</option>' +
-      '<option value="4 Days – 2,800 THB">4 Days – 2,800 THB</option>' +
-      '<option value="5 Days – 3,500 THB">5 Days – 3,500 THB</option>' +
+      '-product" name="productKey" required>' +
+      productOptionsHtml(key) +
       "</select></div>" +
+      '<div class="cdc-book__field"><label for="' +
+      id +
+      '-option">' +
+      t.optionLbl +
+      "</label>" +
+      '<select id="' +
+      id +
+      '-option" name="optionId" required>' +
+      optionOptionsHtml(key, optionId) +
+      "</select></div>" +
+      "</div>" +
+      "<div data-person-body>" +
+      personBodyHtml(id, key) +
       "</div>" +
       "</fieldset>"
     );
+  }
+
+  function snapshotPerson(fs) {
+    return {
+      productKey: fieldVal(fs, "productKey"),
+      optionId: fieldVal(fs, "optionId"),
+      name: fieldVal(fs, "name"),
+      dob: fieldVal(fs, "dob"),
+      email: fieldVal(fs, "email"),
+      cert: fieldVal(fs, "cert"),
+      dives: fieldVal(fs, "dives"),
+      lastDive: fieldVal(fs, "lastDive"),
+      vegetarian: fieldVal(fs, "vegetarian"),
+      allergies: fieldVal(fs, "allergies"),
+      insurance: fieldVal(fs, "insurance"),
+      insurancePackage: fieldVal(fs, "insurancePackage"),
+      gopro: fieldVal(fs, "gopro"),
+      goproPackage: fieldVal(fs, "goproPackage"),
+      bcd: fieldVal(fs, "bcd"),
+      mask: fieldVal(fs, "mask"),
+      regulator: fieldVal(fs, "regulator"),
+      wetsuitShirt: fieldVal(fs, "wetsuitShirt"),
+      finShoe: fieldVal(fs, "finShoe"),
+      ownEquipment: fieldVal(fs, "ownEquipment"),
+      extraDive: fieldVal(fs, "extraDive") || "No",
+      nitrox: fieldVal(fs, "nitrox") || "No",
+      sidemount: fieldVal(fs, "sidemount") || "No",
+    };
+  }
+
+  function applyPersonData(fs, data) {
+    if (!data) return;
+    Object.keys(data).forEach(function (key) {
+      if (key === "productKey" || key === "optionId") return;
+      setField(fs, key, data[key]);
+    });
+  }
+
+  function bindPersonControls(fs) {
+    var prod = fs.querySelector('[name="productKey"]');
+    var opt = fs.querySelector('[name="optionId"]');
+    if (prod && !prod._cdcBound) {
+      prod._cdcBound = true;
+      prod.addEventListener("change", function () {
+        onPersonProductChange(fs);
+      });
+    }
+    if (opt && !opt._cdcBound) {
+      opt._cdcBound = true;
+      opt.addEventListener("change", updateHeadingAndSummary);
+    }
+    if (!isSnorkelKey(fieldVal(fs, "productKey"))) {
+      bindInsuranceToggle(fs);
+      syncInsurancePackage(fs);
+      bindGoproToggle(fs);
+      syncGoproPackage(fs);
+    }
+    ["extraDive", "nitrox", "sidemount"].forEach(function (name) {
+      var el = fs.querySelector('[name="' + name + '"]');
+      if (el && !el._cdcBoundSummary) {
+        el._cdcBoundSummary = true;
+        el.addEventListener("change", updateHeadingAndSummary);
+      }
+    });
+  }
+
+  function onPersonProductChange(fs) {
+    var data = snapshotPerson(fs);
+    var key = fieldVal(fs, "productKey") || "other";
+    if (!PRODUCTS[key]) key = "other";
+    var opt = fs.querySelector('[name="optionId"]');
+    if (opt) opt.innerHTML = optionOptionsHtml(key, "");
+    var body = fs.querySelector("[data-person-body]");
+    var id = "p" + (fs.getAttribute("data-person") || "1");
+    if (body) body.innerHTML = personBodyHtml(id, key);
+    fs.setAttribute("data-mode", isSnorkelKey(key) ? "snorkel" : "diver");
+    applyPersonData(fs, data);
+    bindInsuranceToggle(fs);
+    syncInsurancePackage(fs);
+    bindGoproToggle(fs);
+    syncGoproPackage(fs);
+    ["extraDive", "nitrox", "sidemount"].forEach(function (name) {
+      var el = fs.querySelector('[name="' + name + '"]');
+      if (el && !el._cdcBoundSummary) {
+        el._cdcBoundSummary = true;
+        el.addEventListener("change", updateHeadingAndSummary);
+      }
+    });
+    syncPeopleUi();
+    updateHeadingAndSummary();
+  }
+
+  function defaultProductForIndex(index, prev) {
+    if (prev && prev[index] && prev[index].productKey) {
+      return prev[index].productKey;
+    }
+    if (index === 0) return primaryKey;
+    if (prev && prev[0] && prev[0].productKey) return prev[0].productKey;
+    return primaryKey;
+  }
+
+  function defaultOptionForIndex(index, productKey, prev) {
+    if (
+      prev &&
+      prev[index] &&
+      prev[index].productKey === productKey &&
+      prev[index].optionId
+    ) {
+      return prev[index].optionId;
+    }
+    if (index === 0 && productKey === primaryKey) return primaryOption;
+    if (prev && prev[0] && prev[0].productKey === productKey) {
+      return prev[0].optionId || "";
+    }
+    return findOption(productKey, "").id;
   }
 
   function renderPeople() {
@@ -1258,51 +1447,26 @@
 
     var prev = {};
     host.querySelectorAll(".cdc-book__person").forEach(function (fs, i) {
-      prev[i] = {
-        name: fieldVal(fs, "name"),
-        dob: fieldVal(fs, "dob"),
-        email: fieldVal(fs, "email"),
-        cert: fieldVal(fs, "cert"),
-        dives: fieldVal(fs, "dives"),
-        lastDive: fieldVal(fs, "lastDive"),
-        vegetarian: fieldVal(fs, "vegetarian"),
-        allergies: fieldVal(fs, "allergies"),
-        insurance: fieldVal(fs, "insurance"),
-        insurancePackage: fieldVal(fs, "insurancePackage"),
-        gopro: fieldVal(fs, "gopro"),
-        goproPackage: fieldVal(fs, "goproPackage"),
-        bcd: fieldVal(fs, "bcd"),
-        mask: fieldVal(fs, "mask"),
-        regulator: fieldVal(fs, "regulator"),
-        wetsuitShirt: fieldVal(fs, "wetsuitShirt"),
-        finShoe: fieldVal(fs, "finShoe"),
-        ownEquipment: fieldVal(fs, "ownEquipment"),
-      };
+      prev[i] = snapshotPerson(fs);
     });
 
     var html = "";
-    for (var i = 0; i < count; i++) html += personTemplate(i);
+    for (var i = 0; i < count; i++) {
+      var pk = defaultProductForIndex(i, prev);
+      var oid = defaultOptionForIndex(i, pk, prev);
+      html += personTemplate(i, pk, oid);
+    }
     host.innerHTML = html;
 
     host.querySelectorAll(".cdc-book__person").forEach(function (fs, i) {
-      var data = prev[i];
-      if (data) {
-        Object.keys(data).forEach(function (key) {
-          setField(fs, key, data[key]);
-        });
-      }
-      if (!isSnorkel()) {
-        bindInsuranceToggle(fs);
-        syncInsurancePackage(fs);
-        bindGoproToggle(fs);
-        syncGoproPackage(fs);
-      }
+      applyPersonData(fs, prev[i]);
+      bindPersonControls(fs);
     });
 
     var groupNote = $("book-group-note");
-    if (groupNote) {
-      groupNote.hidden = count < 2;
-    }
+    if (groupNote) groupNote.hidden = count < 2;
+    syncPeopleUi();
+    updateHeadingAndSummary();
   }
 
   function syncAddonPackage(fs, toggleSel, wrapSel, selectName) {
@@ -1352,51 +1516,88 @@
     });
   }
 
-  function collectPeople() {
-    var people = [];
+  function syncPeopleUi() {
+    var people = document.querySelectorAll("#book-people .cdc-book__person");
+    var anyDiver = false;
+    people.forEach(function (fs) {
+      if (!isSnorkelKey(fieldVal(fs, "productKey"))) anyDiver = true;
+    });
+    var section = $("book-people-heading");
+    if (section) section.textContent = t.diversSection;
+    var intro = $("book-people-intro");
+    if (intro) intro.innerHTML = t.diversIntro;
+    var medical = $("book-medical-note");
+    if (medical) {
+      medical.hidden = people.length > 0 && !anyDiver;
+      medical.innerHTML = t.medicalNote;
+    }
+    var countLabel = document.querySelector('label[for="book-people-count"]');
+    if (countLabel) countLabel.textContent = t.numPeople;
+  }
+
+  function peopleSummaries() {
+    var parts = [];
     document
       .querySelectorAll("#book-people .cdc-book__person")
       .forEach(function (fs) {
-        people.push({
-          name: fieldVal(fs, "name"),
-          dob: fieldVal(fs, "dob"),
-          email: fieldVal(fs, "email"),
-          cert: fieldVal(fs, "cert"),
-          certPhoto: fieldVal(fs, "certPhoto"),
-          dives: fieldVal(fs, "dives"),
-          lastDive: fieldVal(fs, "lastDive"),
-          vegetarian: (function () {
-            var v = fieldVal(fs, "vegetarian");
-            if (v === "Yes") return t.yes;
-            if (v === "No") return t.no;
-            return v;
-          })(),
-          allergies: fieldVal(fs, "allergies"),
-          insurance: fieldVal(fs, "insurance") === "Yes" ? "Yes" : "No",
-          insurancePackage: fieldVal(fs, "insurancePackage"),
-          gopro: fieldVal(fs, "gopro") === "Yes" ? "Yes" : "No",
-          goproPackage: fieldVal(fs, "goproPackage"),
-          bcd: fieldVal(fs, "bcd"),
-          mask: fieldVal(fs, "mask") === "Yes" ? t.needRental : t.no,
-          regulator: fieldVal(fs, "regulator") === "Yes" ? t.needRental : t.no,
-          wetsuitShirt: fieldVal(fs, "wetsuitShirt"),
-          finShoe: fieldVal(fs, "finShoe"),
-          ownEquipment:
-            fieldVal(fs, "ownEquipment") === "Yes" ? t.ownEquipYes : t.no,
-        });
+        var key = fieldVal(fs, "productKey") || "other";
+        var opt = findOption(key, fieldVal(fs, "optionId"));
+        var chunk = getProduct(key).shortLabel;
+        if (opt.label) chunk += " · " + opt.label;
+        if (key === "fun-dives") {
+          if (fieldVal(fs, "extraDive") === "Yes") chunk += " · +Extra";
+          if (fieldVal(fs, "nitrox") === "Yes") chunk += " · +Nitrox";
+          var side = fieldVal(fs, "sidemount");
+          if (side === "Air") chunk += " · +SM air";
+          if (side === "EAN") chunk += " · +SM EAN";
+        }
+        parts.push(chunk);
       });
-    return people;
+    return parts;
   }
 
-  function collectFunAddons() {
-    if (currentProduct().key !== "fun-dives") {
-      return { extraDive: "No", nitrox: "No", sidemount: "No" };
+  function updateHeadingAndSummary() {
+    var firstKey = primaryKey;
+    var firstFs = document.querySelector("#book-people .cdc-book__person");
+    if (firstFs) firstKey = fieldVal(firstFs, "productKey") || primaryKey;
+    var info = getProduct(firstKey);
+    var productTitle = $("book-product-title");
+    if (productTitle) productTitle.textContent = info.h1;
+    document.title = t.pageTitle + t.titleSuffix;
+
+    syncPeopleUi();
+
+    var summaries = peopleSummaries();
+    var summary = $("book-summary");
+    if (summary) {
+      if (!summaries.length) {
+        var opt = findOption(primaryKey, primaryOption);
+        summary.textContent = [
+          t.startedFrom + ": " + getProduct(primaryKey).shortLabel,
+        ]
+          .concat(opt.label ? [opt.label] : [])
+          .concat(opt.price ? [opt.price] : [])
+          .join(" · ");
+      } else if (summaries.length === 1) {
+        summary.textContent = summaries[0];
+      } else {
+        var keys = {};
+        document
+          .querySelectorAll("#book-people .cdc-book__person")
+          .forEach(function (fs) {
+            keys[fieldVal(fs, "productKey") || "other"] = true;
+          });
+        var mixed = Object.keys(keys).length > 1;
+        summary.textContent =
+          (mixed ? t.mixedBooking + ": " : "") + summaries.join(" · ");
+      }
     }
-    return {
-      extraDive: ($("book-extra-dive") && $("book-extra-dive").value) || "No",
-      nitrox: ($("book-nitrox") && $("book-nitrox").value) || "No",
-      sidemount: ($("book-sidemount") && $("book-sidemount").value) || "No",
-    };
+    var link = $("book-product-link");
+    if (link) {
+      link.href = info.url;
+      link.textContent = t.viewProduct;
+      link.hidden = !info.url;
+    }
   }
 
   function formatSidemount(val) {
@@ -1405,25 +1606,87 @@
     return t.sidemountNo;
   }
 
+  function collectPeople() {
+    var people = [];
+    document
+      .querySelectorAll("#book-people .cdc-book__person")
+      .forEach(function (fs) {
+        var productKey = fieldVal(fs, "productKey") || "other";
+        if (!PRODUCTS[productKey]) productKey = "other";
+        var product = getProduct(productKey);
+        var opt = findOption(productKey, fieldVal(fs, "optionId"));
+        var snorkel = isSnorkelKey(productKey);
+        var row = {
+          productKey: productKey,
+          productLabel: product.shortLabel,
+          productUrl: product.url,
+          h1: product.h1,
+          optionId: opt.id,
+          optionLabel: opt.label,
+          optionPrice: opt.price || "",
+          name: fieldVal(fs, "name"),
+          dob: fieldVal(fs, "dob"),
+          email: fieldVal(fs, "email"),
+          snorkel: snorkel,
+          vegetarian: (function () {
+            var v = fieldVal(fs, "vegetarian");
+            if (v === "Yes") return t.yes;
+            if (v === "No") return t.no;
+            return v;
+          })(),
+          wetsuitShirt: fieldVal(fs, "wetsuitShirt"),
+          finShoe: fieldVal(fs, "finShoe"),
+        };
+        if (!snorkel) {
+          row.cert = fieldVal(fs, "cert");
+          row.certPhoto = fieldVal(fs, "certPhoto");
+          row.dives = fieldVal(fs, "dives");
+          row.lastDive = fieldVal(fs, "lastDive");
+          row.allergies = fieldVal(fs, "allergies");
+          row.insurance = fieldVal(fs, "insurance") === "Yes" ? "Yes" : "No";
+          row.insurancePackage = fieldVal(fs, "insurancePackage");
+          row.gopro = fieldVal(fs, "gopro") === "Yes" ? "Yes" : "No";
+          row.goproPackage = fieldVal(fs, "goproPackage");
+          row.bcd = fieldVal(fs, "bcd");
+          row.mask = fieldVal(fs, "mask") === "Yes" ? t.needRental : t.no;
+          row.regulator =
+            fieldVal(fs, "regulator") === "Yes" ? t.needRental : t.no;
+          row.ownEquipment =
+            fieldVal(fs, "ownEquipment") === "Yes" ? t.ownEquipYes : t.no;
+        }
+        if (productKey === "fun-dives") {
+          row.funAddons = {
+            extraDive: fieldVal(fs, "extraDive") || "No",
+            nitrox: fieldVal(fs, "nitrox") || "No",
+            sidemount: fieldVal(fs, "sidemount") || "No",
+          };
+        }
+        people.push(row);
+      });
+    return people;
+  }
+
   function collectPayload() {
-    var info = currentProduct();
-    var opt = currentOption();
     var people = collectPeople();
-    var addons = collectFunAddons();
+    var first = people[0] || {
+      productKey: primaryKey,
+      productLabel: getProduct(primaryKey).shortLabel,
+      productUrl: getProduct(primaryKey).url,
+      h1: getProduct(primaryKey).h1,
+      optionLabel: findOption(primaryKey, primaryOption).label,
+    };
     return {
       draft: DRAFT_MODE,
       lang: LANG,
-      productKey: info.key,
-      h1: info.product.h1,
-      productLabel: info.product.shortLabel,
-      productUrl: info.product.url,
-      optionId: opt.id,
-      optionLabel: opt.label,
-      optionPrice: opt.price || "",
+      primaryKey: primaryKey,
+      productKey: first.productKey,
+      h1: first.h1,
+      productLabel: first.productLabel,
+      productUrl: first.productUrl,
+      optionLabel: first.optionLabel,
       startDate: ($("book-date") && $("book-date").value) || "",
       peopleCount: people.length,
       people: people,
-      funAddons: addons,
       phone: ($("book-phone") && $("book-phone").value.trim()) || "",
       hotel: ($("book-hotel") && $("book-hotel").value.trim()) || "",
       message: ($("book-message") && $("book-message").value.trim()) || "",
@@ -1432,53 +1695,45 @@
   }
 
   function buildEmail(payload) {
+    var mixed = false;
+    var keys = {};
+    payload.people.forEach(function (p) {
+      keys[p.productKey] = true;
+    });
+    if (Object.keys(keys).length > 1) mixed = true;
+
     var subject =
       t.subjectPrefix +
-      payload.productLabel +
-      (payload.optionLabel ? " (" + payload.optionLabel + ")" : "") +
+      (mixed
+        ? t.mixedBooking
+        : payload.productLabel +
+          (payload.optionLabel ? " (" + payload.optionLabel + ")" : "")) +
       (payload.peopleCount > 1 ? " × " + payload.peopleCount : "");
 
     var lines = [
       t.hello,
       "",
       t.wantBook,
-      "• " + payload.h1,
-      "• " + t.package + ": " + payload.optionLabel,
-      payload.optionPrice ? "• " + t.price + ": " + payload.optionPrice : "",
       payload.startDate ? "• " + t.startDate + ": " + payload.startDate : "",
-      "• " +
-        (payload.productKey === "snorkeling" ? t.numGuests : t.numDivers) +
-        ": " +
-        payload.peopleCount,
+      "• " + t.numPeople + ": " + payload.peopleCount,
       "",
     ];
 
-    if (payload.productKey === "fun-dives" && payload.funAddons) {
-      var a = payload.funAddons;
-      lines.push(t.funAddons + ":");
-      lines.push(
-        "• " + t.extraDive + ": " + (a.extraDive === "Yes" ? t.yes : t.no)
-      );
-      lines.push("• " + t.nitrox + ": " + (a.nitrox === "Yes" ? t.yes : t.no));
-      lines.push("• " + t.sidemount + ": " + formatSidemount(a.sidemount));
-      lines.push("");
-    }
-
-    var snorkel = payload.productKey === "snorkeling";
     payload.people.forEach(function (p, i) {
-      lines.push(
-        "—— " + (snorkel ? t.guest : t.diver) + " " + (i + 1) + " ——"
-      );
+      lines.push("—— " + t.person + " " + (i + 1) + " ——");
+      lines.push("• " + t.productLbl + ": " + p.productLabel);
+      lines.push("• " + t.package + ": " + p.optionLabel);
+      if (p.optionPrice) lines.push("• " + t.price + ": " + p.optionPrice);
       lines.push("• " + t.name + ": " + p.name);
       lines.push("• " + t.dob + ": " + p.dob);
       lines.push(
         "• " +
-          (snorkel ? t.emailGuest : t.email).replace(/ \(.*\)$/, "") +
+          (p.snorkel ? t.emailGuest : t.email).replace(/ \(.*\)$/, "") +
           ": " +
           p.email
       );
       lines.push("• " + t.veg + ": " + (p.vegetarian || "—"));
-      if (!snorkel) {
+      if (!p.snorkel) {
         lines.push("• " + t.cert + ": " + p.cert);
         lines.push("• " + t.certPhoto + ": " + p.certPhoto);
         lines.push("• " + t.dives + ": " + p.dives);
@@ -1486,14 +1741,14 @@
         lines.push("• " + t.allergies + ": " + p.allergies);
         lines.push(t.equipment + ":");
         lines.push("• " + t.bcdSize + ": " + (p.bcd || "—"));
-        lines.push("• " + t.maskLbl + ": " + p.mask);
         lines.push("• " + t.regLbl + ": " + p.regulator);
       }
-      lines.push(
-        "• " + t.sizeWetsuitShirt + ": " + (p.wetsuitShirt || "—")
-      );
+      lines.push("• " + t.sizeWetsuitShirt + ": " + (p.wetsuitShirt || "—"));
+      if (!p.snorkel) {
+        lines.push("• " + t.maskLbl + ": " + p.mask);
+      }
       lines.push("• " + t.sizeFinShoe + ": " + (p.finShoe || "—"));
-      if (!snorkel) {
+      if (!p.snorkel) {
         lines.push("• " + t.ownDisc + ": " + p.ownEquipment);
         lines.push(
           "• " +
@@ -1503,14 +1758,27 @@
               ? t.yes + " – " + (p.insurancePackage || t.pkgNotSel)
               : t.no)
         );
+        if (p.productKey !== "try-dive") {
+          lines.push(
+            "• " +
+              t.goproRent +
+              ": " +
+              (p.gopro === "Yes"
+                ? t.yes + " – " + (p.goproPackage || t.durNotSel)
+                : t.no)
+          );
+        }
+      }
+      if (p.funAddons) {
+        var a = p.funAddons;
+        lines.push(t.funAddons + ":");
         lines.push(
-          "• " +
-            t.goproRent +
-            ": " +
-            (p.gopro === "Yes"
-              ? t.yes + " – " + (p.goproPackage || t.durNotSel)
-              : t.no)
+          "• " + t.extraDive + ": " + (a.extraDive === "Yes" ? t.yes : t.no)
         );
+        lines.push(
+          "• " + t.nitrox + ": " + (a.nitrox === "Yes" ? t.yes : t.no)
+        );
+        lines.push("• " + t.sidemount + ": " + formatSidemount(a.sidemount));
       }
       lines.push("");
     });
@@ -1518,7 +1786,7 @@
     lines.push(t.sharedContact + ":");
     lines.push("• " + t.phone + ": " + payload.phone);
     lines.push("• " + t.hotel + ": " + payload.hotel);
-    lines.push(snorkel ? t.emailsNoteGuest : t.emailsNote);
+    lines.push(t.emailsNote);
     lines.push("");
     if (payload.message) {
       lines.push(t.message + ":");
@@ -1532,7 +1800,13 @@
           ? location.href
           : "/" + LANG + "/book/")
     );
-    lines.push(t.productUrl + ": https://changdiving.com" + payload.productUrl);
+    if (payload.primaryKey) {
+      lines.push(
+        t.startedFrom +
+          ": https://changdiving.com" +
+          getProduct(payload.primaryKey).url
+      );
+    }
     lines.push("");
     lines.push(t.thanks);
 
@@ -1601,15 +1875,16 @@
     if (payload.website) return t.errSpam;
     if (!payload.startDate) return t.errDate;
     if (!payload.phone) return t.errPhone;
-    var snorkel = payload.productKey === "snorkeling";
     var emails = {};
     for (var i = 0; i < payload.people.length; i++) {
       var p = payload.people[i];
       var n = i + 1;
+      if (!p.productKey) return t.errProduct + n + ".";
+      if (!p.optionId && !p.optionLabel) return t.errOption + n + ".";
       if (!p.name || p.name.length < 2) return t.errName + n + ".";
       if (!p.dob) return t.errDob + n + ".";
       if (!p.email || p.email.indexOf("@") < 1) return t.errEmail + n + ".";
-      if (!snorkel) {
+      if (!p.snorkel) {
         if (!p.cert) return t.errCert + n + ".";
         if (p.insurance === "Yes" && !p.insurancePackage) {
           return t.errIns + n + t.errInsOr;
@@ -1675,11 +1950,14 @@
     var form = $("cdc-book-form");
     if (!form) return;
 
-    fillProductSelect();
-    var product = qs("product") || "open-water-diver";
-    if (!PRODUCTS[product]) product = "other";
-    if ($("book-product")) $("book-product").value = product;
-    fillOptions(product, qs("option") || "");
+    primaryKey = qs("product") || "open-water-diver";
+    if (!PRODUCTS[primaryKey]) primaryKey = "other";
+    primaryOption = qs("option") || "";
+    if (primaryOption && !findOption(primaryKey, primaryOption).id) {
+      primaryOption = findOption(primaryKey, "").id;
+    } else if (!primaryOption) {
+      primaryOption = findOption(primaryKey, "").id;
+    }
 
     var peopleQ = parseInt(qs("people"), 10);
     if ($("book-people-count")) {
@@ -1689,15 +1967,6 @@
       $("book-people-count").addEventListener("change", renderPeople);
     }
 
-    $("book-product").addEventListener("change", function () {
-      fillOptions($("book-product").value, "");
-      renderPeople();
-    });
-    $("book-option").addEventListener("change", updateHeadingAndSummary);
-    ["book-extra-dive", "book-nitrox", "book-sidemount"].forEach(function (id) {
-      var el = $(id);
-      if (el) el.addEventListener("change", updateHeadingAndSummary);
-    });
     form.addEventListener("submit", onSubmit);
 
     var mailLink = $("book-mailto");
@@ -1706,7 +1975,6 @@
     if (waLink) waLink.addEventListener("click", onWhatsAppClick);
 
     renderPeople();
-    updateHeadingAndSummary();
   }
 
   if (document.readyState === "loading") {

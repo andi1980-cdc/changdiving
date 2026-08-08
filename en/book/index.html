@@ -321,6 +321,10 @@
           grid-template-columns: 1fr 1fr;
         }
       }
+      .cdc-book__equip-list {
+        grid-template-columns: 1fr;
+        max-width: 28rem;
+      }
       .cdc-book__field label {
         display: block;
         margin-bottom: 0.2rem;
@@ -623,19 +627,11 @@
             <h2>1. Package &amp; date</h2>
             <div class="cdc-book__grid cdc-book__grid--2">
               <div class="cdc-book__field">
-                <label for="book-product">Product (from money page)</label>
-                <select id="book-product" name="product" required></select>
-              </div>
-              <div class="cdc-book__field">
-                <label for="book-option">Package / option on that page</label>
-                <select id="book-option" name="option" required></select>
-              </div>
-              <div class="cdc-book__field">
                 <label for="book-date">Preferred start / trip date</label>
                 <input id="book-date" name="date" type="date" required />
               </div>
               <div class="cdc-book__field">
-                <label for="book-people-count">Number of divers</label>
+                <label for="book-people-count">Number of people</label>
                 <select id="book-people-count" name="peopleCount">
                   <option value="1">1 person</option>
                   <option value="2">2 people</option>
@@ -645,70 +641,17 @@
               </div>
             </div>
             <p id="book-group-note" class="cdc-book__group-note" hidden>
-              <strong>Group (2–4):</strong> same package &amp; date for everyone.
-              Each diver fills their own block below — one shared phone for the
-              booking.
+              <strong>Group (2–4):</strong> same date for everyone. Each person
+              can choose a different product/package below — one shared phone
+              for the booking.
             </p>
-          </section>
-
-          <section id="book-fun-addons" class="cdc-book__section" hidden>
-            <h2>1b. Fun dive add-ons (optional)</h2>
-            <p class="cdc-book__intro">
-              Same extras as on the Fun Dives page. Pick a dive package above
-              first; these are optional upgrades.
-            </p>
-            <div class="cdc-book__grid cdc-book__grid--2">
-              <div class="cdc-book__field">
-                <label for="book-extra-dive"
-                  >+ Extra dive (+800 THB / dive)</label
-                >
-                <select id="book-extra-dive" name="extraDive">
-                  <option value="No">No</option>
-                  <option value="Yes">
-                    Yes – subject to boat plan / dive site
-                  </option>
-                </select>
-                <p class="cdc-book__hint">
-                  Third dive of the day. Not always possible at every site.
-                </p>
-              </div>
-              <div class="cdc-book__field">
-                <label for="book-nitrox"
-                  >+ Nitrox upgrade (+100 THB / tank)</label
-                >
-                <select id="book-nitrox" name="nitrox">
-                  <option value="No">No</option>
-                  <option value="Yes">Yes – for certified Nitrox divers</option>
-                </select>
-              </div>
-              <div class="cdc-book__field" style="grid-column: 1 / -1">
-                <label for="book-sidemount"
-                  >Sidemount – extra tanks beyond 1 per dive</label
-                >
-                <select id="book-sidemount" name="sidemount">
-                  <option value="No">No (1 tank per dive included)</option>
-                  <option value="Air">
-                    Yes – extra tanks air (+250 THB each)
-                  </option>
-                  <option value="EAN">
-                    Yes – extra tanks EAN / Nitrox (+300 THB each)
-                  </option>
-                </select>
-                <p class="cdc-book__hint">
-                  1 tank per dive is included in the package. Choose this only
-                  if you need more tanks than dives.
-                </p>
-              </div>
-            </div>
           </section>
 
           <section class="cdc-book__section">
-            <h2 id="book-people-heading">2. Divers</h2>
+            <h2 id="book-people-heading">2. People</h2>
             <p id="book-people-intro" class="cdc-book__intro">
-              Each diver needs
-              <strong>own name, date of birth and email</strong>
-              (required for courses and dive accident insurance). Certification
-              photo optional — in this draft, attach files in the email app.
+              Each person picks their own product/package and fills in their
+              details (snorkelers need fewer fields).
             </p>
             <p id="book-medical-note" class="cdc-book__medical">
               Do I need a medical checkup?
@@ -853,6 +796,6 @@
     </footer>
 
     <script src="/js/global.min.js?v=a11y-menu-2" defer></script>
-    <script src="/js/booking/booking-form.js?v=draft-26" defer></script>
+    <script src="/js/booking/booking-form.js?v=draft-32" defer></script>
   </body>
 </html>
