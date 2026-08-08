@@ -47,6 +47,10 @@
       startedFrom: "Started from",
       mixedBooking: "Mixed booking",
       numPeople: "Number of people",
+      crumbHome: "🏠 Home",
+      crumbDayTrips: "Day Trips",
+      crumbCourses: "Courses",
+      crumbBook: "Book",
       name: "Full name (in English)",
       dob: "Date of birth",
       email: "Email (this diver)",
@@ -188,6 +192,10 @@
       startedFrom: "Gestartet von",
       mixedBooking: "Gemischte Buchung",
       numPeople: "Anzahl Personen",
+      crumbHome: "🏠 Startseite",
+      crumbDayTrips: "Day Trips",
+      crumbCourses: "Kurse",
+      crumbBook: "Buchen",
       name: "Vollständiger Name (auf Englisch)",
       dob: "Geburtsdatum",
       email: "E-Mail (dieser Taucher)",
@@ -330,6 +338,10 @@
       startedFrom: "เริ่มจาก",
       mixedBooking: "การจองแบบผสม",
       numPeople: "จำนวนคน",
+      crumbHome: "🏠 หน้าแรก",
+      crumbDayTrips: "Day Trips",
+      crumbCourses: "คอร์ส",
+      crumbBook: "จอง",
       name: "ชื่อ-นามสกุล (ภาษาอังกฤษ)",
       dob: "วันเกิด",
       email: "อีเมล (นักดำน้ำคนนี้)",
@@ -1556,6 +1568,27 @@
     return parts;
   }
 
+  function syncBreadcrumb() {
+    var nav = $("breadcrumb");
+    if (!nav) return;
+    var origin = getProduct(primaryKey);
+    var sep = " › ";
+    var html = '<a href="/' + LANG + '/">' + t.crumbHome + "</a>";
+    if (origin.type === "daytrip") {
+      html +=
+        sep + '<a href="/' + LANG + '/day-trips/">' + t.crumbDayTrips + "</a>";
+    } else if (origin.type && origin.type !== "other") {
+      html +=
+        sep + '<a href="/' + LANG + '/courses/">' + t.crumbCourses + "</a>";
+    }
+    if (origin.url && origin.type !== "other") {
+      html +=
+        sep + '<a href="' + origin.url + '">' + origin.shortLabel + "</a>";
+    }
+    html += sep + t.crumbBook;
+    nav.innerHTML = html;
+  }
+
   function updateHeadingAndSummary() {
     var firstKey = primaryKey;
     var firstFs = document.querySelector("#book-people .cdc-book__person");
@@ -1565,6 +1598,7 @@
     if (productTitle) productTitle.textContent = info.h1;
     document.title = t.pageTitle + t.titleSuffix;
 
+    syncBreadcrumb();
     syncPeopleUi();
 
     var summaries = peopleSummaries();
