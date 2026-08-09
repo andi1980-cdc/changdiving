@@ -736,6 +736,101 @@
           },
         ],
       },
+      divemaster: {
+        h1:
+          LANG === "de"
+            ? "Divemaster Koh Chang – ab 29.990 THB"
+            : LANG === "th"
+              ? "Divemaster Koh Chang – เริ่ม 29,990 บาท"
+              : "Divemaster Koh Chang – from 29,990 THB",
+        shortLabel: "Divemaster",
+        type: "course",
+        url: "/" + LANG + "/courses/divemaster/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Divemaster",
+            price: price("29,990 THB", "29.990 THB", "29,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Divemaster",
+            price: price("29,990 THB", "29.990 THB", "29,990 บาท"),
+          },
+        ],
+      },
+      "efr-instructor": {
+        h1:
+          LANG === "de"
+            ? "EFR Instructor Koh Chang – ab 9.990 THB"
+            : LANG === "th"
+              ? "EFR Instructor Koh Chang – เริ่ม 9,990 บาท"
+              : "EFR Instructor Koh Chang – from 9,990 THB",
+        shortLabel: "EFR Instructor",
+        type: "course",
+        url: "/" + LANG + "/courses/efr-instructor/",
+        options: [
+          {
+            id: "efri",
+            label: "EFR Instructor (EFRI)",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+        ],
+      },
+      "sdi-idc": {
+        h1:
+          LANG === "de"
+            ? "SDI Instructor Development Course Koh Chang – ab 34.990 THB"
+            : LANG === "th"
+              ? "SDI Instructor Development Course Koh Chang – เริ่ม 34,990 บาท"
+              : "SDI Instructor Development Course Koh Chang – from 34,990 THB",
+        shortLabel: "SDI IDC",
+        type: "course",
+        url: "/" + LANG + "/courses/sdi-idc/",
+        options: [
+          {
+            id: "idc",
+            label: "SDI Instructor Development Course",
+            price: price("34,990 THB", "34.990 THB", "34,990 บาท"),
+          },
+        ],
+      },
+      "sdi-ie": {
+        h1:
+          LANG === "de"
+            ? "SDI Instructor Exam Koh Chang – ab 9.990 THB"
+            : LANG === "th"
+              ? "SDI Instructor Exam Koh Chang – เริ่ม 9,990 บาท"
+              : "SDI Instructor Exam Koh Chang – from 9,990 THB",
+        shortLabel: "SDI IE",
+        type: "course",
+        url: "/" + LANG + "/courses/sdi-ie/",
+        options: [
+          {
+            id: "ie",
+            label: "SDI Instructor Examination",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+        ],
+      },
+      "instructor-crossover": {
+        h1:
+          LANG === "de"
+            ? "Instructor Crossover Koh Chang – ab 15.990 THB"
+            : LANG === "th"
+              ? "Instructor Crossover Koh Chang – เริ่ม 15,990 บาท"
+              : "Instructor Crossover Koh Chang – from 15,990 THB",
+        shortLabel: "Instructor Crossover",
+        type: "course",
+        url: "/" + LANG + "/courses/instructor-crossover/",
+        options: [
+          {
+            id: "crossover",
+            label: "SDI/TDI Instructor Crossover",
+            price: price("15,990 THB", "15.990 THB", "15,990 บาท"),
+          },
+        ],
+      },
       "deep-wreck-nitrox": {
         h1:
           LANG === "de"
