@@ -28,13 +28,15 @@
     en: {
       titleSuffix: " – Chang Diving (DRAFT)",
       pageTitle: "Book your Dive Adventure",
-      viewProduct: "View product page",
+      viewProduct: "View activity page",
       diversSection: "2. People",
       diversIntro:
-        "Each person picks their <strong>own product and package</strong>. Divers need name, date of birth and email (courses &amp; dive accident insurance). Snorkelers need fewer fields. Certification photo optional — attach files in the email app.",
+        "Each person picks their <strong>own activity and package</strong>. Divers need name, date of birth and email (courses &amp; dive accident insurance). Snorkelers need fewer fields. Certification photo optional — attach files in the email app.",
+      diversIntroGroup:
+        "<strong>Mixed group:</strong> use the activity menus below so each person books what they want (e.g. Fun Dives + Try Dive). Same date for everyone — one shared phone in step 3.",
       snorkelSection: "2. People",
       snorkelIntro:
-        "Each person picks their own product and package. For snorkeling we only need name, date of birth, email, vegetarian preference, plus wetsuit/T-shirt size and fin/shoe size.",
+        "Each person picks their own activity and package. For snorkeling we only need name, date of birth, email, vegetarian preference, plus wetsuit/T-shirt size and fin/shoe size.",
       sizeWetsuitShirt: "Wetsuit / T-shirt size (EU)",
       sizeFinShoe: "Fin / shoe size (EU)",
       medicalNote:
@@ -42,8 +44,16 @@
       person: "Person",
       diver: "Diver",
       guest: "Guest",
-      productLbl: "Product",
+      productLbl: "Activity",
+      productLblGroup: "Activity for this person",
       optionLbl: "Package / option",
+      optionLblGroup: "Package for this person",
+      peopleMixHint:
+        "Different activities in one booking? Choose 2–4 people — each picks their own activity below.",
+      mixTitle: "One form, different activities",
+      mixBody:
+        "Same trip date for everyone. Under each person, choose their own activity and package — you do not need separate bookings.",
+      mixExample: "Example: Person 1 → Fun Dives · Person 2 → Try Dive",
       startedFrom: "Started from",
       mixedBooking: "Mixed booking",
       numPeople: "Number of people",
@@ -113,7 +123,7 @@
       startDate: "Preferred start / trip date",
       numDivers: "Number of divers",
       numGuests: "Number of guests",
-      errProduct: "Please select a product for person ",
+      errProduct: "Please select an activity for person ",
       errOption: "Please select a package for person ",
       equipment: "Equipment",
       bcdSize: "BCD size",
@@ -135,7 +145,7 @@
         "(Each guest’s own email is listed under their guest block above.)",
       message: "Message",
       page: "Page",
-      productUrl: "Product URL",
+      productUrl: "Activity page",
       thanks: "Thank you!",
       subjectLbl: "Subject",
       errSpam: "Spam check failed.",
@@ -173,13 +183,15 @@
     de: {
       titleSuffix: " – Chang Diving (ENTWURF)",
       pageTitle: "Buche dein Tauchabenteuer",
-      viewProduct: "Zur Produktseite",
+      viewProduct: "Zur Aktivitätsseite",
       diversSection: "2. Personen",
       diversIntro:
-        "Jede Person wählt <strong>eigenes Produkt und Paket</strong>. Taucher brauchen Name, Geburtsdatum und E-Mail (Kurse &amp; Tauchunfallversicherung). Schnorchler brauchen weniger Felder. Zertifikatsfoto optional — Dateien in der E-Mail-App anhängen.",
+        "Jede Person wählt <strong>eigene Aktivität und Paket</strong>. Taucher brauchen Name, Geburtsdatum und E-Mail (Kurse &amp; Tauchunfallversicherung). Schnorchler brauchen weniger Felder. Zertifikatsfoto optional — Dateien in der E-Mail-App anhängen.",
+      diversIntroGroup:
+        "<strong>Gemischte Gruppe:</strong> unten bei jeder Person die passende Aktivität wählen (z.&nbsp;B. Fun Dives + Try Dive). Gleiches Datum für alle — ein gemeinsames Telefon in Schritt 3.",
       snorkelSection: "2. Personen",
       snorkelIntro:
-        "Jede Person wählt eigenes Produkt und Paket. Fürs Schnorcheln brauchen wir nur: Name, Geburtsdatum, E-Mail, vegetarisch sowie Neopren/T-Shirt-Größe und Flossen-/Schuhgröße.",
+        "Jede Person wählt eigene Aktivität und Paket. Fürs Schnorcheln brauchen wir nur: Name, Geburtsdatum, E-Mail, vegetarisch sowie Neopren/T-Shirt-Größe und Flossen-/Schuhgröße.",
       sizeWetsuitShirt: "Neoprenanzug / T-Shirt-Größe (EU)",
       sizeFinShoe: "Flossen- / Schuhgröße (EU)",
       medicalNote:
@@ -187,8 +199,16 @@
       person: "Person",
       diver: "Taucher",
       guest: "Gast",
-      productLbl: "Produkt",
+      productLbl: "Aktivität",
+      productLblGroup: "Aktivität für diese Person",
       optionLbl: "Paket / Option",
+      optionLblGroup: "Paket für diese Person",
+      peopleMixHint:
+        "Unterschiedliche Aktivitäten in einer Buchung? 2–4 Personen wählen — jede Person sucht unten ihre eigene Aktivität.",
+      mixTitle: "Ein Formular, verschiedene Aktivitäten",
+      mixBody:
+        "Gleiches Datum für alle. Bei jeder Person unten eigene Aktivität und Paket wählen — keine getrennten Buchungen nötig.",
+      mixExample: "Beispiel: Person 1 → Fun Dives · Person 2 → Try Dive",
       startedFrom: "Gestartet von",
       mixedBooking: "Gemischte Buchung",
       numPeople: "Anzahl Personen",
@@ -258,7 +278,7 @@
       startDate: "Gewünschtes Start- / Tourdatum",
       numDivers: "Anzahl Taucher",
       numGuests: "Anzahl Gäste",
-      errProduct: "Bitte Produkt für Person ",
+      errProduct: "Bitte Aktivität für Person ",
       errOption: "Bitte Paket für Person ",
       equipment: "Ausrüstung",
       bcdSize: "BCD-Größe",
@@ -280,7 +300,7 @@
         "(Die eigene E-Mail jedes Gastes steht im jeweiligen Block oben.)",
       message: "Nachricht",
       page: "Seite",
-      productUrl: "Produkt-URL",
+      productUrl: "Aktivitätsseite",
       thanks: "Vielen Dank!",
       subjectLbl: "Betreff",
       errSpam: "Spam-Prüfung fehlgeschlagen.",
@@ -319,13 +339,15 @@
     th: {
       titleSuffix: " – Chang Diving (ฉบับร่าง)",
       pageTitle: "จองการผจญภัยดำน้ำของคุณ",
-      viewProduct: "ดูหน้ารายละเอียด",
+      viewProduct: "ดูหน้ากิจกรรม",
       diversSection: "2. คน",
       diversIntro:
-        "แต่ละคนเลือก<strong>ผลิตภัณฑ์และแพ็กเกจของตัวเอง</strong> นักดำน้ำต้องมีชื่อ วันเกิด และอีเมล (คอร์สและประกันอุบัติเหตุดำน้ำ) ผู้ดำน้ำตื้นกรอกน้อยกว่า รูปใบรับรองเป็นทางเลือก — แนบไฟล์ในแอปอีเมล",
+        "แต่ละคนเลือก<strong>กิจกรรมและแพ็กเกจของตัวเอง</strong> นักดำน้ำต้องมีชื่อ วันเกิด และอีเมล (คอร์สและประกันอุบัติเหตุดำน้ำ) ผู้ดำน้ำตื้นกรอกน้อยกว่า รูปใบรับรองเป็นทางเลือก — แนบไฟล์ในแอปอีเมล",
+      diversIntroGroup:
+        "<strong>กลุ่มผสม:</strong> เลือกกิจกรรมของแต่ละคนด้านล่าง (เช่น Fun Dives + Try Dive) วันเดียวกันทุกคน — ใช้เบอร์โทรร่วมในขั้นตอนที่ 3",
       snorkelSection: "2. คน",
       snorkelIntro:
-        "แต่ละคนเลือกผลิตภัณฑ์และแพ็กเกจของตัวเอง สำหรับดำน้ำตื้นต้องการเพียง: ชื่อ วันเกิด อีเมล กินเจ ไซส์เวทสูท/เสื้อยืด และไซส์ตีนกบ/รองเท้า",
+        "แต่ละคนเลือกกิจกรรมและแพ็กเกจของตัวเอง สำหรับดำน้ำตื้นต้องการเพียง: ชื่อ วันเกิด อีเมล กินเจ ไซส์เวทสูท/เสื้อยืด และไซส์ตีนกบ/รองเท้า",
       sizeWetsuitShirt: "ไซส์เวทสูท / เสื้อยืด (EU)",
       sizeFinShoe: "ไซส์ตีนกบ / รองเท้า (EU)",
       medicalNote:
@@ -333,8 +355,16 @@
       person: "บุคคล",
       diver: "นักดำน้ำ",
       guest: "ผู้ร่วมทริป",
-      productLbl: "ผลิตภัณฑ์",
+      productLbl: "กิจกรรม",
+      productLblGroup: "กิจกรรมของบุคคลนี้",
       optionLbl: "แพ็กเกจ / ตัวเลือก",
+      optionLblGroup: "แพ็กเกจของบุคคลนี้",
+      peopleMixHint:
+        "อยากจองกิจกรรมต่างกันในครั้งเดียว? เลือก 2–4 คน — แต่ละคนเลือกกิจกรรมของตัวเองด้านล่าง",
+      mixTitle: "ฟอร์มเดียว กิจกรรมต่างกันได้",
+      mixBody:
+        "วันเดียวกันสำหรับทุกคน ใต้แต่ละบุคคลเลือกกิจกรรมและแพ็กเกจของตัวเอง — ไม่ต้องจองแยก",
+      mixExample: "ตัวอย่าง: บุคคล 1 → Fun Dives · บุคคล 2 → Try Dive",
       startedFrom: "เริ่มจาก",
       mixedBooking: "การจองแบบผสม",
       numPeople: "จำนวนคน",
@@ -403,7 +433,7 @@
       startDate: "วันที่เริ่ม / ทริปที่ต้องการ",
       numDivers: "จำนวนนักดำน้ำ",
       numGuests: "จำนวนผู้ร่วมทริป",
-      errProduct: "กรุณาเลือกผลิตภัณฑ์สำหรับบุคคลที่ ",
+      errProduct: "กรุณาเลือกกิจกรรมสำหรับบุคคลที่ ",
       errOption: "กรุณาเลือกแพ็กเกจสำหรับบุคคลที่ ",
       equipment: "อุปกรณ์",
       bcdSize: "ไซส์ BCD",
@@ -423,7 +453,7 @@
       emailsNoteGuest: "(อีเมลของแต่ละคนอยู่ใต้บล็อกผู้ร่วมทริปด้านบน)",
       message: "ข้อความ",
       page: "หน้า",
-      productUrl: "URL ผลิตภัณฑ์",
+      productUrl: "หน้ากิจกรรม",
       thanks: "ขอบคุณ!",
       subjectLbl: "หัวข้อ",
       errSpam: "การตรวจสอบสแปมล้มเหลว",
@@ -1904,13 +1934,17 @@
     );
   }
 
-  function personTemplate(index, productKey, optionId) {
+  function personTemplate(index, productKey, optionId, isGroup) {
     var n = index + 1;
     var id = "p" + n;
     var key = PRODUCTS[productKey] ? productKey : "other";
     var snorkel = isSnorkelKey(key);
+    var prodLbl = isGroup ? t.productLblGroup : t.productLbl;
+    var optLbl = isGroup ? t.optionLblGroup : t.optionLbl;
     return (
-      '<fieldset class="cdc-book__person" data-person="' +
+      '<fieldset class="cdc-book__person' +
+      (isGroup ? " cdc-book__person--group" : "") +
+      '" data-person="' +
       n +
       '" data-mode="' +
       (snorkel ? "snorkel" : "diver") +
@@ -1924,7 +1958,7 @@
       '<div class="cdc-book__field"><label for="' +
       id +
       '-product">' +
-      t.productLbl +
+      prodLbl +
       "</label>" +
       '<select id="' +
       id +
@@ -1934,7 +1968,7 @@
       '<div class="cdc-book__field"><label for="' +
       id +
       '-option">' +
-      t.optionLbl +
+      optLbl +
       "</label>" +
       '<select id="' +
       id +
@@ -2077,11 +2111,12 @@
       prev[i] = snapshotPerson(fs);
     });
 
+    var isGroup = count >= 2;
     var html = "";
     for (var i = 0; i < count; i++) {
       var pk = defaultProductForIndex(i, prev);
       var oid = defaultOptionForIndex(i, pk, prev);
-      html += personTemplate(i, pk, oid);
+      html += personTemplate(i, pk, oid, isGroup);
     }
     host.innerHTML = html;
 
@@ -2091,7 +2126,20 @@
     });
 
     var groupNote = $("book-group-note");
-    if (groupNote) groupNote.hidden = count < 2;
+    if (groupNote) {
+      groupNote.hidden = !isGroup;
+      var titleEl = $("book-group-note-title");
+      var bodyEl = $("book-group-note-body");
+      var exampleEl = $("book-group-note-example");
+      if (titleEl) titleEl.textContent = t.mixTitle;
+      if (bodyEl) bodyEl.textContent = t.mixBody;
+      if (exampleEl) exampleEl.textContent = t.mixExample;
+    }
+    var mixHint = $("book-people-mix-hint");
+    if (mixHint) {
+      mixHint.textContent = t.peopleMixHint;
+      mixHint.hidden = isGroup;
+    }
     syncPeopleUi();
     updateHeadingAndSummary();
   }
@@ -2146,13 +2194,17 @@
   function syncPeopleUi() {
     var people = document.querySelectorAll("#book-people .cdc-book__person");
     var anyDiver = false;
+    var isGroup = people.length >= 2;
     people.forEach(function (fs) {
       if (!isSnorkelKey(fieldVal(fs, "productKey"))) anyDiver = true;
     });
     var section = $("book-people-heading");
     if (section) section.textContent = t.diversSection;
     var intro = $("book-people-intro");
-    if (intro) intro.innerHTML = t.diversIntro;
+    if (intro) {
+      intro.innerHTML = isGroup ? t.diversIntroGroup : t.diversIntro;
+      intro.classList.toggle("cdc-book__intro--group", isGroup);
+    }
     var medical = $("book-medical-note");
     if (medical) {
       medical.hidden = people.length > 0 && !anyDiver;

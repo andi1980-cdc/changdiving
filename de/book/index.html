@@ -433,13 +433,58 @@
       .cdc-book__footer-note a {
         color: var(--sea);
       }
-      .cdc-book__group-note {
-        margin: 0.4rem 0 0;
-        padding: 0.45rem 0.6rem;
+      .cdc-book__people-mix-hint {
+        margin: 0.35rem 0 0;
+        font-size: 0.78rem;
+        color: var(--muted);
+        line-height: 1.35;
+      }
+      .cdc-book__mix-callout {
+        margin: 0.65rem 0 0;
+        padding: 0.7rem 0.85rem;
+        border-radius: 8px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 90, 140, 0.1),
+          rgba(0, 90, 140, 0.04)
+        );
+        border: 1px solid rgba(0, 90, 140, 0.35);
+        color: var(--sea-deep);
+      }
+      .cdc-book__mix-callout-title {
+        margin: 0 0 0.25rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--sea);
+      }
+      .cdc-book__mix-callout-body {
+        margin: 0 0 0.4rem;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: var(--ink);
+      }
+      .cdc-book__mix-callout-example {
+        margin: 0;
+        display: inline-block;
+        padding: 0.3rem 0.55rem;
+        border-radius: 999px;
+        background: #fff;
+        border: 1px solid var(--line);
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--sea-deep);
+      }
+      .cdc-book__intro--group {
+        padding: 0.5rem 0.65rem;
         border-radius: 6px;
-        background: #fff8e1;
-        border: 1px solid #e0c36a;
-        color: #5c4a00;
+        background: rgba(0, 90, 140, 0.06);
+        border-left: 3px solid var(--sea);
+        color: var(--ink);
+      }
+      .cdc-book__person--group {
+        border-color: rgba(0, 90, 140, 0.35);
+      }
+      .cdc-book__person--group legend {
         font-size: 0.8rem;
       }
       .cdc-book__hp {
@@ -668,7 +713,7 @@
           —
         </div>
         <p style="margin: 0 0 0.85rem; font-size: 0.85rem">
-          <a id="book-product-link" href="/de/courses/">Zur Produktseite</a>
+          <a id="book-product-link" href="/de/courses/">Zur Aktivitätsseite</a>
         </p>
 
         <form id="cdc-book-form" action="#" method="post" novalidate>
@@ -700,18 +745,32 @@
                 </select>
               </div>
             </div>
-            <p id="book-group-note" class="cdc-book__group-note" hidden>
-              <strong>Gruppe (2–4):</strong> gleiches Datum für alle. Jede
-              Person kann unten ein eigenes Produkt/Paket wählen — ein
-              gemeinsames Telefon für die Buchung.
+            <p id="book-people-mix-hint" class="cdc-book__people-mix-hint">
+              Unterschiedliche Aktivitäten in einer Buchung? 2–4 Personen wählen
+              — jede Person sucht unten ihre eigene Aktivität.
             </p>
+            <div id="book-group-note" class="cdc-book__mix-callout" hidden>
+              <p id="book-group-note-title" class="cdc-book__mix-callout-title">
+                Ein Formular, verschiedene Aktivitäten
+              </p>
+              <p id="book-group-note-body" class="cdc-book__mix-callout-body">
+                Gleiches Datum für alle. Bei jeder Person unten eigene Aktivität
+                und Paket wählen — keine getrennten Buchungen nötig.
+              </p>
+              <p
+                id="book-group-note-example"
+                class="cdc-book__mix-callout-example"
+              >
+                Beispiel: Person 1 → Fun Dives · Person 2 → Try Dive
+              </p>
+            </div>
           </section>
 
           <section class="cdc-book__section">
             <h2 id="book-people-heading">2. Personen</h2>
             <p id="book-people-intro" class="cdc-book__intro">
-              Jede Person wählt ihr eigenes Produkt/Paket und trägt ihre Angaben
-              ein (Schnorchler brauchen weniger Felder).
+              Jede Person wählt ihr eigene Aktivität/Paket und trägt ihre
+              Angaben ein (Schnorchler brauchen weniger Felder).
             </p>
             <p id="book-medical-note" class="cdc-book__medical">
               Brauche ich eine ärztliche Untersuchung?
@@ -859,6 +918,6 @@
     </footer>
 
     <script src="/js/global.min.js?v=a11y-menu-2" defer></script>
-    <script src="/js/booking/booking-form.js?v=draft-41" defer></script>
+    <script src="/js/booking/booking-form.js?v=draft-43" defer></script>
   </body>
 </html>
