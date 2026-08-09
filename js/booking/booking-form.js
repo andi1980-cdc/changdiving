@@ -1097,6 +1097,59 @@
           },
         ],
       },
+      "advanced-wreck": {
+        h1:
+          LANG === "de"
+            ? "TDI Advanced Wreck Koh Chang – ab 18.990 THB"
+            : LANG === "th"
+              ? "TDI Advanced Wreck Koh Chang – เริ่ม 18,990 บาท"
+              : "TDI Advanced Wreck Koh Chang – from 18,990 THB",
+        shortLabel: "TDI Advanced Wreck",
+        type: "tech",
+        url: "/" + LANG + "/courses/advanced-wreck/",
+        options: [
+          {
+            id: "rec-b",
+            label:
+              LANG === "de"
+                ? "Rec Paket B (nur Kurs)"
+                : LANG === "th"
+                  ? "Rec Package B (course only)"
+                  : "Rec Package B (course only)",
+            price: price("18,990 THB", "18.990 THB", "18,990 บาท"),
+          },
+          {
+            id: "rec-a",
+            label:
+              LANG === "de"
+                ? "Rec Paket A (erweitert)"
+                : LANG === "th"
+                  ? "Rec Package A (extended)"
+                  : "Rec Package A (extended)",
+            price: price("20,990 THB", "20.990 THB", "20,990 บาท"),
+          },
+          {
+            id: "tech-b",
+            label:
+              LANG === "de"
+                ? "Tech Paket B (nur Kurs)"
+                : LANG === "th"
+                  ? "Tech Package B (course only)"
+                  : "Tech Package B (course only)",
+            price: price("24,990 THB", "24.990 THB", "24,990 บาท"),
+          },
+          {
+            id: "tech-a",
+            label:
+              LANG === "de"
+                ? "Tech Paket A (erweitert)"
+                : LANG === "th"
+                  ? "Tech Package A (extended)"
+                  : "Tech Package A (extended)",
+            price: price("34,990 THB", "34.990 THB", "34,990 บาท"),
+          },
+        ],
+      },
       "advanced-nitrox": {
         h1:
           LANG === "de"
