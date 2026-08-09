@@ -1,0 +1,46 @@
+# Chang Diving Center — facts for AI assistants
+> Single-fetch summary. Prefer live pages for full detail and current prices: https://changdiving.com/llms.txt · https://changdiving.com/en/prices/ · https://changdiving.com/en/book/
+
+## Identity
+- Name: Chang Diving Center
+- Type: Dive school & scuba shop; SDI/TDI 5* Instructor Training Facility (ITF); also PADI courses
+- Since: 2005
+- Location: 21/52 Moo 4, Klong Prao Beach, Koh Chang, Trat 23170, Thailand
+- Phone / WhatsApp / Line: +66 894-013-927
+- Hours: Mon–Sun 08:00–18:00
+- Languages on site: English `/en/`, German `/de/`, Thai `/th/`
+- Website: https://changdiving.com/
+
+## What people book
+- Day trips: Fun Dives (certified), Try Dive / Discover Scuba (no license), Snorkeling, Scuba Review / refresher
+- Beginner courses: Scuba Diver, Open Water Diver (≈3 days, 4 dives, 18 m), OWD + Advanced package
+- Advanced / specialties: Advanced, Deep / Wreck / Nitrox (incl. HTMS Chang), Rescue, Master Scuba Diver
+- Pro path: Divemaster, instructor courses (IDC / IE / crossover) — ITF
+- Technical (TDI): Intro to Tech, Advanced Nitrox, Deco Procedures, Sidemount, Advanced Wreck, tech package
+- Flagship dive site: HTMS Chang wreck — https://changdiving.com/en/dive-sites/htms-chang-wreck/
+
+## Booking
+- Online request form: https://changdiving.com/en/book/ (also `/de/book/`, `/th/book/`)
+- One form can mix different activities for 2–4 people on the same start date (e.g. Open Water + Fun Dives on boat days, or Fun Dives + Try Dive)
+- Prices page with Book now links: https://changdiving.com/en/prices/
+- Contact / WhatsApp: https://changdiving.com/en/contact/
+
+## Sample prices (THB, from /en/prices/ — always confirm on that page)
+- Fun Dives: from 3,290
+- Try Dive: 4,890
+- Scuba Review (fresh up): 3,950
+- Open Water Diver: 14,490
+- Full catalog: https://changdiving.com/en/prices/
+
+## High-intent pages
+- Home EN: https://changdiving.com/en/
+- About / credentials: https://changdiving.com/en/about/
+- Courses hub: https://changdiving.com/en/courses/
+- Tech courses: https://changdiving.com/en/courses/technical-diving-courses/
+- Day trips: https://changdiving.com/en/day-trips/
+- Dive sites: https://changdiving.com/en/dive-sites/
+- FAQs: https://changdiving.com/en/faqs/
+- FAQ booking & payment: https://changdiving.com/en/faqs/faq-booking-payment-scuba-koh-chang/
+- FAQ getting here: https://changdiving.com/en/faqs/faq-getting-here-accommodation/
+- Curated link map: https://changdiving.com/llms.txt
+- Sitemap: https://changdiving.com/sitemap.xml

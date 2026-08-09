@@ -1,7 +1,7 @@
 # Chang Diving Center
 > Dive school and scuba shop on Koh Chang, Thailand (Klong Prao Beach). SDI/TDI 5* Instructor Training Facility (ITF); also PADI courses. Day trips, wreck diving (HTMS Chang), snorkeling, and gear — since 2005. Languages: English (`/en/`), German (`/de/`), Thai (`/th/`).
 
-Prefer language-prefixed URLs. Default / English canonical hub: `/en/`. Contact: +66 894-013-927. Book online: `/en/book/` (also `/de/book/`, `/th/book/`) — one form can mix different activities for 2–4 people on the same start date. Site search (noindex utility): `/en/search/`, `/de/search/`, `/th/search/`. Sitemap: https://changdiving.com/sitemap.xml
+Prefer language-prefixed URLs. Default / English canonical hub: `/en/`. Contact: +66 894-013-927. Book online: `/en/book/` (also `/de/book/`, `/th/book/`) — one form can mix different activities for 2–4 people on the same start date. Full facts in one fetch: https://changdiving.com/llms-full.txt. Site search (noindex utility): `/en/search/`, `/de/search/`, `/th/search/`. Sitemap: https://changdiving.com/sitemap.xml
 
 ## Primary
 - [English home](https://changdiving.com/en/): Main English landing page
