@@ -601,7 +601,94 @@
         shortLabel: "Advanced Diver",
         type: "course",
         url: "/" + LANG + "/courses/advanced/",
-        options: [{ id: "aowd", label: "Advanced Diver", price: see }],
+        options: [
+          {
+            id: "sdi",
+            label: "SDI AOWD",
+            price: price("13,490 THB", "13.490 THB", "13,490 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI AOWD",
+            price: price("13,990 THB", "13.990 THB", "13,990 บาท"),
+          },
+          {
+            id: "aowd-nitrox-sdi",
+            label:
+              LANG === "de"
+                ? "AOWD + Nitrox Kombi (SDI)"
+                : LANG === "th"
+                  ? "AOWD + Nitrox คอมโบ (SDI)"
+                  : "AOWD + Nitrox Combo (SDI)",
+            price: price("18,480 THB", "18.480 THB", "18,480 บาท"),
+          },
+          {
+            id: "aowd-nitrox-padi",
+            label:
+              LANG === "de"
+                ? "AOWD + Nitrox Kombi (PADI)"
+                : LANG === "th"
+                  ? "AOWD + Nitrox คอมโบ (PADI)"
+                  : "AOWD + Nitrox Combo (PADI)",
+            price: price("19,980 THB", "19.980 THB", "19,980 บาท"),
+          },
+        ],
+      },
+      "open-to-divemaster": {
+        h1:
+          LANG === "de"
+            ? "Open Water to Divemaster Praktikum Koh Chang – ab 68.800 THB"
+            : LANG === "th"
+              ? "Open Water to Divemaster อินเทิร์นชิป Koh Chang – เริ่ม 68,800 บาท"
+              : "Open Water to Divemaster Internship Koh Chang",
+        shortLabel:
+          LANG === "de"
+            ? "OW to Divemaster"
+            : LANG === "th"
+              ? "OW ถึง Divemaster"
+              : "OW to Divemaster",
+        type: "course",
+        url: "/" + LANG + "/courses/open-to-divemaster/",
+        options: [
+          {
+            id: "internship",
+            label:
+              LANG === "de"
+                ? "Open Water to Divemaster Praktikum"
+                : LANG === "th"
+                  ? "Open Water to Divemaster อินเทิร์นชิป"
+                  : "Open Water to Divemaster Internship",
+            price: price("68,800 THB", "68.800 THB", "68,800 บาท"),
+          },
+        ],
+      },
+      "first-aid": {
+        h1:
+          LANG === "de"
+            ? "Erste Hilfe (EFR) Koh Chang – 1 Tag ab 4.990 THB"
+            : LANG === "th"
+              ? "ปฐมพยาบาล (EFR) Koh Chang – 1 วัน เริ่ม 4,990 บาท"
+              : "First Aid (EFR) Koh Chang – 1 day from 4,990 THB",
+        shortLabel:
+          LANG === "de"
+            ? "Erste Hilfe (EFR)"
+            : LANG === "th"
+              ? "ปฐมพยาบาล (EFR)"
+              : "First Aid (EFR)",
+        type: "course",
+        url: "/" + LANG + "/courses/first-aid/",
+        options: [
+          {
+            id: "efr",
+            label:
+              LANG === "de"
+                ? "Erste Hilfe / EFR"
+                : LANG === "th"
+                  ? "ปฐมพยาบาล / EFR"
+                  : "First Aid / EFR",
+            price: price("4,990 THB", "4.990 THB", "4,990 บาท"),
+          },
+        ],
       },
       "deep-wreck-nitrox": {
         h1:
