@@ -463,16 +463,23 @@
         line-height: 1.4;
         color: var(--ink);
       }
+      .cdc-book__mix-callout-examples {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+        margin: 0;
+      }
       .cdc-book__mix-callout-example {
         margin: 0;
-        display: inline-block;
-        padding: 0.3rem 0.55rem;
-        border-radius: 999px;
+        display: block;
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
         background: #fff;
         border: 1px solid var(--line);
         font-size: 0.8rem;
         font-weight: 600;
         color: var(--sea-deep);
+        line-height: 1.35;
       }
       .cdc-book__intro--group {
         padding: 0.5rem 0.65rem;
@@ -757,12 +764,22 @@
                 วันเดียวกันสำหรับทุกคน
                 ใต้แต่ละบุคคลเลือกกิจกรรมและแพ็กเกจของตัวเอง — ไม่ต้องจองแยก
               </p>
-              <p
-                id="book-group-note-example"
-                class="cdc-book__mix-callout-example"
-              >
-                ตัวอย่าง: บุคคล 1 → Fun Dives · บุคคล 2 → Try Dive
-              </p>
+              <div class="cdc-book__mix-callout-examples">
+                <p
+                  id="book-group-note-example"
+                  class="cdc-book__mix-callout-example"
+                >
+                  ตัวอย่าง 1: บุคคล 1 → Fun Dives · บุคคล 2 → Try Dive (หรือ
+                  Snorkeling)
+                </p>
+                <p
+                  id="book-group-note-example-2"
+                  class="cdc-book__mix-callout-example"
+                >
+                  ตัวอย่าง 2: บุคคล 1 → คอร์ส Open Water · บุคคล 2 → Fun Dives
+                  ในวันเรือของคอร์ส
+                </p>
+              </div>
             </div>
           </section>
 
@@ -915,6 +932,6 @@
     </footer>
 
     <script src="/js/global.min.js?v=a11y-menu-2" defer></script>
-    <script src="/js/booking/booking-form.js?v=draft-43" defer></script>
+    <script src="/js/booking/booking-form.js?v=draft-44" defer></script>
   </body>
 </html>

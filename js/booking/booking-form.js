@@ -53,7 +53,10 @@
       mixTitle: "One form, different activities",
       mixBody:
         "Same trip date for everyone. Under each person, choose their own activity and package — you do not need separate bookings.",
-      mixExample: "Example: Person 1 → Fun Dives · Person 2 → Try Dive",
+      mixExample1:
+        "Example 1: Person 1 → Fun Dives · Person 2 → Try Dive (or Snorkeling)",
+      mixExample2:
+        "Example 2: Person 1 → Open Water course · Person 2 → Fun Dives on the boat days of the course",
       startedFrom: "Started from",
       mixedBooking: "Mixed booking",
       numPeople: "Number of people",
@@ -208,7 +211,10 @@
       mixTitle: "Ein Formular, verschiedene Aktivitäten",
       mixBody:
         "Gleiches Datum für alle. Bei jeder Person unten eigene Aktivität und Paket wählen — keine getrennten Buchungen nötig.",
-      mixExample: "Beispiel: Person 1 → Fun Dives · Person 2 → Try Dive",
+      mixExample1:
+        "Beispiel 1: Person 1 → Fun Dives · Person 2 → Try Dive (oder Schnorcheln)",
+      mixExample2:
+        "Beispiel 2: Person 1 → Open-Water-Kurs · Person 2 → Fun Dives an den Bootstagen des Kurses",
       startedFrom: "Gestartet von",
       mixedBooking: "Gemischte Buchung",
       numPeople: "Anzahl Personen",
@@ -364,7 +370,10 @@
       mixTitle: "ฟอร์มเดียว กิจกรรมต่างกันได้",
       mixBody:
         "วันเดียวกันสำหรับทุกคน ใต้แต่ละบุคคลเลือกกิจกรรมและแพ็กเกจของตัวเอง — ไม่ต้องจองแยก",
-      mixExample: "ตัวอย่าง: บุคคล 1 → Fun Dives · บุคคล 2 → Try Dive",
+      mixExample1:
+        "ตัวอย่าง 1: บุคคล 1 → Fun Dives · บุคคล 2 → Try Dive (หรือ Snorkeling)",
+      mixExample2:
+        "ตัวอย่าง 2: บุคคล 1 → คอร์ส Open Water · บุคคล 2 → Fun Dives ในวันเรือของคอร์ส",
       startedFrom: "เริ่มจาก",
       mixedBooking: "การจองแบบผสม",
       numPeople: "จำนวนคน",
@@ -2130,10 +2139,12 @@
       groupNote.hidden = !isGroup;
       var titleEl = $("book-group-note-title");
       var bodyEl = $("book-group-note-body");
-      var exampleEl = $("book-group-note-example");
+      var example1El = $("book-group-note-example");
+      var example2El = $("book-group-note-example-2");
       if (titleEl) titleEl.textContent = t.mixTitle;
       if (bodyEl) bodyEl.textContent = t.mixBody;
-      if (exampleEl) exampleEl.textContent = t.mixExample;
+      if (example1El) example1El.textContent = t.mixExample1;
+      if (example2El) example2El.textContent = t.mixExample2;
     }
     var mixHint = $("book-people-mix-hint");
     if (mixHint) {
