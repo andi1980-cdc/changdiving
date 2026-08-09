@@ -690,6 +690,52 @@
           },
         ],
       },
+      "rescue-diver": {
+        h1:
+          LANG === "de"
+            ? "Rescue Diver Koh Chang – Zertifizierung in 3 Tagen - ab 14.990 THB"
+            : LANG === "th"
+              ? "Rescue Diver Koh Chang – รับใบรับรองใน 3 วัน - เริ่ม 14,990 บาท"
+              : "Rescue Diver Koh Chang – Get certified in 3 days - from 14,990 THB",
+        shortLabel: "Rescue Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/rescue-diver/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Rescue",
+            price: price("14,990 THB", "14.990 THB", "14,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Rescue",
+            price: price("15,490 THB", "15.490 THB", "15,490 บาท"),
+          },
+        ],
+      },
+      "master-scuba-diver": {
+        h1:
+          LANG === "de"
+            ? "Master Scuba Diver Koh Chang – ab 50.524 THB"
+            : LANG === "th"
+              ? "Master Scuba Diver Koh Chang – เริ่ม 50,524 บาท"
+              : "Master Scuba Diver Koh Chang – from 50,524 THB",
+        shortLabel: "Master Scuba Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/master-scuba-diver/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI MSD",
+            price: price("50,524 THB", "50.524 THB", "50,524 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI MSD",
+            price: price("62,424 THB", "62.424 THB", "62,424 บาท"),
+          },
+        ],
+      },
       "deep-wreck-nitrox": {
         h1:
           LANG === "de"
