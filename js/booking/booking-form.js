@@ -865,6 +865,238 @@
           },
         ],
       },
+      "nitrox-diver": {
+        h1:
+          LANG === "de"
+            ? "Nitrox Diver Koh Chang – ab 7.990 THB"
+            : LANG === "th"
+              ? "Nitrox Diver Koh Chang – เริ่ม 7,990 บาท"
+              : "Nitrox Diver Koh Chang – from 7,990 THB",
+        shortLabel: "Nitrox Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/nitrox-diver/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Nitrox",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Nitrox",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+          {
+            id: "theory",
+            label:
+              LANG === "de"
+                ? "Nur Theorie"
+                : LANG === "th"
+                  ? "เฉพาะทฤษฎี"
+                  : "Theory only",
+            price: see,
+          },
+        ],
+      },
+      "nitrox-blender": {
+        h1:
+          LANG === "de"
+            ? "Nitrox Gas Blender Koh Chang – ab 9.990 THB"
+            : LANG === "th"
+              ? "Nitrox Gas Blender Koh Chang – เริ่ม 9,990 บาท"
+              : "Nitrox Gas Blender Koh Chang – from 9,990 THB",
+        shortLabel: "Nitrox Gas Blender",
+        type: "course",
+        url: "/" + LANG + "/courses/nitrox-blender/",
+        options: [
+          {
+            id: "tdi",
+            label: "TDI Nitrox Gas Blender",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Nitrox Gas Blender",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+        ],
+      },
+      "deep-diver": {
+        h1:
+          LANG === "de"
+            ? "Deep Diver Koh Chang – ab 7.990 THB"
+            : LANG === "th"
+              ? "Deep Diver Koh Chang – เริ่ม 7,990 บาท"
+              : "Deep Diver Koh Chang – from 7,990 THB",
+        shortLabel: "Deep Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/deep-diver/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Deep Diver",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Deep Diver",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+        ],
+      },
+      "wreck-diver": {
+        h1:
+          LANG === "de"
+            ? "Wreck Diver Koh Chang – ab 9.990 THB"
+            : LANG === "th"
+              ? "Wreck Diver Koh Chang – เริ่ม 9,990 บาท"
+              : "Wreck Diver Koh Chang – from 9,990 THB",
+        shortLabel: "Wreck Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/wreck-diver/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Wreck Diver",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Wreck Diver",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+        ],
+      },
+      night: {
+        h1:
+          LANG === "de"
+            ? "Night Diver Koh Chang – ab 7.990 THB"
+            : LANG === "th"
+              ? "Night Diver Koh Chang – เริ่ม 7,990 บาท"
+              : "Night Diver Koh Chang – from 7,990 THB",
+        shortLabel: "Night Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/night/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Night Diver",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Night Diver",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+        ],
+      },
+      navigation: {
+        h1:
+          LANG === "de"
+            ? "Navigation Specialty Koh Chang – ab 7.990 THB"
+            : LANG === "th"
+              ? "Navigation Specialty Koh Chang – เริ่ม 7,990 บาท"
+              : "Navigation Specialty Koh Chang – from 7,990 THB",
+        shortLabel: "Navigation",
+        type: "course",
+        url: "/" + LANG + "/courses/navigation/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Navigation",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Navigation",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+        ],
+      },
+      "search-recovery": {
+        h1:
+          LANG === "de"
+            ? "Search & Recovery Koh Chang – ab 7.990 THB"
+            : LANG === "th"
+              ? "Search & Recovery Koh Chang – เริ่ม 7,990 บาท"
+              : "Search & Recovery Koh Chang – from 7,990 THB",
+        shortLabel: "Search & Recovery",
+        type: "course",
+        url: "/" + LANG + "/courses/search-recovery/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Search & Recovery",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Search & Recovery",
+            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+          },
+        ],
+      },
+      sidemount: {
+        h1:
+          LANG === "de"
+            ? "Sidemount Diver Koh Chang – ab 9.990 THB"
+            : LANG === "th"
+              ? "Sidemount Diver Koh Chang – เริ่ม 9,990 บาท"
+              : "Sidemount Diver Koh Chang – from 9,990 THB",
+        shortLabel: "Sidemount Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/sidemount/",
+        options: [
+          {
+            id: "sdi",
+            label: "SDI Sidemount",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+          {
+            id: "padi",
+            label: "PADI Sidemount",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+          },
+          {
+            id: "solo-combo",
+            label:
+              LANG === "de"
+                ? "Solo + Sidemount Kombi (SDI)"
+                : LANG === "th"
+                  ? "Combo Solo + Sidemount (SDI)"
+                  : "Solo + Sidemount Combo (SDI)",
+            price: price("16,990 THB", "16.990 THB", "16,990 บาท"),
+          },
+        ],
+      },
+      "solo-diver": {
+        h1:
+          LANG === "de"
+            ? "SDI Solo Diver Koh Chang – ab 8.990 THB"
+            : LANG === "th"
+              ? "SDI Solo Diver Koh Chang – เริ่ม 8,990 บาท"
+              : "SDI Solo Diver Koh Chang – from 8,990 THB",
+        shortLabel: "Solo Diver",
+        type: "course",
+        url: "/" + LANG + "/courses/solo-diver/",
+        options: [
+          {
+            id: "solo",
+            label: "SDI Solo Diver",
+            price: price("8,990 THB", "8.990 THB", "8,990 บาท"),
+          },
+          {
+            id: "solo-combo",
+            label:
+              LANG === "de"
+                ? "Solo + Sidemount Kombi (SDI)"
+                : LANG === "th"
+                  ? "Combo Solo + Sidemount (SDI)"
+                  : "Solo + Sidemount Combo (SDI)",
+            price: price("16,990 THB", "16.990 THB", "16,990 บาท"),
+          },
+        ],
+      },
       "advanced-nitrox": {
         h1:
           LANG === "de"
