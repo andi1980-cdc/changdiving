@@ -1184,11 +1184,90 @@
         type: "tech",
         url: "/" + LANG + "/courses/deco-procedures/",
         options: [
-          { id: "single", label: "Decompression Procedures", price: see },
+          {
+            id: "single",
+            label: "Decompression Procedures",
+            price: price("24,990 THB", "24.990 THB", "24,990 บาท"),
+          },
           {
             id: "package",
             label: "Deco Procedures + Advanced Nitrox",
             price: price("33,990 THB", "33.990 THB", "33,990 บาท"),
+          },
+        ],
+      },
+      "intro-to-tech": {
+        h1:
+          LANG === "de"
+            ? "TDI Intro to Tech Koh Chang – ab 14.990 THB"
+            : LANG === "th"
+              ? "TDI Intro to Tech Koh Chang – เริ่ม 14,990 บาท"
+              : "TDI Intro to Tech Koh Chang – from 14,990 THB",
+        shortLabel: "TDI Intro to Tech",
+        type: "tech",
+        url: "/" + LANG + "/courses/intro-to-tech/",
+        options: [
+          {
+            id: "intro",
+            label: "TDI Intro to Tech",
+            price: price("14,990 THB", "14.990 THB", "14,990 บาท"),
+          },
+        ],
+      },
+      "tdi-sidemount": {
+        h1:
+          LANG === "de"
+            ? "TDI Sidemount Koh Chang – ab 14.990 THB"
+            : LANG === "th"
+              ? "TDI Sidemount Koh Chang – เริ่ม 14,990 บาท"
+              : "TDI Sidemount Koh Chang – from 14,990 THB",
+        shortLabel: "TDI Sidemount",
+        type: "tech",
+        url: "/" + LANG + "/courses/tdi-sidemount/",
+        options: [
+          {
+            id: "sidemount",
+            label: "TDI Sidemount Diver",
+            price: price("14,990 THB", "14.990 THB", "14,990 บาท"),
+          },
+          {
+            id: "solo-combo",
+            label:
+              LANG === "de"
+                ? "TDI Sidemount + SDI Solo"
+                : "TDI Sidemount + SDI Solo Diver",
+            price: price("21,990 THB", "21.990 THB", "21,990 บาท"),
+          },
+          {
+            id: "adv-nitrox-combo",
+            label:
+              LANG === "de"
+                ? "TDI Sidemount + Advanced Nitrox"
+                : "TDI Sidemount + Advanced Nitrox",
+            price: price("23,990 THB", "23.990 THB", "23,990 บาท"),
+          },
+        ],
+      },
+      "tech-package": {
+        h1:
+          LANG === "de"
+            ? "TDI Tech Package Koh Chang – ab 66.990 THB"
+            : LANG === "th"
+              ? "TDI Tech Package Koh Chang – เริ่ม 66,990 บาท"
+              : "TDI Tech Package Koh Chang – from 66,990 THB",
+        shortLabel: "TDI Tech Package",
+        type: "tech",
+        url: "/" + LANG + "/courses/tech-package/",
+        options: [
+          {
+            id: "package",
+            label:
+              LANG === "de"
+                ? "Adv. Nitrox + Deco + Adv. Wreck"
+                : LANG === "th"
+                  ? "Adv. Nitrox + Deco + Adv. Wreck"
+                  : "Adv. Nitrox + Deco + Adv. Wreck",
+            price: price("66,990 THB", "66.990 THB", "66,990 บาท"),
           },
         ],
       },
