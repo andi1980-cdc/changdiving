@@ -182,7 +182,8 @@
         " Long group messages can hit length limits on some phones — use the preview to copy/paste if needed.",
       draftUseIntro: " Send with ",
       draftUseOr: " or ",
-      draftUseEnd: " (your form data is included; channel is tagged for our team).",
+      draftUseEnd:
+        " (your form data is included; channel is tagged for our team).",
       draftUseEmail: "email",
       draftUseWhatsApp: "WhatsApp",
       draftUseLine: "LINE",
@@ -353,8 +354,7 @@
       draftUseWhatsApp: "WhatsApp",
       draftUseLine: "LINE",
       btnLine: "LINE",
-      lineHint:
-        "In LINE Chang Diving (+66 894-013-927) als Empfänger wählen.",
+      lineHint: "In LINE Chang Diving (+66 894-013-927) als Empfänger wählen.",
       seePage: "siehe Seite",
       otherLabel: "Sonstiges / unsicher",
       otherOpt: "Allgemeine Buchungsanfrage",
@@ -510,14 +510,12 @@
         " ข้อความกลุ่มยาวอาจเกินขีดจำกัดบนบางมือถือ — ใช้ตัวอย่างเพื่อคัดลอกได้",
       draftUseIntro: " ส่งด้วย ",
       draftUseOr: " หรือ ",
-      draftUseEnd:
-        " (มีข้อมูลฟอร์มครบ และระบุช่องทางสำหรับทีมเราแล้ว)",
+      draftUseEnd: " (มีข้อมูลฟอร์มครบ และระบุช่องทางสำหรับทีมเราแล้ว)",
       draftUseEmail: "อีเมล",
       draftUseWhatsApp: "WhatsApp",
       draftUseLine: "LINE",
       btnLine: "LINE",
-      lineHint:
-        "ใน LINE ให้เลือก Chang Diving (+66 894-013-927) เป็นผู้รับ",
+      lineHint: "ใน LINE ให้เลือก Chang Diving (+66 894-013-927) เป็นผู้รับ",
       seePage: "ดูหน้า",
       otherLabel: "อื่นๆ / ยังไม่แน่ใจ",
       otherOpt: "สอบถามการจองทั่วไป",
@@ -2760,7 +2758,8 @@
     }
     if (lineLink) {
       lineLink.hidden = false;
-      if (t.btnLine) lineLink.textContent = t.btnLine;
+      var lineLabel = lineLink.querySelector(".btn-cta__label");
+      if (lineLabel && t.btnLine) lineLabel.textContent = t.btnLine;
       if (t.lineHint) lineLink.title = t.lineHint;
       if (!lineLink._cdcBoundClick) {
         lineLink._cdcBoundClick = true;
