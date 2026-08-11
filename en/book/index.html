@@ -77,6 +77,49 @@
       }
       body.page-book .hero--transactional .hero-text {
         max-width: 100% !important;
+        width: 100% !important;
+      }
+      /* Footer: global .three.columns { min-width:200px } × 4 overflows iPhone */
+      body.page-book .footer-navigation .container,
+      body.page-book .footer-meta .container {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        overflow-x: hidden;
+      }
+      body.page-book .footer-navigation .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.75rem 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem 0 !important;
+        box-sizing: border-box !important;
+        grid-template-columns: none !important;
+      }
+      body.page-book .footer-navigation .three.columns {
+        min-width: 0 !important;
+        flex: 1 1 calc(50% - 0.5rem) !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0.15rem 0.35rem !important;
+      }
+      @media (max-width: 480px) {
+        body.page-book .footer-navigation .three.columns {
+          flex: 1 1 100% !important;
+        }
+      }
+      body.page-book .changdiving-box,
+      body.page-book .cdc-book__medical,
+      body.page-book .cdc-book__mix-callout,
+      body.page-book .cdc-book__actions {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
       }
       body.page-book .lang-switch {
         max-width: min(calc(100% - 16px), 240px);
@@ -591,17 +634,17 @@
 
     <link
       rel="preload"
-      href="/style.min.css?v=book-ios-overflow-2"
+      href="/style.min.css?v=book-ios-overflow-3"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=book-ios-overflow-2"
+      href="/style.min.css?v=book-ios-overflow-3"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=book-ios-overflow-2" />
+      <link rel="stylesheet" href="/style.min.css?v=book-ios-overflow-3" />
     </noscript>
   </head>
   <body class="page-book">
