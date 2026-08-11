@@ -10,10 +10,10 @@
   var TO_EMAIL = "info@changdiving.com";
   var WA_NUMBER = "66894013927";
   /**
-   * LINE Official Account basic ID (with @). Confirmed tentatively as @changdiving;
-   * change here if the real ID differs. Prefills chat via oaMessage.
+   * LINE Official Account basic ID with @ (e.g. "@realid"). Empty = use share URL
+   * (guest picks Chang Diving / +66 894-013-927). @changdiving was not valid.
    */
-  var LINE_ID = "@changdiving";
+  var LINE_ID = "";
   var MAX_PEOPLE = 4;
 
   /** Always English — staff copy into shared booking calendar. */
@@ -187,7 +187,8 @@
       draftUseWhatsApp: "WhatsApp",
       draftUseLine: "LINE",
       btnLine: "LINE",
-      lineHint: "Opens LINE chat with Chang Diving (@changdiving).",
+      lineHint:
+        "In LINE, choose Chang Diving (+66 894-013-927) as the recipient.",
       seePage: "see page",
       otherLabel: "Other / not sure",
       otherOpt: "General booking enquiry",
@@ -352,7 +353,8 @@
       draftUseWhatsApp: "WhatsApp",
       draftUseLine: "LINE",
       btnLine: "LINE",
-      lineHint: "Öffnet den LINE-Chat mit Chang Diving (@changdiving).",
+      lineHint:
+        "In LINE Chang Diving (+66 894-013-927) als Empfänger wählen.",
       seePage: "siehe Seite",
       otherLabel: "Sonstiges / unsicher",
       otherOpt: "Allgemeine Buchungsanfrage",
@@ -514,7 +516,8 @@
       draftUseWhatsApp: "WhatsApp",
       draftUseLine: "LINE",
       btnLine: "LINE",
-      lineHint: "เปิดแชท LINE กับ Chang Diving (@changdiving)",
+      lineHint:
+        "ใน LINE ให้เลือก Chang Diving (+66 894-013-927) เป็นผู้รับ",
       seePage: "ดูหน้า",
       otherLabel: "อื่นๆ / ยังไม่แน่ใจ",
       otherOpt: "สอบถามการจองทั่วไป",
@@ -2585,14 +2588,17 @@
   }
 
   function lineHref(subject, body) {
-    if (!LINE_ID) return "";
     var text = subject + "\n\n" + body;
-    return (
-      "https://line.me/R/oaMessage/" +
-      encodeURIComponent(LINE_ID) +
-      "/?" +
-      encodeURIComponent(text)
-    );
+    if (LINE_ID) {
+      return (
+        "https://line.me/R/oaMessage/" +
+        encodeURIComponent(LINE_ID) +
+        "/?" +
+        encodeURIComponent(text)
+      );
+    }
+    // No OA basic ID yet — share sheet with prefilled booking text
+    return "https://line.me/R/share?text=" + encodeURIComponent(text);
   }
 
   function buildOutboundLinks(payload) {
@@ -2753,16 +2759,12 @@
       waLink.addEventListener("click", onWhatsAppClick);
     }
     if (lineLink) {
-      if (LINE_ID) {
-        lineLink.hidden = false;
-        if (t.btnLine) lineLink.textContent = t.btnLine;
-        if (t.lineHint) lineLink.title = t.lineHint;
-        if (!lineLink._cdcBoundClick) {
-          lineLink._cdcBoundClick = true;
-          lineLink.addEventListener("click", onLineClick);
-        }
-      } else {
-        lineLink.hidden = true;
+      lineLink.hidden = false;
+      if (t.btnLine) lineLink.textContent = t.btnLine;
+      if (t.lineHint) lineLink.title = t.lineHint;
+      if (!lineLink._cdcBoundClick) {
+        lineLink._cdcBoundClick = true;
+        lineLink.addEventListener("click", onLineClick);
       }
     }
 
