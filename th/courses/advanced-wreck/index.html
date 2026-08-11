@@ -2050,14 +2050,94 @@
           <strong>5%</strong> เมื่อมีผู้เข้าร่วม
           <strong>2 คนขึ้นไป</strong> จอง<strong>คอร์สเดียวกัน</strong>พร้อมกัน
         </p>
-        <a
-          href="/th/book/?product=advanced-wreck&option=rec-b"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-cta btn-cta--tek"
-        >
-          📩 จองเลย
-        </a>
+        <!-- Book now → /book/ (Email · WhatsApp · LINE) -->
+        <style>
+          .cdc-book-cta {
+            text-align: center;
+            margin: 30px 0;
+          }
+          .cdc-book-cta__btn.btn-cta {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.85rem 1.5rem 0.75rem;
+            min-width: 12.5rem;
+            line-height: 1.2;
+          }
+          .cdc-book-cta__title {
+            font-size: 1.05em;
+          }
+          .cdc-book-cta__channels {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+          }
+          .cdc-book-cta__chip {
+            width: 1.7rem;
+            height: 1.7rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .cdc-book-cta__chip--email {
+            background: rgba(255, 255, 255, 0.22);
+          }
+          .cdc-book-cta__chip--wa {
+            background: #25d366;
+          }
+          .cdc-book-cta__chip--line {
+            background: #06c755;
+          }
+          .cdc-book-cta__chip svg {
+            width: 0.95rem;
+            height: 0.95rem;
+            display: block;
+            fill: #fff;
+          }
+          .cdc-book-cta__sub {
+            font-size: 0.72em;
+            font-weight: 600;
+            opacity: 0.95;
+          }
+        </style>
+        <div class="cdc-book-cta">
+          <a
+            href="/th/book/?product=advanced-wreck&option=rec-b"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-cta btn-cta--tek cdc-book-cta__btn"
+          >
+            <span class="cdc-book-cta__title">จองเลย</span>
+            <span class="cdc-book-cta__channels" aria-hidden="true">
+              <span class="cdc-book-cta__chip cdc-book-cta__chip--email">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </span>
+              <span class="cdc-book-cta__chip cdc-book-cta__chip--wa">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+                  />
+                </svg>
+              </span>
+              <span class="cdc-book-cta__chip cdc-book-cta__chip--line">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path
+                    d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386a.63.63 0 0 1-.63-.629V8.108c0-.345.281-.63.63-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016a.63.63 0 0 1-.63.629h-.176a.63.63 0 0 1-.54-.3l-2.327-3.793v3.464a.63.63 0 0 1-.63.629h-.012a.63.63 0 0 1-.63-.629V8.108c0-.252.15-.478.385-.577.234-.1.51-.05.69.13l2.327 3.793V8.108c0-.345.282-.63.63-.63.349 0 .63.285.63.63v4.771zm-5.741 0a.63.63 0 0 1-.63.629H6.497a.63.63 0 0 1-.63-.629V8.108c0-.345.281-.63.63-.63.348 0 .63.285.63.63V12.25h1.782c.348 0 .63.285.63.63zm-2.466-5.014a.63.63 0 0 0-.63-.63H4.648a.63.63 0 0 0-.63.63v6.017c0 .345.282.629.63.629.348 0 .63-.284.63-.629V9.863h1.155a.63.63 0 0 0 .63-.63zM24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.77.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span class="cdc-book-cta__sub">ทางอีเมล · WhatsApp · LINE</span>
+          </a>
+        </div>
         <p
           style="
             font-size: 0.95rem;
