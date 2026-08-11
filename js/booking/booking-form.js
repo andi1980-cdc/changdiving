@@ -947,23 +947,33 @@
         options: [
           {
             id: "sdi",
-            label: "SDI Nitrox",
+            label: "SDI Nitrox (with dives)",
             price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
           },
           {
             id: "padi",
-            label: "PADI Nitrox",
-            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+            label: "PADI Nitrox (with dives)",
+            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
           },
           {
             id: "theory",
             label:
               LANG === "de"
-                ? "Nur Theorie"
+                ? "SDI nur Theorie"
                 : LANG === "th"
-                  ? "เฉพาะทฤษฎี"
-                  : "Theory only",
-            price: see,
+                  ? "SDI เฉพาะทฤษฎี"
+                  : "SDI Theory only",
+            price: price("4,990 THB", "4.990 THB", "4,990 บาท"),
+          },
+          {
+            id: "theory-padi",
+            label:
+              LANG === "de"
+                ? "PADI nur Theorie"
+                : LANG === "th"
+                  ? "PADI เฉพาะทฤษฎี"
+                  : "PADI Theory only",
+            price: price("5,990 THB", "5.990 THB", "5,990 บาท"),
           },
         ],
       },
@@ -1009,7 +1019,7 @@
           {
             id: "padi",
             label: "PADI Deep Diver",
-            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+            price: price("11,990 THB", "11.990 THB", "11,990 บาท"),
           },
         ],
       },
@@ -1032,7 +1042,7 @@
           {
             id: "padi",
             label: "PADI Wreck Diver",
-            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+            price: price("11,990 THB", "11.990 THB", "11,990 บาท"),
           },
         ],
       },
@@ -1055,7 +1065,7 @@
           {
             id: "padi",
             label: "PADI Night Diver",
-            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+            price: price("11,990 THB", "11.990 THB", "11,990 บาท"),
           },
         ],
       },
@@ -1101,7 +1111,7 @@
           {
             id: "padi",
             label: "PADI Search & Recovery",
-            price: price("7,990 THB", "7.990 THB", "7,990 บาท"),
+            price: price("11,990 THB", "11.990 THB", "11,990 บาท"),
           },
         ],
       },
@@ -1124,7 +1134,7 @@
           {
             id: "padi",
             label: "PADI Sidemount",
-            price: price("9,990 THB", "9.990 THB", "9,990 บาท"),
+            price: price("11,990 THB", "11.990 THB", "11,990 บาท"),
           },
           {
             id: "solo-combo",
