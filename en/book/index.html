@@ -691,18 +691,96 @@
 
     <link
       rel="preload"
-      href="/style.min.css?v=book-ios-overflow-3"
+      href="/style.min.css?v=book-ios-overflow-4"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=book-ios-overflow-3"
+      href="/style.min.css?v=book-ios-overflow-4"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=book-ios-overflow-3" />
+      <link rel="stylesheet" href="/style.min.css?v=book-ios-overflow-4" />
     </noscript>
+
+    <!-- Loads AFTER style.min.css so async CSS cannot re-enable iOS horizontal pan -->
+    <style id="page-book-overflow-lock">
+      html:has(body.page-book),
+      body.page-book {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: clip !important;
+        overscroll-behavior-x: none !important;
+        touch-action: pan-y;
+      }
+      @supports not (overflow-x: clip) {
+        html:has(body.page-book),
+        body.page-book {
+          overflow-x: hidden !important;
+        }
+      }
+      body.page-book .row,
+      body.page-book .columns,
+      body.page-book .container,
+      body.page-book .changdiving-box,
+      body.page-book #cdc-book-form,
+      body.page-book .cdc-book__grid,
+      body.page-book .cdc-book__field,
+      body.page-book .cdc-book__person,
+      body.page-book .cdc-book__actions,
+      body.page-book .cdc-book__mix-callout {
+        min-width: 0;
+      }
+      body.page-book img,
+      body.page-book video,
+      body.page-book iframe {
+        max-width: 100%;
+        height: auto;
+      }
+      body.page-book .hero,
+      body.page-book .hero.hero--book,
+      body.page-book .hero--transactional .hero-text,
+      body.page-book header,
+      body.page-book main,
+      body.page-book #footer,
+      body.page-book .footer-navigation,
+      body.page-book .footer-meta,
+      body.page-book .footer-navigation .container,
+      body.page-book .footer-meta .container,
+      body.page-book .footer-navigation .row,
+      body.page-book .changdiving-box,
+      body.page-book #cdc-book-form,
+      body.page-book .cdc-book__person,
+      body.page-book .cdc-book__grid,
+      body.page-book .cdc-book__actions,
+      body.page-book .cdc-book__mix-callout,
+      body.page-book .posts-submenu,
+      body.page-book .lang-switch {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      body.page-book .hero--transactional .hero-text {
+        left: 0 !important;
+        right: 0 !important;
+        transform: translateY(-50%) !important;
+        width: 100% !important;
+      }
+      body.page-book .footer-navigation .three.columns {
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+      body.page-book .cdc-book__send-primary .btn-cta {
+        min-width: 0;
+        flex: 1 1 9rem;
+        max-width: 100%;
+      }
+      body.page-book .cdc-book__field input,
+      body.page-book .cdc-book__field select,
+      body.page-book .cdc-book__field textarea {
+        max-width: 100%;
+      }
+    </style>
   </head>
   <body class="page-book">
     <a class="skip-link" href="#main-content">Skip to content</a>

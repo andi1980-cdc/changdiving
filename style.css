@@ -648,6 +648,27 @@ a[href^="/"] {
   box-shadow: none !important;
   outline: none !important;
 }
+/* iPhone: 4× min-width:200px overflows the viewport and enables horizontal pan */
+@media (max-width: 700px) {
+  .footer-navigation .row {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 0.75rem 1rem;
+  }
+  .footer-navigation .three.columns {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.15rem 0.35rem;
+  }
+}
+@media (max-width: 480px) {
+  .footer-navigation .three.columns {
+    flex: 1 1 100%;
+  }
+}
 .footer-navigation a {
   display: block;
   color: white;
@@ -873,7 +894,7 @@ button:focus-visible,
   .grid-container p {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 99vw;
+    max-width: 100%;
   }
 }
 
@@ -1740,7 +1761,7 @@ main:has(> .tek-box) > .posts-submenu a {
     right: 12px;
     left: auto;
     width: max-content;
-    max-width: calc(100vw - 24px);
+    max-width: calc(100% - 24px);
   }
 }
 
@@ -1929,7 +1950,7 @@ main:has(> .tek-box) > .posts-submenu a {
   .grid-container p {
     font-size: 1rem;
     line-height: 1.6;
-    max-width: 99vw;
+    max-width: 100%;
   }
 
   /* Galerie: 1 Bild/Video pro Zeile */
@@ -1937,7 +1958,7 @@ main:has(> .tek-box) > .posts-submenu a {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 100vw;
+    max-width: 100%;
     padding: 0;
   }
   .dive-site-gallery img,
@@ -1988,11 +2009,13 @@ main:has(> .tek-box) > .posts-submenu a {
   .hero--transactional .hero-text {
     position: absolute !important;
     top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    /* left:0/right:0 — avoid left:50% + width:100% + 100vw (iOS horizontal pan) */
+    left: 0 !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
     z-index: 2 !important;
     width: 100% !important;
-    max-width: 100vw;
+    max-width: 100% !important;
     padding: 0 12px !important;
     box-sizing: border-box;
     pointer-events: none;
@@ -2868,7 +2891,7 @@ main:has(> .tek-box) > .posts-submenu a {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 100vw;
+    max-width: 100%;
     padding: 0;
   }
 
