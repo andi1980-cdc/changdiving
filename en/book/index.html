@@ -423,6 +423,40 @@
           grid-template-columns: 1fr 1fr;
         }
       }
+
+      /* iOS: longest <option> sets select min-width (Fun Dive sidemount) → page pan */
+      .cdc-book__field {
+        min-width: 0;
+        max-width: 100%;
+      }
+      .cdc-book__field label {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      .cdc-book__field input,
+      .cdc-book__field select,
+      .cdc-book__field textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      .cdc-book__person,
+      #book-people,
+      .cdc-book__section {
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      @supports (-webkit-touch-callout: none) {
+        .cdc-book__field {
+          overflow: hidden;
+        }
+        .cdc-book__field select {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
       .cdc-book__equip-list {
         grid-template-columns: 1fr;
         max-width: 28rem;
@@ -691,17 +725,17 @@
 
     <link
       rel="preload"
-      href="/style.min.css?v=book-ios-overflow-4"
+      href="/style.min.css?v=book-ios-overflow-5"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/style.min.css?v=book-ios-overflow-4"
+      href="/style.min.css?v=book-ios-overflow-5"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
-      <link rel="stylesheet" href="/style.min.css?v=book-ios-overflow-4" />
+      <link rel="stylesheet" href="/style.min.css?v=book-ios-overflow-5" />
     </noscript>
 
     <!-- Loads AFTER style.min.css so async CSS cannot re-enable iOS horizontal pan -->
@@ -775,10 +809,31 @@
         flex: 1 1 9rem;
         max-width: 100%;
       }
+
+      body.page-book #book-people,
+      body.page-book .cdc-book__section,
+      body.page-book .cdc-book__field,
+      body.page-book fieldset {
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+      body.page-book .cdc-book__field label {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
       body.page-book .cdc-book__field input,
       body.page-book .cdc-book__field select,
       body.page-book .cdc-book__field textarea {
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+      }
+      @supports (-webkit-touch-callout: none) {
+        body.page-book .cdc-book__field {
+          overflow: hidden;
+        }
       }
     </style>
   </head>
@@ -1178,6 +1233,6 @@
     </footer>
 
     <script src="/js/global.min.js?v=a11y-menu-2" defer></script>
-    <script src="/js/booking/booking-form.js?v=1.9" defer></script>
+    <script src="/js/booking/booking-form.js?v=1.10" defer></script>
   </body>
 </html>
