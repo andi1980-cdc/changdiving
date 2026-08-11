@@ -386,7 +386,13 @@
         margin: 0.15rem 0 0.4rem;
         font-size: 0.78rem;
         color: var(--muted);
-        line-height: 1.35;
+        line-height: 1.45;
+      }
+      .cdc-book__hint-line {
+        display: block;
+        margin: 0.35rem 0;
+        color: #b71c1c;
+        font-weight: 700;
       }
       .cdc-book__check {
         display: flex;
@@ -554,6 +560,25 @@
         gap: 0.5rem;
         align-items: center;
         margin-top: 0.35rem;
+      }
+      .cdc-book__send-primary,
+      .cdc-book__send-line {
+        margin-top: 0.85rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--line);
+      }
+      .cdc-book__send-primary {
+        margin-top: 0.35rem;
+        padding-top: 0;
+        border-top: none;
+      }
+      .cdc-book__send-primary .cdc-book__hint,
+      .cdc-book__send-line .cdc-book__hint {
+        margin-top: 0.45rem;
+        margin-bottom: 0;
+      }
+      .cdc-book__hint-reply {
+        margin-top: 0.85rem;
       }
       .btn-cta,
       button.btn-cta {
@@ -888,36 +913,50 @@
 
           <div id="book-status" class="cdc-book__status" hidden></div>
 
-          <div class="cdc-book__actions">
-            <a
-              id="book-mailto"
-              class="btn-cta"
-              href="mailto:info@changdiving.com"
-              >E-Mail</a
-            >
-            <a
-              id="book-whatsapp"
-              class="btn-cta"
-              href="https://wa.me/66894013927"
-              target="_blank"
-              rel="noopener noreferrer"
-              >WhatsApp</a
-            >
-            <a
-              id="book-line"
-              class="btn-cta"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              >LINE</a
-            >
+          <div class="cdc-book__send-primary">
+            <div class="cdc-book__actions">
+              <a
+                id="book-mailto"
+                class="btn-cta"
+                href="mailto:info@changdiving.com"
+                >E-Mail</a
+              >
+              <a
+                id="book-whatsapp"
+                class="btn-cta"
+                href="https://wa.me/66894013927"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp</a
+              >
+            </div>
+            <p class="cdc-book__hint">
+              Buchung per E-Mail oder WhatsApp senden.
+            </p>
           </div>
-          <p class="cdc-book__hint" style="margin-top: 0.65rem">
-            Buchung per E-Mail, WhatsApp oder LINE senden. LINE öffnet eine
-            Teilen-Ansicht — wähle
-            <strong>Chang Diving (+66 894-013-927)</strong> als Empfänger. Bitte
-            gib uns bis zu 24 Stunden für eine Antwort (Zeitverschiebung). Falls
-            du nichts von uns hörst, prüfe bitte auch deinen Spam-Ordner.
+
+          <div class="cdc-book__send-line">
+            <div class="cdc-book__actions">
+              <a
+                id="book-line"
+                class="btn-cta"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LINE</a
+              >
+            </div>
+            <p class="cdc-book__hint">
+              <span class="cdc-book__hint-line"
+                >LINE-Buchung möglich unter der LINE ID:
+                <strong>changdiving</strong></span
+              >
+            </p>
+          </div>
+
+          <p class="cdc-book__hint cdc-book__hint-reply">
+            Bitte gib uns bis zu 24 Stunden für eine Antwort (Zeitverschiebung).
+            Falls du nichts von uns hörst, prüfe bitte auch deinen Spam-Ordner.
           </p>
         </form>
       </div>
