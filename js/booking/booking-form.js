@@ -2540,21 +2540,6 @@
       lines.push(payload.message);
       lines.push("");
     }
-    lines.push(
-      t.page +
-        ": " +
-        (typeof location !== "undefined"
-          ? location.href
-          : "/" + LANG + "/book/")
-    );
-    if (payload.primaryKey) {
-      lines.push(
-        t.startedFrom +
-          ": https://changdiving.com" +
-          getProduct(payload.primaryKey).url
-      );
-    }
-    lines.push("");
     lines.push(t.thanks);
 
     return {
