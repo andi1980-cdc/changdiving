@@ -1,7 +1,7 @@
 /**
- * Chang Diving – booking form (LOCAL DRAFT)
+ * Chang Diving – booking form
  * Prefill: /en|de|th/book/?product=open-water-diver&option=sdi-elearning
- * Draft: email preview + mailto / WhatsApp only (no API).
+ * Outbound: mailto / WhatsApp / LINE (no API). Channel tag in subject + body for staff calendar.
  */
 (function () {
   "use strict";
@@ -9,7 +9,19 @@
   var DRAFT_MODE = true;
   var TO_EMAIL = "info@changdiving.com";
   var WA_NUMBER = "66894013927";
+  /**
+   * LINE Official Account basic ID (with @). Confirmed tentatively as @changdiving;
+   * change here if the real ID differs. Prefills chat via oaMessage.
+   */
+  var LINE_ID = "@changdiving";
   var MAX_PEOPLE = 4;
+
+  /** Always English — staff copy into shared booking calendar. */
+  var CHANNEL_LABEL = {
+    email: "Email",
+    whatsapp: "WhatsApp",
+    line: "LINE",
+  };
 
   function detectLang() {
     try {
@@ -40,7 +52,7 @@
       sizeWetsuitShirt: "Wetsuit / T-shirt size (EU)",
       sizeFinShoe: "Fin / shoe size (EU)",
       medicalNote:
-        'Do I need a medical checkup? <a href="/en/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Check the self-test</a>',
+        'Do I need a medical checkup? <a href="/en/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Check the self-test</a><br>Need a quick theory refresh? <a href="/en/posts/scuba-knowledge/theory-review/" target="_blank" rel="noopener noreferrer">Review the basics</a><br>Not sure which training agency to choose? <a href="/en/posts/straight-talk/padi-vs-sdi-tdi/" target="_blank" rel="noopener noreferrer">PADI vs SDI/TDI</a>',
       person: "Person",
       diver: "Diver",
       guest: "Guest",
@@ -168,9 +180,14 @@
       draftOk: "<strong>Draft ready</strong> — nothing was sent to a server.",
       draftWarn:
         " Long group messages can hit length limits on some phones — use the preview to copy/paste if needed.",
-      draftUseA: ' Use <a href="',
-      draftUseB: '">email</a> or <a href="',
-      draftUseC: '">WhatsApp</a> (both include your form data).',
+      draftUseIntro: " Send with ",
+      draftUseOr: " or ",
+      draftUseEnd: " (your form data is included; channel is tagged for our team).",
+      draftUseEmail: "email",
+      draftUseWhatsApp: "WhatsApp",
+      draftUseLine: "LINE",
+      btnLine: "LINE",
+      lineHint: "Opens LINE chat with Chang Diving (@changdiving).",
       seePage: "see page",
       otherLabel: "Other / not sure",
       otherOpt: "General booking enquiry",
@@ -198,7 +215,7 @@
       sizeWetsuitShirt: "Neoprenanzug / T-Shirt-Größe (EU)",
       sizeFinShoe: "Flossen- / Schuhgröße (EU)",
       medicalNote:
-        'Brauche ich eine ärztliche Untersuchung? <a href="/de/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Selbsttest machen</a>',
+        'Brauche ich eine ärztliche Untersuchung? <a href="/de/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">Selbsttest machen</a><br>Kurzer Theorie-Auffrischer? <a href="/de/posts/scuba-knowledge/theory-review/" target="_blank" rel="noopener noreferrer">Basics wiederholen</a><br>Unsicher, welche Ausbildungsorganisation? <a href="/de/posts/straight-talk/padi-vs-sdi-tdi/" target="_blank" rel="noopener noreferrer">PADI vs SDI/TDI</a>',
       person: "Person",
       diver: "Taucher",
       guest: "Gast",
@@ -327,9 +344,15 @@
         "<strong>Entwurf fertig</strong> — nichts wurde an einen Server gesendet.",
       draftWarn:
         " Lange Gruppennachrichten können auf manchen Handys Längenlimits treffen — ggf. Vorschau kopieren.",
-      draftUseA: ' Nutze <a href="',
-      draftUseB: '">E-Mail</a> oder <a href="',
-      draftUseC: '">WhatsApp</a> (beide enthalten deine Formulardaten).',
+      draftUseIntro: " Senden mit ",
+      draftUseOr: " oder ",
+      draftUseEnd:
+        " (Formulardaten sind enthalten; der Kanal ist für unser Team gekennzeichnet).",
+      draftUseEmail: "E-Mail",
+      draftUseWhatsApp: "WhatsApp",
+      draftUseLine: "LINE",
+      btnLine: "LINE",
+      lineHint: "Öffnet den LINE-Chat mit Chang Diving (@changdiving).",
       seePage: "siehe Seite",
       otherLabel: "Sonstiges / unsicher",
       otherOpt: "Allgemeine Buchungsanfrage",
@@ -357,7 +380,7 @@
       sizeWetsuitShirt: "ไซส์เวทสูท / เสื้อยืด (EU)",
       sizeFinShoe: "ไซส์ตีนกบ / รองเท้า (EU)",
       medicalNote:
-        'ต้องตรวจสุขภาพก่อนดำน้ำไหม? <a href="/th/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">ทำแบบทดสอบด้วยตนเอง</a>',
+        'ต้องตรวจสุขภาพก่อนดำน้ำไหม? <a href="/th/faqs/faq-diving-health-safety-thailand/#medical-self-check" target="_blank" rel="noopener noreferrer">ทำแบบทดสอบด้วยตนเอง</a><br>อยากทบทวนทฤษฎีสั้น ๆ ไหม? <a href="/th/posts/scuba-knowledge/theory-review/" target="_blank" rel="noopener noreferrer">ทบทวนพื้นฐาน</a><br>ยังไม่แน่ใจว่าจะเลือกองค์กรฝึกอบรมไหน? <a href="/th/posts/straight-talk/padi-vs-sdi-tdi/" target="_blank" rel="noopener noreferrer">PADI vs SDI/TDI</a>',
       person: "บุคคล",
       diver: "นักดำน้ำ",
       guest: "ผู้ร่วมทริป",
@@ -483,9 +506,15 @@
         "<strong>ฉบับร่างพร้อมแล้ว</strong> — ยังไม่ได้ส่งไปยังเซิร์ฟเวอร์",
       draftWarn:
         " ข้อความกลุ่มยาวอาจเกินขีดจำกัดบนบางมือถือ — ใช้ตัวอย่างเพื่อคัดลอกได้",
-      draftUseA: ' ใช้ <a href="',
-      draftUseB: '">อีเมล</a> หรือ <a href="',
-      draftUseC: '">WhatsApp</a> (ทั้งสองมีข้อมูลฟอร์มของคุณ)',
+      draftUseIntro: " ส่งด้วย ",
+      draftUseOr: " หรือ ",
+      draftUseEnd:
+        " (มีข้อมูลฟอร์มครบ และระบุช่องทางสำหรับทีมเราแล้ว)",
+      draftUseEmail: "อีเมล",
+      draftUseWhatsApp: "WhatsApp",
+      draftUseLine: "LINE",
+      btnLine: "LINE",
+      lineHint: "เปิดแชท LINE กับ Chang Diving (@changdiving)",
       seePage: "ดูหน้า",
       otherLabel: "อื่นๆ / ยังไม่แน่ใจ",
       otherOpt: "สอบถามการจองทั่วไป",
@@ -2406,7 +2435,7 @@
     };
   }
 
-  function buildEmail(payload) {
+  function buildEmail(payload, channel) {
     var mixed = false;
     var keys = {};
     payload.people.forEach(function (p) {
@@ -2414,22 +2443,27 @@
     });
     if (Object.keys(keys).length > 1) mixed = true;
 
+    var channelName = CHANNEL_LABEL[channel] || "";
     var subject =
       t.subjectPrefix +
       (mixed
         ? t.mixedBooking
         : payload.productLabel +
           (payload.optionLabel ? " (" + payload.optionLabel + ")" : "")) +
-      (payload.peopleCount > 1 ? " × " + payload.peopleCount : "");
+      (payload.peopleCount > 1 ? " × " + payload.peopleCount : "") +
+      (channelName ? " [" + channelName + "]" : "");
 
-    var lines = [
-      t.hello,
-      "",
+    var lines = [t.hello, ""];
+    if (channelName) {
+      lines.push("Booking request via: " + channelName);
+      lines.push("");
+    }
+    lines.push(
       t.wantBook,
       payload.startDate ? "• " + t.startDate + ": " + payload.startDate : "",
       "• " + t.numPeople + ": " + payload.peopleCount,
-      "",
-    ];
+      ""
+    );
 
     payload.people.forEach(function (p, i) {
       lines.push("—— " + t.person + " " + (i + 1) + " ——");
@@ -2550,28 +2584,46 @@
     return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
   }
 
-  function applyOutboundLinks(mail) {
-    var mailto = mailtoHref(mail.subject, mail.body);
-    var wa = whatsappHref(mail.subject, mail.body);
-    var mailLink = $("book-mailto");
-    var waLink = $("book-whatsapp");
-    if (mailLink) mailLink.href = mailto;
-    if (waLink) waLink.href = wa;
-    return { mailto: mailto, wa: wa };
+  function lineHref(subject, body) {
+    if (!LINE_ID) return "";
+    var text = subject + "\n\n" + body;
+    return (
+      "https://line.me/R/oaMessage/" +
+      encodeURIComponent(LINE_ID) +
+      "/?" +
+      encodeURIComponent(text)
+    );
   }
 
-  function prepareOutbound() {
+  function buildOutboundLinks(payload) {
+    var mailEmail = buildEmail(payload, "email");
+    var mailWa = buildEmail(payload, "whatsapp");
+    var mailLine = buildEmail(payload, "line");
+    var mailto = mailtoHref(mailEmail.subject, mailEmail.body);
+    var wa = whatsappHref(mailWa.subject, mailWa.body);
+    var line = lineHref(mailLine.subject, mailLine.body);
+    var mailLink = $("book-mailto");
+    var waLink = $("book-whatsapp");
+    var lineLink = $("book-line");
+    if (mailLink) mailLink.href = mailto;
+    if (waLink) waLink.href = wa;
+    if (lineLink) {
+      if (line) {
+        lineLink.href = line;
+        lineLink.hidden = false;
+      } else {
+        lineLink.hidden = true;
+      }
+    }
+    return { mailto: mailto, wa: wa, line: line };
+  }
+
+  function prepareOutbound(channel) {
     var payload = collectPayload();
     var err = validate(payload);
     if (err) return { ok: false, err: err };
-    var mail = buildEmail(payload);
-    var links = applyOutboundLinks(mail);
-    var preview = $("book-preview");
-    if (preview) {
-      preview.hidden = false;
-      preview.textContent =
-        t.subjectLbl + ": " + mail.subject + "\n\n" + mail.body;
-    }
+    var links = buildOutboundLinks(payload);
+    var mail = buildEmail(payload, channel || null);
     return { ok: true, mail: mail, links: links, payload: payload };
   }
 
@@ -2616,46 +2668,48 @@
     return "";
   }
 
-  function onSubmit(e) {
+  function clearStatus() {
+    var box = $("book-status");
+    if (!box) return;
+    box.hidden = true;
+    box.innerHTML = "";
+  }
+
+  function onFormSubmit(e) {
     e.preventDefault();
-    var result = prepareOutbound();
-    if (!result.ok) {
-      showStatus("error", result.err);
-      return;
-    }
-
-    var warn = result.payload.peopleCount > 1 ? t.draftWarn : "";
-
-    showStatus(
-      "ok",
-      t.draftOk +
-        warn +
-        t.draftUseA +
-        result.links.mailto +
-        t.draftUseB +
-        result.links.wa +
-        t.draftUseC
-    );
   }
 
   function onWhatsAppClick(e) {
-    var result = prepareOutbound();
+    var result = prepareOutbound("whatsapp");
     if (!result.ok) {
       e.preventDefault();
       showStatus("error", result.err);
       return;
     }
+    clearStatus();
     e.currentTarget.href = result.links.wa;
   }
 
   function onMailtoClick(e) {
-    var result = prepareOutbound();
+    var result = prepareOutbound("email");
     if (!result.ok) {
       e.preventDefault();
       showStatus("error", result.err);
       return;
     }
+    clearStatus();
     e.currentTarget.href = result.links.mailto;
+  }
+
+  function onLineClick(e) {
+    var result = prepareOutbound("line");
+    if (!result.ok || !result.links.line) {
+      e.preventDefault();
+      if (!result.ok) showStatus("error", result.err);
+      return;
+    }
+    clearStatus();
+    e.currentTarget.href = result.links.line;
   }
 
   function init() {
@@ -2684,11 +2738,12 @@
 
     if (!form._cdcBoundSubmit) {
       form._cdcBoundSubmit = true;
-      form.addEventListener("submit", onSubmit);
+      form.addEventListener("submit", onFormSubmit);
     }
 
     var mailLink = $("book-mailto");
     var waLink = $("book-whatsapp");
+    var lineLink = $("book-line");
     if (mailLink && !mailLink._cdcBoundClick) {
       mailLink._cdcBoundClick = true;
       mailLink.addEventListener("click", onMailtoClick);
@@ -2696,6 +2751,19 @@
     if (waLink && !waLink._cdcBoundClick) {
       waLink._cdcBoundClick = true;
       waLink.addEventListener("click", onWhatsAppClick);
+    }
+    if (lineLink) {
+      if (LINE_ID) {
+        lineLink.hidden = false;
+        if (t.btnLine) lineLink.textContent = t.btnLine;
+        if (t.lineHint) lineLink.title = t.lineHint;
+        if (!lineLink._cdcBoundClick) {
+          lineLink._cdcBoundClick = true;
+          lineLink.addEventListener("click", onLineClick);
+        }
+      } else {
+        lineLink.hidden = true;
+      }
     }
 
     renderPeople();
