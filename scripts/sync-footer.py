@@ -224,13 +224,19 @@ def main() -> int:
     updated = 0
     missing = 0
     for path in sorted(ROOT.rglob("*.html")):
-        if "node_modules" in path.parts or path.parts[0] == "partials":
+        try:
+            rel = path.relative_to(ROOT)
+        except ValueError:
+            continue
+        if "node_modules" in rel.parts or rel.parts[0] == "partials":
             continue
         text = path.read_text(encoding="utf-8", errors="replace")
         if 'id="footer"' not in text and "id='footer'" not in text:
             continue
 
-        lang = path.parts[0] if path.parts[0] in ("en", "de", "th") else "en"
+        # Must use path relative to repo root: absolute Path.parts[0] is "/" on Unix
+        # and always fell back to "en" — that overwrote DE/TH footers on 2026-08-06.
+        lang = rel.parts[0] if rel.parts[0] in ("en", "de", "th") else "en"
         new, n = FOOTER_RE.subn(footers[lang], text, count=1)
         if n != 1:
             print(f"skip/fail: {path}")
