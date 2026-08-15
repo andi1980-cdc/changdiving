@@ -1,19 +1,29 @@
 # Project docs
 
-Interne Markdown-Notizen und Muster für die Chang-Diving-Website.
+Internal markdown for the Chang Diving site (patterns, ops, glossaries).
 
-**Nicht verwechseln mit** [`/docs/`](../docs/) — dort liegen **öffentliche PDFs** (Liability, Medical, Skill Slates), die von den HTML-Seiten verlinkt werden.
+**Not** [`/docs/`](../docs/) — that folder is **public PDFs** linked from HTML.
 
-| Datei | Thema |
-|-------|--------|
-| [KEYWORD-GSC-PAGE-ANALYSIS.md](KEYWORD-GSC-PAGE-ANALYSIS.md) | Keyword ↔ GSC Seitenanalyse |
-| [SEO-REFERENCE.md](SEO-REFERENCE.md) | Schema / SEO-Referenz |
-| [SEO-INDEXING-FIXES-OCT-2025.md](SEO-INDEXING-FIXES-OCT-2025.md) | Historie: Indexing/Redirect-Fixes Okt 2025 |
-| [PAGE-HEADER-JUMP-MENU-PATTERN.md](PAGE-HEADER-JUMP-MENU-PATTERN.md) | H1 unter Hero + Jump-Menü |
-| [MOBILE-PERF-GOLD-PATTERN.md](MOBILE-PERF-GOLD-PATTERN.md) | Mobile LCP/CLS Goldmuster |
-| [HERO-TRANSACTIONAL-PATTERN.md](HERO-TRANSACTIONAL-PATTERN.md) | Älteres Hero-/Money-Keyword-Muster |
-| [TRANSLATION-RULES-TH.md](TRANSLATION-RULES-TH.md) | Thai-Übersetzungsregeln |
-| [GLOSSARY-TECHNICAL-CAVE-TH.md](GLOSSARY-TECHNICAL-CAVE-TH.md) | Thai-Glossar |
-| [README_SITEMAP.md](README_SITEMAP.md) | Sitemap-Generator |
+Roles:
 
-Im **Root** bleiben nur `README.md` und `claude.md` (Projektübersicht / AI-Workspace).
+| Role | Meaning |
+|------|---------|
+| `living` | Read before changing that area; keep in sync with the live site |
+| `ops` | Runbooks / generators |
+| `archive` | History only — not day-to-day instructions |
+
+| Datei | Role | Thema |
+|-------|------|--------|
+| [PAGE-TYPES.md](PAGE-TYPES.md) | living | HTML structure by page type + clone references |
+| [PAGE-HEADER-JUMP-MENU-PATTERN.md](PAGE-HEADER-JUMP-MENU-PATTERN.md) | living | Jump menu, exceptions, checklists |
+| [MOBILE-PERF-GOLD-PATTERN.md](MOBILE-PERF-GOLD-PATTERN.md) | living | Mobile LCP/CLS guardrail |
+| [KEYWORD-GSC-PAGE-ANALYSIS.md](KEYWORD-GSC-PAGE-ANALYSIS.md) | living | Keyword ↔ GSC page workflow |
+| [SEO-REFERENCE.md](SEO-REFERENCE.md) | living | Schema matrix + cluster HTML |
+| [TRANSLATION-RULES-TH.md](TRANSLATION-RULES-TH.md) | living | Thai translation prompt |
+| [GLOSSARY-EN-TH.md](GLOSSARY-EN-TH.md) | living | EN→TH terminology + site terms (§18) |
+| [FOOTER-SYNC.md](FOOTER-SYNC.md) | ops | Sync static footers (EN/DE/TH) |
+| [README_SITEMAP.md](README_SITEMAP.md) | ops | Sitemap generator |
+| [SEO-INDEXING-FIXES-OCT-2025.md](SEO-INDEXING-FIXES-OCT-2025.md) | archive | Oct 2025 indexing incident |
+| [archive/HERO-TRANSACTIONAL-PATTERN.md](archive/HERO-TRANSACTIONAL-PATTERN.md) | archive | Pre–H1-under-hero notes |
+
+Root stays lean: `README.md` + `claude.md` (AI workspace rules).

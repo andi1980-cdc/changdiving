@@ -1,5 +1,6 @@
 # Keyword- & GSC-Analyse einzelner Seiten
 
+**Role:** `living`  
 **Stand:** August 2026  
 **Zweck:** Wiederholbare Prüfung: Seite ↔ Ziel-Keywords ↔ Google Search Console  
 **Sprachen:** EN / DE / TH (gleiche Struktur, sprachspezifische Keywords)
@@ -173,6 +174,7 @@ Pro Seite: Report ablegen, Checkliste ausfüllen, nur strukturtreue Textfixes.
 
 ## Bezug
 
-- Seitenstruktur / Jump-Nav: `PAGE-HEADER-JUMP-MENU-PATTERN.md`  
-- Schema-Übersicht: `SEO-REFERENCE.md` (Matrix ggf. nachziehen: `/prices/` hat inzwischen LocalBusiness + FAQPage)  
-- TH-Übersetzungen: `TRANSLATION-RULES-TH.md`
+- Seitentypen / Klon-Workflow: `PAGE-TYPES.md`  
+- Jump-Nav-Details: `PAGE-HEADER-JUMP-MENU-PATTERN.md`  
+- Schema: `SEO-REFERENCE.md`  
+- TH-Übersetzungen: `TRANSLATION-RULES-TH.md` + Glossar

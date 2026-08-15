@@ -1,6 +1,9 @@
-# Technical / cave diving glossary (English → Thai)
+# Glossary English → Thai
 
-Central reference for **Thai technical and cave diving terminology** on changdiving.com.
+**Role:** `living`  
+**File:** `GLOSSARY-EN-TH.md`
+
+Central EN→TH terminology for changdiving.com (technical/cave diving plus site copy terms in §18).
 
 **How to use:** When translating or editing Thai HTML/content, **prefer these term pairs** and definitions. If a term is missing, **do not invent** a new Thai technical coinage without review—keep the English term in parentheses and add an entry in a follow-up.
 

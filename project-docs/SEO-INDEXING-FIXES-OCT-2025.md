@@ -1,6 +1,10 @@
 # SEO indexing fixes – October 2025
 
-Historical incident notes (moved out of root `claude.md` in Aug 2026). Implementation is still live; this file is the archive of *why* and *what* was changed then.
+**Role:** `archive`
+
+> Historical incident notes (moved out of root `claude.md` in Aug 2026).  
+> Implementation is still live in `functions/[[path]].js` / homepage; this file is the archive of *why* and *what* was changed then.  
+> Day-to-day edge rules → root [`claude.md`](../claude.md).
 
 ## Problem statement
 

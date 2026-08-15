@@ -1,8 +1,14 @@
+> **ARCHIVE (August 2026).** Not a living standard.  
+> Current layout catalog: [`../PAGE-TYPES.md`](../PAGE-TYPES.md).  
+> Jump/header details: [`../PAGE-HEADER-JUMP-MENU-PATTERN.md`](../PAGE-HEADER-JUMP-MENU-PATTERN.md).  
+> Mobile: [`../MOBILE-PERF-GOLD-PATTERN.md`](../MOBILE-PERF-GOLD-PATTERN.md).  
+> Hero CSS classes (`hero--transactional`, `hero--fun-dives`) remain in production; see PAGE-TYPES.
+
+---
+
 # Transactional Hero: Muster für späteren Projekt-Rollout
 
-> **Update Juli 2026:** Für Day-Trip-/Kurs-Seiten gilt jetzt zusätzlich das Muster **H1 unter dem Hero + einheitliches Jump-Menü** – siehe [`PAGE-HEADER-JUMP-MENU-PATTERN.md`](PAGE-HEADER-JUMP-MENU-PATTERN.md).  
-> **Performance:** LCP/CLS-Goldmuster (Preload, Critical CSS, defer, Hub-Karten lazy) → [`MOBILE-PERF-GOLD-PATTERN.md`](MOBILE-PERF-GOLD-PATTERN.md).  
-> Dieses Dokument bleibt relevant für Money-Keywords, Meta/JSON-LD und Mobile-Hero-Klassen.
+> **Superseded.** See [`../PAGE-TYPES.md`](../PAGE-TYPES.md) and [`../PAGE-HEADER-JUMP-MENU-PATTERN.md`](../PAGE-HEADER-JUMP-MENU-PATTERN.md).
 
 Beschreibt das auf **Fun Dives** umgesetzte Muster (Money-Keywords im sichtbaren Hero, konsistente Metadaten, Mobile-Hero ohne doppelte Überschrift). So kannst du es **seitenweise oder später projektweit** übernehmen.
 

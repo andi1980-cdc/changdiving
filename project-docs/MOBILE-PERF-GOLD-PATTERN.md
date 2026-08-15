@@ -1,8 +1,9 @@
 # Mobile Performance Gold Pattern
 
+**Role:** `living` (Guardrail)  
 Stand: Juli 2026  
 **Referenzseite:** `/en/` (beste Mobile- + Desktop-Messwerte im Projekt)  
-Verwandt: `PAGE-HEADER-JUMP-MENU-PATTERN.md`, `HERO-TRANSACTIONAL-PATTERN.md`
+Verwandt: [`PAGE-TYPES.md`](PAGE-TYPES.md), [`PAGE-HEADER-JUMP-MENU-PATTERN.md`](PAGE-HEADER-JUMP-MENU-PATTERN.md)
 
 **Jede neue oder geänderte Seite mit Hero muss diesem Muster folgen.** Desktop ist meist schon gut — Mobile (Slow-4G) ist der Maßstab.
 

@@ -1,6 +1,10 @@
 # SEO Reference – Chang Diving Center
 
-**Stand:** Juli 2026 | Konsolidiert aus früheren Analyse-Dokumenten
+**Role:** `living`  
+**Stand:** August 2026  
+
+Schema matrix + internal-link HTML snippets.  
+Page structure → [`PAGE-TYPES.md`](PAGE-TYPES.md) · GSC workflow → [`KEYWORD-GSC-PAGE-ANALYSIS.md`](KEYWORD-GSC-PAGE-ANALYSIS.md) · Search index / sitemap commands → root [`claude.md`](../claude.md) · [`README_SITEMAP.md`](README_SITEMAP.md)
 
 ---
 
@@ -18,56 +22,13 @@
 | **Index (en/de/th)** | ✅ | – | ✅ | – | – | ✅ |
 | **404 / 410** | ✅ | – | – | – | – | ✅ |
 
-**Regel:** `aggregateRating` nur auf Seiten **mit Trustindex-Widget** (~186 Seiten).
+**Regel:** `aggregateRating` nur auf Seiten **mit Trustindex-Widget**.
+
+User-facing copy: **activity** / Aktivität / กิจกรรม — not shop “product” (URL `?product=` may stay).
 
 ---
 
-## 2. Seitenstruktur (Stand Juli 2026)
-
-| Kategorie | Anzahl |
-|-----------|--------|
-| HTML-Dateien gesamt | ~430 |
-| Content-Seiten (en/de/th) | ~135 × 3 = 405 |
-| Seiten im Search-Index | 123 pro Sprache |
-| Seiten in Sitemap | ~376 URLs |
-
----
-
-## 3. Interne Verlinkung – Status
-
-### ✅ Abgeschlossen
-- **Phase 1** – Quick Wins (EN): Safety Check, Safety Stop, Gas Consumption, Dive Logbook, Dive Computer
-- **Phase 2** – Course → Article Links (EN): OWD, Advanced, Nitrox, Deep Diver, Wreck, Rescue, Divemaster
-- **Phase 3** – Knowledge Base Cross-Linking (EN/DE/TH): Cluster-Boxen auf ~15 Artikeln
-- **Scuba Diver Kurs** in interne Links auf which-course, how-to-try-dive, theory-review, diving-activities eingebaut
-
-### ⏳ Noch offen – Phase 1 DE/TH Einzellinks
-
-| Datei | Link |
-|-------|------|
-| `/de/posts/tips-and-tricks/deep-diving/` | → Gas Consumption (DE) |
-| `/de/posts/scuba-knowledge/dive-logbook/` | → Best Dive Computers (DE) |
-| `/de/posts/scuba-knowledge/safety-check/` | → Safety Stop (DE) |
-| `/de/posts/scuba-knowledge/safety-stop/` | → Using a Dive Computer (DE) |
-| `/th/posts/scuba-knowledge/gas-consumption/` | → Deep Diving (TH) |
-| `/th/posts/tips-and-tricks/deep-diving/` | → Gas Consumption (TH) |
-| `/th/posts/scuba-knowledge/dive-logbook/` | → Best Dive Computers (TH) |
-| `/th/posts/scuba-knowledge/safety-check/` | → Safety Stop (TH) |
-| `/th/posts/scuba-knowledge/safety-stop/` | → Using a Dive Computer (TH) |
-
-### ⏳ Noch offen – Phase 4: Dive Sites
-
-| Dive Site | Empfohlene Kurs-Links | Artikel-Links |
-|-----------|----------------------|---------------|
-| HTMS Chang | Wreck Diver, Advanced Wreck, Deep Diver | Wreck Diving Koh Chang, Deep Diving |
-| Koho Maru 5 | Deep Diver, Tech Diving, Wreck Diver | Deep Diving, Gas Consumption |
-| Blueberry Hill | Open Water, Try Dive | Safety Check, Using a Dive Computer |
-| Hin Pray Nam | Open Water, Try Dive, Scuba Review | Safety Check, Safety Stop |
-| Hin Raab North | Advanced, Deep Diver | Deep Diving, Gas Consumption |
-
----
-
-## 4. HTML-Cluster-Box Templates
+## 2. HTML-Cluster-Box Templates
 
 ### "Further Reading" Box (Kurs-Seiten)
 
@@ -94,48 +55,4 @@
 </div>
 ```
 
----
-
-## 5. Search-Index regenerieren
-
-Ausführen nach jeder neuen Seite oder geändertem Titel/Description:
-
-```bash
-cd /Users/andismac/Desktop/cdc_git
-python3 - <<'PYEOF'
-# → Vollständiges Script steht in CLAUDE.md unter "Search Index"
-PYEOF
-git add search-index.json && git commit -m "chore: regenerate search-index.json"
-```
-
----
-
-## 6. Sitemap-Regeln
-
-- Neue Seiten: in `sitemap.xml` eintragen mit `<lastmod>YYYY-MM-DD</lastmod>`
-- Bei Inhaltsänderungen: `<lastmod>` der betroffenen Seite aktualisieren
-- Prioritäten: Kurse/Day-trips `0.85` · Posts `0.65` · Hubs `0.9`
-- Nach Änderungen: In Google Search Console Sitemap neu einreichen
-
----
-
-## 7. Wichtige Dateipfade
-
-Projekt-Notizen liegen unter `project-docs/` (nicht verwechseln mit `docs/` = PDFs).
-
-| Datei | Zweck |
-|-------|-------|
-| `claude.md` / `CLAUDE.md` | AI-Workspace-Regeln (Root, wird automatisch geladen) |
-| `project-docs/HERO-TRANSACTIONAL-PATTERN.md` | Muster für Hero-Sections auf Money-Pages |
-| `project-docs/PAGE-HEADER-JUMP-MENU-PATTERN.md` | H1 unter Hero + Jump-Menü (aktueller Standard) |
-| `project-docs/MOBILE-PERF-GOLD-PATTERN.md` | LCP/CLS Mobile-Checkliste |
-| `project-docs/KEYWORD-GSC-PAGE-ANALYSIS.md` | Keyword ↔ GSC Seitenanalyse |
-| `project-docs/SEO-REFERENCE.md` | Schema-/SEO-Referenz |
-| `project-docs/SEO-INDEXING-FIXES-OCT-2025.md` | Historie Indexing/Redirects Okt 2025 |
-| `project-docs/TRANSLATION-RULES-TH.md` | Regeln für Thai-Übersetzungen |
-| `project-docs/GLOSSARY-TECHNICAL-CAVE-TH.md` | Thai-Glossar Tauchen & Tech-Diving |
-| `project-docs/README_SITEMAP.md` | Sitemap-Generator Dokumentation |
-| `README.md` | Projekt-Übersicht & Setup |
-| `search-index.json` | Statischer Such-Index (generiert, nicht manuell bearbeiten) |
-| `functions/[[path]].js` | Cloudflare Edge-Function (Sprach-Redirect, 301s) |
-| `docs/` | Öffentliche PDF-Dokumente (Liability, Medical, …) |
+Internal linking across EN/DE/TH knowledge posts and dive-site ↔ course links is largely in place (Aug 2026). Prefer cloning an existing cluster box from a sibling page over inventing new markup.

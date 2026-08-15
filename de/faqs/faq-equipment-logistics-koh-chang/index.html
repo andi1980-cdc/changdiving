@@ -766,6 +766,39 @@
         );
       }
 
+      /* FAQ boxed answers – critical */
+      .faq-list--boxed {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .faq-list--boxed dt {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin: 0;
+        padding: 0;
+        border-bottom: none;
+        cursor: default;
+        line-height: 1.45;
+      }
+      .faq-list--boxed dd {
+        margin: 0;
+        padding: 0.95rem 1.1rem;
+        border-bottom: none;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 119, 182, 0.28);
+        background: linear-gradient(
+          135deg,
+          rgba(0, 119, 182, 0.1) 0%,
+          rgba(192, 192, 192, 0.22) 100%
+        );
+        box-shadow: 0 2px 10px rgba(0, 119, 182, 0.08);
+        font-size: 0.92rem;
+        color: #222;
+        line-height: 1.55;
+      }
+
       /* FAQ above-fold layout – critical (CLS) */
       .faq-box {
         max-width: 1320px;
@@ -1152,14 +1185,6 @@
             fetchpriority="high"
           />
         </picture>
-
-        <div class="hero-text">
-          <h1>Ausrüstung & Tauchtag-Logistik – FAQ</h1>
-          <p>
-            Alle Antworten zu Tauchausrüstung, Größen, Tankarten, Nitrox,
-            Tauchdauer & Tagesablauf. Planung leicht gemacht bei Chang Diving.
-          </p>
-        </div>
       </div>
     </header>
     <main id="main-content">
@@ -1182,22 +1207,20 @@
       </nav>
 
       <div class="faq-box equipment">
-        <h2
-          style="
-            text-align: center;
-            font-size: 32px;
-            background: linear-gradient(to right, #005a8c, #023e5c);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
-          "
-          aria-label="FAQ Section Title"
-        >
+        <h1 style="margin: 20px 0 8px; text-align: center">
           Ausrüstung & Tauchtag-Logistik – FAQ
-        </h2>
+        </h1>
+        <p style="margin: 0 0 24px; color: #555; text-align: center">
+          Alle Antworten zu Tauchausrüstung, Größen, Tankarten, Nitrox,
+          Tauchdauer & Tagesablauf. Planung leicht gemacht bei Chang Diving.
+        </p>
 
-        <dl class="faq-list" aria-label="Häufig gestellte Fragen">
+        <hr />
+
+        <dl
+          class="faq-list faq-list--boxed"
+          aria-label="Häufig gestellte Fragen"
+        >
           <dt>
             <span aria-hidden="true">🎽</span> Muss ich meine eigene
             Tauchausrüstung mitbringen?

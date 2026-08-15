@@ -6,17 +6,19 @@ Living project rules for Cursor/agents. Historical SEO incident notes (Oct 2025)
 
 ## Project docs (read when relevant)
 
-Internal patterns live in [`project-docs/`](project-docs/). They are **not** auto-loaded like this file — **read the matching doc before changing that area**. Index: [`project-docs/README.md`](project-docs/README.md).
+Internal patterns live in [`project-docs/`](project-docs/). They are **not** auto-loaded like this file — **read the matching doc before changing that area**. Index + roles: [`project-docs/README.md`](project-docs/README.md).
 
 | When working on… | Read first |
 |------------------|------------|
-| Hero / day-trip / course sales page layout | `project-docs/PAGE-HEADER-JUMP-MENU-PATTERN.md` (current) · `project-docs/HERO-TRANSACTIONAL-PATTERN.md` (legacy notes) |
+| New page / which HTML structure | `project-docs/PAGE-TYPES.md` (clone a reference URL) |
+| Jump menu, header exceptions, checklists | `project-docs/PAGE-HEADER-JUMP-MENU-PATTERN.md` |
 | Mobile LCP/CLS, preload, hub cards | `project-docs/MOBILE-PERF-GOLD-PATTERN.md` |
 | Keyword vs Google Search Console page checks | `project-docs/KEYWORD-GSC-PAGE-ANALYSIS.md` |
-| Schema.org / SEO reference | `project-docs/SEO-REFERENCE.md` |
-| Thai translations | `project-docs/TRANSLATION-RULES-TH.md` + `project-docs/GLOSSARY-TECHNICAL-CAVE-TH.md` |
+| Schema.org | `project-docs/SEO-REFERENCE.md` |
+| Thai translations | `project-docs/TRANSLATION-RULES-TH.md` + `project-docs/GLOSSARY-EN-TH.md` |
+| Footer links/labels (all pages) | `project-docs/FOOTER-SYNC.md` |
 | Sitemap generator | `project-docs/README_SITEMAP.md` |
-| Oct 2025 indexing / redirect incident | `project-docs/SEO-INDEXING-FIXES-OCT-2025.md` |
+| Oct 2025 indexing / redirect incident | `project-docs/SEO-INDEXING-FIXES-OCT-2025.md` (archive) |
 
 **Hard rules:** keep the shared sales-page structure; do not invent a parallel layout. Prefer updating text/meta/schema inside existing blocks. Keyword/GSC fixes = text + meta + schema only, unless the user explicitly allows a structural change.
 
@@ -71,6 +73,12 @@ Keep `search-index.json` **compact** (no prettier pretty-print).
 
 - File: `sitemap.xml` (not `sitemap-index.xml`)
 - After URL set changes: regenerate per `project-docs/README_SITEMAP.md`, then resubmit in Google Search Console if needed
+
+---
+
+## Footers
+
+Static footers — do not hand-edit site-wide. Runbook: [`project-docs/FOOTER-SYNC.md`](project-docs/FOOTER-SYNC.md) (`python3 scripts/sync-footer.py`).
 
 ---
 

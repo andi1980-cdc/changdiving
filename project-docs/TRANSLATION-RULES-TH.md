@@ -1,8 +1,10 @@
 # Thai Translation Rules — changdiving.com
 
+**Role:** `living`
+
 Standardisierter Prompt für die Übersetzung von HTML-Seiten ins Thai.  
 Einbinden per `@TRANSLATION-RULES-TH.md` in jeden Übersetzungs-Chat.  
-Terminologie-Referenz: `@GLOSSARY-TECHNICAL-CAVE-TH.md`
+Terminologie-Referenz: `@GLOSSARY-EN-TH.md` (inkl. **§18** Site-Terms: Marke, เกาะช้าง, เรือจม, **ฟันไดฟ์**, … — Glossar schlägt bei Widerspruch zu allgemeinen „Englisch belassen“-Listen).
 
 ---
 
@@ -33,10 +35,11 @@ Terminologie-Referenz: `@GLOSSARY-TECHNICAL-CAVE-TH.md`
 ### 4. Taucherterminologie
 - Internationale Begriffe beibehalten, wenn geläufig:
   - Nitrox, Deco, Trimix, Sidemount, Twinset, Stage
-  - Deep Dive, Wreck Dive, Fun Dive, Divemaster
+  - Deep Dive, Wreck Dive, Divemaster
   - Advanced Open Water, Open Water
+- Site-Terms (Fun Dive → **ฟันไดฟ์**, Wreck → **เรือจม**, Marke, …): **Glossar §18**, nicht frei erfinden
 - Technische Fachbegriffe NICHT falsch lokalisieren
-- Referenz: `@GLOSSARY-TECHNICAL-CAVE-TH.md`
+- Referenz: `@GLOSSARY-EN-TH.md`
 
 ### 5. SEO-Elemente natürlich übersetzen
 - `<title>` — max. 65 Zeichen, Markenname am Ende: `| ช้างไดฟ์วิ่ง`
