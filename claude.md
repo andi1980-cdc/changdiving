@@ -1,180 +1,57 @@
-# Chang Diving SEO Fixes - October 15, 2025
+# Chang Diving – AI workspace rules
 
-## Problem Statement
+Living project rules for Cursor/agents. Historical SEO incident notes (Oct 2025) → [`project-docs/SEO-INDEXING-FIXES-OCT-2025.md`](project-docs/SEO-INDEXING-FIXES-OCT-2025.md).
 
-Google Search Console showed 300+ pages indexed, but searching `site:changdiving.com` only returned 1 page (homepage). Bing showed 50+ pages indexed normally.
+---
 
-## Root Causes Identified
+## Project docs (read when relevant)
 
-1. **JavaScript-based language redirects** on homepage potentially confusing Google
-2. **Extensive 410 (Gone) responses** for `/product/`, `/category/`, `/store/`, `/tag/` URLs telling Google content was deleted
-3. **Aggressive no-cache headers** on 410 responses signaling instability
-4. **Crawl-delay directive** in robots.txt (Google ignores but causes confusion)
+Internal patterns live in [`project-docs/`](project-docs/). They are **not** auto-loaded like this file — **read the matching doc before changing that area**. Index: [`project-docs/README.md`](project-docs/README.md).
 
-## Fixes Implemented
+| When working on… | Read first |
+|------------------|------------|
+| Hero / day-trip / course sales page layout | `project-docs/PAGE-HEADER-JUMP-MENU-PATTERN.md` (current) · `project-docs/HERO-TRANSACTIONAL-PATTERN.md` (legacy notes) |
+| Mobile LCP/CLS, preload, hub cards | `project-docs/MOBILE-PERF-GOLD-PATTERN.md` |
+| Keyword vs Google Search Console page checks | `project-docs/KEYWORD-GSC-PAGE-ANALYSIS.md` |
+| Schema.org / SEO reference | `project-docs/SEO-REFERENCE.md` |
+| Thai translations | `project-docs/TRANSLATION-RULES-TH.md` + `project-docs/GLOSSARY-TECHNICAL-CAVE-TH.md` |
+| Sitemap generator | `project-docs/README_SITEMAP.md` |
+| Oct 2025 indexing / redirect incident | `project-docs/SEO-INDEXING-FIXES-OCT-2025.md` |
 
-### 1. Server-Side Language Detection (Replaced JavaScript)
+**Hard rules:** keep the shared sales-page structure; do not invent a parallel layout. Prefer updating text/meta/schema inside existing blocks. Keyword/GSC fixes = text + meta + schema only, unless the user explicitly allows a structural change.
 
-**File Modified:** `functions/[[path]].js`
+Do **not** confuse `project-docs/` (markdown notes) with `docs/` (public PDFs linked from HTML as `/docs/….pdf`).
 
-**Changes:**
+Root stays lean: `README.md` + this file. Tool configs (`.gitignore`, `.prettierrc`, `.cursor/`, `.vscode/`, …) must remain at repo root.
 
-- Added server-side language detection at Cloudflare edge
-- Detection priority: Cookie → Accept-Language → Geo-location → Default (English)
-- Bots/crawlers see language selector page (no redirect)
-- Human users get automatic 302 redirect to their language
-- Sets 30-day cookie to remember preference
+---
 
-**Impact:**
+## Edge routing (`functions/[[path]].js`)
 
-- Eliminates JavaScript dependency
-- Search engines can properly crawl all content
-- Better performance (instant at edge)
+Still in production on Cloudflare Pages:
 
-### 2. Removed JavaScript Redirects from Homepage
+- Language detection for humans: Cookie → Accept-Language → Geo → default English; bots see the language selector (no auto-redirect)
+- `?noredirect` skips language redirect
+- Legacy WordPress-style paths (`/product`, `/store`, `/tag`, …) → **301** to current hubs (not 410)
+- Image renames and other legacy URLs → 301 where configured
 
-**File Modified:** `index.html`
-
-**Changes:**
-
-- Removed entire JavaScript auto-redirect script
-- Updated user message (no longer mentions automatic redirect)
-- Page now serves as clean language selector for bots
-
-**Impact:**
-
-- No more potential for Google to see this as cloaking
-- Clear, static content for crawlers
-
-### 3. Converted 410 (Gone) to 301 (Moved) Redirects
-
-**File Modified:** `functions/[[path]].js`
-
-**Changes Added to REDIRECTS_PREFIX:**
-
-```javascript
-{ from: "/en/product", to: "/en/courses/" },
-{ from: "/de/product", to: "/de/courses/" },
-{ from: "/th/product", to: "/th/courses/" },
-{ from: "/en/category", to: "/en/courses/" },
-{ from: "/de/category", to: "/de/courses/" },
-{ from: "/th/category", to: "/th/courses/" },
-{ from: "/en/store", to: "/en/prices/" },
-{ from: "/de/store", to: "/de/prices/" },
-{ from: "/th/store", to: "/th/prices/" },
-{ from: "/en/tag", to: "/en/posts/" },
-{ from: "/de/tag", to: "/de/posts/" },
-{ from: "/th/tag", to: "/th/posts/" },
-```
-
-**Removed from FORCE_GONE_PREFIX:**
-
-- All `/*/product`, `/*/category`, `/*/store`, `/*/tag` paths
-
-**Impact:**
-
-- Google sees "content moved" not "content deleted"
-- Preserves link equity from any backlinks
-- Removes negative quality signals
-
-### 4. Removed Crawl-Delay from robots.txt
-
-**File Modified:** `robots.txt`
-
-**Changes:**
-
-- Removed `Crawl-delay: 1` directive
-
-**Impact:**
-
-- Google ignores this anyway, but removing prevents confusion
-- May improve crawl efficiency
-
-## Testing Commands
-
-### Test Server-Side Language Detection
+Quick checks:
 
 ```bash
-# Test bot detection (should NOT redirect)
 curl -I -H "User-Agent: Googlebot" https://changdiving.com/
-
-# Test German language (should redirect to /de/)
 curl -I -H "Accept-Language: de" https://changdiving.com/
-
-# Test with noredirect parameter
 curl -I "https://changdiving.com/?noredirect"
-```
-
-### Test 301 Redirects (Previously 410)
-
-```bash
-# Should return 301 redirect to /en/courses/
 curl -I https://changdiving.com/en/product/
-
-# Should return 301 redirect to /en/prices/
 curl -I https://changdiving.com/en/store/
 ```
 
-## Files Changed
+---
 
-1. `functions/[[path]].js` - Added language detection, fixed 410→301
-2. `index.html` - Removed JavaScript redirects
-3. `robots.txt` - Removed Crawl-delay
-
-## Files Created (Testing)
-
-1. `test-language-redirect.sh` - Test script for language detection
-2. `claude.md` - This documentation file
-
-## Verification Status
-
-- ✅ Google Search Console verified via DNS
-- ✅ Bing verified via meta tag
-- ✅ Sitemap accessible (373 URLs)
-- ✅ All changes deployed to Cloudflare Pages
-
-## Next Steps for Site Owner
-
-### Immediate Actions (Do Now):
-
-1. **In Google Search Console:**
-   - Go to "URL Inspection" and request indexing for:
-     - `https://changdiving.com`
-     - `https://changdiving.com/en/`
-     - `https://changdiving.com/de/`
-     - `https://changdiving.com/en/courses/`
-   - Go to "Sitemaps" and resubmit `sitemap-index.xml`
-
-2. **Monitor Daily:**
-   - Check "Performance" for increased impressions
-   - Check "Page indexing" for indexed count
-   - Weekly search `site:changdiving.com` to track progress
-
-### Expected Timeline:
-
-- **24-48 hours**: Google starts recrawling
-- **3-7 days**: Changes visible in coverage reports
-- **1-2 weeks**: Full impact on indexed pages
-
-## Technical Notes
-
-- All changes work with free Cloudflare Pages plan
-- Language detection happens at Cloudflare edge (200+ locations)
-- No JavaScript required for core functionality
-- Bot detection regex includes major search engines and social platforms
-
-## Search Index (`search-index.json`)
+## Search index (`search-index.json`)
 
 Generated by `scripts/generate-search-index.py` from page `<title>` + `<meta name="description">`.
 
-### When to regenerate
-
-Run after any of the following:
-- A new page is added or removed
-- A page title or meta description changes
-- Hub/utility exclusion rules are updated
-
-### Regeneration command
+Regenerate after: new/removed pages, title/description changes, or exclusion-rule updates.
 
 ```bash
 cd /Users/andismac/Desktop/cdc_git
@@ -184,45 +61,33 @@ git commit -m "chore: regenerate search-index.json"
 git push
 ```
 
-### Indexing policy
+**Policy:** include leaf pages + course subcategory hubs (`beginner-courses`, `advanced-courses`, `professional-courses`, `specialty`, `technical-diving-courses`). Exclude language roots, top-level hubs (`/courses/`, `/posts/`, …), post-category hubs, legal/utility/search/404/410.
 
-- **Included:** leaf pages + course subcategory hubs (`beginner-courses`, `advanced-courses`, `professional-courses`, `specialty`, `technical-diving-courses`) so intent queries like “beginner course” hit the overview
-- **Excluded:** language roots, top-level section hubs (`/courses/`, `/posts/`, …), post-category hubs, legal/utility/search/404/410
-
-### Excluded pages (not in index)
-
-| Type | Examples |
-|------|---------|
-| Language root | `/en/`, `/de/`, `/th/` |
-| Top-level hubs | `/en/courses/`, `/en/posts/`, `/en/dive-sites/`, … |
-| Post-category hubs | `/en/posts/scuba-knowledge/`, `/en/posts/tips-and-tricks/`, … |
-| Legal / utility | `/privacy-policy/`, `/refund-policy/`, `/terms-and-conditions/`, `/search/` |
+Keep `search-index.json` **compact** (no prettier pretty-print).
 
 ---
 
-## Summary
+## Sitemap
 
-The primary issue was sending mixed signals to Google:
-
-1. JavaScript redirects that might be seen as cloaking
-2. Many 410 responses suggesting content deletion
-3. Crawl-delay that Google ignores but shows in Search Console
-
-All issues have been addressed. The site now sends clear, positive signals to search engines while providing better user experience through instant server-side language detection.
+- File: `sitemap.xml` (not `sitemap-index.xml`)
+- After URL set changes: regenerate per `project-docs/README_SITEMAP.md`, then resubmit in Google Search Console if needed
 
 ---
 
-## Mobile Performance Gold Pattern (July 2026)
+## Mobile performance
 
-**Canonical checklist:** [`project-docs/MOBILE-PERF-GOLD-PATTERN.md`](project-docs/MOBILE-PERF-GOLD-PATTERN.md)
+Canonical checklist: [`project-docs/MOBILE-PERF-GOLD-PATTERN.md`](project-docs/MOBILE-PERF-GOLD-PATTERN.md)
 
-**Reference:** `/en/` — best mobile + desktop lab scores in the project. Hubs must match the same head/hero stack **and** lazy-load card tiles (only logo + LCP hero stay eager).
+Reference: `/en/`. On hero pages: early `_small` preload + `fetchpriority="high"`, dual `<picture>` sources, critical CSS for mobile hero `aspect-ratio: 3/2`, async CSS, `global.js` defer, hub/card images `loading="lazy"`. Image renames → 301 in `functions/[[path]].js`.
 
-When adding or editing any hero page, follow that doc for:
+---
 
-1. Early `_small` image preload + `fetchpriority="high"` (no competing `global.js` preload)
-2. `<picture>` dual sources (desktop `_big` / mobile `_small`)
-3. Critical CSS: mobile hero `aspect-ratio: 3/2` + content `.grid-container h1` metrics
-4. Async `fonts.css`, async `style.min.css`, `global.js` with `defer`
-5. Hub/card images: `loading="lazy"` (never compete with LCP)
-6. Image renames → 301 in `functions/[[path]].js`
+## Booking (soft launch)
+
+Soft-launch booking UI: `/en|de|th/book/` powered by `js/booking/booking-form.js` (cache-bust via `?v=` on book pages). Prices and product options in that JS must match course/day-trip and `/prices/` tables (SDI vs PADI amounts). User-facing copy: **activity** / Aktivität / กิจกรรม — not shop “product” (URL `?product=` params may stay).
+
+---
+
+## Commits
+
+Only commit/push when the user asks. Prefer prettier on touched HTML/JS before commit. Do not force-push `main`.

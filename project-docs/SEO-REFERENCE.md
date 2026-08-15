@@ -13,7 +13,8 @@
 | **Dive-sites** | ✅ | ✅ | – | – | – | ✅ |
 | **FAQs** | ✅ | ✅ | – | ✅ | – | ✅ |
 | **Posts / Articles** | ❌ | ✅ | – | wenn FAQ vorhanden | ✅ BlogPosting | ❌ |
-| **about, contact, prices** | ❌ | ✅ | – | – | – | ❌ |
+| **about, contact** | ❌ | ✅ | – | – | – | ❌ |
+| **prices** | ✅ | ✅ | – | ✅ FAQPage | – | ✅ (Google reviews 4.8/171) |
 | **Index (en/de/th)** | ✅ | – | ✅ | – | – | ✅ |
 | **404 / 410** | ✅ | – | – | – | – | ✅ |
 
@@ -130,6 +131,7 @@ Projekt-Notizen liegen unter `project-docs/` (nicht verwechseln mit `docs/` = PD
 | `project-docs/MOBILE-PERF-GOLD-PATTERN.md` | LCP/CLS Mobile-Checkliste |
 | `project-docs/KEYWORD-GSC-PAGE-ANALYSIS.md` | Keyword ↔ GSC Seitenanalyse |
 | `project-docs/SEO-REFERENCE.md` | Schema-/SEO-Referenz |
+| `project-docs/SEO-INDEXING-FIXES-OCT-2025.md` | Historie Indexing/Redirects Okt 2025 |
 | `project-docs/TRANSLATION-RULES-TH.md` | Regeln für Thai-Übersetzungen |
 | `project-docs/GLOSSARY-TECHNICAL-CAVE-TH.md` | Thai-Glossar Tauchen & Tech-Diving |
 | `project-docs/README_SITEMAP.md` | Sitemap-Generator Dokumentation |
