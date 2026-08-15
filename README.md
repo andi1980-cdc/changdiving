@@ -26,16 +26,19 @@ Chang Diving offers comprehensive scuba diving services in the beautiful waters 
 ## 📁 Structure
 
 ```
-├── en/          # English version
-├── de/          # German version
-├── th/          # Thai version
-├── img/         # Images and media
-├── fonts/       # Web fonts
-├── js/          # JavaScript files
-├── docs/        # PDF documents
-├── style.css    # Main stylesheet
-├── index.html   # Homepage
-└── robots.txt   # SEO robots file
+├── en/              # English version
+├── de/              # German version
+├── th/              # Thai version
+├── img/             # Images and media
+├── fonts/           # Web fonts
+├── js/              # JavaScript files
+├── docs/            # Public PDF documents (forms, slates)
+├── project-docs/    # Internal markdown notes & patterns
+├── style.css        # Main stylesheet
+├── index.html       # Homepage
+├── README.md        # Project overview
+├── claude.md        # AI workspace notes
+└── robots.txt       # SEO robots file
 ```
 
 ## 🏗️ Technology Stack

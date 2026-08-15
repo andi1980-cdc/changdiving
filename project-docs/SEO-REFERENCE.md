@@ -120,13 +120,20 @@ git add search-index.json && git commit -m "chore: regenerate search-index.json"
 
 ## 7. Wichtige Dateipfade
 
+Projekt-Notizen liegen unter `project-docs/` (nicht verwechseln mit `docs/` = PDFs).
+
 | Datei | Zweck |
 |-------|-------|
-| `CLAUDE.md` | AI-Workspace-Regeln (wird automatisch geladen) |
-| `HERO-TRANSACTIONAL-PATTERN.md` | Muster für Hero-Sections auf Money-Pages |
-| `TRANSLATION-RULES-TH.md` | Regeln für Thai-Übersetzungen |
-| `GLOSSARY-TECHNICAL-CAVE-TH.md` | Thai-Glossar Tauchen & Tech-Diving |
+| `claude.md` / `CLAUDE.md` | AI-Workspace-Regeln (Root, wird automatisch geladen) |
+| `project-docs/HERO-TRANSACTIONAL-PATTERN.md` | Muster für Hero-Sections auf Money-Pages |
+| `project-docs/PAGE-HEADER-JUMP-MENU-PATTERN.md` | H1 unter Hero + Jump-Menü (aktueller Standard) |
+| `project-docs/MOBILE-PERF-GOLD-PATTERN.md` | LCP/CLS Mobile-Checkliste |
+| `project-docs/KEYWORD-GSC-PAGE-ANALYSIS.md` | Keyword ↔ GSC Seitenanalyse |
+| `project-docs/SEO-REFERENCE.md` | Schema-/SEO-Referenz |
+| `project-docs/TRANSLATION-RULES-TH.md` | Regeln für Thai-Übersetzungen |
+| `project-docs/GLOSSARY-TECHNICAL-CAVE-TH.md` | Thai-Glossar Tauchen & Tech-Diving |
+| `project-docs/README_SITEMAP.md` | Sitemap-Generator Dokumentation |
 | `README.md` | Projekt-Übersicht & Setup |
-| `README_SITEMAP.md` | Sitemap-Generator Dokumentation |
 | `search-index.json` | Statischer Such-Index (generiert, nicht manuell bearbeiten) |
 | `functions/[[path]].js` | Cloudflare Edge-Function (Sprach-Redirect, 301s) |
+| `docs/` | Öffentliche PDF-Dokumente (Liability, Medical, …) |

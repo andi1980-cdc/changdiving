@@ -1,7 +1,7 @@
 # Transactional Hero: Muster für späteren Projekt-Rollout
 
-> **Update Juli 2026:** Für Day-Trip-/Kurs-Seiten gilt jetzt zusätzlich das Muster **H1 unter dem Hero + einheitliches Jump-Menü** – siehe [`docs/PAGE-HEADER-JUMP-MENU-PATTERN.md`](docs/PAGE-HEADER-JUMP-MENU-PATTERN.md).  
-> **Performance:** LCP/CLS-Goldmuster (Preload, Critical CSS, defer, Hub-Karten lazy) → [`docs/MOBILE-PERF-GOLD-PATTERN.md`](docs/MOBILE-PERF-GOLD-PATTERN.md).  
+> **Update Juli 2026:** Für Day-Trip-/Kurs-Seiten gilt jetzt zusätzlich das Muster **H1 unter dem Hero + einheitliches Jump-Menü** – siehe [`PAGE-HEADER-JUMP-MENU-PATTERN.md`](PAGE-HEADER-JUMP-MENU-PATTERN.md).  
+> **Performance:** LCP/CLS-Goldmuster (Preload, Critical CSS, defer, Hub-Karten lazy) → [`MOBILE-PERF-GOLD-PATTERN.md`](MOBILE-PERF-GOLD-PATTERN.md).  
 > Dieses Dokument bleibt relevant für Money-Keywords, Meta/JSON-LD und Mobile-Hero-Klassen.
 
 Beschreibt das auf **Fun Dives** umgesetzte Muster (Money-Keywords im sichtbaren Hero, konsistente Metadaten, Mobile-Hero ohne doppelte Überschrift). So kannst du es **seitenweise oder später projektweit** übernehmen.

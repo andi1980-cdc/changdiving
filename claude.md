@@ -214,7 +214,7 @@ All issues have been addressed. The site now sends clear, positive signals to se
 
 ## Mobile Performance Gold Pattern (July 2026)
 
-**Canonical checklist:** [`docs/MOBILE-PERF-GOLD-PATTERN.md`](docs/MOBILE-PERF-GOLD-PATTERN.md)
+**Canonical checklist:** [`project-docs/MOBILE-PERF-GOLD-PATTERN.md`](project-docs/MOBILE-PERF-GOLD-PATTERN.md)
 
 **Reference:** `/en/` — best mobile + desktop lab scores in the project. Hubs must match the same head/hero stack **and** lazy-load card tiles (only logo + LCP hero stay eager).
 

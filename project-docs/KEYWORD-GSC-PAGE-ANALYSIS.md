@@ -173,6 +173,6 @@ Pro Seite: Report ablegen, Checkliste ausfüllen, nur strukturtreue Textfixes.
 
 ## Bezug
 
-- Seitenstruktur / Jump-Nav: `docs/PAGE-HEADER-JUMP-MENU-PATTERN.md`  
-- Schema-Übersicht: `docs/SEO-REFERENCE.md` (Matrix ggf. nachziehen: `/prices/` hat inzwischen LocalBusiness + FAQPage)  
+- Seitenstruktur / Jump-Nav: `PAGE-HEADER-JUMP-MENU-PATTERN.md`  
+- Schema-Übersicht: `SEO-REFERENCE.md` (Matrix ggf. nachziehen: `/prices/` hat inzwischen LocalBusiness + FAQPage)  
 - TH-Übersetzungen: `TRANSLATION-RULES-TH.md`
