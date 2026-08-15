@@ -1,7 +1,7 @@
 # Page types – HTML structure catalog
 
 **Role:** `living`  
-**Stand:** August 2026  
+**Stand:** August 2026
 
 Canonical map of **page types** on changdiving.com. Use this when creating or heavily editing a page.
 
@@ -21,15 +21,15 @@ Canonical map of **page types** on changdiving.com. Use this when creating or he
 
 ## Type overview
 
-| Type | Box / wrapper | H1 + teaser under hero | Jump menu | Schema (see SEO-REFERENCE) |
-|------|---------------|------------------------|-----------|----------------------------|
-| **Hub** | usually none (`grid-container`) | yes | **never** | LocalBusiness + Breadcrumb (typical) |
-| **Money / product** | `changdiving-box` or `speciality-box` or `tek-box` | yes | **yes (4)** | LocalBusiness, Course/Service as applicable, FAQ if present |
-| **Prices** | special hub-like page | yes | **yes (7)** exception | LocalBusiness + FAQPage + rating |
-| **Dive site** | `dive-site-box` | yes | **yes (max 4)** | LocalBusiness + Breadcrumb |
-| **Post** | `posts-box` (rare: `tek-box`) | yes | **yes, thematic** | BlogPosting + Breadcrumb (no aggregateRating) |
-| **FAQ detail** | `faq-box` | yes | **never** | FAQPage + LocalBusiness typical |
-| **Language home** `/en/` `/de/` `/th/` | — | homepage pattern | no | LocalBusiness + Course list |
+| Type                                   | Box / wrapper                                      | H1 + teaser under hero | Jump menu             | Schema (see SEO-REFERENCE)                                  |
+| -------------------------------------- | -------------------------------------------------- | ---------------------- | --------------------- | ----------------------------------------------------------- |
+| **Hub**                                | usually none (`grid-container`)                    | yes                    | **never**             | LocalBusiness + Breadcrumb (typical)                        |
+| **Money / product**                    | `changdiving-box` or `speciality-box` or `tek-box` | yes                    | **yes (4)**           | LocalBusiness, Course/Service as applicable, FAQ if present |
+| **Prices**                             | special hub-like page                              | yes                    | **yes (7)** exception | LocalBusiness + FAQPage + rating                            |
+| **Dive site**                          | `dive-site-box`                                    | yes                    | **yes (max 4)**       | LocalBusiness + Breadcrumb                                  |
+| **Post**                               | `posts-box` (rare: `tek-box`)                      | yes                    | **yes, thematic**     | BlogPosting + Breadcrumb (no aggregateRating)               |
+| **FAQ detail**                         | `faq-box`                                          | yes                    | **never**             | FAQPage + LocalBusiness typical                             |
+| **Language home** `/en/` `/de/` `/th/` | —                                                  | homepage pattern       | no                    | LocalBusiness + Course list                                 |
 
 Hard rule (SEO text fixes): change **meta + copy inside existing blocks only**, unless the user explicitly allows structural change.
 
@@ -50,7 +50,7 @@ Hard rule (SEO text fixes): change **meta + copy inside existing blocks only**, 
 ```
 
 - Hero classes on transactional/sales pages: `hero hero--transactional` or `hero hero--fun-dives` (same mobile CSS). Homepage also uses `hero--transactional`.
-- Money keywords: `<title>` / H1 / hero `alt` / OG titles / JSON-LD names aligned (H1 **without** `| Chang Diving` brand pipe).
+- Money titles: **What · Where · Duration/outcome · Price** (see Money section below). Align `<title>` / H1 / hero `alt` / OG titles / JSON-LD `name` (H1 **without** `| Chang Diving` brand pipe).
 - Empty breadcrumb: `<nav id="breadcrumb" class="breadcrumb"></nav>` (filled by `global.js`).
 - Trustindex reviews on hubs/sales: **before** “Dive Deeper” / guides blocks.
 
@@ -89,7 +89,45 @@ Hard rule (SEO text fixes): change **meta + copy inside existing blocks only**, 
 **Examples:** Fun Dives, Try Dive, Open Water, specialties, tech courses.
 
 **Reference (day trip):** [`/en/day-trips/fun-dives/`](https://changdiving.com/en/day-trips/fun-dives/) · `en/day-trips/fun-dives/index.html`  
+**Reference (course title formula):** [`/en/courses/open-water-diver/`](https://changdiving.com/en/courses/open-water-diver/)  
 **Reference (tech):** [`/en/courses/intro-to-tech/`](https://changdiving.com/en/courses/intro-to-tech/) · `tek-box`
+
+### Title / H1 formula (required for money pages)
+
+For **`/day-trips/…`** and **`/courses/…`** product pages, `<title>` and `<h1>` (and matching OG/Twitter/`alt`/JSON-LD `name`) follow:
+
+**What · Where · Duration (or outcome) · Price**
+
+| Slot                   | Meaning                | Examples                                                                        |
+| ---------------------- | ---------------------- | ------------------------------------------------------------------------------- |
+| **What**               | Activity / course name | Open Water Diver, Try Dive, Fun Dives, Schnuppertauchen, ลองดำน้ำ               |
+| **Where**              | Always local           | `Koh Chang` / `เกาะช้าง` (in TH often fused: `ลองดำน้ำเกาะช้าง`)                |
+| **Duration / outcome** | Time or clear result   | `Get certified in 3 days`, `1 day`, `First Scuba Dive, 1 day, no certification` |
+| **Price**              | From-price, factual    | `from 14,490 THB` / `ab 4.890 THB` / `เริ่ม 4,890 บาท`                          |
+
+**Pattern (EN):**
+
+```text
+{What} Koh Chang – {duration or outcome} - from {price} THB | Chang Diving
+```
+
+**Examples:**
+
+| Page     | Title (without brand pipe on H1)                                                                                                                                      |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Course   | `Open Water Diver Koh Chang – Get certified in 3 days - from 14,490 THB`                                                                                              |
+| Day trip | `Try Dive Koh Chang – First Scuba Dive, 1 day, no certification - from 4,890 THB`                                                                                     |
+| Day trip | `Fun Dives Koh Chang – Guided boat dives from 3,290 THB` (duration optional if “from” price + activity is clear; prefer adding duration when it’s a fixed 1-day trip) |
+
+**Rules:**
+
+- H1 = same as title **without** `| Chang Diving` / `| ช้างไดฟ์วิ่ง`
+- OG/Twitter title = full title **with** brand pipe
+- JSON-LD `name` / `description` stay aligned with the same facts
+- DE: What in natural German where that’s the search term (`Schnuppertauchen Koh Chang – …`); product nickname “Try Dive” may appear in body
+- TH: What+Where per [`GLOSSARY-EN-TH.md`](GLOSSARY-EN-TH.md) §18 (`ลองดำน้ำเกาะช้าง`, `ฟันไดฟ์`, …)
+- Don’t invent fake durations or prices; keep “from/ab/เริ่ม” when options vary
+- Hubs (`/courses/`, `/day-trips/`) are **not** money titles — normal hub H1/teaser
 
 ```
 <header> hero (hero--fun-dives | hero--transactional) </header>
@@ -205,9 +243,9 @@ Tech tone posts may use `tek-box` (e.g. some straight-talk tech pieces).
 
 ## Hero modifiers (from former transactional-hero notes)
 
-| Class | Use |
-|-------|-----|
-| `hero hero--fun-dives` | Fun Dives (and shared mobile rules) |
+| Class                      | Use                                         |
+| -------------------------- | ------------------------------------------- |
+| `hero hero--fun-dives`     | Fun Dives (and shared mobile rules)         |
 | `hero hero--transactional` | Other bookable/sales pages + many hubs/home |
 
 Mobile (≤767): shared rules in `style.css` / `style.min.css` — do not hide H1 with one-off page CSS that fights the pattern.
