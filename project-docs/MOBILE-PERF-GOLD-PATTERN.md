@@ -13,12 +13,12 @@ Hubs (`/courses/`, `/day-trips/`, `/dive-sites/`, …) sollen dem **gleichen Hea
 
 ## Zielwerte (PageSpeed Insights, Mobile)
 
-| Metrik | Ziel | Hinweis |
-| ------ | ---- | ------- |
-| Performance | ≥ 95 | 90+ reicht, 99 ist erreichbar |
-| LCP | ≤ 2.5s | Ideal ≈ 2.0s |
-| CLS | ≤ 0.05 | Ideal ≈ 0.025 |
-| TBT | ≈ 0 ms | `global.js` immer mit `defer` |
+| Metrik      | Ziel   | Hinweis                       |
+| ----------- | ------ | ----------------------------- |
+| Performance | ≥ 95   | 90+ reicht, 99 ist erreichbar |
+| LCP         | ≤ 2.5s | Ideal ≈ 2.0s                  |
+| CLS         | ≤ 0.05 | Ideal ≈ 0.025                 |
+| TBT         | ≈ 0 ms | `global.js` immer mit `defer` |
 
 Lab-Scores schwanken (±5–10). Maßgeblich: Trend + CrUX-Felddaten, nicht ein einzelner PSI-Lauf.
 
@@ -54,7 +54,9 @@ Genau in dieser Logik (Details dürfen dazwischen stehen, Priorität nicht umkeh
 <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
 
 <!-- 3) Critical CSS inline -->
-<style id="critical-css">…</style>
+<style id="critical-css">
+  …
+</style>
 
 <!-- 4) Full CSS async -->
 <link
@@ -74,14 +76,14 @@ Am Seitenende:
 
 ### Verboten / vermeiden
 
-| Nicht tun | Warum |
-| --------- | ----- |
-| `<link rel="preload" href="/js/global.js" as="script">` früh im Head | Stehlt auf Slow-4G Bandbreite vom LCP-Bild |
-| `global.js` **ohne** `defer` | Blockiert Parser, schadet LCP/TBT |
-| Sync `fonts.css` als render-blocking Stylesheet | Verzögert First Paint (Fonts haben `font-display: optional`) |
-| Hero-Preload **nach** großem Critical-CSS / JSON-LD | Browser entdeckt LCP zu spät |
-| `imagesrcset` mit `_small` **und** `_big` im Preload | Retina-Mobile lädt oft `_big` vor |
-| Karten-/Tile-Bilder **ohne** `loading="lazy"` | Konkurrenz zum LCP (Hauptgrund warum Hubs hinter `/en/` liegen) |
+| Nicht tun                                                            | Warum                                                           |
+| -------------------------------------------------------------------- | --------------------------------------------------------------- |
+| `<link rel="preload" href="/js/global.js" as="script">` früh im Head | Stehlt auf Slow-4G Bandbreite vom LCP-Bild                      |
+| `global.js` **ohne** `defer`                                         | Blockiert Parser, schadet LCP/TBT                               |
+| Sync `fonts.css` als render-blocking Stylesheet                      | Verzögert First Paint (Fonts haben `font-display: optional`)    |
+| Hero-Preload **nach** großem Critical-CSS / JSON-LD                  | Browser entdeckt LCP zu spät                                    |
+| `imagesrcset` mit `_small` **und** `_big` im Preload                 | Retina-Mobile lädt oft `_big` vor                               |
+| Karten-/Tile-Bilder **ohne** `loading="lazy"`                        | Konkurrenz zum LCP (Hauptgrund warum Hubs hinter `/en/` liegen) |
 
 ---
 
@@ -145,13 +147,7 @@ Desktop lädt `_big` zusätzlich über `<picture>` — Absicht. So vermeiden wir
 **Alles andere** (Course-Cards, Dive-Site-Tiles, Day-Trip-Cards, Post-Teaser, WhatsApp-Badge, Banner unter dem Fold):
 
 ```html
-<img
-  src="/img/.../card.webp"
-  alt="…"
-  width="600"
-  height="400"
-  loading="lazy"
-/>
+<img src="/img/.../card.webp" alt="…" width="600" height="400" loading="lazy" />
 ```
 
 Ohne Lazy laden Hubs wie `/en/courses/` 30+ Bilder sofort (~800 KB+) und verlieren gegen die schlanke `/en/`-Homepage — trotz gleichem Hero-/Head-Stack.
@@ -162,7 +158,7 @@ Ohne Lazy laden Hubs wie `/en/courses/` 30+ Bilder sofort (~800 KB+) und verlier
 
 ### A) Mobile Hero (CLS ~0.3 wenn fehlend)
 
-Ohne diesen Block: First Paint mit `height: 75vh`, danach Collapse auf 3:2 → großer CLS.
+Ohne diesen Block: First Paint mit `height: 60vh`, danach Collapse auf 3:2 → großer CLS.
 
 ```css
 @media (max-width: 767px) {
@@ -212,8 +208,12 @@ Kein konfliktierendes Inline-`style="margin: 20px 0 8px"` an der H1.
 Reserviert Höhe bevor Full-CSS / JS greifen:
 
 ```css
-.course-submenu { /* flex, padding, gap — wie style.css */ }
-.course-submenu a { /* pill styles */ }
+.course-submenu {
+  /* flex, padding, gap — wie style.css */
+}
+.course-submenu a {
+  /* pill styles */
+}
 .breadcrumb {
   font-size: 0.9em;
   margin: 20px 0 20px 20px;
@@ -375,14 +375,13 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 
 **Try Dive vs Fun Dives vs Kurse:**
 
-| Seite | Früh in der Box | Fix |
-| ----- | --------------- | --- |
-| Fun Dives | Banner `*_header.webp` | **D2** |
-| Kurse (Nitrox) | **2** Videos | **4E** (flex ok) |
-| Try Dive | **1** Video | **E2** (`display: block` + Play absolut im Critical) |
+| Seite          | Früh in der Box        | Fix                                                  |
+| -------------- | ---------------------- | ---------------------------------------------------- |
+| Fun Dives      | Banner `*_header.webp` | **D2**                                               |
+| Kurse (Nitrox) | **2** Videos           | **4E** (flex ok)                                     |
+| Try Dive       | **1** Video            | **E2** (`display: block` + Play absolut im Critical) |
 
 ### D2) Day-Trip Banner-Bild in der Box (`img.lazy` `*_header.webp`)
-
 
 **Symptom:** `/day-trips/fun-dives/` hat 4D (Box-Padding + `> h1`) wie die Kurse, CLS auf `.changdiving-box` bleibt ~0.15.
 
@@ -412,23 +411,22 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 }
 ```
 
-**Sonderfall Scuba Review:** Banner als `scuba_review_header.webp` benennen (D2 greift), Hero wie Fun/Try (`hero--transactional`, Picture nur Desktop-`<source>` + `<img>` Fallback, kein extra Mobile-`<source>`), plus ATF-`hr` + `.page-jump-nav` im Critical **vor** dem Mobile-Block.
----
+## **Sonderfall Scuba Review:** Banner als `scuba_review_header.webp` benennen (D2 greift), Hero wie Fun/Try (`hero--transactional`, Picture nur Desktop-`<source>` + `<img>` Fallback, kein extra Mobile-`<source>`), plus ATF-`hr` + `.page-jump-nav` im Critical **vor** dem Mobile-Block.
 
 ## 5. Typische PSI-Fallen → Fix
 
-| Symptom | Ursache | Fix |
-| ------- | ------- | --- |
-| CLS ≈ 0.3, Element `main` / Hero | Critical ohne Mobile-`aspect-ratio` | Abschnitt 4A |
-| CLS ≈ 0.1, Element Content-`<h1>` | H1-Styles erst aus `style.min.css` | Abschnitt 4B |
-| LCP > 4s, LCP = Hero-`<img>` | Preload spät / JS-Preload konkurriert | Abschnitt 1 |
-| Hub deutlich schlechter als `/en/` | Dutzende Eager-Kartenbilder | Abschnitt 3 |
-| CLS ≈ 0.14 auf Kurs-Box (Padding/H1) | Critical kennt nur Desktop-`.changdiving-box` | Abschnitt 4D |
-| CLS ≈ 0.15 auf Kurs-Box trotz 4D | `.video-responsive` ohne Höhe bis Full-CSS | Abschnitt **4E** (verifiziert) |
-| CLS ≈ 0.15 auf Day-Trip-Box trotz 4D | Banner-`img` bekommt Margin erst aus Full-CSS | Abschnitt **D2** |
-| CLS ≈ 0.15 auf Try Dive trotz 4E / voller Breite | **Ein** Video mit `display:flex` + Play in-flow | Abschnitt **E2** (verifiziert: CLS 0) |
-| „Render-blocking“ `global.js` / `fonts.css` | Sync-Load | `defer` + async fonts |
-| „Improve image delivery“ große KiB | Oft Below-the-fold Tiles, nicht Hero | Lazy + `_small` für Tiles; Hero separat prüfen |
+| Symptom                                          | Ursache                                         | Fix                                            |
+| ------------------------------------------------ | ----------------------------------------------- | ---------------------------------------------- |
+| CLS ≈ 0.3, Element `main` / Hero                 | Critical ohne Mobile-`aspect-ratio`             | Abschnitt 4A                                   |
+| CLS ≈ 0.1, Element Content-`<h1>`                | H1-Styles erst aus `style.min.css`              | Abschnitt 4B                                   |
+| LCP > 4s, LCP = Hero-`<img>`                     | Preload spät / JS-Preload konkurriert           | Abschnitt 1                                    |
+| Hub deutlich schlechter als `/en/`               | Dutzende Eager-Kartenbilder                     | Abschnitt 3                                    |
+| CLS ≈ 0.14 auf Kurs-Box (Padding/H1)             | Critical kennt nur Desktop-`.changdiving-box`   | Abschnitt 4D                                   |
+| CLS ≈ 0.15 auf Kurs-Box trotz 4D                 | `.video-responsive` ohne Höhe bis Full-CSS      | Abschnitt **4E** (verifiziert)                 |
+| CLS ≈ 0.15 auf Day-Trip-Box trotz 4D             | Banner-`img` bekommt Margin erst aus Full-CSS   | Abschnitt **D2**                               |
+| CLS ≈ 0.15 auf Try Dive trotz 4E / voller Breite | **Ein** Video mit `display:flex` + Play in-flow | Abschnitt **E2** (verifiziert: CLS 0)          |
+| „Render-blocking“ `global.js` / `fonts.css`      | Sync-Load                                       | `defer` + async fonts                          |
+| „Improve image delivery“ große KiB               | Oft Below-the-fold Tiles, nicht Hero            | Lazy + `_small` für Tiles; Hero separat prüfen |
 
 ---
 
@@ -456,25 +454,25 @@ Critical muss **alle drei** Box-Klassen kennen (nicht nur `.changdiving-box`). M
 
 ## 7. Referenz-Commits (Juli 2026)
 
-| Commit | Thema |
-| ------ | ----- |
-| `e06b1198` | Hero CLS + Dual-Sources + Solo-Diver-Rename/301 |
-| `7af25cd6` | Content-H1 / Submenu / Breadcrumb in Critical CSS |
-| `a6cf8b7d` | LCP: frühes Image-Preload, defer JS, async fonts |
-| `bee236a0` | Hub-Karten `loading="lazy"` + Gold-Pattern-Doc |
-| `cba43bb2` | Kurs-Boxen + H1 in Critical (4D) |
-| `a3a35126` | Video `aspect-ratio` in Critical (4E) — CLS-Fix verifiziert |
-| `ec56931a` | Day-Trip Banner-Margins in Critical (D2) |
+| Commit     | Thema                                                                          |
+| ---------- | ------------------------------------------------------------------------------ |
+| `e06b1198` | Hero CLS + Dual-Sources + Solo-Diver-Rename/301                                |
+| `7af25cd6` | Content-H1 / Submenu / Breadcrumb in Critical CSS                              |
+| `a6cf8b7d` | LCP: frühes Image-Preload, defer JS, async fonts                               |
+| `bee236a0` | Hub-Karten `loading="lazy"` + Gold-Pattern-Doc                                 |
+| `cba43bb2` | Kurs-Boxen + H1 in Critical (4D)                                               |
+| `a3a35126` | Video `aspect-ratio` in Critical (4E) — CLS-Fix verifiziert                    |
+| `ec56931a` | Day-Trip Banner-Margins in Critical (D2)                                       |
 | `6c247172` | Try Dive Einzelvideo `display:block` + Play absolut (**E2**) — CLS 0 / Perf 98 |
-| `349f4ce4` | Try Dive: Breadcrumb wieder leer (JS), kein SSR |
+| `349f4ce4` | Try Dive: Breadcrumb wieder leer (JS), kein SSR                                |
 
 ---
 
 ## Kurzfassung
 
-1. **LCP:** kleines Hero-Bild zuerst laden, nichts anderes im Weg.  
-2. **CLS:** Finales Layout schon im Critical CSS (Hero 3:2 + H1-Maße + Kurs-Boxen + Videos 16:9).  
-3. **JS/Fonts:** nie den kritischen Pfad blockieren.  
-4. **Hubs:** Karten lazy — Vorbild `/en/` (nur Logo + Hero eager).  
-5. **Kurs-Boxen mit Videos:** Critical muss `.video-responsive` kennen — sonst meldet PSI CLS auf der Box.  
+1. **LCP:** kleines Hero-Bild zuerst laden, nichts anderes im Weg.
+2. **CLS:** Finales Layout schon im Critical CSS (Hero 3:2 + H1-Maße + Kurs-Boxen + Videos 16:9).
+3. **JS/Fonts:** nie den kritischen Pfad blockieren.
+4. **Hubs:** Karten lazy — Vorbild `/en/` (nur Logo + Hero eager).
+5. **Kurs-Boxen mit Videos:** Critical muss `.video-responsive` kennen — sonst meldet PSI CLS auf der Box.
 6. **Ein ATF-Video (Try Dive):** `display: block` + Play absolut im Critical (**E2**) — reines 4E/Flex reicht nicht.
