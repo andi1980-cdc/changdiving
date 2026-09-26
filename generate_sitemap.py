@@ -38,6 +38,7 @@ EXCLUDE_PATTERNS = [
     "/404/",   # Error pages - do not index (SEO)
     "/410/",   # Gone pages - do not index (SEO)
     "/search/",  # Search utility pages - noindex (not /search-recovery/)
+    "/book/",  # Soft-launch booking — noindex
 ]
 
 # Priority and changefreq rules
