@@ -489,6 +489,107 @@
       .btn:hover {
         opacity: 0.85;
       }
+      .product-inquiry--chart {
+        grid-template-areas:
+          "image"
+          "text"
+          "chart"
+          "cta";
+      }
+      .size-chart {
+        grid-area: chart;
+        min-width: 0;
+      }
+      .size-chart__title {
+        margin: 0.15rem 0 0.55rem;
+        font-size: 1.15rem;
+        line-height: 1.3;
+        text-align: left;
+      }
+      .size-chart__subtitle {
+        margin: 0.85rem 0 0.3rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: left;
+        color: var(--primary-blue, #0077b6);
+      }
+      .size-chart__title + .size-chart__subtitle {
+        margin-top: 0.05rem;
+      }
+      .size-chart__pair {
+        display: grid;
+        align-items: start;
+        justify-content: start;
+        gap: 0.15rem 2.25rem;
+      }
+      .size-chart__group {
+        min-width: 0;
+      }
+      .size-chart__group .size-chart__subtitle {
+        margin-top: 0.85rem;
+      }
+      .size-chart__group:first-child .size-chart__subtitle {
+        margin-top: 0.05rem;
+      }
+      .size-chart__scroll {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .size-chart .specialty-table {
+        width: 100%;
+        max-width: 36rem;
+        margin: 0;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+        line-height: 1.35;
+      }
+      .size-chart .specialty-table thead {
+        background: none;
+        color: inherit;
+      }
+      .size-chart .specialty-table th,
+      .size-chart .specialty-table td {
+        padding: 0.28rem 0.75rem 0.28rem 0;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.35;
+        text-align: left;
+        vertical-align: baseline;
+        border: none;
+        border-bottom: 1px solid #e3e8ed;
+        background: none;
+        color: #0e1b2b;
+        white-space: normal;
+      }
+      .size-chart .specialty-table thead th {
+        padding-top: 0;
+        padding-bottom: 0.3rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        color: #5c6b7a;
+        border-bottom-color: #d5dde3;
+      }
+      .size-chart .specialty-table tbody th {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .size-chart .specialty-table td {
+        font-variant-numeric: tabular-nums;
+      }
+      .size-chart .specialty-table tbody tr:hover {
+        background: transparent;
+      }
+      .size-chart__note {
+        margin: 0.4rem 0 0;
+        font-size: 0.82rem;
+        line-height: 1.4;
+        color: #556;
+      }
       @media (min-width: 768px) {
         .product-inquiry {
           grid-template-columns: 1.05fr 0.95fr;
@@ -497,6 +598,28 @@
             "text cta";
           align-items: start;
           gap: clamp(1.5rem, 3vw, 2rem);
+        }
+        .product-inquiry--chart {
+          grid-template-areas:
+            "text image"
+            "chart chart"
+            "cta cta";
+        }
+        .size-chart .specialty-table {
+          width: max-content;
+          max-width: 100%;
+        }
+        .size-chart .specialty-table th,
+        .size-chart .specialty-table td {
+          white-space: nowrap;
+        }
+      }
+      @media (min-width: 900px) {
+        .size-chart__pair {
+          grid-template-columns: max-content max-content;
+        }
+        .size-chart__pair .size-chart__subtitle {
+          margin-top: 0;
         }
       }
     </style>
@@ -841,7 +964,7 @@
           </a>
         </section>
 
-        <section class="product-inquiry" id="t-shirts">
+        <section class="product-inquiry product-inquiry--chart" id="t-shirts">
           <div class="pi-text">
             <h2 class="pi-title">Ocean Lifestyle T-Shirt</h2>
             <p class="pi-intro">
@@ -883,6 +1006,116 @@
               <span class="pi-amount">690 THB</span>
               <span class="pi-badge">Größe anfragen</span>
             </div>
+          </div>
+          <div class="size-chart">
+            <h3 id="tshirt-size-chart" class="size-chart__title">
+              T-Shirt-Größentabelle
+            </h3>
+            <div class="size-chart__pair">
+              <div class="size-chart__group">
+                <h4 id="tshirt-size-standard" class="size-chart__subtitle">
+                  Standardgrößen
+                </h4>
+                <div class="size-chart__scroll">
+                  <table
+                    class="specialty-table"
+                    aria-labelledby="tshirt-size-standard"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Größe</th>
+                        <th scope="col">Brustumfang am Shirt (cm)</th>
+                        <th scope="col">Shirtlänge (cm)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">S</th>
+                        <td>81,3</td>
+                        <td>63,5</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">M</th>
+                        <td>91,4</td>
+                        <td>67,3</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">L</th>
+                        <td>101,6</td>
+                        <td>69,9</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">XL</th>
+                        <td>111,8</td>
+                        <td>73,7</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">XXL</th>
+                        <td>121,9</td>
+                        <td>78,7</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3XL</th>
+                        <td>Noch zu bestätigen</td>
+                        <td>Noch zu bestätigen</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4XL</th>
+                        <td>Noch zu bestätigen</td>
+                        <td>Noch zu bestätigen</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="size-chart__group">
+                <h4 id="tshirt-size-women" class="size-chart__subtitle">
+                  Damen – taillierter Schnitt
+                </h4>
+                <div class="size-chart__scroll">
+                  <table
+                    class="specialty-table"
+                    aria-labelledby="tshirt-size-women"
+                  >
+                    <thead>
+                      <tr>
+                        <th scope="col">Größe</th>
+                        <th scope="col">Brustumfang am Shirt (cm)</th>
+                        <th scope="col">Shirtlänge (cm)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">XS</th>
+                        <td>Noch zu bestätigen</td>
+                        <td>Noch zu bestätigen</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">S</th>
+                        <td>Noch zu bestätigen</td>
+                        <td>Noch zu bestätigen</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">M</th>
+                        <td>Noch zu bestätigen</td>
+                        <td>Noch zu bestätigen</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">L</th>
+                        <td>Noch zu bestätigen</td>
+                        <td>Noch zu bestätigen</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <p class="size-chart__note">
+              Die Maße beziehen sich auf das Kleidungsstück, nicht auf den
+              Körper. Zum Vergleichen ein gut passendes T-Shirt flach hinlegen,
+              von Achsel zu Achsel messen und diesen Wert für den Brustumfang
+              verdoppeln.
+            </p>
           </div>
           <figure class="pi-image">
             <img
