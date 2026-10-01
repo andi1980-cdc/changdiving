@@ -1006,6 +1006,22 @@
         outline: 3px solid #ffd700;
         outline-offset: 2px;
       }
+      .price-list {
+        min-width: 820px;
+      }
+      .price-list .price-sku {
+        width: 1%;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 0.68rem;
+        font-variant-numeric: tabular-nums;
+        padding-left: 8px;
+        padding-right: 10px;
+      }
+      .price-list th:nth-child(4),
+      .price-list td:nth-child(4) {
+        white-space: nowrap;
+      }
     </style>
     <link
       rel="preload"
@@ -2058,11 +2074,12 @@
             width: 100%;
           "
         >
-          <table style="min-width: 700px">
+          <table class="price-list" style="min-width: 820px">
             <thead>
               <tr>
                 <th>Aktivität</th>
                 <th>Beschreibung</th>
+                <th class="price-sku">SKU</th>
                 <th>Preis (<span style="color: #b71c1c">ab</span>)</th>
                 <th>Details</th>
                 <th>Jetzt buchen</th>
@@ -2071,7 +2088,7 @@
             <tbody>
               <tr id="prices-day-trips">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2096,6 +2113,7 @@
               <tr>
                 <td>Snorkeling Trip</td>
                 <td>1 Tag · Schnorcheln rund um Koh Chang</td>
+                <td class="price-sku">FD009</td>
                 <td><strong>999 THB</strong></td>
                 <td>
                   <a
@@ -2116,7 +2134,96 @@
                 <td>
                   Ab 1 Tag · 2–3 Bootstauchgänge/Tag für zertifizierte Taucher
                 </td>
+                <td class="price-sku">FD001</td>
                 <td><strong>3,290 THB</strong></td>
+                <td>
+                  <a
+                    href="/de/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/de/book/?product=fun-dives&amp;option=2-dives"
+                    >Jetzt buchen</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Paket – 4 Tauchgänge</td>
+                <td>
+                  4 geführte Bootstauchgänge für zertifizierte Taucher ·
+                  Mindestens 2 Tauchgänge pro Tag.
+                </td>
+                <td class="price-sku">FD002</td>
+                <td><strong>5,990 THB</strong></td>
+                <td>
+                  <a
+                    href="/de/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/de/book/?product=fun-dives&amp;option=2-dives"
+                    >Jetzt buchen</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Paket – 6 Tauchgänge</td>
+                <td>
+                  6 geführte Bootstauchgänge für zertifizierte Taucher ·
+                  Mindestens 2 Tauchgänge pro Tag.
+                </td>
+                <td class="price-sku">FD003</td>
+                <td><strong>8,090 THB</strong></td>
+                <td>
+                  <a
+                    href="/de/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/de/book/?product=fun-dives&amp;option=2-dives"
+                    >Jetzt buchen</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Paket – 8 Tauchgänge</td>
+                <td>
+                  8 geführte Bootstauchgänge für zertifizierte Taucher ·
+                  Mindestens 2 Tauchgänge pro Tag.
+                </td>
+                <td class="price-sku">FD004</td>
+                <td><strong>9,590 THB</strong></td>
+                <td>
+                  <a
+                    href="/de/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/de/book/?product=fun-dives&amp;option=2-dives"
+                    >Jetzt buchen</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Paket – 10 Tauchgänge</td>
+                <td>
+                  10 geführte Bootstauchgänge für zertifizierte Taucher ·
+                  Mindestens 2 Tauchgänge pro Tag.
+                </td>
+                <td class="price-sku">FD005</td>
+                <td><strong>10,490 THB</strong></td>
                 <td>
                   <a
                     href="/de/day-trips/fun-dives/"
@@ -2136,6 +2243,7 @@
                 <td>
                   1 Tag · Erste Taucherfahrung – kein Tauchschein erforderlich
                 </td>
+                <td class="price-sku">FD012</td>
                 <td><strong>4,890 THB</strong></td>
                 <td>
                   <a
@@ -2154,6 +2262,7 @@
               <tr>
                 <td>Auffrischung (Refresher)</td>
                 <td>1 Tages-Auffrischungskurs mit 2 geführten Tauchgängen</td>
+                <td class="price-sku">FD014</td>
                 <td><strong>3,950 THB</strong></td>
                 <td>
                   <a
@@ -2173,6 +2282,7 @@
               <tr>
                 <td>(DAN) Tauchversicherung</td>
                 <td>1–30 Tage · Unfallschutz durch DAN</td>
+                <td class="price-sku"></td>
                 <td><strong>700 THB</strong></td>
                 <td>
                   <a
@@ -2187,6 +2297,7 @@
               <tr>
                 <td>GoPro Verleih</td>
                 <td>1 Tag · Unterwasserkamera-Verleih für Ihren Tauchtag</td>
+                <td class="price-sku"></td>
                 <td><strong>700 THB</strong></td>
                 <td>
                   <a
@@ -2200,7 +2311,7 @@
               </tr>
               <tr id="prices-beginner">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2225,6 +2336,7 @@
               <tr>
                 <td>Scuba Diver</td>
                 <td>2 Tage · 2 Tauchgänge · 12m Tiefe · PADI oder SDI</td>
+                <td class="price-sku">DC001</td>
                 <td><strong>10,490 THB</strong></td>
                 <td>
                   <a
@@ -2243,6 +2355,7 @@
               <tr>
                 <td>Open Water Diver</td>
                 <td>3 Tage · 4 Tauchgänge · 18m Tiefe · PADI oder SDI</td>
+                <td class="price-sku">DC002/1 – DC002/2</td>
                 <td><strong>14,490 THB</strong></td>
                 <td>
                   <a
@@ -2262,6 +2375,7 @@
               <tr>
                 <td>Open Water + Nitrox Kurs</td>
                 <td>3 Tage · 4 Tauchgänge · 18m Tiefe · 2 Zertifikate</td>
+                <td class="price-sku">DC002/4 – DC002/5</td>
                 <td><strong>19.480 THB</strong></td>
                 <td>
                   <a
@@ -2283,6 +2397,7 @@
                 <td>
                   4 Tage · 9 Tauchgänge · bestes Preis-Leistungs-Kombiangebot
                 </td>
+                <td class="price-sku">DC003/4 – DC003/3</td>
                 <td><strong>22,490 THB</strong></td>
                 <td>
                   <a
@@ -2304,6 +2419,7 @@
               <tr>
                 <td>Open Water bis Divemaster Paket</td>
                 <td>Komplette Reise vom Anfänger zum Profi</td>
+                <td class="price-sku"></td>
                 <td><strong>68,800 THB</strong></td>
                 <td>
                   <a
@@ -2324,7 +2440,7 @@
               </tr>
               <tr id="prices-advanced">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2349,6 +2465,7 @@
               <tr>
                 <td>Advanced Open Water (AOWD)</td>
                 <td>2 Tage · 5 Abenteuertauchgänge · 30m Tiefe</td>
+                <td class="price-sku">DC003/2 – DC003/1</td>
                 <td><strong>13,490 THB</strong></td>
                 <td>
                   <a
@@ -2370,6 +2487,7 @@
               <tr>
                 <td>AOWD + Nitrox Kurs</td>
                 <td>2 Tage · 5 Tauchgänge · 30m Tiefe · 2 Zertifikate</td>
+                <td class="price-sku">DC003/5 – DC003/6</td>
                 <td><strong>18.480 THB</strong></td>
                 <td>
                   <a
@@ -2394,6 +2512,7 @@
                   3 Tage · 4 Tauchgänge · Notfallreaktion &amp;
                   Rettungstechniken
                 </td>
+                <td class="price-sku">DC005/1 – DC005/2</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -2415,6 +2534,7 @@
               <tr>
                 <td>Erste Hilfe (EFR)</td>
                 <td>1 Tag · HLW, AED &amp; Notfallerstreaktion</td>
+                <td class="price-sku">DC004</td>
                 <td><strong>4,990 THB</strong></td>
                 <td>
                   <a
@@ -2439,6 +2559,7 @@
                   ~21 Tage · Höchste Recreational-Zertifizierung · 5 Specialties
                   + Rescue
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>50,524 THB</strong></td>
                 <td>
                   <a
@@ -2459,7 +2580,7 @@
               </tr>
               <tr id="prices-pros">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2484,6 +2605,7 @@
               <tr>
                 <td>Divemaster</td>
                 <td>Einstieg in die professionelle Taucherkarriere</td>
+                <td class="price-sku">DC006</td>
                 <td><strong>29,990 THB</strong></td>
                 <td>
                   <a
@@ -2505,6 +2627,7 @@
               <tr>
                 <td>EFR Instructor</td>
                 <td>Erste-Hilfe &amp; HLW Instruktorzertifizierung</td>
+                <td class="price-sku"></td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2526,6 +2649,7 @@
               <tr>
                 <td>SDI Instructor Development Course</td>
                 <td>Werden Sie zertifizierter SDI-Tauchlehrer</td>
+                <td class="price-sku">DC007</td>
                 <td><strong>34,990 THB</strong></td>
                 <td>
                   <a
@@ -2547,6 +2671,7 @@
               <tr>
                 <td>SDI Instructor Examination</td>
                 <td>Abschlussprüfung zur Instruktorzertifizierung</td>
+                <td class="price-sku">DC008</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2571,6 +2696,7 @@
                   SDI/TDI-Crossover für zertifizierte Instruktoren anderer
                   Verbände
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>15.990 THB</strong></td>
                 <td>
                   <a
@@ -2591,7 +2717,7 @@
               </tr>
               <tr id="prices-specialty">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(
                       135deg,
@@ -2619,10 +2745,11 @@
                 </td>
               </tr>
               <tr>
-                <td>Nitrox Taucher (SDI)</td>
+                <td>Nitrox Taucher</td>
                 <td>
                   1 Tag · 2 Tauchgänge · Enriched Air für längere Grundzeiten
                 </td>
+                <td class="price-sku">DC010/2 – DC009/2</td>
                 <td><strong>7.990 THB</strong></td>
                 <td>
                   <a
@@ -2642,34 +2769,12 @@
                 </td>
               </tr>
               <tr>
-                <td>Nitrox Taucher (PADI)</td>
-                <td>
-                  1 Tag · 2 Tauchgänge · Enriched Air für längere Grundzeiten
-                </td>
-                <td><strong>9.990 THB</strong></td>
-                <td>
-                  <a
-                    href="/de/courses/nitrox-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/de/book/?product=nitrox-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Jetzt buchen</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>Nitrox Gas Blender</td>
                 <td>
                   1 Tag · Theorie + Praxis-Mischen · professionelles
                   Nitrox-Mischen
                 </td>
+                <td class="price-sku">DC020</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2689,10 +2794,11 @@
                 </td>
               </tr>
               <tr>
-                <td>Deep Diver (SDI)</td>
+                <td>Deep Diver</td>
                 <td>
                   1–2 Tage · 3–4 Tauchgänge · Sicheres Tauchen bis 40m Tiefe
                 </td>
+                <td class="price-sku">DC010/1 – DC009/1</td>
                 <td><strong>7.990 THB</strong></td>
                 <td>
                   <a
@@ -2712,28 +2818,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Deep Diver (PADI)</td>
-                <td>2 Tage · 4 Tauchgänge · Sicheres Tauchen bis 40m Tiefe</td>
-                <td><strong>11.990 THB</strong></td>
-                <td>
-                  <a
-                    href="/de/courses/deep-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/de/book/?product=deep-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Jetzt buchen</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Wreck Diver (SDI)</td>
+                <td>Wreck Diver</td>
                 <td>
                   1–2 Tage · 3–4 Tauchgänge ·
                   <span style="color: #cc0000; font-weight: bold"
@@ -2741,6 +2826,7 @@
                   >
                   · Wrackerkundung &amp; Penetrationstechniken
                 </td>
+                <td class="price-sku">DC010 – DC009</td>
                 <td><strong>9.990 THB</strong></td>
                 <td>
                   <a
@@ -2760,33 +2846,6 @@
                 </td>
               </tr>
               <tr>
-                <td>Wreck Diver (PADI)</td>
-                <td>
-                  2 Tage · 4 Tauchgänge ·
-                  <span style="color: #cc0000; font-weight: bold"
-                    >(tmddec)</span
-                  >
-                  · Wrackerkundung &amp; Penetrationstechniken
-                </td>
-                <td><strong>11.990 THB</strong></td>
-                <td>
-                  <a
-                    href="/de/courses/wreck-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/de/book/?product=wreck-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Jetzt buchen</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>TDI Adv. Wreck (Rec)</td>
                 <td>
                   min. 3 Tage ·
@@ -2795,6 +2854,7 @@
                   >
                   · Volle Penetration · Rec-Config · kein Deko · TDI-Zertifikat
                 </td>
+                <td class="price-sku">DC011/6</td>
                 <td><strong>18.990 THB</strong></td>
                 <td>
                   <a
@@ -2814,11 +2874,12 @@
                 </td>
               </tr>
               <tr>
-                <td>Night Diver (SDI)</td>
+                <td>Night Diver</td>
                 <td>
-                  1–2 Tage · 2 Nachttauchgänge · Das Riff nach Einbruch der
+                  1–2 Tage · 2–4 Tauchgänge · Das Riff nach Einbruch der
                   Dunkelheit erkunden
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>7.990 THB</strong></td>
                 <td>
                   <a
@@ -2838,35 +2899,12 @@
                 </td>
               </tr>
               <tr>
-                <td>Night Diver (PADI)</td>
-                <td>
-                  2–2,5 Tage · 3–4 Nachttauchgänge · Das Riff nach Einbruch der
-                  Dunkelheit erkunden
-                </td>
-                <td><strong>11.990 THB</strong></td>
-                <td>
-                  <a
-                    href="/de/courses/night/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/de/book/?product=night&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Jetzt buchen</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>Navigation</td>
                 <td>
                   1 Tag · 2 Tauchgänge · Unterwassernavigation &amp;
                   Kompassumgang
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2886,10 +2924,12 @@
                 </td>
               </tr>
               <tr>
-                <td>Such- &amp; Bergungstauchen (SDI)</td>
+                <td>Such- &amp; Bergungstauchen</td>
                 <td>
-                  1 Tag · 2 Tauchgänge · Objekte unter Wasser orten und heben
+                  1–2 Tage · 2–4 Tauchgänge · Objekte unter Wasser orten und
+                  heben
                 </td>
+                <td class="price-sku">DC010/3 – DC009/3</td>
                 <td><strong>7.990 THB</strong></td>
                 <td>
                   <a
@@ -2909,37 +2949,15 @@
                 </td>
               </tr>
               <tr>
-                <td>Such- &amp; Bergungstauchen (PADI)</td>
+                <td>Sidemount Taucher</td>
                 <td>
-                  2 Tage · 4 Tauchgänge · Objekte unter Wasser orten und heben
-                </td>
-                <td><strong>11.990 THB</strong></td>
-                <td>
-                  <a
-                    href="/de/courses/search-recovery/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/de/book/?product=search-recovery&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Jetzt buchen</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Sidemount Taucher (SDI)</td>
-                <td>
-                  1–2 Tage · 3 Tauchgänge ·
+                  1–2 Tage · 3–4 Tauchgänge ·
                   <span style="color: #cc0000; font-weight: bold"
                     >(tmddec)</span
                   >
                   · Sidemount-Konfiguration
                 </td>
+                <td class="price-sku">DC010/6</td>
                 <td><strong>9.990 THB</strong></td>
                 <td>
                   <a
@@ -2959,37 +2977,11 @@
                 </td>
               </tr>
               <tr>
-                <td>Sidemount Taucher (PADI)</td>
-                <td>
-                  2 Tage · 4 Tauchgänge ·
-                  <span style="color: #cc0000; font-weight: bold"
-                    >(tmddec)</span
-                  >
-                  · Sidemount-Konfiguration
-                </td>
-                <td><strong>11.990 THB</strong></td>
-                <td>
-                  <a
-                    href="/de/courses/sidemount/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/de/book/?product=sidemount&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Jetzt buchen</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>SDI Sidemount + Solo Kombi</td>
                 <td>
                   2 Tage · 5 Tauchgänge · Solo Diver + Sidemount (nur SDI)
                 </td>
+                <td class="price-sku">DC010/7</td>
                 <td><strong>16,990 THB</strong></td>
                 <td>
                   <a
@@ -3017,6 +3009,7 @@
                   >
                   · Selbstständiges Tauchen
                 </td>
+                <td class="price-sku">DC010/5</td>
                 <td><strong>8,990 THB</strong></td>
                 <td>
                   <a
@@ -3044,6 +3037,7 @@
                   >
                   · 3 Specialties in einem Kombi-Paket
                 </td>
+                <td class="price-sku">DC010/4 – DC009/4</td>
                 <td><strong>19,490 THB</strong></td>
                 <td>
                   <a
@@ -3064,7 +3058,7 @@
               </tr>
               <tr id="prices-tec">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(
                       135deg,
@@ -3100,6 +3094,7 @@
                   >
                   · Einführung in die technischen Tauchergrundlagen
                 </td>
+                <td class="price-sku">DC011</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3124,6 +3119,7 @@
                   2 Tage · 4 Tauchgänge · Tauchen mit bis zu 100 % O₂ für
                   technische Tauchgänge
                 </td>
+                <td class="price-sku">DC011/2</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3147,6 +3143,7 @@
                 <td>
                   3 Tage · 4 Tauchgänge · Geplante Dekompressionstauchgänge
                 </td>
+                <td class="price-sku">DC011/1</td>
                 <td><strong>24,990 THB</strong></td>
                 <td>
                   <a
@@ -3171,6 +3168,7 @@
                   4 Tage · 6 Tauchgänge · Sparen Sie bei Buchung beider TDI
                   Tech-Kurse
                 </td>
+                <td class="price-sku">DC011/8</td>
                 <td><strong>33,990 THB</strong></td>
                 <td>
                   <a
@@ -3198,6 +3196,7 @@
                   >
                   · Sicheres Eindringen in komplexe Wracks
                 </td>
+                <td class="price-sku">DC011/3</td>
                 <td><strong>34,990 THB</strong></td>
                 <td>
                   <a
@@ -3225,6 +3224,7 @@
                   >
                   · Technisches Sidemount-Tauchen
                 </td>
+                <td class="price-sku">DC011/4</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3252,6 +3252,7 @@
                   >
                   · TDI Sidemount + SDI Solo Diver (nur SDI)
                 </td>
+                <td class="price-sku">DC011/7</td>
                 <td><strong>21,990 THB</strong></td>
                 <td>
                   <a
@@ -3276,6 +3277,7 @@
                   min. 6 Tage · 12 Tauchgänge · Adv. Nitrox + Deco Pro. + Adv.
                   Wreck
                 </td>
+                <td class="price-sku">DC011/5</td>
                 <td><strong>66,990 THB</strong></td>
                 <td>
                   <a

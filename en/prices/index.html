@@ -1007,6 +1007,22 @@
         outline: 3px solid #ffd700;
         outline-offset: 2px;
       }
+      .price-list {
+        min-width: 820px;
+      }
+      .price-list .price-sku {
+        width: 1%;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 0.68rem;
+        font-variant-numeric: tabular-nums;
+        padding-left: 8px;
+        padding-right: 10px;
+      }
+      .price-list th:nth-child(4),
+      .price-list td:nth-child(4) {
+        white-space: nowrap;
+      }
     </style>
     <link
       rel="preload"
@@ -2062,11 +2078,12 @@
             width: 100%;
           "
         >
-          <table style="min-width: 700px">
+          <table class="price-list" style="min-width: 820px">
             <thead>
               <tr>
                 <th>Activity</th>
                 <th>Description</th>
+                <th class="price-sku">SKU</th>
                 <th>Price (<span style="color: #b71c1c">from</span>)</th>
                 <th>Details</th>
                 <th>Book now</th>
@@ -2076,7 +2093,7 @@
               <!-- ── DAY TRIPS ── -->
               <tr id="prices-day-trips">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2101,6 +2118,7 @@
               <tr>
                 <td>Snorkeling Trip</td>
                 <td>1 day · Snorkeling around Koh Chang</td>
+                <td class="price-sku">FD009</td>
                 <td><strong>999 THB</strong></td>
                 <td>
                   <a
@@ -2119,6 +2137,7 @@
               <tr>
                 <td>Fun Dives</td>
                 <td>From 1 day · 2–3 boat dives/day for certified divers</td>
+                <td class="price-sku">FD001</td>
                 <td><strong>3,290 THB</strong></td>
                 <td>
                   <a
@@ -2135,8 +2154,98 @@
                 </td>
               </tr>
               <tr>
+                <td>Fun Dive Package – 4 Dives</td>
+                <td>
+                  4 guided boat dives for certified divers · Minimum 2 dives per
+                  day.
+                </td>
+                <td class="price-sku">FD002</td>
+                <td><strong>5,990 THB</strong></td>
+                <td>
+                  <a
+                    href="/en/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/en/book/?product=fun-dives&amp;option=2-dives"
+                    >Book now</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Package – 6 Dives</td>
+                <td>
+                  6 guided boat dives for certified divers · Minimum 2 dives per
+                  day.
+                </td>
+                <td class="price-sku">FD003</td>
+                <td><strong>8,090 THB</strong></td>
+                <td>
+                  <a
+                    href="/en/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/en/book/?product=fun-dives&amp;option=2-dives"
+                    >Book now</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Package – 8 Dives</td>
+                <td>
+                  8 guided boat dives for certified divers · Minimum 2 dives per
+                  day.
+                </td>
+                <td class="price-sku">FD004</td>
+                <td><strong>9,590 THB</strong></td>
+                <td>
+                  <a
+                    href="/en/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/en/book/?product=fun-dives&amp;option=2-dives"
+                    >Book now</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>Fun Dive Package – 10 Dives</td>
+                <td>
+                  10 guided boat dives for certified divers · Minimum 2 dives
+                  per day.
+                </td>
+                <td class="price-sku">FD005</td>
+                <td><strong>10,490 THB</strong></td>
+                <td>
+                  <a
+                    href="/en/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Details</a
+                  >
+                </td>
+                <td>
+                  <a href="/en/book/?product=fun-dives&amp;option=2-dives"
+                    >Book now</a
+                  >
+                </td>
+              </tr>
+
+              <tr>
                 <td>Try Dive</td>
                 <td>1 day · First dive experience – no license required</td>
+                <td class="price-sku">FD012</td>
                 <td><strong>4,890 THB</strong></td>
                 <td>
                   <a
@@ -2155,6 +2264,7 @@
               <tr>
                 <td>Refresher (fresh up)</td>
                 <td>1 day refresher course with 2 guided dives</td>
+                <td class="price-sku">FD014</td>
                 <td><strong>3,950 THB</strong></td>
                 <td>
                   <a
@@ -2174,6 +2284,7 @@
               <tr>
                 <td>(DAN) Dive Insurance</td>
                 <td>1–30 days · Accident coverage by DAN</td>
+                <td class="price-sku"></td>
                 <td><strong>700 THB</strong></td>
                 <td>
                   <a
@@ -2188,6 +2299,7 @@
               <tr>
                 <td>GoPro Rental</td>
                 <td>1 day · Underwater camera hire for your dive day</td>
+                <td class="price-sku"></td>
                 <td><strong>700 THB</strong></td>
                 <td>
                   <a
@@ -2203,7 +2315,7 @@
               <!-- ── BEGINNER COURSES ── -->
               <tr id="prices-beginner">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2228,6 +2340,7 @@
               <tr>
                 <td>Scuba Diver</td>
                 <td>2 days · 2 dives · 12m depth</td>
+                <td class="price-sku">DC001</td>
                 <td><strong>10,490 THB</strong></td>
                 <td>
                   <a
@@ -2246,6 +2359,7 @@
               <tr>
                 <td>Open Water Diver</td>
                 <td>3 days · 4 dives · 18m depth</td>
+                <td class="price-sku">DC002/1 – DC002/2</td>
                 <td><strong>14,490 THB</strong></td>
                 <td>
                   <a
@@ -2265,6 +2379,7 @@
               <tr>
                 <td>Open Water + Nitrox Course</td>
                 <td>3 days · 4 dives · 18m depth · 2 certifications</td>
+                <td class="price-sku">DC002/4 – DC002/5</td>
                 <td><strong>19,480 THB</strong></td>
                 <td>
                   <a
@@ -2284,6 +2399,7 @@
               <tr>
                 <td>OWD + AOWD Package</td>
                 <td>4 days · 9 dives · best value beginner combo</td>
+                <td class="price-sku">DC003/4 – DC003/3</td>
                 <td><strong>22,490 THB</strong></td>
                 <td>
                   <a
@@ -2305,6 +2421,7 @@
               <tr>
                 <td>Open Water to Divemaster Package</td>
                 <td>Complete journey from beginner to professional</td>
+                <td class="price-sku"></td>
                 <td><strong>68,800 THB</strong></td>
                 <td>
                   <a
@@ -2327,7 +2444,7 @@
               <!-- ── ADVANCED COURSES ── -->
               <tr id="prices-advanced">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2352,6 +2469,7 @@
               <tr>
                 <td>Advanced Open Water (AOWD)</td>
                 <td>2 days · 5 adventure dives · 30m depth</td>
+                <td class="price-sku">DC003/2 – DC003/1</td>
                 <td><strong>13,490 THB</strong></td>
                 <td>
                   <a
@@ -2375,6 +2493,7 @@
                 <td>
                   2 days · 5 adventure dives · 30m depth · 2 certifications
                 </td>
+                <td class="price-sku">DC003/5 – DC003/6</td>
                 <td><strong>18,480 THB</strong></td>
                 <td>
                   <a
@@ -2396,6 +2515,7 @@
               <tr>
                 <td>Rescue Diver</td>
                 <td>3 days · 4 dives · Emergency response &amp; rescue</td>
+                <td class="price-sku">DC005/1 – DC005/2</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -2417,6 +2537,7 @@
               <tr>
                 <td>First Aid (EFR)</td>
                 <td>1 day · CPR, AED &amp; emergency first response</td>
+                <td class="price-sku">DC004</td>
                 <td><strong>4,990 THB</strong></td>
                 <td>
                   <a
@@ -2440,6 +2561,7 @@
                 <td>
                   ~21 days · Top recreational rating · 5 specialties + Rescue
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>50,524 THB</strong></td>
                 <td>
                   <a
@@ -2462,7 +2584,7 @@
               <!-- ── PROFESSIONAL COURSES ── -->
               <tr id="prices-pros">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2487,6 +2609,7 @@
               <tr>
                 <td>Divemaster</td>
                 <td>Entry-level professional diver certification</td>
+                <td class="price-sku">DC006</td>
                 <td><strong>29,990 THB</strong></td>
                 <td>
                   <a
@@ -2508,6 +2631,7 @@
               <tr>
                 <td>EFR Instructor</td>
                 <td>First aid &amp; CPR instructor certification</td>
+                <td class="price-sku"></td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2529,6 +2653,7 @@
               <tr>
                 <td>SDI Instructor Development Course</td>
                 <td>Become a certified SDI diving instructor</td>
+                <td class="price-sku">DC007</td>
                 <td><strong>34,990 THB</strong></td>
                 <td>
                   <a
@@ -2550,6 +2675,7 @@
               <tr>
                 <td>SDI Instructor Examination</td>
                 <td>Final instructor qualification examination</td>
+                <td class="price-sku">DC008</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2575,6 +2701,7 @@
                   SDI/TDI crossover for certified instructors from other
                   agencies
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>15,990 THB</strong></td>
                 <td>
                   <a
@@ -2595,7 +2722,7 @@
               </tr>
               <tr id="prices-specialty">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(
                       135deg,
@@ -2623,8 +2750,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Nitrox Diver (SDI)</td>
+                <td>Nitrox Diver</td>
                 <td>1 day · 2 dives · Enriched air for longer bottom time</td>
+                <td class="price-sku">DC010/2 – DC009/2</td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2644,32 +2772,12 @@
                 </td>
               </tr>
               <tr>
-                <td>Nitrox Diver (PADI)</td>
-                <td>1 day · 2 dives · Enriched air for longer bottom time</td>
-                <td><strong>9,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/en/courses/nitrox-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/en/book/?product=nitrox-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Book now</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>Nitrox Gas Blender</td>
                 <td>
                   1 day · theory + hands-on blending · professional nitrox
                   mixing
                 </td>
+                <td class="price-sku">DC020</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2689,8 +2797,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Deep Diver (SDI)</td>
+                <td>Deep Diver</td>
                 <td>1–2 days · 3–4 dives · 40m · Explore depths safely</td>
+                <td class="price-sku">DC010/1 – DC009/1</td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2710,28 +2819,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Deep Diver (PADI)</td>
-                <td>2 days · 4 dives · 40m · Explore depths safely</td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/en/courses/deep-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/en/book/?product=deep-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Book now</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Wreck Diver (SDI)</td>
+                <td>Wreck Diver</td>
                 <td>
                   1–2 days · 3–4 dives ·
                   <span style="color: #cc0000; font-weight: bold"
@@ -2739,6 +2827,7 @@
                   >
                   depth · Wreck exploration &amp; penetration techniques
                 </td>
+                <td class="price-sku">DC010 – DC009</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2758,33 +2847,6 @@
                 </td>
               </tr>
               <tr>
-                <td>Wreck Diver (PADI)</td>
-                <td>
-                  2 days · 4 dives ·
-                  <span style="color: #cc0000; font-weight: bold"
-                    >(tmddec)</span
-                  >
-                  depth · Wreck exploration &amp; penetration techniques
-                </td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/en/courses/wreck-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/en/book/?product=wreck-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Book now</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>TDI Adv. Wreck (Rec)</td>
                 <td>
                   min. 3 days · Full penetration ·
@@ -2793,6 +2855,7 @@
                   >
                   depth · rec config · no deco · TDI cert
                 </td>
+                <td class="price-sku">DC011/6</td>
                 <td><strong>18,990 THB</strong></td>
                 <td>
                   <a
@@ -2812,8 +2875,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Night Diver (SDI)</td>
-                <td>1–2 days · 2 night dives · Explore the reef after dark</td>
+                <td>Night Diver</td>
+                <td>1–2 days · 2–4 dives · Explore the reef after dark</td>
+                <td class="price-sku"></td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2833,34 +2897,12 @@
                 </td>
               </tr>
               <tr>
-                <td>Night Diver (PADI)</td>
-                <td>
-                  2–2.5 days · 3–4 night dives · Explore the reef after dark
-                </td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/en/courses/night/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/en/book/?product=night&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Book now</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>Navigation</td>
                 <td>
                   1 day · 2 dives · Underwater navigation skills &amp; compass
                   use
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2880,8 +2922,11 @@
                 </td>
               </tr>
               <tr>
-                <td>Search &amp; Recovery (SDI)</td>
-                <td>1 day · 2 dives · Locate and lift objects underwater</td>
+                <td>Search &amp; Recovery</td>
+                <td>
+                  1–2 days · 2–4 dives · Locate and lift objects underwater
+                </td>
+                <td class="price-sku">DC010/3 – DC009/3</td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2901,35 +2946,15 @@
                 </td>
               </tr>
               <tr>
-                <td>Search &amp; Recovery (PADI)</td>
-                <td>2 days · 4 dives · Locate and lift objects underwater</td>
-                <td><strong>11,990 THB</strong></td>
+                <td>Sidemount Diver</td>
                 <td>
-                  <a
-                    href="/en/courses/search-recovery/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/en/book/?product=search-recovery&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Book now</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Sidemount Diver (SDI)</td>
-                <td>
-                  1–2 days · 3 dives ·
+                  1–2 days · 3–4 dives ·
                   <span style="color: #cc0000; font-weight: bold"
                     >(tmddec)</span
                   >
                   depth · Streamlined sidemount cylinder configuration
                 </td>
+                <td class="price-sku">DC010/6</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2949,33 +2974,6 @@
                 </td>
               </tr>
               <tr>
-                <td>Sidemount Diver (PADI)</td>
-                <td>
-                  2 days · 4 dives ·
-                  <span style="color: #cc0000; font-weight: bold"
-                    >(tmddec)</span
-                  >
-                  depth · Streamlined sidemount cylinder configuration
-                </td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/en/courses/sidemount/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Details</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/en/book/?product=sidemount&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Book now</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>SDI Sidemount + Solo Combo</td>
                 <td>
                   2 days · 5 dives ·
@@ -2984,6 +2982,7 @@
                   >
                   depth · Solo Diver + Sidemount (SDI only)
                 </td>
+                <td class="price-sku">DC010/7</td>
                 <td><strong>16,990 THB</strong></td>
                 <td>
                   <a
@@ -3007,6 +3006,7 @@
                 <td>
                   1 day · 2 dives · Self-reliant diving skills &amp; techniques
                 </td>
+                <td class="price-sku">DC010/5</td>
                 <td><strong>8,990 THB</strong></td>
                 <td>
                   <a
@@ -3034,6 +3034,7 @@
                   >
                   depth · 3 specialties in one great combo deal
                 </td>
+                <td class="price-sku">DC010/4 – DC009/4</td>
                 <td><strong>19,490 THB</strong></td>
                 <td>
                   <a
@@ -3056,7 +3057,7 @@
               <!-- ── TECHNICAL DIVING COURSES ── -->
               <tr id="prices-tec">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(
                       135deg,
@@ -3092,6 +3093,7 @@
                   >
                   depth · Introduction to tech diving
                 </td>
+                <td class="price-sku">DC011</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3116,6 +3118,7 @@
                   2 days · 4 dives · 40m depth · Dive with up to 100% O&#8322;
                   for technical dives
                 </td>
+                <td class="price-sku">DC011/2</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3140,6 +3143,7 @@
                   3 days · 4 dives · 45m depth · Planned decompression diving
                   techniques
                 </td>
+                <td class="price-sku">DC011/1</td>
                 <td><strong>24,990 THB</strong></td>
                 <td>
                   <a
@@ -3164,6 +3168,7 @@
                   4 days · 6 dives · 45m depth · Save when you book both TDI
                   tech courses together
                 </td>
+                <td class="price-sku">DC011/8</td>
                 <td><strong>33,990 THB</strong></td>
                 <td>
                   <a
@@ -3191,6 +3196,7 @@
                   >
                   depth · Safe penetration of complex wrecks
                 </td>
+                <td class="price-sku">DC011/3</td>
                 <td><strong>34,990 THB</strong></td>
                 <td>
                   <a
@@ -3218,6 +3224,7 @@
                   >
                   depth · Technical sidemount diving configuration
                 </td>
+                <td class="price-sku">DC011/4</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3245,6 +3252,7 @@
                   >
                   depth · TDI Sidemount + SDI Solo Diver (SDI only)
                 </td>
+                <td class="price-sku">DC011/7</td>
                 <td><strong>21,990 THB</strong></td>
                 <td>
                   <a
@@ -3268,6 +3276,7 @@
                 <td>
                   min. 6 days · 12 dives · Adv. Nitrox + Deco Pro. + Adv. Wreck
                 </td>
+                <td class="price-sku">DC011/5</td>
                 <td><strong>66,990 THB</strong></td>
                 <td>
                   <a

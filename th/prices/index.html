@@ -1004,6 +1004,22 @@
         outline: 3px solid #ffd700;
         outline-offset: 2px;
       }
+      .price-list {
+        min-width: 820px;
+      }
+      .price-list .price-sku {
+        width: 1%;
+        white-space: nowrap;
+        text-align: left;
+        font-size: 0.68rem;
+        font-variant-numeric: tabular-nums;
+        padding-left: 8px;
+        padding-right: 10px;
+      }
+      .price-list th:nth-child(4),
+      .price-list td:nth-child(4) {
+        white-space: nowrap;
+      }
     </style>
     <link
       rel="preload"
@@ -2046,41 +2062,21 @@
             width: 100%;
           "
         >
-          <table style="min-width: 700px">
+          <table class="price-list" style="min-width: 820px">
             <thead>
               <tr>
                 <th>คอร์ส / บริการ</th>
                 <th>รายละเอียด</th>
+                <th class="price-sku">SKU</th>
                 <th>ราคา (<span style="color: #b71c1c">เริ่มต้น</span>)</th>
                 <th>รายละเอียด</th>
                 <th>จองเลย</th>
-              </tr>
-              <tr>
-                <td>แพ็คเกจ Open Water ถึง Divemaster</td>
-                <td>เส้นทางสมบูรณ์จากผู้เริ่มต้นสู่มืออาชีพ</td>
-                <td><strong>68,800 THB</strong></td>
-                <td>
-                  <a
-                    href="/th/courses/open-to-divemaster/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=open-to-divemaster&option=internship"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
               </tr>
             </thead>
             <tbody>
               <tr id="prices-day-trips">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2105,6 +2101,7 @@
               <tr>
                 <td>ทริปดำน้ำดูปะการัง (Snorkeling)</td>
                 <td>1 วัน · สนอร์เกิลรอบเกาะช้าง</td>
+                <td class="price-sku">FD009</td>
                 <td><strong>999 THB</strong></td>
                 <td>
                   <a
@@ -2125,7 +2122,96 @@
                 <td>
                   ตั้งแต่ 1 วัน · 2–3 ไดฟ์/วัน สำหรับนักดำน้ำที่มีใบรับรอง
                 </td>
+                <td class="price-sku">FD001</td>
                 <td><strong>3,290 THB</strong></td>
+                <td>
+                  <a
+                    href="/th/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >รายละเอียด</a
+                  >
+                </td>
+                <td>
+                  <a href="/th/book/?product=fun-dives&amp;option=2-dives"
+                    >จองเลย</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>แพ็คเกจฟันไดฟ์ – 4 ไดฟ์</td>
+                <td>
+                  4 ไดฟ์จากเรือพร้อมไกด์ สำหรับนักดำน้ำที่มีใบรับรอง · อย่างน้อย
+                  2 ไดฟ์ต่อวัน
+                </td>
+                <td class="price-sku">FD002</td>
+                <td><strong>5,990 THB</strong></td>
+                <td>
+                  <a
+                    href="/th/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >รายละเอียด</a
+                  >
+                </td>
+                <td>
+                  <a href="/th/book/?product=fun-dives&amp;option=2-dives"
+                    >จองเลย</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>แพ็คเกจฟันไดฟ์ – 6 ไดฟ์</td>
+                <td>
+                  6 ไดฟ์จากเรือพร้อมไกด์ สำหรับนักดำน้ำที่มีใบรับรอง · อย่างน้อย
+                  2 ไดฟ์ต่อวัน
+                </td>
+                <td class="price-sku">FD003</td>
+                <td><strong>8,090 THB</strong></td>
+                <td>
+                  <a
+                    href="/th/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >รายละเอียด</a
+                  >
+                </td>
+                <td>
+                  <a href="/th/book/?product=fun-dives&amp;option=2-dives"
+                    >จองเลย</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>แพ็คเกจฟันไดฟ์ – 8 ไดฟ์</td>
+                <td>
+                  8 ไดฟ์จากเรือพร้อมไกด์ สำหรับนักดำน้ำที่มีใบรับรอง · อย่างน้อย
+                  2 ไดฟ์ต่อวัน
+                </td>
+                <td class="price-sku">FD004</td>
+                <td><strong>9,590 THB</strong></td>
+                <td>
+                  <a
+                    href="/th/day-trips/fun-dives/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >รายละเอียด</a
+                  >
+                </td>
+                <td>
+                  <a href="/th/book/?product=fun-dives&amp;option=2-dives"
+                    >จองเลย</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>แพ็คเกจฟันไดฟ์ – 10 ไดฟ์</td>
+                <td>
+                  10 ไดฟ์จากเรือพร้อมไกด์ สำหรับนักดำน้ำที่มีใบรับรอง ·
+                  อย่างน้อย 2 ไดฟ์ต่อวัน
+                </td>
+                <td class="price-sku">FD005</td>
+                <td><strong>10,490 THB</strong></td>
                 <td>
                   <a
                     href="/th/day-trips/fun-dives/"
@@ -2143,6 +2229,7 @@
               <tr>
                 <td>Try Dive</td>
                 <td>1 วัน · ประสบการณ์ดำน้ำครั้งแรก – ไม่ต้องมีใบรับรอง</td>
+                <td class="price-sku">FD012</td>
                 <td><strong>4,890 THB</strong></td>
                 <td>
                   <a
@@ -2159,6 +2246,7 @@
               <tr>
                 <td>ทบทวนการดำน้ำ (Refresher)</td>
                 <td>คอร์สทบทวน 1 วัน พร้อมดำน้ำ 2 ครั้ง</td>
+                <td class="price-sku">FD014</td>
                 <td><strong>3,950 THB</strong></td>
                 <td>
                   <a
@@ -2178,6 +2266,7 @@
               <tr>
                 <td>(DAN) ประกันการดำน้ำ</td>
                 <td>1–30 วัน · ประกันอุบัติเหตุโดย DAN</td>
+                <td class="price-sku"></td>
                 <td><strong>700 THB</strong></td>
                 <td>
                   <a
@@ -2192,6 +2281,7 @@
               <tr>
                 <td>เช่า GoPro</td>
                 <td>1 วัน · เช่ากล้องถ่ายใต้น้ำสำหรับวันดำน้ำ</td>
+                <td class="price-sku"></td>
                 <td><strong>700 THB</strong></td>
                 <td>
                   <a
@@ -2205,7 +2295,7 @@
               </tr>
               <tr id="prices-beginner">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2230,6 +2320,7 @@
               <tr>
                 <td>Scuba Diver</td>
                 <td>2 วัน · 2 ไดฟ์ · ลึก 12 เมตร · PADI หรือ SDI</td>
+                <td class="price-sku">DC001</td>
                 <td><strong>10,490 THB</strong></td>
                 <td>
                   <a
@@ -2248,6 +2339,7 @@
               <tr>
                 <td>Open Water Diver</td>
                 <td>3 วัน · 4 ไดฟ์ · ลึก 18 เมตร · PADI หรือ SDI</td>
+                <td class="price-sku">DC002/1 – DC002/2</td>
                 <td><strong>14,490 THB</strong></td>
                 <td>
                   <a
@@ -2267,6 +2359,7 @@
               <tr>
                 <td>คอร์ส Open Water + Nitrox</td>
                 <td>3 วัน · 4 ไดฟ์ · ลึก 18 เมตร · 2 ใบรับรอง</td>
+                <td class="price-sku">DC002/4 – DC002/5</td>
                 <td><strong>19,480 THB</strong></td>
                 <td>
                   <a
@@ -2286,6 +2379,7 @@
               <tr>
                 <td>แพ็คเกจ OWD + AOWD</td>
                 <td>4 วัน · 9 ไดฟ์ · คุ้มค่าที่สุด</td>
+                <td class="price-sku">DC003/4 – DC003/3</td>
                 <td><strong>22,490 THB</strong></td>
                 <td>
                   <a
@@ -2304,9 +2398,31 @@
                   >
                 </td>
               </tr>
+              <tr>
+                <td>แพ็คเกจ Open Water ถึง Divemaster</td>
+                <td>เส้นทางสมบูรณ์จากผู้เริ่มต้นสู่มืออาชีพ</td>
+                <td class="price-sku"></td>
+                <td><strong>68,800 THB</strong></td>
+                <td>
+                  <a
+                    href="/th/courses/open-to-divemaster/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >รายละเอียด</a
+                  >
+                </td>
+                <td>
+                  <a
+                    href="/th/book/?product=open-to-divemaster&option=internship"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >จองเลย</a
+                  >
+                </td>
+              </tr>
               <tr id="prices-advanced">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2331,6 +2447,7 @@
               <tr>
                 <td>Advanced Open Water (AOWD)</td>
                 <td>2 วัน · 5 ไดฟ์ · ลึก 30 เมตร</td>
+                <td class="price-sku">DC003/2 – DC003/1</td>
                 <td><strong>13,490 THB</strong></td>
                 <td>
                   <a
@@ -2352,6 +2469,7 @@
               <tr>
                 <td>คอร์ส AOWD + Nitrox</td>
                 <td>2 วัน · 5 ไดฟ์ · ลึก 30 เมตร · 2 ใบรับรอง</td>
+                <td class="price-sku">DC003/5 – DC003/6</td>
                 <td><strong>18,480 THB</strong></td>
                 <td>
                   <a
@@ -2375,6 +2493,7 @@
                 <td>
                   3 วัน · 4 ไดฟ์ · การตอบสนองฉุกเฉิน &amp; เทคนิคการช่วยเหลือ
                 </td>
+                <td class="price-sku">DC005/1 – DC005/2</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -2396,6 +2515,7 @@
               <tr>
                 <td>การปฐมพยาบาล (EFR)</td>
                 <td>1 วัน · CPR, AED &amp; การตอบสนองฉุกเฉิน</td>
+                <td class="price-sku">DC004</td>
                 <td><strong>4,990 THB</strong></td>
                 <td>
                   <a
@@ -2420,6 +2540,7 @@
                   ~21 วัน · ระดับสูงสุดของนักดำน้ำสันทนาการ · 5 Specialty +
                   Rescue
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>50,524 THB</strong></td>
                 <td>
                   <a
@@ -2440,7 +2561,7 @@
               </tr>
               <tr id="prices-pros">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(to right, #005a8c, #023e5c);
                     color: #fff;
@@ -2465,6 +2586,7 @@
               <tr>
                 <td>Divemaster</td>
                 <td>การรับรองระดับมืออาชีพขั้นต้น</td>
+                <td class="price-sku">DC006</td>
                 <td><strong>29,990 THB</strong></td>
                 <td>
                   <a
@@ -2486,6 +2608,7 @@
               <tr>
                 <td>EFR Instructor</td>
                 <td>การรับรองผู้สอนปฐมพยาบาลและ CPR</td>
+                <td class="price-sku"></td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2507,6 +2630,7 @@
               <tr>
                 <td>SDI Instructor Development Course</td>
                 <td>เป็นผู้สอนดำน้ำ SDI ที่ได้รับการรับรอง</td>
+                <td class="price-sku">DC007</td>
                 <td><strong>34,990 THB</strong></td>
                 <td>
                   <a
@@ -2528,6 +2652,7 @@
               <tr>
                 <td>SDI Instructor Examination</td>
                 <td>การสอบรับรองผู้สอนขั้นสุดท้าย</td>
+                <td class="price-sku">DC008</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2551,6 +2676,7 @@
                 <td>
                   SDI/TDI crossover สำหรับผู้สอนที่ได้รับการรับรองจากองค์กรอื่น
                 </td>
+                <td class="price-sku"></td>
                 <td><strong>15,990 THB</strong></td>
                 <td>
                   <a
@@ -2571,7 +2697,7 @@
               </tr>
               <tr id="prices-specialty">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(
                       135deg,
@@ -2599,8 +2725,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Nitrox Diver (SDI)</td>
+                <td>Nitrox Diver</td>
                 <td>1 วัน · 2 ไดฟ์ · อากาศเสริมเพื่อเวลาใต้น้ำที่นานขึ้น</td>
+                <td class="price-sku">DC010/2 – DC009/2</td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2620,29 +2747,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Nitrox Diver (PADI)</td>
-                <td>1 วัน · 2 ไดฟ์ · อากาศเสริมเพื่อเวลาใต้น้ำที่นานขึ้น</td>
-                <td><strong>9,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/th/courses/nitrox-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=nitrox-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>Nitrox Gas Blender</td>
                 <td>1 วัน · ทฤษฎี + ฝึกผสมแก๊ส · ผสมไนตรอกซ์อย่างมืออาชีพ</td>
+                <td class="price-sku">DC020</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2662,10 +2769,11 @@
                 </td>
               </tr>
               <tr>
-                <td>Deep Diver (SDI)</td>
+                <td>Deep Diver</td>
                 <td>
                   1–2 วัน · 3–4 ไดฟ์ · สำรวจความลึกได้อย่างปลอดภัยถึง 40 เมตร
                 </td>
+                <td class="price-sku">DC010/1 – DC009/1</td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2685,28 +2793,7 @@
                 </td>
               </tr>
               <tr>
-                <td>Deep Diver (PADI)</td>
-                <td>2 วัน · 4 ไดฟ์ · สำรวจความลึกได้อย่างปลอดภัยถึง 40 เมตร</td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/th/courses/deep-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=deep-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Wreck Diver (SDI)</td>
+                <td>Wreck Diver</td>
                 <td>
                   1–2 วัน · 3–4 ไดฟ์ ·
                   <span style="color: #cc0000; font-weight: bold"
@@ -2714,6 +2801,7 @@
                   >
                   · สำรวจซากเรือและเทคนิคการเข้าไปในซาก
                 </td>
+                <td class="price-sku">DC010 – DC009</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2733,33 +2821,6 @@
                 </td>
               </tr>
               <tr>
-                <td>Wreck Diver (PADI)</td>
-                <td>
-                  2 วัน · 4 ไดฟ์ ·
-                  <span style="color: #cc0000; font-weight: bold"
-                    >(tmddec)</span
-                  >
-                  · สำรวจซากเรือและเทคนิคการเข้าไปในซาก
-                </td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/th/courses/wreck-diver/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=wreck-diver&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>TDI Adv. Wreck (Rec)</td>
                 <td>
                   min. 3 วัน ·
@@ -2769,6 +2830,7 @@
                   · เข้าไปในซากเรือเต็มรูปแบบ · Rec config · ไม่มี deco ·
                   ใบรับรอง TDI
                 </td>
+                <td class="price-sku">DC011/6</td>
                 <td><strong>18,990 THB</strong></td>
                 <td>
                   <a
@@ -2788,8 +2850,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Night Diver (SDI)</td>
-                <td>1–2 วัน · 2 ไดฟ์กลางคืน · สำรวจแนวปะการังในยามค่ำคืน</td>
+                <td>Night Diver</td>
+                <td>1–2 วัน · 2–4 ไดฟ์ · สำรวจแนวปะการังในยามค่ำคืน</td>
+                <td class="price-sku"></td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2809,31 +2872,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Night Diver (PADI)</td>
-                <td>
-                  2–2.5 วัน · 3–4 ไดฟ์กลางคืน · สำรวจแนวปะการังในยามค่ำคืน
-                </td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/th/courses/night/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=night&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>Navigation</td>
                 <td>1 วัน · 2 ไดฟ์ · ทักษะการนำทางใต้น้ำและการใช้เข็มทิศ</td>
+                <td class="price-sku"></td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2853,8 +2894,9 @@
                 </td>
               </tr>
               <tr>
-                <td>ค้นหา &amp; กู้คืน (SDI)</td>
-                <td>1 วัน · 2 ไดฟ์ · ค้นหาและยกวัตถุขึ้นจากใต้น้ำ</td>
+                <td>ค้นหา &amp; กู้คืน</td>
+                <td>1–2 วัน · 2–4 ไดฟ์ · ค้นหาและยกวัตถุขึ้นจากใต้น้ำ</td>
+                <td class="price-sku">DC010/3 – DC009/3</td>
                 <td><strong>7,990 THB</strong></td>
                 <td>
                   <a
@@ -2874,35 +2916,15 @@
                 </td>
               </tr>
               <tr>
-                <td>ค้นหา &amp; กู้คืน (PADI)</td>
-                <td>2 วัน · 4 ไดฟ์ · ค้นหาและยกวัตถุขึ้นจากใต้น้ำ</td>
-                <td><strong>11,990 THB</strong></td>
+                <td>Sidemount Diver</td>
                 <td>
-                  <a
-                    href="/th/courses/search-recovery/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=search-recovery&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <td>Sidemount Diver (SDI)</td>
-                <td>
-                  1–2 วัน · 3 ไดฟ์ ·
+                  1–2 วัน · 3–4 ไดฟ์ ·
                   <span style="color: #cc0000; font-weight: bold"
                     >(tmddec)</span
                   >
                   · การจัดวางถังแบบ Sidemount
                 </td>
+                <td class="price-sku">DC010/6</td>
                 <td><strong>9,990 THB</strong></td>
                 <td>
                   <a
@@ -2922,35 +2944,9 @@
                 </td>
               </tr>
               <tr>
-                <td>Sidemount Diver (PADI)</td>
-                <td>
-                  2 วัน · 4 ไดฟ์ ·
-                  <span style="color: #cc0000; font-weight: bold"
-                    >(tmddec)</span
-                  >
-                  · การจัดวางถังแบบ Sidemount
-                </td>
-                <td><strong>11,990 THB</strong></td>
-                <td>
-                  <a
-                    href="/th/courses/sidemount/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >รายละเอียด</a
-                  >
-                </td>
-                <td>
-                  <a
-                    href="/th/book/?product=sidemount&option=padi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >จองเลย</a
-                  >
-                </td>
-              </tr>
-              <tr>
                 <td>SDI Sidemount + Solo Combo</td>
                 <td>2 วัน · 5 ไดฟ์ · Solo Diver + Sidemount (เฉพาะ SDI)</td>
+                <td class="price-sku">DC010/7</td>
                 <td><strong>16,990 THB</strong></td>
                 <td>
                   <a
@@ -2978,6 +2974,7 @@
                   >
                   · ทักษะการดำน้ำแบบพึ่งพาตนเอง
                 </td>
+                <td class="price-sku">DC010/5</td>
                 <td><strong>8,990 THB</strong></td>
                 <td>
                   <a
@@ -3005,6 +3002,7 @@
                   >
                   · 3 Specialty ในแพ็คเกจเดียว
                 </td>
+                <td class="price-sku">DC010/4 – DC009/4</td>
                 <td><strong>19,490 THB</strong></td>
                 <td>
                   <a
@@ -3025,7 +3023,7 @@
               </tr>
               <tr id="prices-tec">
                 <td
-                  colspan="5"
+                  colspan="6"
                   style="
                     background: linear-gradient(
                       135deg,
@@ -3061,6 +3059,7 @@
                   >
                   · บทนำสู่หลักการดำน้ำเทคนิค
                 </td>
+                <td class="price-sku">DC011</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3084,6 +3083,7 @@
                 <td>
                   2 วัน · 4 ไดฟ์ · ดำน้ำด้วย O₂ สูงถึง 100% สำหรับไดฟ์เทคนิค
                 </td>
+                <td class="price-sku">DC011/2</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3105,6 +3105,7 @@
               <tr>
                 <td>TDI Deco Procedures</td>
                 <td>3 วัน · 4 ไดฟ์ · เทคนิคการดำน้ำแบบ Decompression</td>
+                <td class="price-sku">DC011/1</td>
                 <td><strong>24,990 THB</strong></td>
                 <td>
                   <a
@@ -3128,6 +3129,7 @@
                 <td>
                   4 วัน · 6 ไดฟ์ · ประหยัดเมื่อจองทั้งสองคอร์ส TDI Tech พร้อมกัน
                 </td>
+                <td class="price-sku">DC011/8</td>
                 <td><strong>33,990 THB</strong></td>
                 <td>
                   <a
@@ -3155,6 +3157,7 @@
                   >
                   · การเข้าซากเรือที่ซับซ้อนอย่างปลอดภัย
                 </td>
+                <td class="price-sku">DC011/3</td>
                 <td><strong>34,990 THB</strong></td>
                 <td>
                   <a
@@ -3182,6 +3185,7 @@
                   >
                   · การดำน้ำเทคนิคแบบ Sidemount
                 </td>
+                <td class="price-sku">DC011/4</td>
                 <td><strong>14,990 THB</strong></td>
                 <td>
                   <a
@@ -3209,6 +3213,7 @@
                   >
                   · TDI Sidemount + SDI Solo Diver (เฉพาะ SDI)
                 </td>
+                <td class="price-sku">DC011/7</td>
                 <td><strong>21,990 THB</strong></td>
                 <td>
                   <a
@@ -3232,6 +3237,7 @@
                 <td>
                   min. 6 วัน · 12 ไดฟ์ · Adv. Nitrox + Deco Pro. + Adv. Wreck
                 </td>
+                <td class="price-sku">DC011/5</td>
                 <td><strong>66,990 THB</strong></td>
                 <td>
                   <a
