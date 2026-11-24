@@ -1350,6 +1350,34 @@
           },
         ],
       },
+      "tdi-additional-training-dive": {
+        h1:
+          LANG === "de"
+            ? "TDI Zusätzlicher Trainingstauchgang – 4.490 THB"
+            : LANG === "th"
+              ? "TDI ไดฟ์ฝึกเพิ่มเติม – 4,490 บาท"
+              : "TDI Additional Training Dive – 4,490 THB",
+        shortLabel:
+          LANG === "de"
+            ? "TDI Zusätzlicher Trainingstauchgang"
+            : LANG === "th"
+              ? "TDI ไดฟ์ฝึกเพิ่มเติม"
+              : "TDI Additional Training Dive",
+        type: "tech",
+        url: "/" + LANG + "/courses/technical-diving-courses/",
+        options: [
+          {
+            id: "dive",
+            label:
+              LANG === "de"
+                ? "TDI Zusätzlicher Trainingstauchgang"
+                : LANG === "th"
+                  ? "TDI ไดฟ์ฝึกเพิ่มเติม"
+                  : "TDI Additional Training Dive",
+            price: price("4,490 THB", "4.490 THB", "4,490 บาท"),
+          },
+        ],
+      },
       "fun-dives": {
         h1:
           LANG === "de"
