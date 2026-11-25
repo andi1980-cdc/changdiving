@@ -1378,6 +1378,38 @@
           },
         ],
       },
+      "additional-training-dive": {
+        h1:
+          LANG === "de"
+            ? "Zusätzlicher Trainingstauchgang – 2.790 THB pro Tauchgang"
+            : LANG === "th"
+              ? "ไดฟ์ฝึกเพิ่มเติม – 2,790 บาทต่อไดฟ์"
+              : "Additional Training Dive – 2,790 THB per dive",
+        shortLabel:
+          LANG === "de"
+            ? "Zusätzlicher Trainingstauchgang"
+            : LANG === "th"
+              ? "ไดฟ์ฝึกเพิ่มเติม"
+              : "Additional Training Dive",
+        type: "course",
+        url: "/" + LANG + "/courses/beginner-courses/",
+        options: [
+          {
+            id: "dive",
+            label:
+              LANG === "de"
+                ? "Zusätzlicher Trainingstauchgang"
+                : LANG === "th"
+                  ? "ไดฟ์ฝึกเพิ่มเติม"
+                  : "Additional Training Dive",
+            price: price(
+              "2,790 THB / dive",
+              "2.790 THB / Tauchgang",
+              "2,790 บาท / ไดฟ์",
+            ),
+          },
+        ],
+      },
       "fun-dives": {
         h1:
           LANG === "de"
